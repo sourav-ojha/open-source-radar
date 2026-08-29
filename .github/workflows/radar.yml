@@ -1,0 +1,92 @@
+name: Open Source Radar
+
+on:
+  schedule:
+    # 01:30 UTC = 07:00 IST daily
+    - cron: "30 1 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+  id-token: write
+
+concurrency:
+  group: open-source-radar
+  cancel-in-progress: false
+
+jobs:
+  run-radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Configure git identity
+        run: |
+          git config user.name "Open Source Radar"
+          git config user.email "subhamojha9@gmail.com"
+
+      - name: Run the radar agent
+        uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Read AGENT.md in this repository in full. It is the complete, authoritative
+            operating spec for this run. Follow it exactly — it overrides any assumption
+            you would otherwise make.
+
+            Read state.json for context on prior runs. Grep index.jsonl for dedupe —
+            do NOT read catalog.json in full, it grows without bound.
+
+            Execute today's run per AGENT.md sections 3-20.
+
+            Finish with the end-of-run checklist in AGENT.md section 23: update
+            catalog.json, catalog.md, index.jsonl, state.json, project files, and
+            today's daily digest. Validate every JSON file parses before finishing.
+
+            Then commit your changes locally:
+              git add -A
+              git commit -m "radar: $(date -u +%F) — automated run"
+            Do NOT run git push — a separate workflow step handles that.
+            If there is nothing new to report, still update state.json's last_run
+            timestamp and commit that, so the next run knows this one completed
+            rather than silently failing.
+          claude_args: |
+            --model claude-sonnet-5
+            --max-turns 80
+            --allowedTools "Bash,Read,Write,Edit,Glob,Grep,WebSearch,WebFetch"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Push changes
+        if: always()
+        run: |
+          if git log origin/main..HEAD --oneline | grep -q .; then
+            git push origin HEAD:main
+            echo "pushed $(git rev-parse HEAD)"
+          else
+            echo "nothing new to push"
+          fi
+
+      - name: Post today's digest as a GitHub Issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TODAY=$(date -u +%F)
+          DIGEST="daily/${TODAY}.md"
+          if [ -f "$DIGEST" ]; then
+            gh issue create \
+              --title "Open Source Radar — ${TODAY}" \
+              --body-file "$DIGEST" \
+              || echo "::warning::issue creation failed; digest is still in the repo at $DIGEST"
+          else
+            gh issue create \
+              --title "Open Source Radar — ${TODAY} — run did not complete" \
+              --body "No digest file was found at \`$DIGEST\`. Check the workflow run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              || echo "::warning::could not create failure issue either — check the Actions tab directly"
+          fi

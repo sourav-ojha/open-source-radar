@@ -37,26 +37,29 @@ adopting a whole foreign ecosystem to get value is not.
 
 ## 0.5 Execution model — read this before touching anything
 
-The radar lives in a **git clone on Sourav's Mac** at the connected folder
-`open-source-radar` (reachable in `device_bash` as `$HOME/mnt/open-source-radar`).
-That folder is the single source of truth. The cloud container is scratch space only —
-it is destroyed after every run, so nothing durable may live there.
+This job runs **unattended inside GitHub Actions** (`.github/workflows/radar.yml`),
+scheduled daily. It does not depend on any human's computer being online.
+
+The runner has a real, unrestricted internet connection — GitHub's REST API, npm/PyPI/
+crates.io, and general web search all work directly with no routing tricks. `$GITHUB_TOKEN`
+is exported into your environment automatically; use it for GitHub API calls (see
+section 8). No PAT, no cross-machine choreography.
 
 **Rules:**
 
-1. **Read and write catalog files only through `device_bash`, in the connected folder.**
-   Never stage them into the cloud container to edit and commit back — that risks
-   overwriting newer content with an older snapshot.
-2. **Edit files with a script that reads them** (`python3` read-modify-write, `jq`,
-   `sed -i`). Never regenerate a file by retyping content from earlier tool output;
-   output gets truncated and you will silently destroy data.
-3. `device_bash` calls are fresh shells with a ~45 second limit. Split long work into
-   steps. Keep scratch files in `$HOME` **outside** `mnt/`, never in the radar folder.
-4. **Commit locally at the end of every run. Do not attempt to push** unless a working
-   credential is configured — the remote is SSH and the session shell has no key.
-   Sourav pushes from his own terminal. A run that commits cleanly has done its job.
-5. If the Mac is unreachable, **do not start a fresh catalog in the cloud container.**
-   Stop, and report that the run could not reach durable storage.
+1. **Edit files with a script that reads them** (`python3` read-modify-write, `jq`,
+   `sed -i`). Never regenerate a file by retyping content from earlier tool output —
+   output can be truncated and you will silently destroy data.
+2. **Commit your changes locally at the end of the run** (`git add -A && git commit`).
+   **Do not run `git push` yourself** — a separate, deterministic workflow step pushes
+   after you finish. This keeps "did the agent reason correctly" decoupled from "did the
+   commit actually reach GitHub."
+3. If something prevents you from completing the run (a source is down, a step fails),
+   still update `state.json`'s `last_run` timestamp and commit that. A run that goes
+   silent without updating state is worse than one that honestly reports a partial result.
+4. You have a hard turn budget (`--max-turns` in the workflow) and a wall-clock timeout.
+   Do not spend it re-reading `catalog.json` in full or retrying a dead source more than
+   twice — budget matters more here than in an interactive session.
 
 
 ## 1. Mission
@@ -215,43 +218,43 @@ directories, product launch communities.
 
 **Inspect the actual repository and documentation before recommending a project.**
 
-### Where each source is reached from (IMPORTANT)
+### Where each source is reached from
 
-This job runs across two machines. Use the right one or you will get wrong data.
+The GitHub Actions runner has normal, unrestricted internet access. There is no
+cross-machine split anymore — everything below is reachable directly from this run.
 
-**GitHub — always via `device_bash` on the Mac, using the real API.**
-That shell has unrestricted access to `api.github.com`. The cloud container does not
-(its GitHub traffic is intercepted and refused).
+**GitHub — via the real API, authenticated with `$GITHUB_TOKEN`** (exported into the
+environment automatically by the workflow):
 
 ```
-curl -s --max-time 15 https://api.github.com/repos/OWNER/REPO | jq -r \
+curl -s --max-time 15 -H "Authorization: Bearer $GITHUB_TOKEN" \
+  https://api.github.com/repos/OWNER/REPO | jq -r \
   '{full_name, license: .license.spdx_id, stars: .stargazers_count, pushed_at, archived, description}'
-curl -s --max-time 15 https://api.github.com/repos/OWNER/REPO/releases/latest | jq -r '.tag_name, .published_at'
-curl -s --max-time 15 "https://api.github.com/search/repositories?q=QUERY&sort=updated&per_page=30" | jq -r '.items[]|.full_name'
+curl -s --max-time 15 -H "Authorization: Bearer $GITHUB_TOKEN" \
+  https://api.github.com/repos/OWNER/REPO/releases/latest | jq -r '.tag_name, .published_at'
+curl -s --max-time 15 -H "Authorization: Bearer $GITHUB_TOKEN" \
+  "https://api.github.com/search/repositories?q=QUERY&sort=updated&per_page=30" | jq -r '.items[]|.full_name'
 ```
 
 Useful endpoints: `/repos/{o}/{r}` (license, pushed_at, archived, stars, description),
 `/repos/{o}/{r}/releases/latest` (version + date), `/repos/{o}/{r}/commits?per_page=1`
 (recency), `/search/repositories?q=...` (discovery), `/repos/{o}/{r}/contents/README.md`.
 
-**Rate limit:** unauthenticated is **60 requests/hour** — that is tight for a 30-candidate
-run, so budget it: use `/search/repositories` for bulk discovery (1 call returns 30 repos
-with full metadata inline — prefer this over 30 individual `/repos` calls) and spend
-individual calls only on the deep-review shortlist. Check remaining headroom with
-`/rate_limit` before a burst. If `GH_RADAR_TOKEN` is set in the environment, send it as
-`-H "Authorization: Bearer $GH_RADAR_TOKEN"` to get 5,000/hour instead.
+**Rate limit:** the workflow's `$GITHUB_TOKEN` gets **1,000 requests/hour** — comfortable
+for a 30-candidate run. Still prefer `/search/repositories` for bulk discovery (1 call
+returns up to 30 repos with metadata inline) over one `/repos` call per candidate, and
+spend individual calls on the deep-review shortlist. Check headroom with `/rate_limit`
+before a large burst.
 
 **Everything else — HN, blogs, newsletters, directories, Awesome lists, docs sites —
-via the `WebSearch` and `WebFetch` tools** in the cloud session. The Mac shell cannot
-reach most non-GitHub hosts (`hn.algolia.com` is blocked), and the cloud container has no
-raw egress either. WebSearch/WebFetch are the only path to the open web. Never try to
-work around a blocked fetch with curl.
+via the `WebSearch` and `WebFetch` tools.** Both work natively in this environment.
 
 **⚠ Do NOT read star counts, versions, or release dates off a GitHub page via WebFetch.**
-WebFetch serves cached HTML that has been observed months stale — a real check returned
-"19.1k stars, v0.6.1, May 22" for a repo the API reported at "24,067 stars, v0.7.2,
-July 30". Prose and positioning from WebFetch are fine. **Numbers, versions, dates and
-licenses come from the API on the Mac, or they do not get published.**
+WebFetch can serve cached HTML that has been observed months stale — a real check once
+returned "19.1k stars, v0.6.1, May 22" for a repo the API reported at "24,067 stars,
+v0.7.2, July 30" *at the same moment*. Prose and positioning from WebFetch are fine.
+**Numbers, versions, dates and licenses come from the GitHub API, npm/PyPI/crates.io, or
+`raw.githubusercontent.com` — never from a rendered GitHub page.**
 
 Prefer batched metadata over prose-guessing. **Never fabricate a license, version, or
 release date** — if the API and docs do not confirm it, write "Unclear based on available
@@ -615,9 +618,10 @@ Cap unbounded arrays: keep `evaluated_repos` to the most recent 1500 entries and
 8. Verify `catalog.json` and `state.json` are valid JSON, and `index.jsonl` parses
    line-by-line, before committing. A run that corrupts state is worse than a run that
    publishes nothing.
-9. `git add -A && git commit -m "radar: YYYY-MM-DD — N new, M updated"`. Do not push
-   (see 0.5). If `git` reports nothing to commit, say so in the run notes — a run that
-   found nothing still updates `state.json`, so an empty commit is a red flag.
+9. `git add -A && git commit -m "radar: YYYY-MM-DD — N new, M updated"`. Do not run
+   `git push` yourself — the workflow's next step handles that (see section 0.5). If
+   `git` reports nothing to commit, say so in the run notes — a run that found nothing
+   still updates `state.json`, so an empty commit is a red flag.
 10. Leave the repository in a consistent state.
 
 If filesystem or network access prevents a step, **document the limitation in the daily
