@@ -5,3 +5,7 @@
 {"slug": "weir", "repo_url": "https://github.com/IdoGol24/weir", "name": "Weir", "status": "WATCH", "score": 6.9, "last_reviewed": "2026-08-29", "current_version": "see PyPI (weir-scan)", "aliases": []}
 {"slug": "lightmem", "repo_url": "https://github.com/zjunlp/LightMem", "name": "LightMem", "status": "WATCH", "score": 5.5, "last_reviewed": "2026-08-29", "current_version": "see GitHub releases", "aliases": []}
 {"slug": "website2markdown", "repo_url": "https://github.com/Digidai/website2markdown", "name": "website2markdown", "status": "WATCH", "score": 6.2, "last_reviewed": "2026-08-29", "current_version": "v1.0.0", "aliases": []}
+{"slug":"opendataloader-pdf","repo_url":"https://github.com/opendataloader-project/opendataloader-pdf","name":"OpenDataLoader PDF","status":"USE NOW","score":8.5,"last_reviewed":"2026-08-29","current_version":"v2.5.5","aliases":[]}
+{"slug":"vercel-skills-cli","repo_url":"https://github.com/vercel-labs/skills","name":"skills (Vercel Labs)","status":"PROTOTYPE","score":8.4,"last_reviewed":"2026-08-29","current_version":"v1.5.23","aliases":[]}
+{"slug":"laminar","repo_url":"https://github.com/lmnr-ai/lmnr","name":"Laminar","status":"PROTOTYPE","score":7.2,"last_reviewed":"2026-08-29","current_version":"v0.2.2","aliases":[]}
+{"slug":"chunky-rag-toolkit","repo_url":"https://github.com/GiovanniPasq/chunky","name":"Chunky","status":"PROTOTYPE","score":7.0,"last_reviewed":"2026-08-29","current_version":"v0.7.0","aliases":[]}

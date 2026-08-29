@@ -426,6 +426,258 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 8 stars, pushed_at 2026-07-15. Featured as today's Small High-Leverage Utility."
+    },
+    {
+      "name": "OpenDataLoader PDF",
+      "slug": "opendataloader-pdf",
+      "repo_url": "https://github.com/opendataloader-project/opendataloader-pdf",
+      "website": "https://opendataloader.org",
+      "description": "PDF parser for AI-ready data extraction (Markdown/JSON with bounding boxes/HTML) with a deterministic local mode and an AI hybrid mode for complex tables, scans, and formulas. Also the first open-source tool to auto-tag untagged PDFs into accessibility-ready Tagged PDFs end-to-end.",
+      "category": [
+        "document processing",
+        "RAG infrastructure",
+        "developer productivity"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.5,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 core (extraction, layout analysis, auto-tagging to Tagged PDF) is unrestricted for commercial/SaaS use and embedding. PDF/UA-1/2 export and the accessibility studio are a separate paid enterprise add-on; the free tier is fully usable for RAG/extraction, not a crippled trial.",
+      "deployment": [
+        "library",
+        "npm package",
+        "pip package",
+        "maven",
+        "cli",
+        "http server (hybrid mode)"
+      ],
+      "interfaces": [
+        "library (Python)",
+        "library (Node.js)",
+        "library (Java)",
+        "CLI",
+        "HTTP hybrid-mode server"
+      ],
+      "use_cases": [
+        "Convert user-uploaded PDFs (contracts, reports) into Markdown/JSON with bounding-box citations for RAG ingestion",
+        "Batch-process a document backlog with the deterministic local mode before reaching for an LLM at all",
+        "Auto-tag legacy untagged PDFs for baseline accessibility compliance ahead of EAA/ADA/Section 508 deadlines",
+        "Table/formula/chart extraction for scanned engineering or financial PDFs via hybrid+OCR mode"
+      ],
+      "product_opportunities": [
+        "Core parsing layer for a document-intelligence feature inside a client-facing product",
+        "Offer 'PDF accessibility remediation' as a service using the free auto-tagging layer plus manual QA, without buying the enterprise PDF/UA add-on up front"
+      ],
+      "agent_opportunities": [
+        "Wrap as an MCP tool/CLI step in a coding or research agent's document-ingestion loop",
+        "LangChain integration already shipped if any part of the stack uses that framework"
+      ],
+      "alternatives": [
+        "docling (MIT, close on accuracy per the project's own published benchmark, no accessibility/auto-tagging angle)",
+        "unstructured / unstructured[hi_res] (Apache-2.0, materially weaker table accuracy per benchmark)",
+        "mineru, pymupdf4llm (AGPL-3.0 \u2014 flag loudly if considered, restrictive for embedding in a closed-source product)"
+      ],
+      "why_it_matters": "Every ingestion pipeline touching real-world PDFs eventually needs correct reading order, table structure, and OCR fallback; this ships a benchmarked #1 engine (0.907 overall accuracy) plus a genuinely novel free path to PDF accessibility remediation, which is normally a $50-200/document manual cost.",
+      "why_not_build_it_myself": "PDF layout analysis (reading order, table structure, OCR fallback, accessibility tagging) is a multi-week correctness problem with deep edge cases; this is independently benchmarked against 11 competing engines and wins on overall + table accuracy.",
+      "risks": [
+        "Core engine is Java-based; the Node.js and Python SDKs still require a local JVM (Java 11+) \u2014 real deployment friction in a pure-Node or serverless environment (e.g. AWS Lambda needs a Java layer)",
+        "Enterprise upsell path (PDF/UA export, accessibility studio) means part of the roadmap incentive sits outside the OSS core",
+        "Young project (created May 2025) despite fast star growth \u2014 verify maintenance trajectory before a deep production dependency"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v2.5.5",
+      "latest_release_date": "2026-08-25",
+      "source_links": [
+        "https://github.com/opendataloader-project/opendataloader-pdf",
+        "https://www.npmjs.com/package/@opendataloader/pdf",
+        "https://pypi.org/project/opendataloader-pdf/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 28,856 stars, pushed_at 2026-08-28, not archived. Ranks #1 overall (0.907) in the project's own published extraction benchmark against docling, unstructured, mineru, marker."
+    },
+    {
+      "name": "skills (Vercel Labs)",
+      "slug": "vercel-skills-cli",
+      "repo_url": "https://github.com/vercel-labs/skills",
+      "website": "https://skills.sh",
+      "description": "CLI package manager for the open agent-skills ecosystem (npx skills). Installs, lists, updates, and removes SKILL.md packages across 70+ supported coding agents (Claude Code, Cursor, Codex, OpenCode, and more) from GitHub, GitLab, arbitrary git URLs, or local paths.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity",
+        "coding agents"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "npm package",
+        "cli"
+      ],
+      "interfaces": [
+        "CLI (npx skills)"
+      ],
+      "use_cases": [
+        "Install/manage shared SKILL.md packages across every agent in use (Claude Code, Cursor, etc.) from one CLI instead of hand-copying skill folders per tool",
+        "Pull a private, org-specific skills repo into every teammate's agent setup with one command",
+        "Distribute an internal playbook (deployment runbook, an AGENT.md-style operating spec) as an installable skill instead of a wiki page nobody opens mid-session",
+        "`skills use <source> | claude` to trial a skill without permanently installing it"
+      ],
+      "product_opportunities": [
+        "If an agent-based feature ships inside a product, this is a ready-made distribution mechanism for teaching it new capabilities without building a bespoke plugin system"
+      ],
+      "agent_opportunities": [
+        "It is agent infrastructure directly \u2014 the packaging/distribution layer for skills, the same category this very radar's AGENT.md spec and Claude Code's Skill tool both consume"
+      ],
+      "alternatives": [
+        "dukelyuu/skills-marketplace, Karanjot786/agent-skills-cli, jeremylongshore/tons-of-skills-marketplace (community marketplaces layered on the same SKILL.md convention, all smaller and less official)"
+      ],
+      "why_it_matters": "Skill packages are becoming the standard way to extend coding agents; this is the closest thing to an official, cross-agent package manager for them, backed by Vercel and already supporting 70+ agents.",
+      "why_not_build_it_myself": "The value is ecosystem-wide adoption plus the source-resolution plumbing (GitHub shorthand, private repos, direct SKILL.md URLs, archives, per-agent install paths) \u2014 not worth reimplementing for one internal tool when this is free and MIT.",
+      "risks": [
+        "Young repo (created Jan 2026) with 1,153 open issues against 29,960 stars \u2014 a high issue-to-star ratio suggesting real churn/rough edges; verify behavior on the exact agents in use before relying on it for anything automated or CI-driven",
+        "Vercel-backed but not an official first-party Vercel product \u2014 long-term governance commitment is unclear"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v1.5.23",
+      "latest_release_date": "2026-08-18",
+      "source_links": [
+        "https://github.com/vercel-labs/skills",
+        "https://skills.sh"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 29,960 stars, pushed_at 2026-08-18, not archived, created 2026-01-14. Conceptually adjacent to this radar's own AGENT.md-as-versioned-spec pattern."
+    },
+    {
+      "name": "Laminar",
+      "slug": "laminar",
+      "repo_url": "https://github.com/lmnr-ai/lmnr",
+      "website": "https://laminar.sh",
+      "description": "Open-source, OpenTelemetry-native observability platform purpose-built for AI agents: tracing, plain-English behavioral 'Signals' with Slack alerting, evals, MCP/CLI access for a coding agent to query its own traces, and dashboards. Self-hostable via Docker Compose (Rust core, ClickHouse-backed).",
+      "category": [
+        "AI agent infrastructure",
+        "LLM observability",
+        "agent evaluation"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 \u2014 the self-hosted image is unrestricted for commercial use. Managed cloud is the paid alternative but not required to use the OSS stack.",
+      "deployment": [
+        "docker compose",
+        "self-hosted",
+        "cloud (managed, optional)"
+      ],
+      "interfaces": [
+        "OpenTelemetry SDK",
+        "REST/SQL query API",
+        "MCP",
+        "CLI",
+        "Dashboard UI"
+      ],
+      "use_cases": [
+        "Trace and debug any OTel-instrumented agent run (including this radar's own runs) with a self-hosted dashboard instead of log-scraping",
+        "Define plain-English 'Signals' (e.g. 'agent is stuck in a loop') and get a Slack ping instead of manually reviewing traces",
+        "Run evals in CI against traced agent behavior before shipping a prompt/workflow change",
+        "Let a coding agent query its own traces via MCP to self-diagnose a failure"
+      ],
+      "product_opportunities": [
+        "Audit-trail/observability layer for an agent-driven feature, relevant to the compliance instincts of the MSSP/PTaaS side of the work if agent behavior ever needs to be demonstrably reviewable"
+      ],
+      "agent_opportunities": [
+        "Purpose-built for instrumenting and debugging agent workflows generally, including this radar's own future runs"
+      ],
+      "alternatives": [
+        "Langfuse (MIT, most-adopted comparable tracer, lacks built-in Signals/Slack alerting)",
+        "MLflow tracing (Apache-2.0, broader ML platform, heavier footprint if only agent tracing is needed)",
+        "LangWatch, OpenLLMetry (both Apache-2.0, narrower scope)"
+      ],
+      "why_it_matters": "OTel-native tracing, a queryable trace store, and natural-language behavioral alerting is normally weeks of infrastructure most teams never build well; this ships it as one Docker Compose stack with an MCP interface a coding agent can query directly.",
+      "why_not_build_it_myself": "A queryable, compressed (20x) trace store plus a Slack-alerting layer on natural-language conditions is significant infrastructure to replicate for what would likely be a worse version of an existing Apache-2.0 tool.",
+      "risks": [
+        "Self-hosting is a real stack (Postgres + ClickHouse + app-server), not a single container \u2014 Medium, not Low, integration effort",
+        "Self-hosted deployments phone home anonymized telemetry by default (opt out via LAMINAR_TELEMETRY_DISABLED) \u2014 check before pointing at anything sensitive",
+        "YC-backed startup (S24) \u2014 roadmap could tilt toward the managed cloud product over the self-hosted path over time"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v0.2.2",
+      "latest_release_date": "2026-08-25",
+      "source_links": [
+        "https://github.com/lmnr-ai/lmnr",
+        "https://laminar.sh/docs"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 3,211 stars, pushed_at 2026-08-29 (today), created 2024-08-29 (exactly 2 years old today) \u2014 consistently active, not a flash-in-the-pan."
+    },
+    {
+      "name": "Chunky",
+      "slug": "chunky-rag-toolkit",
+      "repo_url": "https://github.com/GiovanniPasq/chunky",
+      "website": "https://github.com/GiovanniPasq/chunky",
+      "description": "Local, self-hosted workspace for preparing documents for RAG: compares PDF-to-Markdown converters (PyMuPDF, Docling, MarkItDown, LiteParse, VLM, cloud APIs) and chunking strategies (LangChain, Chonkie, Docling splitters) side-by-side on real documents, plus LLM-powered chunk metadata enrichment.",
+      "category": [
+        "RAG infrastructure",
+        "document processing",
+        "small utility"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "docker compose",
+        "local (script)",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "Web UI (React)",
+        "REST API (FastAPI)"
+      ],
+      "use_cases": [
+        "Visually compare PDF-to-Markdown converters on an actual document before committing one to a pipeline",
+        "Compare chunking strategies (size/overlap/splitter) side by side on real content instead of guessing",
+        "Catch broken tables or scrambled reading order before they silently degrade RAG retrieval quality",
+        "Generate LLM-enriched chunk metadata (titles, summaries, keywords, retrieval questions) for a search index"
+      ],
+      "product_opportunities": [
+        "Use as an internal QA step before shipping any customer-facing 'ask your docs' feature \u2014 cheap insurance against silent retrieval-quality regressions"
+      ],
+      "agent_opportunities": [
+        "Not itself agent infrastructure, but directly de-risks building a RAG-backed agent tool (a support or coding agent's document-search backend)"
+      ],
+      "alternatives": [
+        "Chunkr (Lumina AI \u2014 structure-aware chunking, hosted-first rather than a local comparison workspace)",
+        "RAGFlow's built-in chunk visualization (bundled into a much larger platform, no cross-converter comparison workflow)"
+      ],
+      "why_it_matters": "The unglamorous failure mode of RAG pipelines is not realizing which of six converters mangles your specific documents until it's already in production; this turns that into a five-minute UI comparison.",
+      "why_not_build_it_myself": "A one-off eval script for chunking comparison is a common ad-hoc build; this packages it with a UI, six converters, and saved/versioned chunk sets already wired together.",
+      "risks": [
+        "Small, single-maintainer-looking project (170 stars, created March 2026) \u2014 bus-factor risk",
+        "It's a review/QA workspace, not something embedded into a production pipeline directly \u2014 the value is upstream of deployment, not inside it"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v0.7.0",
+      "latest_release_date": "2026-07-03",
+      "source_links": [
+        "https://github.com/GiovanniPasq/chunky"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 170 stars, pushed_at 2026-07-25, created 2026-03-06. Monthly release cadence (v0.6.0 Jun, v0.7.0 Jul) \u2014 active for its size."
     }
   ]
 }
