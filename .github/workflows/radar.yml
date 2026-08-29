@@ -37,6 +37,11 @@ jobs:
           # separately-billed API usage. See README.md "One-time setup" for why, and the
           # tradeoff this implies (shared usage pool with interactive Claude Code use).
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Full Claude output is hidden from the log by default (the action's own
+          # security default). This repo is private and single-user, so the tradeoff
+          # is worth it: without this, a failure shows only a generic is_error:true
+          # with no explanation, which is useless for an unattended daily job.
+          show_full_output: true
           prompt: |
             Read AGENT.md in this repository in full. It is the complete, authoritative
             operating spec for this run. Follow it exactly — it overrides any assumption
