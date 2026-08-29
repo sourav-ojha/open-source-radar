@@ -1,13 +1,89 @@
 {
-  "last_run": null,
-  "last_successful_run": null,
-  "run_count": 0,
-  "rotation_slot_last_used": 0,
-  "recent_categories": [],
-  "evaluated_repos": [],
-  "rejected": [],
-  "known_releases": {},
-  "source_health": {},
-  "previous_recommendations": [],
-  "notes": "Bootstrapped 2026-08-29. See AGENT.md for the operating spec."
+  "last_run": "2026-08-29",
+  "last_successful_run": "2026-08-29",
+  "run_count": 1,
+  "rotation_slot_last_used": 4,
+  "recent_categories": [
+    "data",
+    "search",
+    "documents",
+    "RAG"
+  ],
+  "evaluated_repos": [
+    "xberg-io/html-to-markdown",
+    "wanxingai/LightAgent",
+    "opslane/opslane",
+    "opslane/opslane-oss",
+    "joungminsung/OpenDocuments",
+    "IdoGol24/weir",
+    "zjunlp/LightMem",
+    "Digidai/website2markdown",
+    "supermemoryai/markdowner"
+  ],
+  "rejected": [
+    {
+      "repo_url": "https://github.com/supermemoryai/markdowner",
+      "reason": "abandoned \u2014 pushed_at 2024-07-21 despite 1999 stars; no commits in 2+ years",
+      "date": "2026-08-29"
+    }
+  ],
+  "known_releases": {
+    "xberg-io/html-to-markdown": {
+      "version": "v3.11.6",
+      "date": "2026-08-28"
+    },
+    "wanxingai/LightAgent": {
+      "version": "unclear-check-releases-page",
+      "date": "unclear"
+    },
+    "opslane/opslane": {
+      "version": "v26.8.12",
+      "date": "2026-08-29"
+    },
+    "joungminsung/OpenDocuments": {
+      "version": "v0.3.0",
+      "date": "2026-04-22"
+    },
+    "IdoGol24/weir": {
+      "version": "check-pypi-weir-scan",
+      "date": "unclear"
+    },
+    "zjunlp/LightMem": {
+      "version": "unclear-check-releases-page",
+      "date": "unclear"
+    },
+    "Digidai/website2markdown": {
+      "version": "v1.0.0",
+      "date": "2026-03-26"
+    }
+  },
+  "source_health": {
+    "WebSearch": {
+      "last_ok": "2026-08-29",
+      "note": "working normally"
+    },
+    "raw.githubusercontent.com": {
+      "last_ok": "2026-08-29",
+      "note": "working normally, used for README verification"
+    },
+    "api.github.com (Mac shell)": {
+      "last_ok": "2026-08-29",
+      "note": "working normally, 18/60 unauth rate limit used"
+    },
+    "api.github.com (cloud container)": {
+      "last_ok": null,
+      "note": "BLOCKED at proxy \u2014 do not attempt from cloud session, always route through Mac shell per AGENT.md section 8"
+    },
+    "github.com/trending (WebFetch)": {
+      "last_ok": null,
+      "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
+    }
+  },
+  "previous_recommendations": [
+    "kreuzberg-html-to-markdown",
+    "opendocuments",
+    "lightagent",
+    "opslane"
+  ],
+  "notes": "First live run, 2026-08-29. 7 projects catalogued (4 published to daily digest, 1 as small-utility feature, 2 to Worth Watching). 1 rejected as abandoned. Commit made locally; not pushed (per AGENT.md 0.5 \u2014 Sourav pushes manually, or push access gets granted to the cloud session)."
 }

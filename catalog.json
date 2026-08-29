@@ -1,5 +1,431 @@
 {
   "schema_version": 1,
-  "updated": null,
-  "projects": []
+  "updated": "2026-08-29",
+  "projects": [
+    {
+      "name": "html-to-markdown (Kreuzberg)",
+      "slug": "kreuzberg-html-to-markdown",
+      "repo_url": "https://github.com/xberg-io/html-to-markdown",
+      "website": "https://github.com/xberg-io/html-to-markdown",
+      "description": "High-performance, CommonMark-compliant HTML-to-Markdown converter with a Rust core, shipped as native bindings for Python, Node.js, Java, Go, and WASM. Maintained by the Kreuzberg team, whose broader product is a document-intelligence engine extracting structured data from 98+ formats with built-in OCR.",
+      "category": [
+        "document processing",
+        "developer productivity",
+        "small utility",
+        "RAG infrastructure"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.3,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial or SaaS use, redistribution, or embedding.",
+      "deployment": [
+        "library",
+        "npm package",
+        "pip package",
+        "cargo crate",
+        "maven",
+        "wasm"
+      ],
+      "interfaces": [
+        "library (Node.js)",
+        "library (Python)",
+        "library (Rust)",
+        "library (Java)",
+        "library (Go)",
+        "WASM"
+      ],
+      "use_cases": [
+        "Clean any scraped or fetched web page down to Markdown for an LLM context window",
+        "Normalize customer-uploaded HTML reports into Markdown for storage/search in OffenFlow",
+        "Feed a RAG pipeline's ingestion step without hand-rolling a converter",
+        "Drop-in replacement for a bespoke regex-based HTML stripper"
+      ],
+      "product_opportunities": [
+        "Embed as the HTML-normalization step in any document ingestion pipeline",
+        "Pair with the Kreuzberg document-intelligence engine for a full ingestion stack if OCR/98-format support is ever needed"
+      ],
+      "agent_opportunities": [
+        "Trivial to wrap as an MCP tool (html_to_markdown) for any agent that fetches web content",
+        "CLI usable directly in a coding-agent's tool loop"
+      ],
+      "alternatives": [
+        "supermemoryai/markdowner (abandoned, no commits since mid-2024 despite 1,999 stars)",
+        "Digidai/website2markdown (narrower scope, Cloudflare-Worker-hosted service rather than embeddable library)",
+        "turndown (npm, unmaintained pace by comparison)"
+      ],
+      "why_it_matters": "Every ingestion pipeline that touches web content eventually needs an HTML\u2192Markdown step; this one is faster, more spec-compliant, and available natively in Node without a subprocess or WASM workaround most alternatives require.",
+      "why_not_build_it_myself": "CommonMark compliance and edge cases (nested tables, code blocks, malformed HTML) are a multi-day correctness problem this project has already solved across 6 language runtimes.",
+      "risks": [
+        "Young org (xberg-io) \u2014 verify long-term maintenance commitment before deep production dependency",
+        "Native bindings mean a compiled dependency in the build chain, not pure JS"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v3.11.6",
+      "latest_release_date": "2026-08-28",
+      "source_links": [
+        "https://github.com/xberg-io/html-to-markdown",
+        "https://www.npmjs.com/package/@xberg-io/html-to-markdown"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review \u2014 actively maintained)."
+    },
+    {
+      "name": "LightAgent",
+      "slug": "lightagent",
+      "repo_url": "https://github.com/wanxingai/LightAgent",
+      "website": "https://sufe-aiflm-lab.github.io/LightAgent/",
+      "description": "Lightweight Python framework for building OpenAI-compatible agents with built-in tools, memory, guardrails, tracing, lifecycle hooks, multi-agent collaboration, and workflow orchestration in a single dependency.",
+      "category": [
+        "AI agent infrastructure",
+        "agent orchestration",
+        "agent memory"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 \u2014 permissive, safe to embed in commercial products.",
+      "deployment": [
+        "pip package",
+        "self-hosted",
+        "library"
+      ],
+      "interfaces": [
+        "library (Python)"
+      ],
+      "use_cases": [
+        "Prototype an internal automation agent without assembling memory/guardrails/tracing from separate libraries",
+        "Reference implementation to study before building an equivalent Node-native agent layer",
+        "Multi-agent collaboration pattern for a research or scouting-style agent (directly relevant to how this radar itself works)"
+      ],
+      "product_opportunities": [
+        "Could back an internal Python microservice for a specific agent workload while the rest of the stack stays Node"
+      ],
+      "agent_opportunities": [
+        "Framework itself IS agent infrastructure \u2014 not something to wrap, something to build agents with",
+        "Its guardrails/tracing modules are worth lifting as patterns even if the framework itself isn't adopted"
+      ],
+      "alternatives": [
+        "LangChain (assumed already known)",
+        "CrewAI",
+        "AutoGen"
+      ],
+      "why_it_matters": "Bundles memory + guardrails + tracing + multi-agent orchestration that would otherwise mean integrating 3-4 separate libraries; useful as both a tool and an architecture reference.",
+      "why_not_build_it_myself": "Guardrails and cross-agent memory coordination are easy to get subtly wrong; this has 1,214 stars and active maintenance behind those decisions.",
+      "risks": [
+        "Python-only \u2014 introduces a second runtime into an otherwise Node/TS stack unless isolated as its own service",
+        "\"Lightweight\" framing vs. bundling 5+ concerns is a tension worth verifying in practice before trusting it at scale"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "see GitHub releases",
+      "latest_release_date": "unclear \u2014 check https://github.com/wanxingai/LightAgent/releases directly",
+      "source_links": [
+        "https://github.com/wanxingai/LightAgent",
+        "https://pypi.org/project/lightagent/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1214 stars, pushed_at 2026-08-21."
+    },
+    {
+      "name": "Opslane",
+      "slug": "opslane",
+      "repo_url": "https://github.com/opslane/opslane",
+      "website": "https://opslane.com/",
+      "description": "Records user sessions, ranks the UX failures nobody's exception tracker caught (dead buttons, abandoned forms, dropdowns closing before selection) by how many users hit them, investigates the ranked ones, and opens a PR only when it can verify the fix \u2014 self-hostable.",
+      "category": [
+        "developer productivity",
+        "debugging",
+        "observability",
+        "AI agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.8,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 \u2014 network-use copyleft. Self-hosting internally is fine; embedding inside a closed-source commercial SaaS (e.g. bundled into OffenFlow) would trigger source-disclosure obligations. Treat as internal-tool-only unless a commercial license is offered.",
+      "deployment": [
+        "self-hosted",
+        "Docker (implied by self-host quickstart)"
+      ],
+      "interfaces": [
+        "SDK",
+        "self-hosted web app"
+      ],
+      "use_cases": [
+        "Catch silent UX failures in an admin portal (relevant to OffenFlow) that never throw exceptions",
+        "Reduce manual triage time on session-replay tools by auto-ranking failures by user impact",
+        "Study the verify-before-PR pattern for any 'agent that opens PRs' project"
+      ],
+      "product_opportunities": [
+        "The rank-by-impact + verify-before-PR pattern is a genuinely reusable architecture idea for any auto-remediation feature"
+      ],
+      "agent_opportunities": [
+        "Itself an autonomous coding-agent workflow (session data \u2192 hypothesis \u2192 verified fix \u2192 PR) \u2014 worth studying the verification gate specifically"
+      ],
+      "alternatives": [
+        "PostHog session replay + manual triage",
+        "Sentry + manual triage",
+        "FullStory"
+      ],
+      "why_it_matters": "Most session-replay tools stop at 'here is a recording' \u2014 this one closes the loop to a verified PR, which is the actual expensive part of the workflow.",
+      "why_not_build_it_myself": "The verification gate (don't open a PR unless the fix is confirmed) is the hard 20% of this idea; building and trusting that gate is a multi-week project on its own.",
+      "risks": [
+        "36 stars, pushed same day as this review \u2014 genuinely early, expect breaking changes",
+        "AGPL is a hard blocker for embedding in a closed commercial product",
+        "Self-hosting a session-recording pipeline has its own privacy/compliance surface to review before pointing at real user sessions"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v26.8.12",
+      "latest_release_date": "2026-08-29",
+      "source_links": [
+        "https://github.com/opslane/opslane",
+        "https://docs.opslane.com/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 36 stars, pushed_at 2026-08-29 (today). AGPL flagged per spec section 14 \u2014 loud warning, not a disqualifier."
+    },
+    {
+      "name": "OpenDocuments",
+      "slug": "opendocuments",
+      "repo_url": "https://github.com/joungminsung/OpenDocuments",
+      "website": "https://github.com/joungminsung/OpenDocuments",
+      "description": "Self-hosted RAG platform in Node.js/TypeScript that indexes GitHub, Notion, Google Drive, Confluence, S3, local files, and general web sources into one searchable, citation-backed corpus.",
+      "category": [
+        "RAG infrastructure",
+        "search",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT \u2014 unrestricted commercial and SaaS use.",
+      "deployment": [
+        "self-hosted",
+        "npm package"
+      ],
+      "interfaces": [
+        "library (Node.js/TypeScript)",
+        "npm CLI"
+      ],
+      "use_cases": [
+        "Internal 'ask our docs' search across Notion + GitHub + Drive without building a custom ingestion pipeline",
+        "Backbone for a customer-facing knowledge-search feature in a product, since citations are built in",
+        "Direct fit for the MERN/Node stack \u2014 no cross-language integration cost"
+      ],
+      "product_opportunities": [
+        "Could become the search/knowledge layer inside a product without writing a RAG pipeline from scratch",
+        "Citations-by-default matters if this ever faces an end customer who needs to trust the answer"
+      ],
+      "agent_opportunities": [
+        "Natural fit as an MCP server exposing 'search my docs' to a coding agent or support agent",
+        "Could back a support-agent tool call directly"
+      ],
+      "alternatives": [
+        "RAGFlow (larger, more established, Python-based)",
+        "Danswer/Onyx (larger, more operational overhead)",
+        "hand-rolled LangChain RAG pipeline"
+      ],
+      "why_it_matters": "It is the rare RAG project that matches the target stack (Node/TypeScript) exactly, so there's no cross-runtime tax to adopt it, and multi-source + citations are both usually the hardest 60% to build correctly.",
+      "why_not_build_it_myself": "Source-connector plumbing (Notion API, Drive API, Confluence API, S3, GitHub) times five, plus citation tracking through a RAG pipeline, is easily 1-2 weeks of integration work this replaces outright.",
+      "risks": [
+        "Latest tagged release (v0.3.0, April) trails the last commit (July) by 3 months \u2014 verify what has changed on main before depending on the tagged version",
+        "110 stars, single-maintainer-looking project \u2014 bus-factor risk"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v0.3.0",
+      "latest_release_date": "2026-04-22",
+      "source_links": [
+        "https://github.com/joungminsung/OpenDocuments",
+        "https://www.npmjs.com/package/opendocuments"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 110 stars, pushed_at 2026-07-26. Release/commit gap flagged as a risk, not fabricated as current."
+    },
+    {
+      "name": "Weir",
+      "slug": "weir",
+      "repo_url": "https://github.com/IdoGol24/weir",
+      "website": "https://github.com/IdoGol24/weir",
+      "description": "A CI gate for AI agents: reads the OpenTelemetry traces an agent already emits, reconstructs the session graph, tracks taint through it, and fails the build if sensitive data reached a sink it should never have reached.",
+      "category": [
+        "AI testing",
+        "agent evaluation",
+        "LLM observability",
+        "security"
+      ],
+      "status": "WATCH",
+      "relevance_score": 6.9,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 \u2014 permissive, safe to embed or run internally.",
+      "deployment": [
+        "pip package",
+        "CI step"
+      ],
+      "interfaces": [
+        "CLI",
+        "library (Python)"
+      ],
+      "use_cases": [
+        "CI gate on any agent workflow that touches customer data, verifying no sensitive-data leak path exists before merge",
+        "Directly applicable to PTaaS/security-tooling work \u2014 automated proof that an agent didn't exfiltrate scan data through an unintended sink",
+        "Cheap due-diligence check before shipping a new agent tool call in any product"
+      ],
+      "product_opportunities": [
+        "A packaged version of this pattern (taint-tracking over agent traces) is a plausible standalone security-tooling product, directly adjacent to the PTaaS partnership"
+      ],
+      "agent_opportunities": [
+        "This IS agent tooling \u2014 a CI-native tool, not something to wrap further"
+      ],
+      "alternatives": [
+        "Manual trace review",
+        "generic OTel + custom alerting rules (build-it-yourself, weeks of work)"
+      ],
+      "why_it_matters": "Nobody else is turning 'does my agent leak data' into a structural, automatable CI check off traces the agent already emits \u2014 this is a narrow problem solved unusually well.",
+      "why_not_build_it_myself": "Taint-tracking through a reconstructed session graph is a non-trivial static-analysis problem; this exists and is free to try before building an equivalent.",
+      "risks": [
+        "9 stars, very early (first meaningful activity within the last week) \u2014 expect rough edges and API churn",
+        "Single maintainer, unproven at scale",
+        "Requires the agent to already emit OTel traces \u2014 not zero-integration"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "see PyPI (weir-scan)",
+      "latest_release_date": "unclear \u2014 check https://pypi.org/project/weir-scan/ directly",
+      "source_links": [
+        "https://github.com/IdoGol24/weir",
+        "https://pypi.org/project/weir-scan/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 9 stars, pushed_at 2026-08-25. Hidden-gem candidate: high relevance to PTaaS/security work despite tiny star count."
+    },
+    {
+      "name": "LightMem",
+      "slug": "lightmem",
+      "repo_url": "https://github.com/zjunlp/LightMem",
+      "website": "https://github.com/zjunlp/LightMem",
+      "description": "ICLR 2026 research project: lightweight and efficient memory-augmented generation for LLM agents.",
+      "category": [
+        "agent memory",
+        "AI agent infrastructure"
+      ],
+      "status": "WATCH",
+      "relevance_score": 5.5,
+      "maturity": "experimental",
+      "integration_effort": "high",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, but this is academic research code \u2014 commercial-use notes matter less than production-readiness here.",
+      "deployment": [
+        "library (Python)",
+        "research codebase"
+      ],
+      "interfaces": [
+        "library (Python)"
+      ],
+      "use_cases": [
+        "Reading material on efficient agent-memory architecture ahead of any production memory-layer decision"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Architecture worth studying before picking an agent-memory approach for a production system"
+      ],
+      "alternatives": [
+        "mem0",
+        "LightAgent's built-in memory module (already catalogued)",
+        "Cognee"
+      ],
+      "why_it_matters": "Peer-reviewed (ICLR 2026) efficiency techniques for agent memory are worth knowing about even without adopting the code directly.",
+      "why_not_build_it_myself": "N/A \u2014 this is a study candidate, not a build-replacement candidate.",
+      "risks": [
+        "Research code: expect it to be harder to productionize than framework code from a company maintaining a product around it",
+        "1,099 stars is notable for a research repo but says nothing about production readiness"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "see GitHub releases",
+      "latest_release_date": "unclear \u2014 check repository directly",
+      "source_links": [
+        "https://github.com/zjunlp/LightMem"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1099 stars, pushed_at 2026-08-21. STUDY-classified, not adoption-classified."
+    },
+    {
+      "name": "website2markdown",
+      "slug": "website2markdown",
+      "repo_url": "https://github.com/Digidai/website2markdown",
+      "website": "https://md.genedai.me",
+      "description": "Converts any web page \u2014 JS-heavy SPAs, paywalled content, Chinese platforms (WeChat, Zhihu, Feishu) \u2014 to clean Markdown via a Cloudflare Worker with a 5-layer fallback pipeline and 14 site-specific adapters. Ships as a hosted API, an MCP server, and a matching Agent Skills package.",
+      "category": [
+        "small utility",
+        "document processing",
+        "AI agent infrastructure"
+      ],
+      "status": "WATCH",
+      "relevance_score": 6.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 \u2014 permissive.",
+      "deployment": [
+        "Cloudflare Worker (self-deployable)",
+        "hosted API",
+        "npm package (MCP server)"
+      ],
+      "interfaces": [
+        "REST API",
+        "MCP server",
+        "Agent Skill"
+      ],
+      "use_cases": [
+        "Give a coding or research agent a reliable webpage-to-Markdown tool call without hand-rolling scraping fallbacks",
+        "Handle sites that defeat generic converters (SPA rendering, paywalls, non-Latin platform quirks) out of the box",
+        "Self-deploy on your own Cloudflare account for a zero-maintenance, near-zero-cost scraping utility"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Already ships as an MCP server \u2014 zero integration work to expose to a coding agent",
+        "Agent Skills package is directly usable"
+      ],
+      "alternatives": [
+        "xberg-io/html-to-markdown (catalogued \u2014 a library, not a scraping/fallback service)",
+        "supermemoryai/markdowner (catalogued as rejected/abandoned)",
+        "Firecrawl (commercial)"
+      ],
+      "why_it_matters": "The 5-layer fallback + 14 site adapters solve the annoying long tail of 'this one converter works on 95% of pages' that eats real debugging time.",
+      "why_not_build_it_myself": "Site-specific adapters for paywalled/JS-heavy/non-Latin platforms are exactly the kind of unglamorous, time-consuming edge-case work worth not doing yourself.",
+      "risks": [
+        "Only 8 stars and a small team \u2014 verify the hosted API's reliability before depending on it for anything production-critical; self-host the Worker if so",
+        "Narrower scope than html-to-markdown (fetch+convert service vs. pure converter library) \u2014 not a like-for-like substitute"
+      ],
+      "first_seen": "2026-08-29",
+      "last_reviewed": "2026-08-29",
+      "last_meaningful_update": "2026-08-29",
+      "current_version": "v1.0.0",
+      "latest_release_date": "2026-03-26",
+      "source_links": [
+        "https://github.com/Digidai/website2markdown",
+        "https://www.npmjs.com/package/@digidai/mcp-website2markdown"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 8 stars, pushed_at 2026-07-15. Featured as today's Small High-Leverage Utility."
+    }
+  ]
 }
