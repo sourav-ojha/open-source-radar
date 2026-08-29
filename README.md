@@ -26,23 +26,52 @@ serving stale cached HTML.
 
 ## One-time setup
 
-1. **Add a Claude API key as a repo secret.** Create one at
-   [platform.claude.com](https://platform.claude.com) (Console → API Keys), then in this
-   repo: **Settings → Secrets and variables → Actions → New repository secret**, name
-   `ANTHROPIC_API_KEY`. Set it there directly — never paste an API key into chat.
-   Consider setting a monthly spend limit on the key in the Console as a safety cap.
-2. That's it. No GitHub PAT is needed — the workflow's built-in token handles both
-   reading GitHub's API and pushing back to this repo.
+This workflow authenticates with **Sourav's Claude Max plan subscription**, not a
+separately-billed API key — no extra dollar cost beyond the subscription already paid
+for.
+
+1. **Generate a long-lived OAuth token.** In a real terminal (not a CI shell — this opens
+   a browser login), with Claude Code CLI installed and logged into the Max plan account:
+
+   ```sh
+   claude setup-token
+   ```
+
+   This authenticates via browser OAuth and prints a token tied to that subscription.
+
+2. **Store it as a repo secret.** **Settings → Secrets and variables → Actions →
+   New repository secret**, name `CLAUDE_CODE_OAUTH_TOKEN`, paste the token value there
+   directly — never in chat, never committed to the repo.
+
+3. That's it. No GitHub PAT is needed either — the workflow's built-in token handles
+   both reading GitHub's API and pushing back to this repo.
+
+### The real tradeoff of this auth mode
+
+Anthropic's own docs are explicit: *"Both Pro and Max plans offer usage limits that are
+shared across Claude and Claude Code, meaning all activity in both tools counts against
+the same usage limits."* This run is not free in the sense of "doesn't touch anything" —
+it draws from the **same rolling usage window as every other Claude Code session and
+claude.ai conversation on this account.**
+
+Concretely: a ~15-25 minute daily research run (dozens of web searches, GitHub API
+lookups, and file writes) will use a real chunk of the account's usage allowance before
+the day's interactive coding work even starts, especially if it fires early morning
+right before Sourav sits down to work. If Claude Code starts feeling rate-limited on
+days the radar runs, this is why — check usage on the account page, and consider moving
+the fire time later in the day or thinning `AGENT.md`'s run budget (section 3) if it
+becomes a real collision.
+
+The `--max-turns 80` cap in the workflow is a hard ceiling either way, so a single run
+can't run away indefinitely regardless of which auth mode is used.
 
 ## Costs
 
 - **GitHub Actions minutes:** a run is ~15-25 minutes on a standard Linux runner.
   Free plans include 2,000 minutes/month for private repos — a daily run uses roughly
   500-750/month, comfortably inside that.
-- **Anthropic API usage:** billed to the `ANTHROPIC_API_KEY` above — separate from any
-  claude.ai subscription. Covers model tokens plus web search ($10 per 1,000 searches).
-  Actual daily cost depends on run size; watch the first week in the Console's usage
-  dashboard and set a budget alert.
+- **Claude usage:** no separate dollar cost — see "The real tradeoff" above. The cost is
+  paid in shared usage-window headroom, not billing.
 
 ## Layout
 
