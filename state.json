@@ -1,0 +1,13 @@
+{
+  "last_run": null,
+  "last_successful_run": null,
+  "run_count": 0,
+  "rotation_slot_last_used": 0,
+  "recent_categories": [],
+  "evaluated_repos": [],
+  "rejected": [],
+  "known_releases": {},
+  "source_health": {},
+  "previous_recommendations": [],
+  "notes": "Bootstrapped 2026-08-29. See AGENT.md for the operating spec."
+}
