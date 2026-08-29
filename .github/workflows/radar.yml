@@ -25,6 +25,10 @@ jobs:
         with:
           fetch-depth: 1
 
+      - name: Record starting commit
+        id: pre_run
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
       - name: Configure git identity
         run: |
           git config user.name "Open Source Radar"
@@ -87,7 +91,7 @@ jobs:
         run: |
           TODAY=$(date -u +%F)
           DIGEST="daily/${TODAY}.md"
-          if [ -f "$DIGEST" ]; then
+          if [ -f "$DIGEST" ] && git diff --name-only "${{ steps.pre_run.outputs.sha }}" HEAD -- "$DIGEST" | grep -q .; then
             gh issue create \
               --title "Open Source Radar — ${TODAY}" \
               --body-file "$DIGEST" \
@@ -95,6 +99,6 @@ jobs:
           else
             gh issue create \
               --title "Open Source Radar — ${TODAY} — run did not complete" \
-              --body "No digest file was found at \`$DIGEST\`. Check the workflow run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
+              --body "The digest at \`$DIGEST\` was not updated by this run (or the run failed before reaching this step). Check the workflow run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               || echo "::warning::could not create failure issue either — check the Actions tab directly"
           fi
