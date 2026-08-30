@@ -102,6 +102,7 @@ jobs:
             '.[] | select(.title == $t or .title == $f) | .number' | head -n1)
           if [ -n "$EXISTING" ]; then
             echo "issue already exists for ${TODAY} (#${EXISTING}); skipping to avoid duplicate"
+            echo "run_ok=skipped" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -139,6 +140,11 @@ jobs:
           RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           ISSUE_URL="${{ steps.post_issue.outputs.issue_url }}"
           RUN_OK="${{ steps.post_issue.outputs.run_ok }}"
+
+          if [ "$RUN_OK" = "skipped" ]; then
+            echo "issue step was skipped (duplicate for today); skipping Discord notification too"
+            exit 0
+          fi
 
           if [ "$RUN_OK" = "true" ] && [ -f "$DIGEST" ]; then
             SUMMARY=$(awk '/^## Executive Summary/{flag=1;next}/^## /{flag=0}flag' "$DIGEST" \
