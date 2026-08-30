@@ -116,6 +116,13 @@ Never lower the bar to hit a count.
 Time-box discovery. If a source is slow or unreachable, note it in `state.json` under
 `source_health` and move on — do not retry more than twice.
 
+**Parallelize independent tool calls.** When checking multiple unrelated candidates —
+several WebSearch queries, several GitHub API lookups, several WebFetch calls on
+different repos — issue them together in one batch rather than one at a time and
+waiting on each before starting the next. Network latency on these calls, not
+reasoning, is the dominant cost of a run. Only go sequential when one call's result
+determines the next (e.g. search first, then fetch the specific repo it surfaced).
+
 ---
 
 ## 4. Discovery allocation (guideline, not a quota)
