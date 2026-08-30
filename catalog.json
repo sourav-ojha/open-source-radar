@@ -1010,6 +1010,258 @@
       "aliases": [],
       "notes": "Live demo at demo.nonaconfig.com resets nightly and requires no signup — good first stop before self-hosting.",
       "acted_on": false
+    },
+    {
+      "name": "Bernstein",
+      "slug": "bernstein-cli-orchestrator",
+      "repo_url": "https://github.com/sipyourdrink-ltd/bernstein",
+      "website": "https://bernstein.run",
+      "description": "Deterministic multi-agent CLI orchestrator for coding agents (Claude Code, Codex, Gemini CLI, 40+ more): decomposes a goal into tasks, runs agents in isolated per-task git worktrees, verifies concrete signals (tests/lint/types), and merges verified work — with a cryptographically signed, offline-verifiable replay/audit trail.",
+      "category": [
+        "AI agent infrastructure",
+        "coding agents",
+        "agent orchestration",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.7,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "CLI (pipx/pip/brew/npm)",
+        "Docker",
+        "air-gapped install"
+      ],
+      "interfaces": [
+        "CLI",
+        "TUI dashboard",
+        "browser dashboard (bernstein gui serve)"
+      ],
+      "use_cases": [
+        "Fan out a feature/bugfix backlog across multiple coding agents in parallel, each in an isolated git worktree",
+        "Get a verifiable, offline-checkable audit trail of what an autonomous coding-agent run actually did",
+        "Benchmark agent reliability with repeated pass^k runs instead of trusting a single pass@1 run",
+        "Replace ad hoc shell scripts that fan out Claude Code/Codex sessions across a backlog"
+      ],
+      "product_opportunities": [
+        "Signed run receipts as a compliance artifact proving what an AI agent changed, relevant to the MSSP/PTaaS business",
+        "Could underpin an internal agent-ops audit dashboard for AI-assisted delivery work"
+      ],
+      "agent_opportunities": [
+        "It is agent orchestration infrastructure itself — CLI + TUI + browser dashboard, 40+ built-in CLI agent adapters, plus a generic --prompt wrapper for anything unsupported"
+      ],
+      "alternatives": [
+        "Manual tmux/shell fan-out of multiple Claude Code sessions (status quo)",
+        "coleam00/Archon (harness builder, higher-level/different focus)",
+        "ruvnet/ruflo (agent meta-harness, less deterministic/audit-focused)"
+      ],
+      "why_it_matters": "No LLM in the coordination loop means a run is reproducible end to end and its receipt is checkable without rerunning it — turns 'the agent did something overnight' into something verifiable.",
+      "why_not_build_it_myself": "The determinism plus signed lineage/audit trail is the hard, easy-to-get-wrong part; 158 PyPI releases and a multi-contributor project have already hardened this.",
+      "risks": [
+        "Solo-dominated commit history (primary author: 3,776 commits vs next contributor at 55) — bus-factor risk despite bot/CI infrastructure",
+        "Interface explicitly not stable across minor versions per README ('Status: beta')",
+        "Python/uv-based CLI tool, adds a non-Node dependency to an otherwise JS/TS-centric toolchain"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v3.18.2",
+      "latest_release_date": "2026-08-28",
+      "source_links": [
+        "https://github.com/sipyourdrink-ltd/bernstein",
+        "https://pypi.org/project/bernstein/",
+        "https://bernstein.run"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases. Contributors include real humans beyond the primary author (Chirag6722, shanemmattner, vaibhav8a, Phoenix1504e, Louis20060723) plus renovate/dependabot/github-actions bot automation.",
+      "acted_on": false
+    },
+    {
+      "name": "Drydock",
+      "slug": "drydock-container-watcher",
+      "repo_url": "https://github.com/CodesWhat/drydock",
+      "website": "https://getdrydock.com",
+      "description": "Self-hosted container image update watcher — monitors 23 container registries, fires 20 notification/action providers, includes an audit log, OIDC auth, Prometheus metrics, and a web dashboard for reviewing and applying updates.",
+      "category": [
+        "infrastructure",
+        "self-hosted SaaS alternative",
+        "developer productivity"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged: fine to self-host and run internally/for clients unmodified; do not fork and offer a modified version as a hosted SaaS without releasing source under AGPL or obtaining a commercial license.",
+      "deployment": [
+        "Docker",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "web dashboard",
+        "webhook triggers",
+        "Prometheus metrics endpoint"
+      ],
+      "use_cases": [
+        "Watch base images and third-party containers used across personal/EC2/EKS infra for new releases without polling manually",
+        "Get a Slack/Discord/webhook alert when a security-patched image lands, filling a gap Dependabot-style tooling doesn't cover",
+        "Audit trail of who approved which image update, useful for the MSSP admin-portal's own infra hygiene",
+        "Replace a hand-rolled cron job hitting registry APIs"
+      ],
+      "product_opportunities": [
+        "Supports an MSSP infra-hardening narrative: watching and patching own containers, offering the same visibility to clients"
+      ],
+      "agent_opportunities": [
+        "Webhook triggers are simple for an agent to consume and act on, e.g. auto-opening a PR bumping a pinned image tag"
+      ],
+      "alternatives": [
+        "Watchtower (auto-updates but weaker visibility/notifications)",
+        "Diun",
+        "What's Up Docker (WUD)"
+      ],
+      "why_it_matters": "23-registry coverage plus a real audit log and OIDC auth is a materially more complete feature set than Watchtower/Diun, still a single container to run.",
+      "why_not_build_it_myself": "Registry API differences (Docker Hub rate limits, GHCR auth, private registries) and notification fan-out are undifferentiated plumbing not worth rebuilding.",
+      "risks": [
+        "AGPL-3.0 — flagged per commercial_use_notes",
+        "Two README WARNING blocks describe breaking security-hardening changes across recent releases (auth now fails closed on upgrade) — read UPGRADE-NOTES.md before deploying"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v1.6.0",
+      "latest_release_date": "2026-08-12",
+      "source_links": [
+        "https://github.com/CodesWhat/drydock",
+        "https://getdrydock.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 245 stars, pushed_at 2026-08-30, created 2026-02-08 (~7 months old). CI, OpenSSF Scorecard, mutation testing (Stryker), codecov, docs localized into 7 languages — unusually rigorous engineering practice for a project this size.",
+      "acted_on": false
+    },
+    {
+      "name": "notifkit",
+      "slug": "notifkit",
+      "repo_url": "https://github.com/devkitshq/notifkit",
+      "website": "https://notifkit.dev",
+      "description": "Self-hosted notification infrastructure for Node/TypeScript products — one typed API call routes to email, SMS, push, and webhooks with preferences, quiet hours, retries, fallback chains, scheduling, multi-step workflows, and delivery logs, backed by PostgreSQL and Redis.",
+      "category": [
+        "product infrastructure",
+        "notifications",
+        "backend components"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "npm package (self-hosted server + client)",
+        "Docker (monolith or distributed services topology)"
+      ],
+      "interfaces": [
+        "REST API (/v1/notify)",
+        "TypeScript SDK",
+        "MCP server (per architecture diagram)"
+      ],
+      "use_cases": [
+        "Replace a hand-rolled email/SMS/push dispatch layer scattered across an Express/NestJS app",
+        "Add quiet-hours and fallback-channel logic to product notifications without building a scheduler",
+        "Centralize delivery logs and unsubscribe/consent handling for a SaaS product's notification stream",
+        "Give an MSSP admin-portal a single notify() call for alert delivery across channels"
+      ],
+      "product_opportunities": [
+        "Matches the 'shorten path from idea to shippable product' axis directly — notification plumbing is a recurring build-it-again cost"
+      ],
+      "agent_opportunities": [
+        "Ships an MCP server per its architecture diagram, so an agent could trigger notifications directly as a tool call"
+      ],
+      "alternatives": [
+        "Novu (larger, more established open-source notification infra)",
+        "Courier/Knock (SaaS)",
+        "Hand-rolled provider-specific integrations (status quo)"
+      ],
+      "why_it_matters": "Direct stack fit (TypeScript, Postgres, Redis) and removes a category of plumbing (retries, quiet hours, fallback, delivery logs) that's tedious and easy to get subtly wrong.",
+      "why_not_build_it_myself": "Quiet-hours/timezone logic, provider fallback chains, and a dead-letter queue are each a real multi-day project to get right and test under failure; this claims chaos-testing against worker kills and connection loss already.",
+      "risks": [
+        "Very early: npm v0.1.3, single-repo org, ~364 weekly npm downloads — validate the 'battle-tested in production' claim independently before depending on it",
+        "Requires standing up Postgres + Redis, reintroducing a Redis dependency other candidates (e.g. Sidequest) are removing",
+        "No GitHub Releases published — version tracked only via npm tags"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v0.1.3",
+      "latest_release_date": "Unclear based on available documentation — no GitHub Releases published; npm shows v0.1.3 as latest",
+      "source_links": [
+        "https://github.com/devkitshq/notifkit",
+        "https://www.npmjs.com/package/notifkit",
+        "https://notifkit.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 103 stars, pushed_at 2026-08-29, created 2026-07-16 (~6 weeks old). npm registry confirms v0.1.3, MIT, ~364 weekly downloads. devkitshq org has only this one public repo.",
+      "acted_on": false
+    },
+    {
+      "name": "proxy-monster",
+      "slug": "proxy-monster",
+      "repo_url": "https://github.com/ridi-oss/proxy-monster",
+      "website": "",
+      "description": "Self-hosted database access-control proxy for MySQL and PostgreSQL — a transparent wire-protocol proxy enforcing column-level, lineage-aware masking and deny decisions via Cedar policy, brokering connections so end users never hold DB credentials, and writing every decision to a tamper-evident audit trail.",
+      "category": [
+        "security tooling",
+        "secrets/access management",
+        "audit"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.1,
+      "maturity": "experimental",
+      "integration_effort": "high",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions; NOTICE file carries attribution requirements for redistributors.",
+      "deployment": [
+        "self-hosted",
+        "Docker (local dev stack)",
+        "AWS ECS (documented deploy target)"
+      ],
+      "interfaces": [
+        "native MySQL/PostgreSQL wire protocol (transparent to psql/mysql/JDBC/drivers)",
+        "admin/console web API"
+      ],
+      "use_cases": [
+        "Prove column-level access controls and produce an audit trail for a client compliance requirement (SOC2/data-governance angle)",
+        "Grant just-in-time, revocable elevated DB access instead of standing broad grants",
+        "Study the lineage-aware masking architecture even if not adopted directly"
+      ],
+      "product_opportunities": [
+        "Directly applicable to the MSSP admin-portal's data-governance story if the architecture proves out — not mature enough to commit to today"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Teleport (broader database-access scope, partly open-core)",
+        "Hasura/PostgREST row-level security (different mechanism, no cross-DB wire proxy)",
+        "Manual read-replica + view-based masking (status quo)"
+      ],
+      "why_it_matters": "Column-level masking that follows sensitive values through joins/subqueries/SELECT * (not just top-level column references) is a harder, more complete version of the data-access-governance problem than most self-hosted options attempt.",
+      "why_not_build_it_myself": "Query lineage analysis and a Cedar-policy decision engine are a multi-week project on their own; this has already built and documented them, even if unproven.",
+      "risks": [
+        "Created 2026-07-29, ~1 month old, 14 stars, PostgreSQL target support explicitly marked experimental (MySQL is the only fully-enforced target)",
+        "40 open issues against only 7 forks and 14 stars — check whether these are mostly maintainer-filed before reading it as community engagement",
+        "Heavy toolchain (JDK 24 pinned, Kotlin+Go+gRPC) raises integration effort well above a typical self-hosted utility"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "server-v0.1.23",
+      "latest_release_date": "2026-08-28",
+      "source_links": [
+        "https://github.com/ridi-oss/proxy-monster"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 14 stars, pushed_at 2026-08-30, created 2026-07-29. Pre-1.0, treat all claims as unproven until tested.",
+      "acted_on": false
     }
   ]
 }
