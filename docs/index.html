@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Source Radar — Catalog</title>
+<style>
+  :root {
+    --bg: #0d1117; --panel: #161b22; --border: #30363d; --text: #c9d1d9;
+    --muted: #8b949e; --accent: #58a6ff; --good: #3fb950; --warn: #d29922;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Helvetica, Arial, sans-serif; margin: 0; padding: 24px;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+  .controls {
+    display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;
+    position: sticky; top: 0; background: var(--bg); padding: 8px 0; z-index: 10;
+  }
+  input, select {
+    background: var(--panel); border: 1px solid var(--border); color: var(--text);
+    padding: 6px 10px; border-radius: 6px; font-size: 13px;
+  }
+  input[type=text] { flex: 1; min-width: 200px; }
+  .count { color: var(--muted); font-size: 12px; margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th {
+    text-align: left; padding: 8px; border-bottom: 1px solid var(--border);
+    color: var(--muted); font-weight: 600; white-space: nowrap;
+  }
+  td { padding: 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:hover { background: var(--panel); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px;
+    font-weight: 600; white-space: nowrap;
+  }
+  .status-USE-NOW { background: rgba(63,185,80,.15); color: var(--good); }
+  .status-PROTOTYPE { background: rgba(88,166,255,.15); color: var(--accent); }
+  .status-STUDY { background: rgba(210,153,34,.15); color: var(--warn); }
+  .status-WATCH { background: rgba(139,148,158,.15); color: var(--muted); }
+  .status-IGNORE { background: rgba(139,148,158,.1); color: var(--muted); text-decoration: line-through; }
+  .cats { color: var(--muted); font-size: 11px; }
+  .score { font-variant-numeric: tabular-nums; }
+  .desc { color: var(--muted); max-width: 420px; }
+</style>
+</head>
+<body>
+  <h1>Open Source Radar</h1>
+  <div class="sub" id="meta">Loading…</div>
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search name, description, category…">
+    <select id="statusFilter">
+      <option value="">All statuses</option>
+      <option>USE NOW</option>
+      <option>PROTOTYPE</option>
+      <option>STUDY</option>
+      <option>WATCH</option>
+      <option>IGNORE</option>
+    </select>
+    <select id="sort">
+      <option value="score_desc">Score (high→low)</option>
+      <option value="score_asc">Score (low→high)</option>
+      <option value="recent">Most recently reviewed</option>
+      <option value="name">Name (A→Z)</option>
+    </select>
+  </div>
+  <div class="count" id="count"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Status</th><th>Score</th><th>Description</th>
+        <th>Category</th><th>License</th><th>Reviewed</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+<script>
+let ALL = [];
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+}
+
+function safeHref(s) {
+  const url = String(s || '');
+  return /^https?:\/\//i.test(url) ? escapeHtml(url) : '#';
+}
+
+async function load() {
+  const res = await fetch('https://raw.githubusercontent.com/sourav-ojha/open-source-radar/main/catalog.json');
+  const data = await res.json();
+  ALL = data.projects || [];
+  document.getElementById('meta').textContent =
+    `${ALL.length} projects · updated ${data.updated} · schema v${data.schema_version}`;
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const status = document.getElementById('statusFilter').value;
+  const sort = document.getElementById('sort').value;
+
+  let items = ALL.filter(p => {
+    if (status && p.status !== status) return false;
+    if (!q) return true;
+    const hay = [p.name, p.description, ...(p.category || [])].join(' ').toLowerCase();
+    return hay.includes(q);
+  });
+
+  items.sort((a, b) => {
+    if (sort === 'score_desc') return (b.relevance_score || 0) - (a.relevance_score || 0);
+    if (sort === 'score_asc') return (a.relevance_score || 0) - (b.relevance_score || 0);
+    if (sort === 'recent') return (b.last_reviewed || '').localeCompare(a.last_reviewed || '');
+    if (sort === 'name') return (a.name || '').localeCompare(b.name || '');
+    return 0;
+  });
+
+  document.getElementById('count').textContent = `${items.length} shown`;
+
+  // catalog.json is produced by our own automated run, not third-party input.
+  // Every field is still escaped before insertion as defense in depth.
+  const rows = items.map(p => {
+    const statusClass = 'status-' + escapeHtml((p.status || '').replace(/\s+/g, '-'));
+    const cats = (p.category || []).join(', ');
+    return `<tr>
+      <td><a href="${safeHref(p.repo_url)}" target="_blank" rel="noopener">${escapeHtml(p.name)}</a></td>
+      <td><span class="badge ${statusClass}">${escapeHtml(p.status || '')}</span></td>
+      <td class="score">${escapeHtml(p.relevance_score ?? '')}</td>
+      <td class="desc">${escapeHtml(p.description || '')}</td>
+      <td class="cats">${escapeHtml(cats)}</td>
+      <td>${escapeHtml(p.license || '')}</td>
+      <td>${escapeHtml(p.last_reviewed || '')}</td>
+    </tr>`;
+  }).join('');
+  document.getElementById('rows').innerHTML = rows;
+}
+
+document.getElementById('search').addEventListener('input', render);
+document.getElementById('statusFilter').addEventListener('change', render);
+document.getElementById('sort').addEventListener('change', render);
+
+load();
+</script>
+</body>
+</html>

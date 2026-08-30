@@ -71,7 +71,8 @@
         "https://www.npmjs.com/package/@xberg-io/html-to-markdown"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review — actively maintained)."
+      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review — actively maintained).",
+      "acted_on": false
     },
     {
       "name": "LightAgent",
@@ -131,7 +132,8 @@
         "https://pypi.org/project/lightagent/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 1214 stars, pushed_at 2026-08-21."
+      "notes": "GitHub API verified: Apache-2.0, 1214 stars, pushed_at 2026-08-21.",
+      "acted_on": false
     },
     {
       "name": "Opslane",
@@ -192,7 +194,8 @@
         "https://docs.opslane.com/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: AGPL-3.0, 36 stars, pushed_at 2026-08-29 (today). AGPL flagged per spec section 14 — loud warning, not a disqualifier."
+      "notes": "GitHub API verified: AGPL-3.0, 36 stars, pushed_at 2026-08-29 (today). AGPL flagged per spec section 14 — loud warning, not a disqualifier.",
+      "acted_on": false
     },
     {
       "name": "OpenDocuments",
@@ -253,7 +256,8 @@
         "https://www.npmjs.com/package/opendocuments"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 110 stars, pushed_at 2026-07-26. Release/commit gap flagged as a risk, not fabricated as current."
+      "notes": "GitHub API verified: MIT, 110 stars, pushed_at 2026-07-26. Release/commit gap flagged as a risk, not fabricated as current.",
+      "acted_on": false
     },
     {
       "name": "Weir",
@@ -313,7 +317,8 @@
         "https://pypi.org/project/weir-scan/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 9 stars, pushed_at 2026-08-25. Hidden-gem candidate: high relevance to PTaaS/security work despite tiny star count."
+      "notes": "GitHub API verified: Apache-2.0, 9 stars, pushed_at 2026-08-25. Hidden-gem candidate: high relevance to PTaaS/security work despite tiny star count.",
+      "acted_on": false
     },
     {
       "name": "LightMem",
@@ -365,7 +370,8 @@
         "https://github.com/zjunlp/LightMem"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 1099 stars, pushed_at 2026-08-21. STUDY-classified, not adoption-classified."
+      "notes": "GitHub API verified: MIT, 1099 stars, pushed_at 2026-08-21. STUDY-classified, not adoption-classified.",
+      "acted_on": false
     },
     {
       "name": "website2markdown",
@@ -425,7 +431,8 @@
         "https://www.npmjs.com/package/@digidai/mcp-website2markdown"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 8 stars, pushed_at 2026-07-15. Featured as today's Small High-Leverage Utility."
+      "notes": "GitHub API verified: Apache-2.0, 8 stars, pushed_at 2026-07-15. Featured as today's Small High-Leverage Utility.",
+      "acted_on": false
     },
     {
       "name": "OpenDataLoader PDF",
@@ -496,7 +503,8 @@
         "https://pypi.org/project/opendataloader-pdf/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 28,856 stars, pushed_at 2026-08-28, not archived. Ranks #1 overall (0.907) in the project's own published extraction benchmark against docling, unstructured, mineru, marker."
+      "notes": "GitHub API verified: Apache-2.0, 28,856 stars, pushed_at 2026-08-28, not archived. Ranks #1 overall (0.907) in the project's own published extraction benchmark against docling, unstructured, mineru, marker.",
+      "acted_on": false
     },
     {
       "name": "skills (Vercel Labs)",
@@ -553,7 +561,8 @@
         "https://skills.sh"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 29,960 stars, pushed_at 2026-08-18, not archived, created 2026-01-14. Conceptually adjacent to this radar's own AGENT.md-as-versioned-spec pattern."
+      "notes": "GitHub API verified: MIT, 29,960 stars, pushed_at 2026-08-18, not archived, created 2026-01-14. Conceptually adjacent to this radar's own AGENT.md-as-versioned-spec pattern.",
+      "acted_on": false
     },
     {
       "name": "Laminar",
@@ -618,7 +627,8 @@
         "https://laminar.sh/docs"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 3,211 stars, pushed_at 2026-08-29 (today), created 2024-08-29 (exactly 2 years old today) — consistently active, not a flash-in-the-pan."
+      "notes": "GitHub API verified: Apache-2.0, 3,211 stars, pushed_at 2026-08-29 (today), created 2024-08-29 (exactly 2 years old today) — consistently active, not a flash-in-the-pan.",
+      "acted_on": false
     },
     {
       "name": "Chunky",
@@ -677,7 +687,8 @@
         "https://github.com/GiovanniPasq/chunky"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 170 stars, pushed_at 2026-07-25, created 2026-03-06. Monthly release cadence (v0.6.0 Jun, v0.7.0 Jul) — active for its size."
+      "notes": "GitHub API verified: MIT, 170 stars, pushed_at 2026-07-25, created 2026-03-06. Monthly release cadence (v0.6.0 Jun, v0.7.0 Jul) — active for its size.",
+      "acted_on": false
     },
     {
       "name": "Sidequest",
@@ -742,7 +753,8 @@
         "https://docs.sidequestjs.com/getting-started/migrating-from-bullmq"
       ],
       "aliases": [],
-      "notes": "Requires Node.js >= 22.6.0. TypeScript jobs need Node >= 23.6.0 for native execution."
+      "notes": "Requires Node.js >= 22.6.0. TypeScript jobs need Node >= 23.6.0 for native execution.",
+      "acted_on": false
     },
     {
       "name": "Kingfisher",
@@ -804,7 +816,8 @@
         "https://www.mongodb.com/blog/post/product-release-announcements/introducing-kingfisher-real-time-secret-detection-validation"
       ],
       "aliases": [],
-      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors."
+      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors.",
+      "acted_on": false
     },
     {
       "name": "Agent Vault",
@@ -865,7 +878,8 @@
         "https://docs.agent-vault.dev"
       ],
       "aliases": [],
-      "notes": "Backed by Infisical (funded secrets-management company), which reduces abandonment risk relative to a solo-maintainer project of similar age."
+      "notes": "Backed by Infisical (funded secrets-management company), which reduces abandonment risk relative to a solo-maintainer project of similar age.",
+      "acted_on": false
     },
     {
       "name": "Proval",
@@ -929,7 +943,8 @@
         "https://proval.app/docs"
       ],
       "aliases": [],
-      "notes": "Single-maintainer project with zero forks as of review date — treat production-readiness claims cautiously until it accrues more independent usage."
+      "notes": "Single-maintainer project with zero forks as of review date — treat production-readiness claims cautiously until it accrues more independent usage.",
+      "acted_on": false
     },
     {
       "name": "Nona",
@@ -993,7 +1008,8 @@
         "https://demo.nonaconfig.com"
       ],
       "aliases": [],
-      "notes": "Live demo at demo.nonaconfig.com resets nightly and requires no signup — good first stop before self-hosting."
+      "notes": "Live demo at demo.nonaconfig.com resets nightly and requires no signup — good first stop before self-hosting.",
+      "acted_on": false
     }
   ]
 }

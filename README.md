@@ -73,6 +73,12 @@ can't run away indefinitely regardless of which auth mode is used.
 - **Claude usage:** no separate dollar cost — see "The real tradeoff" above. The cost is
   paid in shared usage-window headroom, not billing.
 
+## Browse the catalog
+
+https://sourav-ojha.github.io/open-source-radar/ — searchable/filterable table, built
+from `catalog.json`. Static page, no build step; auto-updates whenever `catalog.json`
+changes on `main`.
+
 ## Layout
 
 | Path | What it is |
@@ -86,6 +92,7 @@ can't run away indefinitely regardless of which auth mode is used.
 | `daily/` | Daily digests, `YYYY-MM-DD.md` |
 | `projects/` | One file per seriously tracked project |
 | `monthly/` | End-of-month synthesis |
+| `docs/index.html` | GitHub Pages catalog browser (fetches `catalog.json` from `main` at runtime) |
 
 ## Adoption statuses
 

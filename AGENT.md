@@ -455,9 +455,15 @@ Keep it one line per project, no pretty-printing. This is the file you grep for 
   "why_not_build_it_myself": "", "risks": [], "first_seen": "YYYY-MM-DD",
   "last_reviewed": "YYYY-MM-DD", "last_meaningful_update": "YYYY-MM-DD",
   "current_version": "", "latest_release_date": "", "source_links": [],
-  "aliases": [], "notes": ""
+  "aliases": [], "notes": "", "acted_on": false
 }
 ```
+
+`acted_on` defaults to `false` on new entries. Set it to `true` only on explicit signal that
+Sourav actually tried the project — he says so in conversation, or a future run finds
+evidence (e.g. it's referenced from one of his other repos). Never infer it from the
+project simply having been reviewed or scored well. This field exists purely to drive
+section 20.5 below — it is not a recommendation strength signal.
 
 Preserve backward compatibility if the schema evolves — add fields, never remove them.
 Edit `catalog.json` with a script (python/node), never by hand-retyping the whole file.
@@ -568,6 +574,32 @@ Sources used, sources that failed, anything the run could not complete.
 **The final gate on every entry:** *"If I only have 30 minutes today, is this worth
 knowing about?"* If no, it does not go in Today's Best Discoveries. Three excellent
 discoveries beat ten mediocre ones.
+
+---
+
+## 20.5 Still Worth Trying (unactioned-items nudge)
+
+Discovery is worthless if nothing is ever tried. Each run, scan `catalog.json` for
+entries where `status` is `USE NOW` or `PROTOTYPE`, `acted_on` is `false` (or absent),
+and `first_seen` is 14+ days before today.
+
+Pick up to 3, prioritized by `relevance_score` descending, and add a **Still Worth
+Trying** section to the daily digest, after **Meaningful Updates** and before **Small
+but High-Leverage Utility**:
+
+```
+## Still Worth Trying
+Projects flagged USE NOW/PROTOTYPE that haven't been tried yet.
+- **Project Name** — USE NOW, 8.3/10, first seen 2026-08-29 (32 days ago). One line on
+  why it still matters and the smallest next step to actually try it.
+```
+
+Omit the section if nothing qualifies, or if fewer than 3 exist and none feel worth
+repeating. Do not nag about the same project two runs in a row unless nothing else
+qualifies — rotate through the backlog rather than always leading with the oldest one.
+
+This section does not change `acted_on` itself — only Sourav confirming use, or future
+evidence of use, does that (see the `acted_on` field note in section 19).
 
 ---
 
