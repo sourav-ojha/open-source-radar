@@ -98,8 +98,8 @@ jobs:
           # in a day (manual re-dispatch, retries). Skip entirely if today's issue
           # (success or failure variant) already exists and is open.
           EXISTING=$(gh issue list --state open --json title,number \
-            --jq --arg t "$TITLE" --arg f "$FAIL_TITLE" \
-            '.[] | select(.title == $t or .title == $f) | .number' | head -n1)
+            | jq -r --arg t "$TITLE" --arg f "$FAIL_TITLE" \
+              '.[] | select(.title == $t or .title == $f) | .number' | head -n1)
           if [ -n "$EXISTING" ]; then
             echo "issue already exists for ${TODAY} (#${EXISTING}); skipping to avoid duplicate"
             echo "run_ok=skipped" >> "$GITHUB_OUTPUT"
