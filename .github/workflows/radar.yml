@@ -91,14 +91,28 @@ jobs:
         run: |
           TODAY=$(date -u +%F)
           DIGEST="daily/${TODAY}.md"
+          TITLE="Open Source Radar — ${TODAY}"
+          FAIL_TITLE="Open Source Radar — ${TODAY} — run did not complete"
+
+          # Guard against duplicate issues when this workflow runs more than once
+          # in a day (manual re-dispatch, retries). Skip entirely if today's issue
+          # (success or failure variant) already exists and is open.
+          EXISTING=$(gh issue list --state open --json title,number \
+            --jq --arg t "$TITLE" --arg f "$FAIL_TITLE" \
+            '.[] | select(.title == $t or .title == $f) | .number' | head -n1)
+          if [ -n "$EXISTING" ]; then
+            echo "issue already exists for ${TODAY} (#${EXISTING}); skipping to avoid duplicate"
+            exit 0
+          fi
+
           if [ -f "$DIGEST" ] && git diff --name-only "${{ steps.pre_run.outputs.sha }}" HEAD -- "$DIGEST" | grep -q .; then
             gh issue create \
-              --title "Open Source Radar — ${TODAY}" \
+              --title "$TITLE" \
               --body-file "$DIGEST" \
               || echo "::warning::issue creation failed; digest is still in the repo at $DIGEST"
           else
             gh issue create \
-              --title "Open Source Radar — ${TODAY} — run did not complete" \
+              --title "$FAIL_TITLE" \
               --body "The digest at \`$DIGEST\` was not updated by this run (or the run failed before reaching this step). Check the workflow run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               || echo "::warning::could not create failure issue either — check the Actions tab directly"
           fi
