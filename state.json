@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-08-29",
-  "last_successful_run": "2026-08-29",
-  "run_count": 2,
-  "rotation_slot_last_used": 4,
+  "last_run": "2026-08-30",
+  "last_successful_run": "2026-08-30",
+  "run_count": 3,
+  "rotation_slot_last_used": 5,
   "recent_categories": [
+    "self-hosted SaaS alternatives",
+    "productivity",
     "data",
-    "search",
-    "documents",
-    "RAG"
+    "search"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -25,28 +25,52 @@
     "GiovanniPasq/chunky",
     "billabear/billabear",
     "huextrat/openflags",
-    "paulund/viewhook"
+    "paulund/viewhook",
+    "sidequestjs/sidequest",
+    "mongodb/kingfisher",
+    "Infisical/agent-vault",
+    "seoes/proval",
+    "Ryware/nona-config",
+    "chrisgreg/boop",
+    "pontusab/workbench",
+    "experientiallabs/experiential",
+    "oomol-lab/open-connector",
+    "beizhu-1209/AIHelms",
+    "CloakHQ/CloakBrowser",
+    "t3ratech/mcp-session-bridge",
+    "NAEOS-foundation/naeos",
+    "darksworm/doormouse"
   ],
   "rejected": [
     {
       "repo_url": "https://github.com/supermemoryai/markdowner",
-      "reason": "abandoned \u2014 pushed_at 2024-07-21 despite 1999 stars; no commits in 2+ years",
+      "reason": "abandoned — pushed_at 2024-07-21 despite 1999 stars; no commits in 2+ years",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/paulund/viewhook",
-      "reason": "abandoned \u2014 repo is archived (archived: true) despite web listings describing it as an active self-hosted webhook debugger",
+      "reason": "abandoned — repo is archived (archived: true) despite web listings describing it as an active self-hosted webhook debugger",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/billabear/billabear",
-      "reason": "unclear licensing \u2014 Fair Core License (FCL-1.0-ALv2), not an OSI open-source license, restricts competing hosted offerings; also stale (last tagged release 2025-02, 1.5+ years old) against more mature alternatives (Lago, Kill Bill) already known",
+      "reason": "unclear licensing — Fair Core License (FCL-1.0-ALv2), not an OSI open-source license, restricts competing hosted offerings; also stale (last tagged release 2025-02, 1.5+ years old) against more mature alternatives (Lago, Kill Bill) already known",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/huextrat/openflags",
-      "reason": "immature/inactive \u2014 15 stars, no commits since 2026-03-14 (5+ months), redundant with established self-hosted feature-flag options (GO Feature Flag, Flipt, GrowthBook)",
+      "reason": "immature/inactive — 15 stars, no commits since 2026-03-14 (5+ months), redundant with established self-hosted feature-flag options (GO Feature Flag, Flipt, GrowthBook)",
       "date": "2026-08-29"
+    },
+    {
+      "repo_url": "https://github.com/beizhu-1209/AIHelms",
+      "reason": "unclear licensing/documentation — GPL-3.0 enterprise AI resource-management gateway, README primarily in Chinese, thin differentiation from established model gateways without deeper investigation",
+      "date": "2026-08-30"
+    },
+    {
+      "repo_url": "https://github.com/CloakHQ/CloakBrowser",
+      "reason": "duplicate — representative of a saturated 'stealth headless browser for AI agents' wave (CloakBrowser, obscura, browser-harness, ego-lite, camofox-browser all launched/pushed in the same window with near-identical positioning and no clear technical differentiation without hands-on testing)",
+      "date": "2026-08-30"
     }
   ],
   "known_releases": {
@@ -93,16 +117,36 @@
     "GiovanniPasq/chunky": {
       "version": "v0.7.0",
       "date": "2026-07-03"
+    },
+    "sidequestjs/sidequest": {
+      "version": "v1.16.3",
+      "date": "2026-08-27"
+    },
+    "mongodb/kingfisher": {
+      "version": "v2.0.0",
+      "date": "2026-08-23"
+    },
+    "Infisical/agent-vault": {
+      "version": "v0.39.1",
+      "date": "2026-08-04"
+    },
+    "seoes/proval": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "Ryware/nona-config": {
+      "version": "cli-v3.1.0",
+      "date": "2026-08-18"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-08-29",
-      "note": "working normally"
+      "last_ok": "2026-08-30",
+      "note": "working normally, used for broader self-hosted-alternative landscape context"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-08-29",
-      "note": "working normally, used for README verification on all 4 new candidates"
+      "last_ok": "2026-08-30",
+      "note": "working normally, used for README verification on all deep-review candidates; occasional main-vs-master branch 404s, resolved by trying both"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -110,15 +154,19 @@
     },
     "api.github.com (cloud container)": {
       "last_ok": null,
-      "note": "BLOCKED at proxy \u2014 do not attempt from cloud session, always route through Mac shell per AGENT.md section 8"
+      "note": "BLOCKED at proxy — do not attempt from cloud session, always route through Mac shell per AGENT.md section 8"
     },
     "github.com/trending (WebFetch)": {
       "last_ok": null,
-      "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
+      "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-08-29",
-      "note": "Direct, unrestricted from the GitHub Actions runner per AGENT.md 0.5 \u2014 no Mac-shell/cloud-session split needed this run. GITHUB_TOKEN used, core rate limit 8300/hr, well within budget."
+      "last_ok": "2026-08-30",
+      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit, well within budget for search + repo + release + README calls."
+    },
+    "hn.algolia.com": {
+      "last_ok": "2026-08-30",
+      "note": "working normally, used for Show HN search by date across multiple category queries"
     }
   },
   "previous_recommendations": [
@@ -129,7 +177,12 @@
     "opendataloader-pdf",
     "vercel-skills-cli",
     "laminar",
-    "chunky-rag-toolkit"
+    "chunky-rag-toolkit",
+    "sidequest-job-queue",
+    "mongodb-kingfisher",
+    "infisical-agent-vault",
+    "proval",
+    "nona-config"
   ],
-  "notes": "2026-08-29: two runs same calendar day. Run 1 (recorded in daily/2026-08-29.md's main body) catalogued 7 projects under an older execution model description (Mac-shell/cloud-session split) that predates the current AGENT.md 0.5, which now runs directly and unattended inside GitHub Actions with a real api.github.com connection. Run 2 (this run) executed under the current spec, found the daily digest for today already existed, and appended a second dated section to it rather than overwriting \u2014 4 new projects catalogued (OpenDataLoader PDF, vercel-labs/skills, Laminar, Chunky), 3 rejected (viewhook archived, billabear unclear license, openflags inactive). Catalog now at 11 projects total."
+  "notes": "2026-08-30: single run, slot 5 (self-hosted SaaS alternatives, productivity), computed as (day_of_year(2026-08-30)=242 % 7)+1=5. Catalogued 5 new projects: Sidequest (Mongo-native Redis-free job queue, USE NOW), Kingfisher (MongoDB's secret scanner with live validation, USE NOW), Agent Vault (Infisical's credential proxy for AI agents, PROTOTYPE), Proval (self-hosted AGPL code-review agent, PROTOTYPE), Nona (self-hosted Firebase Remote Config alternative, PROTOTYPE). Utility of the day: Boop (self-hosted iOS push notification inbox, very new - 2 days old at review). Worth Watching: Workbench (BullMQ dashboard, development stalled since June), Experiential (model gateway, needs differentiation check vs LiteLLM-style tools), OpenConnector (Pipedream/Composio self-hosted alternative, fast star growth warrants a closer look before adoption). Rejected: AIHelms (unclear licensing/docs), CloakBrowser as representative of a saturated stealth-headless-browser-for-agents wave with ~5 near-identical entries. Catalog now at 16 projects total. No previously catalogued project resurfaced with a meaningful update today."
 }

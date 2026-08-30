@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-29",
+  "updated": "2026-08-30",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -55,10 +55,10 @@
         "Digidai/website2markdown (narrower scope, Cloudflare-Worker-hosted service rather than embeddable library)",
         "turndown (npm, unmaintained pace by comparison)"
       ],
-      "why_it_matters": "Every ingestion pipeline that touches web content eventually needs an HTML\u2192Markdown step; this one is faster, more spec-compliant, and available natively in Node without a subprocess or WASM workaround most alternatives require.",
+      "why_it_matters": "Every ingestion pipeline that touches web content eventually needs an HTML→Markdown step; this one is faster, more spec-compliant, and available natively in Node without a subprocess or WASM workaround most alternatives require.",
       "why_not_build_it_myself": "CommonMark compliance and edge cases (nested tables, code blocks, malformed HTML) are a multi-day correctness problem this project has already solved across 6 language runtimes.",
       "risks": [
-        "Young org (xberg-io) \u2014 verify long-term maintenance commitment before deep production dependency",
+        "Young org (xberg-io) — verify long-term maintenance commitment before deep production dependency",
         "Native bindings mean a compiled dependency in the build chain, not pure JS"
       ],
       "first_seen": "2026-08-29",
@@ -71,7 +71,7 @@
         "https://www.npmjs.com/package/@xberg-io/html-to-markdown"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review \u2014 actively maintained)."
+      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review — actively maintained)."
     },
     {
       "name": "LightAgent",
@@ -89,7 +89,7 @@
       "maturity": "emerging",
       "integration_effort": "medium",
       "license": "Apache-2.0",
-      "commercial_use_notes": "Apache-2.0 \u2014 permissive, safe to embed in commercial products.",
+      "commercial_use_notes": "Apache-2.0 — permissive, safe to embed in commercial products.",
       "deployment": [
         "pip package",
         "self-hosted",
@@ -107,7 +107,7 @@
         "Could back an internal Python microservice for a specific agent workload while the rest of the stack stays Node"
       ],
       "agent_opportunities": [
-        "Framework itself IS agent infrastructure \u2014 not something to wrap, something to build agents with",
+        "Framework itself IS agent infrastructure — not something to wrap, something to build agents with",
         "Its guardrails/tracing modules are worth lifting as patterns even if the framework itself isn't adopted"
       ],
       "alternatives": [
@@ -118,14 +118,14 @@
       "why_it_matters": "Bundles memory + guardrails + tracing + multi-agent orchestration that would otherwise mean integrating 3-4 separate libraries; useful as both a tool and an architecture reference.",
       "why_not_build_it_myself": "Guardrails and cross-agent memory coordination are easy to get subtly wrong; this has 1,214 stars and active maintenance behind those decisions.",
       "risks": [
-        "Python-only \u2014 introduces a second runtime into an otherwise Node/TS stack unless isolated as its own service",
+        "Python-only — introduces a second runtime into an otherwise Node/TS stack unless isolated as its own service",
         "\"Lightweight\" framing vs. bundling 5+ concerns is a tension worth verifying in practice before trusting it at scale"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
       "last_meaningful_update": "2026-08-29",
       "current_version": "see GitHub releases",
-      "latest_release_date": "unclear \u2014 check https://github.com/wanxingai/LightAgent/releases directly",
+      "latest_release_date": "unclear — check https://github.com/wanxingai/LightAgent/releases directly",
       "source_links": [
         "https://github.com/wanxingai/LightAgent",
         "https://pypi.org/project/lightagent/"
@@ -138,7 +138,7 @@
       "slug": "opslane",
       "repo_url": "https://github.com/opslane/opslane",
       "website": "https://opslane.com/",
-      "description": "Records user sessions, ranks the UX failures nobody's exception tracker caught (dead buttons, abandoned forms, dropdowns closing before selection) by how many users hit them, investigates the ranked ones, and opens a PR only when it can verify the fix \u2014 self-hostable.",
+      "description": "Records user sessions, ranks the UX failures nobody's exception tracker caught (dead buttons, abandoned forms, dropdowns closing before selection) by how many users hit them, investigates the ranked ones, and opens a PR only when it can verify the fix — self-hostable.",
       "category": [
         "developer productivity",
         "debugging",
@@ -150,7 +150,7 @@
       "maturity": "experimental",
       "integration_effort": "medium",
       "license": "AGPL-3.0",
-      "commercial_use_notes": "AGPL-3.0 \u2014 network-use copyleft. Self-hosting internally is fine; embedding inside a closed-source commercial SaaS (e.g. bundled into OffenFlow) would trigger source-disclosure obligations. Treat as internal-tool-only unless a commercial license is offered.",
+      "commercial_use_notes": "AGPL-3.0 — network-use copyleft. Self-hosting internally is fine; embedding inside a closed-source commercial SaaS (e.g. bundled into OffenFlow) would trigger source-disclosure obligations. Treat as internal-tool-only unless a commercial license is offered.",
       "deployment": [
         "self-hosted",
         "Docker (implied by self-host quickstart)"
@@ -168,17 +168,17 @@
         "The rank-by-impact + verify-before-PR pattern is a genuinely reusable architecture idea for any auto-remediation feature"
       ],
       "agent_opportunities": [
-        "Itself an autonomous coding-agent workflow (session data \u2192 hypothesis \u2192 verified fix \u2192 PR) \u2014 worth studying the verification gate specifically"
+        "Itself an autonomous coding-agent workflow (session data → hypothesis → verified fix → PR) — worth studying the verification gate specifically"
       ],
       "alternatives": [
         "PostHog session replay + manual triage",
         "Sentry + manual triage",
         "FullStory"
       ],
-      "why_it_matters": "Most session-replay tools stop at 'here is a recording' \u2014 this one closes the loop to a verified PR, which is the actual expensive part of the workflow.",
+      "why_it_matters": "Most session-replay tools stop at 'here is a recording' — this one closes the loop to a verified PR, which is the actual expensive part of the workflow.",
       "why_not_build_it_myself": "The verification gate (don't open a PR unless the fix is confirmed) is the hard 20% of this idea; building and trusting that gate is a multi-week project on its own.",
       "risks": [
-        "36 stars, pushed same day as this review \u2014 genuinely early, expect breaking changes",
+        "36 stars, pushed same day as this review — genuinely early, expect breaking changes",
         "AGPL is a hard blocker for embedding in a closed commercial product",
         "Self-hosting a session-recording pipeline has its own privacy/compliance surface to review before pointing at real user sessions"
       ],
@@ -192,7 +192,7 @@
         "https://docs.opslane.com/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: AGPL-3.0, 36 stars, pushed_at 2026-08-29 (today). AGPL flagged per spec section 14 \u2014 loud warning, not a disqualifier."
+      "notes": "GitHub API verified: AGPL-3.0, 36 stars, pushed_at 2026-08-29 (today). AGPL flagged per spec section 14 — loud warning, not a disqualifier."
     },
     {
       "name": "OpenDocuments",
@@ -210,7 +210,7 @@
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "MIT",
-      "commercial_use_notes": "MIT \u2014 unrestricted commercial and SaaS use.",
+      "commercial_use_notes": "MIT — unrestricted commercial and SaaS use.",
       "deployment": [
         "self-hosted",
         "npm package"
@@ -222,7 +222,7 @@
       "use_cases": [
         "Internal 'ask our docs' search across Notion + GitHub + Drive without building a custom ingestion pipeline",
         "Backbone for a customer-facing knowledge-search feature in a product, since citations are built in",
-        "Direct fit for the MERN/Node stack \u2014 no cross-language integration cost"
+        "Direct fit for the MERN/Node stack — no cross-language integration cost"
       ],
       "product_opportunities": [
         "Could become the search/knowledge layer inside a product without writing a RAG pipeline from scratch",
@@ -240,8 +240,8 @@
       "why_it_matters": "It is the rare RAG project that matches the target stack (Node/TypeScript) exactly, so there's no cross-runtime tax to adopt it, and multi-source + citations are both usually the hardest 60% to build correctly.",
       "why_not_build_it_myself": "Source-connector plumbing (Notion API, Drive API, Confluence API, S3, GitHub) times five, plus citation tracking through a RAG pipeline, is easily 1-2 weeks of integration work this replaces outright.",
       "risks": [
-        "Latest tagged release (v0.3.0, April) trails the last commit (July) by 3 months \u2014 verify what has changed on main before depending on the tagged version",
-        "110 stars, single-maintainer-looking project \u2014 bus-factor risk"
+        "Latest tagged release (v0.3.0, April) trails the last commit (July) by 3 months — verify what has changed on main before depending on the tagged version",
+        "110 stars, single-maintainer-looking project — bus-factor risk"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -272,7 +272,7 @@
       "maturity": "experimental",
       "integration_effort": "low",
       "license": "Apache-2.0",
-      "commercial_use_notes": "Apache-2.0 \u2014 permissive, safe to embed or run internally.",
+      "commercial_use_notes": "Apache-2.0 — permissive, safe to embed or run internally.",
       "deployment": [
         "pip package",
         "CI step"
@@ -283,31 +283,31 @@
       ],
       "use_cases": [
         "CI gate on any agent workflow that touches customer data, verifying no sensitive-data leak path exists before merge",
-        "Directly applicable to PTaaS/security-tooling work \u2014 automated proof that an agent didn't exfiltrate scan data through an unintended sink",
+        "Directly applicable to PTaaS/security-tooling work — automated proof that an agent didn't exfiltrate scan data through an unintended sink",
         "Cheap due-diligence check before shipping a new agent tool call in any product"
       ],
       "product_opportunities": [
         "A packaged version of this pattern (taint-tracking over agent traces) is a plausible standalone security-tooling product, directly adjacent to the PTaaS partnership"
       ],
       "agent_opportunities": [
-        "This IS agent tooling \u2014 a CI-native tool, not something to wrap further"
+        "This IS agent tooling — a CI-native tool, not something to wrap further"
       ],
       "alternatives": [
         "Manual trace review",
         "generic OTel + custom alerting rules (build-it-yourself, weeks of work)"
       ],
-      "why_it_matters": "Nobody else is turning 'does my agent leak data' into a structural, automatable CI check off traces the agent already emits \u2014 this is a narrow problem solved unusually well.",
+      "why_it_matters": "Nobody else is turning 'does my agent leak data' into a structural, automatable CI check off traces the agent already emits — this is a narrow problem solved unusually well.",
       "why_not_build_it_myself": "Taint-tracking through a reconstructed session graph is a non-trivial static-analysis problem; this exists and is free to try before building an equivalent.",
       "risks": [
-        "9 stars, very early (first meaningful activity within the last week) \u2014 expect rough edges and API churn",
+        "9 stars, very early (first meaningful activity within the last week) — expect rough edges and API churn",
         "Single maintainer, unproven at scale",
-        "Requires the agent to already emit OTel traces \u2014 not zero-integration"
+        "Requires the agent to already emit OTel traces — not zero-integration"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
       "last_meaningful_update": "2026-08-29",
       "current_version": "see PyPI (weir-scan)",
-      "latest_release_date": "unclear \u2014 check https://pypi.org/project/weir-scan/ directly",
+      "latest_release_date": "unclear — check https://pypi.org/project/weir-scan/ directly",
       "source_links": [
         "https://github.com/IdoGol24/weir",
         "https://pypi.org/project/weir-scan/"
@@ -330,7 +330,7 @@
       "maturity": "experimental",
       "integration_effort": "high",
       "license": "MIT",
-      "commercial_use_notes": "MIT, but this is academic research code \u2014 commercial-use notes matter less than production-readiness here.",
+      "commercial_use_notes": "MIT, but this is academic research code — commercial-use notes matter less than production-readiness here.",
       "deployment": [
         "library (Python)",
         "research codebase"
@@ -351,7 +351,7 @@
         "Cognee"
       ],
       "why_it_matters": "Peer-reviewed (ICLR 2026) efficiency techniques for agent memory are worth knowing about even without adopting the code directly.",
-      "why_not_build_it_myself": "N/A \u2014 this is a study candidate, not a build-replacement candidate.",
+      "why_not_build_it_myself": "N/A — this is a study candidate, not a build-replacement candidate.",
       "risks": [
         "Research code: expect it to be harder to productionize than framework code from a company maintaining a product around it",
         "1,099 stars is notable for a research repo but says nothing about production readiness"
@@ -360,7 +360,7 @@
       "last_reviewed": "2026-08-29",
       "last_meaningful_update": "2026-08-29",
       "current_version": "see GitHub releases",
-      "latest_release_date": "unclear \u2014 check repository directly",
+      "latest_release_date": "unclear — check repository directly",
       "source_links": [
         "https://github.com/zjunlp/LightMem"
       ],
@@ -372,7 +372,7 @@
       "slug": "website2markdown",
       "repo_url": "https://github.com/Digidai/website2markdown",
       "website": "https://md.genedai.me",
-      "description": "Converts any web page \u2014 JS-heavy SPAs, paywalled content, Chinese platforms (WeChat, Zhihu, Feishu) \u2014 to clean Markdown via a Cloudflare Worker with a 5-layer fallback pipeline and 14 site-specific adapters. Ships as a hosted API, an MCP server, and a matching Agent Skills package.",
+      "description": "Converts any web page — JS-heavy SPAs, paywalled content, Chinese platforms (WeChat, Zhihu, Feishu) — to clean Markdown via a Cloudflare Worker with a 5-layer fallback pipeline and 14 site-specific adapters. Ships as a hosted API, an MCP server, and a matching Agent Skills package.",
       "category": [
         "small utility",
         "document processing",
@@ -383,7 +383,7 @@
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "Apache-2.0",
-      "commercial_use_notes": "Apache-2.0 \u2014 permissive.",
+      "commercial_use_notes": "Apache-2.0 — permissive.",
       "deployment": [
         "Cloudflare Worker (self-deployable)",
         "hosted API",
@@ -401,19 +401,19 @@
       ],
       "product_opportunities": [],
       "agent_opportunities": [
-        "Already ships as an MCP server \u2014 zero integration work to expose to a coding agent",
+        "Already ships as an MCP server — zero integration work to expose to a coding agent",
         "Agent Skills package is directly usable"
       ],
       "alternatives": [
-        "xberg-io/html-to-markdown (catalogued \u2014 a library, not a scraping/fallback service)",
+        "xberg-io/html-to-markdown (catalogued — a library, not a scraping/fallback service)",
         "supermemoryai/markdowner (catalogued as rejected/abandoned)",
         "Firecrawl (commercial)"
       ],
       "why_it_matters": "The 5-layer fallback + 14 site adapters solve the annoying long tail of 'this one converter works on 95% of pages' that eats real debugging time.",
       "why_not_build_it_myself": "Site-specific adapters for paywalled/JS-heavy/non-Latin platforms are exactly the kind of unglamorous, time-consuming edge-case work worth not doing yourself.",
       "risks": [
-        "Only 8 stars and a small team \u2014 verify the hosted API's reliability before depending on it for anything production-critical; self-host the Worker if so",
-        "Narrower scope than html-to-markdown (fetch+convert service vs. pure converter library) \u2014 not a like-for-like substitute"
+        "Only 8 stars and a small team — verify the hosted API's reliability before depending on it for anything production-critical; self-host the Worker if so",
+        "Narrower scope than html-to-markdown (fetch+convert service vs. pure converter library) — not a like-for-like substitute"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -476,14 +476,14 @@
       "alternatives": [
         "docling (MIT, close on accuracy per the project's own published benchmark, no accessibility/auto-tagging angle)",
         "unstructured / unstructured[hi_res] (Apache-2.0, materially weaker table accuracy per benchmark)",
-        "mineru, pymupdf4llm (AGPL-3.0 \u2014 flag loudly if considered, restrictive for embedding in a closed-source product)"
+        "mineru, pymupdf4llm (AGPL-3.0 — flag loudly if considered, restrictive for embedding in a closed-source product)"
       ],
       "why_it_matters": "Every ingestion pipeline touching real-world PDFs eventually needs correct reading order, table structure, and OCR fallback; this ships a benchmarked #1 engine (0.907 overall accuracy) plus a genuinely novel free path to PDF accessibility remediation, which is normally a $50-200/document manual cost.",
       "why_not_build_it_myself": "PDF layout analysis (reading order, table structure, OCR fallback, accessibility tagging) is a multi-week correctness problem with deep edge cases; this is independently benchmarked against 11 competing engines and wins on overall + table accuracy.",
       "risks": [
-        "Core engine is Java-based; the Node.js and Python SDKs still require a local JVM (Java 11+) \u2014 real deployment friction in a pure-Node or serverless environment (e.g. AWS Lambda needs a Java layer)",
+        "Core engine is Java-based; the Node.js and Python SDKs still require a local JVM (Java 11+) — real deployment friction in a pure-Node or serverless environment (e.g. AWS Lambda needs a Java layer)",
         "Enterprise upsell path (PDF/UA export, accessibility studio) means part of the roadmap incentive sits outside the OSS core",
-        "Young project (created May 2025) despite fast star growth \u2014 verify maintenance trajectory before a deep production dependency"
+        "Young project (created May 2025) despite fast star growth — verify maintenance trajectory before a deep production dependency"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -532,16 +532,16 @@
         "If an agent-based feature ships inside a product, this is a ready-made distribution mechanism for teaching it new capabilities without building a bespoke plugin system"
       ],
       "agent_opportunities": [
-        "It is agent infrastructure directly \u2014 the packaging/distribution layer for skills, the same category this very radar's AGENT.md spec and Claude Code's Skill tool both consume"
+        "It is agent infrastructure directly — the packaging/distribution layer for skills, the same category this very radar's AGENT.md spec and Claude Code's Skill tool both consume"
       ],
       "alternatives": [
         "dukelyuu/skills-marketplace, Karanjot786/agent-skills-cli, jeremylongshore/tons-of-skills-marketplace (community marketplaces layered on the same SKILL.md convention, all smaller and less official)"
       ],
       "why_it_matters": "Skill packages are becoming the standard way to extend coding agents; this is the closest thing to an official, cross-agent package manager for them, backed by Vercel and already supporting 70+ agents.",
-      "why_not_build_it_myself": "The value is ecosystem-wide adoption plus the source-resolution plumbing (GitHub shorthand, private repos, direct SKILL.md URLs, archives, per-agent install paths) \u2014 not worth reimplementing for one internal tool when this is free and MIT.",
+      "why_not_build_it_myself": "The value is ecosystem-wide adoption plus the source-resolution plumbing (GitHub shorthand, private repos, direct SKILL.md URLs, archives, per-agent install paths) — not worth reimplementing for one internal tool when this is free and MIT.",
       "risks": [
-        "Young repo (created Jan 2026) with 1,153 open issues against 29,960 stars \u2014 a high issue-to-star ratio suggesting real churn/rough edges; verify behavior on the exact agents in use before relying on it for anything automated or CI-driven",
-        "Vercel-backed but not an official first-party Vercel product \u2014 long-term governance commitment is unclear"
+        "Young repo (created Jan 2026) with 1,153 open issues against 29,960 stars — a high issue-to-star ratio suggesting real churn/rough edges; verify behavior on the exact agents in use before relying on it for anything automated or CI-driven",
+        "Vercel-backed but not an official first-party Vercel product — long-term governance commitment is unclear"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -571,7 +571,7 @@
       "maturity": "emerging",
       "integration_effort": "medium",
       "license": "Apache-2.0",
-      "commercial_use_notes": "Apache-2.0 \u2014 the self-hosted image is unrestricted for commercial use. Managed cloud is the paid alternative but not required to use the OSS stack.",
+      "commercial_use_notes": "Apache-2.0 — the self-hosted image is unrestricted for commercial use. Managed cloud is the paid alternative but not required to use the OSS stack.",
       "deployment": [
         "docker compose",
         "self-hosted",
@@ -604,9 +604,9 @@
       "why_it_matters": "OTel-native tracing, a queryable trace store, and natural-language behavioral alerting is normally weeks of infrastructure most teams never build well; this ships it as one Docker Compose stack with an MCP interface a coding agent can query directly.",
       "why_not_build_it_myself": "A queryable, compressed (20x) trace store plus a Slack-alerting layer on natural-language conditions is significant infrastructure to replicate for what would likely be a worse version of an existing Apache-2.0 tool.",
       "risks": [
-        "Self-hosting is a real stack (Postgres + ClickHouse + app-server), not a single container \u2014 Medium, not Low, integration effort",
-        "Self-hosted deployments phone home anonymized telemetry by default (opt out via LAMINAR_TELEMETRY_DISABLED) \u2014 check before pointing at anything sensitive",
-        "YC-backed startup (S24) \u2014 roadmap could tilt toward the managed cloud product over the self-hosted path over time"
+        "Self-hosting is a real stack (Postgres + ClickHouse + app-server), not a single container — Medium, not Low, integration effort",
+        "Self-hosted deployments phone home anonymized telemetry by default (opt out via LAMINAR_TELEMETRY_DISABLED) — check before pointing at anything sensitive",
+        "YC-backed startup (S24) — roadmap could tilt toward the managed cloud product over the self-hosted path over time"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -618,7 +618,7 @@
         "https://laminar.sh/docs"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 3,211 stars, pushed_at 2026-08-29 (today), created 2024-08-29 (exactly 2 years old today) \u2014 consistently active, not a flash-in-the-pan."
+      "notes": "GitHub API verified: Apache-2.0, 3,211 stars, pushed_at 2026-08-29 (today), created 2024-08-29 (exactly 2 years old today) — consistently active, not a flash-in-the-pan."
     },
     {
       "name": "Chunky",
@@ -653,20 +653,20 @@
         "Generate LLM-enriched chunk metadata (titles, summaries, keywords, retrieval questions) for a search index"
       ],
       "product_opportunities": [
-        "Use as an internal QA step before shipping any customer-facing 'ask your docs' feature \u2014 cheap insurance against silent retrieval-quality regressions"
+        "Use as an internal QA step before shipping any customer-facing 'ask your docs' feature — cheap insurance against silent retrieval-quality regressions"
       ],
       "agent_opportunities": [
         "Not itself agent infrastructure, but directly de-risks building a RAG-backed agent tool (a support or coding agent's document-search backend)"
       ],
       "alternatives": [
-        "Chunkr (Lumina AI \u2014 structure-aware chunking, hosted-first rather than a local comparison workspace)",
+        "Chunkr (Lumina AI — structure-aware chunking, hosted-first rather than a local comparison workspace)",
         "RAGFlow's built-in chunk visualization (bundled into a much larger platform, no cross-converter comparison workflow)"
       ],
       "why_it_matters": "The unglamorous failure mode of RAG pipelines is not realizing which of six converters mangles your specific documents until it's already in production; this turns that into a five-minute UI comparison.",
       "why_not_build_it_myself": "A one-off eval script for chunking comparison is a common ad-hoc build; this packages it with a UI, six converters, and saved/versioned chunk sets already wired together.",
       "risks": [
-        "Small, single-maintainer-looking project (170 stars, created March 2026) \u2014 bus-factor risk",
-        "It's a review/QA workspace, not something embedded into a production pipeline directly \u2014 the value is upstream of deployment, not inside it"
+        "Small, single-maintainer-looking project (170 stars, created March 2026) — bus-factor risk",
+        "It's a review/QA workspace, not something embedded into a production pipeline directly — the value is upstream of deployment, not inside it"
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
@@ -677,7 +677,323 @@
         "https://github.com/GiovanniPasq/chunky"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 170 stars, pushed_at 2026-07-25, created 2026-03-06. Monthly release cadence (v0.6.0 Jun, v0.7.0 Jul) \u2014 active for its size."
+      "notes": "GitHub API verified: MIT, 170 stars, pushed_at 2026-07-25, created 2026-03-06. Monthly release cadence (v0.6.0 Jun, v0.7.0 Jul) — active for its size."
+    },
+    {
+      "name": "Sidequest",
+      "slug": "sidequest-job-queue",
+      "repo_url": "https://github.com/sidequestjs/sidequest",
+      "website": "https://sidequestjs.com",
+      "description": "Redis-free background job processor for Node.js. Persists jobs durably in PostgreSQL, MySQL, SQLite, or MongoDB (official first-party backend) instead of Redis, with atomic job claiming across multiple nodes, worker-thread isolation, cron scheduling, retries, job uniqueness, and a built-in web dashboard. Positioned explicitly as a BullMQ/pg-boss alternative.",
+      "category": [
+        "product infrastructure",
+        "developer productivity",
+        "job queues",
+        "backend components"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "LGPL-3.0-or-later",
+      "commercial_use_notes": "LGPL-3.0: safe to use as an unmodified dependency in proprietary/commercial products (dynamic linking via npm install is fine). Only modifications to Sidequest's own library code must be released under LGPL if distributed. Does not require open-sourcing the application that uses it.",
+      "deployment": [
+        "npm package",
+        "docker",
+        "self-hosted",
+        "library"
+      ],
+      "interfaces": [
+        "library (Node.js/TypeScript)",
+        "CLI",
+        "web dashboard (HTTP)"
+      ],
+      "use_cases": [
+        "Replace a Redis+BullMQ setup with a Mongo- or Postgres-backed queue when the stack is already MERN and an extra Redis instance is avoidable infra cost",
+        "Background email/notification/report jobs in an Express or NestJS backend",
+        "Scheduled/cron jobs that need durability across process restarts and multi-node deployment",
+        "Migration target for existing BullMQ codebases (official migration guide provided)"
+      ],
+      "product_opportunities": [
+        "Drop-in job backbone for micro-SaaS products where paying for a managed Redis instance (e.g. ElastiCache) just for BullMQ is overkill",
+        "Could back PTaaS scan orchestration or MSSP admin-portal background tasks using the existing MongoDB instance instead of provisioning Redis"
+      ],
+      "alternatives": [
+        "BullMQ + Redis",
+        "pg-boss",
+        "Graphile Worker",
+        "Agenda (older, less actively maintained Mongo job scheduler)"
+      ],
+      "why_it_matters": "Directly removes a piece of infrastructure (Redis) that MERN-stack projects often stand up solely for BullMQ, and does it with a first-party MongoDB backend rather than a community-maintained afterthought.",
+      "why_not_build_it_myself": "Atomic multi-node job claiming (SELECT ... FOR UPDATE SKIP LOCKED equivalents per backend), retry/backoff semantics, and a dashboard are non-trivial to get right; this is a maintained, tested implementation across four backends.",
+      "risks": [
+        "Does not run on Bun yet (open issue #72) — Node.js only",
+        "Created July 2025, ~1 year of history; smaller community (23 forks) than BullMQ",
+        "SQLite backend explicitly not recommended for production; MongoDB/Postgres backend required for real deployments"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v1.16.3",
+      "latest_release_date": "2026-08-27",
+      "source_links": [
+        "https://github.com/sidequestjs/sidequest",
+        "https://docs.sidequestjs.com",
+        "https://docs.sidequestjs.com/getting-started/migrating-from-bullmq"
+      ],
+      "aliases": [],
+      "notes": "Requires Node.js >= 22.6.0. TypeScript jobs need Node >= 23.6.0 for native execution."
+    },
+    {
+      "name": "Kingfisher",
+      "slug": "mongodb-kingfisher",
+      "repo_url": "https://github.com/mongodb/kingfisher",
+      "website": "https://mongodb.github.io/kingfisher/",
+      "description": "Open source secret scanner and live secret validator built in Rust by MongoDB, using a SIMD-accelerated regex engine (Vectorscan) for high-throughput scanning. Scans files, local Git history, and integrated platforms (GitHub, GitLab, Bitbucket, Azure Repos, Jira, Confluence, Slack, Teams, Postman, Docker, AWS S3, GCS), validates discovered credentials against live provider APIs to cut false positives, and can revoke supported secrets directly from the CLI. Ships a browser-based report viewer that also triages SARIF/Gitleaks/TruffleHog output.",
+      "category": [
+        "developer productivity",
+        "secrets management",
+        "security tooling",
+        "CI/CD"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial use, redistribution, or embedding (e.g. in an MSSP offering).",
+      "deployment": [
+        "CLI binary",
+        "docker",
+        "CI/CD step"
+      ],
+      "interfaces": [
+        "CLI",
+        "JSON/SARIF/HTML output",
+        "webhook alerts (Slack, Teams, Discord, Mattermost, Google Chat)"
+      ],
+      "use_cases": [
+        "Pre-commit / CI gate that blocks PRs containing live API keys or credentials, with false positives cut via live validation against the provider",
+        "One-off audits of existing repos, S3 buckets, and Slack/Jira/Confluence content for leaked secrets",
+        "Import and triage existing Gitleaks/TruffleHog scan output in the same viewer UI"
+      ],
+      "product_opportunities": [
+        "Directly embeddable as a scan capability inside the MSSP security admin-portal SaaS or as a PTaaS partnership deliverable — live credential validation is the differentiator over plain regex scanners",
+        "Could be white-labeled as a client-facing secret-exposure report generator"
+      ],
+      "alternatives": [
+        "Gitleaks",
+        "TruffleHog",
+        "detect-secrets",
+        "GitGuardian (closed-source SaaS)"
+      ],
+      "why_it_matters": "Live validation against the actual provider API (not just pattern matching) is the meaningful differentiator from Gitleaks/TruffleHog, and it comes from MongoDB directly rather than a startup betting on a hosted upsell.",
+      "why_not_build_it_myself": "Maintaining a detector catalog across dozens of secret formats plus live-validation logic per provider is a large, continuously-moving surface; this ships it pre-built and multithreaded.",
+      "risks": [
+        "Rust codebase — contributing fixes requires Rust, not the primary stack",
+        "Live validation calls out to provider APIs, so scanning must be run somewhere with appropriate network egress and rate-limit awareness"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v2.0.0",
+      "latest_release_date": "2026-08-23",
+      "source_links": [
+        "https://github.com/mongodb/kingfisher",
+        "https://mongodb.github.io/kingfisher/",
+        "https://www.mongodb.com/blog/post/product-release-announcements/introducing-kingfisher-real-time-secret-detection-validation"
+      ],
+      "aliases": [],
+      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors."
+    },
+    {
+      "name": "Agent Vault",
+      "slug": "infisical-agent-vault",
+      "repo_url": "https://github.com/Infisical/agent-vault",
+      "website": "https://docs.agent-vault.dev",
+      "description": "Open-source HTTP credential proxy and vault for AI agents, built by Infisical. Instead of handing agents real API keys, credentials are stored in Agent Vault and requests are routed through it (via HTTPS_PROXY) so it substitutes real credentials onto outbound requests at the edge. Aimed squarely at the credential-exfiltration risk of prompt injection tricking an agent into leaking a key it holds directly.",
+      "category": [
+        "AI agent infrastructure",
+        "secrets management",
+        "security tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature",
+      "commercial_use_notes": "Core is MIT ('MIT Expat'), safe for commercial/self-hosted use. Follows Infisical's open-core pattern seen in their main product; confirm no feature you depend on lives under an ee/ license boundary before building on it.",
+      "deployment": [
+        "self-hosted binary",
+        "docker"
+      ],
+      "interfaces": [
+        "HTTPS proxy",
+        "CLI",
+        "pluggable credential store (local encrypted store or external, e.g. Infisical)"
+      ],
+      "use_cases": [
+        "Give a remote Claude Code / coding-agent session GitHub and API access without the agent ever holding the raw PAT or API key",
+        "Secure any custom agent harness or sandboxed automation that needs to call third-party APIs (LLM providers, internal services)",
+        "Egress-filter which agents can reach which endpoints, with request logging for audit"
+      ],
+      "product_opportunities": [
+        "Security control for any agent-driven automation built into future micro-SaaS products — prevents a compromised or misled agent from exfiltrating production credentials",
+        "Could underpin a 'secure agent sandbox' offering adjacent to the existing MSSP/PTaaS work, given the direct overlap with credential-exfiltration risk assessment"
+      ],
+      "alternatives": [
+        "mitmproxy/squid (generic forward proxies, need custom credential-brokering logic)",
+        "HashiCorp Vault + Boundary",
+        "Doppler",
+        "raw environment variables (status quo, no exfiltration protection)"
+      ],
+      "why_it_matters": "Purpose-built for the agent credential-exfiltration problem specifically, versus generic secrets managers that still hand the agent the real key, or generic proxies that need custom brokering logic bolted on.",
+      "why_not_build_it_myself": "Correctly implementing MITM-style credential substitution, multi-tenancy, and egress filtering safely is exactly the kind of security-critical plumbing worth not reinventing.",
+      "risks": [
+        "Young project (created March 2026); vendor explicitly recommends its own commercial Agent Proxy for production/enterprise use, positioning this OSS binary as the simpler/self-contained option",
+        "Requires bootstrapping agent environments to respect HTTPS_PROXY — not every agent runtime cooperates cleanly with MITM proxying",
+        "License marked NOASSERTION by GitHub's detector; actual LICENSE file confirms MIT-Expat with a carve-out for any ee/ directory"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "v0.39.1",
+      "latest_release_date": "2026-08-04",
+      "source_links": [
+        "https://github.com/Infisical/agent-vault",
+        "https://infisical.com/blog/agent-vault-the-open-source-credential-proxy-and-vault-for-agents",
+        "https://docs.agent-vault.dev"
+      ],
+      "aliases": [],
+      "notes": "Backed by Infisical (funded secrets-management company), which reduces abandonment risk relative to a solo-maintainer project of similar age."
+    },
+    {
+      "name": "Proval",
+      "slug": "proval",
+      "repo_url": "https://github.com/seoes/proval",
+      "website": "https://proval.app",
+      "description": "Self-hosted LLM code review agent. Connects to GitHub, GitLab, or Forgejo (Gitea/Codeberg-compatible), and on a meaningful PR push reads the diff, groups changed files into review units, runs specialist sub-agents per group to investigate cross-file issues, and posts a consolidated review with inline comments grouped by severity. Bring-your-own OpenAI-compatible model (hosted or local, e.g. Ollama/llama.cpp).",
+      "category": [
+        "developer productivity",
+        "AI agent infrastructure",
+        "coding agents",
+        "CI/CD"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — network use counts as distribution. Fine to self-host internally for reviewing your own private repos. Flagged loudly per policy: do NOT fork/modify and offer it as a hosted review service to others (e.g. as an MSSP add-on) without also releasing your modified source, or without a commercial license from the author if one becomes available.",
+      "deployment": [
+        "docker",
+        "docker compose",
+        "kubernetes (single-replica documented pattern)",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "web dashboard",
+        "Git host webhooks (GitHub/GitLab/Forgejo)",
+        "OpenAI-compatible LLM API client"
+      ],
+      "use_cases": [
+        "Automated first-pass PR review on personal or team repos before a human looks at it",
+        "Homelab/internal-network code review without sending diffs to a third-party SaaS reviewer",
+        "Responds to review-thread replies and can reply on issues, not just PRs"
+      ],
+      "product_opportunities": [
+        "Internal QA layer across his own repos, running against a cheap local or hosted model rather than paying per-seat for a SaaS code-review product",
+        "Architecture (diff -> review units -> per-group sub-agents -> consolidated severity-grouped output) is a reusable pattern for any other 'review a large artifact with sub-agents' tool"
+      ],
+      "alternatives": [
+        "CodeRabbit (SaaS)",
+        "Qodo/PR-Agent (open source)",
+        "Greptile",
+        "Sourcery"
+      ],
+      "why_it_matters": "Runs entirely on infrastructure he controls with a model he chooses, versus SaaS code-review tools that require sending code off-network and charge per seat.",
+      "why_not_build_it_myself": "The sub-agent-per-file-group review architecture with severity-grouped consolidation and multi-host (GitHub/GitLab/Forgejo) inline-comment placement is meaningful engineering to replicate for a one-off internal tool.",
+      "risks": [
+        "Very young (created July 2026), 56 stars, single maintainer (0 forks) — no GitHub Releases published yet, distributed only via a rolling :latest Docker image, so there is no pinned version history to audit",
+        "AGPL-3.0 needs explicit legal awareness before any hosted/commercial use",
+        "Anthropic/Gemini support listed as 'planned', not yet first-class — current bring-your-own-model story favors OpenAI-compatible APIs"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "unclear — no tagged GitHub release; tracked via ghcr.io/seoes/proval:latest Docker image only",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/seoes/proval",
+        "https://proval.app",
+        "https://proval.app/docs"
+      ],
+      "aliases": [],
+      "notes": "Single-maintainer project with zero forks as of review date — treat production-readiness claims cautiously until it accrues more independent usage."
+    },
+    {
+      "name": "Nona",
+      "slug": "nona-config",
+      "repo_url": "https://github.com/Ryware/nona-config",
+      "website": "https://nonaconfig.com",
+      "description": "Self-hosted feature flags and remote configuration, positioned as an open-source Firebase Remote Config alternative. One Docker image, one HTTP API (no SDK required in any language), with official client libraries for npm and NuGet, and a CLI distributed via npm/NuGet/Chocolatey. Supports web, mobile (iOS/Android/React Native/Flutter), and backend targets, with kill switches and a documented Firebase migration path.",
+      "category": [
+        "product infrastructure",
+        "feature flags",
+        "self-hosted SaaS alternative"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.3,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial/SaaS use, redistribution, or embedding.",
+      "deployment": [
+        "docker",
+        "docker compose",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "REST API",
+        "npm client",
+        "NuGet client",
+        "CLI"
+      ],
+      "use_cases": [
+        "Toggle features and run kill switches for a Node/React product without redeploying",
+        "Push mobile app config changes (React Native) without an app-store release, replacing a Firebase Remote Config dependency",
+        "Plain HTTP fetch of config from any language/runtime with no SDK lock-in"
+      ],
+      "product_opportunities": [
+        "Directly matches the 'micro-SaaS building block' axis — feature flags and remote config are exactly the kind of admin-panel/infra component worth not rebuilding for every product",
+        "Self-hostable on existing AWS infra (EC2/ECS) instead of paying for LaunchDarkly/Firebase, relevant to both his own products and anything embedded for MSSP clients"
+      ],
+      "alternatives": [
+        "Firebase Remote Config",
+        "LaunchDarkly (SaaS)",
+        "Unleash",
+        "GrowthBook",
+        "ConfigCat"
+      ],
+      "why_it_matters": "Narrower and simpler than general-purpose feature-flag platforms like Unleash/GrowthBook — one Docker image, plain REST, explicitly targeting teams migrating off Firebase Remote Config rather than trying to be a full experimentation platform.",
+      "why_not_build_it_myself": "A dashboard, environment/release model, and multi-platform client libraries are more scope than a single feature-flag toggle table justifies building from scratch.",
+      "risks": [
+        "Created December 2025, 62 stars, small maintainer footprint (25 forks but low star count) — early-stage relative to Unleash/GrowthBook",
+        "No independent security audit found; self-hosting means the operator is responsible for API-key handling"
+      ],
+      "first_seen": "2026-08-30",
+      "last_reviewed": "2026-08-30",
+      "last_meaningful_update": "2026-08-30",
+      "current_version": "cli-v3.1.0",
+      "latest_release_date": "2026-08-18",
+      "source_links": [
+        "https://github.com/Ryware/nona-config",
+        "https://nonaconfig.com",
+        "https://demo.nonaconfig.com"
+      ],
+      "aliases": [],
+      "notes": "Live demo at demo.nonaconfig.com resets nightly and requires no signup — good first stop before self-hosting."
     }
   ]
 }
