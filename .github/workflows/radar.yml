@@ -106,13 +106,75 @@ jobs:
           fi
 
           if [ -f "$DIGEST" ] && git diff --name-only "${{ steps.pre_run.outputs.sha }}" HEAD -- "$DIGEST" | grep -q .; then
-            gh issue create \
+            ISSUE_URL=$(gh issue create \
               --title "$TITLE" \
               --body-file "$DIGEST" \
-              || echo "::warning::issue creation failed; digest is still in the repo at $DIGEST"
+              || echo "")
+            if [ -z "$ISSUE_URL" ]; then
+              echo "::warning::issue creation failed; digest is still in the repo at $DIGEST"
+            fi
+            echo "issue_url=$ISSUE_URL" >> "$GITHUB_OUTPUT"
+            echo "run_ok=true" >> "$GITHUB_OUTPUT"
           else
             gh issue create \
               --title "$FAIL_TITLE" \
               --body "The digest at \`$DIGEST\` was not updated by this run (or the run failed before reaching this step). Check the workflow run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" \
               || echo "::warning::could not create failure issue either — check the Actions tab directly"
+            echo "run_ok=false" >> "$GITHUB_OUTPUT"
           fi
+        id: post_issue
+
+      - name: Notify Discord
+        if: always()
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          if [ -z "$DISCORD_WEBHOOK_URL" ]; then
+            echo "::warning::DISCORD_WEBHOOK_URL not set; skipping Discord notification"
+            exit 0
+          fi
+
+          TODAY=$(date -u +%F)
+          DIGEST="daily/${TODAY}.md"
+          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          ISSUE_URL="${{ steps.post_issue.outputs.issue_url }}"
+          RUN_OK="${{ steps.post_issue.outputs.run_ok }}"
+
+          if [ "$RUN_OK" = "true" ] && [ -f "$DIGEST" ]; then
+            SUMMARY=$(awk '/^## Executive Summary/{flag=1;next}/^## /{flag=0}flag' "$DIGEST" \
+              | sed '/^[[:space:]]*$/d' | head -c 1500 | iconv -f utf-8 -t utf-8 -c)
+            TOP=$(awk '/^### 1\. /{print; exit}' "$DIGEST" | sed 's/^### //')
+            TITLE_LINE="🔭 Open Source Radar — ${TODAY}"
+            if [ -n "$TOP" ]; then
+              DESC="$(printf '**Top find:** %s\n\n%s' "$TOP" "$SUMMARY")"
+            else
+              DESC="$SUMMARY"
+            fi
+            COLOR=3447003
+          else
+            TITLE_LINE="⚠️ Open Source Radar — ${TODAY} — run did not complete"
+            DESC="The digest was not updated by this run. Check the workflow log: ${RUN_URL}"
+            COLOR=15158332
+          fi
+
+          PAYLOAD=$(jq -n \
+            --arg title "$TITLE_LINE" \
+            --arg desc "$DESC" \
+            --arg issue_url "$ISSUE_URL" \
+            --arg run_url "$RUN_URL" \
+            --argjson color "$COLOR" \
+            '{
+              embeds: [{
+                title: $title,
+                description: $desc,
+                color: $color,
+                url: (if $issue_url != "" then $issue_url else $run_url end),
+                fields: [
+                  {name: "Full digest", value: (if $issue_url != "" then $issue_url else $run_url end), inline: false}
+                ]
+              }]
+            }')
+
+          curl -sS -X POST -H "Content-Type: application/json" \
+            -d "$PAYLOAD" "$DISCORD_WEBHOOK_URL" \
+            || echo "::warning::Discord notification failed"
