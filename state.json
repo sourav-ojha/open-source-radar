@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-08-30",
-  "last_successful_run": "2026-08-30",
-  "run_count": 4,
-  "rotation_slot_last_used": 5,
+  "last_run": "2026-08-31",
+  "last_successful_run": "2026-08-31",
+  "run_count": 5,
+  "rotation_slot_last_used": 6,
   "recent_categories": [
-    "self-hosted SaaS alternatives",
-    "productivity",
-    "data",
-    "search"
+    "infrastructure",
+    "observability",
+    "deployment",
+    "AI agent infrastructure"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -65,7 +65,35 @@
     "modyra/modyra",
     "vannt-dev/dynamic-field-kit",
     "react-hook-form/react-hook-form",
-    "nextcloud/forms"
+    "nextcloud/forms",
+    "carverauto/serviceradar",
+    "cilium/cilium-cli",
+    "monoscope-tech/monoscope",
+    "tsouza/cerberus",
+    "alibaba/loongsuite-pilot",
+    "HelpCode-ai/anythingmcp",
+    "zzet/gortex",
+    "aws/mcp-proxy-for-aws",
+    "DanceNitra/inspeximus",
+    "openrundev/openrun",
+    "otterdeploy/otterdeploy",
+    "kubeara/core",
+    "appaloft/appaloft",
+    "acidtib/jiji",
+    "UpstandPlatform/upstand",
+    "ARTFROST1/FreimDeploy",
+    "fusuyfusuy/pikpik",
+    "piperbox/piper",
+    "DeploCloud/deplo",
+    "harsharahul/docklets",
+    "glincker/levelrail",
+    "6454934/pinqops",
+    "nima-salamat/django-paas-deployer",
+    "nima-salamat/react-paas-deployer",
+    "StuMason/coolify-mcp",
+    "Resetnak/cooldeck",
+    "Dokploy/dokploy",
+    "coollabsio/coolify"
   ],
   "rejected": [
     {
@@ -102,6 +130,21 @@
       "repo_url": "https://github.com/sandbaseai/sandbase-harness",
       "reason": "marketing-driven — README devotes ~25 lines to links into what looks like a coordinated network of SEO/backlink directory sites (DSH Plugin Hub/Market/Packs/X-Ray/base, multiple near-duplicate 'Awesome DeepSeek Harness' lists) plus repeated in-README self-star prompts; only 3 contributors, one dominant, despite 637 stars",
       "date": "2026-08-30"
+    },
+    {
+      "repo_url": "https://github.com/StuMason/coolify-mcp",
+      "reason": "thin wrapper / niche — Coolify-specific MCP add-on, only useful if Coolify itself is adopted, which it is not currently",
+      "date": "2026-08-31"
+    },
+    {
+      "repo_url": "https://github.com/Resetnak/cooldeck",
+      "reason": "thin wrapper / niche — Coolify-specific terminal dashboard, same reasoning as coolify-mcp",
+      "date": "2026-08-31"
+    },
+    {
+      "repo_url": "self-hosted PaaS wave (otterdeploy, kubeara/core, appaloft, acidtib/jiji, UpstandPlatform/upstand, ARTFROST1/FreimDeploy, fusuyfusuy/pikpik, piperbox/piper, DeploCloud/deplo, harsharahul/docklets, glincker/levelrail, 6454934/pinqops, nima-salamat/django-paas-deployer, nima-salamat/react-paas-deployer)",
+      "reason": "duplicate/hype wave — over a dozen near-identical 'self-hosted Coolify/Dokploy alternative' repos pushed within 24-48 hours of each other, almost all under 20 stars, no differentiation from already-known incumbents",
+      "date": "2026-08-31"
     }
   ],
   "known_releases": {
@@ -184,6 +227,26 @@
     "ridi-oss/proxy-monster": {
       "version": "server-v0.1.23",
       "date": "2026-08-28"
+    },
+    "monoscope-tech/monoscope": {
+      "version": "v0.6.25",
+      "date": "2026-08-07"
+    },
+    "tsouza/cerberus": {
+      "version": "v1.19.0",
+      "date": "2026-08-30"
+    },
+    "alibaba/loongsuite-pilot": {
+      "version": "v1.6.0",
+      "date": "2026-08-27"
+    },
+    "HelpCode-ai/anythingmcp": {
+      "version": "v0.4.4",
+      "date": "2026-08-27"
+    },
+    "zzet/gortex": {
+      "version": "v0.63.9",
+      "date": "2026-08-30"
     }
   },
   "source_health": {
@@ -192,8 +255,8 @@
       "note": "working normally, used for broader self-hosted-alternative landscape context"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-08-30",
-      "note": "working normally, used for README verification on all deep-review candidates; occasional main-vs-master branch 404s, resolved by trying both"
+      "last_ok": "2026-08-31",
+      "note": "working normally, used for README verification on all deep-review candidates"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -208,12 +271,12 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-08-30",
-      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit, well within budget for search + repo + release + README calls."
+      "last_ok": "2026-08-31",
+      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit, well within budget."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-08-30",
-      "note": "working normally, used for Show HN search by date across multiple category queries"
+      "last_ok": "2026-08-31",
+      "note": "working normally, used for Show HN / date-filtered searches across self-hosted, observability, deployment, MCP queries"
     }
   },
   "previous_recommendations": [
@@ -233,7 +296,12 @@
     "bernstein-cli-orchestrator",
     "drydock-container-watcher",
     "notifkit",
-    "proxy-monster"
+    "proxy-monster",
+    "monoscope",
+    "loongsuite-pilot",
+    "gortex",
+    "anythingmcp",
+    "cerberus-clickhouse-gateway"
   ],
-  "notes": "2026-08-30: TWO runs today. Run 1 (morning, slot 5): catalogued Sidequest, Kingfisher, Agent Vault, Proval, Nona. Run 2 (this run, same slot 5 per deterministic date formula): a second, later invocation was triggered for the same calendar day — explicitly deduped against index.jsonl/rejected/evaluated_repos from run 1 before researching, used different discovery topics (admin-panel, workflow-engine, audit-log, crdt, local-first, notifications+self-hosted, form-builder, fresh mcp-server pushes) to avoid redundant coverage, and appended (not overwrote) daily/2026-08-30.md with a clearly-marked 'Additional Discoveries' section. Catalogued 4 more: Bernstein (deterministic CLI-coding-agent orchestrator with signed audit receipts, PROTOTYPE, 8.7), Drydock (self-hosted container-registry watcher, USE NOW, 7.8), notifkit (self-hosted Node/TS notification infra, PROTOTYPE, 7.6), proxy-monster (lineage-aware DB access-control proxy, STUDY, 7.1 — directly relevant to the MSSP data-governance angle but too immature to adopt). Rejected SandBase Harness (637 stars) for a marketing/SEO-backlink-farm README pattern despite a plausible underlying architecture. Catalog now at 20 projects total. Flagged in run notes: worth checking whether the schedule is firing twice per day, since a same-day second run doubles research cost for one digest."
+  "notes": "2026-08-31: Single run, slot 6 (infrastructure, observability, deployment) per deterministic date formula. Catalogued 5: Monoscope (S3-backed self-hosted observability platform with NL query and AI anomaly agents, USE NOW, 8.6, AGPL-3.0 flagged), LoongSuite Pilot (Alibaba's coding-agent telemetry normalizer across Claude Code/Codex/Cursor, PROTOTYPE, 8.2), Gortex (local code-intelligence graph for coding agents, PROTOTYPE, 8.0, young but strong supply-chain signals), AnythingMCP (self-hosted API/DB-to-MCP gateway with RBAC+audit, PROTOTYPE, 7.8, AGPL-3.0 flagged), Cerberus (ClickHouse-backed Prometheus/Loki/Tempo protocol gateway, STUDY, 7.5, maintainer self-labels pre-production). Also reviewed but not catalogued: inspeximus (agent-memory correction library, featured in Small-but-High-Leverage-Utility section only, per the precedent set by Boop on 2026-08-30), aws/mcp-proxy-for-aws, openrundev/openrun, and carverauto/serviceradar (all three in Worth Watching). Noted and rejected a wave of a dozen-plus near-identical 'self-hosted PaaS/Coolify-Dokploy-alternative' repos pushed within 24-48 hours of each other — clear copycat/hype pattern, none catalogued. Since 2026-08-31 is the last day of the month, also wrote the first monthly synthesis (monthly/2026-08.md): 25 projects catalogued total, 6 USE NOW / 14 PROTOTYPE / 2 STUDY / 3 WATCH / 0 IGNORE, and flagged that every single entry still has acted_on=false after three days of runs — trial, not discovery, is the bottleneck going into September."
 }

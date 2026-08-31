@@ -1,15 +1,19 @@
 # Catalog
 
-_20 projects tracked. Last updated 2026-08-30._
+_25 projects tracked. Last updated 2026-08-31._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
 | [Bernstein](https://github.com/sipyourdrink-ltd/bernstein) | PROTOTYPE | 8.7/10 | AI agent infrastructure, coding agents | Apache-2.0 | low | 2026-08-30 |
+| [Monoscope](https://github.com/monoscope-tech/monoscope) | USE NOW | 8.6/10 | observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-31 |
 | [Sidequest](https://github.com/sidequestjs/sidequest) | USE NOW | 8.6/10 | product infrastructure, developer productivity | LGPL-3.0-or-later | low | 2026-08-30 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure | Apache-2.0 | medium | 2026-08-29 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-08-29 |
 | [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management | Apache-2.0 | low | 2026-08-30 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity | MIT | low | 2026-08-29 |
+| [LoongSuite Pilot](https://github.com/alibaba/loongsuite-pilot) | PROTOTYPE | 8.2/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
+| [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
+| [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp) | PROTOTYPE | 7.8/10 | AI agent infrastructure, product infrastructure | AGPL-3.0 | medium | 2026-08-31 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative | AGPL-3.0 | low | 2026-08-30 |
@@ -17,6 +21,7 @@ _20 projects tracked. Last updated 2026-08-30._
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration | Apache-2.0 | medium | 2026-08-29 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure | AGPL-3.0 | low | 2026-08-30 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags | Apache-2.0 | low | 2026-08-30 |
+| [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-08-29 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management | Apache-2.0 | high | 2026-08-30 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing | MIT | low | 2026-08-29 |

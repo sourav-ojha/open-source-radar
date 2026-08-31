@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-08-30",
+  "updated": "2026-08-31",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -1261,6 +1261,316 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 14 stars, pushed_at 2026-08-30, created 2026-07-29. Pre-1.0, treat all claims as unproven until tested.",
+      "acted_on": false
+    },
+    {
+      "name": "Monoscope",
+      "slug": "monoscope",
+      "repo_url": "https://github.com/monoscope-tech/monoscope",
+      "website": "https://monoscope.tech",
+      "description": "Self-hosted, OpenTelemetry-native observability platform that stores logs, traces, and metrics in S3-compatible buckets, supports natural-language querying via LLMs, and can run scheduled AI agents that detect anomalies and email daily/weekly reports.",
+      "category": [
+        "AI & agent infrastructure",
+        "observability",
+        "product building blocks"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.6,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0. Safe for pure internal self-hosted use (e.g. monitoring the MSSP admin-portal's own services). Network-copyleft applies if modified and re-offered as a hosted/customer-facing service — in that case either release the modifications' source or use Monoscope's managed cloud offering instead.",
+      "deployment": [
+        "Docker / docker-compose (self-hosted)",
+        "managed cloud offering",
+        "self-hosted with own S3 buckets in either mode"
+      ],
+      "interfaces": [
+        "Web UI",
+        "CLI (monoscope send-event, telemetrygen)",
+        "OTLP ingestion (750+ integrations)",
+        "natural-language query"
+      ],
+      "use_cases": [
+        "Replace a Grafana Loki/Tempo/Mimir stack or Datadog for internal service observability at a fraction of the storage cost (S3-backed, so multi-year retention is affordable)",
+        "Let less observability-fluent teammates query logs/traces in plain English instead of learning LogQL/PromQL",
+        "Schedule an AI agent to email a daily anomaly digest instead of hand-building alerting rules",
+        "Correlate logs, traces, metrics, and session replay in one pane for the MSSP admin portal's backend services"
+      ],
+      "product_opportunities": [
+        "Could underpin an internal 'observability' capability for the MSSP SaaS if AGPL terms are honored, or via their managed cloud tier to sidestep AGPL entirely"
+      ],
+      "agent_opportunities": [
+        "Scheduled AI agents for anomaly detection are a built-in feature, not a bolt-on"
+      ],
+      "alternatives": [
+        "Grafana Loki/Tempo/Mimir stack",
+        "SigNoz",
+        "Better Stack",
+        "Datadog",
+        "Axiom"
+      ],
+      "why_it_matters": "Cheap S3-backed columnar storage removes the usual 'keep only 30 days of logs because storage is expensive' tradeoff, and natural-language query removes the query-language learning curve.",
+      "why_not_build_it_myself": "A Haskell OTel-native ingestion pipeline, an S3-backed columnar storage engine, and an NL-to-query LLM layer together are a multi-month build.",
+      "risks": [
+        "AGPL-3.0 network-copyleft — flagged loudly per policy; matters only if the modified tool itself is exposed as a service to third parties",
+        "Haskell codebase raises the bar for contributing fixes back or debugging deeply, versus a Go/TS stack",
+        "Self-hosted tier only has basic email alerting; Slack/PagerDuty channels are cloud-tier only"
+      ],
+      "first_seen": "2026-08-31",
+      "last_reviewed": "2026-08-31",
+      "last_meaningful_update": "2026-08-31",
+      "current_version": "v0.6.25",
+      "latest_release_date": "2026-08-07",
+      "source_links": [
+        "https://github.com/monoscope-tech/monoscope",
+        "https://monoscope.tech",
+        "https://docs.monoscope.tech"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 1,679 stars, created 2022-01-07, pushed_at 2026-08-31, not archived, 27 open issues, 10 distinct contributors visible. Weekly release cadence.",
+      "acted_on": false
+    },
+    {
+      "name": "LoongSuite Pilot",
+      "slug": "loongsuite-pilot",
+      "repo_url": "https://github.com/alibaba/loongsuite-pilot",
+      "website": "https://github.com/alibaba/loongsuite-pilot#readme",
+      "description": "Local-first telemetry collector purpose-built for AI coding agents (Claude Code, Codex, Cursor, and others). Discovers installed agents, installs hooks, normalizes their activity into a shared GenAI event schema (token usage, sessions, tool calls, traces), and exports to JSONL, OTLP, HTTP, or Alibaba Cloud SLS, with a local dashboard.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "observability"
+      ],
+      "status": "PROTOTYPE",
+      "score_note": "",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or internal use.",
+      "deployment": [
+        "local install (macOS/Linux/Windows)",
+        "exports to self-hosted or Alibaba Cloud backends"
+      ],
+      "interfaces": [
+        "CLI",
+        "local dashboard / macOS menu-bar app",
+        "OTLP trace export",
+        "JSONL/HTTP/SLS export"
+      ],
+      "use_cases": [
+        "See aggregate token spend, sessions, and tool-call activity across multiple coding agents (Claude Code, Cursor, Codex) in one place",
+        "Audit exactly what commands/tools an agent ran during a session",
+        "Feed normalized agent activity into an existing OTel backend (e.g. paired with Monoscope or Cerberus, above) for a unified engineering-observability view that includes AI agent cost",
+        "Justify or budget coding-agent tooling spend with real usage data rather than guesswork — directly useful for CTO-track responsibilities"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Purpose-built agent-activity normalization schema across multiple agent vendors — no equivalent in mainstream LLM-observability tools, which target LLM-app tracing rather than coding-agent activity specifically"
+      ],
+      "alternatives": [
+        "Native per-agent session logs (Claude Code's own logs)",
+        "Langfuse / OpenLLMetry (LLM-app tracing, not coding-agent-specific)",
+        "Laminar (already catalogued, same gap)"
+      ],
+      "why_it_matters": "None of the mainstream LLM-observability tools normalize activity across multiple different coding-agent vendors into one schema; this fills that narrow, specific gap.",
+      "why_not_build_it_myself": "Reverse-engineering and maintaining hook/plugin integrations for a dozen different coding agents' native log formats is significant, brittle ongoing work.",
+      "risks": [
+        "Installer is a curl-pipe-shell script hosted on an Aliyun OSS CDN — review script contents before running, standard curl|sh risk",
+        "Young project (created 2026-06-04, 57 open issues against 157 stars)",
+        "Non-SLS export destinations (generic OTLP/HTTP) are documented more thinly than the Alibaba Cloud SLS path"
+      ],
+      "first_seen": "2026-08-31",
+      "last_reviewed": "2026-08-31",
+      "last_meaningful_update": "2026-08-31",
+      "current_version": "v1.6.0",
+      "latest_release_date": "2026-08-27",
+      "source_links": [
+        "https://github.com/alibaba/loongsuite-pilot"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 157 stars, created 2026-06-04, pushed_at 2026-08-31, not archived, 10 distinct contributors visible, weekly releases.",
+      "acted_on": false
+    },
+    {
+      "name": "Gortex",
+      "slug": "gortex",
+      "repo_url": "https://github.com/zzet/gortex",
+      "website": "https://gortex.dev/",
+      "description": "Single-binary, 100%-local code-intelligence engine that parses 257 languages via tree-sitter into a persistent graph (functions, classes, call chains, HTTP routes, cross-service contracts) and exposes it to coding agents and IDEs via CLI, MCP server, and web UI, aimed at cutting per-request token usage on large or multi-repo codebases.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions.",
+      "deployment": [
+        "local single binary (macOS/Linux/Windows)",
+        "no server component required"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server",
+        "web UI",
+        "Go API/library"
+      ],
+      "use_cases": [
+        "Give Claude Code/Cursor a persistent call-graph of a large MERN monorepo instead of re-reading files every session",
+        "Detect cross-service API-contract mismatches (HTTP routes, GraphQL, gRPC, message topics) across separate microservice repos before they cause an incident — directly relevant to an AWS/EKS microservices setup",
+        "Reduce token spend on agent-driven refactors across large codebases"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "175 configurable MCP tools; auto-configures across 19 supported coding agents in one `gortex install` run"
+      ],
+      "alternatives": [
+        "Sourcegraph (heavier, hosted-first)",
+        "LSP/ctags-only agent context",
+        "plain grep-based agent context (status quo)"
+      ],
+      "why_it_matters": "Purpose-built for the 'agent needs codebase context without blowing the context window' problem, rather than a general code-search tool retrofitted for it.",
+      "why_not_build_it_myself": "A 257-language tree-sitter AST graph with compiler-grade resolvers for a dozen languages is not a reasonable build-it-yourself project.",
+      "risks": [
+        "Fast star growth in a short window (1,510 stars in ~5 months) — verify the '50x fewer tokens' claim hands-on; it is the maintainer's own benchmark, not independently reproduced",
+        "Still pre-1.0 (v0.63.9) — breaking changes between releases are plausible",
+        "Multiple promotional badges (Trendshift, Discord, MCP Toplist) alongside genuine supply-chain rigor (Sigstore-signed, SLSA level 3, OpenSSF Scorecard, VirusTotal-clean) — the engineering signals are real, but treat growth-rate claims with proportional skepticism"
+      ],
+      "first_seen": "2026-08-31",
+      "last_reviewed": "2026-08-31",
+      "last_meaningful_update": "2026-08-31",
+      "current_version": "v0.63.9",
+      "latest_release_date": "2026-08-30",
+      "source_links": [
+        "https://github.com/zzet/gortex",
+        "https://gortex.dev/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1,510 stars, created 2026-04-06, pushed_at 2026-08-31, not archived, 10 distinct contributors visible (not a single-person project), 60 open issues.",
+      "acted_on": false
+    },
+    {
+      "name": "AnythingMCP",
+      "slug": "anythingmcp",
+      "repo_url": "https://github.com/HelpCode-ai/anythingmcp",
+      "website": "https://anythingmcp.com",
+      "description": "Self-hosted MCP gateway that converts REST, SOAP/WSDL, GraphQL, and SQL/NoSQL databases (plus other MCP servers) into MCP tools automatically — import a spec or point it at a connection string — with OAuth2, RBAC, and audit logging, and 175+ pre-built adapters for common SaaS APIs.",
+      "category": [
+        "AI & agent infrastructure",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged loudly per policy. Fine for internal agent tooling wrapping his own APIs; if this gateway itself were exposed as a hosted, customer-facing feature of the MSSP SaaS, modifications would need to be released under AGPL, or the vendor's cloud offering used instead.",
+      "deployment": [
+        "Docker / docker-compose (self-hosted)",
+        "managed cloud offering"
+      ],
+      "interfaces": [
+        "MCP server/gateway",
+        "REST-to-MCP",
+        "SQL/NoSQL-to-MCP",
+        "GraphQL-to-MCP",
+        "MCP-to-MCP aggregation"
+      ],
+      "use_cases": [
+        "Expose the MERN admin-portal's existing REST API to Claude/agents as MCP tools without hand-writing a wrapper server",
+        "Wrap a Postgres/Mongo read replica as queryable MCP tools for internal agent workflows",
+        "Give agents controlled, audited access to third-party SaaS APIs already in use, with RBAC instead of a shared API key"
+      ],
+      "product_opportunities": [
+        "Fast path to prototyping an 'AI agent acts on your data' feature for the MSSP admin-portal SaaS without a bespoke MCP server per integration"
+      ],
+      "agent_opportunities": [
+        "The core product is agent tooling: turns arbitrary existing infrastructure into MCP tools with auth and audit built in"
+      ],
+      "alternatives": [
+        "Hand-rolled MCP servers per API (status quo)",
+        "aws/mcp-proxy-for-aws (narrower, AWS/IAM-only)",
+        "Composio / Pipedream-style commercial connector platforms",
+        "OpenConnector (previously flagged Worth Watching, 2026-08-30)"
+      ],
+      "why_it_matters": "RBAC and audit logging out of the box is the piece most hand-rolled MCP wrappers skip — it matters as soon as agents get access to anything customer-facing.",
+      "why_not_build_it_myself": "A generic REST/SOAP/GraphQL/SQL-to-MCP conversion layer with auth, RBAC, and audit logging is weeks of infrastructure work to replicate.",
+      "risks": [
+        "AGPL-3.0 network-copyleft, as above",
+        "'No-code' conversion claim should be verified hands-on against a real OpenAPI spec with non-trivial auth before trusting it for anything customer-facing",
+        "Young (created 2026-02-28, 185 stars, 14 open issues) — adapter coverage for less-common APIs may be thin despite the 175+ pre-built adapter claim"
+      ],
+      "first_seen": "2026-08-31",
+      "last_reviewed": "2026-08-31",
+      "last_meaningful_update": "2026-08-31",
+      "current_version": "v0.4.4",
+      "latest_release_date": "2026-08-27",
+      "source_links": [
+        "https://github.com/HelpCode-ai/anythingmcp",
+        "https://anythingmcp.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 185 stars, created 2026-02-28, pushed_at 2026-08-31, not archived, 7 distinct contributors visible including a claude bot account.",
+      "acted_on": false
+    },
+    {
+      "name": "Cerberus (ClickHouse observability gateway)",
+      "slug": "cerberus-clickhouse-gateway",
+      "repo_url": "https://github.com/tsouza/cerberus",
+      "website": "https://cerberus.foo",
+      "description": "Read-only HTTP gateway that speaks the Prometheus, Loki, and Tempo wire protocols but translates PromQL/LogQL/TraceQL queries into ClickHouse SQL — Grafana is added as three datasources pointed at cerberus instead of the real backends, so existing dashboards and alerts keep working while the storage/query engine becomes ClickHouse.",
+      "category": [
+        "infrastructure",
+        "observability"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.5,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions.",
+      "deployment": [
+        "single Go binary",
+        "Docker",
+        "Helm chart (listed on Artifact Hub)"
+      ],
+      "interfaces": [
+        "HTTP APIs matching Prometheus/Loki/Tempo wire protocols"
+      ],
+      "use_cases": [
+        "Collapse a self-hosted Prometheus + Loki + Tempo + Mimir stack down to ClickHouse + cerberus for personal infra or the MSSP admin portal's internal monitoring, without touching existing Grafana dashboards or alert rules",
+        "Cheaper long-retention metrics/logs/traces storage than the native Prometheus/Loki/Tempo stack"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Native Loki+Tempo+Mimir stack (status quo)",
+        "Grafana's own ClickHouse data-source plugin (per-datasource, not a full protocol-translation gateway)",
+        "SigNoz",
+        "Monoscope (above — different approach: S3-backed rather than ClickHouse-backed)"
+      ],
+      "why_it_matters": "Keeps existing Grafana dashboard/alert investment while replacing the expensive part of the stack — an unusually low-migration-cost way to cut observability infrastructure cost, and the protocol-translation-gateway pattern itself is reusable beyond observability.",
+      "why_not_build_it_myself": "Three separate wire-protocol-compatible query translators (PromQL, LogQL, TraceQL) to SQL is a substantial project on its own; the maintainer publishes live compatibility-percentage badges for each.",
+      "risks": [
+        "Created 2026-05-05, ~4 months old; maintainer's own README states '1.0 stable wire API, young project — try it against your own data before relying on it in production'",
+        "Primarily one human maintainer (tsouza) plus AI-assisted commits (GitHub Copilot, Devin) visible in the contributor list — verify bus-factor before depending on it",
+        "Requires already running an OTel Collector writing into ClickHouse; not a full turnkey observability stack by itself"
+      ],
+      "first_seen": "2026-08-31",
+      "last_reviewed": "2026-08-31",
+      "last_meaningful_update": "2026-08-31",
+      "current_version": "v1.19.0",
+      "latest_release_date": "2026-08-30",
+      "source_links": [
+        "https://github.com/tsouza/cerberus",
+        "https://cerberus.foo"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 64 stars, created 2026-05-05, pushed_at 2026-08-31, not archived, 53 open issues (high relative to stars — largely maintainer's own compatibility-tracking issues based on issue-title sampling).",
       "acted_on": false
     }
   ]
