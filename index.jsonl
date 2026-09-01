@@ -23,3 +23,7 @@
 {"slug":"gortex","repo_url":"https://github.com/zzet/gortex","name":"Gortex","status":"PROTOTYPE","score":8.0,"last_reviewed":"2026-08-31","current_version":"v0.63.9","aliases":[]}
 {"slug":"anythingmcp","repo_url":"https://github.com/HelpCode-ai/anythingmcp","name":"AnythingMCP","status":"PROTOTYPE","score":7.8,"last_reviewed":"2026-08-31","current_version":"v0.4.4","aliases":[]}
 {"slug":"cerberus-clickhouse-gateway","repo_url":"https://github.com/tsouza/cerberus","name":"Cerberus (ClickHouse observability gateway)","status":"STUDY","score":7.5,"last_reviewed":"2026-08-31","current_version":"v1.19.0","aliases":[]}
+{"slug":"simurg-decoding-guard","repo_url":"https://github.com/doofzoff/SIMURG","name":"SIMURG","status":"PROTOTYPE","score":8.2,"last_reviewed":"2026-09-01","current_version":"v1.0.3","aliases":[]}
+{"slug":"verb-authority","repo_url":"https://github.com/yairsabag/verb-authority","name":"Verb Authority","status":"PROTOTYPE","score":7.6,"last_reviewed":"2026-09-01","current_version":"v0.10.0-beta.14","aliases":[]}
+{"slug":"saccade-browser-agent","repo_url":"https://github.com/nanlogic/saccade","name":"Saccade","status":"PROTOTYPE","score":7.8,"last_reviewed":"2026-09-01","current_version":"0.2.0","aliases":[]}
+{"slug":"ssh-ache","repo_url":"https://github.com/SSH-Ache/ssh-ache","name":"SSH Ache","status":"PROTOTYPE","score":7.4,"last_reviewed":"2026-09-01","current_version":"v0.9.0","aliases":[]}
