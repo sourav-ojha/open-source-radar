@@ -1,13 +1,13 @@
 {
-  "last_run": "2026-09-01",
-  "last_successful_run": "2026-09-01",
-  "run_count": 6,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-09-02",
+  "last_successful_run": "2026-09-02",
+  "run_count": 7,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
-    "experimental / hidden gems",
     "AI agent infrastructure",
-    "agent security",
-    "browser agents"
+    "coding agent harnesses/skills",
+    "MCP server infrastructure",
+    "self-hosted SaaS alternatives"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -103,7 +103,32 @@
     "protocorn/clippy-vision",
     "oak-invest/kiso",
     "1j01/tracky-mouse",
-    "croffasia/itsaplan"
+    "croffasia/itsaplan",
+    "lexfrei/mcp-tg",
+    "goodmai/basalt",
+    "sbolten/agy-memory-engine",
+    "pvliesdonk/markdown-vault-mcp",
+    "zcag/tela",
+    "lna-lab/distill-kura",
+    "t8y2/dbx",
+    "SenteLabsAI/extensible-mcp",
+    "terragohan/mcptunnels",
+    "vercel-labs/fx",
+    "DrDroidLab/marmot",
+    "getdomovoi/domovoi",
+    "kyle641320/true-memory-fragments",
+    "hausfold/scruff",
+    "pedromvgomes/agentic-driver",
+    "mtford90/revue",
+    "vinhnx/VTCode",
+    "JetBrains/benjamin-plus-skill",
+    "Spielewoy/autoprompt-skill",
+    "cyanheads/mcp-ts-core",
+    "s1dashu/ip-as-logo-skill",
+    "Nanako0129/sepia",
+    "cbrock84/headcount",
+    "Zyrexnn/Cybermes",
+    "kharmanskyi/open-steps"
   ],
   "rejected": [
     {
@@ -165,6 +190,21 @@
       "repo_url": "https://github.com/protocorn/clippy-vision",
       "reason": "inferior to catalogued-class alternative \u2014 local screen-memory/AI-context-capture space already has a more mature, better-known incumbent (Screenpipe, YC-backed) plus OpenRecall; Clippy Vision (13 stars) shows no clear differentiation",
       "date": "2026-09-01"
+    },
+    {
+      "repo_url": "https://github.com/mtford90/revue",
+      "reason": "immature \u2014 5 stars, single contributor, 1 month old, narrated terminal code-review concept promising but unproven",
+      "date": "2026-09-02"
+    },
+    {
+      "repo_url": "https://github.com/lna-lab/distill-kura",
+      "reason": "immature/narrow ecosystem fit \u2014 no tagged release, 34 stars, 12 days old, ships primarily as a DeepSeek Harness plugin",
+      "date": "2026-09-02"
+    },
+    {
+      "repo_url": "https://github.com/DrDroidLab/marmot",
+      "reason": "too new to evaluate \u2014 1 day old at review, 5 stars, no releases",
+      "date": "2026-09-02"
     }
   ],
   "known_releases": {
@@ -283,16 +323,44 @@
     "SSH-Ache/ssh-ache": {
       "version": "v0.9.0",
       "date": "2026-08-23"
+    },
+    "JetBrains/benjamin-plus-skill": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "vercel-labs/fx": {
+      "version": "v0.0.7",
+      "date": "2026-08-29"
+    },
+    "vinhnx/VTCode": {
+      "version": "0.151.2",
+      "date": "2026-08-30"
+    },
+    "Spielewoy/autoprompt-skill": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "cyanheads/mcp-ts-core": {
+      "version": "0.12.3 (npm)",
+      "date": "2026-08-21"
+    },
+    "zcag/tela": {
+      "version": "v0.8.0",
+      "date": "2026-07-05"
+    },
+    "pvliesdonk/markdown-vault-mcp": {
+      "version": "v4.1.0",
+      "date": "2026-08-30"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-09-01",
-      "note": "working normally, used for Show HN discovery and competitive-landscape checks (e.g. Screenpipe/OpenRecall vs Clippy Vision, SSH-client+MCP landscape)"
+      "last_ok": "2026-09-02",
+      "note": "working normally, used for fx/Vercel Labs and blume.codes background checks"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-01",
-      "note": "working normally, used for README verification on all deep-review candidates"
+      "last_ok": "2026-09-02",
+      "note": "working normally, used for README verification on all deep-review candidates; one 404 on mtford90/revue README (wrong assumed path, not investigated further given repo was rejected anyway)"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -307,20 +375,20 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-01",
+      "last_ok": "2026-09-02",
       "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit, well within budget."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-01",
-      "note": "working normally, used for Show HN date-filtered searches over the last 3-7 days"
+      "last_ok": "2026-09-02",
+      "note": "working normally, used for Show HN date-filtered searches over the last 5-7 days"
     },
     "pypi.org": {
       "last_ok": "2026-09-01",
       "note": "working normally, used to cross-check PyPI version against GitHub release tag"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-01",
-      "note": "working normally, used to cross-check npm published version against README claim (caught a mismatch for Saccade: README said 0.2.1, npm 'latest' tag was 0.2.0)"
+      "last_ok": "2026-09-02",
+      "note": "working normally, used to cross-check npm published version against GitHub tag for cyanheads/mcp-ts-core"
     }
   },
   "previous_recommendations": [
@@ -349,7 +417,13 @@
     "simurg-decoding-guard",
     "verb-authority",
     "saccade-browser-agent",
-    "ssh-ache"
+    "ssh-ache",
+    "benjamin-plus-skill",
+    "fx-vercel-coding-agent",
+    "vtcode",
+    "mcp-ts-core",
+    "autoprompt-skill",
+    "tela-markdown-wiki"
   ],
-  "notes": "2026-09-01: Single run, slot 7 (experimental projects and hidden gems) per deterministic date formula (day_of_year 244 %% 7 + 1 = 7). Catalogued 4, all sourced from recent Show HN posts and verified via GitHub/PyPI/npm APIs: SIMURG (numpy/CPU-only real-time LLM decoding-corruption guard, backed by a technical paper, PROTOTYPE, 8.2), Saccade (Node/MCP-native browser-agent semantic control layer with an honest self-published Playwright benchmark, PROTOTYPE, 7.8), Verb Authority (per-argument authority/provenance scanner+gate for AI tool-call schemas, targets a real prompt-injection vector, maintainer explicitly labels it research-grade/not production-ready, PROTOTYPE, 7.6), SSH Ache (local-first SSH client with a default-deny/approval-gated/audit-logged MCP bridge for agent-to-infra access, crowded space vs Termius/Tabby+MCP but genuinely more careful security design, PROTOTYPE, 7.4). All four are very young (5-8 weeks old) single- or two-contributor projects \u2014 deliberately included despite low star counts per the hidden-gem test in AGENT.md section 11, but flagged with continuity risk in every writeup. Rejected: MartinCrespoC/Security-Team---Workspace- (Show HN 'Eatheria', unclear NOASSERTION license, 4mo stale) and protocorn/clippy-vision (local screen-memory AI assistant, no differentiation from established Screenpipe/OpenRecall). Noted but not catalogued: oak-invest/kiso (docs-to-MCP publisher, tied to a brand-new Google OKF spec, too niche/immature to call yet) and croffasia/itsaplan (412-star self-hosted Linear/Plane alternative for agents+humans, AGPL-3.0, high traction for a 7-week-old repo, not yet clearly differentiated from Plane/Huly) \u2014 both in Worth Watching. Also flagged fayerman-source/deslop (agent skill for plain-English/anti-AI-slop writing) as the Small-but-High-Leverage Utility of the day. No entries yet qualify for the 'Still Worth Trying' nudge (section 20.5) \u2014 the oldest catalog entries are only 3 days old (first_seen 2026-08-29), short of the 14-day threshold."
+  "notes": "2026-09-02: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 245 %% 7 + 1 = 1). Catalogued 7, all verified via GitHub/npm APIs: Benjamin-Plus Skill (JetBrains-authored token-efficiency coding-agent skill, paired A/B benchmark -17.9% median cost, USE NOW, 8.4), fx (Vercel Labs' tiny embeddable Zig coding-agent harness with WASM SDK + ACP, explicitly experimental, PROTOTYPE, 8.0), VT Code (Rust terminal coding agent with safety-first governance: provider whitelist, audit logging, sandboxing, PROTOTYPE, 7.9), mcp-ts-core (TypeScript framework for building MCP servers with auth/storage/OpenTelemetry built in, matches Node/TS stack directly, PROTOTYPE, 7.8), Autoprompt Skill (Terminal-Bench-validated plan/execute/verify coding-agent skill, 45% fewer failures but ~3x time/~2x token cost tradeoff, PROTOTYPE, 7.6), Tela (self-hosted AGPL-3.0 markdown wiki with agent-native MCP server, Go+Postgres+pgvector+React/Yjs, STUDY for the architecture pattern not the app, 7.3), Markdown Vault MCP (personal notes vault -> hybrid search MCP server, production-grade packaging, used as Small-but-High-Leverage Utility, PROTOTYPE, 7.1). Rejected as too immature: mtford90/revue (narrated terminal code review, 5 stars), lna-lab/distill-kura (agent memory, DeepSeek-Harness-first), DrDroidLab/marmot (1 day old). Noted but not deep-reviewed: SenteLabsAI/extensible-mcp (MCP tool-bloat proxy, sound architecture but only 5 stars and an unresolved prompt-injection safety gap in its own docs) and t8y2/dbx (20MB DB client w/ MCP, 17.7k stars in ~4 months \u2014 fast growth flagged for a closer look before trusting, not yet reviewed). GitHub search API firehose for generic 'mcp-server'/'coding agent' queries returned heavy same-day noise (0-star scaffolds, single-API-wrapper MCP servers) that was filtered before any deep review \u2014 worth narrowing query terms further next time this slot comes up. No entries yet qualify for the 'Still Worth Trying' nudge \u2014 oldest catalog entry is only 4 days old (first_seen 2026-08-29), short of the 14-day threshold."
 }

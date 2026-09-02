@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -1811,6 +1811,424 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 1 star, created 2026-07-20, pushed_at 2026-08-26, not archived, ~11 commits, 1 contributor.",
+      "acted_on": false
+    },
+    {
+      "name": "Benjamin-Plus Skill",
+      "slug": "benjamin-plus-skill",
+      "repo_url": "https://github.com/JetBrains/benjamin-plus-skill",
+      "website": "https://github.com/JetBrains/benjamin-plus-skill",
+      "description": "A JetBrains-authored, benchmark-validated coding-agent skill that teaches five token-efficiency habits (consolidate lookups, read only necessary file portions, check dependencies once, rely on task-defined verification, poll builds sparingly). Injected as a system-prompt/hook payload rather than 'installed' as a tool.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "system-prompt injection",
+        "Claude Code hook",
+        "AGENTS.md snippet"
+      ],
+      "interfaces": [
+        "skill/prompt payload (~3KB)"
+      ],
+      "use_cases": [
+        "Cut token spend on every Claude Code / Codex CLI session without changing workflow",
+        "Reduce cost on long agentic sessions (large refactors, multi-file features) where redundant re-reads compound",
+        "Baseline efficiency layer to stack under project-specific skills"
+      ],
+      "product_opportunities": [
+        "Bundle into an internal 'agent starter kit' AGENTS.md for all of Sourav's repos"
+      ],
+      "agent_opportunities": [
+        "Direct hook into Claude Code settings.json; works with any agent that accepts system-prompt or AGENTS.md injection"
+      ],
+      "alternatives": [
+        "Ad-hoc personal prompt tweaks (unmeasured, no evidence of effect)",
+        "Various unvalidated 'prompt engineering' skill repos with no benchmark backing"
+      ],
+      "why_it_matters": "Directly reduces the per-session cost of the coding-agent workflows Sourav already runs daily, with an actual paired A/B benchmark (80 SkillsBench tasks, Claude Sonnet 5, -17.9% median cost, p=0.003 on cross-platform Java tasks) rather than a marketing claim.",
+      "why_not_build_it_myself": "The specific habits and their measured effect size aren't obvious without running the same kind of A/B benchmark JetBrains did; copying a validated ~3KB payload costs nothing.",
+      "risks": [
+        "Very young repo (2 weeks old at review) \u2014 re-check in a month that JetBrains keeps maintaining it",
+        "Benchmarked only on Claude Sonnet 5 and Codex CLI; effect size on other agents/models unverified",
+        "Injection-only distribution means no version pinning via package manager \u2014 must track the file manually"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "unclear-no-tagged-release",
+      "latest_release_date": "unclear",
+      "source_links": [
+        "https://github.com/JetBrains/benjamin-plus-skill",
+        "https://raw.githubusercontent.com/JetBrains/benjamin-plus-skill/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 303 stars, pushed_at 2026-08-27, created 2026-08-17, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "fx (Vercel Labs)",
+      "slug": "fx-vercel-coding-agent",
+      "repo_url": "https://github.com/vercel-labs/fx",
+      "website": "https://fx.sh",
+      "description": "A tiny (~7.8MB), embeddable coding-agent harness written in Zig, styled as a Unix-like CLI rather than a heavyweight terminal IDE. Cold-starts in ~10\u00b5s, supports MCP/skills/subagents, ships native and WASM builds, and speaks the Agent Client Protocol (ACP) for editor integration.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or SaaS use, redistribution, or embedding.",
+      "deployment": [
+        "CLI binary",
+        "WASM module",
+        "library (embed in own agent infra)"
+      ],
+      "interfaces": [
+        "CLI (fx, fx ask)",
+        "MCP client",
+        "ACP (editor integration)",
+        "WASM SDK"
+      ],
+      "use_cases": [
+        "Scriptable, pipeable coding-agent invocations from shell/CI without a heavy TUI",
+        "Embed a coding-agent core into a custom internal tool via the WASM SDK",
+        "Prototype an agent-orchestration layer using fx as the lightweight execution engine"
+      ],
+      "product_opportunities": [
+        "Embeddable core for a bespoke internal dev-automation tool without adopting a full agent framework",
+        "Could underlie a micro-SaaS 'agent-in-a-box' offering given its small footprint"
+      ],
+      "agent_opportunities": [
+        "MCP server/client support and subagent model make it directly composable into a larger agent-orchestration setup"
+      ],
+      "alternatives": [
+        "OpenCode, Aider, Claude Code, Codex CLI (all heavier TUIs, not designed for embedding)",
+        "vinhnx/VTCode (Rust, safety/governance-focused rather than minimal-footprint)"
+      ],
+      "why_it_matters": "Most coding-agent CLIs are built as end-user TUI products; fx is explicitly designed to be embedded into other systems (WASM SDK, ACP, tiny binary), which is the more useful shape if the goal is building agent capability into a product rather than using a terminal app.",
+      "why_not_build_it_myself": "A minimal, permission-controlled, multi-provider agent harness with MCP/ACP support is a multi-week build even before session management and sandboxing are considered.",
+      "risks": [
+        "Explicitly marked 'Experimental. Use at your own risk' by the maintainers \u2014 v0.0.7, pre-1.0",
+        "WASM SDK and durable background-process handling called out as unstable",
+        "3 weeks old; Vercel Labs has a mixed track record of maintaining side projects long-term"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "v0.0.7",
+      "latest_release_date": "2026-08-29",
+      "source_links": [
+        "https://github.com/vercel-labs/fx",
+        "https://raw.githubusercontent.com/vercel-labs/fx/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 2679 stars, created 2026-08-11, pushed_at 2026-09-02, not archived. Same org as previously catalogued vercel-labs/skills.",
+      "acted_on": false
+    },
+    {
+      "name": "VT Code",
+      "slug": "vtcode",
+      "repo_url": "https://github.com/vinhnx/VTCode",
+      "website": "https://vinhnx.github.io/VTCode/",
+      "description": "An open-source Rust terminal coding agent built around a safety-first design: restricted shell sandbox, tool guardrails, subprocess isolation, audit logging, and a provider whitelist to prevent accidental data leakage to unapproved LLM endpoints. Modular crate architecture (vtcode-battery-pack) allows embedding individual components.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions.",
+      "deployment": [
+        "CLI (curl install script, Homebrew, Cargo)",
+        "library (individual crates)"
+      ],
+      "interfaces": [
+        "TUI/CLI",
+        "Agent Skills",
+        "MCP",
+        "Agent Plugins",
+        "WebMCP (browser-editor bridge)"
+      ],
+      "use_cases": [
+        "Terminal coding agent for local-first/offline work via Ollama, LM Studio, llama.cpp",
+        "Corporate-safe agent usage where a provider whitelist and audit log are required",
+        "Study the propose/verify sub-agent separation pattern for a custom agent build"
+      ],
+      "product_opportunities": [
+        "The provider-governance and audit-logging design is directly relevant to Sourav's MSSP admin-portal context if agent tooling ever needs to be offered to security-conscious customers"
+      ],
+      "agent_opportunities": [
+        "MCP + Agent Plugin support; WebMCP lets a browser editor attach to a live terminal session"
+      ],
+      "alternatives": [
+        "vercel-labs/fx (minimal/embeddable rather than governance-focused)",
+        "Aider, OpenCode, Claude Code, Codex CLI (none emphasize provider whitelisting/audit logging to the same degree)"
+      ],
+      "why_it_matters": "Most terminal coding agents optimize for capability; VT Code's differentiator is explicit governance controls (provider whitelist, audit logging, approval gates) \u2014 the exact concern that comes up once agent tooling moves from personal use toward anything security-sensitive.",
+      "why_not_build_it_myself": "Sandboxing, subprocess isolation, and a working propose/verify sub-agent split represent significant security-engineering effort beyond what a wrapper script provides.",
+      "risks": [
+        "Rust ecosystem is foreign to Sourav's MERN-first stack \u2014 some friction versus a Node/TS-native tool",
+        "Local inference explicitly called out as experimental/hardware-dependent",
+        "Active development status \u2014 breaking changes possible between releases"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "0.151.2",
+      "latest_release_date": "2026-08-30",
+      "source_links": [
+        "https://github.com/vinhnx/VTCode",
+        "https://raw.githubusercontent.com/vinhnx/VTCode/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 827 stars, created 2025-08-29 (over a year old, actively maintained), pushed_at 2026-09-01, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "Autoprompt Skill",
+      "slug": "autoprompt-skill",
+      "repo_url": "https://github.com/Spielewoy/autoprompt-skill",
+      "website": "https://github.com/Spielewoy/autoprompt-skill",
+      "description": "A coding-agent skill that replaces step-by-step prompting with a single clear goal, running a plan -> build -> review -> test -> sign-off -> sweep loop where separate sub-agents plan, execute, and independently verify the work (preventing self-approval bias). Supports 9 coding agents including Claude Code, Codex, and OpenCode.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "skill file (Node.js 20+, Python 3.11+, Git required)"
+      ],
+      "interfaces": [
+        "skill payload for Claude Code, Codex, OpenCode, Kilo Code, VS Code, Prime Agent, Oh My Pi, DeepSeek Harness, Reasonix"
+      ],
+      "use_cases": [
+        "Hand an agent a single high-level goal for a multi-file feature instead of micromanaging steps",
+        "Reduce silent task failures on larger agentic coding tasks where self-verification bias creeps in",
+        "Use selectively on higher-stakes tasks given the cost/time tradeoff"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Drop-in skill for any of the 9 supported agent CLIs \u2014 no infrastructure to stand up"
+      ],
+      "alternatives": [
+        "JetBrains/benjamin-plus-skill (optimizes cost, not failure rate \u2014 complementary rather than competing)",
+        "Manual plan/execute/verify prompting done by hand each time"
+      ],
+      "why_it_matters": "Backed by a real benchmark (Terminal-Bench 2.1: OpenCode alone solved 60/89 tasks, OpenCode+Autoprompt solved 73/89, a 45% reduction in failures) rather than an unverified claim, and the plan/execute/verify separation is a pattern worth adopting even without using this exact skill.",
+      "why_not_build_it_myself": "The specific separation-of-concerns prompt structure and its measured effect required a real benchmark run most people won't do themselves before trusting the approach.",
+      "risks": [
+        "Explicitly trades ~3x execution time and ~2x token usage for the failure-rate improvement \u2014 not worth it for small/low-stakes tasks",
+        "2 weeks old at review despite 961 stars \u2014 fast growth worth watching for continuity",
+        "The 3x/2x cost figures are described as planning estimates, not measured, so treat with some caution"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "unclear-no-tagged-release",
+      "latest_release_date": "unclear",
+      "source_links": [
+        "https://github.com/Spielewoy/autoprompt-skill",
+        "https://raw.githubusercontent.com/Spielewoy/autoprompt-skill/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 961 stars, created 2026-08-17, pushed_at 2026-08-30, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "mcp-ts-core",
+      "slug": "mcp-ts-core",
+      "repo_url": "https://github.com/cyanheads/mcp-ts-core",
+      "website": "https://www.npmjs.com/package/@cyanheads/mcp-ts-core",
+      "description": "An agent-native TypeScript framework for building MCP servers: declarative tool/resource definitions, built-in auth, multi-backend storage, OpenTelemetry instrumentation, and first-class support for Bun/Node/Cloudflare Workers.",
+      "category": [
+        "AI agent infrastructure",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions.",
+      "deployment": [
+        "npm package (@cyanheads/mcp-ts-core)",
+        "library",
+        "Cloudflare Workers"
+      ],
+      "interfaces": [
+        "TypeScript library/framework"
+      ],
+      "use_cases": [
+        "Scaffold a new MCP server for an internal tool without hand-rolling auth, storage, and telemetry plumbing",
+        "Build an MCP server as a distributable product feature (e.g. exposing a Sourav-built SaaS as an MCP tool for customers' agents)",
+        "Standardize how future MCP servers in his projects handle auth/observability instead of reinventing it each time"
+      ],
+      "product_opportunities": [
+        "Directly enables 'expose as MCP server' as a shippable feature for any of Sourav's Node/TS products \u2014 matches primary relevance axis 1 exactly"
+      ],
+      "agent_opportunities": [
+        "This is infrastructure for building MCP servers, not an MCP server itself \u2014 the core opportunity is using it to build his own"
+      ],
+      "alternatives": [
+        "Official @modelcontextprotocol/sdk (lower-level, no built-in auth/storage/telemetry conveniences)",
+        "Miragon/mcp-toolkit (similar goal, newer/thinner, built on mcp-use)"
+      ],
+      "why_it_matters": "It's a Node/TypeScript-native framework for exactly the kind of MCP-server building work the primary relevance axis calls out \u2014 auth, storage, and OpenTelemetry are the boilerplate that otherwise gets rebuilt per project.",
+      "why_not_build_it_myself": "Auth handling, pluggable storage backends, and OpenTelemetry wiring for an MCP server is a week or more of setup that this framework replaces with declarative config.",
+      "risks": [
+        "148 stars \u2014 smaller community than the official SDK; verify it tracks MCP spec changes promptly before depending on it for a shipped product",
+        "Declarative abstraction adds a layer versus using the official SDK directly \u2014 evaluate whether the convenience is worth the indirection for a simple server"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "0.12.3",
+      "latest_release_date": "2026-08-21",
+      "source_links": [
+        "https://github.com/cyanheads/mcp-ts-core",
+        "https://registry.npmjs.org/@cyanheads/mcp-ts-core"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 148 stars, created 2025-03-20 (over a year old, actively maintained), pushed_at 2026-08-21. npm registry confirms latest 0.12.3 published 2026-08-21, matching GitHub tag.",
+      "acted_on": false
+    },
+    {
+      "name": "Tela",
+      "slug": "tela-markdown-wiki",
+      "repo_url": "https://github.com/zcag/tela",
+      "website": "https://github.com/zcag/tela",
+      "description": "A self-hostable, markdown-native team wiki with a built-in MCP server so AI agents read/write/search docs as first-class collaborators alongside humans. Go + pgx (no ORM) + PostgreSQL/pgvector backend, React 19 + Milkdown + Yjs frontend for real-time multiplayer editing.",
+      "category": [
+        "product infrastructure",
+        "self-hosted SaaS alternative",
+        "AI agent infrastructure"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.3,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 \u2014 flagged loudly per AGENT.md: fine for internal self-hosted use, but modifying and offering it as a hosted service to others triggers AGPL's source-disclosure requirement. Maintainer offers a separate commercial/Enterprise license for production use beyond that.",
+      "deployment": [
+        "Docker Compose (self-hosted)",
+        "one-click deploy (Render, DigitalOcean)"
+      ],
+      "interfaces": [
+        "web app",
+        "MCP server (/api/mcp)",
+        "REST-ish API",
+        "tela-mcp npm package"
+      ],
+      "use_cases": [
+        "Self-hosted Notion/Outline alternative where the knowledge base is also directly queryable/writable by coding agents",
+        "Study the Go+pgx+pgvector+Yjs architecture as a pattern for building agent-writable collaborative apps"
+      ],
+      "product_opportunities": [
+        "Architecture (hand-written SQL, pgvector semantic search, Yjs realtime, MCP-native) is a reusable pattern for any 'AI-native' collaborative product Sourav might build"
+      ],
+      "agent_opportunities": [
+        "MCP endpoint with per-tool write restrictions and PAT/OAuth auth is a concrete example of how to expose a product's data to agents safely"
+      ],
+      "alternatives": [
+        "Docmost, AFFiNE, Outline (self-hosted wikis without native MCP integration)",
+        "Notion, Confluence (SaaS, no self-hosting, no native agent write access)"
+      ],
+      "why_it_matters": "Most self-hosted wiki alternatives treat AI as a bolted-on chat feature; Tela's MCP-first design (agents get scoped read/write tools, not just a chatbot) is a more honest answer to 'how should a product expose itself to agents' and worth studying even without adopting the whole app.",
+      "why_not_build_it_myself": "Real-time multiplayer markdown editing (Yjs) plus a working hybrid keyword/semantic search plus a permission-scoped MCP layer is a multi-week build; here it's a reference implementation to read rather than a dependency to add.",
+      "risks": [
+        "AGPL-3.0 \u2014 see commercial_use_notes; do not modify-and-host without checking licensing implications",
+        "Full stack requires Postgres+pgvector, Gotenberg, and a Slidev sidecar \u2014 heavier to run than a single binary",
+        "57 stars, ~3.5 months old \u2014 competes in a crowded self-hosted-wiki space without long track record yet"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "v0.8.0",
+      "latest_release_date": "2026-07-05",
+      "source_links": [
+        "https://github.com/zcag/tela",
+        "https://raw.githubusercontent.com/zcag/tela/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 57 stars, created 2026-05-18, pushed_at 2026-09-02, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "Markdown Vault MCP",
+      "slug": "markdown-vault-mcp",
+      "repo_url": "https://github.com/pvliesdonk/markdown-vault-mcp",
+      "website": "https://github.com/pvliesdonk/markdown-vault-mcp",
+      "description": "An MCP server that turns a personal markdown vault (Obsidian-style notes, YAML frontmatter, Git-tracked) into a hybrid keyword+semantic search and write surface for an LLM. SQLite FTS5 (BM25) fused with optional embeddings (OpenAI/Voyage/Ollama/FastEmbed) via reciprocal rank fusion; 34 LLM-visible tools.",
+      "category": [
+        "small utility",
+        "AI agent infrastructure",
+        "document processing"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "pip install",
+        "Docker",
+        "Linux packages (.deb/.rpm)",
+        "Claude Desktop bundle (.mcpb)",
+        "embeddable Python library"
+      ],
+      "interfaces": [
+        "MCP server (stdio or HTTP)",
+        "Python library"
+      ],
+      "use_cases": [
+        "Turn an existing personal notes vault into a Claude-queryable knowledge base without standing up a vector DB",
+        "Give a coding agent write access to a scratch/notes vault for research capture during a task",
+        "Embeddings are optional \u2014 degrades gracefully to keyword-only search if no embedding provider is configured"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Ready-made MCP server for Claude Desktop/any MCP client \u2014 no build required, just point at a vault directory"
+      ],
+      "alternatives": [
+        "Obsidian's own plugins (not MCP-native)",
+        "zcag/tela (team-oriented, requires standing up a full Docker stack, vs. this being a single-user local tool)"
+      ],
+      "why_it_matters": "Production-grade packaging (CI/CD, codecov, semantic versioning, edge/pre-release/stable channels, systemd hardening) for what's normally a weekend-project category of tool \u2014 it's ready to point at a real notes vault today.",
+      "why_not_build_it_myself": "Hybrid BM25+semantic search with reciprocal rank fusion and 34 well-scoped MCP tools is more polish than a quick personal script would deliver.",
+      "risks": [
+        "32 stars \u2014 small maintainer base for a tool that would hold write access to a personal knowledge base",
+        "Only useful if Sourav maintains a markdown notes vault worth indexing \u2014 no such vault currently referenced in the catalog's prior context"
+      ],
+      "first_seen": "2026-09-02",
+      "last_reviewed": "2026-09-02",
+      "last_meaningful_update": "2026-09-02",
+      "current_version": "v4.1.0",
+      "latest_release_date": "2026-08-30",
+      "source_links": [
+        "https://github.com/pvliesdonk/markdown-vault-mcp",
+        "https://raw.githubusercontent.com/pvliesdonk/markdown-vault-mcp/main/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 32 stars, created 2026-03-07, pushed_at 2026-09-02, not archived.",
       "acted_on": false
     }
   ]
