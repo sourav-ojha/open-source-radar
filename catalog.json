@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -806,17 +806,17 @@
         "Live validation calls out to provider APIs, so scanning must be run somewhere with appropriate network egress and rate-limit awareness"
       ],
       "first_seen": "2026-08-30",
-      "last_reviewed": "2026-08-30",
-      "last_meaningful_update": "2026-08-30",
-      "current_version": "v2.0.0",
-      "latest_release_date": "2026-08-23",
+      "last_reviewed": "2026-09-03",
+      "last_meaningful_update": "2026-09-03",
+      "current_version": "v2.1.0",
+      "latest_release_date": "2026-08-30",
       "source_links": [
         "https://github.com/mongodb/kingfisher",
         "https://mongodb.github.io/kingfisher/",
         "https://www.mongodb.com/blog/post/product-release-announcements/introducing-kingfisher-real-time-secret-detection-validation"
       ],
       "aliases": [],
-      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors.",
+      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors. | 2026-09-03: v2.1.0 adds GitHub App authentication for org-wide scans (avoids 1hr installation-token expiry), improved AWS/GCP blast-radius role-impact analysis, and a new `kingfisher blast-radius` single-finding command. Relevant to the MSSP/PTaaS secondary context. Does not change USE NOW status.",
       "acted_on": false
     },
     {
@@ -2042,14 +2042,14 @@
       "first_seen": "2026-09-02",
       "last_reviewed": "2026-09-02",
       "last_meaningful_update": "2026-09-02",
-      "current_version": "unclear-no-tagged-release",
-      "latest_release_date": "unclear",
+      "current_version": "v1.0.4",
+      "latest_release_date": "2026-08-21",
       "source_links": [
         "https://github.com/Spielewoy/autoprompt-skill",
         "https://raw.githubusercontent.com/Spielewoy/autoprompt-skill/main/README.md"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 961 stars, created 2026-08-17, pushed_at 2026-08-30, not archived.",
+      "notes": "GitHub API verified: MIT, 961 stars, created 2026-08-17, pushed_at 2026-08-30, not archived. | 2026-09-03: corrected current_version \u2014 v1.0.4 was already tagged (2026-08-21) at last review; prior entry mistakenly recorded no tagged release.",
       "acted_on": false
     },
     {
@@ -2229,6 +2229,249 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 32 stars, created 2026-03-07, pushed_at 2026-09-02, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "AdminForth",
+      "slug": "adminforth-admin-panel",
+      "repo_url": "https://github.com/devforth/adminforth",
+      "website": "https://adminforth.dev",
+      "description": "TypeScript + Vue admin-panel framework: CLI-scaffolds a full CRUD back-office from an existing Postgres/MySQL/Mongo/SQLite/ClickHouse schema, extensible with Vue components and a plugin ecosystem (audit log, file upload, 2FA, i18n, AI writing).",
+      "category": [
+        "product infrastructure",
+        "admin panels",
+        "product building blocks"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.3,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no cloud-subscription gate, no commercial-use restrictions.",
+      "deployment": [
+        "npm package",
+        "docker",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "CLI",
+        "web UI (admin panel)",
+        "Express API"
+      ],
+      "use_cases": [
+        "Scaffold an admin back-office for an existing Postgres/Mongo schema",
+        "Give non-engineering teammates a safe CRUD UI instead of DB access",
+        "Use built-in audit-log/2FA plugins instead of building access control from scratch",
+        "Prototype an AI-assisted back-office via the Copilot-style writing plugin"
+      ],
+      "product_opportunities": [
+        "Cuts the admin-panel line item out of a micro-SaaS MVP build"
+      ],
+      "alternatives": [
+        "React-admin",
+        "Retool",
+        "Directus",
+        "Payload CMS",
+        "AdminJS",
+        "Refine"
+      ],
+      "why_it_matters": "Every SaaS product needs an internal admin UI; this generates one from the existing schema in the stack already used (Postgres/Mongo) instead of hand-building CRUD screens.",
+      "why_not_build_it_myself": "CRUD admin UIs are tedious, repetitive, and typically neglected once built by hand; this is CLI-scaffolded and plugin-extensible instead.",
+      "risks": [
+        "Single-vendor project (devforth), bus-factor risk",
+        "\"Agentic\" framing overstates agent-tool integration; no MCP server found"
+      ],
+      "first_seen": "2026-09-03",
+      "last_reviewed": "2026-09-03",
+      "last_meaningful_update": "2026-09-03",
+      "current_version": "v3.17.1",
+      "latest_release_date": "2026-08-31",
+      "source_links": [
+        "https://github.com/devforth/adminforth",
+        "https://adminforth.dev"
+      ],
+      "aliases": [],
+      "notes": "Created 2024-05-20, 391 stars, 26 forks, 16 open issues, active release cadence.",
+      "acted_on": false
+    },
+    {
+      "name": "Rebase",
+      "slug": "rebase-postgres-baas",
+      "repo_url": "https://github.com/rebasepro/rebase",
+      "website": "https://rebase.pro",
+      "description": "Self-hosted, Postgres-native backend-as-a-service: REST, typed SDK, auth, S3-compatible storage, realtime, backups, and row-level security over your own Postgres, with an opt-in schema-driven admin panel and a built-in MCP server. Modular BaaS/CMS/Full adoption modes.",
+      "category": [
+        "product infrastructure",
+        "backend-as-a-service",
+        "product building blocks",
+        "AI agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.7,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "docker",
+        "self-hosted",
+        "npm package"
+      ],
+      "interfaces": [
+        "REST API",
+        "typed SDK",
+        "MCP server",
+        "web UI (optional admin panel/Studio)"
+      ],
+      "use_cases": [
+        "Stand up Postgres-backed REST + auth + storage for a new micro-SaaS MVP",
+        "Typed SDK codegen to keep frontend/backend types in sync",
+        "Static RLS audit before trusting row-level security on a customer-facing table",
+        "Point an AI coding agent at a live schema via the built-in MCP server"
+      ],
+      "product_opportunities": [
+        "Lighter Postgres-only BaaS foundation for spinning up new micro-SaaS ideas faster than hand-rolling REST/auth/storage"
+      ],
+      "alternatives": [
+        "Supabase self-hosted (heavier stack)",
+        "PocketBase (SQLite, not Postgres)",
+        "Directus",
+        "Payload CMS",
+        "NHost"
+      ],
+      "why_it_matters": "Targets the Supabase job but stays modular and Postgres-only, without forcing a dozen containers just to get REST+auth+storage.",
+      "why_not_build_it_myself": "REST/auth/storage/realtime glue over Postgres is exactly the kind of boilerplate worth not hand-rolling per project.",
+      "risks": [
+        "Pre-1.0 (0.17.x), 8 stars, genuinely early",
+        "Small community, slower third-party bug discovery",
+        "Self-hosted only, no managed-cloud fallback"
+      ],
+      "first_seen": "2026-09-03",
+      "last_reviewed": "2026-09-03",
+      "last_meaningful_update": "2026-09-03",
+      "current_version": "v0.17.3",
+      "latest_release_date": "2026-08-31",
+      "source_links": [
+        "https://github.com/rebasepro/rebase",
+        "https://rebase.pro"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-03-30, 8 stars, 1 fork, 7 open issues, frequent 0.x releases, CI/npm-downloads badges, Discord present.",
+      "acted_on": false
+    },
+    {
+      "name": "Client St0r",
+      "slug": "clientstor-msp-platform",
+      "repo_url": "https://github.com/agit8or1/clientst0r",
+      "website": "https://clientst0r.mspreboot.com/",
+      "description": "Self-hosted MSP/IT documentation and PSA platform (Django 6 + MariaDB) \u2014 asset management, encrypted password vault, knowledge base, tickets, projects, contracts, quotes, invoices, customer portal. Positioned as an open-source IT Glue / Hudu alternative.",
+      "category": [
+        "self-hosted SaaS alternative",
+        "MSSP/MSP tooling",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "self-hosted",
+        "docker (implied via hosted demo/reboot service)"
+      ],
+      "interfaces": [
+        "web UI",
+        "customer portal"
+      ],
+      "use_cases": [
+        "Self-host as documentation/PSA layer instead of paying for IT Glue or Hudu",
+        "Use encrypted vault + asset management for client-specific credentials",
+        "Study ticket-to-invoice PSA workflow and customer-portal pattern as reference architecture"
+      ],
+      "product_opportunities": [
+        "PSA/customer-portal workflow is a directly reusable reference point for the MSSP admin-portal SaaS's own client-facing features"
+      ],
+      "alternatives": [
+        "IT Glue (proprietary)",
+        "Hudu (proprietary)",
+        "ITFlow (open-source, not directly compared)"
+      ],
+      "why_it_matters": "Directly applicable to the MSSP admin-portal side of the business (secondary context) as a potential replacement for per-seat IT documentation/PSA SaaS.",
+      "why_not_build_it_myself": "Full PSA + documentation + vault + customer portal is a large build; this is a working, MIT-licensed starting point.",
+      "risks": [
+        "Version drift between README badge (3.17.444) and latest tag (3.17.495)",
+        "Single-maintainer-scale project holding sensitive client credentials",
+        "\"AI assist\" feature unverified"
+      ],
+      "first_seen": "2026-09-03",
+      "last_reviewed": "2026-09-03",
+      "last_meaningful_update": "2026-09-03",
+      "current_version": "v3.17.495",
+      "latest_release_date": "2026-05-25",
+      "source_links": [
+        "https://github.com/agit8or1/clientst0r",
+        "https://clientst0r.mspreboot.com/"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-01-10, 71 stars, 19 forks, marked production-ready in its own README. Secondary-context (MSSP) find, not core MERN/AI-agent axis.",
+      "acted_on": false
+    },
+    {
+      "name": "Liteque",
+      "slug": "liteque-sqlite-job-queue",
+      "repo_url": "https://github.com/karakeep-app/liteque",
+      "website": "",
+      "description": "Small, typesafe SQLite-backed job queue for Node.js/TypeScript, extracted from the Karakeep self-hosted bookmarking app. No Redis, no Postgres, no external services \u2014 just SQLite, a typed queue, and a runner with retries and Zod-validated payloads.",
+      "category": [
+        "product infrastructure",
+        "job queues",
+        "small utility",
+        "backend components"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "npm package",
+        "library"
+      ],
+      "interfaces": [
+        "library (Node.js/TypeScript)"
+      ],
+      "use_cases": [
+        "Background email/webhook-retry/cleanup jobs in a small Node service without adding Redis",
+        "Local-first or single-VM micro-SaaS products already using SQLite",
+        "Prototyping background-job behavior before committing to a heavier queue"
+      ],
+      "product_opportunities": [
+        "Removes an infra dependency from the smallest-footprint version of a micro-SaaS MVP"
+      ],
+      "alternatives": [
+        "Sidequest (already catalogued, USE NOW)",
+        "BullMQ (Redis)",
+        "pg-boss (Postgres)",
+        "graphile-worker (Postgres)"
+      ],
+      "why_it_matters": "Right choice specifically when a deployment doesn't want any database beyond SQLite and doesn't need multi-node coordination.",
+      "why_not_build_it_myself": "Retry/concurrency/timeout semantics for background jobs are easy to get subtly wrong; this is small, typed, and already production-tested inside Karakeep.",
+      "risks": [
+        "No multi-node coordination or dashboard (unlike Sidequest)",
+        "Small maintainer surface relative to Sidequest"
+      ],
+      "first_seen": "2026-09-03",
+      "last_reviewed": "2026-09-03",
+      "last_meaningful_update": "2026-09-03",
+      "current_version": "0.9.1",
+      "latest_release_date": "2026-08-31",
+      "source_links": [
+        "https://github.com/karakeep-app/liteque"
+      ],
+      "aliases": [],
+      "notes": "Created 2024-10-27, 78 stars, 5 forks, 3 open issues. Today's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]

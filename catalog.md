@@ -1,6 +1,6 @@
 # Catalog
 
-_36 projects tracked. Last updated 2026-09-02._
+_40 projects tracked. Last updated 2026-09-03._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -9,9 +9,10 @@ _36 projects tracked. Last updated 2026-09-02._
 | [Monoscope](https://github.com/monoscope-tech/monoscope) | USE NOW | 8.6/10 | AI & agent infrastructure, observability, product building blocks | AGPL-3.0 | medium | 2026-08-31 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | medium | 2026-08-29 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
-| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-08-30 |
+| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-03 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity, small utility, RAG infrastructure | MIT | low | 2026-08-29 |
+| [AdminForth](https://github.com/devforth/adminforth) | USE NOW | 8.3/10 | product infrastructure, admin panels, product building blocks | MIT | low | 2026-09-03 |
 | [LoongSuite Pilot](https://github.com/alibaba/loongsuite-pilot) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, developer productivity, observability | Apache-2.0 | low | 2026-08-31 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
@@ -23,6 +24,7 @@ _36 projects tracked. Last updated 2026-09-02._
 | [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks | AGPL-3.0 | medium | 2026-08-31 |
 | [Saccade](https://github.com/nanlogic/saccade) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, browser agents | Apache-2.0 | medium | 2026-09-01 |
 | [mcp-ts-core](https://github.com/cyanheads/mcp-ts-core) | PROTOTYPE | 7.8/10 | AI agent infrastructure, product infrastructure | Apache-2.0 | low | 2026-09-02 |
+| [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [notifkit](https://github.com/devkitshq/notifkit) | PROTOTYPE | 7.6/10 | product infrastructure, notifications, backend components | MIT | medium | 2026-08-30 |
 | [Verb Authority](https://github.com/yairsabag/verb-authority) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Autoprompt Skill](https://github.com/Spielewoy/autoprompt-skill) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -36,6 +38,8 @@ _36 projects tracked. Last updated 2026-09-02._
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
+| [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
+| [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Opslane](https://github.com/opslane/opslane) | PROTOTYPE | 6.8/10 | developer productivity, debugging, observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-29 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |

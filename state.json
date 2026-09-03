@@ -1,13 +1,14 @@
 {
-  "last_run": "2026-09-02",
-  "last_successful_run": "2026-09-02",
-  "run_count": 7,
-  "rotation_slot_last_used": 1,
+  "last_run": "2026-09-03",
+  "last_successful_run": "2026-09-03",
+  "run_count": 8,
+  "rotation_slot_last_used": 2,
   "recent_categories": [
-    "AI agent infrastructure",
-    "coding agent harnesses/skills",
-    "MCP server infrastructure",
-    "self-hosted SaaS alternatives"
+    "product infrastructure",
+    "backend-as-a-service",
+    "admin panels",
+    "job queues",
+    "MSSP/MSP tooling"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -128,7 +129,21 @@
     "Nanako0129/sepia",
     "cbrock84/headcount",
     "Zyrexnn/Cybermes",
-    "kharmanskyi/open-steps"
+    "kharmanskyi/open-steps",
+    "javimosch/bkn",
+    "devforth/adminforth",
+    "rebasepro/rebase",
+    "productdevbook/nitroping",
+    "powabase-ai/powabase",
+    "stablemates/workhorse",
+    "karakeep-app/liteque",
+    "Hardonian/JobForge",
+    "basb7/flagward",
+    "AndersonEns/flagworks",
+    "matt-riley/flagz",
+    "agit8or1/clientst0r",
+    "Panelica/pnlcs",
+    "ramathornn/books"
   ],
   "rejected": [
     {
@@ -205,6 +220,16 @@
       "repo_url": "https://github.com/DrDroidLab/marmot",
       "reason": "too new to evaluate \u2014 1 day old at review, 5 stars, no releases",
       "date": "2026-09-02"
+    },
+    {
+      "repo_url": "https://github.com/Hardonian/JobForge",
+      "reason": "duplicate \u2014 same 'Postgres-native, no-Redis job queue' pitch as stablemates/workhorse (flagged Worth Watching today), 0 stars, no differentiation, niche already covered by catalogued Sidequest",
+      "date": "2026-09-03"
+    },
+    {
+      "repo_url": "self-hosted feature-flag micro-wave (basb7/flagward, AndersonEns/flagworks, matt-riley/flagz, others)",
+      "reason": "duplicate \u2014 self-hosted feature-flag niche already covered by catalogued Nona (nona-config), 0-3 stars each, no meaningful differentiation; flagz additionally GPL-3.0",
+      "date": "2026-09-03"
     }
   ],
   "known_releases": {
@@ -257,8 +282,8 @@
       "date": "2026-08-27"
     },
     "mongodb/kingfisher": {
-      "version": "v2.0.0",
-      "date": "2026-08-23"
+      "version": "v2.1.0",
+      "date": "2026-08-30"
     },
     "Infisical/agent-vault": {
       "version": "v0.39.1",
@@ -351,16 +376,32 @@
     "pvliesdonk/markdown-vault-mcp": {
       "version": "v4.1.0",
       "date": "2026-08-30"
+    },
+    "devforth/adminforth": {
+      "version": "v3.17.1",
+      "date": "2026-08-31"
+    },
+    "rebasepro/rebase": {
+      "version": "v0.17.3",
+      "date": "2026-08-31"
+    },
+    "agit8or1/clientst0r": {
+      "version": "v3.17.495",
+      "date": "2026-05-25"
+    },
+    "karakeep-app/liteque": {
+      "version": "0.9.1",
+      "date": "2026-08-31"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-09-02",
-      "note": "working normally, used for fx/Vercel Labs and blume.codes background checks"
+      "last_ok": "2026-09-03",
+      "note": "working, but returned mostly generic/stale roundup content for Show HN and openalternative.co queries rather than specific new launches \u2014 low signal today, GitHub search API firehose was the more productive discovery source"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-02",
-      "note": "working normally, used for README verification on all deep-review candidates; one 404 on mtford90/revue README (wrong assumed path, not investigated further given repo was rejected anyway)"
+      "last_ok": "2026-09-03",
+      "note": "working normally, used for README verification on all 4 new catalog entries plus adminforth/rebase deploy-detail greps"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -375,8 +416,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-02",
-      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit, well within budget."
+      "last_ok": "2026-09-03",
+      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit; used well under 100 requests this run."
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-02",
@@ -423,7 +464,11 @@
     "vtcode",
     "mcp-ts-core",
     "autoprompt-skill",
-    "tela-markdown-wiki"
+    "tela-markdown-wiki",
+    "adminforth-admin-panel",
+    "rebase-postgres-baas",
+    "clientstor-msp-platform",
+    "liteque-sqlite-job-queue"
   ],
-  "notes": "2026-09-02: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 245 %% 7 + 1 = 1). Catalogued 7, all verified via GitHub/npm APIs: Benjamin-Plus Skill (JetBrains-authored token-efficiency coding-agent skill, paired A/B benchmark -17.9% median cost, USE NOW, 8.4), fx (Vercel Labs' tiny embeddable Zig coding-agent harness with WASM SDK + ACP, explicitly experimental, PROTOTYPE, 8.0), VT Code (Rust terminal coding agent with safety-first governance: provider whitelist, audit logging, sandboxing, PROTOTYPE, 7.9), mcp-ts-core (TypeScript framework for building MCP servers with auth/storage/OpenTelemetry built in, matches Node/TS stack directly, PROTOTYPE, 7.8), Autoprompt Skill (Terminal-Bench-validated plan/execute/verify coding-agent skill, 45% fewer failures but ~3x time/~2x token cost tradeoff, PROTOTYPE, 7.6), Tela (self-hosted AGPL-3.0 markdown wiki with agent-native MCP server, Go+Postgres+pgvector+React/Yjs, STUDY for the architecture pattern not the app, 7.3), Markdown Vault MCP (personal notes vault -> hybrid search MCP server, production-grade packaging, used as Small-but-High-Leverage Utility, PROTOTYPE, 7.1). Rejected as too immature: mtford90/revue (narrated terminal code review, 5 stars), lna-lab/distill-kura (agent memory, DeepSeek-Harness-first), DrDroidLab/marmot (1 day old). Noted but not deep-reviewed: SenteLabsAI/extensible-mcp (MCP tool-bloat proxy, sound architecture but only 5 stars and an unresolved prompt-injection safety gap in its own docs) and t8y2/dbx (20MB DB client w/ MCP, 17.7k stars in ~4 months \u2014 fast growth flagged for a closer look before trusting, not yet reviewed). GitHub search API firehose for generic 'mcp-server'/'coding agent' queries returned heavy same-day noise (0-star scaffolds, single-API-wrapper MCP servers) that was filtered before any deep review \u2014 worth narrowing query terms further next time this slot comes up. No entries yet qualify for the 'Still Worth Trying' nudge \u2014 oldest catalog entry is only 4 days old (first_seen 2026-08-29), short of the 14-day threshold."
+  "notes": "2026-09-03: Single run, slot 2 (product infrastructure, APIs, backend components) per deterministic date formula (day_of_year 246 %% 7 + 1 = 2). Catalogued 4 new: AdminForth (TS/Vue CLI-scaffolded admin panel framework, 391 stars, mature, USE NOW, 8.3), Rebase (modular Postgres-native BaaS with built-in MCP server, pre-1.0/8 stars but active, PROTOTYPE, 7.7), Client St0r (self-hosted MSP documentation/PSA platform, IT Glue/Hudu alternative, secondary MSSP-context find, PROTOTYPE, 7.0), Liteque (SQLite-backed TS job queue from the Karakeep team, zero external deps, PROTOTYPE, 7.0, used as Small-but-High-Leverage Utility). One Meaningful Update: mongodb/kingfisher v2.0.0->v2.1.0 (GitHub App auth for org scans, expanded AWS/GCP blast-radius analysis, new blast-radius CLI command) \u2014 relevant to MSSP/PTaaS context, USE NOW status unchanged. Also corrected a data error from the prior run: Spielewoy/autoprompt-skill current_version was recorded as 'unclear-no-tagged-release' but v1.0.4 was already tagged 2026-08-21 at that review \u2014 fixed in catalog.json/index.jsonl, not treated as a Meaningful Update since nothing changed, just a bookkeeping fix. Ran a full release-tag sweep across all 36 previously-catalogued repos (single batched pass, ~1 GitHub API call per repo for release + repo metadata) to check for drift \u2014 only Kingfisher's change was evaluation-relevant; rest were patch-level bumps. Rejected as duplicate/hype: Hardonian/JobForge (near-identical to Workhorse, flagged Worth Watching instead), a self-hosted feature-flag micro-wave (basb7/flagward, AndersonEns/flagworks, matt-riley/flagz) redundant with catalogued Nona. Worth Watching (not yet catalogued): javimosch/bkn (single-binary agent-first backend, hours old, too early), powabase-ai/powabase (thin wrapper around unmodified self-hosted Supabase stack plus an unproven AI layer), stablemates/workhorse (polyglot Postgres job queue, genuinely differentiated from Sidequest but public beta/no release tag yet/7 stars). GitHub search API firehose for generic 'webhook'/'admin panel'/'job queue'/'API gateway' queries was dominated by same-day 0-star scaffolds and bulk-generated tutorial repos, consistent with prior runs' notes on 'mcp-server'-style query noise \u2014 the LLM-gateway/router wave under the api-gateway topic search was skipped wholesale without individual review given near-total positioning overlap. WebSearch for Show HN and openalternative.co coverage returned only generic/stale roundup summaries, not specific new launches \u2014 low-value source for this slot today, GitHub search API carried the run. No entries yet qualify for the 'Still Worth Trying' nudge \u2014 oldest catalog entry is only 5 days old (first_seen 2026-08-29), short of the 14-day threshold."
 }
