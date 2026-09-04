@@ -1016,7 +1016,7 @@
       "slug": "bernstein-cli-orchestrator",
       "repo_url": "https://github.com/sipyourdrink-ltd/bernstein",
       "website": "https://bernstein.run",
-      "description": "Deterministic multi-agent CLI orchestrator for coding agents (Claude Code, Codex, Gemini CLI, 40+ more): decomposes a goal into tasks, runs agents in isolated per-task git worktrees, verifies concrete signals (tests/lint/types), and merges verified work \u2014 with a cryptographically signed, offline-verifiable replay/audit trail.",
+      "description": "Deterministic multi-agent CLI orchestrator for coding agents (Claude Code, Codex, Gemini CLI, 40+ more) that has grown into a full governance/audit framework for AI agents: decomposes a goal into tasks, runs agents in isolated per-task git worktrees, verifies concrete signals (tests/lint/types), and merges verified work \u2014 with a cryptographically signed, offline-verifiable replay/audit trail, per-principal identity lifecycle, short-lived credential brokering, key rotation/revocation, and compliance evidence exports (ISO/IEC 42001 Annex A, W3C PROV-O, TRACE 0.2).",
       "category": [
         "AI agent infrastructure",
         "coding agents",
@@ -1046,8 +1046,8 @@
         "Replace ad hoc shell scripts that fan out Claude Code/Codex sessions across a backlog"
       ],
       "product_opportunities": [
-        "Signed run receipts as a compliance artifact proving what an AI agent changed, relevant to the MSSP/PTaaS business",
-        "Could underpin an internal agent-ops audit dashboard for AI-assisted delivery work"
+        "Signed run receipts plus the new governance layer (identity lifecycle, credential brokering, ISO 42001 / PROV-O evidence exports) are now a substantially stronger compliance artifact for security-conscious clients \u2014 directly relevant to the MSSP/PTaaS side of the business",
+        "Could underpin an internal 'agent ops' audit dashboard for AI-assisted delivery work, now with a one-command `bernstein govern` audit report"
       ],
       "agent_opportunities": [
         "It is agent orchestration infrastructure itself \u2014 CLI + TUI + browser dashboard, 40+ built-in CLI agent adapters, plus a generic --prompt wrapper for anything unsupported"
@@ -1065,17 +1065,17 @@
         "Python/uv-based CLI tool, adds a non-Node dependency to an otherwise JS/TS-centric toolchain"
       ],
       "first_seen": "2026-08-30",
-      "last_reviewed": "2026-08-30",
-      "last_meaningful_update": "2026-08-30",
-      "current_version": "v3.18.2",
-      "latest_release_date": "2026-08-28",
+      "last_reviewed": "2026-09-04",
+      "last_meaningful_update": "2026-09-04",
+      "current_version": "v3.19.1",
+      "latest_release_date": "2026-09-03",
       "source_links": [
         "https://github.com/sipyourdrink-ltd/bernstein",
         "https://pypi.org/project/bernstein/",
         "https://bernstein.run"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 1036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases. Contributors include real humans beyond the primary author (Chirag6722, shanemmattner, vaibhav8a, Phoenix1504e, Louis20060723) plus renovate/dependabot/github-actions bot automation.",
+      "notes": "GitHub API verified: Apache-2.0, 1036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases. Contributors include real humans beyond the primary author (Chirag6722, shanemmattner, vaibhav8a, Phoenix1504e, Louis20060723) plus renovate/dependabot/github-actions bot automation. UPDATE 2026-09-04: v3.18.2 -> v3.19.1 (94 changes) is a positioning shift, not a patch bump \u2014 the project now frames itself explicitly as 'a governance framework for AI agents': fail-closed approval timeouts, credential brokering that never stores secret values, HMAC-chained principal identity lifecycle with scope-narrowing on child identities, signed drift observations, per-principal/per-grant cost rollup with budget-cap chain events, and compliance evidence exports (ISO/IEC 42001 Annex A, W3C PROV-O, signed TRACE 0.2 records). Status kept at PROTOTYPE (still self-described beta) but this materially strengthens the MSSP/PTaaS product-opportunity angle already noted at first review.",
       "acted_on": false
     },
     {
@@ -2472,6 +2472,264 @@
       ],
       "aliases": [],
       "notes": "Created 2024-10-27, 78 stars, 5 forks, 3 open issues. Today's Small but High-Leverage Utility pick.",
+      "acted_on": false
+    },
+    {
+      "name": "ctx",
+      "slug": "ctx-agent-history-cli",
+      "repo_url": "https://github.com/ctxrs/ctx",
+      "website": "https://ctx.rs",
+      "description": "Local-first CLI that indexes past coding-agent session transcripts (Claude Code, Codex, etc.) from files already on disk (~/.claude, ~/.codex) so agents can search prior decisions, failed approaches, and tool calls instead of repeating investigation from scratch. A separate paid 'ctx pro' companion adds 'git blame, but for agent sessions': trace any line, file, commit, or PR back to the exact agent session that produced it.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity",
+        "coding agents"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source",
+      "commercial_use_notes": "Core CLI (setup/search/show/locate, semantic search) is Apache-2.0, no restrictions on commercial use. 'ctx pro' ($20/mo, 2-week free trial) is a separately signed, closed-source binary layered on top for the blame feature \u2014 flagged loudly per licensing policy since it is easy to assume the whole tool is free.",
+      "deployment": [
+        "CLI install script (curl/irm)",
+        "macOS",
+        "Linux",
+        "Windows"
+      ],
+      "interfaces": [
+        "CLI"
+      ],
+      "use_cases": [
+        "Recover why code exists when picking a stale branch back up, from the actual transcript rather than guessing from the diff",
+        "Feed a fresh coding-agent session the real prior investigation instead of having it re-discover the same dead ends",
+        "Search across parent sessions, subagents, and forks when heavily orchestrating multi-agent runs",
+        "Audit what an agent actually did across weeks of Claude Code / Codex history"
+      ],
+      "product_opportunities": [
+        "Open-core structure (free local index + paid hosted-grade blame layer) is a usable template for productizing an internal agent-ops tool"
+      ],
+      "agent_opportunities": [
+        "Directly built for agent-to-agent handoff: a fresh session can call `ctx search`/`ctx blame` itself to recover context with far fewer tokens than re-reading raw transcripts"
+      ],
+      "alternatives": [
+        "grep/ripgrep across raw ~/.claude JSONL logs (status quo; the project's own benchmark claims ~50x more tokens than ctx search for the same recall)",
+        "Ad hoc scripts to dump and search transcript files"
+      ],
+      "why_it_matters": "Directly targets the 'agent repeats work every session because its own history is buried in unreadable log files' problem that comes with heavy daily coding-agent use.",
+      "why_not_build_it_myself": "Parsing multiple providers' session-log formats, keeping a live local index, and ranking search results is exactly the kind of undifferentiated plumbing not worth reimplementing for personal use.",
+      "risks": [
+        "'ctx pro' (the actual git-blame-for-agent-sessions feature) is paid and closed-source; the free tier is search/recall only",
+        "Young project (created February 2026) with unusually high commit velocity (3,500+ commits) typical of heavily agent-assisted development \u2014 watch for churn before relying on it for anything besides local search",
+        "Adds a local indexing daemon/SQLite store to manage, even though it's opt-in and fully local"
+      ],
+      "first_seen": "2026-09-04",
+      "last_reviewed": "2026-09-04",
+      "last_meaningful_update": "2026-09-04",
+      "current_version": "v1.3.1",
+      "latest_release_date": "2026-09-03",
+      "source_links": [
+        "https://github.com/ctxrs/ctx",
+        "https://ctx.rs"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1,062 stars, pushed_at 2026-09-04 (same day), created 2026-02-23, 19 contributors. README explicitly documents the open-core split in docs/managed-companion.md: 'Official managed ctx installations pair Apache-licensed Core with a separately signed private companion.'",
+      "acted_on": false
+    },
+    {
+      "name": "AgentInspect",
+      "slug": "agent-inspect",
+      "repo_url": "https://github.com/rajudandigam/agent-inspect",
+      "website": "https://agentinspect.vercel.app",
+      "description": "Local-first evidence and trajectory-testing toolkit for TypeScript AI agents. Turns an agent run into a readable execution tree (tool calls, LLM calls, retries, first causal failure), lets CI fail on the wrong trajectory via deterministic trace-contract checks, and can bundle a redacted, hash-verified evidence artifact to attach to a PR or incident \u2014 all without an account or default upload.",
+      "category": [
+        "AI agent infrastructure",
+        "AI testing",
+        "agent evaluation",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "npm package",
+        "embedded library",
+        "CLI"
+      ],
+      "interfaces": [
+        "CLI",
+        "programmatic TypeScript API",
+        "Vitest/Jest reporters",
+        "GitHub Actions/CI artifacts"
+      ],
+      "use_cases": [
+        "Debug a failing custom TS agent run locally, from the same trace used for CI and sharing, without a collector or account",
+        "Gate CI on deterministic trajectory checks (required tool calls, no failed observations) instead of eyeballing logs",
+        "Produce a redacted, hash-verified evidence bundle for a PR, incident, or support handoff",
+        "Adopt framework adapters (LangChain/LangGraph, Vercel AI SDK, OpenAI Agents JS) if building an agent product on one of those stacks"
+      ],
+      "product_opportunities": [
+        "Evidence bundles are a plausible support/incident-response artifact for a customer-facing agent product"
+      ],
+      "agent_opportunities": [
+        "Exposes a TraceContract API for programmatic, bounded trajectory analysis that an agent orchestrator could call directly in its own CI gate"
+      ],
+      "alternatives": [
+        "Hosted tracing platforms like LangSmith/LangFuse (require an account/upload; catalogued Laminar is a similar hosted-adjacent alternative)",
+        "console.log plus eyeballing agent output (status quo)"
+      ],
+      "why_it_matters": "Local-first, no-account trace debugging plus deterministic CI gating for agent trajectories fills a real gap for anyone shipping a custom TypeScript agent, not just anyone using an off-the-shelf coding agent.",
+      "why_not_build_it_myself": "Normalizing multiple agent-framework trace formats into one execution-tree model, plus a deterministic trajectory-check DSL, is meaningful, maintained plumbing rather than a quick script.",
+      "risks": [
+        "Only useful once actively building a custom TS agent \u2014 not relevant to using off-the-shelf coding agents like Claude Code or Codex directly",
+        "499 stars but created May 2026; adapters for fast-moving upstream SDKs (LangGraph, AI SDK) need to keep pace",
+        "npm package major version (6.x) already high for a young project, suggesting an aggressive automated versioning scheme worth understanding before pinning"
+      ],
+      "first_seen": "2026-09-04",
+      "last_reviewed": "2026-09-04",
+      "last_meaningful_update": "2026-09-04",
+      "current_version": "6.17.6 (npm, agent-inspect)",
+      "latest_release_date": "2026-09-02",
+      "source_links": [
+        "https://github.com/rajudandigam/agent-inspect",
+        "https://www.npmjs.com/package/agent-inspect",
+        "https://agentinspect.vercel.app/docs/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 499 stars, pushed_at 2026-09-04 (same day), created 2026-05-02, 16 contributors, 958 commits. npm confirms agent-inspect@6.17.6, MIT.",
+      "acted_on": false
+    },
+    {
+      "name": "mex",
+      "slug": "mex-living-codebase-wiki",
+      "repo_url": "https://github.com/mex-memory/mex",
+      "website": "https://mexmemory.com",
+      "description": "A repo-local, agent-maintained 'living wiki' for a codebase. Builds a deterministic code graph with Tree-sitter and SQLite across TS/JS/Python/Rust (including Express route-to-handler awareness), then routes only the relevant architecture/decisions/conventions pages into an agent's context instead of a single giant instruction file. Drift checks detect when a refactor invalidates a wiki claim.",
+      "category": [
+        "developer productivity",
+        "AI agent infrastructure",
+        "documentation",
+        "code search"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "npm CLI (npx mex-agent)",
+        "repo-local files",
+        "installs Claude Code / Codex skills on setup"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server (packages/mex-mcp, not yet published \u2014 build from source)"
+      ],
+      "use_cases": [
+        "Stop a coding agent re-scanning an entire MERN/TS repo at the start of every session",
+        "Keep architecture, decisions, and conventions as reviewable, version-controlled Markdown instead of one bloated CLAUDE.md/AGENTS.md",
+        "Catch stale docs via drift detection when a refactor moves or removes the symbols a wiki page pointed to",
+        "Express route-to-handler awareness is a direct fit for his Node/Express stack specifically"
+      ],
+      "product_opportunities": [
+        "The living-wiki-plus-drift-detection pattern is reusable infrastructure for keeping agents grounded on any large evolving codebase, including an internal MSSP admin-portal codebase"
+      ],
+      "agent_opportunities": [
+        "Installs first-class Claude Code and Codex skills during setup; ROUTER.md-based context routing is designed specifically for agent consumption"
+      ],
+      "alternatives": [
+        "A single large CLAUDE.md/AGENTS.md file (status quo \u2014 floods context and goes stale)",
+        "Mainstream agent-memory tools (compact facts/summaries \u2014 lossier and not grounded in a deterministic code graph, unlike catalogued LightAgent/LightMem which target conversational/task memory rather than codebase structure)"
+      ],
+      "why_it_matters": "Distinguishes itself from generic 'agent memory' by grounding claims in a deterministic Tree-sitter+SQLite code graph, so staleness is detectable (drift checks) rather than silently assumed.",
+      "why_not_build_it_myself": "A maintained cross-language symbol graph plus a context-routing and drift-detection layer is significant infrastructure worth adopting rather than reimplementing per project.",
+      "risks": [
+        "MCP server package is not yet published to npm (build-from-source only) \u2014 the MCP-compatible badge is partly aspirational today",
+        "Requires trusting an agent-maintained wiki to stay accurate; drift checks reduce but do not eliminate staleness risk",
+        "Young (created March 2026) despite 1,500+ stars, with very high commit velocity typical of heavily agent-assisted development in this cohort \u2014 worth a stability check before deep reliance"
+      ],
+      "first_seen": "2026-09-04",
+      "last_reviewed": "2026-09-04",
+      "last_meaningful_update": "2026-09-04",
+      "current_version": "v0.8.0",
+      "latest_release_date": "2026-09-02",
+      "source_links": [
+        "https://github.com/mex-memory/mex",
+        "https://www.npmjs.com/package/mex-agent",
+        "https://mexmemory.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,541 stars, pushed_at 2026-09-04 (same day), created 2026-03-21, 16 contributors, 493 commits. npm confirms mex-agent@0.8.0, MIT. MCP package (packages/mex-mcp) explicitly documented as not yet published.",
+      "acted_on": false
+    },
+    {
+      "name": "DvalinCode",
+      "slug": "dvalincode-verified-fix-record",
+      "repo_url": "https://github.com/arthurpanhku/dvalincode",
+      "website": "https://dvalincode.dev",
+      "description": "Independent security verification for code written by humans or AI agents. Re-scans and re-runs a project's own tests/checks itself and reads the resulting exit codes rather than asking the model that made a fix whether the fix worked, then issues a portable 'Verified Fix Record': a small JSON file anyone can re-check offline, on a laptop with no network and no Dvalin state.",
+      "category": [
+        "developer productivity",
+        "security tooling",
+        "AI agent infrastructure",
+        "CI/CD"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "npx/npm CLI",
+        "GitHub Action",
+        "self-hosted/local-only (default scan makes no network calls)"
+      ],
+      "interfaces": [
+        "CLI",
+        "GitHub Action (PR-diff comments + Security tab SARIF)",
+        "programmatic verify-fix"
+      ],
+      "use_cases": [
+        "Gate PRs containing AI-agent-authored fixes (Claude Code, Codex, Copilot) on an independently re-run test/scan instead of trusting the agent's self-report",
+        "Run a zero-config baseline scan for injection, hardcoded secrets, XSS, eval, and unsafe shell use before optionally wiring in semgrep",
+        "Attach a portable, offline-checkable Verified Fix Record to a PR or incident as MSSP/PTaaS-relevant evidence",
+        "Use diff-only mode to gate what a PR newly introduces without requiring an already-messy repo to be fully clean first"
+      ],
+      "product_opportunities": [
+        "The 'verified, not self-reported' proof pattern is directly relevant to the MSSP/PTaaS side of the business \u2014 a similar record format could back a client-facing 'we verified the AI-assisted fix' deliverable"
+      ],
+      "agent_opportunities": [
+        "Built-in remediation executor can call Claude Code/Codex/Copilot to attempt a fix, but the verification step deliberately never consults the agent that wrote it"
+      ],
+      "alternatives": [
+        "Trusting the coding agent's own claim that a fix works (status quo)",
+        "Semgrep/CodeQL alone (surface findings but do not verify a remediation against them)",
+        "Codex Security (Dvalin explicitly interoperates via portable SARIF rather than competing with it)"
+      ],
+      "why_it_matters": "The core design decision \u2014 never ask the model that wrote the fix whether the fix worked \u2014 is the right shape for a world where AI agents both introduce and 'fix' security findings; the re-scan-plus-test-exit-code loop is independently checkable by a reviewer.",
+      "why_not_build_it_myself": "A deterministic, offline-re-derivable proof format (hashed, chained) plus scanner orchestration across built-in rules and optional external engines is non-trivial to get right and easy to get subtly wrong.",
+      "risks": [
+        "Early/pre-mature in spirit despite a polished README \u2014 113 stars, single-dominant-author commit pattern typical of this cohort",
+        "Built-in ruleset is intentionally narrow (injection/secrets/XSS/eval/unsafe shell); real coverage depends on wiring in semgrep or another engine",
+        "'Verified' only covers what the scan actually ran \u2014 coverage is reported explicitly as complete/partial/unknown, but a shallow default policy could be mistaken for a full audit if that distinction is missed"
+      ],
+      "first_seen": "2026-09-04",
+      "last_reviewed": "2026-09-04",
+      "last_meaningful_update": "2026-09-04",
+      "current_version": "v0.18.0",
+      "latest_release_date": "2026-08-26",
+      "source_links": [
+        "https://github.com/arthurpanhku/dvalincode",
+        "https://www.npmjs.com/package/dvalincode",
+        "https://dvalincode.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 113 stars, pushed_at 2026-09-04 (same day), created 2026-05-20, 12 contributors, 298 commits. npm confirms dvalincode@0.18.0, MIT. GitHub Action usage confirmed in README (arthurpanhku/dvalincode@v0.18.0).",
       "acted_on": false
     }
   ]

@@ -18,8 +18,8 @@ Fanning out multiple Claude Code/Codex sessions across a backlog today means ad 
 - Watch progress live via the TUI (`bernstein live`) or browser dashboard (`bernstein gui serve`).
 
 ## Product Opportunities
-- Signed run receipts are a plausible compliance artifact for security-conscious clients who want proof of what an AI agent changed — relevant to the MSSP/PTaaS side of the business.
-- Could underpin an internal "agent ops" dashboard for auditing AI-assisted delivery work.
+- Signed run receipts plus the newer governance layer (identity lifecycle, credential brokering, ISO 42001 / PROV-O evidence exports) are now a substantially stronger compliance artifact for security-conscious clients who want proof of what an AI agent changed — relevant to the MSSP/PTaaS side of the business.
+- Could underpin an internal "agent ops" dashboard for auditing AI-assisted delivery work, now with a one-command `bernstein govern` audit report.
 
 ## Agent / Automation Opportunities
 This is itself agent-orchestration infrastructure: CLI + TUI + browser dashboard, 40+ built-in CLI agent adapters, plus a generic `--prompt` wrapper for anything not natively supported.
@@ -50,3 +50,6 @@ PROTOTYPE — pilot on one real backlog of parallel-safe tasks before relying on
 ## Change History
 ### 2026-08-30
 Discovered and reviewed. GitHub API verified: Apache-2.0, 1,036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases.
+
+### 2026-09-04
+Meaningful update: v3.18.2 → v3.19.1 (94 changes) is a positioning shift, not a patch bump. The project now frames itself explicitly as "a governance framework for AI agents": fail-closed approval timeouts, credential brokering that never stores secret values, an HMAC-chained principal identity lifecycle with scope-narrowing on child identities, signed drift observations, per-principal/per-grant cost rollup with budget-cap chain events, and compliance evidence exports (ISO/IEC 42001 Annex A, W3C PROV-O, signed TRACE 0.2 records). Status kept at PROTOTYPE (still self-described beta), but this materially strengthens the MSSP/PTaaS product-opportunity angle noted at first review.

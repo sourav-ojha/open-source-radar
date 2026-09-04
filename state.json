@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-09-03",
-  "last_successful_run": "2026-09-03",
-  "run_count": 8,
-  "rotation_slot_last_used": 2,
+  "last_run": "2026-09-04",
+  "last_successful_run": "2026-09-04",
+  "run_count": 9,
+  "rotation_slot_last_used": 3,
   "recent_categories": [
-    "product infrastructure",
-    "backend-as-a-service",
-    "admin panels",
-    "job queues",
-    "MSSP/MSP tooling"
+    "developer utilities",
+    "AI agent debugging/tracing",
+    "codebase knowledge for agents",
+    "AI-agent security verification",
+    "product infrastructure"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -143,7 +143,30 @@
     "matt-riley/flagz",
     "agit8or1/clientst0r",
     "Panelica/pnlcs",
-    "ramathornn/books"
+    "ramathornn/books",
+    "ctxrs/ctx",
+    "rajudandigam/agent-inspect",
+    "mex-memory/mex",
+    "arthurpanhku/dvalincode",
+    "lockdep/stackradar-cli",
+    "Sreelal727/mcpwatch",
+    "IvoryCanvas/QAMap",
+    "ahmed-hashim-pro/noisefloor",
+    "DFKHelper/token-goat",
+    "RoninForge/budgetclaw",
+    "fixture-dev/flawd-releases",
+    "supercorp-ai/supercov",
+    "toiletbril/kosh",
+    "pranjalbhatia710/agent-runlens",
+    "pranjalbhatia710/agent-runtrace",
+    "standardbeagle/err-lookup",
+    "athrvk/vayu",
+    "evloghq/evlog",
+    "mqtt-viewer/mqtt-viewer",
+    "ChrisKujawa/zdb",
+    "binhonglee/slogx",
+    "be-hase/pyrolens",
+    "Kartik8Dwivedi/Ditto"
   ],
   "rejected": [
     {
@@ -230,28 +253,38 @@
       "repo_url": "self-hosted feature-flag micro-wave (basb7/flagward, AndersonEns/flagworks, matt-riley/flagz, others)",
       "reason": "duplicate \u2014 self-hosted feature-flag niche already covered by catalogued Nona (nona-config), 0-3 stars each, no meaningful differentiation; flagz additionally GPL-3.0",
       "date": "2026-09-03"
+    },
+    {
+      "repo_url": "https://github.com/DFKHelper/token-goat",
+      "reason": "unclear/restrictive licensing \u2014 PolyForm Noncommercial 1.0.0, not an OSI open-source license, explicitly bars commercial use",
+      "date": "2026-09-04"
+    },
+    {
+      "repo_url": "https://github.com/fixture-dev (flawd)",
+      "reason": "not actually open source \u2014 org only publishes binary releases (flawd-releases, flawd-study-fixtures), no source repository found",
+      "date": "2026-09-04"
     }
   ],
   "known_releases": {
     "xberg-io/html-to-markdown": {
-      "version": "v3.11.6",
-      "date": "2026-08-28"
+      "version": "v3.12.0",
+      "date": "2026-08-31"
     },
     "wanxingai/LightAgent": {
-      "version": "unclear-check-releases-page",
-      "date": "unclear"
+      "version": "v0.10.0",
+      "date": "2026-08-15"
     },
     "opslane/opslane": {
-      "version": "v26.8.12",
-      "date": "2026-08-29"
+      "version": "v26.8.17",
+      "date": "2026-09-04"
     },
     "joungminsung/OpenDocuments": {
       "version": "v0.3.0",
       "date": "2026-04-22"
     },
     "IdoGol24/weir": {
-      "version": "check-pypi-weir-scan",
-      "date": "unclear"
+      "version": "v0.3.0",
+      "date": "2026-08-31"
     },
     "zjunlp/LightMem": {
       "version": "unclear-check-releases-page",
@@ -262,16 +295,16 @@
       "date": "2026-03-26"
     },
     "opendataloader-project/opendataloader-pdf": {
-      "version": "v2.5.5",
-      "date": "2026-08-25"
+      "version": "v2.5.7",
+      "date": "2026-09-01"
     },
     "vercel-labs/skills": {
       "version": "v1.5.23",
       "date": "2026-08-18"
     },
     "lmnr-ai/lmnr": {
-      "version": "v0.2.2",
-      "date": "2026-08-25"
+      "version": "v0.2.3",
+      "date": "2026-08-30"
     },
     "GiovanniPasq/chunky": {
       "version": "v0.7.0",
@@ -286,8 +319,8 @@
       "date": "2026-08-30"
     },
     "Infisical/agent-vault": {
-      "version": "v0.39.1",
-      "date": "2026-08-04"
+      "version": "v0.39.3",
+      "date": "2026-09-01"
     },
     "seoes/proval": {
       "version": "unclear-no-tagged-release",
@@ -298,8 +331,8 @@
       "date": "2026-08-18"
     },
     "sipyourdrink-ltd/bernstein": {
-      "version": "v3.18.2",
-      "date": "2026-08-28"
+      "version": "v3.19.1",
+      "date": "2026-09-03"
     },
     "CodesWhat/drydock": {
       "version": "v1.6.0",
@@ -310,8 +343,8 @@
       "date": "unclear-no-github-release"
     },
     "ridi-oss/proxy-monster": {
-      "version": "server-v0.1.23",
-      "date": "2026-08-28"
+      "version": "server-v0.1.24",
+      "date": "2026-09-03"
     },
     "monoscope-tech/monoscope": {
       "version": "v0.6.25",
@@ -322,16 +355,16 @@
       "date": "2026-08-30"
     },
     "alibaba/loongsuite-pilot": {
-      "version": "v1.6.0",
-      "date": "2026-08-27"
+      "version": "v1.7.1",
+      "date": "2026-09-03"
     },
     "HelpCode-ai/anythingmcp": {
       "version": "v0.4.4",
       "date": "2026-08-27"
     },
     "zzet/gortex": {
-      "version": "v0.63.9",
-      "date": "2026-08-30"
+      "version": "v0.63.10",
+      "date": "2026-09-01"
     },
     "doofzoff/SIMURG": {
       "version": "v1.0.3",
@@ -342,8 +375,8 @@
       "date": "2026-08-19"
     },
     "nanlogic/saccade": {
-      "version": "0.2.0 (npm)",
-      "date": "2026-08-31"
+      "version": "v0.2.2",
+      "date": "2026-09-01"
     },
     "SSH-Ache/ssh-ache": {
       "version": "v0.9.0",
@@ -358,16 +391,16 @@
       "date": "2026-08-29"
     },
     "vinhnx/VTCode": {
-      "version": "0.151.2",
-      "date": "2026-08-30"
+      "version": "0.156.0",
+      "date": "2026-09-04"
     },
     "Spielewoy/autoprompt-skill": {
-      "version": "unclear-no-tagged-release",
-      "date": "unclear"
+      "version": "v1.0.4",
+      "date": "2026-08-21"
     },
     "cyanheads/mcp-ts-core": {
-      "version": "0.12.3 (npm)",
-      "date": "2026-08-21"
+      "version": "v0.12.5",
+      "date": "2026-09-02"
     },
     "zcag/tela": {
       "version": "v0.8.0",
@@ -392,16 +425,32 @@
     "karakeep-app/liteque": {
       "version": "0.9.1",
       "date": "2026-08-31"
+    },
+    "ctxrs/ctx": {
+      "version": "v1.3.1",
+      "date": "2026-09-03"
+    },
+    "rajudandigam/agent-inspect": {
+      "version": "6.17.6 (npm)",
+      "date": "2026-09-02"
+    },
+    "mex-memory/mex": {
+      "version": "v0.8.0",
+      "date": "2026-09-02"
+    },
+    "arthurpanhku/dvalincode": {
+      "version": "v0.18.0",
+      "date": "2026-08-26"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-09-03",
-      "note": "working, but returned mostly generic/stale roundup content for Show HN and openalternative.co queries rather than specific new launches \u2014 low signal today, GitHub search API firehose was the more productive discovery source"
+      "last_ok": "2026-09-04",
+      "note": "working, but Show HN roundup queries again returned mostly generic/stale listicle content rather than specific new launches \u2014 low signal for this slot, GitHub search API + HN Algolia carried discovery"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-03",
-      "note": "working normally, used for README verification on all 4 new catalog entries plus adminforth/rebase deploy-detail greps"
+      "last_ok": "2026-09-04",
+      "note": "working normally, used for README verification on all 4 new entries plus token-goat LICENSE file and mex README depth check"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -416,20 +465,20 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-03",
-      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit; used well under 100 requests this run."
+      "last_ok": "2026-09-04",
+      "note": "Direct, unrestricted from the GitHub Actions runner. GITHUB_TOKEN used, 8300/hr rate limit; well under 200 requests used (discovery + shortlist metadata + full 40-repo release-tag sweep)"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-02",
-      "note": "working normally, used for Show HN date-filtered searches over the last 5-7 days"
+      "last_ok": "2026-09-04",
+      "note": "working normally, used for Show HN date-filtered searches (debug/testing/cli) over the last 7 days"
     },
     "pypi.org": {
       "last_ok": "2026-09-01",
       "note": "working normally, used to cross-check PyPI version against GitHub release tag"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-02",
-      "note": "working normally, used to cross-check npm published version against GitHub tag for cyanheads/mcp-ts-core"
+      "last_ok": "2026-09-04",
+      "note": "working normally, used to cross-check npm published version/license against GitHub tag for agent-inspect, mex-agent, dvalincode, mcpwatch"
     }
   },
   "previous_recommendations": [
@@ -468,7 +517,11 @@
     "adminforth-admin-panel",
     "rebase-postgres-baas",
     "clientstor-msp-platform",
-    "liteque-sqlite-job-queue"
+    "liteque-sqlite-job-queue",
+    "ctx-agent-history-cli",
+    "agent-inspect",
+    "mex-living-codebase-wiki",
+    "dvalincode-verified-fix-record"
   ],
-  "notes": "2026-09-03: Single run, slot 2 (product infrastructure, APIs, backend components) per deterministic date formula (day_of_year 246 %% 7 + 1 = 2). Catalogued 4 new: AdminForth (TS/Vue CLI-scaffolded admin panel framework, 391 stars, mature, USE NOW, 8.3), Rebase (modular Postgres-native BaaS with built-in MCP server, pre-1.0/8 stars but active, PROTOTYPE, 7.7), Client St0r (self-hosted MSP documentation/PSA platform, IT Glue/Hudu alternative, secondary MSSP-context find, PROTOTYPE, 7.0), Liteque (SQLite-backed TS job queue from the Karakeep team, zero external deps, PROTOTYPE, 7.0, used as Small-but-High-Leverage Utility). One Meaningful Update: mongodb/kingfisher v2.0.0->v2.1.0 (GitHub App auth for org scans, expanded AWS/GCP blast-radius analysis, new blast-radius CLI command) \u2014 relevant to MSSP/PTaaS context, USE NOW status unchanged. Also corrected a data error from the prior run: Spielewoy/autoprompt-skill current_version was recorded as 'unclear-no-tagged-release' but v1.0.4 was already tagged 2026-08-21 at that review \u2014 fixed in catalog.json/index.jsonl, not treated as a Meaningful Update since nothing changed, just a bookkeeping fix. Ran a full release-tag sweep across all 36 previously-catalogued repos (single batched pass, ~1 GitHub API call per repo for release + repo metadata) to check for drift \u2014 only Kingfisher's change was evaluation-relevant; rest were patch-level bumps. Rejected as duplicate/hype: Hardonian/JobForge (near-identical to Workhorse, flagged Worth Watching instead), a self-hosted feature-flag micro-wave (basb7/flagward, AndersonEns/flagworks, matt-riley/flagz) redundant with catalogued Nona. Worth Watching (not yet catalogued): javimosch/bkn (single-binary agent-first backend, hours old, too early), powabase-ai/powabase (thin wrapper around unmodified self-hosted Supabase stack plus an unproven AI layer), stablemates/workhorse (polyglot Postgres job queue, genuinely differentiated from Sidequest but public beta/no release tag yet/7 stars). GitHub search API firehose for generic 'webhook'/'admin panel'/'job queue'/'API gateway' queries was dominated by same-day 0-star scaffolds and bulk-generated tutorial repos, consistent with prior runs' notes on 'mcp-server'-style query noise \u2014 the LLM-gateway/router wave under the api-gateway topic search was skipped wholesale without individual review given near-total positioning overlap. WebSearch for Show HN and openalternative.co coverage returned only generic/stale roundup summaries, not specific new launches \u2014 low-value source for this slot today, GitHub search API carried the run. No entries yet qualify for the 'Still Worth Trying' nudge \u2014 oldest catalog entry is only 5 days old (first_seen 2026-08-29), short of the 14-day threshold."
+  "notes": "2026-09-04: Single run, slot 3 (developer utilities, debugging, testing) per deterministic date formula (day_of_year 247 % 7 + 1 = 3). Catalogued 4 new, all centered on friction from heavy coding-agent use: ctx (local-first CLI indexing past coding-agent session transcripts for search/recall, open-core with a paid closed-source 'ctx pro' blame add-on, 1062 stars, Apache-2.0 core, USE NOW, 8.4), AgentInspect (local-first evidence/trajectory-testing toolkit for custom TypeScript agents, 499 stars, MIT, PROTOTYPE, 7.6), mex (repo-local living wiki maintained by agents, deterministic Tree-sitter+SQLite code graph with Express route awareness, drift detection, 1541 stars, MIT, PROTOTYPE, 8.1, MCP package not yet published), DvalinCode (independent security-fix verification for AI-agent-written code, re-runs tests/scans itself rather than trusting the agent, offline-checkable Verified Fix Record, 113 stars, MIT, PROTOTYPE, 7.9, directly relevant to MSSP/PTaaS evidence angle). One Meaningful Update: Bernstein v3.18.2->v3.19.1 (94 changes) repositions the project from deterministic agent orchestrator into a full AI-agent governance/audit framework (identity lifecycle, credential brokering, ISO 42001/PROV-O compliance evidence exports) \u2014 materially strengthens its MSSP/PTaaS product-opportunity angle, status kept PROTOTYPE. Ran a full release-tag sweep across all 40 previously-catalogued repos (~1 API call per repo); 16 had newer tags but 15 were routine patch/minor bumps not warranting a write-up per the 'not meaningful on its own' rule \u2014 state.json known_releases updated for all of them regardless (bookkeeping), catalog.json only touched for Bernstein. Rejected: DFKHelper/token-goat (PolyForm Noncommercial license, not OSI open source, explicitly bars commercial use despite a strong Claude-Code/Codex token-reduction pitch) and fixture-dev/flawd (GitHub org only publishes binary releases, no source repo found \u2014 'open source' claim doesn't hold up). Worth Watching (not yet catalogued): lockdep/stackradar-cli (K8s running-pod CVE scanner via OSV+CISA KEV, single static binary, well-engineered but only 5 commits/3 stars), IvoryCanvas/QAMap (PR-diff to QA-plan generator, zero-LLM static analysis, 22 stars/212 commits but self-described pre-1.0), ahmed-hashim-pro/noisefloor (regression harness measuring run-to-run noise floor before calling an AI-agent-eval delta a regression, 0 stars/2 days old, one worked example). Small but High-Leverage Utility: Sreelal727/mcpwatch (MCP tool-definition token-cost auditor, itemises exactly which configured MCP server is burning context and whether its tools are ever called \u2014 genuinely novel niche, npm v0.3.0/MIT/CI, but GitHub repo is literally 1 day old with 0 stars/no tag, so flagged as a utility to try rather than formally catalogued). GitHub topic searches (debugging, testing-tools, cli-tool, developer-tools, code-review, profiling) were dominated by same-day 0-2-star 'my Claude Code config/harness' scaffolds \u2014 consistent with prior runs, skipped wholesale without individual review. WebSearch Show HN queries again returned mostly generic roundup content; HN Algolia direct search_by_date on the show_hn tag was the more useful HN-adjacent source. No entries yet qualify for the 'Still Worth Trying' nudge \u2014 oldest catalog entries are first_seen 2026-08-29, 6 days old, short of the 14-day threshold."
 }
