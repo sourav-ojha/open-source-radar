@@ -1,6 +1,6 @@
 # Catalog
 
-_54 projects tracked. Last updated 2026-09-06._
+_58 projects tracked. Last updated 2026-09-07._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -9,6 +9,7 @@ _54 projects tracked. Last updated 2026-09-06._
 | [Monoscope](https://github.com/monoscope-tech/monoscope) | USE NOW | 8.6/10 | AI & agent infrastructure, observability, product building blocks | AGPL-3.0 | medium | 2026-08-31 |
 | [LibreDB Studio](https://github.com/libredb/libredb-studio) | USE NOW | 8.6/10 | product building blocks, developer productivity, database tooling | MIT | low | 2026-09-06 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | medium | 2026-08-29 |
+| [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-07 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
 | [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-03 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -38,12 +39,15 @@ _54 projects tracked. Last updated 2026-09-06._
 | [Verb Authority](https://github.com/yairsabag/verb-authority) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Autoprompt Skill](https://github.com/Spielewoy/autoprompt-skill) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
 | [AgentInspect](https://github.com/rajudandigam/agent-inspect) | PROTOTYPE | 7.6/10 | AI agent infrastructure, AI testing, agent evaluation, developer productivity | MIT | medium | 2026-09-04 |
+| [Duckle](https://github.com/slothflowlabs/duckle) | PROTOTYPE | 7.6/10 | data infrastructure, product building blocks, developer productivity | MIT OR Apache-2.0 | medium | 2026-09-07 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
 | [Commonly](https://github.com/Team-Commonly/commonly) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, agent orchestration, agent memory | Apache-2.0 | low | 2026-09-06 |
+| [Pipewright](https://github.com/huangchengsir/pipewright) | PROTOTYPE | 7.5/10 | deployment, CI/CD, infrastructure, developer productivity | MIT | low | 2026-09-07 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
+| [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-09-02 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |

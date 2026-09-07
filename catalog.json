@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -3356,6 +3356,269 @@
       "source_links": [
         "https://github.com/SECHAK-AG/capptivo",
         "https://capptivo.com"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Dagu",
+      "slug": "dagu-workflow-orchestrator",
+      "repo_url": "https://github.com/dagucloud/dagu",
+      "website": "https://dagu.sh",
+      "description": "Self-hostable local-first workflow engine: single binary, no external database or message broker, built-in Web UI. Define DAGs in declarative YAML that wrap existing shell commands, Docker containers, Kubernetes Jobs, or SSH commands without rewriting them into a framework's task/DAG decorators.",
+      "category": [
+        "infrastructure",
+        "deployment",
+        "developer productivity",
+        "product infrastructure"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.5,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "GPL-3.0",
+      "commercial_use_notes": "GPL-3.0 is not AGPL/SSPL, but it is still copyleft. Fine for internal/self-hosted operational use (running it to orchestrate your own scripts and pipelines). Do not fork-and-modify-and-redistribute it as part of a commercial product without understanding GPL's copyleft obligations; using it purely as an internal ops tool (not distributing modified copies) carries no practical restriction.",
+      "deployment": [
+        "single binary",
+        "Docker",
+        "self-hosted",
+        "Kubernetes Jobs as steps"
+      ],
+      "interfaces": [
+        "CLI",
+        "Web UI",
+        "REST API",
+        "MCP server",
+        "webhook triggers"
+      ],
+      "use_cases": [
+        "Replace ad hoc cron jobs with a DAG that has retries, dependencies, and run history",
+        "Turn ETL scripts, dbt commands, and data-processing runbooks into observable pipelines",
+        "Orchestrate multi-step deployment or maintenance scripts over SSH across a small fleet without standing up Ansible/Airflow",
+        "Give non-engineering teammates a self-service button for routine diagnostics/DB queries via the Web UI instead of escalating to engineering",
+        "Wrap ffmpeg/media-processing jobs with parallel worker fan-out and file-backed state"
+      ],
+      "product_opportunities": [
+        "Internal ops/automation backbone for the MSSP admin-portal SaaS (scheduled scans, report generation, client onboarding sequences) without owning a Celery/Airflow stack",
+        "MCP server built in \u2014 can be exposed directly as an agent tool for inspecting/controlling scheduled workflows"
+      ],
+      "alternatives": [
+        "Apache Airflow",
+        "Temporal",
+        "n8n",
+        "plain cron",
+        "GitHub Actions self-hosted runners"
+      ],
+      "why_it_matters": "Airflow and Temporal both require operating a second platform (scheduler + metadata DB + workers, or an SDK your business logic must live inside). Dagu keeps orchestration as configuration next to scripts that already work: delete the YAML and the scripts still run standalone. That is the right trade for a small team that wants dependency graphs and retries around existing automation without absorbing a new runtime paradigm.",
+      "why_not_build_it_myself": "A DAG scheduler with retries, cron parsing, concurrency control, a run-history store, and a live-log Web UI is a multi-week build to get right; Dagu ships it as one binary with 4 years of production hardening (v2.16.2, 3841 stars, 88 contributors).",
+      "risks": [
+        "GPL-3.0 licensing requires care if ever embedding/redistributing rather than just running it internally",
+        "Single-node file-backed state; scaling out to multiple workers is supported but is a less-trodden path than the single-node case",
+        "Smaller community than Airflow means fewer third-party integrations/StackOverflow answers"
+      ],
+      "first_seen": "2026-09-07",
+      "last_reviewed": "2026-09-07",
+      "last_meaningful_update": "2026-09-07",
+      "current_version": "v2.16.2",
+      "latest_release_date": "2026-09-02",
+      "source_links": [
+        "https://github.com/dagucloud/dagu",
+        "https://docs.dagu.sh",
+        "https://dagu.sh"
+      ],
+      "aliases": [],
+      "notes": "Created 2022, actively maintained (release days before this review). 88 contributors. Not to be confused with Sidequest (already catalogued Node.js background job queue) - Dagu is a DAG-based workflow/orchestration engine for ops automation, a different niche.",
+      "acted_on": false
+    },
+    {
+      "name": "Duckle",
+      "slug": "duckle-etl",
+      "repo_url": "https://github.com/slothflowlabs/duckle",
+      "website": "https://duckle.org",
+      "description": "Open-source ETL/ELT platform: author pipelines visually or in Python/SQL, then run them headless on your own server or cloud box (`duckle-runner serve`). Compiles to SQL executed by DuckDB, so it scales with CPU rather than needing a warehouse. Every pipeline is a single file that lives in git.",
+      "category": [
+        "data infrastructure",
+        "product building blocks",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT OR Apache-2.0",
+      "commercial_use_notes": "Dual MIT/Apache-2.0, no meaningful restrictions on commercial or embedded use.",
+      "deployment": [
+        "Tauri desktop app (authoring)",
+        "headless runner binary",
+        "Docker",
+        "self-hosted server"
+      ],
+      "interfaces": [
+        "desktop GUI (canvas)",
+        "CLI (duckle-runner)",
+        "web console",
+        "MCP server",
+        "SQL/Python custom code nodes"
+      ],
+      "use_cases": [
+        "Replace a hand-rolled Node/Python ETL script moving data between Postgres/MongoDB and Parquet/warehouses",
+        "Give non-engineers a visual pipeline canvas for recurring data exports/reports instead of building a bespoke admin script each time",
+        "Schedule and monitor recurring data-sync jobs with a web console, roles, and an audit trail rather than an unmonitored cron script",
+        "Feed cleaned, structured data to an AI/RAG pipeline via its 190 built-in source/destination connectors"
+      ],
+      "product_opportunities": [
+        "Reusable building block for any product feature needing scheduled data movement (billing exports, reporting, reverse-ETL to a CRM) without paying per-row SaaS pricing",
+        "MCP server lets a coding agent (Claude Code, Cursor) inspect/modify pipelines directly"
+      ],
+      "alternatives": [
+        "Airbyte",
+        "n8n (generic automation, not ETL-optimized)",
+        "dlt",
+        "Meltano",
+        "hand-rolled scripts"
+      ],
+      "why_it_matters": "Most self-hosted ETL tools either need a database of their own or lock pipelines into a proprietary UI/cloud. Duckle stores each pipeline as a plain git-trackable file and executes it by compiling to SQL on DuckDB, so a bigger box is a faster pipeline with no vendor metering. The claimed 96M rows Postgres to Parquet in 39.9s is a strong throughput signal for a young project (unverified independently, but consistent with DuckDB's known performance profile).",
+      "why_not_build_it_myself": "A visual pipeline builder with 190 connectors, scheduling, data-quality checks, and git-based versioning is well beyond what's worth hand-building for internal reporting/export needs; Duckle gets the DuckDB performance angle right from day one.",
+      "risks": [
+        "Explicitly labeled 'beta' - expect breaking changes and rough edges",
+        "Authoring requires the Tauri desktop app, not just a CLI/config file - a heavier onboarding step than a pure headless tool",
+        "4 months old (created 2026-05), 10 contributors - real traction (1271 stars) but unproven at scale/long-term maintenance"
+      ],
+      "first_seen": "2026-09-07",
+      "last_reviewed": "2026-09-07",
+      "last_meaningful_update": "2026-09-07",
+      "current_version": "v0.7.1",
+      "latest_release_date": "2026-08-30",
+      "source_links": [
+        "https://github.com/slothflowlabs/duckle",
+        "https://duckle.org"
+      ],
+      "aliases": [],
+      "notes": "Independent project by SlothFlowLabs, not affiliated with DuckDB Labs/MotherDuck per its own README disclaimer.",
+      "acted_on": false
+    },
+    {
+      "name": "Pipewright",
+      "slug": "pipewright-cicd",
+      "repo_url": "https://github.com/huangchengsir/pipewright",
+      "website": null,
+      "description": "Single static Go binary combining CI/CD, multi-server deployment (agentless SSH), and container/server ops - positioned as a one-tool replacement for the Jenkins-or-(Drone+Ansible+Portainer) trio. Includes a visual DAG pipeline canvas, auto-HTTPS reverse proxy (managed Caddy), per-PR preview environments, and DORA metrics.",
+      "category": [
+        "deployment",
+        "CI/CD",
+        "infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "single static binary",
+        "Docker"
+      ],
+      "interfaces": [
+        "Web UI",
+        "pipeline-as-code YAML (.pipewright.yml)",
+        "webhook triggers",
+        "SSH-based agentless deploy"
+      ],
+      "use_cases": [
+        "Replace a manual GitHub Actions + SSH-deploy-script + Caddy/nginx setup with one self-hosted binary that already ties them together",
+        "Get per-PR preview URLs (pr-<n>-<proj>.<domain>) without configuring ephemeral environments by hand",
+        "Multi-server zero-downtime deploys with automatic rollback on failed health checks",
+        "Track DORA metrics (deployment frequency, lead time, change failure rate, MTTR) without wiring up a separate metrics pipeline"
+      ],
+      "product_opportunities": [
+        "Could replace the ad hoc EC2/EB/ALB deploy scripting currently needed for small side-project or client deployments",
+        "Auto-HTTPS + domain routing built in removes a recurring 30-60 min setup task (Caddy/certbot config) per new service"
+      ],
+      "alternatives": [
+        "Jenkins",
+        "Drone CI + Ansible/Kamal + Portainer",
+        "Coolify",
+        "Dokploy"
+      ],
+      "why_it_matters": "The self-hosted PaaS/deploy-platform space is crowded (a wave of ~15 near-identical Coolify-alternative repos was already rejected on 2026-08-31), but Pipewright is differentiated by scope: it also does CI (build isolation, artifact store, test-report quality gates) rather than assuming CI already exists elsewhere, and ships a real visual DAG canvas plus DORA metrics out of the box.",
+      "why_not_build_it_myself": "The combination of build isolation, SSH-agentless multi-server deploy, automatic HTTPS/reverse-proxy management, and preview environments is a multi-week build; Pipewright packages all of it as one binary.",
+      "risks": [
+        "Only 34 stars and 2 contributors as of this review - real but very early adoption, unproven at any scale beyond the maintainer's own use",
+        "The feature list is unusually large for a 3-month-old project (created 2026-05-30) - worth a hands-on trial before trusting it with production deploys",
+        "Chinese-origin project with bilingual docs; English README is present and complete but community/support channels may skew Chinese-language"
+      ],
+      "first_seen": "2026-09-07",
+      "last_reviewed": "2026-09-07",
+      "last_meaningful_update": "2026-09-07",
+      "current_version": "v1.5.3",
+      "latest_release_date": "2026-08-29",
+      "source_links": [
+        "https://github.com/huangchengsir/pipewright"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Shelve",
+      "slug": "shelve-secrets",
+      "repo_url": "https://github.com/HugoRCD/shelve",
+      "website": "https://shelve.cloud",
+      "description": "Open-source centralized secrets and environment-variable management: encrypted vault (AES-256 at rest, SHA-256 hashed), a CLI (`shelve run`) to inject secrets without .env files, GitHub Actions/repo secrets sync, role-based team access, and a self-hostable server.",
+      "category": [
+        "product building blocks",
+        "secrets management",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or SaaS use.",
+      "deployment": [
+        "self-hosted server",
+        "hosted (shelve.cloud)",
+        "npm CLI package"
+      ],
+      "interfaces": [
+        "CLI (@shelve/cli)",
+        "Web dashboard",
+        "GitHub App sync"
+      ],
+      "use_cases": [
+        "Stop passing .env files over Slack between teammates on a MERN project",
+        "Sync secrets automatically into GitHub Actions/repo secrets instead of updating them by hand per repo",
+        "Keep dev/staging/prod environment parity visible in one dashboard across multiple services",
+        "Time-limited secure secret sharing instead of pasting keys in DMs"
+      ],
+      "product_opportunities": [
+        "Could be self-hosted as the secrets backbone across Sourav's own projects rather than paying for Doppler/Infisical Cloud"
+      ],
+      "alternatives": [
+        "Doppler",
+        "Infisical",
+        "1Password for Developers",
+        "Vercel/Netlify built-in env management",
+        "sigillo (see Worth Watching)"
+      ],
+      "why_it_matters": "A narrow, well-executed take on a problem every multi-environment Node project has (scattered .env files), with a decent CLI DX (command palette, `shelve run`) and native GitHub Actions sync. Not architecturally novel, but immediately useful and self-hostable, unlike Doppler/1Password.",
+      "why_not_build_it_myself": "Secret encryption at rest, RBAC, GitHub App sync, and a CLI are individually simple but tedious to build and keep secure correctly; not worth reinventing for what is a solved, commodity problem.",
+      "risks": [
+        "README's own roadmap table lists 'Next Release v2.5.0 (Target: Q4 2025)' while being reviewed in September 2026 - a stale roadmap note suggests the docs lag the code somewhat, though the CLI itself shipped v5.3.0 on 2026-08-17 and the repo was pushed as recently as 2026-09-03",
+        "Crowded space (Doppler, Infisical, 1Password, platform-native env management) - differentiation is DX and self-hostability, not a unique capability",
+        "Self-hosting requires running both the API/dashboard and understanding its own encryption-key management - verify the self-hosting docs before trusting it with production secrets"
+      ],
+      "first_seen": "2026-09-07",
+      "last_reviewed": "2026-09-07",
+      "last_meaningful_update": "2026-09-07",
+      "current_version": "@shelve/cli@5.3.0",
+      "latest_release_date": "2026-08-17",
+      "source_links": [
+        "https://github.com/HugoRCD/shelve",
+        "https://shelve.cloud"
       ],
       "aliases": [],
       "notes": "",

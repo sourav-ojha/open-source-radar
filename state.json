@@ -1,10 +1,9 @@
 {
-  "last_run": "2026-09-06",
-  "last_successful_run": "2026-09-06",
-  "run_count": 11,
-  "rotation_slot_last_used": 5,
+  "last_run": "2026-09-07",
+  "last_successful_run": "2026-09-07",
+  "run_count": 12,
+  "rotation_slot_last_used": 6,
   "recent_categories": [
-    "RAG/document infrastructure",
     "embedded vector databases",
     "agent-native local semantic search",
     "developer utilities",
@@ -15,7 +14,11 @@
     "database tooling / self-hosted DB IDEs",
     "self-hosted observability/incident platforms",
     "AI agent orchestration/identity",
-    "ontology-driven app frameworks"
+    "ontology-driven app frameworks",
+    "workflow orchestration / self-hosted automation",
+    "self-hosted ETL/ELT",
+    "single-binary CI/CD + deployment",
+    "secrets management"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -244,7 +247,23 @@
     "authorizerdev/authorizer",
     "fosrl/pangolin",
     "twentyhq/twenty",
-    "mustbeperfect/definitive-opensource"
+    "mustbeperfect/definitive-opensource",
+    "linny006/claude-code-plugin-tracker",
+    "mcpbeat/best-mcp-servers",
+    "openobserve/openobserve",
+    "slothflowlabs/duckle",
+    "mario-ezquerro/gubernator",
+    "HugoRCD/shelve",
+    "remorses/sigillo",
+    "huangchengsir/pipewright",
+    "rk8s-dev/rk8s",
+    "simplecontainer/smr",
+    "xiaobaidadada/filecat",
+    "dagucloud/dagu",
+    "runwisp/runwisp",
+    "FluidifyAI/Regen",
+    "eslupmi/impulse",
+    "opsknight-labs/OpsKnight"
   ],
   "rejected": [
     {
@@ -386,6 +405,21 @@
       "repo_url": "https://github.com/genspark-ai/genoffice",
       "reason": "misaligned with profile \u2014 consumer end-user Office app, not a dev/product-building tool despite high star count and recency; filed as Worth Watching instead of rejected outright",
       "date": "2026-09-06"
+    },
+    {
+      "repo_url": "https://github.com/openobserve/openobserve",
+      "reason": "already mainstream \u2014 21,669-star observability platform (logs/metrics/traces/RUM), established since 2023, well outside 'undiscovered' territory; no material new development flagged this run",
+      "date": "2026-09-07"
+    },
+    {
+      "repo_url": "minimalist-container-orchestrator niche (mario-ezquerro/gubernator, simplecontainer/smr)",
+      "reason": "duplicate/immature \u2014 both pitch a lightweight Kubernetes alternative; gubernator is 23 stars/GPL-3.0/4 months old, smr is 90 stars/GPL-3.0/stale (pushed 2026-06-05); rk8s-dev/rk8s covers the same architecture idea with more traction, filed as Worth Watching instead",
+      "date": "2026-09-07"
+    },
+    {
+      "repo_url": "https://github.com/remorses/sigillo",
+      "reason": "unclear licensing \u2014 README claims 'MIT licensed' but no LICENSE file exists in the repo (confirmed via 404s on LICENSE/LICENSE.md and GitHub API license:null); also self-hosting is tied specifically to Cloudflare Workers + D1, not a generic Docker self-host; filed as Worth Watching pending clarification",
+      "date": "2026-09-07"
     }
   ],
   "known_releases": {
@@ -620,6 +654,22 @@
     "SECHAK-AG/capptivo": {
       "version": "v1.0.3",
       "date": "2026-08-05"
+    },
+    "dagucloud/dagu": {
+      "version": "v2.16.2",
+      "date": "2026-09-02"
+    },
+    "slothflowlabs/duckle": {
+      "version": "v0.7.1",
+      "date": "2026-08-30"
+    },
+    "huangchengsir/pipewright": {
+      "version": "v1.5.3",
+      "date": "2026-08-29"
+    },
+    "HugoRCD/shelve": {
+      "version": "@shelve/cli@5.3.0",
+      "date": "2026-08-17"
     }
   },
   "source_health": {
@@ -628,8 +678,8 @@
       "note": "working, but Show HN roundup queries again returned mostly generic/stale listicle content rather than specific new launches \u2014 low signal for this slot, GitHub search API + HN Algolia carried discovery"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-06",
-      "note": "working normally, used for README verification on all 6 new entries"
+      "last_ok": "2026-09-07",
+      "note": "working normally, used for README/LICENSE verification on all shortlisted candidates including Rust-convention LICENSE-MIT/LICENSE-APACHE split files"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -644,12 +694,12 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-06",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 400 requests used (discovery + shortlist metadata + release/contributor checks + full 48-repo release-tag sweep)"
+      "last_ok": "2026-09-07",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 200 requests used this run (discovery searches + shortlist metadata + license/contributor/commit checks)"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-06",
-      "note": "queried show_hn tag for self-hosted/open-source-alternative/invoicing over 10-20 day windows; returned reasonable signal this time (Gopher, LibreDB Studio, Authorizer, Subpool among hits) \u2014 wider window than last run's RAG-specific query worked better"
+      "last_ok": "2026-09-07",
+      "note": "queried show_hn tag over a 15-day window; low signal for infra/deployment/observability terms specifically this run (mostly unrelated Show HN posts) \u2014 GitHub search API carried discovery"
     },
     "pypi.org": {
       "last_ok": "2026-09-05",
@@ -714,7 +764,11 @@
     "commonly-agent-workspace",
     "oneuptime",
     "objectstack",
-    "capptivo-screen-recorder"
+    "capptivo-screen-recorder",
+    "dagu-workflow-orchestrator",
+    "duckle-etl",
+    "pipewright-cicd",
+    "shelve-secrets"
   ],
-  "notes": "2026-09-06: Single run, slot 5 (self-hosted SaaS alternatives, productivity) per deterministic date formula (day_of_year 249 % 7 + 1 = 5). Catalogued 6 new: LibreDB Studio (browser-based self-hosted multi-engine DB IDE spanning Postgres+MongoDB, MIT, officially listed by the PostgreSQL project itself, USE NOW, 8.6), OneUptime (mature 4-year-old Apache-2.0 all-in-one observability/status-page/on-call platform, 100+ contributors, directly relevant to the MSSP SaaS/PTaaS context, PROTOTYPE, 7.8), Commonly (Apache-2.0 self-hostable workspace giving coding agents portable identity/memory across runtimes \u2014 Claude Code/Cursor/Codex, PROTOTYPE, 7.5), Quickdraw (MIT fee-free tldraw-alternative whiteboard SDK for React/RN/vanilla JS, zero deps, PROTOTYPE, 7.5), ObjectStack (Apache-2.0 ontology-first framework generating DB/REST/UI/MCP server from typed metadata, architecture-notable but low adoption at only 50 stars, STUDY, 7.3), and Capptivo (MIT Tauri screen recorder, free alternative to Screen Studio's $29/mo, flagged as Small but High-Leverage Utility, PROTOTYPE, 6.9). Ran a full release-tag sweep across all 48 previously-catalogued repos; found only routine patch/minor bumps (Opslane, Gortex, VT Code, LodeDB, AgentInspect, Weir), none crossing the materiality bar \u2014 state.json known_releases and index.jsonl current_version fields synced for bookkeeping regardless, no catalog status/score changes. No 'Still Worth Trying' entries yet \u2014 oldest catalog entries are first_seen 2026-08-29, 8 days old, still short of the 14-day threshold (starts applying ~2026-09-12). Rejected as already-mainstream: twentyhq/twenty (56k stars) and fosrl/pangolin (22.6k stars) \u2014 both well outside 'undiscovered' territory, added to rejected list to prevent rediscovery. Also rejected: authorizerdev/authorizer (crowded self-hosted-auth niche, no differentiation), mustbeperfect/definitive-opensource (a directory, not a tool), and a ~15-repo bensblueprints/* same-day '-mvp' template wave (portfolio/SEO dump). Worth Watching (not yet catalogued): opsknight-labs/OpsKnight (39-star newer/narrower on-call+status-page alternative overlapping OneUptime, watch for real usage evidence or differentiation), gesta-run/subpool (self-hosted AI-subscription-pooling control plane, genuine micro-SaaS-relevant idea but only 4 days old / 65 stars, needs field-tested credential-handling proof), genspark-ai/genoffice (5,511-star open-source MS-Office alternative with AI agents \u2014 high star growth but a consumer end-user app, weak fit for this profile's axes). GitHub Search across 'self-hosted'/'open source alternative to'/'invoicing'/'CRM'/'helpdesk'/'time tracking'/'status page' terms was heavily diluted by same-day zero-star template/portfolio dumps and self-referential 'awesome-stars'/'my-awesome-stars' list repos (dozens seen); took noticeably more filtering time than a typical run to surface the 6 genuine finds. HN Algolia's wider 10-20 day show_hn windows (vs. last run's narrow RAG-specific query) worked better this time and surfaced Gopher, LibreDB Studio, Authorizer, and Subpool among the hits \u2014 worth defaulting to a wider window in future slot-5-type runs."
+  "notes": "2026-09-07: Single run, slot 6 (infrastructure, observability, deployment) per deterministic date formula (day_of_year 250 % 7 + 1 = 6). Catalogued 4 new: Dagu (mature single-binary local-first workflow/DAG engine, no external DB, built-in MCP server, GPL-3.0 flagged but low practical risk for internal use, USE NOW, 8.5), Duckle (self-hosted ETL/ELT compiling to SQL on DuckDB, git-tracked pipelines, dual MIT/Apache-2.0, beta, PROTOTYPE, 7.6), Pipewright (single-binary all-in-one CI/CD+deploy+ops with auto-HTTPS and per-PR previews, MIT, differentiated from the already-rejected Coolify-alternative wave by including CI, but only 34 stars/2 contributors, PROTOTYPE, 7.5), and Shelve (mature Apache-2.0 secrets/env-var manager with GitHub Actions sync, self-hostable, crowded niche but low-risk, PROTOTYPE, 7.4). Rejected OpenObserve as already-mainstream (21.7k stars, established 2023). Filed Sigillo (agent-safe self-hosted secrets manager, redacts secrets from process stdout so they never reach an LLM context window \u2014 genuinely novel angle) as Worth Watching rather than catalogued: README claims MIT but no LICENSE file exists in the repo, and self-hosting is tied specifically to Cloudflare Workers + D1 rather than a generic Docker self-host. Also filed rk8s (Rust, Kubernetes-compatible CRI implementation, 559 stars, architecturally interesting but pushed_at going stale at 6+ weeks) and Regen (self-hosted PagerDuty/incident.io alternative with AI postmortems, directly relevant to the MSSP/PTaaS secondary context, but AGPLv3 \u2014 flagged loudly since Sourav runs a hosted SaaS \u2014 and only 3 contributors) as Worth Watching. Flagged RunWisp (single Go binary crond/supervisord replacement with a web dashboard, GPL-3.0, 43 stars) as Small but High-Leverage Utility. Rejected as duplicate/immature: a minimalist container-orchestrator micro-niche (gubernator 23\u2605 GPL-3.0, smr 90\u2605 GPL-3.0 stale) redundant with rk8s. GitHub search sorted by 'updated' was extremely noisy (dominated by same-day zero-star template/tracker/list repos); switching to stars+pushed-date qualified queries (stars:>30 pushed:>DATE) produced much better signal and should be the default query shape going forward for non-Show-HN discovery. HN Algolia show_hn query returned low signal for infra/deployment-specific terms this run \u2014 GitHub search API carried the bulk of discovery. Did not repeat the full 48-repo release-tag sweep performed on 2026-09-06 (one day prior); material changes across the existing catalog in a 24h window are very unlikely and the turn budget is better spent on new discovery per section 0.5 rule 4. No 'Still Worth Trying' entries yet \u2014 oldest catalog entries are first_seen 2026-08-29, 9 days old, still short of the 14-day threshold (starts applying ~2026-09-12)."
 }
