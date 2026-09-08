@@ -1,6 +1,6 @@
 # Catalog
 
-_58 projects tracked. Last updated 2026-09-07._
+_62 projects tracked. Last updated 2026-09-08._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -20,9 +20,11 @@ _58 projects tracked. Last updated 2026-09-07._
 | [LoongSuite Pilot](https://github.com/alibaba/loongsuite-pilot) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, developer productivity, observability | Apache-2.0 | low | 2026-08-31 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [OpenNotebookLM](https://github.com/tom1030507/OpenNotebookLM) | PROTOTYPE | 8.2/10 | RAG infrastructure, document processing, product building blocks, self-hosted SaaS alternative | MIT | low | 2026-09-05 |
+| [mcpsnoop](https://github.com/kerlenton/mcpsnoop) | USE NOW | 8.2/10 | AI & agent infrastructure, developer productivity, AI agent debugging/tracing, MCP tooling | MIT | low | 2026-09-08 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
+| [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-04 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
@@ -48,6 +50,7 @@ _58 projects tracked. Last updated 2026-09-07._
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
+| [trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, developer productivity, code intelligence, context engineering | MIT | low | 2026-09-08 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-09-02 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |
@@ -60,5 +63,6 @@ _58 projects tracked. Last updated 2026-09-07._
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [Opslane](https://github.com/opslane/opslane) | PROTOTYPE | 6.8/10 | developer productivity, debugging, observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-29 |
+| [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |
 | [LightMem](https://github.com/zjunlp/LightMem) | WATCH | 5.5/10 | agent memory, AI agent infrastructure | MIT | high | 2026-08-29 |

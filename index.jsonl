@@ -56,3 +56,7 @@
 {"slug": "duckle-etl", "repo_url": "https://github.com/slothflowlabs/duckle", "name": "Duckle", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-07", "current_version": "v0.7.1", "aliases": []}
 {"slug": "pipewright-cicd", "repo_url": "https://github.com/huangchengsir/pipewright", "name": "Pipewright", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-09-07", "current_version": "v1.5.3", "aliases": []}
 {"slug": "shelve-secrets", "repo_url": "https://github.com/HugoRCD/shelve", "name": "Shelve", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-09-07", "current_version": "@shelve/cli@5.3.0", "aliases": []}
+{"slug": "mcpsnoop", "repo_url": "https://github.com/kerlenton/mcpsnoop", "name": "mcpsnoop", "status": "USE NOW", "score": 8.2, "last_reviewed": "2026-09-08", "current_version": "v0.21.0", "aliases": []}
+{"slug": "mcp-compressor", "repo_url": "https://github.com/atlassian-labs/mcp-compressor", "name": "mcp-compressor", "status": "USE NOW", "score": 8.0, "last_reviewed": "2026-09-08", "current_version": "v0.31.10", "aliases": []}
+{"slug": "trace-mcp", "repo_url": "https://github.com/nikolai-vysotskyi/trace-mcp", "name": "trace-mcp", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-09-08", "current_version": "v3.23.2", "aliases": []}
+{"slug": "quackback-feedback-board", "repo_url": "https://github.com/QuackbackIO/quackback", "name": "Quackback", "status": "PROTOTYPE", "score": 6.7, "last_reviewed": "2026-09-08", "current_version": "v0.13.2", "aliases": []}
