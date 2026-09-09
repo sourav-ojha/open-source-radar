@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -3887,6 +3887,309 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: AGPL-3.0, 263 stars, 83 forks, pushed_at 2026-09-07, archived:false, 39 open issues (active). Created 2025-12-02.",
+      "acted_on": false
+    },
+    {
+      "name": "Temps",
+      "slug": "temps-selfhosted-platform",
+      "repo_url": "https://github.com/gotempsh/temps",
+      "website": "https://temps.sh",
+      "description": "AI-native, self-hosted alternative to Vercel + Sentry + PostHog + Pingdom + Resend + E2B in one Rust binary, with 440+ CLI operations and agent skills for Claude Code/Codex/OpenCode.",
+      "category": [
+        "product infrastructure",
+        "self-hosted SaaS alternative",
+        "AI agent tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 — no restrictions identified on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "self-hosted (curl install script, single Rust binary)",
+        "hosted cloud (temps.sh)"
+      ],
+      "interfaces": [
+        "CLI (440+ operations)",
+        "REST-adjacent dashboard",
+        "OpenAI-compatible AI gateway endpoint",
+        "agent skills (Claude Code/Codex/OpenCode)"
+      ],
+      "use_cases": [
+        "Self-host deploys, error tracking, and analytics instead of paying for Vercel + Sentry + PostHog separately",
+        "Let a coding agent deploy, inspect traces, and diagnose incidents via CLI/skills instead of dashboards",
+        "Front OpenAI/Anthropic/xAI/Gemini calls through the built-in AI gateway with per-model cost attribution",
+        "Run Claude Code/Codex/OpenCode workflow sandboxes against a repo from inside the platform"
+      ],
+      "product_opportunities": [
+        "Anchor a batteries-included self-hosted dev platform offering for clients avoiding per-seat SaaS bills",
+        "Reuse the telemetry-grounded AI chat pattern (read-only by default, opt-in writes) in other ops tooling"
+      ],
+      "alternatives": [
+        "Vercel",
+        "Sentry",
+        "PostHog",
+        "Pingdom/UptimeRobot",
+        "Resend",
+        "E2B",
+        "LiteLLM (gateway piece only)"
+      ],
+      "why_it_matters": "Replaces seven categories of paid SaaS from one self-hosted binary with a shared CLI and agent-skill surface, instead of stitching together seven separate self-hosted tools.",
+      "why_not_build_it_myself": "Deploys, error tracking, analytics/session-replay, uptime, email, sandboxes, and an AI gateway is a multi-quarter build; this ships all seven from one binary today.",
+      "risks": [
+        "Broad surface area increases blast radius if any one subsystem is immature — verify each replaced category independently before trusting it in production",
+        "CLI is pre-1.0 (0.1.x); breaking changes should be expected",
+        "GitHub's releases/latest tag (v0.0.8, 2026-03-31) is stale and misleading — real activity is in daily nightly tags and the npm CLI package, not GitHub releases"
+      ],
+      "first_seen": "2026-09-09",
+      "last_reviewed": "2026-09-09",
+      "last_meaningful_update": "2026-09-09",
+      "current_version": "0.1.36 (npm CLI) / v0.1.0-nightly.20260908 (GitHub tag)",
+      "latest_release_date": "2026-08-30 (npm) — GitHub releases/latest is stale, see notes",
+      "source_links": [
+        "https://github.com/gotempsh/temps",
+        "https://temps.sh",
+        "https://temps.sh/docs"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 731 stars, 56 forks, pushed_at 2026-09-09, archived:false, 13 open issues, created 2025-10-21. 10 contributors, one dominant (dviejokfs, 1769 commits). npm @temps-sdk/cli confirmed at 0.1.36 (published 2026-08-30) via registry.npmjs.org.",
+      "acted_on": false
+    },
+    {
+      "name": "Preloop",
+      "slug": "preloop-agent-control-plane",
+      "repo_url": "https://github.com/preloop/preloop",
+      "website": "https://preloop.ai",
+      "description": "Self-hostable AI agent control plane: MCP firewall for tool access, model gateway for cost/safety/attribution, policy-as-code with human approvals, and runtime session observability.",
+      "category": [
+        "AI agent infrastructure",
+        "security / governance",
+        "MCP infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 — no restrictions identified on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "self-hosted (Docker-implied)",
+        "Preloop Cloud"
+      ],
+      "interfaces": [
+        "CLI",
+        "PyPI package",
+        "MCP firewall (proxy)",
+        "model gateway (OpenAI-compatible)",
+        "web console"
+      ],
+      "use_cases": [
+        "Front all local coding-agent MCP traffic through the firewall, requiring approval for risky tool calls",
+        "Get per-agent, per-model token/cost/latency attribution instead of guessing from provider dashboards",
+        "Use security-audit flow presets (SBOM verify, exploit check) as a starting point for client security reviews",
+        "Onboard an existing heterogeneous agent setup (Claude Code, Cursor, Codex, etc.) with one discovery command"
+      ],
+      "product_opportunities": [
+        "Governance layer behind an internal or client-facing supervised-AI-agent offering, sold on auditability",
+        "Audit-trail + human-approval pattern reusable for any product letting an agent act in a customer's environment"
+      ],
+      "alternatives": [
+        "bespoke in-house MCP proxy",
+        "LiteLLM/Portkey (model-gateway piece only, no MCP firewall)",
+        "closed-source enterprise AI-governance platforms"
+      ],
+      "why_it_matters": "Combines an MCP tool-call firewall with a model-cost gateway and policy/approval layer in one self-hostable platform, directly relevant to security-conscious agent deployments.",
+      "why_not_build_it_myself": "An MCP proxy with policy enforcement, a model gateway with cost attribution, and an approval workflow together are a multi-month build most teams would rather not own.",
+      "risks": [
+        "Early-stage (v0.15.0); expect policy-schema and API churn",
+        "Contributor base dominated by two people (d-mo, yconst) — real bus-factor risk",
+        "Security-audit presets are explicitly not certification-grade — treat as a starting point, not a compliance deliverable"
+      ],
+      "first_seen": "2026-09-09",
+      "last_reviewed": "2026-09-09",
+      "last_meaningful_update": "2026-09-09",
+      "current_version": "v0.15.0",
+      "latest_release_date": "2026-08-20",
+      "source_links": [
+        "https://github.com/preloop/preloop",
+        "https://preloop.ai",
+        "https://pypi.org/project/preloop"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 59 stars, 11 forks, pushed_at 2026-09-09, archived:false, 31 open issues, created 2026-01-09. 7 contributors, two dominant (d-mo 3094, yconst 623).",
+      "acted_on": false
+    },
+    {
+      "name": "pi-dispatch",
+      "slug": "pi-dispatch",
+      "repo_url": "https://github.com/edgehero/pi-dispatch",
+      "website": "",
+      "description": "Self-hosted background service that runs the 'pi' coding agent on a schedule or forge event, inside a locked-down ephemeral container, behind a durable queue and hard spend caps, with a live admin panel.",
+      "category": [
+        "AI agent infrastructure",
+        "automation / job orchestration",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT — no restrictions identified on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "self-hosted (Docker)"
+      ],
+      "interfaces": [
+        "CLI",
+        "cron scheduling",
+        "GitHub/GitLab/Forgejo/Azure DevOps event triggers",
+        "admin panel (TUI/dashboard)"
+      ],
+      "use_cases": [
+        "Run pi as a background service reacting to GitHub issue/comment/PR events with per-repo spend caps",
+        "Use CLI/cron/forge-event triggers interchangeably against the same queue and sandboxed container",
+        "Bake a project toolchain (incl. Playwright/Chromium) into the job image for frontend build+screenshot flows",
+        "Use the insights page to compare subscription-based agent cost against metered API pricing per flow/model"
+      ],
+      "product_opportunities": [
+        "Reusable operational backbone (queue + spend governance + sandboxing) for a coding-agent-as-a-service product",
+        "Cost-attribution/insights pattern reusable for any product billing for agent usage"
+      ],
+      "alternatives": [
+        "building a custom queue/sandbox/budget layer by hand",
+        "repurposed CI runners (GitHub Actions) lacking native spend caps and cost attribution"
+      ],
+      "why_it_matters": "Solves the queue/concurrency/spend-limit/permission gap that most coding-agent CLIs (including pi itself, by its own README) ship without, at the container boundary rather than trusting agent restraint.",
+      "why_not_build_it_myself": "A durable job queue, container sandboxing, and pre-flight spend-cap enforcement together are the three hardest parts of running a coding agent unattended safely.",
+      "risks": [
+        "Tied specifically to the `pi` coding agent, not a generic wrapper for any agent CLI",
+        "Effectively single-author (427 commits from one author vs. 1 from a second contributor)",
+        "Container-boundary security model is only as strong as the underlying Docker sandbox — verify independently before trusting with sensitive work"
+      ],
+      "first_seen": "2026-09-09",
+      "last_reviewed": "2026-09-09",
+      "last_meaningful_update": "2026-09-09",
+      "current_version": "admin-v1.10.2",
+      "latest_release_date": "2026-09-07",
+      "source_links": [
+        "https://github.com/edgehero/pi-dispatch"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 173 stars, 10 forks, pushed_at 2026-09-09, archived:false, 15 open issues, created 2026-07-15.",
+      "acted_on": false
+    },
+    {
+      "name": "Edda",
+      "slug": "edda-agent-ledger",
+      "repo_url": "https://github.com/fagemx/edda",
+      "website": "https://edda.sh",
+      "description": "Local, tamper-evident, append-only ledger for coding agents: persists decisions and cross-agent/session coordination state in a .edda/ directory, plus a cross-provider agent-review workflow.",
+      "category": [
+        "AI agent infrastructure",
+        "agent memory / coordination",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT OR Apache-2.0",
+      "commercial_use_notes": "Dual MIT/Apache-2.0 — no restrictions identified. Note: GitHub API reports only Apache-2.0 as the detected SPDX license; repo actually ships both LICENSE-MIT and an Apache-2.0 file.",
+      "deployment": [
+        "local CLI (cargo install / GitHub release binary)"
+      ],
+      "interfaces": [
+        "CLI",
+        "works with any MCP client"
+      ],
+      "use_cases": [
+        "Keep a durable, inspectable record of why a technical tradeoff was decided, readable by future sessions",
+        "Run parallel agent sessions with confidence a crash is recoverable rather than silent lost work",
+        "Get a second-provider review of a branch via `edda review --agent pi --model ...` with recorded findings/cost",
+        "Use `edda run -- <command>` for a clean-SHA local receipt of a command's outcome"
+      ],
+      "product_opportunities": [
+        "Tamper-evident append-only ledger pattern reusable as an audit-trail primitive for autonomous-process products"
+      ],
+      "alternatives": [
+        "ad-hoc CLAUDE.md/AGENTS.md decision notes (no tamper-evidence or fleet coordination)",
+        "mex (already catalogued — codebase knowledge memory, not decision/coordination ledger)"
+      ],
+      "why_it_matters": "Addresses two specific, recurring agent-workflow pains directly — decisions dying with compacted transcripts, and work state dying with crashed parallel sessions — with a narrower scope than generic 'agent memory.'",
+      "why_not_build_it_myself": "A tamper-evident local ledger plus a cross-provider review workflow is a small but non-trivial primitive that's easy to get wrong (crash safety, tamper evidence) if built ad hoc.",
+      "risks": [
+        "Single-author project (705 commits, one contributor) — real bus-factor risk",
+        "Young (~7 months old); review CLI and fleet-coordination features are still under active internal rework per its own issue tracker",
+        "Local-only by design — no built-in mechanism for sharing the ledger across machines or team members"
+      ],
+      "first_seen": "2026-09-09",
+      "last_reviewed": "2026-09-09",
+      "last_meaningful_update": "2026-09-09",
+      "current_version": "v0.6.0",
+      "latest_release_date": "2026-09-09",
+      "source_links": [
+        "https://github.com/fagemx/edda",
+        "https://edda.sh",
+        "https://crates.io/crates/edda"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0 (detected SPDX; repo also ships LICENSE-MIT), 36 stars, 2 forks, pushed_at 2026-09-09, archived:false, 74 open issues (active internal 'fleet' issue tracking, not distress), created 2026-02-19.",
+      "acted_on": false
+    },
+    {
+      "name": "ripwire",
+      "slug": "ripwire-code-graph",
+      "repo_url": "https://github.com/redhat-et/ripwire",
+      "website": "",
+      "description": "Zero-dependency, single-binary C++23 CLI and MCP server that builds a ranked, deterministic call graph of a repository — blast radius, tests to run — for coding agents to consume instead of grepping and reading whole files.",
+      "category": [
+        "AI agent infrastructure",
+        "code intelligence / context engineering",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 — no restrictions identified on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "local CLI (single compiled binary, zero runtime dependencies)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Point it at a repo before an agent makes a change, so the agent gets a call graph instead of exploring blind",
+        "Identify blast radius and relevant tests before merging an agent-authored change",
+        "Run as an MCP server so any MCP-compatible agent queries the graph directly"
+      ],
+      "product_opportunities": [
+        "Reusable pre-processing step (context map before code read) in any internal agent-orchestration pipeline"
+      ],
+      "alternatives": [
+        "embedding-based codebase-RAG/context tools (many surfaced in today's 'agent memory' discovery)",
+        "trace-mcp (already catalogued — framework-aware graph, different approach)"
+      ],
+      "why_it_matters": "A deterministic, non-embedding call-graph approach (no API key, no vector search) is a meaningfully different and cheaper architecture than the embedding-heavy codebase-context tools dominating this space.",
+      "why_not_build_it_myself": "A deterministic, multi-language call-graph builder with blast-radius and test-impact analysis is a substantial static-analysis project, not a quick script.",
+      "risks": [
+        "Effectively single-author (1,944 commits from one contributor vs. single digits from the next seven) despite being hosted under Red Hat's redhat-et org — unclear whether this is an official maintained effort or a personal project hosted there",
+        "README leans heavily on self-reported, self-verified benchmark claims (byte-reduction percentages, 'papers folded' counts checked by the project's own script) — treat as unconfirmed until checked hands-on, same caution as previously flagged for trace-mcp (2026-09-08)",
+        "Very new (created 2026-07-29) with unusually fast star growth (1,780 stars in ~6 weeks) — noted as unusual, not treated as evidence of merit"
+      ],
+      "first_seen": "2026-09-09",
+      "last_reviewed": "2026-09-09",
+      "last_meaningful_update": "2026-09-09",
+      "current_version": "v0.5.0",
+      "latest_release_date": "2026-09-08",
+      "source_links": [
+        "https://github.com/redhat-et/ripwire"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1780 stars, 93 forks, pushed_at 2026-09-09, archived:false, 13 open issues, created 2026-07-29.",
       "acted_on": false
     }
   ]

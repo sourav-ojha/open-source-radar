@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-08",
-  "last_successful_run": "2026-09-08",
-  "run_count": 13,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-09-09",
+  "last_successful_run": "2026-09-09",
+  "run_count": 14,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -22,7 +22,12 @@
     "MCP debugging/tracing tooling",
     "MCP context/token compression",
     "agent-native code intelligence",
-    "self-hosted feedback/support platforms"
+    "self-hosted feedback/support platforms",
+    "self-hosted PaaS/observability/AI-gateway bundles",
+    "coding-agent-as-a-service dispatch/orchestration",
+    "agent decision/coordination ledgers",
+    "MCP/agent governance and firewalls",
+    "deterministic code-graph context for agents"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -335,7 +340,95 @@
     "Priyanshu-1622/skiff",
     "databk/rustdesk-console",
     "turhobr/selfhost.directory",
-    "plannotator/artifact-server"
+    "plannotator/artifact-server",
+    "hosanxiv/kiasumiles",
+    "traverse-framework/traverse",
+    "ziatdinovmax/SciLink",
+    "fagemx/edda",
+    "getsentry/cli",
+    "last9/last9-mcp-server",
+    "tembo/agent-studio",
+    "1f916-ai/1f916",
+    "VallierDev/codex-switcher",
+    "inite-ai/inite-brain-service",
+    "deckflow/deckprobe",
+    "SII-Holos/synergy",
+    "jkawamoto/mcp-youtube-transcript",
+    "gotempsh/temps",
+    "strelov1/freehire",
+    "0xMaxMa/claude-gateway",
+    "okandemirel/Strada.Brain",
+    "prime-radiant-inc/superpowers-evals",
+    "terok-ai/terok",
+    "BA-CalderonMorales/agent-harness",
+    "prime-radiant-inc/evener",
+    "ForgeAILab/forge",
+    "reyamira/models",
+    "mosonlab/anneal",
+    "sageox/ox",
+    "vinta/hal-9000",
+    "navikt/cplt",
+    "Fmarzochi/EGC",
+    "edgehero/pi-dispatch",
+    "devswha/gajae-code-app",
+    "poe-platform/poe-code",
+    "ReviewStage/luke",
+    "mixpeek/amux",
+    "squirrelscan/squirrelscan",
+    "sudoprivacy/sudocode",
+    "basilisk-labs/agentplane",
+    "pleaseai/shunt",
+    "martinholovsky/SOTA-skills",
+    "daonhan/ralph",
+    "hoveychen/claw-fleet",
+    "blueberrycongee/wuu",
+    "sahil87/fab-kit",
+    "moonbitlang/openseek",
+    "Dicklesworthstone/eidetic_engine_cli",
+    "The-AI-Alliance/semiont",
+    "okf-memory/okf-agent-memory",
+    "mtrnix/metronix-memory",
+    "OWASP/www-project-agent-memory-guard",
+    "Ariestar/sivtr",
+    "openJiuwen-ai/agent-memory",
+    "CherryHQ/stella",
+    "markhuangai/dense-mem",
+    "petabridge/memorizer",
+    "Dicklesworthstone/cass_memory_system",
+    "vbcherepanov/total-agent-memory",
+    "alexahern0808/RecallWeave",
+    "zensation-ai/zenbrain",
+    "ZenSystemAI/Zengram",
+    "verivus-oss/llm-cli-gateway",
+    "sandeshnaroju/ai-skill-engine",
+    "yantrikos/yantrikdb",
+    "gefsikatsinelou/MetaSearchMCP",
+    "KayanoLiam/ContextX",
+    "smg-project/smg",
+    "aliang-one/aliangboard",
+    "teddytennant/wizard",
+    "preloop/preloop",
+    "github/gh-aw-mcpg",
+    "off-grid-ai/OGAD",
+    "smigolsmigol/llmkit",
+    "MikkoParkkola/mcp-gateway",
+    "TomLeeLive/openclaw-unity-plugin",
+    "soapbucket/sbproxy",
+    "agentrust-io/cmcp",
+    "gridctl/gridctl",
+    "ChronoAIProject/NyxID",
+    "Opendray/opendray",
+    "saivedant169/AegisFlow",
+    "thenaxon/somora_agent",
+    "engasnm111/lnwjud",
+    "dcc-mcp/dcc-mcp-core",
+    "unchase/antigravity-storage-manager",
+    "TheLunarCompany/lunar",
+    "jakub-k-slys/substack-gateway-oss",
+    "langgenius/mosoo",
+    "asashiki/mcp-switch",
+    "taichuy/1flowbase",
+    "redhat-et/ripwire"
   ],
   "rejected": [
     {
@@ -492,12 +585,27 @@
       "repo_url": "https://github.com/remorses/sigillo",
       "reason": "unclear licensing — README claims 'MIT licensed' but no LICENSE file exists in the repo (confirmed via 404s on LICENSE/LICENSE.md and GitHub API license:null); also self-hosting is tied specifically to Cloudflare Workers + D1, not a generic Docker self-host; filed as Worth Watching pending clarification",
       "date": "2026-09-07"
+    },
+    {
+      "repo_url": "https://github.com/MikkoParkkola/mcp-gateway",
+      "reason": "unclear/restrictive licensing — mixed per-file license; the runnable gateway core is PolyForm Noncommercial 1.0.0 (only files with an explicit MIT SPDX header are MIT), so commercial use requires a paid license despite the MIT badge in search results — same class of issue as DFKHelper/token-goat (2026-09-04)",
+      "date": "2026-09-09"
+    },
+    {
+      "repo_url": "agent-memory wave (okf-agent-memory, metronix-memory, sivtr, dense-mem, memorizer, cass_memory_system, total-agent-memory, RecallWeave, zenbrain, Zengram, inite-brain-service, and dozens more, all pushed within the same ~24h window)",
+      "reason": "duplicate/hype wave — dozens of near-identical 'persistent memory for AI coding agents' repos surfaced in one discovery pass with overlapping pitches (temporal knowledge graphs, MCP memory servers, spaced-repetition/consolidation framing); niche already covered by catalogued mex; inite-brain-service filed separately as Worth Watching for its bitemporal-graph architecture despite AGPL-3.0",
+      "date": "2026-09-09"
+    },
+    {
+      "repo_url": "MCP gateway wave (smg, sbproxy, llmkit, gridctl, NyxID, Opendray, lnwjud, aliangboard, 1flowbase, cmcp, and others, all pushed within the same ~24h window)",
+      "reason": "duplicate/hype wave — dozens of near-identical 'MCP/AI gateway with budgets and multi-provider routing' repos; niche already covered by catalogued anythingmcp and mcp-compressor without clear differentiation from any single new entry",
+      "date": "2026-09-09"
     }
   ],
   "known_releases": {
     "xberg-io/html-to-markdown": {
-      "version": "v3.12.0",
-      "date": "2026-08-31"
+      "version": "v3.12.2",
+      "date": "2026-09-07"
     },
     "wanxingai/LightAgent": {
       "version": "v0.10.1",
@@ -528,8 +636,8 @@
       "date": "2026-09-01"
     },
     "vercel-labs/skills": {
-      "version": "v1.5.24",
-      "date": "2026-09-06"
+      "version": "v1.5.25",
+      "date": "2026-09-08"
     },
     "lmnr-ai/lmnr": {
       "version": "v0.2.3",
@@ -540,8 +648,8 @@
       "date": "2026-07-03"
     },
     "sidequestjs/sidequest": {
-      "version": "v1.16.3",
-      "date": "2026-08-27"
+      "version": "v1.16.4",
+      "date": "2026-09-08"
     },
     "mongodb/kingfisher": {
       "version": "v2.1.0",
@@ -577,15 +685,15 @@
     },
     "monoscope-tech/monoscope": {
       "version": "v0.6.27",
-      "date": "2026-09-08"
+      "date": "2026-09-07"
     },
     "tsouza/cerberus": {
       "version": "v1.19.0",
       "date": "2026-08-30"
     },
     "alibaba/loongsuite-pilot": {
-      "version": "v1.7.1",
-      "date": "2026-09-03"
+      "version": "v1.8.0",
+      "date": "2026-09-09"
     },
     "HelpCode-ai/anythingmcp": {
       "version": "v0.4.4",
@@ -708,7 +816,7 @@
       "date": "2026-09-04"
     },
     "libredb/libredb-studio": {
-      "version": "0.14.1",
+      "version": "0.15.0",
       "date": "2026-09-08"
     },
     "quickdrawjs/quickdraw": {
@@ -758,6 +866,26 @@
     "QuackbackIO/quackback": {
       "version": "v0.13.2",
       "date": "2026-08-01"
+    },
+    "gotempsh/temps": {
+      "version": "0.1.36 (npm) / v0.1.0-nightly.20260908",
+      "date": "2026-08-30 (npm) / 2026-09-08 (nightly tag)"
+    },
+    "preloop/preloop": {
+      "version": "v0.15.0",
+      "date": "2026-08-20"
+    },
+    "edgehero/pi-dispatch": {
+      "version": "admin-v1.10.2",
+      "date": "2026-09-07"
+    },
+    "fagemx/edda": {
+      "version": "v0.6.0",
+      "date": "2026-09-09"
+    },
+    "redhat-et/ripwire": {
+      "version": "v0.5.0",
+      "date": "2026-09-08"
     }
   },
   "source_health": {
@@ -766,8 +894,8 @@
       "note": "working, but Show HN roundup queries again returned mostly generic/stale listicle content rather than specific new launches — low signal for this slot, GitHub search API + HN Algolia carried discovery"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-08",
-      "note": "working normally, used for README verification on all 8 deep-reviewed candidates"
+      "last_ok": "2026-09-09",
+      "note": "working normally, used for README and LICENSE verification on all 8 deep-reviewed candidates, including catching mixed per-file licensing on mcp-gateway and Commons Clause on amux that the GitHub API license field alone would have missed/misreported (NOASSERTION)"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -782,20 +910,20 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-08",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 100 requests used this run (discovery searches + 8-candidate deep review + 14-repo release spot-check)"
+      "last_ok": "2026-09-09",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 150 requests used this run (4 broad discovery searches + HN Algolia x2 + 8-candidate deep review incl. license-file fetches + 18-repo release spot-check)"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-08",
-      "note": "show_hn tag, no date filter this run — returned mostly toy/hobby Show HN posts, low signal for infra/dev-tooling terms, consistent with prior runs"
+      "last_ok": "2026-09-09",
+      "note": "search_by_date on 'MCP agent' and show_hn tag, 5-10 day windows — mostly low-point toy/hobby posts again, but surfaced ripwire (via a low-point Show HN post) which turned out to have 1780 real GitHub stars — worth keeping as a discovery source even when individual HN point counts are low"
     },
     "pypi.org": {
       "last_ok": "2026-09-05",
       "note": "working normally, used to cross-check haiku.rag and punt-quarry versions against GitHub tags."
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-06",
-      "note": "used to verify @quickdrawjs/core published version (0.2.0) against the GitHub release tag (v0.1.1) — found real drift, npm ahead of GitHub tags"
+      "last_ok": "2026-09-09",
+      "note": "used to verify @temps-sdk/cli real published version (0.1.36) against the stale GitHub releases/latest tag (v0.0.8) — confirmed real drift, npm/nightly tags ahead of GitHub release tags for this repo"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -860,7 +988,12 @@
     "mcpsnoop",
     "mcp-compressor",
     "trace-mcp",
-    "quackback-feedback-board"
+    "quackback-feedback-board",
+    "temps-selfhosted-platform",
+    "preloop-agent-control-plane",
+    "pi-dispatch",
+    "edda-agent-ledger",
+    "ripwire-code-graph"
   ],
-  "notes": "2026-09-08: Single run, slot 7 (experimental projects and hidden gems) per deterministic date formula (day_of_year 251 % 7 + 1 = 7). Catalogued 4 new, all MCP/agent-tooling and product-building adjacent: mcpsnoop (Go, MIT, 'Wireshark for MCP' transparent traffic inspector, USE NOW, 8.2), mcp-compressor (Atlassian Labs, Apache-2.0, MCP tool-schema token compressor with Python/TS/Rust SDKs, USE NOW, 8.0), trace-mcp (MIT, framework-aware codebase graph served via MCP for agent change-impact/decision-memory, PROTOTYPE, 7.4 — flagged for self-reported/self-benchmarked headline claims and effectively single-author status despite a polished, marketing-forward README), and Quackback (AGPL-3.0, self-hosted Canny/Productboard alternative with MCP server and embeddable widget, PROTOTYPE, 6.7 — AGPL flagged loudly per commercial-embedding risk). Filed three Worth Watching items: Skrun (skrun-dev/skrun, deploy-any-agent-skill-as-API runtime, MIT, 209 stars, but effectively solo — 2 human contributors, one with a single commit), OpenTaint (seqra/opentaint, AI-era taint analysis engine relevant to the MSSP/PTaaS secondary context, Apache-2.0, real multi-contributor team, but JS/TS/Python support is roadmap-only — currently Java/Kotlin/Spring), and QuickStack (biersoeckli/QuickStack, K3s+Longhorn-based self-hosted PaaS, GPL-3.0, 354 stars — genuinely different architecture than Coolify/Dokploy but same saturated niche as the PaaS wave rejected 2026-08-31). Filed mnemonic (danielmarbach/mnemonic, git-backed Markdown MCP memory server, Apache-2.0, 29 stars) as Small but High-Leverage Utility rather than a full catalog entry — narrower than already-catalogued agent-memory options (mex) but a clean, simple architecture worth knowing about. Spot-checked release tags on the 14 highest-scored existing catalog entries instead of a full 62-repo sweep (last full sweep 2026-09-06, skipped 2026-09-07 with the same reasoning) — found only small patch-version bumps on 4 repos (Gortex, Vercel Skills, Monoscope, LibreDB Studio), none meaningful per AGENT.md section 10; known_releases updated regardless to keep future diffing accurate. GitHub search sorted by 'updated' on high-traffic terms (mcp server, agent skill) was dominated by same-day template/tracker/directory repos with near-identical positioning (linny006's auto-updated leaderboard/tracker repos recurred again, as on prior runs) — the stars:N..M pushed:>DATE qualifier shape continues to produce better signal for self-hosted-alternative and CLI-utility searches specifically. HN Algolia show_hn query (no date filter this run) returned almost entirely toy/hobby single-point Show HN posts, no infra/dev-tooling signal — GitHub search API carried all of today's discovery. No 'Still Worth Trying' entries yet — oldest catalog entries are first_seen 2026-08-29, now 10 days old, still short of the 14-day threshold (starts applying ~2026-09-12)."
+  "notes": "2026-09-09: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 252 % 7 + 1 = 1). Catalogued 5 new, all directly in-slot: Temps (gotempsh/temps, Apache-2.0, self-hosted AI-native alternative to Vercel+Sentry+PostHog+Pingdom+Resend+E2B in one Rust binary, PROTOTYPE, 8.1 — flagged that GitHub's releases/latest tag is stale/misleading for this repo, real cadence is daily nightly tags + npm CLI), Preloop (preloop/preloop, Apache-2.0, MCP firewall + model gateway + policy/approval agent control plane, PROTOTYPE, 7.8 — relevant to the MSSP/PTaaS secondary context), pi-dispatch (edgehero/pi-dispatch, MIT, queue/spend-cap/sandbox operational layer for the 'pi' coding agent, PROTOTYPE, 7.6), Edda (fagemx/edda, dual MIT/Apache-2.0, tamper-evident local ledger for agent decisions/coordination plus cross-provider review workflow, PROTOTYPE, 7.2 — solo author but disciplined, dogfoods its own fleet tooling), and ripwire (redhat-et/ripwire, Apache-2.0, zero-dependency deterministic call-graph CLI+MCP server for coding agents, PROTOTYPE, 7.9 — flagged for marketing-heavy self-verified benchmark claims and effectively single-author status despite Red Hat org hosting and unusually fast star growth, same caution pattern as trace-mcp 2026-09-08). Filed mixpeek/amux (Commons Clause on top of MIT — bars reselling amux itself as a hosted service, though internal/embedded use is unrestricted; strong architecture, redundant enough with pi-dispatch/temps to skip full review this run) and inite-ai/inite-brain-service (bitemporal knowledge-graph agent memory, AGPL-3.0, genuinely different architecture from vector-based memory tools but landed in the middle of a massive same-day 'agent memory' duplicate wave) as Worth Watching. Rejected MikkoParkkola/mcp-gateway outright — its GitHub license badge reads MIT but the runnable gateway core is actually PolyForm Noncommercial per its own LICENSE file, same issue class as DFKHelper/token-goat (2026-09-04). Noted two large duplicate waves in state.rejected rather than itemizing every repo: a same-day 'persistent agent memory' wave (dozens of repos, near-identical pitches, GitHub search sorted by 'updated' returned ~30 of them in one query) and a same-day 'MCP/AI gateway with budgets' wave (similarly saturated). Deckflow/deckprobe (Apache-2.0, ffprobe-for-documents Rust CLI with agent skill + MCP server, 120 stars, only 5 weeks old) filed as Small but High-Leverage Utility rather than a full catalog entry — polished and well-integrated but too young/narrow for a full PROTOTYPE rating this run. Spot-checked release tags on the 14 highest-scored existing catalog entries (same partial-sweep approach as 2026-09-07/08, last full sweep 2026-09-06) — found only patch-level bumps across the board plus two minor-version jumps (loongsuite-pilot v1.7.1->v1.8.0, libredb-studio 0.13.7->0.15.0) that were checked against their changelogs and found to be IDE-integration polish and release-automation/CI fixes respectively, not meaningful per AGENT.md section 10 — known_releases updated regardless. GitHub search sorted by 'updated' on high-traffic terms ('mcp server', 'agent memory', 'mcp gateway', 'coding agent') again surfaced 20-30 same-day repos per query with heavy positioning overlap, consistent with prior runs — this remains a real signal-to-noise problem for broad terms specifically; narrower/qualified terms continue to work better. HN Algolia surfaced mostly toy/hobby Show HN posts by point count as usual, but one low-point post ('ripwire: ripgrep of AI context') led to a legitimate 1780-star repo — HN low-point posts are still worth a GitHub API cross-check even when the HN signal itself is weak. No 'Still Worth Trying' entries yet — oldest catalog entries are first_seen 2026-08-29, now 11 days old, still short of the 14-day threshold (starts applying ~2026-09-12)."
 }
