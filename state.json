@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-09",
-  "last_successful_run": "2026-09-09",
-  "run_count": 14,
-  "rotation_slot_last_used": 1,
+  "last_run": "2026-09-10",
+  "last_successful_run": "2026-09-10",
+  "run_count": 15,
+  "rotation_slot_last_used": 2,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -27,7 +27,8 @@
     "coding-agent-as-a-service dispatch/orchestration",
     "agent decision/coordination ledgers",
     "MCP/agent governance and firewalls",
-    "deterministic code-graph context for agents"
+    "deterministic code-graph context for agents",
+    "product infrastructure — webhooks, email gateway, object storage, product analytics"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -428,7 +429,82 @@
     "langgenius/mosoo",
     "asashiki/mcp-switch",
     "taichuy/1flowbase",
-    "redhat-et/ripwire"
+    "redhat-et/ripwire",
+    "craigmccaskill/posthorn",
+    "R44VC0RP/opensend",
+    "reloop-labs/reloop",
+    "savvyagents/larasend",
+    "Notifuse/notifuse",
+    "frain-dev/convoy",
+    "webhookx-io/webhookx",
+    "ahmadzakiyox/shoppepay-api-gateway",
+    "soulteary/owlmail",
+    "imtaqin/waxum",
+    "ashfromsky/acquiremock",
+    "mrifqidaffaaditya/WA-AKG",
+    "didil/inhooks",
+    "edaywalid/whook",
+    "MusahMusah/laravel-multipayment-gateways",
+    "bogkonstantin/android_income_sms_gateway_webhook",
+    "tbphp/gpt-load",
+    "doublewordai/control-layer",
+    "modelship-ai/modelship",
+    "rmyndharis/OpenWA",
+    "octelium/octelium",
+    "Opendray/opendray",
+    "voidmind-io/voidllm",
+    "youssefvdel/qwengate",
+    "sina2266/Gozar",
+    "aurorallm/aurora",
+    "rustfs/rustfs",
+    "rajsinghtech/garage-operator",
+    "mojatter/s2",
+    "tigrisdata/storage",
+    "supabase/storage",
+    "Kodiqa-Solutions/VaultS3",
+    "MaxIOFS/MaxIOFS",
+    "Alex1990/tiny-oss",
+    "wushilin/rust-s3-server",
+    "achtungsoftware/alarik",
+    "ruaan-deysel/vault",
+    "redstone-md/g3",
+    "crabbuild/silo",
+    "iflytek/skillhub",
+    "maltzsama/dagster-authkit",
+    "pete-builds/mcp-unifi",
+    "Rexezuge-CloudflareWorkers/AWS-AccessBridge",
+    "deltawi/deltallm",
+    "ThinkWatchProject/ThinkWatch",
+    "doable-me/Doable",
+    "GarrickLin/any_gateway",
+    "el1ght/aulite",
+    "allenarduino/formgrid",
+    "TooonyChen/AuthInbox",
+    "agentpit-io/hunter-community",
+    "juspay/hyperswitch",
+    "codelibs/fess",
+    "chattermate/chattermate.chat",
+    "Openpanel-dev/openpanel",
+    "openreplay/openreplay",
+    "AngusKit/AngusInsight",
+    "AngusKit/AngusKit",
+    "calimero-network/core",
+    "sqliteai/sqlite-sync",
+    "TopGunBuild/topgun",
+    "cubancodepath/actual-expo",
+    "xyron24/NexEditor",
+    "galelo04/collab-ide",
+    "muliswilliam/webhook-tester",
+    "ar27111994/webhook-debugger-logger",
+    "themrinalsinha/inhook",
+    "pgs401/webhook-debugger",
+    "progapandist/stripeek",
+    "jbowens/request-catcher",
+    "brancogao/webhook-debugger",
+    "knacklabs/gantry",
+    "neverinfamous/d1-manager",
+    "anousss007/laravel-vigilance",
+    "Git-Romer/pokecollector"
   ],
   "rejected": [
     {
@@ -600,6 +676,36 @@
       "repo_url": "MCP gateway wave (smg, sbproxy, llmkit, gridctl, NyxID, Opendray, lnwjud, aliangboard, 1flowbase, cmcp, and others, all pushed within the same ~24h window)",
       "reason": "duplicate/hype wave — dozens of near-identical 'MCP/AI gateway with budgets and multi-provider routing' repos; niche already covered by catalogued anythingmcp and mcp-compressor without clear differentiation from any single new entry",
       "date": "2026-09-09"
+    },
+    {
+      "repo_url": "R44VC0RP/opensend",
+      "reason": "too new to evaluate — created the day before review, 0 issues, no license file at time of review",
+      "date": "2026-09-10"
+    },
+    {
+      "repo_url": "Notifuse/notifuse",
+      "reason": "unclear/restrictive licensing — Business Source License 1.1 (BSL), not an OSI open-source license, same issue class as billabear (2026-08-29); self-hosted email-sending niche already better covered by posthorn (Apache-2.0)",
+      "date": "2026-09-10"
+    },
+    {
+      "repo_url": "savvyagents/larasend and self-hosted-SES-email wave (reloop-labs/reloop)",
+      "reason": "duplicate/inferior fit — same 'self-hosted transactional email via AWS SES' pitch as posthorn (catalogued today) but narrower (Laravel-specific for larasend) or thinner docs (reloop); posthorn's provider-agnostic three-ingress design and docs site were clearly more complete",
+      "date": "2026-09-10"
+    },
+    {
+      "repo_url": "tigrisdata/storage",
+      "reason": "not actually self-hostable — repo is only client SDKs (JS/TS, CLI, React hooks) for Tigris's proprietary hosted object-storage service, not installable software itself",
+      "date": "2026-09-10"
+    },
+    {
+      "repo_url": "AI/LLM gateway wave (gpt-load, control-layer, modelship, voidllm, qwengate, Gozar, aurora, and others surfaced under an 'api gateway' search)",
+      "reason": "duplicate/hype wave — dozens of near-identical 'self-hosted multi-provider LLM/AI gateway' repos; niche already covered by catalogued anythingmcp, mcp-compressor, Preloop without clear differentiation from any single new entry today",
+      "date": "2026-09-10"
+    },
+    {
+      "repo_url": "webhook-debugging/inspection wave (webhook-tester, webhook-debugger-logger, inhook, webhook-debugger x2, stripeek, request-catcher, brancogao/webhook-debugger)",
+      "reason": "duplicate/immature — saturated 'capture and replay webhooks' niche, all under 150 stars, no standout maturity; prior entry in this niche (viewhook) was found archived/abandoned on 2026-08-29, so treating the whole niche with caution until one entry proves durable",
+      "date": "2026-09-10"
     }
   ],
   "known_releases": {
@@ -886,16 +992,36 @@
     "redhat-et/ripwire": {
       "version": "v0.5.0",
       "date": "2026-09-08"
+    },
+    "craigmccaskill/posthorn": {
+      "version": "v1.2.0",
+      "date": "2026-07-05"
+    },
+    "rustfs/rustfs": {
+      "version": "1.0.0-rc.5-preview.3 (git tag; no GitHub Release published)",
+      "date": "2026-04-28"
+    },
+    "Openpanel-dev/openpanel": {
+      "version": "unclear — GitHub tags are Docker image labels, not semver releases",
+      "date": "unclear"
+    },
+    "frain-dev/convoy": {
+      "version": "v26.7.6",
+      "date": "2026-08-27"
+    },
+    "sqliteai/sqlite-sync": {
+      "version": "unclear-check-releases-page",
+      "date": "unclear"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-09-04",
-      "note": "working, but Show HN roundup queries again returned mostly generic/stale listicle content rather than specific new launches — low signal for this slot, GitHub search API + HN Algolia carried discovery"
+      "last_ok": "2026-09-10",
+      "note": "generic Show HN query returned mostly stale/generic listicle content again, no specific new launches surfaced — GitHub search API carried all discovery this run, consistent with recent runs"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-09",
-      "note": "working normally, used for README and LICENSE verification on all 8 deep-reviewed candidates, including catching mixed per-file licensing on mcp-gateway and Commons Clause on amux that the GitHub API license field alone would have missed/misreported (NOASSERTION)"
+      "last_ok": "2026-09-10",
+      "note": "used to verify LICENSE files directly for convoy, sqlite-sync, notifuse, reloop, openreplay, openpanel, rustfs — caught three cases (convoy, sqlite-sync, notifuse) where the GitHub API's license field (NOASSERTION or absent) hid a real non-OSI license (Elastic License 2.0 x2, BSL 1.1) that would have been missed without reading the raw file"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -910,12 +1036,12 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-09",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 150 requests used this run (4 broad discovery searches + HN Algolia x2 + 8-candidate deep review incl. license-file fetches + 18-repo release spot-check)"
+      "last_ok": "2026-09-10",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, well under 200 requests used this run (9 broad discovery searches + 14-candidate metadata batch + license-file raw fetches for 5 deep-reviewed candidates)"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-09",
-      "note": "search_by_date on 'MCP agent' and show_hn tag, 5-10 day windows — mostly low-point toy/hobby posts again, but surfaced ripwire (via a low-point Show HN post) which turned out to have 1780 real GitHub stars — worth keeping as a discovery source even when individual HN point counts are low"
+      "last_ok": "2026-09-10",
+      "note": "search_by_date queries for 'self-hosted' and 'API gateway' show_hn tags over 7-10 day windows returned zero hits both times — worth re-checking query params next run, GitHub search carried discovery entirely"
     },
     "pypi.org": {
       "last_ok": "2026-09-05",
@@ -993,7 +1119,12 @@
     "preloop-agent-control-plane",
     "pi-dispatch",
     "edda-agent-ledger",
-    "ripwire-code-graph"
+    "ripwire-code-graph",
+    "posthorn-email-gateway",
+    "rustfs-object-storage",
+    "openpanel-product-analytics",
+    "convoy-webhooks-gateway",
+    "sqlite-sync-crdt"
   ],
-  "notes": "2026-09-09: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 252 % 7 + 1 = 1). Catalogued 5 new, all directly in-slot: Temps (gotempsh/temps, Apache-2.0, self-hosted AI-native alternative to Vercel+Sentry+PostHog+Pingdom+Resend+E2B in one Rust binary, PROTOTYPE, 8.1 — flagged that GitHub's releases/latest tag is stale/misleading for this repo, real cadence is daily nightly tags + npm CLI), Preloop (preloop/preloop, Apache-2.0, MCP firewall + model gateway + policy/approval agent control plane, PROTOTYPE, 7.8 — relevant to the MSSP/PTaaS secondary context), pi-dispatch (edgehero/pi-dispatch, MIT, queue/spend-cap/sandbox operational layer for the 'pi' coding agent, PROTOTYPE, 7.6), Edda (fagemx/edda, dual MIT/Apache-2.0, tamper-evident local ledger for agent decisions/coordination plus cross-provider review workflow, PROTOTYPE, 7.2 — solo author but disciplined, dogfoods its own fleet tooling), and ripwire (redhat-et/ripwire, Apache-2.0, zero-dependency deterministic call-graph CLI+MCP server for coding agents, PROTOTYPE, 7.9 — flagged for marketing-heavy self-verified benchmark claims and effectively single-author status despite Red Hat org hosting and unusually fast star growth, same caution pattern as trace-mcp 2026-09-08). Filed mixpeek/amux (Commons Clause on top of MIT — bars reselling amux itself as a hosted service, though internal/embedded use is unrestricted; strong architecture, redundant enough with pi-dispatch/temps to skip full review this run) and inite-ai/inite-brain-service (bitemporal knowledge-graph agent memory, AGPL-3.0, genuinely different architecture from vector-based memory tools but landed in the middle of a massive same-day 'agent memory' duplicate wave) as Worth Watching. Rejected MikkoParkkola/mcp-gateway outright — its GitHub license badge reads MIT but the runnable gateway core is actually PolyForm Noncommercial per its own LICENSE file, same issue class as DFKHelper/token-goat (2026-09-04). Noted two large duplicate waves in state.rejected rather than itemizing every repo: a same-day 'persistent agent memory' wave (dozens of repos, near-identical pitches, GitHub search sorted by 'updated' returned ~30 of them in one query) and a same-day 'MCP/AI gateway with budgets' wave (similarly saturated). Deckflow/deckprobe (Apache-2.0, ffprobe-for-documents Rust CLI with agent skill + MCP server, 120 stars, only 5 weeks old) filed as Small but High-Leverage Utility rather than a full catalog entry — polished and well-integrated but too young/narrow for a full PROTOTYPE rating this run. Spot-checked release tags on the 14 highest-scored existing catalog entries (same partial-sweep approach as 2026-09-07/08, last full sweep 2026-09-06) — found only patch-level bumps across the board plus two minor-version jumps (loongsuite-pilot v1.7.1->v1.8.0, libredb-studio 0.13.7->0.15.0) that were checked against their changelogs and found to be IDE-integration polish and release-automation/CI fixes respectively, not meaningful per AGENT.md section 10 — known_releases updated regardless. GitHub search sorted by 'updated' on high-traffic terms ('mcp server', 'agent memory', 'mcp gateway', 'coding agent') again surfaced 20-30 same-day repos per query with heavy positioning overlap, consistent with prior runs — this remains a real signal-to-noise problem for broad terms specifically; narrower/qualified terms continue to work better. HN Algolia surfaced mostly toy/hobby Show HN posts by point count as usual, but one low-point post ('ripwire: ripgrep of AI context') led to a legitimate 1780-star repo — HN low-point posts are still worth a GitHub API cross-check even when the HN signal itself is weak. No 'Still Worth Trying' entries yet — oldest catalog entries are first_seen 2026-08-29, now 11 days old, still short of the 14-day threshold (starts applying ~2026-09-12)."
+  "notes": "2026-09-10: Single run, slot 2 (product infrastructure, APIs, backend components) per deterministic date formula (day_of_year 253 % 7 + 1 = 2). Catalogued 5 new, all in-slot: Posthorn (craigmccaskill/posthorn, Apache-2.0, single-binary unified outbound-mail gateway for self-hosted apps — three ingress shapes into five provider transports, PROTOTYPE, 8.2 — the strongest find this run: narrow scope, unusually disciplined docs including an explicit 'what it is not' section), RustFS (rustfs/rustfs, Apache-2.0, S3-compatible distributed object storage explicitly positioned as the permissively-licensed MinIO alternative, PROTOTYPE, 7.9 — 31,915 stars but still pre-1.0, release-candidate tags only, tag history lags active development), Openpanel (Openpanel-dev/openpanel, AGPL-3.0 flagged loudly, mature self-hosted Mixpanel alternative, PROTOTYPE, 7.6), Convoy (frain-dev/convoy, Elastic License 2.0 flagged loudly — confirmed via raw LICENSE file after the GitHub API license field returned NOASSERTION, mature webhooks-delivery gateway est. 2021, PROTOTYPE, 7.4), and SQLite Sync (sqliteai/sqlite-sync, Elastic License 2.0 modified flagged loudly, CRDT-based offline-first SQLite sync extension with a Block-Level LWW mode aimed at multi-agent markdown editing, STUDY, 7.1 — genuinely usable against self-hosted Postgres/Supabase without the maker's paid cloud product, but is an explicit open-core funnel toward it). Notable pattern this run: three of five deep-reviewed candidates (Convoy, SQLite Sync, and rejected Notifuse) turned out to carry non-OSI source-available licenses (Elastic License 2.0 x2, BSL 1.1) that the GitHub API's license field either mis-reported as NOASSERTION or omitted — raw LICENSE-file verification via raw.githubusercontent.com caught all three; continue treating the API license field as a starting point, not a final answer, especially for gateway/infrastructure repos. Rejected Notifuse (BSL 1.1, same issue class as billabear 2026-08-29) and tigrisdata/storage (client SDKs only, not self-hostable — Tigris itself is a proprietary hosted service). Identified and skipped three same-day duplicate waves without itemizing every repo: a 'self-hosted email sending via AWS SES' wave (opensend, reloop, larasend — posthorn's provider-agnostic design was clearly the strongest of the group), an 'AI/LLM multi-provider gateway' wave (gpt-load, control-layer, modelship, voidllm, qwengate, Gozar, aurora — niche already saturated in this catalog via anythingmcp/mcp-compressor/Preloop), and a 'webhook capture/debug/replay' wave (webhook-tester, webhook-debugger-logger, inhook, webhook-debugger x2, stripeek, request-catcher — all sub-150-star, no standout maturity, and this niche already has a cautionary precedent with the archived viewhook from 2026-08-29). webhookx-io/webhookx (Apache-2.0 webhook gateway, cleaner license than Convoy but far less mature) and Kodiqa-Solutions/VaultS3 (AGPL-3.0 lightweight S3-alt, 1,598 stars) filed as Worth Watching. HN Algolia returned zero hits on both 'self-hosted' and 'API gateway' show_hn queries this run despite normally surfacing at least a few low-signal posts — worth re-checking query construction next run rather than assuming the source is exhausted; GitHub's search API carried 100% of discovery this run and remains reliable. No 'Still Worth Trying' entries yet — oldest catalog entries are first_seen 2026-08-29, now 12 days old, the 14-day threshold starts applying around 2026-09-12."
 }

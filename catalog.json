@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -4190,6 +4190,295 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 1780 stars, 93 forks, pushed_at 2026-09-09, archived:false, 13 open issues, created 2026-07-29.",
+      "acted_on": false
+    },
+    {
+      "name": "Posthorn",
+      "slug": "posthorn-email-gateway",
+      "repo_url": "https://github.com/craigmccaskill/posthorn",
+      "website": "https://posthorn.dev",
+      "description": "Single Go binary/Docker container acting as a unified outbound-mail gateway between self-hosted apps and a transactional mail provider (Postmark, Resend, Mailgun, AWS SES, or outbound-SMTP relay) via three ingress shapes: HTTP form, HTTP API, and SMTP listener.",
+      "category": [
+        "product building blocks",
+        "notifications / email",
+        "backend components"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 — no restrictions identified on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "Docker (single container)",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "HTTP API",
+        "HTTP form endpoint",
+        "SMTP listener"
+      ],
+      "use_cases": [
+        "Front contact forms and signup forms with the HTTP form ingress (honeypot, Origin/Referer check, rate limiting built in)",
+        "Route password-reset/alert emails from cron jobs or serverless workers through the HTTP API ingress with bearer-token auth and idempotent retries",
+        "Sit in front of SMTP-only self-hosted apps (Gitea, Mastodon, NextCloud, Authentik) so they can send through a modern provider",
+        "Centralize provider API keys used across several small self-hosted or client projects"
+      ],
+      "product_opportunities": [
+        "Reusable internal mail gateway behind an admin-portal SaaS or any multi-tenant product needing outbound transactional mail without per-service integration work"
+      ],
+      "alternatives": [
+        "Listmonk (marketing/newsletter platform, different scope)",
+        "Postal / Hyvor Relay (run own outbound SMTP infrastructure rather than relaying through an existing provider)",
+        "reloop-labs/reloop, R44VC0RP/opensend, savvyagents/larasend (same-wave self-hosted email-sending alternatives, thinner docs / narrower scope / too new)"
+      ],
+      "why_it_matters": "Collapses duplicated per-app provider integration code (API keys, retry logic, rate limiting) into one shared, config-driven service — a small but recurring build cost across every self-hosted project.",
+      "why_not_build_it_myself": "The value is in the three-ingress abstraction plus honest scoping (explicit 'what it is not' documentation) and a working recipe library for real stacks — a thin wrapper would take real iteration to reach the same polish.",
+      "risks": [
+        "Small single/small-team project (211 stars) — bus-factor risk for anything production-critical",
+        "No mailbox/IMAP or marketing-list features by design; stays out of scope deliberately",
+        "Deliverability still depends entirely on the upstream provider chosen"
+      ],
+      "first_seen": "2026-09-10",
+      "last_reviewed": "2026-09-10",
+      "last_meaningful_update": "2026-09-10",
+      "current_version": "v1.2.0",
+      "latest_release_date": "2026-07-05",
+      "source_links": [
+        "https://github.com/craigmccaskill/posthorn",
+        "https://posthorn.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 211 stars, archived:false, pushed_at 2026-09-10, created 2026-04-27, 39 open issues. README read directly via raw.githubusercontent.com.",
+      "acted_on": false
+    },
+    {
+      "name": "RustFS",
+      "slug": "rustfs-object-storage",
+      "repo_url": "https://github.com/rustfs/rustfs",
+      "website": "https://rustfs.com",
+      "description": "Distributed, S3-API-compatible object storage system written in Rust, positioned as a MinIO alternative shipping under Apache-2.0 rather than MinIO's AGPL-3.0, with versioning, object lock/WORM, SSE, KMS, bucket replication, and OpenStack Swift/Keystone compatibility.",
+      "category": [
+        "infrastructure",
+        "object storage",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, confirmed via repository LICENSE file. README explicitly frames Apache-2.0 as a deliberate differentiator from MinIO's AGPL-3.0. No commercial-use, self-hosting, or embedding restrictions identified.",
+      "deployment": [
+        "Docker",
+        "self-hosted",
+        "distributed multi-node"
+      ],
+      "interfaces": [
+        "S3-compatible REST API",
+        "OpenStack Swift API"
+      ],
+      "use_cases": [
+        "Local/self-hosted S3-compatible storage for dev, CI, and staging to avoid AWS costs",
+        "Backing store for self-hosted apps expecting an S3 API (backups, artifact storage, user uploads)",
+        "Drop-in swap for MinIO where AGPL licensing blocks commercial redistribution"
+      ],
+      "product_opportunities": [
+        "Storage layer for a self-hosted or on-prem deployment of a commercial product without AGPL's network-copyleft terms attaching to the product"
+      ],
+      "alternatives": [
+        "MinIO (incumbent, AGPL-3.0 — already assumed known, license is the whole differentiator here)",
+        "Kodiqa-Solutions/VaultS3 (lighter-weight, 1,598 stars, but also AGPL-3.0)",
+        "Garage (Rust-based, distributed, different design center — not reviewed in depth)"
+      ],
+      "why_it_matters": "A genuinely permissively-licensed, feature-complete S3-compatible alternative to MinIO directly matters for anything embedded in or shipped alongside a commercial product, where AGPL is a real blocker.",
+      "why_not_build_it_myself": "A distributed, erasure-coded, S3-API-compatible storage system with healing/replication is a multi-year systems project, not something to reimplement.",
+      "risks": [
+        "Still pre-1.0 — latest tag is 1.0.0-rc.5-preview.3 (2026-04-28), release/tag history lags the very active commit history",
+        "Very fast star growth (31,915 stars) relative to project age — treat as attention, not a stability signal",
+        "Distributed-mode operational maturity (healing, pool expansion under real load) unverified from documentation alone"
+      ],
+      "first_seen": "2026-09-10",
+      "last_reviewed": "2026-09-10",
+      "last_meaningful_update": "2026-09-10",
+      "current_version": "1.0.0-rc.5-preview.3",
+      "latest_release_date": "2026-04-28",
+      "source_links": [
+        "https://github.com/rustfs/rustfs",
+        "https://rustfs.com",
+        "https://docs.rustfs.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 31915 stars, archived:false, pushed_at 2026-09-10, created 2023-11-23, 25 open issues. No GitHub Releases object exists; version taken from latest git tag.",
+      "acted_on": false
+    },
+    {
+      "name": "Openpanel",
+      "slug": "openpanel-product-analytics",
+      "repo_url": "https://github.com/Openpanel-dev/openpanel",
+      "website": "",
+      "description": "Self-hostable, open-source web and product analytics platform positioned as a Mixpanel alternative — event tracking, user-behavior analytics, and dashboards.",
+      "category": [
+        "self-hosted SaaS alternative",
+        "product analytics",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0, confirmed via repository LICENSE.md (standard GNU AGPLv3 text, no dual-license carve-out found). Self-hosting internally is unrestricted. Embedding into a commercial closed-source hosted product would trigger AGPL's network-copyleft obligations — needs explicit legal review before that use.",
+      "deployment": [
+        "Docker (multi-service: dashboard, ingestion API, worker, database)",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "REST/event ingestion API",
+        "web dashboard"
+      ],
+      "use_cases": [
+        "Self-host product analytics for an admin-portal SaaS or PTaaS tooling instead of paying a hosted analytics vendor",
+        "Instrument a side project or early-stage product with event tracking without per-event billing",
+        "Internal feature-adoption dashboards"
+      ],
+      "product_opportunities": [
+        "Potential embedded/white-labeled analytics layer inside a commercial product, subject to AGPL compliance review"
+      ],
+      "alternatives": [
+        "Mixpanel, Amplitude, PostHog (not independently reviewed this run)",
+        "openreplay/openreplay (12,824 stars, session replay + analytics, mixed/fragmented license, already well-established in this space)"
+      ],
+      "why_it_matters": "A mature, actively developed self-hosted Mixpanel alternative directly reduces a recurring SaaS line item, with data staying under the operator's control — relevant for a security-focused product.",
+      "why_not_build_it_myself": "Event ingestion, aggregation, and dashboarding at analytics scale is substantial infrastructure, not a quick build.",
+      "risks": [
+        "AGPL-3.0 is the primary adoption constraint for anything beyond pure internal use",
+        "Multi-service deployment raises operational burden versus single-binary tools catalogued elsewhere"
+      ],
+      "first_seen": "2026-09-10",
+      "last_reviewed": "2026-09-10",
+      "last_meaningful_update": "2026-09-10",
+      "current_version": "unclear — GitHub tags are Docker image labels, not semver releases",
+      "latest_release_date": "unclear",
+      "source_links": [
+        "https://github.com/Openpanel-dev/openpanel"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: license AGPL-3.0 confirmed via LICENSE.md text, 6909 stars, archived:false, pushed_at 2026-09-04, created 2024-02-29, 47 open issues.",
+      "acted_on": false
+    },
+    {
+      "name": "Convoy",
+      "slug": "convoy-webhooks-gateway",
+      "repo_url": "https://github.com/frain-dev/convoy",
+      "website": "",
+      "description": "Cloud-native webhooks gateway: accepts events from a backend and reliably delivers them to subscriber webhook URLs, handling retries, fanout, and delivery observability.",
+      "category": [
+        "product building blocks",
+        "webhooks",
+        "backend components"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "Elastic License 2.0",
+      "commercial_use_notes": "Elastic License 2.0 — NOT an OSI-approved open-source license, confirmed via repository LICENSE file. Explicitly prohibits providing the software to third parties as a hosted/managed service exposing a substantial set of its functionality. Self-hosting for internal use or embedding as an internal component (without giving customers direct access to Convoy's own feature surface) is permitted, but get legal review before any customer-facing deployment — directly relevant given the MSSP SaaS context.",
+      "deployment": [
+        "Docker (requires Postgres + Redis)",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "REST API",
+        "web dashboard",
+        "CLI"
+      ],
+      "use_cases": [
+        "Deliver 'notify customers when X happens' webhook events reliably instead of a custom retry queue",
+        "Give SaaS customers a self-service webhook-subscription UI via Convoy's dashboard",
+        "Fan events out to multiple internal services during a migration without coupling producer to consumers"
+      ],
+      "product_opportunities": [
+        "Retry/fanout/delivery-status pattern maps directly onto 'offer customers webhooks' as a sellable SaaS feature, if used in compliance with the license"
+      ],
+      "alternatives": [
+        "webhookx-io/webhookx (Apache-2.0, cleaner license but far less mature, 297 stars — Worth Watching)",
+        "didil/inhooks (incoming webhooks only, different problem)",
+        "building retry/fanout on top of an already-catalogued job queue (Sidequest, Liteque)"
+      ],
+      "why_it_matters": "Durable retry-with-backoff and fanout for outbound webhook delivery is easy to under-scope when built in-house (idempotency, retry storms, dead-letter handling); Convoy is a proven, multi-year-old implementation of exactly that.",
+      "why_not_build_it_myself": "Reliable webhook delivery with proper retry/backoff/idempotency is a multi-week project that's commonly under-built when done ad hoc.",
+      "risks": [
+        "Elastic License 2.0 blocks reselling Convoy itself as a hosted multi-tenant service — see commercial_use_notes",
+        "Requires Postgres + Redis, more operational surface than a single-binary tool"
+      ],
+      "first_seen": "2026-09-10",
+      "last_reviewed": "2026-09-10",
+      "last_meaningful_update": "2026-09-10",
+      "current_version": "v26.7.6",
+      "latest_release_date": "2026-08-27",
+      "source_links": [
+        "https://github.com/frain-dev/convoy"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: 2862 stars, archived:false, pushed_at 2026-09-09, created 2021-04-17, 43 open issues. License is Elastic License 2.0 per repository LICENSE file (GitHub API license field returned NOASSERTION, so the raw file was checked directly).",
+      "acted_on": false
+    },
+    {
+      "name": "SQLite Sync",
+      "slug": "sqlite-sync-crdt",
+      "repo_url": "https://github.com/sqliteai/sqlite-sync",
+      "website": "https://sqlite.ai",
+      "description": "Multi-platform SQLite extension providing CRDT-based, conflict-free offline-first sync to SQLite Cloud, self-hosted PostgreSQL, or self-hosted Supabase, with a Block-Level LWW mode aimed at concurrent markdown editing (including by multiple AI agents).",
+      "category": [
+        "data infrastructure",
+        "AI agent infrastructure",
+        "offline-first sync"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Elastic License 2.0 (modified)",
+      "commercial_use_notes": "Elastic License 2.0 modified — NOT an OSI-approved open-source license, confirmed via repository LICENSE.md. Same restriction class as Convoy (also reviewed this run): source-available, offering it as a competing hosted/managed service is restricted. Also an explicit open-core funnel toward the maker's paid SQLite Cloud product, though the self-hosted Postgres/Supabase sync path is real and documented.",
+      "deployment": [
+        "SQLite extension (loadable in any app already using SQLite)",
+        "self-hosted sync target via PostgreSQL or Supabase"
+      ],
+      "interfaces": [
+        "SQLite extension API (single function call)"
+      ],
+      "use_cases": [
+        "Sync a local SQLite database used by a desktop/edge tool to self-hosted Postgres without writing sync logic",
+        "Give multiple AI-agent instances a shared, conflict-free local database (memory, task state) without explicit coordination",
+        "Block-Level LWW mode: let multiple agents edit different sections of the same markdown file and merge cleanly"
+      ],
+      "product_opportunities": [
+        "Sync engine for an offline-capable desktop/mobile companion app without building a bespoke real-time sync backend"
+      ],
+      "alternatives": [
+        "Yjs / Automerge (general-purpose CRDT libraries, not SQLite-specific)",
+        "mex (already-catalogued living-codebase wiki, different approach — memory store vs. sync engine)",
+        "the broader 'agent memory' wave rejected 2026-09-09 — sqlite-sync's sync-engine architecture is distinct from those memory-store tools"
+      ],
+      "why_it_matters": "A drop-in CRDT sync extension is materially less work than building a bespoke sync protocol, and the Block-Level LWW mode is directly relevant to multi-agent workflows writing to shared files.",
+      "why_not_build_it_myself": "CRDT-based conflict-free merge logic is a well-known hard problem; a purpose-built, tested implementation is worth more than a bespoke one for this narrow use case.",
+      "risks": [
+        "Elastic License 2.0 restricts hosting it as a competing service",
+        "Backed by a company selling a paid cloud product in the same space — verify the self-hosted path isn't artificially limited",
+        "Young project (created 2025-05-13) relative to most infrastructure in this catalog"
+      ],
+      "first_seen": "2026-09-10",
+      "last_reviewed": "2026-09-10",
+      "last_meaningful_update": "2026-09-10",
+      "current_version": "unclear — check releases page",
+      "latest_release_date": "unclear",
+      "source_links": [
+        "https://github.com/sqliteai/sqlite-sync",
+        "https://sqlite.ai"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: 558 stars, archived:false, pushed_at 2026-09-07, created 2025-05-13, 2 open issues. License confirmed via LICENSE.md raw file (Elastic License 2.0, modified).",
       "acted_on": false
     }
   ]
