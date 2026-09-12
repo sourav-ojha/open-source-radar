@@ -69,3 +69,11 @@ Python service alongside a primarily Node stack.
 ### 2026-09-05
 Discovered via GitHub search (rotation slot 4: data, search, documents, RAG). Catalogued
 at PROTOTYPE, 8.3/10.
+
+### 2026-09-12
+Meaningful update, 0.82.1 → 0.85.0: MCP server made read-only and multi-database (named
+databases replace the single `HAIKU_RAG_DB`/`DB_PATH` config), `ask_question`/`analyze`
+replaced by a unified `execute_code` capability, and the project now ships a Claude Code
+and Codex plugin. Improves multi-tenant safety for MCP exposure and adds coding-agent
+ecosystem integration. Recommendation unchanged — PROTOTYPE, 8.3/10 — still worth
+prototyping, now with a safer MCP surface.

@@ -1,6 +1,6 @@
 # Catalog
 
-_76 projects tracked. Last updated 2026-09-11._
+_81 projects tracked. Last updated 2026-09-12._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -29,11 +29,13 @@ _76 projects tracked. Last updated 2026-09-11._
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
 | [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
+| [Dedoc](https://github.com/ispras/dedoc) | USE NOW | 8.0/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | low | 2026-09-12 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-04 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
 | [ripwire](https://github.com/redhat-et/ripwire) | PROTOTYPE | 7.9/10 | AI agent infrastructure, code intelligence / context engineering, developer productivity | Apache-2.0 | low | 2026-09-09 |
 | [RustFS](https://github.com/rustfs/rustfs) | PROTOTYPE | 7.9/10 | infrastructure, object storage, product building blocks | Apache-2.0 | medium | 2026-09-10 |
+| [GEO Optimizer (GeoReady)](https://github.com/Auriti-Labs/geo-optimizer-skill) | USE NOW | 7.9/10 | developer productivity, product building blocks, small utility | MIT | low | 2026-09-12 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -43,6 +45,7 @@ _76 projects tracked. Last updated 2026-09-11._
 | [Quarry (punt-quarry)](https://github.com/punt-labs/quarry) | USE NOW | 7.8/10 | AI agent infrastructure, developer productivity, RAG infrastructure, small utility | MIT | medium | 2026-09-05 |
 | [OneUptime](https://github.com/OneUptime/oneuptime) | PROTOTYPE | 7.8/10 | infrastructure, observability, self-hosted SaaS alternative | Apache-2.0 | medium | 2026-09-06 |
 | [Preloop](https://github.com/preloop/preloop) | PROTOTYPE | 7.8/10 | AI agent infrastructure, security / governance, MCP infrastructure | Apache-2.0 | medium | 2026-09-09 |
+| [LynseDB](https://github.com/BirchKwok/lynsedb) | PROTOTYPE | 7.8/10 | product building blocks, RAG infrastructure, developer productivity | Apache-2.0 | low | 2026-09-12 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [notifkit](https://github.com/devkitshq/notifkit) | PROTOTYPE | 7.6/10 | product infrastructure, notifications, backend components | MIT | medium | 2026-08-30 |
@@ -63,9 +66,11 @@ _76 projects tracked. Last updated 2026-09-11._
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
 | [trace-mcp](https://github.com/nikolai-vysotskyi/trace-mcp) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, developer productivity, code intelligence, context engineering | MIT | low | 2026-09-08 |
 | [Convoy](https://github.com/frain-dev/convoy) | PROTOTYPE | 7.4/10 | product building blocks, webhooks, backend components | Elastic License 2.0 | medium | 2026-09-10 |
+| [RushDB](https://github.com/rush-db/rushdb) | PROTOTYPE | 7.4/10 | product building blocks, AI & agent infrastructure, RAG infrastructure | Split — platform/core and platform/dashboard under Elastic License 2.0 (source-available, not OSI-approved); docs, website, and the JavaScript SDK under Apache-2.0 | medium | 2026-09-12 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-09-02 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |
+| [Docling Studio](https://github.com/scub-france/docling-Studio) | PROTOTYPE | 7.3/10 | document processing, RAG infrastructure, developer productivity | MIT | medium | 2026-09-12 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
