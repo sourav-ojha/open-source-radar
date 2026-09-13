@@ -79,3 +79,6 @@
 {"slug": "geo-optimizer-cli", "repo_url": "https://github.com/Auriti-Labs/geo-optimizer-skill", "name": "GEO Optimizer (GeoReady)", "status": "USE NOW", "score": 7.9, "last_reviewed": "2026-09-12", "current_version": "4.17.1", "aliases": []}
 {"slug": "rushdb-graph-vector-db", "repo_url": "https://github.com/rush-db/rushdb", "name": "RushDB", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-09-12", "current_version": "@rushdb/mcp-server@2.13.0", "aliases": []}
 {"slug": "docling-studio", "repo_url": "https://github.com/scub-france/docling-Studio", "name": "Docling Studio", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-09-12", "current_version": "v0.7.1", "aliases": []}
+{"slug": "relaticle-crm", "repo_url": "https://github.com/relaticle/relaticle", "name": "Relaticle", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-09-13", "current_version": "v3.5.8", "aliases": []}
+{"slug": "itsaplan-project-management", "repo_url": "https://github.com/croffasia/itsaplan", "name": "It's a Plan (itsaplan)", "status": "PROTOTYPE", "score": 7.7, "last_reviewed": "2026-09-13", "current_version": "v0.17.0", "aliases": []}
+{"slug": "meteroid-billing", "repo_url": "https://github.com/meteroid-oss/meteroid", "name": "Meteroid", "status": "STUDY", "score": 7.2, "last_reviewed": "2026-09-13", "current_version": "v1.0.0-rc7", "aliases": []}
