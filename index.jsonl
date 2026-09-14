@@ -82,3 +82,6 @@
 {"slug": "relaticle-crm", "repo_url": "https://github.com/relaticle/relaticle", "name": "Relaticle", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-09-13", "current_version": "v3.5.8", "aliases": []}
 {"slug": "itsaplan-project-management", "repo_url": "https://github.com/croffasia/itsaplan", "name": "It's a Plan (itsaplan)", "status": "PROTOTYPE", "score": 7.7, "last_reviewed": "2026-09-13", "current_version": "v0.17.0", "aliases": []}
 {"slug": "meteroid-billing", "repo_url": "https://github.com/meteroid-oss/meteroid", "name": "Meteroid", "status": "STUDY", "score": 7.2, "last_reviewed": "2026-09-13", "current_version": "v1.0.0-rc7", "aliases": []}
+{"slug": "bugsink-error-tracking", "repo_url": "https://github.com/bugsink/bugsink", "name": "Bugsink", "status": "USE NOW", "score": 8.1, "last_reviewed": "2026-09-14", "current_version": "2.5.1", "aliases": []}
+{"slug": "maintenant-infra-monitoring", "repo_url": "https://github.com/kOlapsis/maintenant", "name": "maintenant", "status": "USE NOW", "score": 8.0, "last_reviewed": "2026-09-14", "current_version": "v1.5.0", "aliases": []}
+{"slug": "pane-agent-manager", "repo_url": "https://github.com/dcouple/Pane", "name": "Pane", "status": "PROTOTYPE", "score": 8.0, "last_reviewed": "2026-09-14", "current_version": "v2.4.105", "aliases": []}
