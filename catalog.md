@@ -1,6 +1,6 @@
 # Catalog
 
-_87 projects tracked. Last updated 2026-09-14._
+_93 projects tracked. Last updated 2026-09-15._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -60,6 +60,7 @@ _87 projects tracked. Last updated 2026-09-14._
 | [pi-dispatch](https://github.com/edgehero/pi-dispatch) | PROTOTYPE | 7.6/10 | AI agent infrastructure, automation / job orchestration, developer productivity | MIT | medium | 2026-09-09 |
 | [Openpanel](https://github.com/Openpanel-dev/openpanel) | PROTOTYPE | 7.6/10 | self-hosted SaaS alternative, product analytics, product building blocks | AGPL-3.0 | medium | 2026-09-10 |
 | [narwhal](https://github.com/Nonanti/narwhal) | PROTOTYPE | 7.6/10 | developer productivity, database tooling, AI & agent infrastructure | MIT OR Apache-2.0 (dual, standard Rust-ecosystem convention) | low | 2026-09-11 |
+| [AgentVerse OS](https://github.com/agentverse-os/AgentVerse-OS) | PROTOTYPE | 7.6/10 | AI agent infrastructure, self-hosted infrastructure, product infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-15 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
@@ -79,15 +80,20 @@ _87 projects tracked. Last updated 2026-09-14._
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
+| [MillionSend](https://github.com/MillionSend/millionsend) | PROTOTYPE | 7.2/10 | product building blocks, email infrastructure, self-hosted SaaS alternative | AGPL-3.0 (core); MIT (SDKs) | low | 2026-09-15 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
+| [Vicoa](https://github.com/vicoa-ai/vicoa) | PROTOTYPE | 7.0/10 | AI agent infrastructure, coding agents, agent orchestration, developer productivity | AGPL-3.0 | medium | 2026-09-15 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [Opslane](https://github.com/opslane/opslane) | PROTOTYPE | 6.8/10 | developer productivity, debugging, observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-29 |
 | [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
+| [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |
+| [AgentVM (DeepClause)](https://github.com/deepclause/agentvm) | WATCH | 6.1/10 | AI agent infrastructure, agent sandboxes, small utility | MIT | low | 2026-09-15 |
+| [Bookshelf](https://github.com/murerkinn/bookshelf) | WATCH | 6.0/10 | small utility, self-hosted | MIT | low | 2026-09-15 |
 | [LightMem](https://github.com/zjunlp/LightMem) | WATCH | 5.5/10 | agent memory, AI agent infrastructure | MIT | high | 2026-08-29 |

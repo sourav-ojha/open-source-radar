@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-14",
+  "updated": "2026-09-15",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -5401,6 +5401,369 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: stars 460, pushed_at 2026-09-14, archived false. License confirmed AGPL-3.0 by reading raw LICENSE file (API reports NOASSERTION).",
+      "acted_on": false
+    },
+    {
+      "name": "AgentVerse OS",
+      "slug": "agentverse-os",
+      "repo_url": "https://github.com/agentverse-os/AgentVerse-OS",
+      "website": "https://github.com/agentverse-os/AgentVerse-OS",
+      "description": "Personal cloud OS for a developer and their AI agents on a single Ubuntu server: windowed browser desktop, isolated per-project Incus/Docker workspaces running VS Code, Claude Code and Codex, a merged 944-app store (Runtipi+Coolify+Umbrel), capability-based infra wiring (storage.s3, llm, notify), ZFS backups, Tailscale-only access.",
+      "category": [
+        "AI agent infrastructure",
+        "self-hosted infrastructure",
+        "product infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or self-hosted use.",
+      "deployment": [
+        "self-hosted (Ubuntu server)",
+        "one-command install script"
+      ],
+      "interfaces": [
+        "browser UI (PWA)",
+        "CLI",
+        "REST API (cloudd)"
+      ],
+      "use_cases": [
+        "Single personal dev cloud running Claude Code/Codex workspaces per project, reachable from laptop/tablet/phone",
+        "Sandboxed environment to spin up self-hosted apps without manually wiring Docker networks and TLS",
+        "Reference architecture for capability-based infra routing (swap S3 providers without touching project code)"
+      ],
+      "product_opportunities": [
+        "Capability-routing core (cloudd) is a reusable pattern for internal multi-tenant PaaS/admin-portal products granting/revoking infra access per tenant"
+      ],
+      "agent_opportunities": [
+        "Claude Code and Codex run as first-class isolated workspace citizens",
+        "Ships a voice assistant (Pipecat Voice) and web agent (Hermes Agent) in its app catalog"
+      ],
+      "alternatives": [
+        "Umbrel",
+        "Runtipi",
+        "Coolify",
+        "CasaOS"
+      ],
+      "why_it_matters": "Bundles a Tailscale-fronted personal dev cloud, per-project agent sandboxes, and a capability-based infra abstraction that most self-hosted app-store projects (Umbrel, Runtipi) don't attempt.",
+      "why_not_build_it_myself": "The Incus-based workspace isolation, capability-routing core, and merged 944-app catalog represent weeks of infrastructure plumbing already solved.",
+      "risks": [
+        "Alpha: single-test-box only, no user accounts or permissions yet per the maintainers",
+        "3 days old at review, no tagged GitHub release, unproven long-term maintenance",
+        "Depends on Incus, a less mainstream container/VM runtime than Docker/K8s"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "alpha 0.2 (no tagged GitHub release)",
+      "latest_release_date": "unclear-no-tagged-release",
+      "source_links": [
+        "https://github.com/agentverse-os/AgentVerse-OS"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 364 stars, created 2026-09-12, pushed 2026-09-12, archived:false.",
+      "acted_on": false
+    },
+    {
+      "name": "MillionSend",
+      "slug": "millionsend-email",
+      "repo_url": "https://github.com/MillionSend/millionsend",
+      "website": "https://millionsend.com",
+      "description": "Self-hosted transactional + marketing email platform with a Resend-compatible API (drop-in migration via env-var swap) sending through your own AWS SES account. Dashboard, contacts/segments/broadcasts, templates, Standard Webhooks, SMTP relay, and a CLI that migrates an existing Resend account's data.",
+      "category": [
+        "product building blocks",
+        "email infrastructure",
+        "self-hosted SaaS alternative"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0 (core); MIT (SDKs)",
+      "commercial_use_notes": "AGPL-3.0 core is network-copyleft — self-hosting for internal/own use is unaffected, but exposing it as a hosted service to third parties (e.g. inside a paid multi-tenant product) would trigger source-disclosure obligations. SDKs are separately MIT.",
+      "deployment": [
+        "Docker Compose self-host",
+        "hosted cloud option"
+      ],
+      "interfaces": [
+        "REST API (Resend-compatible)",
+        "SMTP relay",
+        "web dashboard",
+        "CLI"
+      ],
+      "use_cases": [
+        "Self-host transactional email on an existing AWS account instead of paying for Resend",
+        "Point an already-Resend-integrated app at a self-hosted instance via a two-env-var swap",
+        "Use the SMTP relay for legacy code while still getting dashboard/suppression handling"
+      ],
+      "product_opportunities": [
+        "Email layer inside an MSSP admin portal or multi-tenant SaaS that needs to send from a customer's own AWS account"
+      ],
+      "agent_opportunities": [
+        "REST API is straightforward to wrap as an MCP tool for agent-driven email sending",
+        "The Resend-migration CLI is a reusable pattern for other 'compatible API, one-command migration' tools"
+      ],
+      "alternatives": [
+        "Resend (paid, the service replaced)",
+        "Postmark",
+        "Posthorn (catalogued 2026-09-10, generic provider-agnostic gateway rather than a full Resend-compatible platform)"
+      ],
+      "why_it_matters": "API-compatibility with Resend removes the usual integration-rewrite cost that kills adoption of most open-source SaaS replacements.",
+      "why_not_build_it_myself": "Suppression-list handling, bounce/complaint tracking against SES thresholds, and Standard-Webhooks-compliant signed delivery are a multi-day correctness problem already solved here.",
+      "risks": [
+        "AGPL-3.0 core needs legal review before any commercial/hosted embedding",
+        "Created 2026-08-13, no tagged GitHub release yet",
+        "Deliverability is bounded by AWS SES sending limits/reputation"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "unclear-no-tagged-github-release (npm package @millionsend/setup)",
+      "latest_release_date": "unclear-no-tagged-release",
+      "source_links": [
+        "https://github.com/MillionSend/millionsend",
+        "https://millionsend.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 140 stars, created 2026-08-13, pushed 2026-09-14, archived:false.",
+      "acted_on": false
+    },
+    {
+      "name": "Vicoa",
+      "slug": "vicoa-agent-orchestrator",
+      "repo_url": "https://github.com/vicoa-ai/vicoa",
+      "website": "https://vicoa.ai",
+      "description": "Self-hostable orchestrator for running a fleet of coding agents (Claude Code, Codex, Cursor, Copilot, Kimi, and more) across machines, steerable from desktop, CLI, or native iOS/Android apps with push notifications and live git-diff review. Postgres-backed FastAPI backend, Electron desktop, Flutter mobile.",
+      "category": [
+        "AI agent infrastructure",
+        "coding agents",
+        "agent orchestration",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — network-copyleft; any hosted/multi-tenant redistribution triggers source-disclosure obligations. Personal self-hosted use unaffected.",
+      "deployment": [
+        "Docker Compose self-host",
+        "desktop app (Electron)",
+        "mobile apps (iOS/Android)"
+      ],
+      "interfaces": [
+        "web dashboard",
+        "CLI",
+        "REST + WebSocket API",
+        "mobile apps"
+      ],
+      "use_cases": [
+        "Run Claude Code and Codex in parallel against different branches of the same repo from one dashboard",
+        "Get a push notification when an agent needs a decision and approve/redirect from a phone",
+        "Schedule a cron-triggered automation that runs an agent unattended"
+      ],
+      "product_opportunities": [
+        "Daemon-per-machine + central self-hosted backend pattern is reusable for coordinating work across machines without exposing them directly"
+      ],
+      "agent_opportunities": [
+        "Directly an agent-orchestration tool; CLI is designed so agents can drive Vicoa the same way a human does",
+        "Built-in cron automations are an agent-scheduling primitive"
+      ],
+      "alternatives": [
+        "dcouple/Pane (catalogued 2026-09-14, terminal-first, leaner, also AGPL-3.0)"
+      ],
+      "why_it_matters": "Genuinely differentiated within a saturated coding-agent-orchestration wave via real native mobile apps and cron automations, not just another terminal multiplexer wrapper.",
+      "why_not_build_it_myself": "Cross-device session sync, mobile push notifications, and per-agent git-worktree isolation across machines is substantial infrastructure to replicate.",
+      "risks": [
+        "AGPL-3.0 licensing caveat as above",
+        "Heavier operational footprint (Postgres + backend + per-machine daemon + separate mobile/desktop clients) than a single-binary alternative",
+        "Mobile apps require signing in via vicoa.ai account flow even when self-hosting the backend — verify this doesn't create a hard dependency on their hosted identity service"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "v0.1.26",
+      "latest_release_date": "2026-09-13",
+      "source_links": [
+        "https://github.com/vicoa-ai/vicoa",
+        "https://vicoa.ai"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 255 stars, created 2026-08-28, pushed 2026-09-15, archived:false.",
+      "acted_on": false
+    },
+    {
+      "name": "Pentest Harness",
+      "slug": "pentest-harness",
+      "repo_url": "https://github.com/S1N6H/pentest-harness",
+      "website": "https://github.com/S1N6H/pentest-harness",
+      "description": "Open-source AI agent workspace for authorized penetration testing, bug bounty research, security labs, and CTFs. Plugin architecture (Cordis) with replaceable model adapters/tools/sessions/credentials; multi-provider BYOK LLM support with one-click model auto-discovery; durable JSONL/SQLite sessions with replay.",
+      "category": [
+        "AI agent infrastructure",
+        "security tooling",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use.",
+      "deployment": [
+        "local install (Node/pnpm)"
+      ],
+      "interfaces": [
+        "web UI (localhost)",
+        "CLI"
+      ],
+      "use_cases": [
+        "Local, session-persistent AI assistant for authorized pentest/bug-bounty work",
+        "Reference implementation for a pluggable internal agent tool on the PTaaS side of the business"
+      ],
+      "product_opportunities": [
+        "Could inform an AI-assisted feature inside an MSSP admin portal, reusing the plugin/credential-isolation pattern"
+      ],
+      "agent_opportunities": [
+        "Full agent harness: shell, filesystem, web research, skills, goals, subagents, background jobs built in",
+        "Everything-is-a-plugin design (Cordis) allows new capabilities without touching a closed core"
+      ],
+      "alternatives": [
+        "General-purpose coding-agent CLIs manually pointed at security work (no built-in Pentest Mode or credential isolation)"
+      ],
+      "why_it_matters": "Directly relevant to the MSSP/PTaaS side of the business (secondary relevance axis), and the credential-isolation + session-replay design is worth studying for any long-running sensitive-data agent tool.",
+      "why_not_build_it_myself": "Multi-provider LLM plumbing, context compaction, and session persistence/replay across a plugin architecture is a substantial build.",
+      "risks": [
+        "No tagged GitHub release yet — review source before use against real engagement data",
+        "Treat model outputs as assistive, not authoritative, in any real security engagement",
+        "Young, apparently single-maintainer project — watch for continuity"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "unclear-no-tagged-release",
+      "latest_release_date": "unclear-no-tagged-release",
+      "source_links": [
+        "https://github.com/S1N6H/pentest-harness"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 376 stars, created 2026-08-26, pushed 2026-09-11, archived:false.",
+      "acted_on": false
+    },
+    {
+      "name": "AgentVM (DeepClause)",
+      "slug": "agentvm-wasm-sandbox",
+      "repo_url": "https://github.com/deepclause/agentvm",
+      "website": "https://github.com/deepclause/agentvm",
+      "description": "Node.js library that boots a WASM-compiled Alpine Linux VM in a worker thread (via container2wasm), giving AI agents an isolated shell-execution environment without Docker or a real VM. Supports host-directory mounts, persistent per-workspace root filesystem overlay, and runtime network on/off/port-forward/firewall controls. Explicitly experimental, not production-ready.",
+      "category": [
+        "AI agent infrastructure",
+        "agent sandboxes",
+        "small utility"
+      ],
+      "status": "WATCH",
+      "relevance_score": 6.1,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use.",
+      "deployment": [
+        "npm library"
+      ],
+      "interfaces": [
+        "library (Node.js)"
+      ],
+      "use_cases": [
+        "Embed as the sandboxed-execution layer inside a custom coding-agent tool where Docker isn't available (e.g. an Electron app)",
+        "Cheap ephemeral shell sandbox for a serverless-style agent tool-call handler",
+        "Local testbed for experimenting with agent tool-calling against a disposable filesystem"
+      ],
+      "product_opportunities": [
+        "Could be the isolation primitive behind a low-cost, high-density coding-agent-as-a-service product where per-user Docker containers are too heavy"
+      ],
+      "agent_opportunities": [
+        "A sandboxing building block for an MCP 'run shell command' tool where full container isolation is overkill"
+      ],
+      "alternatives": [
+        "Docker-based agent sandboxes",
+        "E2B (hosted)",
+        "Firecracker microVMs",
+        "gVisor"
+      ],
+      "why_it_matters": "A pure-npm-install, in-process WASM sandbox is a genuinely different point in the agent-sandboxing design space compared to the usual Docker/hosted-API answers.",
+      "why_not_build_it_myself": "Compiling a Linux userland to WASM via container2wasm and wiring node:wasi networking/filesystem semantics correctly is a substantial, easy-to-get-wrong undertaking.",
+      "risks": [
+        "Maintainers explicitly disclaim production readiness and disclose possible node:wasi security flaws — not yet a real security boundary",
+        "API may change without notice per the README",
+        "Narrow scope: Alpine Linux base only"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "0.3.0",
+      "latest_release_date": "unclear-check-npm-changelog",
+      "source_links": [
+        "https://github.com/deepclause/agentvm",
+        "https://www.npmjs.com/package/deepclause-agentvm"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 79 stars, created 2026-01-19, pushed 2026-09-15, archived:false. Surfaced via deepclause/pi-box (a desktop GUI wrapper around this library, itself too new/prototype-stage to catalogue separately — 4 stars, 2 days old).",
+      "acted_on": false
+    },
+    {
+      "name": "Bookshelf",
+      "slug": "bookshelf-ebook-library",
+      "repo_url": "https://github.com/murerkinn/bookshelf",
+      "website": "https://murerkinn.github.io/bookshelf/",
+      "description": "Self-hosted ebook library for EPUBs/PDFs you already own — read in a browser or on a Kobo via OPDS. Runs entirely on object storage (Cloudflare Worker + R2, or a Node server over a local directory) with no database; same codebase and library format work in both deployment modes.",
+      "category": [
+        "small utility",
+        "self-hosted"
+      ],
+      "status": "WATCH",
+      "relevance_score": 6.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "Docker Compose self-host",
+        "Cloudflare Worker + R2"
+      ],
+      "interfaces": [
+        "web UI",
+        "OPDS catalog (e-reader compatible)"
+      ],
+      "use_cases": [
+        "Personal ebook shelf accessible from any browser or a Kobo e-reader, free on Cloudflare R2's free tier",
+        "Local-only instance for a NAS/home server via the filesystem provider",
+        "Reference for the storage-only, no-database architecture pattern in a different small tool"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Calibre-web",
+        "Kavita",
+        "COPS"
+      ],
+      "why_it_matters": "A real multi-feature app (covers, search, reading-position sync, profile switching) built with zero database is a reusable architecture idea for small internal or content-serving tools where standing up Postgres is overkill.",
+      "why_not_build_it_myself": "The storage-provider abstraction (identical code path for R2 vs filesystem) plus EPUB/PDF parsing and OPDS support is more than an evening's work to replicate well.",
+      "risks": [
+        "No authentication built in — must sit behind a reverse-proxy auth layer or private network before storing anything sensitive",
+        "Windows unsupported for the sync tooling"
+      ],
+      "first_seen": "2026-09-15",
+      "last_reviewed": "2026-09-15",
+      "last_meaningful_update": "2026-09-15",
+      "current_version": "unclear-no-tagged-release",
+      "latest_release_date": "unclear-no-tagged-release",
+      "source_links": [
+        "https://github.com/murerkinn/bookshelf"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 360 stars, created 2026-08-17, pushed 2026-09-11, archived:false. Featured as this run's Small but High-Leverage Utility rather than a numbered discovery, given low product-development relevance despite the interesting architecture.",
       "acted_on": false
     }
   ]

@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-14",
-  "last_successful_run": "2026-09-14",
-  "run_count": 19,
-  "rotation_slot_last_used": 6,
+  "last_run": "2026-09-15",
+  "last_successful_run": "2026-09-15",
+  "run_count": 20,
+  "rotation_slot_last_used": 7,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -40,7 +40,8 @@
     "coding-agent orchestration / parallel terminal managers",
     "self-hosted deployment platforms (saturated wave)",
     "self-hosted incident management / status pages (saturated wave)",
-    "Kubernetes cost optimization"
+    "Kubernetes cost optimization",
+    "experimental/hidden gems — AI-agent personal clouds, WASM agent sandboxes, pentest agent harness, self-hosted email"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -848,7 +849,21 @@
     "flori950/Architecture-as-Code-Visualizer",
     "roxy-wi/RMON",
     "OtezVikentiy/gotcha",
-    "kstevica/captain-claw"
+    "kstevica/captain-claw",
+    "agentverse-os/AgentVerse-OS",
+    "S1N6H/pentest-harness",
+    "tsymbaluyk/maskgate",
+    "murerkinn/bookshelf",
+    "MillionSend/millionsend",
+    "deepclause/pi-box",
+    "vicoa-ai/vicoa",
+    "bojieli/queqiao",
+    "deepclause/agentvm",
+    "vstorm-co/agenticos",
+    "mukundzha/hazzel",
+    "nessielabs/boring-orchestrator",
+    "sraodev/universal-bluetooth-sdk",
+    "MddIdd/mdd-sim-gateway"
   ],
   "rejected": [
     {
@@ -1165,6 +1180,21 @@
       "repo_url": "homelab/personal Infrastructure-as-Code repos (dozens of home-ops/homelab-iac dotfiles-style repos under a generic 'infrastructure as code' search)",
       "reason": "not reusable tools — personal homelab configuration dumps, not installable software",
       "date": "2026-09-14"
+    },
+    {
+      "repo_url": "https://github.com/tsymbaluyk/maskgate",
+      "reason": "not actually open source — repo README explicitly states 'this repository is a landing page only, the source code is proprietary and is not published here'; PII-masking-before-LLM concept is worth remembering if a genuinely open implementation surfaces",
+      "date": "2026-09-15"
+    },
+    {
+      "repo_url": "https://github.com/mukundzha/hazzel",
+      "reason": "thin/too new — 8 stars, 1 week old, no differentiation from already-catalogued coding-agent CLIs (VTCode etc.)",
+      "date": "2026-09-15"
+    },
+    {
+      "repo_url": "https://github.com/vstorm-co/agenticos",
+      "reason": "inferior to catalogued alternative — overlaps closely with Preloop (agent control plane, catalogued 2026-09-09, PROTOTYPE 7.8) with far less traction (39 stars)",
+      "date": "2026-09-15"
     }
   ],
   "known_releases": {
@@ -1201,8 +1231,8 @@
       "date": "2026-09-01"
     },
     "vercel-labs/skills": {
-      "version": "v1.5.25",
-      "date": "2026-09-08"
+      "version": "v1.5.26",
+      "date": "2026-09-11"
     },
     "lmnr-ai/lmnr": {
       "version": "v0.2.3",
@@ -1233,8 +1263,8 @@
       "date": "2026-08-18"
     },
     "sipyourdrink-ltd/bernstein": {
-      "version": "v3.19.1",
-      "date": "2026-09-03"
+      "version": "v3.19.2",
+      "date": "2026-09-10"
     },
     "CodesWhat/drydock": {
       "version": "v1.6.0",
@@ -1401,8 +1431,8 @@
       "date": "2026-08-05"
     },
     "dagucloud/dagu": {
-      "version": "v2.16.4",
-      "date": "2026-09-11"
+      "version": "v2.16.6",
+      "date": "2026-09-14"
     },
     "slothflowlabs/duckle": {
       "version": "v0.7.1",
@@ -1477,8 +1507,8 @@
       "date": "unclear-no-github-release"
     },
     "reticlehq/reticle": {
-      "version": "v2.13.1",
-      "date": "2026-09-02"
+      "version": "v2.14.0",
+      "date": "2026-09-11"
     },
     "MinishLab/semble": {
       "version": "v0.5.6",
@@ -1551,6 +1581,38 @@
     "dcouple/Pane": {
       "version": "v2.4.105",
       "date": "2026-09-14"
+    },
+    "agentverse-os/AgentVerse-OS": {
+      "version": "alpha 0.2 (no tagged GitHub release)",
+      "date": "unclear"
+    },
+    "MillionSend/millionsend": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "vicoa-ai/vicoa": {
+      "version": "v0.1.26",
+      "date": "2026-09-13"
+    },
+    "S1N6H/pentest-harness": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "deepclause/agentvm": {
+      "version": "0.3.0",
+      "date": "unclear-check-npm-changelog"
+    },
+    "deepclause/pi-box": {
+      "version": "v0.2.0",
+      "date": "2026-09-14"
+    },
+    "murerkinn/bookshelf": {
+      "version": "unclear-no-tagged-release",
+      "date": "unclear"
+    },
+    "bojieli/queqiao": {
+      "version": "v0.6.3",
+      "date": "2026-09-07"
     }
   },
   "source_health": {
@@ -1559,8 +1621,8 @@
       "note": "not used this run — GitHub Search API covered discovery breadth for slot 6 (infrastructure/observability/deployment)"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-14",
-      "note": "used to verify Bugsink (PolyForm Shield, not NOASSERTION) and Pane (AGPL-3.0, not NOASSERTION) LICENSE files directly — GitHub API license field was wrong/missing for both"
+      "last_ok": "2026-09-15",
+      "note": "used to verify maskgate is a landing-page-only repo (no source, proprietary) and to pull README content for AgentVerse OS, pentest-harness, MillionSend, vicoa, bookshelf, agentvm, pi-box"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -1575,12 +1637,12 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-14",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, well under 100 requests used this run across ~15 discovery queries plus deep-review metadata checks for slot 6"
+      "last_ok": "2026-09-15",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, well under 100 requests used this run across discovery + deep-review metadata checks for slot 7"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-14",
-      "note": "Show HN search over last 5 days worked fine; nothing relevant to slot 6 surfaced"
+      "last_ok": "2026-09-15",
+      "note": "Show HN search over last 4 days worked fine; several AI-coding-agent and novelty projects surfaced, none catalog-worthy beyond what GitHub search also found"
     },
     "pypi.org": {
       "last_ok": "2026-09-12",
@@ -1593,6 +1655,10 @@
     "postgresql.org": {
       "last_ok": "2026-09-06",
       "note": "fetched directly to verify LibreDB Studio's claimed PostgreSQL-project news/catalogue listing — confirmed genuine, not fabricated by the README"
+    },
+    "lobste.rs": {
+      "last_ok": "2026-09-15",
+      "note": "newest.json worked; today's front page was essay/blog-post heavy (expected for slot 7 hidden-gems day), no project links worth following up"
     }
   },
   "previous_recommendations": [
@@ -1678,7 +1744,13 @@
     "meteroid-billing",
     "bugsink-error-tracking",
     "maintenant-infra-monitoring",
-    "pane-agent-manager"
+    "pane-agent-manager",
+    "agentverse-os",
+    "millionsend-email",
+    "vicoa-agent-orchestrator",
+    "pentest-harness",
+    "agentvm-wasm-sandbox",
+    "bookshelf-ebook-library"
   ],
-  "notes": "2026-09-14: Single run, slot 6 (infrastructure, observability, deployment) per deterministic date formula (day_of_year 257 % 7 + 1 = 6). Catalogued 3 new: Bugsink (bugsink/bugsink, self-hosted Sentry-SDK-compatible error tracking, USE NOW, 8.1 — PolyForm Shield 1.0.0 license, source-available not OSI, honestly presented as self-hostable rather than falsely marketed 'open source'), maintenant (kOlapsis/maintenant, single Go binary collapsing Docker/K8s/uptime/TLS/CVE monitoring into one container, USE NOW, 8.0 — AGPL-3.0 Community edition fully functional, paid tiers same binary feature-gated via license-key check), and Pane (dcouple/Pane, terminal-first parallel-coding-agent manager with self-hosted Remote Pane daemon, PROTOTYPE, 8.0 — AGPL-3.0, stood out from a genuinely saturated coding-agent-orchestration field this run). Both Bugsink and Pane's GitHub API license field reported NOASSERTION despite real licenses present in the LICENSE file (PolyForm Shield and AGPL-3.0 respectively) — caught by reading raw.githubusercontent.com directly per AGENT.md section 8 guidance, worth remembering this API field is unreliable beyond just SPDX-unrecognized licenses. Rejected/noted four saturated hype waves this run: self-hosted deployment platforms (still recurring weekly since 2026-08-31), self-hosted incident-management/status-pages, coding-agent-orchestration beyond Pane/captain-claw, and self-hosted error-tracking beyond Bugsink — all dozens of same-week near-zero-star repos with no differentiation. Filed Kilter (agenticode/kilter, EKS-aware K8s cost optimizer) as Worth Watching despite compelling architecture: single contributor, all 4 releases batch-published within one hour, no independent validation. Also filed Architecture-as-Code-Visualizer (too new, no license) and RMON (2+ years old but only 25 stars, unclear why) as Worth Watching. Spot-checked 15 tracked repos' releases for meaningful updates — only OneUptime showed a major version bump (12.0.33 to 13.0.4) but changelog was routine incremental feature polish, not catalogued as a meaningful update. 'Still Worth Trying' rotated to Monoscope/OpenDataLoader PDF/Kreuzberg html-to-markdown (Bernstein/Sidequest/Kingfisher were used in the 2026-09-13 digest, per no-repeat-two-runs-running guidance)."
+  "notes": "2026-09-15: Single run, slot 7 (experimental projects and hidden gems) per deterministic date formula (day_of_year 258 % 7 + 1 = 7). Catalogued 6 new: AgentVerse OS (agentverse-os/AgentVerse-OS, personal cloud OS bundling Tailscale access + Incus/Docker per-project agent workspaces + capability-routed infra, PROTOTYPE, 7.6 — genuinely novel architecture but self-declared alpha/single-test-box/no-auth), MillionSend (self-hosted Resend-compatible email platform on AWS SES with a Resend-migration CLI, PROTOTYPE, 7.2 — AGPL-3.0 core flagged for hosted-redistribution caveat), Vicoa (cross-device coding-agent orchestrator with native mobile apps and cron automations, PROTOTYPE, 7.0 — AGPL-3.0, the one clearly differentiated survivor of the ongoing coding-agent-orchestration wave alongside Pane), Pentest Harness (MIT, plugin-based AI agent workspace for authorized pentest/bug-bounty/CTF work, PROTOTYPE, 6.6 — directly relevant to the MSSP/PTaaS secondary context), AgentVM/DeepClause (MIT, WASM-based Alpine Linux VM in a Node worker thread for sandboxing agent shell execution without Docker, WATCH, 6.1 — this run's hidden-gem pick, honestly self-disclosed as experimental/not production-ready), and Bookshelf (MIT, self-hosted database-less ebook library on object storage, WATCH, 6.0 — featured as Small but High-Leverage Utility for its storage-only architecture pattern rather than product-dev relevance). Rejected maskgate (tsymbaluyk/maskgate) as not actually open source — repo explicitly states it's a landing page only with proprietary source, despite 266 stars and a compelling PII-masking-before-LLM pitch; worth remembering the concept if a genuine open implementation appears. Also rejected hazzel (too new/thin) and agenticos (inferior traction vs. already-catalogued Preloop in the same agent-governance niche). Filed pi-box (deepclause's Electron GUI wrapper around AgentVM) as Worth Watching — too new (4 stars, 2 days old, unsigned builds) for a full review but the underlying AgentVM library was mature enough conceptually to catalogue directly. Filed queqiao (WAN optimization proxy) as Worth Watching — technically interesting QUIC/erasure-coding architecture but no clear mapping to primary relevance axes without a concrete use case. Spot-checked 10 tracked repos' releases (Bernstein, Kingfisher, Dagu, Sidequest, Monoscope, LibreDB Studio, Vercel Skills, Reticle, Relaticle, OneUptime) for meaningful updates — all showed only routine patch/minor version bumps, none catalogued as meaningful. Continued saturated-wave rejections without new standouts: self-hosted PaaS, incident-management/status-pages, coding-agent-orchestration (beyond Pane/Vicoa/captain-claw), self-hosted error tracking, api-evangelist auto-generated profiles. 'Still Worth Trying' rotated to Bernstein/Sidequest/Kingfisher (Monoscope/OpenDataLoader PDF/Kreuzberg were used in the 2026-09-14 digest, per no-repeat-two-runs guidance)."
 }
