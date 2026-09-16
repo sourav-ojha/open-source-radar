@@ -73,7 +73,8 @@ citizenship model rather than a chat assistant, and by shipping on a stack that 
 no new infrastructure to self-host.
 
 ## Risks / Limitations
-- Pre-stable: breaking changes are explicitly expected before v1.
+- Hit v1.0.0 only the day before this review — the new Teams/multi-tenancy architecture
+  is unproven at scale despite the version bump.
 - AGPL-3.0 (see License).
 - Donation/star-solicitation language in the README ("star the repo," wallet addresses)
   is more prominent than typical for a project this size — not disqualifying, but a
@@ -81,8 +82,10 @@ no new infrastructure to self-host.
 
 ## Recommendation
 **PROTOTYPE** — stand it up via Docker Compose and test the agent-as-teammate workflow
-against a real coding-agent task queue before committing to it as a daily driver; the
-pre-stable warning means it isn't a same-day production swap for an existing tracker yet.
+against a real coding-agent task queue. The v1.0.0 release resolves the previous
+pre-stable warning, but the new Teams architecture is one day old — worth a short
+observation window before treating it as a same-day production swap for an existing
+tracker.
 
 ## Change History
 ### 2026-09-13
@@ -91,3 +94,16 @@ pushed 2026-09-11, not archived, latest release v0.17.0 (2026-09-06). Self-hosti
 and package.json verified via raw.githubusercontent.com. Repo was scanned in an earlier
 run's discovery pass (2026-08-31) without a formal catalog decision recorded; this is its
 first full review.
+
+### 2026-09-16
+**Meaningful update.** v0.17.0 → v1.0.0 (released 2026-09-15). Major release: projects
+now belong to a Team (roles, agents, skill library, integration credentials, MCP switch
+all scoped per team instead of per project); initiatives gained file attachments and
+Docs links; every MCP tool result now returns structured data plus HTTP status and a
+domain error code; account security hardened (email verification holds at sign-up,
+password reset ends all sessions, personal API keys expire, CSP/HSTS/X-Frame-Options
+headers on every response); database backup runs automatically before migrations. This
+resolves the "pre-stable, breaking changes expected" risk noted at first review — the
+project has crossed into a genuine 1.0. Score raised 7.7 → 8.0 to reflect the maturity
+jump; status held at PROTOTYPE pending a short observation window on the new
+architecture.
