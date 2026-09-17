@@ -51,12 +51,10 @@ healing/scanner, distributed pools) — worth a look at the design docs
 coverage explicitly rather than claiming blanket compatibility.
 
 ## Maturity
-Large, very active project (31,915 stars, created 2023-11-23, pushed_at 2026-09-10) but
-**still pre-1.0**: the latest tag is `1.0.0-rc.5-preview.3` (2026-04-28) — GitHub's
-releases API returns no tagged release at all, and the newest version tag is itself
-almost 4.5 months old despite continuous commit activity, so treat the tag/release
-history as lagging real development rather than as a signal of stagnation. Ships
-official Docker images and has an active Discord.
+Large, very active project (32,732 stars, created 2023-11-23, pushed_at 2026-09-17).
+**Update 2026-09-17: cut a stable `1.0.0` tag on 2026-09-16**, moving past the
+`1.0.0-rc.5-preview.3` release-candidate status noted at first review. Ships official
+Docker images and has an active Discord.
 
 ## License
 Apache-2.0 — confirmed via the repository's own LICENSE file. The README explicitly
@@ -74,18 +72,31 @@ not reviewed in depth this run), Tigris (not comparable — tigrisdata/storage o
 is only client SDKs for Tigris's proprietary hosted service, not self-hostable).
 
 ## Risks / Limitations
-- Pre-1.0 status (release-candidate tags only) despite the large community — validate
-  stability hands-on before trusting it with anything beyond dev/test data.
 - Very fast star growth for the visibility it has; treat popularity as attention, not as
-  a substitute for an independent stability check.
+  a substitute for an independent stability check, even at 1.0.
 - Full distributed-mode operational maturity (healing, pool expansion under real load)
   is unverified from documentation alone — worth a load test before production use.
+- MinIO's archival (see 2026-09-17 update below) removes the main point of real-world
+  comparison for battle-testing at scale — RustFS is now the default choice by
+  elimination rather than by a longer proven track record of its own.
 
 ## Recommendation
-PROTOTYPE — stand it up as a MinIO replacement in a dev/CI environment first, and
-specifically verify erasure-coding/healing behavior under simulated node failure before
-considering it for anything production-critical, given the pre-1.0 tagging.
+USE NOW — the 1.0.0 stable release plus MinIO's archival (see below) removes the main
+reasons for hesitation noted at first review; still worth a load test of
+erasure-coding/healing behavior under simulated node failure before anything
+production-critical.
 
 ## Change History
 ### 2026-09-10
 Initial discovery and review. Slot 2 (product infrastructure, APIs, backend components) run.
+
+### 2026-09-17
+Meaningful update. Two changes justify raising status PROTOTYPE -> USE NOW and score
+7.9 -> 8.3: (1) RustFS cut a stable `1.0.0` tag on 2026-09-16, up from
+`1.0.0-rc.5-preview.3`. (2) MinIO (`minio/minio`) is now confirmed `archived: true` via
+the GitHub API (archived at `pushed_at` 2026-04-24) — the long-standing incumbent this
+project was explicitly positioned against is no longer maintained at all, which changes
+RustFS from "permissive alternative to a maintained AGPL incumbent" to "the maintained
+option in this space." Discovered while reviewing mojatter/s2, a smaller Go
+library/server that also pitches itself as filling the MinIO gap for local
+development (see daily digest 2026-09-17, Small but High-Leverage Utility).
