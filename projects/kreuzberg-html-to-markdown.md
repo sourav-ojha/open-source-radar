@@ -49,3 +49,6 @@ MIT. MIT, no restrictions on commercial or SaaS use, redistribution, or embeddin
 ## Change History
 ### 2026-08-29
 First discovered and reviewed. Verified via GitHub API: license MIT, current version v3.11.6 (2026-08-28).
+
+### 2026-09-19
+The org's flagship document-intelligence engine — previously only referenced here as "the broader product" — is now separately catalogued as **Xberg** (`xberg-document-intelligence`, xberg-io/xberg). That entry's README confirms it is the successor to Kreuzberg, "rebuilt and rebranded under a fresh v1 line." This html-to-markdown repo remains a distinct, narrower sibling for just the HTML→Markdown conversion piece; no change to its own recommendation.

@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-18",
-  "last_successful_run": "2026-09-18",
-  "run_count": 23,
-  "rotation_slot_last_used": 3,
+  "last_run": "2026-09-19",
+  "last_successful_run": "2026-09-19",
+  "run_count": 24,
+  "rotation_slot_last_used": 4,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -44,7 +44,8 @@
     "experimental/hidden gems \u2014 AI-agent personal clouds, WASM agent sandboxes, pentest agent harness, self-hosted email",
     "agent task graphs / multimodal knowledge graphs / agent runtime hygiene (compression, sandboxing, artifact security)",
     "product infrastructure \u2014 file-processing suite, usage-based billing, cert/secret expiration management, self-hosted S3 storage",
-    "agent debugging infrastructure (MCP debuggers, agent-run time-travel replay), destructive-command safety hooks, coding-agent session search, codebase intelligence/docs+dead-code+MCP"
+    "agent debugging infrastructure (MCP debuggers, agent-run time-travel replay), destructive-command safety hooks, coding-agent session search, codebase intelligence/docs+dead-code+MCP",
+    "documents/RAG infra \u2014 polyglot document-intelligence engine, Postgres BM25 search, permission-aware enterprise RAG, self-hosted Firecrawl/Tavily-compatible crawler"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -995,7 +996,23 @@
     "nao1215/himorime",
     "quodeq/quodeq",
     "OpenCoven/coven",
-    "keithrbennett/cov-loupe"
+    "keithrbennett/cov-loupe",
+    "xberg-io/xberg",
+    "timescale/pg_textsearch",
+    "pipeshub-ai/pipeshub-ai",
+    "us/crw",
+    "readur/readur",
+    "serenedb/serenedb",
+    "samyama-ai/samyama-graph",
+    "paradedb/paradedb",
+    "yfedoseev/pdf_oxide",
+    "yfedoseev/office_oxide",
+    "firecrawl/pdf-inspector",
+    "manticoresoftware/manticoresearch",
+    "onyx-dot-app/onyx",
+    "docling-project/docling-graph",
+    "run-llama/liteparse",
+    "groonga/groonga"
   ],
   "rejected": [
     {
@@ -1382,6 +1399,26 @@
       "repo_url": "coding-agent-CLI wave (dscode, sid-code, GoatCode, thevibeworks/deepseek-pi, njfuzrs/sid-code, choijinwon/agent-oscode, and similar DeepSeek/Codex-harness clones)",
       "reason": "duplicate/hype wave \u2014 same saturated 'build your own coding agent CLI' niche rejected in prior runs, no new differentiation",
       "date": "2026-09-18"
+    },
+    {
+      "repo_url": "https://github.com/manticoresoftware/manticoresearch",
+      "reason": "already established \u2014 12,018-star search database created 2017 (Sphinx-successor lineage), long history and steady growth; no material new development flagged this run",
+      "date": "2026-09-19"
+    },
+    {
+      "repo_url": "PDF/document-extraction library wave around today's Xberg pick (yfedoseev/pdf_oxide, yfedoseev/office_oxide, firecrawl/pdf-inspector)",
+      "reason": "inferior scope to catalogued alternative \u2014 all three are narrower PDF/Office-only extraction libraries; Xberg (catalogued today) covers the same ground plus OCR/transcription/embeddings/code-intelligence with a comparable or better benchmark story. Noted in Xberg's Alternatives field rather than rejected outright \u2014 pdf_oxide in particular is a legitimate pick if raw single-format extraction speed matters more than breadth.",
+      "date": "2026-09-19"
+    },
+    {
+      "repo_url": "https://github.com/paradedb/paradedb",
+      "reason": "inferior fit vs catalogued alternative for this stack \u2014 broader all-in-one Postgres search+vector platform, but AGPL-3.0 vs. pg_textsearch's (catalogued today) permissive PostgreSQL License for the same core need (BM25 ranking); noted as an alternative in pg_textsearch's entry rather than a separate pick",
+      "date": "2026-09-19"
+    },
+    {
+      "repo_url": "run-llama/liteparse",
+      "reason": "too new to independently verify differentiation \u2014 12,330 stars but from the well-known LlamaIndex org, high star count likely reflects parent-project audience rather than independent traction; not deep-reviewed this run, worth a second look if it develops its own track record",
+      "date": "2026-09-19"
     }
   ],
   "known_releases": {
@@ -1856,16 +1893,32 @@
     "repowise-dev/repowise": {
       "version": "v0.51.0",
       "date": "2026-09-16"
+    },
+    "xberg-io/xberg": {
+      "version": "v1.2.5",
+      "date": "2026-09-18"
+    },
+    "timescale/pg_textsearch": {
+      "version": "v1.4.0",
+      "date": "2026-08-18"
+    },
+    "pipeshub-ai/pipeshub-ai": {
+      "version": "v0.8.0",
+      "date": "2026-09-14"
+    },
+    "us/crw": {
+      "version": "v0.36.0",
+      "date": "2026-09-19"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-09-12",
-      "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-3 volume"
+      "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-4 volume"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-18",
-      "note": "used for README/LICENSE fetches on all deep-reviewed candidates (mcp-debugger, DebugMCP, OrcaReplay, dcg, cass, repowise, argent, LogSight-AI)"
+      "last_ok": "2026-09-19",
+      "note": "used for README/LICENSE fetches on all deep-reviewed slot-4 candidates (xberg, pg_textsearch, crw, pipeshub-ai, pdf-inspector, pdf_oxide, paradedb, readur)"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -1880,20 +1933,20 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-18",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, ~30 requests across discovery + deep-review metadata for slot 3, well under rate limit"
+      "last_ok": "2026-09-19",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, ~45 requests across discovery + deep-review metadata/contributors for slot 4, well under 8350/hr limit"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-16",
       "note": "Show HN + agent/MCP keyword search over last 4-5 days worked fine; mostly small/thin novelty projects, cc-audit and a couple Worth Watching items surfaced from here"
     },
     "pypi.org": {
-      "last_ok": "2026-09-18",
-      "note": "verified repowise (0.51.0) published version against GitHub tag"
+      "last_ok": "2026-09-19",
+      "note": "verified xberg (1.2.5) published version against GitHub tag"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-18",
-      "note": "verified @debugmcp/mcp-debugger, debugmcp CLI, and orcareplay published versions against GitHub tags"
+      "last_ok": "2026-09-19",
+      "note": "verified @xberg-io/xberg (1.2.5) and crw-mcp (0.36.0) published versions"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -2007,7 +2060,11 @@
     "destructive-command-guard",
     "coding-agent-session-search",
     "orcareplay-agent-time-travel-debugger",
-    "repowise-codebase-intelligence"
+    "repowise-codebase-intelligence",
+    "xberg-document-intelligence",
+    "pg-textsearch",
+    "pipeshub-ai",
+    "fastcrw"
   ],
-  "notes": "2026-09-18: Single run, slot 3 (developer utilities, debugging, testing) per deterministic date formula (day_of_year 261 % 7 + 1 = 3). Catalogued 5 new: mcp-debugger (debugmcp/mcp-debugger, MIT, headless MCP step-through debugger over DAP for 8 languages, runs in CI/Docker/K8s unlike IDE-bound alternatives, USE NOW, 8.3), Destructive Command Guard (Dicklesworthstone/destructive_command_guard, MIT+OpenAI/Anthropic Rider, blocks catastrophic commands from coding agents across ~13 harnesses, USE NOW, 8.6 \u2014 ~6,000 stars, single primary maintainer but highly active and well-engineered), coding-agent-search/cass (same author, same license rider, PROTOTYPE, 7.8 \u2014 unified search across 20+ coding-agent session-history formats, explicit alpha), OrcaReplay (Continuum-AI-Corp/OrcaReplay, Apache-2.0, deterministic byte-for-byte agent-run recording/replay/model-forking captured at the process/socket boundary, PROTOTYPE, 7.6 \u2014 3 weeks old, built by the funded team behind OrcaRouter), and Repowise (repowise-dev/repowise, AGPL-3.0-or-commercial, codebase intelligence consolidating docs/dead-code/change-impact/MCP-context behind one local index with a disclosed benchmark, PROTOTYPE, 8.0 \u2014 6,696 stars, real multi-contributor team, compared explicitly against catalogued mex and ripwire). Noted microsoft/DebugMCP (510 stars, MIT) as mcp-debugger's direct IDE-bound alternative rather than a separate entry. Filed software-mansion/argent (mobile-agent debug/profile toolkit, mixed Apache-2.0-code/proprietary-binary licensing) and quodeq (local AI code/security scanner) as Worth Watching. Rejected stablyai/orca (71,316 stars \u2014 verified real team via contributor/commit history, not a star farm, but too mainstream at this scale) and flagged tt-a1i/archify (66,137 stars, unusually low watcher count and concentrated commit authorship for its size) for the same class of growth-pattern caution applied to XERJ on 2026-09-17. Rejected continuing 'codebase understanding for AI agents' and 'coding agent CLI' hype waves without individual review \u2014 dozens of near-identical same-week repos, no differentiation from catalogued mex/ripwire or from each other. 'Still Worth Trying' rotated to ctx/mex/Gortex (AdminForth/LoongSuite Pilot/Rebase used 2026-09-17, Vercel Skills CLI/Benjamin-Plus Skill/SIMURG used 2026-09-16, Bernstein/Sidequest/Kingfisher used 2026-09-15, per no-repeat guidance). Did not run a full meaningful-update sweep of the existing 102 catalogued projects this run \u2014 discovery time went entirely to slot-3 breadth and deep review depth on the shortlist; flagged explicitly in the daily digest's Run Notes. Discovery relied entirely on the GitHub Search API (8 parallel queries); WebSearch/HN/Lobsters not used, consistent with recent runs where GitHub Search alone surfaced sufficient volume."
+  "notes": "2026-09-19: Single run, slot 4 (data, search, documents, RAG) per deterministic date formula (day_of_year 262 % 7 + 1 = 4). Catalogued 4 new: Xberg (xberg-io/xberg, MIT, USE NOW, 8.8 \u2014 polyglot document-intelligence engine, the confirmed successor to Kreuzberg whose html-to-markdown component was already tracked; 9,325 stars, real multi-contributor team, MCP/REST/CLI out of the box), pg_textsearch (timescale/pg_textsearch, PostgreSQL License, USE NOW, 8.3 \u2014 BM25 full-text search extension for Postgres from Timescale, permissively licensed complement to pgvector/pgvectorscale), PipesHub AI (pipeshub-ai/pipeshub-ai, Apache-2.0, PROTOTYPE, 7.8 \u2014 permission-aware enterprise knowledge-to-AI retrieval platform with citations), and fastCRW (us/crw, AGPL-3.0 flagged loudly, PROTOTYPE, 7.5 \u2014 self-hosted Firecrawl/Tavily-API-compatible scraper/crawler as a 6 MB binary with an official MCP server; single-maintainer-dominant, noted as a risk). Updated the existing kreuzberg-html-to-markdown entry's notes and project file to point at the newly catalogued Xberg entry for the full-scope engine it previously only referenced abstractly \u2014 not treated as a rename/dedupe since both repos remain distinct and separately maintained. Rejected manticoresearch (already established since 2017), filed paradedb and the pdf_oxide/office_oxide/pdf-inspector cluster as alternatives inside today's picks' entries rather than separate rejections. Noted run-llama/liteparse (12,330 stars) as too new/unverified given likely parent-project (LlamaIndex) star-count halo effect. 'Still Worth Trying' rotated to Monoscope/OpenDataLoader PDF/haiku.rag (ctx/mex/Gortex used 2026-09-18, AdminForth/LoongSuite Pilot/Rebase used 2026-09-17, Vercel Skills CLI/Benjamin-Plus Skill/SIMURG used 2026-09-16, Bernstein/Sidequest/Kingfisher used 2026-09-15). Did not run a full meaningful-update sweep of the other ~106 previously catalogued projects this run \u2014 discovery time went to slot-4 breadth and deep review depth on the shortlist; flagged in the daily digest's Run Notes. Discovery relied entirely on the GitHub Search API (14 parallel topic/keyword queries); WebSearch/HN/Lobsters not used, consistent with recent runs where GitHub Search alone surfaced sufficient volume."
 }

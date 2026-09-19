@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -63,7 +63,7 @@
       ],
       "first_seen": "2026-08-29",
       "last_reviewed": "2026-08-29",
-      "last_meaningful_update": "2026-08-29",
+      "last_meaningful_update": "2026-09-19",
       "current_version": "v3.11.6",
       "latest_release_date": "2026-08-28",
       "source_links": [
@@ -71,7 +71,7 @@
         "https://www.npmjs.com/package/@xberg-io/html-to-markdown"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review \u2014 actively maintained).",
+      "notes": "GitHub API verified: MIT, 860 stars, pushed_at 2026-08-29 (same day as this review \u2014 actively maintained). Update 2026-09-19: the org's flagship document-intelligence engine (previously only referenced here as 'the broader product') is now separately catalogued as xberg-document-intelligence (xberg-io/xberg) \u2014 see that entry for the full-scope OCR/transcription/code-intelligence engine.",
       "acted_on": false
     },
     {
@@ -6684,6 +6684,276 @@
       ],
       "aliases": [],
       "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Xberg",
+      "slug": "xberg-document-intelligence",
+      "repo_url": "https://github.com/xberg-io/xberg",
+      "website": "https://docs.xberg.io",
+      "description": "Polyglot document-intelligence engine with a Rust core: text/table/metadata extraction across 107 formats, OCR (Tesseract/PaddleOCR/Candle/VLM), audio/video transcription, layout+table reconstruction, code intelligence for 371 languages, embeddings, and schema-driven structured extraction. Runs as a library (15 language bindings), CLI, REST API, or MCP server. The successor to the Kreuzberg engine already partially tracked here via its html-to-markdown component.",
+      "category": [
+        "document processing",
+        "RAG infrastructure",
+        "product building blocks",
+        "AI & agent infrastructure"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified against LICENSE file (Kreuzberg, Inc.). No restrictions on commercial use, SaaS deployment, redistribution, or embedding.",
+      "deployment": [
+        "library",
+        "npm package",
+        "pip package",
+        "cargo crate",
+        "maven",
+        "nuget",
+        "docker",
+        "helm chart",
+        "wasm"
+      ],
+      "interfaces": [
+        "library (Node.js)",
+        "library (Python)",
+        "library (Rust)",
+        "library (Go)",
+        "library (Java)",
+        "library (C#)",
+        "REST API",
+        "CLI",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Single ingestion step for a RAG pipeline that has to handle PDFs, Office docs, images, email, and e-books without stitching together separate libraries",
+        "OCR + layout reconstruction for scanned documents dropped into a document-management feature",
+        "Code-intelligence extraction (functions/classes/symbols across 371 languages) for syntax-aware RAG chunking over a codebase",
+        "Structured JSON extraction from arbitrary documents via a schema, without hand-written prompts",
+        "Drop-in MCP server so a coding agent can read and query any document type a user hands it"
+      ],
+      "product_opportunities": [
+        "Backbone ingestion engine for a document-processing or knowledge-base micro-SaaS product",
+        "Self-hosted alternative to paid document-intelligence APIs (Unstructured, LlamaParse-style services) for a product's ingestion layer"
+      ],
+      "agent_opportunities": [
+        "Ships an official MCP server out of the box \u2014 no wrapping needed",
+        "CLI usable directly inside a coding-agent tool loop for reading arbitrary files",
+        "REST API mode (`xberg serve`) for a shared ingestion microservice multiple agents/services call"
+      ],
+      "alternatives": [
+        "yfedoseev/pdf_oxide + office_oxide (1,035\u2605/129\u2605, MIT/Apache-2.0) \u2014 much narrower (PDF/Office extraction only) but faster for that narrow task (0.8ms mean, published benchmark suite) and has more language bindings (19-20) if raw extraction speed matters more than breadth",
+        "firecrawl/pdf-inspector (19,226\u2605, MIT) \u2014 Firecrawl's narrow PDF classifier/extractor (text-based vs scanned routing in ~10-50ms), useful as a lightweight pre-filter but not a full document-intelligence engine",
+        "docling-project/docling (established, not evaluated in depth this run) \u2014 Python-first, IBM-backed, similar scope but no first-class Node/Rust bindings",
+        "opendataloader-project/opendataloader-pdf (catalogued, USE NOW) \u2014 narrower PDF-only accessibility-focused parser"
+      ],
+      "why_it_matters": "Consolidates format detection, OCR, layout/table reconstruction, transcription, embeddings, and structured extraction into one engine callable natively from Node.js or Python, removing the multi-library pipeline (pdf parser + OCR engine + table extractor + chunker) most RAG ingestion code assembles by hand.",
+      "why_not_build_it_myself": "OCR backend fallback chains, layout-model table reconstruction, and 107-format MIME detection are each multi-week correctness problems on their own; this project has already solved all of them with published benchmarks and CI coverage across 15 runtimes.",
+      "risks": [
+        "Young rebrand (Kreuzberg \u2192 Xberg, v1 line since ~Sept 2026) \u2014 verify the migration is stable before deep production dependency, even though the underlying engine has a longer history",
+        "Very broad feature surface (OCR, transcription, embeddings, code intelligence) increases the audit surface versus a narrower single-purpose library",
+        "Optional features (url-ingestion, transcription, reranker) are Cargo feature flags \u2014 prebuilt packages bundle a common subset, so confirm the flags needed are actually included before relying on them"
+      ],
+      "first_seen": "2026-09-19",
+      "last_reviewed": "2026-09-19",
+      "last_meaningful_update": "2026-09-19",
+      "current_version": "v1.2.5",
+      "latest_release_date": "2026-09-18",
+      "source_links": [
+        "https://github.com/xberg-io/xberg",
+        "https://pypi.org/project/xberg/",
+        "https://www.npmjs.com/package/@xberg-io/xberg",
+        "https://docs.xberg.io"
+      ],
+      "aliases": [
+        "Kreuzberg (predecessor brand, kreuzberg-dev/kreuzberg-v4-lts)"
+      ],
+      "notes": "GitHub API verified: MIT, 9,325 stars, pushed_at 2026-09-19 (actively maintained), created 2025-01-31. Multi-contributor (top contributor 8,700 commits, but 4+ other regular contributors incl. dependabot). README explicitly states: 'Xberg is the next iteration of Kreuzberg. Same document-intelligence engine, rebuilt and rebranded under a fresh v1 line.' Already-catalogued kreuzberg-html-to-markdown (xberg-io/html-to-markdown) is a narrower sibling repo under the same org for just the HTML->Markdown conversion piece; this entry is for the full document-intelligence engine, previously only referenced in that entry's description as 'the broader product.' pypi/npm versions (1.2.5) cross-verified against GitHub tag.",
+      "acted_on": false
+    },
+    {
+      "name": "pg_textsearch",
+      "slug": "pg-textsearch",
+      "repo_url": "https://github.com/timescale/pg_textsearch",
+      "website": "https://github.com/timescale/pg_textsearch",
+      "description": "PostgreSQL extension adding BM25 relevance-ranked full-text search via a simple `content <@> 'query'` operator, with configurable k1/b, Block-Max WAND top-k queries, and parallel index builds. Built by Timescale (of TimescaleDB/pgvectorscale).",
+      "category": [
+        "product building blocks",
+        "RAG infrastructure",
+        "database tooling"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.3,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "PostgreSQL License",
+      "commercial_use_notes": "PostgreSQL License (permissive, BSD/MIT-style). No restrictions on commercial use, SaaS deployment, or redistribution. Verified against LICENSE file.",
+      "deployment": [
+        "Postgres extension (prebuilt binaries for Linux amd64/arm64)",
+        "build from source"
+      ],
+      "interfaces": [
+        "SQL (extension)"
+      ],
+      "use_cases": [
+        "Add BM25-ranked keyword search to an existing Postgres table without standing up Elasticsearch/OpenSearch",
+        "Pair with pgvector/pgvectorscale in the same database for hybrid (keyword + semantic) retrieval in a RAG pipeline",
+        "Replace a bolted-on Algolia/Typesense integration for an app whose data already lives in Postgres",
+        "Partitioned/expression indexes for per-tenant or per-category search in a multi-tenant SaaS"
+      ],
+      "product_opportunities": [
+        "Removes a second search-infra dependency (Elasticsearch/OpenSearch cluster) for any product where Postgres is already the system of record \u2014 meaningful ops-cost and complexity reduction for a small SaaS"
+      ],
+      "agent_opportunities": [
+        "Not agent-specific, but a natural backing store for an MCP server that needs keyword search over structured records already in Postgres"
+      ],
+      "alternatives": [
+        "paradedb/paradedb (9,283\u2605, AGPL-3.0) \u2014 broader all-in-one Postgres search+vector+aggregation platform (pg_search extension) with more features, but AGPL-3.0 requires source disclosure or a commercial license for a modified hosted service; pg_textsearch is a narrower, permissively-licensed single extension if BM25 keyword ranking is the only gap",
+        "Elasticsearch/OpenSearch (assumed known) \u2014 full search clusters, much higher operational overhead for a feature this narrow",
+        "Postgres built-in tsvector/GIN (assumed known) \u2014 no BM25 ranking, weaker relevance ordering"
+      ],
+      "why_it_matters": "Closes the one real gap between plain Postgres full-text search and a dedicated search engine \u2014 proper BM25 ranking \u2014 without adding a second datastore, and it's a permissively-licensed single-purpose extension rather than an AGPL all-in-one platform.",
+      "why_not_build_it_myself": "Implementing Block-Max WAND top-k scoring and parallel BM25 index builds correctly and fast is a non-trivial C-extension project; Timescale has already published benchmarks and passed Coverity static analysis on it.",
+      "risks": [
+        "Pre-1.0 (v1.4.0), created July 2025 \u2014 young for a database extension, verify against a non-critical table first",
+        "Requires PostgreSQL 17/18 (19 beta best-effort) and `shared_preload_libraries` changes \u2014 a server restart is needed to install, not a zero-downtime add"
+      ],
+      "first_seen": "2026-09-19",
+      "last_reviewed": "2026-09-19",
+      "last_meaningful_update": "2026-09-19",
+      "current_version": "v1.4.0",
+      "latest_release_date": "2026-08-18",
+      "source_links": [
+        "https://github.com/timescale/pg_textsearch",
+        "https://timescale.github.io/pg_textsearch/benchmarks/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: license PostgreSQL, 3,985 stars, pushed_at 2026-09-19, created 2025-07-06. Multi-contributor (Timescale org, 5+ distinct contributors sampled). Real CI, benchmark workflow, and Coverity Scan badge in README \u2014 not just marketing claims.",
+      "acted_on": false
+    },
+    {
+      "name": "PipesHub AI",
+      "slug": "pipeshub-ai",
+      "repo_url": "https://github.com/pipeshub-ai/pipeshub-ai",
+      "website": "https://www.pipeshub.com",
+      "description": "Open-source platform connecting enterprise knowledge sources (drives, wikis, chat, email, etc.) to AI agents with permission-aware retrieval \u2014 search results and agent answers are scoped to the querying user's actual access rights, with citations back to source.",
+      "category": [
+        "RAG infrastructure",
+        "AI & agent infrastructure",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, verified via license badge and GitHub API. No restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "Docker",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "REST API",
+        "SDK (npm @pipeshub-ai/sdk)",
+        "web UI"
+      ],
+      "use_cases": [
+        "Internal 'ask our docs/wiki/drive' assistant that respects each employee's actual document permissions instead of a flat index anyone can query",
+        "RAG layer for a customer-facing support agent where different source systems have different access boundaries",
+        "Baseline for a permission-aware knowledge-search feature inside a B2B product rather than building ACL-scoped retrieval from scratch"
+      ],
+      "product_opportunities": [
+        "Permission-aware, citation-backed enterprise search is a common ask for security-conscious B2B buyers \u2014 directly relevant if a future product needs 'AI search over our customers' data without leaking across tenants/roles'"
+      ],
+      "agent_opportunities": [
+        "Positioned explicitly as the retrieval layer AI agents call, not just a human-facing search UI"
+      ],
+      "alternatives": [
+        "onyx-dot-app/onyx (32,161\u2605, not deep-reviewed this run) \u2014 larger, more established open-source AI chat/search platform with a similar connector model",
+        "Building permission-scoped retrieval by hand on top of pgvector/pg_textsearch \u2014 more control, materially more engineering time"
+      ],
+      "why_it_matters": "Permission-aware retrieval (not just retrieval) is the part most hand-rolled RAG setups skip until a security review forces the issue; this ships it as a first-class concern rather than an afterthought.",
+      "why_not_build_it_myself": "Building per-source connectors plus a permission-inheritance model that stays correct as source ACLs change is a multi-week project most teams underestimate until an access-control bug surfaces in production.",
+      "risks": [
+        "Full platform (connectors, indexing, permission engine, UI) rather than a single library \u2014 meaningfully more to deploy and operate than a narrow tool",
+        "Pre-1.0 (v0.8.0), young for a permission-sensitive system \u2014 audit the ACL-inheritance logic directly before trusting it with real access boundaries"
+      ],
+      "first_seen": "2026-09-19",
+      "last_reviewed": "2026-09-19",
+      "last_meaningful_update": "2026-09-19",
+      "current_version": "v0.8.0",
+      "latest_release_date": "2026-09-14",
+      "source_links": [
+        "https://github.com/pipeshub-ai/pipeshub-ai",
+        "https://docs.pipeshub.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 3,758 stars, pushed_at 2026-09-19, created 2025-03-06. Real multi-contributor team (5+ contributors each with 180+ commits sampled), active Discord/roadmap, Docker Hub image with pull counts.",
+      "acted_on": false
+    },
+    {
+      "name": "fastCRW (crw)",
+      "slug": "fastcrw",
+      "repo_url": "https://github.com/us/crw",
+      "website": "https://fastcrw.com",
+      "description": "Self-hostable Rust web scraper/crawler/search engine exposing a Firecrawl/Tavily-compatible API (/scrape, /crawl, /search) as a single ~6 MB binary. Turns any URL into clean Markdown or structured JSON. Runs fully local and free, or against a managed cloud with paid credits for JS rendering and proxy rotation.",
+      "category": [
+        "AI & agent infrastructure",
+        "product building blocks",
+        "small utility"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0. **Flagged loudly**: self-hosting a modified version as a network service (e.g. embedding it inside a product others query over the network) requires releasing source under AGPL, or negotiating a commercial license. Running it internally/locally has no such obligation.",
+      "deployment": [
+        "single binary",
+        "Docker",
+        "managed cloud (fastcrw.com)"
+      ],
+      "interfaces": [
+        "CLI",
+        "REST API (Firecrawl/Tavily-compatible)",
+        "MCP server (npm crw-mcp)"
+      ],
+      "use_cases": [
+        "Replace a paid Firecrawl/Tavily API subscription for scrape/crawl/search calls in an agent pipeline with a self-hosted, drop-in-compatible local binary",
+        "Give a coding agent a local `crw search`/`crw scrape` tool with no per-call API cost",
+        "Turn a URL into clean Markdown for a RAG ingestion step without a hosted scraping service",
+        "Site-mapping/crawling for a small product's content-indexing job"
+      ],
+      "product_opportunities": [
+        "Removes a recurring per-request SaaS cost (Firecrawl/Tavily billing) for any product feature that needs to fetch and clean web content at scale"
+      ],
+      "agent_opportunities": [
+        "Ships an official MCP server (crw-mcp) and auto-registers with Claude Code/Cursor/Codex/Gemini CLI/OpenCode/Windsurf on install"
+      ],
+      "alternatives": [
+        "Firecrawl (hosted, assumed known) and Tavily (hosted) \u2014 the paid services this is API-compatible with; crw trades their managed JS-rendering/proxy infrastructure for a free local binary",
+        "browserbase/stagehand (24,442\u2605) \u2014 browser-automation-first, heavier weight, different use case (interaction, not just extraction)"
+      ],
+      "why_it_matters": "Drop-in API compatibility with Firecrawl/Tavily means an existing integration can point at a self-hosted binary instead of a metered API with no code changes beyond the base URL, for the common case (non-JS-heavy pages) that doesn't need the managed cloud's rendering/proxy layer.",
+      "why_not_build_it_myself": "A correct, fast HTML-to-Markdown/JSON extraction pipeline plus crawl-frontier and rate-limit handling is a multi-day build; this ships it as a 6 MB binary with published benchmarks against the two services it's compatible with.",
+      "risks": [
+        "AGPL-3.0 \u2014 see commercial_use_notes; do not embed inside a hosted product without checking the license implications first",
+        "Single-maintainer-dominant project (997 commits from the primary author vs. low double digits from anyone else) \u2014 verify bus-factor before deep production dependency",
+        "Local mode skips JS rendering and the managed proxy layer, so JS-heavy or bot-protected sites likely still need the paid cloud tier",
+        "Young (created March 2026)"
+      ],
+      "first_seen": "2026-09-19",
+      "last_reviewed": "2026-09-19",
+      "last_meaningful_update": "2026-09-19",
+      "current_version": "v0.36.0",
+      "latest_release_date": "2026-09-19",
+      "source_links": [
+        "https://github.com/us/crw",
+        "https://docs.fastcrw.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0 (confirmed against LICENSE file, matches README badge), 1,051 stars, pushed_at 2026-09-19, created 2026-03-02. Contributors skew heavily to a single author (us: 997 commits vs next-highest human contributor at 4).",
       "acted_on": false
     }
   ]
