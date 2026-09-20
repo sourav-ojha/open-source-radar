@@ -109,3 +109,8 @@
 {"slug": "pg-textsearch", "repo_url": "https://github.com/timescale/pg_textsearch", "name": "pg_textsearch", "status": "USE NOW", "score": 8.3, "last_reviewed": "2026-09-19", "current_version": "v1.4.0", "aliases": []}
 {"slug": "pipeshub-ai", "repo_url": "https://github.com/pipeshub-ai/pipeshub-ai", "name": "PipesHub AI", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-19", "current_version": "v0.8.0", "aliases": []}
 {"slug": "fastcrw", "repo_url": "https://github.com/us/crw", "name": "fastCRW (crw)", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-09-19", "current_version": "v0.36.0", "aliases": []}
+{"slug": "pad-agent-era-pm", "repo_url": "https://github.com/PerpetualSoftware/pad", "name": "Pad", "status": "PROTOTYPE", "score": 8.3, "last_reviewed": "2026-09-20", "current_version": "v0.16.0", "aliases": []}
+{"slug": "kaneo-project-management", "repo_url": "https://github.com/usekaneo/kaneo", "name": "Kaneo", "status": "USE NOW", "score": 7.9, "last_reviewed": "2026-09-20", "current_version": "v2.25.0", "aliases": []}
+{"slug": "libredesk-customer-support", "repo_url": "https://github.com/abhinavxd/libredesk", "name": "LibreDesk", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-20", "current_version": "v2.8.0", "aliases": []}
+{"slug": "solidtime-time-tracker", "repo_url": "https://github.com/solidtime-io/solidtime", "name": "solidtime", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-09-20", "current_version": "v0.20.1", "aliases": []}
+{"slug": "githubstarsmanager", "repo_url": "https://github.com/AmintaCCCP/GithubStarsManager", "name": "GithubStarsManager", "status": "PROTOTYPE", "score": 6.9, "last_reviewed": "2026-09-20", "current_version": "v0.8.1", "aliases": []}
