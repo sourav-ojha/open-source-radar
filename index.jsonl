@@ -10,7 +10,7 @@
 {"slug": "laminar", "repo_url": "https://github.com/lmnr-ai/lmnr", "name": "Laminar", "status": "PROTOTYPE", "score": 7.2, "last_reviewed": "2026-08-29", "current_version": "v0.2.3", "aliases": []}
 {"slug": "chunky-rag-toolkit", "repo_url": "https://github.com/GiovanniPasq/chunky", "name": "Chunky", "status": "PROTOTYPE", "score": 7.0, "last_reviewed": "2026-08-29", "current_version": "v0.7.0", "aliases": []}
 {"slug": "sidequest-job-queue", "repo_url": "https://github.com/sidequestjs/sidequest", "name": "Sidequest", "status": "USE NOW", "score": 8.6, "last_reviewed": "2026-08-30", "current_version": "v1.16.3", "aliases": []}
-{"slug": "mongodb-kingfisher", "repo_url": "https://github.com/mongodb/kingfisher", "name": "Kingfisher", "status": "USE NOW", "score": 8.4, "last_reviewed": "2026-09-03", "current_version": "v2.1.0", "aliases": []}
+{"slug": "mongodb-kingfisher", "repo_url": "https://github.com/mongodb/kingfisher", "name": "Kingfisher", "status": "USE NOW", "score": 8.4, "last_reviewed": "2026-09-21", "current_version": "v2.5.0", "aliases": []}
 {"slug": "infisical-agent-vault", "repo_url": "https://github.com/Infisical/agent-vault", "name": "Agent Vault", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-08-30", "current_version": "v0.39.3", "aliases": []}
 {"slug": "proval", "repo_url": "https://github.com/seoes/proval", "name": "Proval", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-08-30", "current_version": "unclear-no-tagged-release", "aliases": []}
 {"slug": "nona-config", "repo_url": "https://github.com/Ryware/nona-config", "name": "Nona", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-08-30", "current_version": "cli-v3.1.0", "aliases": []}
@@ -114,3 +114,7 @@
 {"slug": "libredesk-customer-support", "repo_url": "https://github.com/abhinavxd/libredesk", "name": "LibreDesk", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-20", "current_version": "v2.8.0", "aliases": []}
 {"slug": "solidtime-time-tracker", "repo_url": "https://github.com/solidtime-io/solidtime", "name": "solidtime", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-09-20", "current_version": "v0.20.1", "aliases": []}
 {"slug": "githubstarsmanager", "repo_url": "https://github.com/AmintaCCCP/GithubStarsManager", "name": "GithubStarsManager", "status": "PROTOTYPE", "score": 6.9, "last_reviewed": "2026-09-20", "current_version": "v0.8.1", "aliases": []}
+{"slug": "nerdlog", "repo_url": "https://github.com/dimonomid/nerdlog", "name": "Nerdlog", "status": "USE NOW", "score": 8.4, "last_reviewed": "2026-09-21", "current_version": "v1.11.0", "aliases": []}
+{"slug": "doco-cd", "repo_url": "https://github.com/kimdre/doco-cd", "name": "doco-cd", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-09-21", "current_version": "v0.119.0", "aliases": []}
+{"slug": "rootprint", "repo_url": "https://github.com/rootprint/rootprint", "name": "Rootprint", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-21", "current_version": "v0.4.3", "aliases": []}
+{"slug": "bytebase", "repo_url": "https://github.com/bytebase/bytebase", "name": "Bytebase", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-21", "current_version": "3.22.1", "aliases": []}

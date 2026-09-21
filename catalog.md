@@ -1,6 +1,6 @@
 # Catalog
 
-_116 projects tracked. Last updated 2026-09-20._
+_120 projects tracked. Last updated 2026-09-21._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -15,10 +15,11 @@ _116 projects tracked. Last updated 2026-09-20._
 | [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-07 |
 | [Graphify](https://github.com/Graphify-Labs/graphify) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, RAG infrastructure, developer productivity, coding agents | Apache-2.0 | low | 2026-09-16 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
-| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-03 |
+| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-21 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
 | [ctx](https://github.com/ctxrs/ctx) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source | low | 2026-09-04 |
 | [SnapOtter](https://github.com/snapotter-hq/SnapOtter) | USE NOW | 8.4/10 | product building blocks, small high-leverage utilities, developer productivity | AGPL-3.0 | low | 2026-09-17 |
+| [Nerdlog](https://github.com/dimonomid/nerdlog) | USE NOW | 8.4/10 | developer productivity, observability, infrastructure, small high-leverage utilities | BSD-2-Clause | low | 2026-09-21 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity, small utility, RAG infrastructure | MIT | low | 2026-08-29 |
 | [AdminForth](https://github.com/devforth/adminforth) | USE NOW | 8.3/10 | product infrastructure, admin panels, product building blocks | MIT | low | 2026-09-03 |
 | [haiku.rag](https://github.com/ggozad/haiku.rag) | PROTOTYPE | 8.3/10 | RAG infrastructure, AI agent infrastructure, developer productivity | MIT | medium | 2026-09-05 |
@@ -33,6 +34,7 @@ _116 projects tracked. Last updated 2026-09-20._
 | [mcpsnoop](https://github.com/kerlenton/mcpsnoop) | USE NOW | 8.2/10 | AI & agent infrastructure, developer productivity, AI agent debugging/tracing, MCP tooling | MIT | low | 2026-09-08 |
 | [Posthorn](https://github.com/craigmccaskill/posthorn) | PROTOTYPE | 8.2/10 | product building blocks, notifications / email, backend components | Apache-2.0 | low | 2026-09-10 |
 | [netbridge](https://github.com/muhammedogz/netbridge) | USE NOW | 8.2/10 | developer productivity, debugging, Node.js / Next.js tooling | MIT | low | 2026-09-11 |
+| [doco-cd](https://github.com/kimdre/doco-cd) | PROTOTYPE | 8.2/10 | infrastructure, deployment, developer productivity, product infrastructure | Apache-2.0 | low | 2026-09-21 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
@@ -78,6 +80,8 @@ _116 projects tracked. Last updated 2026-09-20._
 | [AgentKernel](https://github.com/thrashr888/agentkernel) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, infrastructure, developer productivity | MIT | medium | 2026-09-16 |
 | [OrcaReplay](https://github.com/Continuum-AI-Corp/OrcaReplay) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, debugging, developer productivity | Apache-2.0 (code); trace spec separately under CC BY 4.0 | low | 2026-09-18 |
 | [LibreDesk](https://github.com/abhinavxd/libredesk) | PROTOTYPE | 7.6/10 | product infrastructure, self-hosted SaaS alternatives, product building blocks | AGPL-3.0 | medium | 2026-09-20 |
+| [Rootprint](https://github.com/rootprint/rootprint) | PROTOTYPE | 7.6/10 | observability, infrastructure, product infrastructure | Apache-2.0 | medium | 2026-09-21 |
+| [Bytebase](https://github.com/bytebase/bytebase) | PROTOTYPE | 7.6/10 | product infrastructure, database tooling, developer productivity, infrastructure | MIT (core); Bytebase Enterprise License (custom, source-available but not OSI-approved) for directories/features gated as "enterprise" | medium | 2026-09-21 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |

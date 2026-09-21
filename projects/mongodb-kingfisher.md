@@ -47,3 +47,10 @@ USE NOW — low-effort CI addition with a genuine differentiator (live validatio
 ## Change History
 ### 2026-08-30
 Initial discovery and review.
+
+### 2026-09-21
+Meaningful update: v2.5.0 changes a default behavior — `scan --branch <ref>` now scans
+all reachable Git history by default instead of just the branch tip, surfacing secrets
+that were committed and later deleted (previously required an explicit flag). This
+meaningfully increases what a routine CI scan catches, at the cost of longer scan times on
+large repos. Does not change the USE NOW recommendation.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -806,17 +806,17 @@
         "Live validation calls out to provider APIs, so scanning must be run somewhere with appropriate network egress and rate-limit awareness"
       ],
       "first_seen": "2026-08-30",
-      "last_reviewed": "2026-09-03",
-      "last_meaningful_update": "2026-09-03",
-      "current_version": "v2.1.0",
-      "latest_release_date": "2026-08-30",
+      "last_reviewed": "2026-09-21",
+      "last_meaningful_update": "2026-09-21",
+      "current_version": "v2.5.0",
+      "latest_release_date": "2026-09-18",
       "source_links": [
         "https://github.com/mongodb/kingfisher",
         "https://mongodb.github.io/kingfisher/",
         "https://www.mongodb.com/blog/post/product-release-announcements/introducing-kingfisher-real-time-secret-detection-validation"
       ],
       "aliases": [],
-      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors. | 2026-09-03: v2.1.0 adds GitHub App authentication for org-wide scans (avoids 1hr installation-token expiry), improved AWS/GCP blast-radius role-impact analysis, and a new `kingfisher blast-radius` single-finding command. Relevant to the MSSP/PTaaS secondary context. Does not change USE NOW status.",
+      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors. | 2026-09-03: v2.1.0 adds GitHub App authentication for org-wide scans (avoids 1hr installation-token expiry), improved AWS/GCP blast-radius role-impact analysis, and a new `kingfisher blast-radius` single-finding command. Relevant to the MSSP/PTaaS secondary context. Does not change USE NOW status. | 2026-09-21: v2.5.0 changes a default behavior — `scan --branch <ref>` now scans all reachable Git history by default instead of just the branch tip, surfacing secrets that were committed and later deleted (previously required an explicit flag). This meaningfully increases what a routine CI scan catches, at the cost of longer scan times on large repos. Does not change USE NOW status.",
       "acted_on": false
     },
     {
@@ -7260,6 +7260,247 @@
       ],
       "aliases": [],
       "notes": "Created 2025-06-29, 3,589 stars, 174 forks. Featured as Small but High-Leverage Utility of the day 2026-09-20.",
+      "acted_on": false
+    },
+    {
+      "name": "Nerdlog",
+      "slug": "nerdlog",
+      "repo_url": "https://github.com/dimonomid/nerdlog",
+      "website": "https://dmitryfrank.com/projects/nerdlog/article",
+      "description": "A fast, remote-first, multi-host TUI log viewer with an interactive timeline histogram and no central server. Nerdlog opens SSH connections directly to each target host, runs the query (time range + pattern filter) remotely, and only pulls back matching log lines (up to a configurable page size) plus histogram data — never the full log file.",
+      "category": [
+        "developer productivity",
+        "observability",
+        "infrastructure",
+        "small high-leverage utilities"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "BSD-2-Clause",
+      "commercial_use_notes": "BSD-2-Clause, no restrictions on commercial use, modification, or redistribution.",
+      "deployment": [
+        "local install (Go binary)",
+        "installed locally only",
+        "connects out over SSH, nothing to deploy on target hosts"
+      ],
+      "interfaces": [
+        "TUI"
+      ],
+      "use_cases": [
+        "Tail and search syslog/journalctl across a handful of EC2/EB instances during an incident, without standing up ELK/OpenObserve first",
+        "Quick visual triage via the timeline histogram to spot when an error spike started before diving into full-text search",
+        "Ad hoc log inspection on client MSSP/PTaaS infrastructure where installing a log-agent stack isn't an option"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Graylog (mainstream, heavier)",
+        "Kibana/ELK (mainstream, heavier)",
+        "OpenObserve (catalogued-class, requires standing up a service)",
+        "plain multi-pane `ssh ... tail -f` / tmux scripts"
+      ],
+      "why_it_matters": "It removes the setup tax entirely: no agents to install on hosts, no central server, no Docker Compose stack to run just to read logs from 2-5 machines. For a solo/small-team operator this is strictly less operational overhead than any hosted-server log tool, while still giving a real histogram and multi-host correlated view that raw `ssh tail -f` can't.",
+      "why_not_build_it_myself": "The remote-side query execution (filtering and histogram computed on each host, not the local machine) and the persistent-idle-SSH-connection management are the actual hard parts; replicating that reliably would take real effort for something used a few times a month.",
+      "risks": [
+        "Single maintainer (467 of ~486 commits) — bus-factor risk, though the project has 18 months of steady history and monthly releases",
+        "Primary use case is text log files reachable over SSH (syslog/journalctl-shaped); not a general structured-log or trace tool"
+      ],
+      "first_seen": "2026-09-21",
+      "last_reviewed": "2026-09-21",
+      "last_meaningful_update": "2026-09-21",
+      "current_version": "v1.11.0",
+      "latest_release_date": "2026-09-17",
+      "source_links": [
+        "https://github.com/dimonomid/nerdlog",
+        "https://dmitryfrank.com/projects/nerdlog/article"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "doco-cd",
+      "slug": "doco-cd",
+      "repo_url": "https://github.com/kimdre/doco-cd",
+      "website": "https://doco.cd/latest/",
+      "description": "A lightweight, declarative GitOps continuous-deployment tool for Docker Compose (and Swarm) — think Portainer's Git-based stacks or a minimal ArgoCD, but scoped specifically to Compose instead of Kubernetes. Watches Git repos via webhook or polling and redeploys the affected Compose project when a config changes.",
+      "category": [
+        "infrastructure",
+        "deployment",
+        "developer productivity",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial use, modification, or redistribution.",
+      "deployment": [
+        "docker",
+        "self-hosted",
+        "single distroless container"
+      ],
+      "interfaces": [
+        "webhooks (multiple Git providers)",
+        "polling",
+        "CLI/env-var config"
+      ],
+      "use_cases": [
+        "Replace a hand-rolled `git pull && docker compose up -d` deploy script or GitHub Actions SSH-deploy step for any project already deployed via Docker Compose on an EC2/EB box",
+        "Give a small client (MSSP portal, PTaaS deliverable) a push-to-deploy workflow without adopting Kubernetes or a hosted PaaS",
+        "Multi-environment promotion (staging/prod) by pointing separate doco-cd instances at different branches or directories of the same repo"
+      ],
+      "product_opportunities": [
+        "Could be the deploy layer under a self-hosted micro-PaaS style offering without committing to the operational weight of Kubernetes"
+      ],
+      "alternatives": [
+        "ArgoCD/Flux (Kubernetes-only, much heavier)",
+        "Portainer's GitOps stacks (proprietary tiering above the free edition)",
+        "Coolify/Dokploy (catalogued-class, broader PaaS scope, heavier)",
+        "hand-rolled CI/CD SSH-deploy scripts"
+      ],
+      "why_it_matters": "Most self-hosted GitOps tooling assumes Kubernetes. This is scoped correctly for anyone still running plain Docker Compose on a handful of VMs — which is the realistic deployment shape for most side projects, MVPs, and small client engagements, not a k8s cluster.",
+      "why_not_build_it_myself": "Webhook signature verification across multiple Git providers, safe rollback on a failed `compose up`, and drift detection are all easy to get subtly wrong in a bespoke deploy script; this has 2+ years of production hardening (weekly releases, CodeQL + vulnerability scanning in CI) behind it already.",
+      "risks": [
+        "Automates production deploys — misconfiguration (wrong branch/webhook secret) has real blast radius; trial against a non-critical service first",
+        "Scoped to Docker Compose/Swarm only — provides no path if a project later moves to Kubernetes"
+      ],
+      "first_seen": "2026-09-21",
+      "last_reviewed": "2026-09-21",
+      "last_meaningful_update": "2026-09-21",
+      "current_version": "v0.119.0",
+      "latest_release_date": "2026-09-17",
+      "source_links": [
+        "https://github.com/kimdre/doco-cd",
+        "https://doco.cd/latest/"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Rootprint",
+      "slug": "rootprint",
+      "repo_url": "https://github.com/rootprint/rootprint",
+      "website": "https://rootprint.io",
+      "description": "A self-hosted log and trace explorer that stores its indexes directly on S3-compatible object storage (S3, MinIO, R2, GCS, Azure Blob, or local disk) instead of requiring a dedicated database cluster. Ingests via OTLP from the OpenTelemetry Collector, Vector, or Fluent Bit; ships a log explorer, trace waterfalls, and a per-service health dashboard (request rate, error rate, p95 latency).",
+      "category": [
+        "observability",
+        "infrastructure",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial use, modification, or redistribution.",
+      "deployment": [
+        "docker",
+        "self-hosted",
+        "cloud infra (any S3-compatible bucket)"
+      ],
+      "interfaces": [
+        "OTLP Protobuf/HTTP ingestion",
+        "web UI"
+      ],
+      "use_cases": [
+        "Personal/small-team logs+traces backend that costs close to raw S3 storage instead of running a Postgres/Elasticsearch cluster sized for log volume",
+        "OpenTelemetry sink for a Node/Next.js service already emitting OTLP, replacing a Datadog/Honeycomb trial before it turns into a bill",
+        "Correlate a trace waterfall with the logs from the same request without switching tools"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "OpenObserve (catalogued-class, more mature, broader feature set, own storage engine)",
+        "Grafana Tempo + Loki (mainstream, more moving parts)",
+        "SigNoz (mainstream)",
+        "Honeycomb/Datadog (hosted SaaS)"
+      ],
+      "why_it_matters": "Object-storage-backed indexing is the same cost argument OpenObserve makes, but Rootprint is smaller in scope (logs+traces, not the full logs/metrics/traces/RUM/session-replay surface), which means less to operate and reason about for a single project's telemetry.",
+      "why_not_build_it_myself": "Building an OTLP-compatible ingestion endpoint plus a queryable index format on top of object storage is a nontrivial storage-engine problem, not a weekend script.",
+      "risks": [
+        "Young project (created March 2026, ~6 months old) with one dominant contributor (660 of ~680 commits)",
+        "Requires Postgres for metadata plus an OTel Collector/Vector/Fluent Bit in front of it — more moving parts than a single binary, despite the object-storage cost win",
+        "No independent adoption signal yet beyond its own star count; verify query performance at realistic log volume before relying on it"
+      ],
+      "first_seen": "2026-09-21",
+      "last_reviewed": "2026-09-21",
+      "last_meaningful_update": "2026-09-21",
+      "current_version": "v0.4.3",
+      "latest_release_date": "2026-09-10",
+      "source_links": [
+        "https://github.com/rootprint/rootprint",
+        "https://rootprint.io",
+        "https://demo.rootprint.io"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Bytebase",
+      "slug": "bytebase",
+      "repo_url": "https://github.com/bytebase/bytebase",
+      "website": "https://www.bytebase.com",
+      "description": "A database schema-change and governance tool: SQL review, migration workflows with approval gates, drift detection, and access control across Postgres, MySQL, MongoDB, and most major databases. Recently repositioned to also expose an MCP-style interface so AI agents can propose and run reviewed schema changes rather than only humans.",
+      "category": [
+        "product infrastructure",
+        "database tooling",
+        "developer productivity",
+        "infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT (core); Bytebase Enterprise License (custom, source-available but not OSI-approved) for directories/features gated as \"enterprise\"",
+      "commercial_use_notes": "FLAGGED: open-core split. Code outside `enterprise`-named directories, and not controlling feature/plan/role enablement, is MIT — free to self-host, modify, and embed commercially. Enterprise-gated features (advanced RBAC, SSO, and other plan-gated capabilities) require a paid Bytebase subscription to use in production per LICENSE.enterprise; modifying and testing that code is permitted, but production use is not without a subscription.",
+      "deployment": [
+        "docker",
+        "self-hosted",
+        "cloud infra"
+      ],
+      "interfaces": [
+        "web UI",
+        "REST/gRPC API",
+        "CLI (bb)",
+        "SQL editor"
+      ],
+      "use_cases": [
+        "Gate schema migrations behind a review/approval step across a Postgres + MongoDB stack instead of applying migrations directly from CI",
+        "Give an MSSP/PTaaS client-facing project an auditable record of who changed what schema and when",
+        "Detect drift between what a migration tool declares and what's actually running in the database"
+      ],
+      "product_opportunities": [
+        "Schema-governance layer that could be positioned to MSSP clients as part of a change-management/audit story"
+      ],
+      "alternatives": [
+        "Liquibase/Flyway (migration-only, no review workflow or drift detection)",
+        "Atlas (schema-as-code, narrower scope)",
+        "manual PR-based migration review"
+      ],
+      "why_it_matters": "Most migration tools (Flyway, Liquibase, Prisma Migrate, Mongoose migrations) apply schema changes; Bytebase adds the governance layer on top — review, approval, drift detection, audit trail — across multiple database engines in one place, which is what's actually missing once more than one person touches a production schema.",
+      "why_not_build_it_myself": "A cross-database (Postgres/MySQL/Mongo/etc.) SQL review and migration-approval engine with drift detection is a multi-year engineering investment; this has 4+ years of production hardening from a team, not a side project.",
+      "risks": [
+        "License is not a clean single license — verify exactly which features are needed before assuming they're all free to self-host in production",
+        "Heavier to run than a single binary — it's its own service with its own metadata store",
+        "The 'built for agents' MCP-style positioning is new; the core review/governance workflow is the proven part"
+      ],
+      "first_seen": "2026-09-21",
+      "last_reviewed": "2026-09-21",
+      "last_meaningful_update": "2026-09-21",
+      "current_version": "3.22.1",
+      "latest_release_date": "2026-09-10",
+      "source_links": [
+        "https://github.com/bytebase/bytebase",
+        "https://www.bytebase.com",
+        "https://raw.githubusercontent.com/bytebase/bytebase/main/LICENSE",
+        "https://raw.githubusercontent.com/bytebase/bytebase/main/LICENSE.enterprise"
+      ],
+      "aliases": [],
+      "notes": "",
       "acted_on": false
     }
   ]
