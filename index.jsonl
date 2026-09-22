@@ -41,7 +41,7 @@
 {"slug": "ctx-agent-history-cli", "repo_url": "https://github.com/ctxrs/ctx", "name": "ctx", "status": "USE NOW", "score": 8.4, "last_reviewed": "2026-09-04", "current_version": "v1.3.1", "aliases": []}
 {"slug": "agent-inspect", "repo_url": "https://github.com/rajudandigam/agent-inspect", "name": "AgentInspect", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-06", "current_version": "@agent-inspect/langchain@6.19.0", "aliases": []}
 {"slug": "mex-living-codebase-wiki", "repo_url": "https://github.com/mex-memory/mex", "name": "mex", "status": "PROTOTYPE", "score": 8.1, "last_reviewed": "2026-09-04", "current_version": "v0.8.0", "aliases": []}
-{"slug": "dvalincode-verified-fix-record", "repo_url": "https://github.com/arthurpanhku/dvalincode", "name": "DvalinCode", "status": "PROTOTYPE", "score": 7.9, "last_reviewed": "2026-09-04", "current_version": "v0.18.0", "aliases": []}
+{"slug": "dvalincode-verified-fix-record", "repo_url": "https://github.com/arthurpanhku/dvalincode", "name": "DvalinCode", "status": "PROTOTYPE", "score": 7.9, "last_reviewed": "2026-09-22", "current_version": "v0.20.1", "aliases": []}
 {"slug": "opennotebooklm-self-hosted", "repo_url": "https://github.com/tom1030507/OpenNotebookLM", "name": "OpenNotebookLM", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-09-05", "current_version": "v0.1.0", "aliases": []}
 {"slug": "haiku-rag", "repo_url": "https://github.com/ggozad/haiku.rag", "name": "haiku.rag", "status": "PROTOTYPE", "score": 8.3, "last_reviewed": "2026-09-05", "current_version": "0.82.1", "aliases": []}
 {"slug": "lodedb-vector-db", "repo_url": "https://github.com/Egoist-Machines/LodeDB", "name": "LodeDB", "status": "PROTOTYPE", "score": 7.9, "last_reviewed": "2026-09-06", "current_version": "v2.3.0", "aliases": []}
@@ -118,3 +118,8 @@
 {"slug": "doco-cd", "repo_url": "https://github.com/kimdre/doco-cd", "name": "doco-cd", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-09-21", "current_version": "v0.119.0", "aliases": []}
 {"slug": "rootprint", "repo_url": "https://github.com/rootprint/rootprint", "name": "Rootprint", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-21", "current_version": "v0.4.3", "aliases": []}
 {"slug": "bytebase", "repo_url": "https://github.com/bytebase/bytebase", "name": "Bytebase", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-21", "current_version": "3.22.1", "aliases": []}
+{"slug": "peerd", "repo_url": "https://github.com/NotASithLord/peerd", "name": "peerd", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-22", "current_version": "v0.7.3", "aliases": []}
+{"slug": "frankentui", "repo_url": "https://github.com/Dicklesworthstone/frankentui", "name": "FrankenTUI (ftui)", "status": "STUDY", "score": 7.3, "last_reviewed": "2026-09-22", "current_version": "v0.8.0", "aliases": []}
+{"slug": "agentos-rivet", "repo_url": "https://github.com/rivet-dev/agentos", "name": "agentOS (Rivet)", "status": "PROTOTYPE", "score": 8.6, "last_reviewed": "2026-09-22", "current_version": "v0.2.21", "aliases": []}
+{"slug": "cynative", "repo_url": "https://github.com/cynative/cynative", "name": "Cynative", "status": "PROTOTYPE", "score": 8.3, "last_reviewed": "2026-09-22", "current_version": "v1.12.1", "aliases": []}
+{"slug": "confdiff", "repo_url": "https://github.com/esperanza-volkov/confdiff", "name": "confdiff", "status": "USE NOW", "score": 7.5, "last_reviewed": "2026-09-22", "current_version": "v0.17.4", "aliases": []}

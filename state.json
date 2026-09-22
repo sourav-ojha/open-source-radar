@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-21",
-  "last_successful_run": "2026-09-21",
-  "run_count": 26,
-  "rotation_slot_last_used": 6,
+  "last_run": "2026-09-22",
+  "last_successful_run": "2026-09-22",
+  "run_count": 27,
+  "rotation_slot_last_used": 7,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -47,7 +47,8 @@
     "agent debugging infrastructure (MCP debuggers, agent-run time-travel replay), destructive-command safety hooks, coding-agent session search, codebase intelligence/docs+dead-code+MCP",
     "documents/RAG infra \u2014 polyglot document-intelligence engine, Postgres BM25 search, permission-aware enterprise RAG, self-hosted Firecrawl/Tavily-compatible crawler",
     "self-hosted SaaS alternatives \u2014 agent-native project management, minimal Linear/Jira alternative, omnichannel helpdesk, freelance time-tracking, GitHub-stars organizer",
-    "infrastructure/observability/deployment \u2014 SSH-native multi-host log TUI, Docker-Compose-scoped GitOps, S3-backed logs/traces, database schema governance with agent-facing MCP surface"
+    "infrastructure/observability/deployment \u2014 SSH-native multi-host log TUI, Docker-Compose-scoped GitOps, S3-backed logs/traces, database schema governance with agent-facing MCP surface",
+    "experimental/hidden gems \u2014 in-process agent sandboxing (WASM/V8), browser-native agent harness, LLM-driven cloud security audit agents, TUI rendering kernel, semantic config diff"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1061,7 +1062,22 @@
     "chaosblade-io/chaosblade",
     "mock-server/mockserver-monorepo",
     "quickwit-oss/quickwit",
-    "graylog2/graylog2-server"
+    "graylog2/graylog2-server",
+    "rivet-dev/agentos",
+    "cynative/cynative",
+    "Dicklesworthstone/frankentui",
+    "Log2n-io/Typhon",
+    "NotASithLord/peerd",
+    "esperanza-volkov/confdiff",
+    "thepartly/differential",
+    "zhuzhonghua/blackgit",
+    "profullstack/pairux.com",
+    "TNTcraftHIM/Piik",
+    "hikariming/ghfind",
+    "turing-db/turingdb",
+    "akshayaggarwal99/boxed",
+    "nambok/mentedb",
+    "kunickiaj/codemem"
   ],
   "rejected": [
     {
@@ -1503,6 +1519,36 @@
       "repo_url": "https://github.com/logtide-dev/logtide",
       "reason": "duplicate / templated pitch \u2014 'privacy-first self-hosted Datadog & ELK alternative,' AGPL-3.0, single-contributor-dominant (1208 of ~1230 commits); redundant with catalogued OpenObserve and today's Rootprint pick, no clear technical differentiation found",
       "date": "2026-09-21"
+    },
+    {
+      "repo_url": "wasm-sandbox-for-agents wave (omnia, byte, cri, porta, miogram, cyfrworks, clawdius, Sluice, clanker, wasmagent-js, SwissArmyNoife, anvil, boxed, mcpbox)",
+      "reason": "duplicate/hype wave \u2014 same saturated 'sandboxed WASM runtime for AI agents' pitch as prior waves; agentOS and peerd (both catalogued today) were the only entrants with real engineering depth and traction",
+      "date": "2026-09-22"
+    },
+    {
+      "repo_url": "https://github.com/Log2n-io/Typhon",
+      "reason": "unclear/restrictive licensing \u2014 source-available (PolyForm Small Business + Shield based), not OSI open source: free only pre-1.0, then capped at $2M revenue/50 people and barred from competing-product or managed-service use; also pre-alpha .NET/C#, outside primary stack. Architecturally interesting (ECS + ACID engine) so filed as Worth Watching rather than a hard reject",
+      "date": "2026-09-22"
+    },
+    {
+      "repo_url": "novel-database-engine sweep (turing-db/turingdb, DeraineDB, ToucanDB, cameodb, luadb, iridium-sql, RedDB, Relatude.DB, and more)",
+      "reason": "duplicate/immature \u2014 mostly single-digit-to-low-hundreds stars, days-to-months old, no standout beyond Typhon (separately flagged for its license)",
+      "date": "2026-09-22"
+    },
+    {
+      "repo_url": "https://github.com/profullstack/pairux.com",
+      "reason": "inferior to comparable alternative \u2014 same 'self-hosted Screenhero' pitch as TNTcraftHIM/Piik (382 stars, more complete self-hosting docs and desktop apps) with far less traction (20 stars); Piik filed as Worth Watching instead",
+      "date": "2026-09-22"
+    },
+    {
+      "repo_url": "agent-memory wave, continued (nambok/mentedb, kunickiaj/codemem)",
+      "reason": "duplicate/hype wave \u2014 same saturated niche rejected repeatedly since 2026-09-09; mentedb is a genuine ground-up storage engine rather than a wrapper but showed no clear differentiation from catalogued mex within the time budget",
+      "date": "2026-09-22"
+    },
+    {
+      "repo_url": "universal data-format converter wave, continued (JSON/CSV/YAML/TOML converters surfaced under experimental/cli-tool searches)",
+      "reason": "duplicate/hype wave \u2014 same saturated niche rejected 2026-09-12, no new standout entrant found this pass",
+      "date": "2026-09-22"
     }
   ],
   "known_releases": {
@@ -1679,8 +1725,8 @@
       "date": "2026-09-13"
     },
     "arthurpanhku/dvalincode": {
-      "version": "v0.18.0",
-      "date": "2026-08-26"
+      "version": "v0.20.1",
+      "date": "2026-09-22"
     },
     "Egoist-Machines/LodeDB": {
       "version": "v2.3.0",
@@ -2029,6 +2075,30 @@
     "bytebase/bytebase": {
       "version": "3.22.1",
       "date": "2026-09-10"
+    },
+    "rivet-dev/agentos": {
+      "version": "v0.2.21",
+      "date": "2026-09-21"
+    },
+    "cynative/cynative": {
+      "version": "v1.12.1",
+      "date": "2026-09-17"
+    },
+    "Dicklesworthstone/frankentui": {
+      "version": "v0.8.0",
+      "date": "2026-09-14"
+    },
+    "NotASithLord/peerd": {
+      "version": "v0.7.3",
+      "date": "2026-08-20"
+    },
+    "esperanza-volkov/confdiff": {
+      "version": "v0.17.4",
+      "date": "2026-09-22"
+    },
+    "TNTcraftHIM/Piik": {
+      "version": "v1.6.1",
+      "date": "2026-09-22"
     }
   },
   "source_health": {
@@ -2037,8 +2107,8 @@
       "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-6 volume across 8 parallel topic queries"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-21",
-      "note": "used for README and LICENSE/LICENSE.enterprise fetches on all deep-reviewed slot-6 candidates (nerdlog, doco-cd, rootprint, bytebase, opentab, frugon)"
+      "last_ok": "2026-09-22",
+      "note": "used for LICENSE/LICENSE.md verification on frankentui (confirmed MIT+custom rider) and Typhon (confirmed source-available PolyForm-based, not OSI open source)"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -2053,20 +2123,20 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-21",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, ~60 requests across 8 parallel slot-6 topic searches plus deep-review metadata/releases/contributors on the shortlist, well under 8350/hr limit"
+      "last_ok": "2026-09-22",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, ~80 requests across 12 parallel slot-7 topic searches plus deep-review metadata/releases/contributors/README on the shortlist, well under 8350/hr limit"
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-16",
-      "note": "Show HN + agent/MCP keyword search over last 4-5 days worked fine; mostly small/thin novelty projects, cc-audit and a couple Worth Watching items surfaced from here"
+      "last_ok": "2026-09-22",
+      "note": "Show HN search over last 5 days worked fine; mostly small/thin novelty projects, no slot-7 candidates strong enough to deep-review from this pass"
     },
     "pypi.org": {
       "last_ok": "2026-09-19",
       "note": "verified xberg (1.2.5) published version against GitHub tag"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-19",
-      "note": "verified @xberg-io/xberg (1.2.5) and crw-mcp (0.36.0) published versions"
+      "last_ok": "2026-09-22",
+      "note": "verified confdiff (0.17.4) and @rivet-dev/agentos (0.2.21) published versions match GitHub tags"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -2193,7 +2263,12 @@
     "nerdlog",
     "doco-cd",
     "rootprint",
-    "bytebase"
+    "bytebase",
+    "agentos-rivet",
+    "cynative",
+    "peerd",
+    "frankentui",
+    "confdiff"
   ],
-  "notes": "2026-09-21: Single run, slot 6 (infrastructure, observability, deployment) per deterministic date formula (day_of_year 264 % 7 + 1 = 6). Catalogued 4 new: Nerdlog (dimonomid/nerdlog, BSD-2-Clause, USE NOW, 8.4 \u2014 SSH-native multi-host TUI log viewer with timeline histogram, no central server, zero setup on target hosts), doco-cd (kimdre/doco-cd, Apache-2.0, PROTOTYPE, 8.2 \u2014 GitOps continuous deployment scoped to Docker Compose/Swarm rather than Kubernetes, genuinely differentiated from the k8s-only ArgoCD/Flux class), Rootprint (rootprint/rootprint, Apache-2.0, PROTOTYPE, 7.6 \u2014 self-hosted logs+traces indexed directly on S3-compatible object storage, narrower scope than OpenObserve), and Bytebase (bytebase/bytebase, MIT core + custom Enterprise License for plan-gated features flagged loudly, PROTOTYPE, 7.6 \u2014 mature cross-database schema-change governance/review tool now also positioned for AI-agent-proposed migrations). One meaningful update: Kingfisher (mongodb/kingfisher, already catalogued USE NOW) v2.1.0 -> v2.5.0 \u2014 `scan --branch` now defaults to scanning all reachable Git history instead of just the branch tip, surfacing secrets committed and later deleted; catalog and project file updated, status unchanged. Rejected logtide-dev/logtide as a templated 'privacy-first Datadog/ELK alternative' redundant with OpenObserve and today's Rootprint pick. Filed hamidi-dev/opentab (AI-coding-agent spend browser, terminal-native, reads Claude Code/Codex/OpenCode history with zero setup) as Small but High-Leverage Utility of the day. Filed akuity/kargo (GitOps promotion/application-lifecycle orchestration, mature but only valuable on top of an existing ArgoCD deployment which is not in place), Rodiun/frugon (local LLM cost analyzer, overlaps opentab's problem space but works from arbitrary LLM call logs rather than coding-agent session history), and bex-co/bex (AI-native self-hosted Render/PaaS alternative, 2+ years old so not part of the previously-rejected 24-48-hour self-hosted-PaaS hype wave, but not deep-reviewed this run) as Worth Watching. Did not run a full meaningful-update sweep of all ~116 other previously catalogued projects; checked latest releases for a 15-repo sample spanning categories and found only Kingfisher's change qualified as meaningful (AdminForth's v3.17.5->v3.24.6 jump was confirmed via changelog bodies to be routine semantic-release patch bumps only). 'Still Worth Trying' rotated to LibreDB Studio/Sidequest/Bernstein continuing from 2026-09-20 since no new eligible USE NOW/PROTOTYPE entries from today's run have aged past 14 days yet. Discovery relied on 8 parallel GitHub Search API topic queries (observability, opentelemetry, distributed-tracing, ebpf, gitops, finops, chaos-engineering, log-management); WebSearch/HN/Lobsters not used, consistent with recent runs where GitHub Search alone surfaced sufficient volume."
+  "notes": "2026-09-22: Single run, slot 7 (experimental projects and hidden gems) per deterministic date formula (day_of_year 265 % 7 + 1 = 7). Catalogued 5 new: agentOS/Rivet (rivet-dev/agentos, Apache-2.0, PROTOTYPE, 8.6 \u2014 in-process agent VM using V8 isolates + WASM instead of network-hop sandboxes, 92x/47x/254x faster-cheaper-lighter than sandbox providers per its own benchmarks), Cynative (cynative/cynative, Apache-2.0, PROTOTYPE, 8.3 \u2014 LLM-driven read-only cloud-security-audit agents with an IAM action-gate enforced before credential attachment, directly relevant to the MSSP/PTaaS secondary context), peerd (NotASithLord/peerd, Apache-2.0, PROTOTYPE, 7.8 \u2014 first browser-native AI agent harness, runs entirely client-side reusing the browser's own isolation model), FrankenTUI (Dicklesworthstone/frankentui, MIT+OpenAI/Anthropic Rider custom license flagged loudly, STUDY, 7.3 \u2014 1.1M-line Rust TUI kernel with diff-based rendering and shadow-run determinism proofs, same author as previously-catalogued destructive-command-guard et al.), and confdiff (esperanza-volkov/confdiff, MIT, USE NOW, 7.5 \u2014 semantic config-file diff with secret redaction, filed as Small but High-Leverage Utility; README states it is built/maintained by an autonomous AI agent). One meaningful update: DvalinCode (already catalogued PROTOTYPE) v0.18.0->v0.20.1 \u2014 offline fix-record import/verify in web UI, FVP-1 canonicalization pinned to RFC 8785 with published JSON schema; catalog and project file updated, status unchanged. Rejected the wasm-sandbox-for-agents hype wave (agentOS/peerd were the differentiated entrants), Typhon (Log2n-io) for source-available non-OSI licensing despite genuinely novel ECS+ACID architecture (filed Worth Watching instead), a novel-database-engine sweep with no standout beyond Typhon, pairux.com as inferior to Piik in the same screen-sharing niche, continued agent-memory and universal-data-converter hype waves. Filed TNTcraftHIM/Piik (self-hosted P2P screen sharing, well-built but consumer-oriented), hikariming/ghfind (AGPL-3.0 GitHub developer trust-scoring tool), and Typhon as Worth Watching. 'Still Worth Trying' rotated to Monoscope/Dagu/OpenDataLoader PDF since LibreDB Studio/Sidequest/Bernstein led the prior two runs. Discovery relied on 12 parallel GitHub Search API topic queries (local-first sync, wasm sandbox agent, experimental topic, cli-tool, terminal UI, browser automation, hidden-gem/underrated readme mentions, database engine, p2p/CRDT, edge/wasm runtime, novel-architecture readme mentions) plus one HN Algolia Show HN pass (last 5 days, no strong candidates); WebSearch not used, GitHub Search plus HN surfaced sufficient volume for slot 7."
 }

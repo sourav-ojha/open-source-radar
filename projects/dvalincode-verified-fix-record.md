@@ -49,3 +49,6 @@ PROTOTYPE — worth trying on one repo's PR pipeline specifically for AI-agent-a
 ## Change History
 ### 2026-09-04
 Discovered and reviewed. GitHub API verified: MIT, 113 stars, pushed_at 2026-09-04 (same day), created 2026-05-20, 12 contributors, 298 commits. npm confirms dvalincode@0.18.0, MIT.
+
+### 2026-09-22
+Meaningful update: v0.18.0 → v0.20.1. Two changes that expand the "portable, offline-checkable" premise: fix records can now be imported and verified offline in the web UI (not just re-derived from the CLI/Action), and the canonicalization spec (FVP-1) is now pinned to RFC 8785 with a published fix-record JSON schema — moving the record format from "implicit convention" to a documented, versioned spec third parties could implement against independently. 117 stars, still 442+/442 tests green. Status and recommendation unchanged (PROTOTYPE).
