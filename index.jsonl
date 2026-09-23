@@ -123,3 +123,7 @@
 {"slug": "agentos-rivet", "repo_url": "https://github.com/rivet-dev/agentos", "name": "agentOS (Rivet)", "status": "PROTOTYPE", "score": 8.6, "last_reviewed": "2026-09-22", "current_version": "v0.2.21", "aliases": []}
 {"slug": "cynative", "repo_url": "https://github.com/cynative/cynative", "name": "Cynative", "status": "PROTOTYPE", "score": 8.3, "last_reviewed": "2026-09-22", "current_version": "v1.12.1", "aliases": []}
 {"slug": "confdiff", "repo_url": "https://github.com/esperanza-volkov/confdiff", "name": "confdiff", "status": "USE NOW", "score": 7.5, "last_reviewed": "2026-09-22", "current_version": "v0.17.4", "aliases": []}
+{"slug": "agent-device", "repo_url": "https://github.com/callstack/agent-device", "name": "agent-device", "status": "PROTOTYPE", "score": 8.5, "last_reviewed": "2026-09-23", "current_version": "v0.21.12", "aliases": []}
+{"slug": "mngr-agent-fleet-manager", "repo_url": "https://github.com/imbue-ai/mngr", "name": "mngr", "status": "PROTOTYPE", "score": 8.1, "last_reviewed": "2026-09-23", "current_version": "0.2.17 (PyPI, lags GitHub main)", "aliases": []}
+{"slug": "paseo-agent-orchestrator", "repo_url": "https://github.com/getpaseo/paseo", "name": "Paseo", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-23", "current_version": "v0.9.1", "aliases": []}
+{"slug": "agentdock-mcp-runtime", "repo_url": "https://github.com/uvwt/agentdock", "name": "AgentDock", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-09-23", "current_version": "v0.8.3", "aliases": []}
