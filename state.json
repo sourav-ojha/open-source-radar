@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-23",
-  "last_successful_run": "2026-09-23",
-  "run_count": 28,
-  "rotation_slot_last_used": 1,
+  "last_run": "2026-09-24",
+  "last_successful_run": "2026-09-24",
+  "run_count": 29,
+  "rotation_slot_last_used": 2,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -49,7 +49,8 @@
     "self-hosted SaaS alternatives — agent-native project management, minimal Linear/Jira alternative, omnichannel helpdesk, freelance time-tracking, GitHub-stars organizer",
     "infrastructure/observability/deployment — SSH-native multi-host log TUI, Docker-Compose-scoped GitOps, S3-backed logs/traces, database schema governance with agent-facing MCP surface",
     "experimental/hidden gems — in-process agent sandboxing (WASM/V8), browser-native agent harness, LLM-driven cloud security audit agents, TUI rendering kernel, semantic config diff",
-    "AI agent infrastructure — agent fleet management (mngr, Paseo), mobile/cross-platform agent-driven UI verification (agent-device), multi-host infra operation runtime (AgentDock)"
+    "AI agent infrastructure — agent fleet management (mngr, Paseo), mobile/cross-platform agent-driven UI verification (agent-device), multi-host infra operation runtime (AgentDock)",
+    "product infrastructure — AI-agent runtime security/governance, agent context layer for data warehouses, AI-engineering foundation framework for CRM/ERP, TypeScript data-access layer with built-in access control, self-hosted form backend"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1093,7 +1094,16 @@
     "getpaseo/paseo",
     "nexu-io/open-design",
     "minipuft/claude-prompts-mcp",
-    "microsoft/agent-framework"
+    "microsoft/agent-framework",
+    "PrismorSec/prismor",
+    "Kaelio/ktx",
+    "open-mercato/open-mercato",
+    "zenstackhq/zenstack",
+    "9d8dev/router",
+    "kavinsood/yaos",
+    "betterleaks/betterleaks",
+    "duncatzat/vigils",
+    "getnao/nao"
   ],
   "rejected": [
     {
@@ -1580,6 +1590,21 @@
       "repo_url": "https://github.com/nexu-io/open-design",
       "reason": "off-profile — 97,702-star 'coding agent as design engine' tool; contributor list shows genuine multi-author activity (not star-farmed) but design/prototyping use case doesn't fit this profile's primary relevance axes",
       "date": "2026-09-23"
+    },
+    {
+      "repo_url": "https://github.com/kavinsood/yaos",
+      "reason": "narrow ecosystem fit — GitHub description markets it as a general 'real-time sync engine powered by your own Cloudflare Worker' but the README reveals it is specifically an Obsidian vault sync plugin; Obsidian is not part of this profile's toolchain, same issue class as optimike-obsidian-mcp (2026-09-05)",
+      "date": "2026-09-24"
+    },
+    {
+      "repo_url": "https://github.com/betterleaks/betterleaks",
+      "reason": "duplicate — secret scanner overlapping with already-catalogued mongodb/kingfisher (USE NOW, 8.4), no clear differentiation surfaced within review budget",
+      "date": "2026-09-24"
+    },
+    {
+      "repo_url": "https://github.com/achtungsoftware/alarik",
+      "reason": "inferior to catalogued alternative — S3-compatible object storage positioned against MinIO/RustFS; already-catalogued RustFS has far more traction (33,744 vs 546 stars) and no clear technical edge found for alarik",
+      "date": "2026-09-24"
     }
   ],
   "known_releases": {
@@ -2166,6 +2191,26 @@
     "getpaseo/paseo": {
       "version": "v0.9.1",
       "date": "2026-09-22"
+    },
+    "PrismorSec/prismor": {
+      "version": "v1.54.1",
+      "date": "2026-09-17"
+    },
+    "Kaelio/ktx": {
+      "version": "v0.16.0",
+      "date": "2026-07-03"
+    },
+    "open-mercato/open-mercato": {
+      "version": "v0.8.0",
+      "date": "2026-09-18"
+    },
+    "zenstackhq/zenstack": {
+      "version": "v3.9.6",
+      "date": "2026-09-24"
+    },
+    "9d8dev/router": {
+      "version": "0.1.0 (package.json, no tagged GitHub release)",
+      "date": "unclear-no-tagged-release"
     }
   },
   "source_health": {
@@ -2190,8 +2235,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-23",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, ~40 requests across 8 parallel slot-1 topic searches plus deep-review metadata/releases/contributors/README/LICENSE checks on the shortlist, well under 8350/hr limit"
+      "last_ok": "2026-09-24",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries plus deep-review metadata/releases/contributors/README checks on a 6-candidate shortlist, well under 8350/hr limit"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
@@ -2202,8 +2247,8 @@
       "note": "checked imbue-mngr package version (0.2.17); confirmed it lags GitHub main by several months"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-22",
-      "note": "verified confdiff (0.17.4) and @rivet-dev/agentos (0.2.21) published versions match GitHub tags"
+      "last_ok": "2026-09-24",
+      "note": "cross-checked @kaelio/ktx (0.16.0) and @zenstackhq/cli (3.9.6) published versions against GitHub tags — both matched"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -2339,7 +2384,12 @@
     "agent-device-mobile-automation",
     "mngr-agent-fleet-manager",
     "paseo-agent-orchestrator",
-    "agentdock-mcp-runtime"
+    "agentdock-mcp-runtime",
+    "prismor-agent-runtime-security",
+    "ktx-agent-data-context-layer",
+    "open-mercato",
+    "zenstack-data-layer",
+    "router-so-form-backend"
   ],
-  "notes": "2026-09-23: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 266 % 7 + 1 = 1). Catalogued 4 new, all PROTOTYPE: agent-device (callstack/agent-device, MIT, 8.5 — mobile/cross-platform agent-driven UI automation and verification via accessibility-tree snapshots, real production usage at Expensify/Shopify), mngr (imbue-ai/mngr, MIT, 8.1 — 'git for agents' CLI for running many coding agents across hosts/containers via SSH+git+tmux, from Imbue), Paseo (getpaseo/paseo, Apache-2.0 despite GitHub API misreporting NOASSERTION, 7.8 — self-hosted multi-provider agent orchestration with desktop/web/mobile/CLI clients and voice control, a working example of the 'manage agents from my phone' product-opportunity pattern), AgentDock (uvwt/agentdock, Apache-2.0, 7.6 — MCP tool runtime giving agents cross-host file/shell/Git/browser access, flagged with an explicit security caution given the MSSP/PTaaS context). No meaningful updates found for previously catalogued projects this run. No Small but High-Leverage Utility qualified — today's finds were all orchestration/infrastructure plays; omitted rather than padded. Rejected ModelEngine-Group/nexent (marketing-heavy no-code agent platform), the RunMaestro/23blocks/stagewise agent-orchestration-IDE wave (Paseo/mngr were the differentiated entrants), and nexu-io/open-design (off-profile design-engine use case despite genuine multi-author traction, not a star-farm). Filed Dicklesworthstone/pi_agent_rust (well-engineered Rust CLI but overlapping with catalogued VTCode), MoonshotAI/kimi-code (lab-backed but undifferentiated CLI), and repoprompt/repoprompt-ce (interesting context-engineering architecture, macOS-only) as Worth Watching. 'Still Worth Trying' rotated to the agent-skills cluster (Vercel Labs skills, Benjamin-Plus Skill, ctx) since Monoscope/Dagu/OpenDataLoader PDF led yesterday and LibreDB Studio/Sidequest/Bernstein led the run before. Two GitHub-API license misreports (NOASSERTION) were caught and resolved by reading raw LICENSE files directly (Paseo = Apache-2.0, mngr = MIT) rather than trusting the API's automated classification — worth remembering that a preamble before standard license text can break GitHub's detector without changing the actual terms. Discovery relied on 8 parallel GitHub Search API topic queries (MCP servers, coding-agent CLIs, agent skills, context engineering, agent orchestration, code-review agents, AI coding productivity, MCP registries/gateways); WebSearch and HN not used, GitHub Search alone surfaced sufficient volume and several genuinely differentiated candidates for slot 1."
+  "notes": "2026-09-24: Single run, slot 2 (product infrastructure, APIs, backend components) per deterministic date formula (day_of_year 267 % 7 + 1 = 2). Catalogued 5 new, all PROTOTYPE: Prismor (PrismorSec/prismor, Apache-2.0, 8.3 — broadest self-hosted AI-agent runtime security/governance control plane found this run, covering prompt injection, supply-chain scanning, secrets cloaking, MCP gateway, IAM, and a signed OWASP-LLM-Top-10-mapped attestation bundle; directly relevant to both AI-agent use and the MSSP/PTaaS secondary context), ktx (Kaelio/ktx, Apache-2.0, 8.0 — YC-backed local context layer that teaches coding/data agents to query a Postgres/Mongo/etc. warehouse using approved metric definitions ingested from dbt/Looker/wiki sources), Open Mercato (open-mercato/open-mercato, MIT, 7.7 — TypeScript/Next.js 'AI-Engineering Foundation Framework' for multi-tenant CRM/ERP/commerce backends with explicit AI-coding-agent skills so agents know where generated code belongs; high open-issue count flagged as an early-stage-churn signal, not a disqualifier), and ZenStack (zenstackhq/zenstack, MIT, 7.6 — established TypeScript Prisma-compatible ORM with built-in declarative access control, flagged for its V3 rewrite replacing the Prisma engine with an in-house Kysely-based engine). Router.so (9d8dev/router, AGPL-3.0, 6.9) catalogued as this run's Small but High-Leverage Utility pick — a self-hostable headless form/lead-routing backend. No meaningful updates found for previously catalogued projects this run. Rejected kavinsood/yaos (marketed as a general Cloudflare-Worker sync engine but actually Obsidian-specific, same narrow-fit issue as optimike-obsidian-mcp), betterleaks (duplicate of catalogued Kingfisher), and achtungsoftware/alarik (inferior traction vs. catalogued RustFS). Filed getnao/nao (same 'analytics agent' niche as ktx, license unclear) and duncatzat/vigils (same niche as Prismor, smaller feature set) as Worth Watching. 'Still Worth Trying' rotated to the product-infrastructure cluster (Kingfisher, AdminForth, RustFS) to match today's slot, since the last three runs led with agent-skills, orchestration, and database-tooling clusters respectively. Discovery methodology shifted mid-run: an initial broad `in:readme,description` GitHub search sorted by `updated` proved too noisy (near-random matches) and was replaced with 12 `topic:`-scoped queries sorted by stars, which surfaced mostly already-mainstream incumbents (Kong, Airflow, Temporal, Grafana, Metabase, dozens of admin-dashboard templates, CRDT/auth libraries) plus the five genuinely differentiated candidates that were catalogued. WebSearch and HN not used this run; GitHub Search API alone was sufficient for slot 2."
 }

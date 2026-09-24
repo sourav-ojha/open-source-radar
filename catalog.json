@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -8039,6 +8039,310 @@
       ],
       "aliases": [],
       "notes": "Recommend trialing against a disposable sandbox/VM to evaluate the actual permission-boundary model before pointing at real infrastructure.",
+      "acted_on": false
+    },
+    {
+      "name": "Prismor",
+      "slug": "prismor-agent-runtime-security",
+      "repo_url": "https://github.com/PrismorSec/prismor",
+      "website": "https://prismor.dev",
+      "description": "Self-hosted runtime control plane for AI coding agents covering prompt-injection detection, supply-chain/IOC scanning, secrets cloaking, an MCP policy gateway, per-agent IAM, and a hash-chained signed audit trail, mapped to the OWASP LLM Top 10.",
+      "category": [
+        "AI & agent infrastructure",
+        "security / governance",
+        "MCP infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.3,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "No restrictions on commercial use, redistribution, or embedding. Optional 'Live Telemetry' enterprise control-plane link is opt-in.",
+      "deployment": [
+        "installed locally (pip)",
+        "self-hosted (local dashboard)",
+        "Docker"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP (gateway in front of other MCP servers)",
+        "LLM proxy (ANTHROPIC_BASE_URL/OPENAI_BASE_URL/Gemini HttpOptions)"
+      ],
+      "use_cases": [
+        "Front every MCP server behind a single policy-evaluated gateway so a poisoned tool result never reaches the model unscanned",
+        "Catch an agent reading .env/credential files mid-task and block outbound exfiltration (Sweep and Cloak)",
+        "Give each coding agent/subagent a named IAM identity and least-privilege profile when several share a workspace",
+        "Generate a signed attestation bundle (posture + agent inventory + OWASP LLM/NIST AI RMF/EU AI Act coverage) for a client security review",
+        "Onboard a team in observe-only mode first, then flip to enforce once the false-positive rate is known"
+      ],
+      "product_opportunities": [
+        "The attestation-bundle feature (compliance mapping + signed audit trail) is directly reusable in an MSSP/PTaaS practice as a checklist item, or even a resold service for clients adopting AI coding agents"
+      ],
+      "alternatives": [
+        "Preloop (catalogued 2026-09-09) - MCP firewall + cost/token gateway, narrower scope",
+        "Destructive Command Guard (catalogued) - command-pattern blocking only, no prompt-injection/supply-chain/IAM coverage",
+        "duncatzat/vigils (302 stars, Apache-2.0) - similar local control-plane pitch, much smaller feature set",
+        "halofyai/halofy (336 stars, AGPL-3.0) - governance-layer overlap but copyleft-licensed"
+      ],
+      "why_it_matters": "The broadest self-hosted AI-agent governance control plane found this run - prompt injection, supply-chain/IOC scanning, secrets cloaking, an MCP gateway, per-agent IAM, and a signed/verifiable audit trail in one Apache-2.0 tool, mapped explicitly to the OWASP LLM Top 10 - directly relevant to both day-to-day coding-agent use and the MSSP/PTaaS secondary context.",
+      "why_not_build_it_myself": "Prompt-injection scanning, IOC-based supply-chain risk scoring, and a hash-chained Ed25519-signed audit trail are specialized security engineering, not glue code.",
+      "risks": [
+        "Very young (created Feb 2026) with an unusually fast release cadence (v1.54.1 in 7 months) - feature surface is large and still moving, so pin a version and re-test before trusting enforce mode on anything important",
+        "Enforcement hooks sit in the critical path of every agent tool call - a bug or overly broad policy could break legitimate workflows, not just block bad ones; start in observe mode",
+        "Optional enterprise 'Live Telemetry' control-plane link exists - confirm it stays opt-in before enabling on anything client-facing"
+      ],
+      "first_seen": "2026-09-24",
+      "last_reviewed": "2026-09-24",
+      "last_meaningful_update": "2026-09-24",
+      "current_version": "v1.54.1",
+      "latest_release_date": "2026-09-17",
+      "source_links": [
+        "https://github.com/PrismorSec/prismor",
+        "https://prismor.dev"
+      ],
+      "aliases": [],
+      "notes": "Also ships as a PyPI package (pip install prismor); covers 15+ coding agents/harnesses (Claude Code, Codex, Cursor, Copilot, Gemini CLI, OpenCode, Aider, and more) plus framework SDKs (LangChain/LangGraph, CrewAI, Vercel AI SDK, Claude Agent SDK). Real multi-contributor project (top contributor 592 commits, several others 4-45), not a single-author repo.",
+      "acted_on": false
+    },
+    {
+      "name": "ktx",
+      "slug": "ktx-agent-data-context-layer",
+      "repo_url": "https://github.com/Kaelio/ktx",
+      "website": "https://docs.kaelio.com/ktx",
+      "description": "A self-improving, local-first context layer that teaches AI agents (Claude Code, Codex, Cursor) how to query a data warehouse accurately, combining raw-table introspection, existing semantic layers (dbt/LookML/Metabase), and wiki knowledge into one searchable CLI+MCP surface with approved, reusable metric definitions.",
+      "category": [
+        "AI & agent infrastructure",
+        "data / analytics",
+        "RAG / context engineering"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "No restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "installed locally (npm CLI)",
+        "self-hosted (local MCP daemon; no hosted service)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP"
+      ],
+      "use_cases": [
+        "Give a coding agent governed, reusable metric definitions for a Postgres/MongoDB production database instead of letting it invent SQL logic each session",
+        "Ingest wiki/Notion knowledge plus existing dbt/Looker/Metabase semantic layers into one searchable surface for agents",
+        "Flag contradictions across scattered business-logic sources (wiki vs. dbt vs. Looker) before an agent trusts one blindly",
+        "Read-only, local-first context layer for ad-hoc data-analysis agent workflows"
+      ],
+      "product_opportunities": [
+        "A plausible foundation for an 'ask your data' feature on an internal admin dashboard or client-facing reporting tool without hand-rolling a text-to-SQL pipeline"
+      ],
+      "alternatives": [
+        "Cube.js semantic layer",
+        "dbt Semantic Layer / MetricFlow",
+        "WrenAI (GenBI text-to-SQL)",
+        "getnao/nao - same 'analytics agent' niche, seen the same day, license unclear (NOASSERTION)"
+      ],
+      "why_it_matters": "Directly targets AI-agent leverage over his own Postgres/MongoDB data: turns a warehouse plus scattered docs into one MCP surface with approved, reusable metric definitions rather than letting agents reinvent SQL each session.",
+      "why_not_build_it_myself": "Join-graph resolution (chasm/fan traps), contradiction detection across wiki+dbt+Looker sources, and an MCP+CLI serving layer is real engineering most teams wouldn't build for one internal tool.",
+      "risks": [
+        "Young project (created May 2026, ~1,600 stars in 4.5 months) - no tagged GitHub/npm release since July 2026 despite continued commits through September; check `ktx status` output rather than assuming release parity",
+        "Collects opt-out usage telemetry (installs, command reliability) and separately routes crash reports through PostHog Error Tracking, which can include local file paths/username in stack traces - read the telemetry doc before pointing it at a sensitive project",
+        "Y Combinator-backed (P25) - worth watching whether the CLI stays free/open or a hosted tier gets pushed later"
+      ],
+      "first_seen": "2026-09-24",
+      "last_reviewed": "2026-09-24",
+      "last_meaningful_update": "2026-09-24",
+      "current_version": "v0.16.0",
+      "latest_release_date": "2026-07-03",
+      "source_links": [
+        "https://github.com/Kaelio/ktx",
+        "https://docs.kaelio.com/ktx"
+      ],
+      "aliases": [],
+      "notes": "Read-only by design (never writes to the warehouse); works with Postgres, MySQL, SQLite, MongoDB, Snowflake, BigQuery, ClickHouse, SQL Server, DuckDB, Athena.",
+      "acted_on": false
+    },
+    {
+      "name": "Open Mercato",
+      "slug": "open-mercato",
+      "repo_url": "https://github.com/open-mercato/open-mercato",
+      "website": "https://www.openmercato.com/",
+      "description": "Open-source TypeScript/Next.js 'AI-engineering foundation framework' for CRM/ERP/commerce backends: multi-tenant RBAC, modular domain entities, event subscribers, and dynamic forms already decided as conventions, plus AI-harness skills so coding agents know where generated code belongs.",
+      "category": [
+        "product infrastructure",
+        "AI & agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.7,
+      "maturity": "emerging",
+      "integration_effort": "high",
+      "license": "MIT",
+      "commercial_use_notes": "No restrictions; MIT, no per-seat pricing, full code ownership per README.",
+      "deployment": [
+        "self-hosted",
+        "Docker (infra containers for Postgres/Redis/Meilisearch)",
+        "installed locally"
+      ],
+      "interfaces": [
+        "REST/typed APIs (auto-generated per module)",
+        "CLI",
+        "web admin UI"
+      ],
+      "use_cases": [
+        "Bootstrap a multi-tenant B2B ordering portal, CPQ flow, or CRM backend from ready-made domain modules instead of building tenancy/RBAC/entities from scratch",
+        "Give a coding agent an opinionated module layout and spec-first conventions so multiple engineers get consistent output instead of each session re-deciding architecture",
+        "Stand up a customer/partner self-service portal with configurable dynamic forms and granular org-scoped permissions",
+        "Expose a headless API platform for a mobile/web app sharing one extensible data model"
+      ],
+      "product_opportunities": [
+        "A direct instance of 'idea to shippable paid product' leverage - a multi-tenant SaaS-ready CRM/ERP/commerce backend at 'start with 80% done' is exactly the kind of foundation that shortens a micro-SaaS build"
+      ],
+      "alternatives": [
+        "Hand-rolled Next.js + Prisma/Postgres scaffold (status quo)",
+        "Medusa.js (commerce-focused, less CRM/ERP breadth)",
+        "NocoBase (already mainstream, rejected 2026-09-20 - no-code rather than code-first)",
+        "Frappe/ERPNext (Python stack, not TypeScript)"
+      ],
+      "why_it_matters": "Squarely targets the 'shorten the path from idea to a shippable paid product' axis with a TypeScript/Next.js stack already in use, plus an explicit answer to the 'AI agent writes code but doesn't know where it goes' problem multiple engineers hit when sharing a codebase with coding agents.",
+      "why_not_build_it_myself": "Multi-tenant RBAC, per-module migrations, dynamic custom-entity/form definitions, and CRM/ERP domain modules are weeks of scaffolding most solo/small-team builds skip and regret later.",
+      "risks": [
+        "1,241 open issues against 1,769 stars is an unusually high ratio for a ~1-year-old project - verified as real multi-contributor activity (top 5 contributors have 240-3,367 commits each, not a single-author star farm), but signals early-stage churn rather than settled stability",
+        "High integration effort: adopting means committing to its module/DI/ORM conventions (MikroORM, Awilix), not a library dropped into an existing app",
+        "Young (created Sept 2025) relative to the architectural commitment it asks for"
+      ],
+      "first_seen": "2026-09-24",
+      "last_reviewed": "2026-09-24",
+      "last_meaningful_update": "2026-09-24",
+      "current_version": "v0.8.0",
+      "latest_release_date": "2026-09-18",
+      "source_links": [
+        "https://github.com/open-mercato/open-mercato",
+        "https://www.openmercato.com/",
+        "https://demo.openmercato.com"
+      ],
+      "aliases": [],
+      "notes": "Quick start is `npx @open-mercato/starter`; requires Docker/Rancher Desktop for infra containers (Postgres, Redis, Meilisearch).",
+      "acted_on": false
+    },
+    {
+      "name": "ZenStack",
+      "slug": "zenstack-data-layer",
+      "repo_url": "https://github.com/zenstackhq/zenstack",
+      "website": "https://zenstack.dev",
+      "description": "TypeScript data layer for Node.js/Bun apps: a schema-first ORM compatible with Prisma's schema/API, with built-in declarative access control, automatic CRUD API generation (with framework adapters), TanStack Query hooks, and a Kysely-based query builder as a typed escape hatch.",
+      "category": [
+        "product infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "No restrictions.",
+      "deployment": [
+        "embedded as a library (Node.js/Bun)",
+        "installed locally"
+      ],
+      "interfaces": [
+        "TypeScript ORM API",
+        "auto-generated CRUD REST APIs (framework adapters)",
+        "TanStack Query hooks"
+      ],
+      "use_cases": [
+        "Replace hand-written per-endpoint authorization checks with declarative access-control policies co-located in the schema",
+        "Generate typed CRUD APIs plus TanStack Query hooks straight from a Prisma-compatible schema for a Node/React app",
+        "Use the Kysely-based low-level query builder as an escape hatch instead of raw SQL when the ORM layer isn't enough",
+        "Adopt polymorphism and advanced data-modeling patterns not available in stock Prisma"
+      ],
+      "product_opportunities": [
+        "Cuts real backend-boilerplate time on every new product's data layer, especially multi-tenant SaaS work where access-control policy sprawl across endpoints is a recurring source of bugs"
+      ],
+      "alternatives": [
+        "Plain Prisma + hand-written guards (status quo)",
+        "Supabase Row-Level Security (Postgres-specific, ties the app to Supabase's Postgres)",
+        "CASL / Casbin (authorization-only, no ORM/API generation)",
+        "Hasura (GraphQL-first, heavier infra footprint)"
+      ],
+      "why_it_matters": "Directly reduces backend boilerplate on a stack already in use (TypeScript/Node, Prisma-adjacent) - specifically the access-control logic that's easy to get subtly wrong per-endpoint.",
+      "why_not_build_it_myself": "Schema-driven access-control-policy compilation plus automatic typed CRUD API and query-hook generation is a compiler/codegen problem, not a weekend wrapper.",
+      "risks": [
+        "V3 is a ground-up rewrite (replaced the Prisma engine with an in-house Kysely-based engine, per the project's own blog post) released this year - less battle-tested than the V2 lineage that built the 2,945-star base",
+        "Tied to Prisma-style relational schemas; doesn't help with MongoDB-native access patterns",
+        "Smaller sponsor-funded team; check open-issue response time before depending on it for anything time-critical"
+      ],
+      "first_seen": "2026-09-24",
+      "last_reviewed": "2026-09-24",
+      "last_meaningful_update": "2026-09-24",
+      "current_version": "v3.9.6",
+      "latest_release_date": "2026-09-24",
+      "source_links": [
+        "https://github.com/zenstackhq/zenstack",
+        "https://zenstack.dev"
+      ],
+      "aliases": [],
+      "notes": "Created 2022; established project with a Discord community and named sponsors, not a brand-new entrant - flagged this run for the V3 rewrite (Prisma engine -> in-house Kysely-based engine) rather than as a fresh discovery.",
+      "acted_on": false
+    },
+    {
+      "name": "Router.so",
+      "slug": "router-so-form-backend",
+      "repo_url": "https://github.com/9d8dev/router",
+      "website": "https://router.so",
+      "description": "Self-hostable, headless form handling and lead-routing backend for marketing sites and micro-SaaS landing pages, with an optional hosted form UI, a WordPress block/shortcode, and Resend-based email delivery.",
+      "category": [
+        "product infrastructure",
+        "small high-leverage utilities"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 - self-hosting and internal/product-embedded use are unrestricted, but a modified, network-accessible version offered as a hosted service to third parties must have its source made available (standard AGPL network-use clause). Flag before reselling a modified hosted version.",
+      "deployment": [
+        "self-hosted (Vercel or Docker)",
+        "installed locally"
+      ],
+      "interfaces": [
+        "headless REST endpoint",
+        "hosted form UI (forms.router.so)",
+        "WordPress block/shortcode"
+      ],
+      "use_cases": [
+        "Self-hosted replacement for Formspree/Basin/Getform-style form-to-email SaaS on landing pages and micro-SaaS MVPs",
+        "Lead routing/capture backend for a marketing site without paying a per-submission SaaS fee",
+        "Embed the included form UI directly, or keep the headless endpoint contract and build a custom frontend",
+        "Drop into an existing WordPress site via the included block/shortcode"
+      ],
+      "product_opportunities": [
+        "A small, boring, always-needed piece (contact/lead form backend) worth owning outright across every side project and client micro-SaaS instead of adding another monthly SaaS line item"
+      ],
+      "alternatives": [
+        "Formspree, Basin, Getform (hosted SaaS)",
+        "n8n webhook + email node (excluded mainstream, heavier for this one job)"
+      ],
+      "why_it_matters": "A narrow, always-needed utility - every landing page or MVP needs a form backend, and this is a small enough surface to self-host with confidence instead of adding a recurring SaaS bill.",
+      "why_not_build_it_myself": "It's a genuinely small build, but exactly the kind of 'not worth my time re-building' utility this radar exists to catch - Resend integration, spam handling, and the WordPress embed path are already done.",
+      "risks": [
+        "AGPL-3.0 - loud flag per licensing policy; fine self-hosted/internal, relevant if ever offered as a hosted service to others",
+        "No tagged GitHub release (still on package.json version 0.1.0) despite being pushed to as recently as 2026-09-11 - track main branch stability directly rather than assuming semver discipline",
+        "Small maintainer base (2 primary contributors)"
+      ],
+      "first_seen": "2026-09-24",
+      "last_reviewed": "2026-09-24",
+      "last_meaningful_update": "2026-09-24",
+      "current_version": "0.1.0 (package.json; no tagged GitHub release)",
+      "latest_release_date": "unclear-no-tagged-release",
+      "source_links": [
+        "https://github.com/9d8dev/router",
+        "https://router.so"
+      ],
+      "aliases": [],
+      "notes": "Featured as this run's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]
