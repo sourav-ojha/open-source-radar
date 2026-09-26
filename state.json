@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-25",
-  "last_successful_run": "2026-09-25",
-  "run_count": 30,
-  "rotation_slot_last_used": 3,
+  "last_run": "2026-09-26",
+  "last_successful_run": "2026-09-26",
+  "run_count": 31,
+  "rotation_slot_last_used": 4,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -28,30 +28,31 @@
     "agent decision/coordination ledgers",
     "MCP/agent governance and firewalls",
     "deterministic code-graph context for agents",
-    "product infrastructure \u2014 webhooks, email gateway, object storage, product analytics",
+    "product infrastructure — webhooks, email gateway, object storage, product analytics",
     "server-side HTTP traffic inspection (Node/Next.js)",
     "AI-agent runtime verification / self-check",
     "code search for agents (low-token retrieval)",
     "terminal database workbench with MCP server",
     "document parsing / vector databases / AEO-GEO / graph+vector agent memory",
-    "self-hosted SaaS alternatives \u2014 CRM, project management, billing infra (with AI-agent access as first-class feature)",
+    "self-hosted SaaS alternatives — CRM, project management, billing infra (with AI-agent access as first-class feature)",
     "self-hosted error tracking / Sentry alternatives",
     "single-binary infrastructure monitoring",
     "coding-agent orchestration / parallel terminal managers",
     "self-hosted deployment platforms (saturated wave)",
     "self-hosted incident management / status pages (saturated wave)",
     "Kubernetes cost optimization",
-    "experimental/hidden gems \u2014 AI-agent personal clouds, WASM agent sandboxes, pentest agent harness, self-hosted email",
+    "experimental/hidden gems — AI-agent personal clouds, WASM agent sandboxes, pentest agent harness, self-hosted email",
     "agent task graphs / multimodal knowledge graphs / agent runtime hygiene (compression, sandboxing, artifact security)",
-    "product infrastructure \u2014 file-processing suite, usage-based billing, cert/secret expiration management, self-hosted S3 storage",
+    "product infrastructure — file-processing suite, usage-based billing, cert/secret expiration management, self-hosted S3 storage",
     "agent debugging infrastructure (MCP debuggers, agent-run time-travel replay), destructive-command safety hooks, coding-agent session search, codebase intelligence/docs+dead-code+MCP",
-    "documents/RAG infra \u2014 polyglot document-intelligence engine, Postgres BM25 search, permission-aware enterprise RAG, self-hosted Firecrawl/Tavily-compatible crawler",
-    "self-hosted SaaS alternatives \u2014 agent-native project management, minimal Linear/Jira alternative, omnichannel helpdesk, freelance time-tracking, GitHub-stars organizer",
-    "infrastructure/observability/deployment \u2014 SSH-native multi-host log TUI, Docker-Compose-scoped GitOps, S3-backed logs/traces, database schema governance with agent-facing MCP surface",
-    "experimental/hidden gems \u2014 in-process agent sandboxing (WASM/V8), browser-native agent harness, LLM-driven cloud security audit agents, TUI rendering kernel, semantic config diff",
-    "AI agent infrastructure \u2014 agent fleet management (mngr, Paseo), mobile/cross-platform agent-driven UI verification (agent-device), multi-host infra operation runtime (AgentDock)",
-    "product infrastructure \u2014 AI-agent runtime security/governance, agent context layer for data warehouses, AI-engineering foundation framework for CRM/ERP, TypeScript data-access layer with built-in access control, self-hosted form backend",
-    "developer utilities/debugging/testing \u2014 NestJS Telescope-style debugging dashboard, local code-intelligence MCP servers (crowded niche), self-hosted multi-repo code search + Q&A, terminal API client with SSH/k8s tunnels, offline AI-coding cost analytics"
+    "documents/RAG infra — polyglot document-intelligence engine, Postgres BM25 search, permission-aware enterprise RAG, self-hosted Firecrawl/Tavily-compatible crawler",
+    "self-hosted SaaS alternatives — agent-native project management, minimal Linear/Jira alternative, omnichannel helpdesk, freelance time-tracking, GitHub-stars organizer",
+    "infrastructure/observability/deployment — SSH-native multi-host log TUI, Docker-Compose-scoped GitOps, S3-backed logs/traces, database schema governance with agent-facing MCP surface",
+    "experimental/hidden gems — in-process agent sandboxing (WASM/V8), browser-native agent harness, LLM-driven cloud security audit agents, TUI rendering kernel, semantic config diff",
+    "AI agent infrastructure — agent fleet management (mngr, Paseo), mobile/cross-platform agent-driven UI verification (agent-device), multi-host infra operation runtime (AgentDock)",
+    "product infrastructure — AI-agent runtime security/governance, agent context layer for data warehouses, AI-engineering foundation framework for CRM/ERP, TypeScript data-access layer with built-in access control, self-hosted form backend",
+    "developer utilities/debugging/testing — NestJS Telescope-style debugging dashboard, local code-intelligence MCP servers (crowded niche), self-hosted multi-repo code search + Q&A, terminal API client with SSH/k8s tunnels, offline AI-coding cost analytics",
+    "data/search/documents/RAG — coding-agent context layers (Graft), incremental RAG indexing engines (CocoIndex), AI-native agent state stores (seekdb), embeddable hybrid search (FrankenSearch), governed database-to-MCP gateways (DatI)"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1120,528 +1121,611 @@
     "schemathesis/schemathesis",
     "flupkede/codesearch",
     "nassim-arifette/jevgrep",
-    "bgts-ai-org/bgts-context-engine"
+    "bgts-ai-org/bgts-context-engine",
+    "cocoindex-io/cocoindex",
+    "trailhq/Graft",
+    "infino-ai/infino",
+    "oceanbase/seekdb",
+    "Dicklesworthstone/frankensearch",
+    "Amal-David/docingest",
+    "Tencent/WeKnora",
+    "yimindev/dati",
+    "galaxy-io/filament",
+    "wlsdks/ontology-atlas",
+    "geolens-io/geolens",
+    "sdsrss/code-graph-mcp",
+    "ScriptedAlchemy/tracedecay",
+    "cognica-io/uqa-engine",
+    "malloydata/publisher",
+    "avison9/cdclint",
+    "pt9912/pg-change-feed",
+    "get-dst/dst"
   ],
   "rejected": [
     {
       "repo_url": "https://github.com/supermemoryai/markdowner",
-      "reason": "abandoned \u2014 pushed_at 2024-07-21 despite 1999 stars; no commits in 2+ years",
+      "reason": "abandoned — pushed_at 2024-07-21 despite 1999 stars; no commits in 2+ years",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/paulund/viewhook",
-      "reason": "abandoned \u2014 repo is archived (archived: true) despite web listings describing it as an active self-hosted webhook debugger",
+      "reason": "abandoned — repo is archived (archived: true) despite web listings describing it as an active self-hosted webhook debugger",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/billabear/billabear",
-      "reason": "unclear licensing \u2014 Fair Core License (FCL-1.0-ALv2), not an OSI open-source license, restricts competing hosted offerings; also stale (last tagged release 2025-02, 1.5+ years old) against more mature alternatives (Lago, Kill Bill) already known",
+      "reason": "unclear licensing — Fair Core License (FCL-1.0-ALv2), not an OSI open-source license, restricts competing hosted offerings; also stale (last tagged release 2025-02, 1.5+ years old) against more mature alternatives (Lago, Kill Bill) already known",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/huextrat/openflags",
-      "reason": "immature/inactive \u2014 15 stars, no commits since 2026-03-14 (5+ months), redundant with established self-hosted feature-flag options (GO Feature Flag, Flipt, GrowthBook)",
+      "reason": "immature/inactive — 15 stars, no commits since 2026-03-14 (5+ months), redundant with established self-hosted feature-flag options (GO Feature Flag, Flipt, GrowthBook)",
       "date": "2026-08-29"
     },
     {
       "repo_url": "https://github.com/beizhu-1209/AIHelms",
-      "reason": "unclear licensing/documentation \u2014 GPL-3.0 enterprise AI resource-management gateway, README primarily in Chinese, thin differentiation from established model gateways without deeper investigation",
+      "reason": "unclear licensing/documentation — GPL-3.0 enterprise AI resource-management gateway, README primarily in Chinese, thin differentiation from established model gateways without deeper investigation",
       "date": "2026-08-30"
     },
     {
       "repo_url": "https://github.com/CloakHQ/CloakBrowser",
-      "reason": "duplicate \u2014 representative of a saturated 'stealth headless browser for AI agents' wave (CloakBrowser, obscura, browser-harness, ego-lite, camofox-browser all launched/pushed in the same window with near-identical positioning and no clear technical differentiation without hands-on testing)",
+      "reason": "duplicate — representative of a saturated 'stealth headless browser for AI agents' wave (CloakBrowser, obscura, browser-harness, ego-lite, camofox-browser all launched/pushed in the same window with near-identical positioning and no clear technical differentiation without hands-on testing)",
       "date": "2026-08-30"
     },
     {
       "repo_url": "https://github.com/sandbaseai/sandbase-harness",
-      "reason": "marketing-driven \u2014 README devotes ~25 lines to links into what looks like a coordinated network of SEO/backlink directory sites (DSH Plugin Hub/Market/Packs/X-Ray/base, multiple near-duplicate 'Awesome DeepSeek Harness' lists) plus repeated in-README self-star prompts; only 3 contributors, one dominant, despite 637 stars",
+      "reason": "marketing-driven — README devotes ~25 lines to links into what looks like a coordinated network of SEO/backlink directory sites (DSH Plugin Hub/Market/Packs/X-Ray/base, multiple near-duplicate 'Awesome DeepSeek Harness' lists) plus repeated in-README self-star prompts; only 3 contributors, one dominant, despite 637 stars",
       "date": "2026-08-30"
     },
     {
       "repo_url": "https://github.com/StuMason/coolify-mcp",
-      "reason": "thin wrapper / niche \u2014 Coolify-specific MCP add-on, only useful if Coolify itself is adopted, which it is not currently",
+      "reason": "thin wrapper / niche — Coolify-specific MCP add-on, only useful if Coolify itself is adopted, which it is not currently",
       "date": "2026-08-31"
     },
     {
       "repo_url": "https://github.com/Resetnak/cooldeck",
-      "reason": "thin wrapper / niche \u2014 Coolify-specific terminal dashboard, same reasoning as coolify-mcp",
+      "reason": "thin wrapper / niche — Coolify-specific terminal dashboard, same reasoning as coolify-mcp",
       "date": "2026-08-31"
     },
     {
       "repo_url": "self-hosted PaaS wave (otterdeploy, kubeara/core, appaloft, acidtib/jiji, UpstandPlatform/upstand, ARTFROST1/FreimDeploy, fusuyfusuy/pikpik, piperbox/piper, DeploCloud/deplo, harsharahul/docklets, glincker/levelrail, 6454934/pinqops, nima-salamat/django-paas-deployer, nima-salamat/react-paas-deployer)",
-      "reason": "duplicate/hype wave \u2014 over a dozen near-identical 'self-hosted Coolify/Dokploy alternative' repos pushed within 24-48 hours of each other, almost all under 20 stars, no differentiation from already-known incumbents",
+      "reason": "duplicate/hype wave — over a dozen near-identical 'self-hosted Coolify/Dokploy alternative' repos pushed within 24-48 hours of each other, almost all under 20 stars, no differentiation from already-known incumbents",
       "date": "2026-08-31"
     },
     {
       "repo_url": "https://github.com/MartinCrespoC/Security-Team---Workspace-",
-      "reason": "abandoned/unclear licensing \u2014 Show HN listed as 'Eatheria' self-hosted AppSec platform but underlying repo (3 stars) has license 'Other'/NOASSERTION (not a real OSS license) and pushed_at 2026-05-07, ~4 months stale",
+      "reason": "abandoned/unclear licensing — Show HN listed as 'Eatheria' self-hosted AppSec platform but underlying repo (3 stars) has license 'Other'/NOASSERTION (not a real OSS license) and pushed_at 2026-05-07, ~4 months stale",
       "date": "2026-09-01"
     },
     {
       "repo_url": "https://github.com/protocorn/clippy-vision",
-      "reason": "inferior to catalogued-class alternative \u2014 local screen-memory/AI-context-capture space already has a more mature, better-known incumbent (Screenpipe, YC-backed) plus OpenRecall; Clippy Vision (13 stars) shows no clear differentiation",
+      "reason": "inferior to catalogued-class alternative — local screen-memory/AI-context-capture space already has a more mature, better-known incumbent (Screenpipe, YC-backed) plus OpenRecall; Clippy Vision (13 stars) shows no clear differentiation",
       "date": "2026-09-01"
     },
     {
       "repo_url": "https://github.com/mtford90/revue",
-      "reason": "immature \u2014 5 stars, single contributor, 1 month old, narrated terminal code-review concept promising but unproven",
+      "reason": "immature — 5 stars, single contributor, 1 month old, narrated terminal code-review concept promising but unproven",
       "date": "2026-09-02"
     },
     {
       "repo_url": "https://github.com/lna-lab/distill-kura",
-      "reason": "immature/narrow ecosystem fit \u2014 no tagged release, 34 stars, 12 days old, ships primarily as a DeepSeek Harness plugin",
+      "reason": "immature/narrow ecosystem fit — no tagged release, 34 stars, 12 days old, ships primarily as a DeepSeek Harness plugin",
       "date": "2026-09-02"
     },
     {
       "repo_url": "https://github.com/DrDroidLab/marmot",
-      "reason": "too new to evaluate \u2014 1 day old at review, 5 stars, no releases",
+      "reason": "too new to evaluate — 1 day old at review, 5 stars, no releases",
       "date": "2026-09-02"
     },
     {
       "repo_url": "https://github.com/Hardonian/JobForge",
-      "reason": "duplicate \u2014 same 'Postgres-native, no-Redis job queue' pitch as stablemates/workhorse (flagged Worth Watching today), 0 stars, no differentiation, niche already covered by catalogued Sidequest",
+      "reason": "duplicate — same 'Postgres-native, no-Redis job queue' pitch as stablemates/workhorse (flagged Worth Watching today), 0 stars, no differentiation, niche already covered by catalogued Sidequest",
       "date": "2026-09-03"
     },
     {
       "repo_url": "self-hosted feature-flag micro-wave (basb7/flagward, AndersonEns/flagworks, matt-riley/flagz, others)",
-      "reason": "duplicate \u2014 self-hosted feature-flag niche already covered by catalogued Nona (nona-config), 0-3 stars each, no meaningful differentiation; flagz additionally GPL-3.0",
+      "reason": "duplicate — self-hosted feature-flag niche already covered by catalogued Nona (nona-config), 0-3 stars each, no meaningful differentiation; flagz additionally GPL-3.0",
       "date": "2026-09-03"
     },
     {
       "repo_url": "https://github.com/DFKHelper/token-goat",
-      "reason": "unclear/restrictive licensing \u2014 PolyForm Noncommercial 1.0.0, not an OSI open-source license, explicitly bars commercial use",
+      "reason": "unclear/restrictive licensing — PolyForm Noncommercial 1.0.0, not an OSI open-source license, explicitly bars commercial use",
       "date": "2026-09-04"
     },
     {
       "repo_url": "https://github.com/fixture-dev (flawd)",
-      "reason": "not actually open source \u2014 org only publishes binary releases (flawd-releases, flawd-study-fixtures), no source repository found",
+      "reason": "not actually open source — org only publishes binary releases (flawd-releases, flawd-study-fixtures), no source repository found",
       "date": "2026-09-04"
     },
     {
       "repo_url": "api-evangelist org (tensorlake, reducto, mindee, parseur, parsio, llamacloud, llamaparse, doctly-ai, docparser, schemasure, pdf-co, infly, etc.)",
-      "reason": "not actually a project \u2014 each repo is an auto-generated 'independent third-party profile of a public API surface,' documentation about someone else's product, not usable software",
+      "reason": "not actually a project — each repo is an auto-generated 'independent third-party profile of a public API surface,' documentation about someone else's product, not usable software",
       "date": "2026-09-05"
     },
     {
       "repo_url": "linny006/rag-radar and linny006/vector-db-live",
-      "reason": "duplicate/marketing \u2014 self-described 'live tracker' meta-repos that scrape and relist other RAG/vector-DB projects on a timer rather than being tools themselves",
+      "reason": "duplicate/marketing — self-described 'live tracker' meta-repos that scrape and relist other RAG/vector-DB projects on a timer rather than being tools themselves",
       "date": "2026-09-05"
     },
     {
       "repo_url": "https://github.com/optimikelabs/optimike-obsidian-mcp",
-      "reason": "inferior fit \u2014 sophisticated governed MCP server for Obsidian vaults, but Obsidian is not part of this profile's toolchain, narrow fit doesn't justify a deep review",
+      "reason": "inferior fit — sophisticated governed MCP server for Obsidian vaults, but Obsidian is not part of this profile's toolchain, narrow fit doesn't justify a deep review",
       "date": "2026-09-05"
     },
     {
       "repo_url": "https://github.com/twentyhq/twenty",
-      "reason": "already mainstream \u2014 56,316-star self-hosted CRM widely known in self-hosted circles, no material new development flagged this run",
+      "reason": "already mainstream — 56,316-star self-hosted CRM widely known in self-hosted circles, no material new development flagged this run",
       "date": "2026-09-06"
     },
     {
       "repo_url": "https://github.com/fosrl/pangolin",
-      "reason": "already mainstream \u2014 22,634-star self-hosted tunnel/networking platform; Show HN post repurposing it for LLM access via SSO+WireGuard is a use-case writeup, not a new capability",
+      "reason": "already mainstream — 22,634-star self-hosted tunnel/networking platform; Show HN post repurposing it for LLM access via SSO+WireGuard is a use-case writeup, not a new capability",
       "date": "2026-09-06"
     },
     {
       "repo_url": "https://github.com/authorizerdev/authorizer",
-      "reason": "crowded/mature niche \u2014 self-hosted auth space already covered by Keycloak (excluded per spec) plus Ory Kratos/Authelia/SuperTokens/Zitadel, no clear differentiation surfaced",
+      "reason": "crowded/mature niche — self-hosted auth space already covered by Keycloak (excluded per spec) plus Ory Kratos/Authelia/SuperTokens/Zitadel, no clear differentiation surfaced",
       "date": "2026-09-06"
     },
     {
       "repo_url": "bensblueprints/* wave (boardly-kanban-mvp, receipt-scanner-expense-mvp, budget-planner-personal-mvp, uptime-monitor-mvp, and ~15 more)",
-      "reason": "marketing/portfolio dump \u2014 same-day zero-star '-mvp' template repos from one account, no differentiation",
+      "reason": "marketing/portfolio dump — same-day zero-star '-mvp' template repos from one account, no differentiation",
       "date": "2026-09-06"
     },
     {
       "repo_url": "https://github.com/mustbeperfect/definitive-opensource",
-      "reason": "directory not tool \u2014 a curated list of open-source alternatives, not installable software itself",
+      "reason": "directory not tool — a curated list of open-source alternatives, not installable software itself",
       "date": "2026-09-06"
     },
     {
       "repo_url": "https://github.com/genspark-ai/genoffice",
-      "reason": "misaligned with profile \u2014 consumer end-user Office app, not a dev/product-building tool despite high star count and recency; filed as Worth Watching instead of rejected outright",
+      "reason": "misaligned with profile — consumer end-user Office app, not a dev/product-building tool despite high star count and recency; filed as Worth Watching instead of rejected outright",
       "date": "2026-09-06"
     },
     {
       "repo_url": "https://github.com/openobserve/openobserve",
-      "reason": "already mainstream \u2014 21,669-star observability platform (logs/metrics/traces/RUM), established since 2023, well outside 'undiscovered' territory; no material new development flagged this run",
+      "reason": "already mainstream — 21,669-star observability platform (logs/metrics/traces/RUM), established since 2023, well outside 'undiscovered' territory; no material new development flagged this run",
       "date": "2026-09-07"
     },
     {
       "repo_url": "minimalist-container-orchestrator niche (mario-ezquerro/gubernator, simplecontainer/smr)",
-      "reason": "duplicate/immature \u2014 both pitch a lightweight Kubernetes alternative; gubernator is 23 stars/GPL-3.0/4 months old, smr is 90 stars/GPL-3.0/stale (pushed 2026-06-05); rk8s-dev/rk8s covers the same architecture idea with more traction, filed as Worth Watching instead",
+      "reason": "duplicate/immature — both pitch a lightweight Kubernetes alternative; gubernator is 23 stars/GPL-3.0/4 months old, smr is 90 stars/GPL-3.0/stale (pushed 2026-06-05); rk8s-dev/rk8s covers the same architecture idea with more traction, filed as Worth Watching instead",
       "date": "2026-09-07"
     },
     {
       "repo_url": "https://github.com/remorses/sigillo",
-      "reason": "unclear licensing \u2014 README claims 'MIT licensed' but no LICENSE file exists in the repo (confirmed via 404s on LICENSE/LICENSE.md and GitHub API license:null); also self-hosting is tied specifically to Cloudflare Workers + D1, not a generic Docker self-host; filed as Worth Watching pending clarification",
+      "reason": "unclear licensing — README claims 'MIT licensed' but no LICENSE file exists in the repo (confirmed via 404s on LICENSE/LICENSE.md and GitHub API license:null); also self-hosting is tied specifically to Cloudflare Workers + D1, not a generic Docker self-host; filed as Worth Watching pending clarification",
       "date": "2026-09-07"
     },
     {
       "repo_url": "https://github.com/MikkoParkkola/mcp-gateway",
-      "reason": "unclear/restrictive licensing \u2014 mixed per-file license; the runnable gateway core is PolyForm Noncommercial 1.0.0 (only files with an explicit MIT SPDX header are MIT), so commercial use requires a paid license despite the MIT badge in search results \u2014 same class of issue as DFKHelper/token-goat (2026-09-04)",
+      "reason": "unclear/restrictive licensing — mixed per-file license; the runnable gateway core is PolyForm Noncommercial 1.0.0 (only files with an explicit MIT SPDX header are MIT), so commercial use requires a paid license despite the MIT badge in search results — same class of issue as DFKHelper/token-goat (2026-09-04)",
       "date": "2026-09-09"
     },
     {
       "repo_url": "agent-memory wave (okf-agent-memory, metronix-memory, sivtr, dense-mem, memorizer, cass_memory_system, total-agent-memory, RecallWeave, zenbrain, Zengram, inite-brain-service, and dozens more, all pushed within the same ~24h window)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical 'persistent memory for AI coding agents' repos surfaced in one discovery pass with overlapping pitches (temporal knowledge graphs, MCP memory servers, spaced-repetition/consolidation framing); niche already covered by catalogued mex; inite-brain-service filed separately as Worth Watching for its bitemporal-graph architecture despite AGPL-3.0",
+      "reason": "duplicate/hype wave — dozens of near-identical 'persistent memory for AI coding agents' repos surfaced in one discovery pass with overlapping pitches (temporal knowledge graphs, MCP memory servers, spaced-repetition/consolidation framing); niche already covered by catalogued mex; inite-brain-service filed separately as Worth Watching for its bitemporal-graph architecture despite AGPL-3.0",
       "date": "2026-09-09"
     },
     {
       "repo_url": "MCP gateway wave (smg, sbproxy, llmkit, gridctl, NyxID, Opendray, lnwjud, aliangboard, 1flowbase, cmcp, and others, all pushed within the same ~24h window)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical 'MCP/AI gateway with budgets and multi-provider routing' repos; niche already covered by catalogued anythingmcp and mcp-compressor without clear differentiation from any single new entry",
+      "reason": "duplicate/hype wave — dozens of near-identical 'MCP/AI gateway with budgets and multi-provider routing' repos; niche already covered by catalogued anythingmcp and mcp-compressor without clear differentiation from any single new entry",
       "date": "2026-09-09"
     },
     {
       "repo_url": "R44VC0RP/opensend",
-      "reason": "too new to evaluate \u2014 created the day before review, 0 issues, no license file at time of review",
+      "reason": "too new to evaluate — created the day before review, 0 issues, no license file at time of review",
       "date": "2026-09-10"
     },
     {
       "repo_url": "Notifuse/notifuse",
-      "reason": "unclear/restrictive licensing \u2014 Business Source License 1.1 (BSL), not an OSI open-source license, same issue class as billabear (2026-08-29); self-hosted email-sending niche already better covered by posthorn (Apache-2.0)",
+      "reason": "unclear/restrictive licensing — Business Source License 1.1 (BSL), not an OSI open-source license, same issue class as billabear (2026-08-29); self-hosted email-sending niche already better covered by posthorn (Apache-2.0)",
       "date": "2026-09-10"
     },
     {
       "repo_url": "savvyagents/larasend and self-hosted-SES-email wave (reloop-labs/reloop)",
-      "reason": "duplicate/inferior fit \u2014 same 'self-hosted transactional email via AWS SES' pitch as posthorn (catalogued today) but narrower (Laravel-specific for larasend) or thinner docs (reloop); posthorn's provider-agnostic three-ingress design and docs site were clearly more complete",
+      "reason": "duplicate/inferior fit — same 'self-hosted transactional email via AWS SES' pitch as posthorn (catalogued today) but narrower (Laravel-specific for larasend) or thinner docs (reloop); posthorn's provider-agnostic three-ingress design and docs site were clearly more complete",
       "date": "2026-09-10"
     },
     {
       "repo_url": "tigrisdata/storage",
-      "reason": "not actually self-hostable \u2014 repo is only client SDKs (JS/TS, CLI, React hooks) for Tigris's proprietary hosted object-storage service, not installable software itself",
+      "reason": "not actually self-hostable — repo is only client SDKs (JS/TS, CLI, React hooks) for Tigris's proprietary hosted object-storage service, not installable software itself",
       "date": "2026-09-10"
     },
     {
       "repo_url": "AI/LLM gateway wave (gpt-load, control-layer, modelship, voidllm, qwengate, Gozar, aurora, and others surfaced under an 'api gateway' search)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical 'self-hosted multi-provider LLM/AI gateway' repos; niche already covered by catalogued anythingmcp, mcp-compressor, Preloop without clear differentiation from any single new entry today",
+      "reason": "duplicate/hype wave — dozens of near-identical 'self-hosted multi-provider LLM/AI gateway' repos; niche already covered by catalogued anythingmcp, mcp-compressor, Preloop without clear differentiation from any single new entry today",
       "date": "2026-09-10"
     },
     {
       "repo_url": "webhook-debugging/inspection wave (webhook-tester, webhook-debugger-logger, inhook, webhook-debugger x2, stripeek, request-catcher, brancogao/webhook-debugger)",
-      "reason": "duplicate/immature \u2014 saturated 'capture and replay webhooks' niche, all under 150 stars, no standout maturity; prior entry in this niche (viewhook) was found archived/abandoned on 2026-08-29, so treating the whole niche with caution until one entry proves durable",
+      "reason": "duplicate/immature — saturated 'capture and replay webhooks' niche, all under 150 stars, no standout maturity; prior entry in this niche (viewhook) was found archived/abandoned on 2026-08-29, so treating the whole niche with caution until one entry proves durable",
       "date": "2026-09-10"
     },
     {
       "repo_url": "https://github.com/sworrl/ClAudit",
-      "reason": "privacy risk / community-advocacy tool, not personal productivity \u2014 auto-files public GitHub issues from LLM-PII-scrubbed local Claude Code session transcripts; trusting the scrubber before automated public posting is the concerning part, not the license (GPL-3.0)",
+      "reason": "privacy risk / community-advocacy tool, not personal productivity — auto-files public GitHub issues from LLM-PII-scrubbed local Claude Code session transcripts; trusting the scrubber before automated public posting is the concerning part, not the license (GPL-3.0)",
       "date": "2026-09-11"
     },
     {
       "repo_url": "code-search-for-agents hype wave (octocode, codesage, githits-cli, open-codebase-index, code-index-mcp, Argyph, file-scanner-mcp, bifrost, and a dozen more surfaced in one GitHub search pass)",
-      "reason": "duplicate/hype wave \u2014 Semble and zvec-grep (catalogued/worth-watching respectively) were the two genuinely differentiated, benchmarked entrants; the rest showed no clear distinction from each other or from already-catalogued mex/ripwire",
+      "reason": "duplicate/hype wave — Semble and zvec-grep (catalogued/worth-watching respectively) were the two genuinely differentiated, benchmarked entrants; the rest showed no clear distinction from each other or from already-catalogued mex/ripwire",
       "date": "2026-09-11"
     },
     {
       "repo_url": "schema-diff wave (foxschema, SqlSchemaDiff, ts-schema-diff, sqlite-schema-diff, polaris.cli, dataset-schema-diff, umbraco_CLI, paranorm, sqlgraph, mysql-schema-diff, and ~10 more)",
-      "reason": "duplicate/immature \u2014 mostly 0-9 stars, same-week creation dates; bikeshedder/tusker (18 stars, Apache-2.0, PostgreSQL-specific, created 2023) is the most mature single entry but still too small a community to recommend over hand-writing migrations",
+      "reason": "duplicate/immature — mostly 0-9 stars, same-week creation dates; bikeshedder/tusker (18 stars, Apache-2.0, PostgreSQL-specific, created 2023) is the most mature single entry but still too small a community to recommend over hand-writing migrations",
       "date": "2026-09-11"
     },
     {
       "repo_url": "API-testing-CLI wave (quicpulse, multimeter, resterm-runner, tstr, apiwright, req-tool, http-forge.cli, proef, nils-cli, openapi-test-client, and more)",
-      "reason": "duplicate/immature \u2014 saturated niche, no standout maturity or differentiation from established tools (Postman, Bruno, Hurl) already assumed known",
+      "reason": "duplicate/immature — saturated niche, no standout maturity or differentiation from established tools (Postman, Bruno, Hurl) already assumed known",
       "date": "2026-09-11"
     },
     {
       "repo_url": "test-data-generator wave (~25 near-identical repos: companieshouse, luth1um, dnguye, sonimaharshi1999 x2, rewind-community x2, and more, mostly 0 stars, created within days of each other)",
-      "reason": "duplicate/hype wave \u2014 no standout entry, mostly single-purpose zero-star repos",
+      "reason": "duplicate/hype wave — no standout entry, mostly single-purpose zero-star repos",
       "date": "2026-09-11"
     },
     {
       "repo_url": "https://github.com/keploy/keploy",
-      "reason": "already established \u2014 18,453-star API/E2E test-generation-from-traffic platform, no material new development flagged this run",
+      "reason": "already established — 18,453-star API/E2E test-generation-from-traffic platform, no material new development flagged this run",
       "date": "2026-09-11"
     },
     {
       "repo_url": "https://github.com/MCPJam/inspector",
-      "reason": "already established / overlapping \u2014 2,195-star MCP server testing/debugging platform overlapping with already-catalogued mcpsnoop, no clear differentiation surfaced this run",
+      "reason": "already established / overlapping — 2,195-star MCP server testing/debugging platform overlapping with already-catalogued mcpsnoop, no clear differentiation surfaced this run",
       "date": "2026-09-11"
     },
     {
       "repo_url": "AEO/GEO wave (ai-search-guru/getcito-worlds-first-open-source-aio-aeo-or-geo-tool, elmohq/elmo, mverab/eGEOagents, rubenmarcus/aeo.js, and a dozen more surfaced under one search)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical 'AI answer engine visibility/audit' tools launched within the same window; Auriti-Labs/geo-optimizer-skill (catalogued today as GEO Optimizer/GeoReady) had the most mature test suite (1,720+ tests) and broadest integration surface (CLI+library+MCP+Astro) plus real academic citations",
+      "reason": "duplicate/hype wave — dozens of near-identical 'AI answer engine visibility/audit' tools launched within the same window; Auriti-Labs/geo-optimizer-skill (catalogued today as GEO Optimizer/GeoReady) had the most mature test suite (1,720+ tests) and broadest integration surface (CLI+library+MCP+Astro) plus real academic citations",
       "date": "2026-09-12"
     },
     {
       "repo_url": "https://github.com/bigint/rag.computer",
-      "reason": "misleading self-hostable claim \u2014 positions itself as a 'self-hostable RAG platform' but the vector search core hard-depends on Turbopuffer, a proprietary hosted-only service with no self-host option; the retrieval engine itself cannot actually be self-hosted",
+      "reason": "misleading self-hostable claim — positions itself as a 'self-hostable RAG platform' but the vector search core hard-depends on Turbopuffer, a proprietary hosted-only service with no self-host option; the retrieval engine itself cannot actually be self-hosted",
       "date": "2026-09-12"
     },
     {
       "repo_url": "MontyGovernance montycat wave (montycat-mcp, montycat_python, montycat_rust, montycat_dart, montycat_node)",
-      "reason": "thin/marketing \u2014 'self-hosted Pinecone alternative' split across five per-language client repos (3-49 stars each), no single repo contains the actual database engine to evaluate",
+      "reason": "thin/marketing — 'self-hosted Pinecone alternative' split across five per-language client repos (3-49 stars each), no single repo contains the actual database engine to evaluate",
       "date": "2026-09-12"
     },
     {
       "repo_url": "universal data-format converter CLI wave (mahope/transmute, newzhanghao/morph-cli, PolskiGlizda/dconv, izag8216/konvert, iamkorun/jerboa, and ~15 more JSON/CSV/YAML/TOML converters)",
-      "reason": "duplicate/hype wave \u2014 saturated niche, all near-zero stars, no standout maturity or differentiation",
+      "reason": "duplicate/hype wave — saturated niche, all near-zero stars, no standout maturity or differentiation",
       "date": "2026-09-12"
     },
     {
       "repo_url": "https://github.com/openviglet/turing-ce",
-      "reason": "very weak documentation \u2014 README is just a title despite the project description promising a full enterprise-search + RAG platform; org has real history (Viglet SDKs since 2022) so filed as Worth Watching rather than a hard reject",
+      "reason": "very weak documentation — README is just a title despite the project description promising a full enterprise-search + RAG platform; org has real history (Viglet SDKs since 2022) so filed as Worth Watching rather than a hard reject",
       "date": "2026-09-12"
     },
     {
       "repo_url": "Taskosaur/Taskosaur",
-      "reason": "unclear/restrictive licensing \u2014 README markets itself as 'Open Source' but the actual license is Business Source License (BSL), same issue class as Notifuse (2026-09-10); GitHub API reports license: NOASSERTION. croffasia/itsaplan (catalogued today) covers the same 'self-hosted PM with AI agents' niche under true AGPL-3.0",
+      "reason": "unclear/restrictive licensing — README markets itself as 'Open Source' but the actual license is Business Source License (BSL), same issue class as Notifuse (2026-09-10); GitHub API reports license: NOASSERTION. croffasia/itsaplan (catalogued today) covers the same 'self-hosted PM with AI agents' niche under true AGPL-3.0",
       "date": "2026-09-13"
     },
     {
-      "repo_url": "e-signature mainstream cluster (documenso 15,003\u2605, docuseal 18,504\u2605, OpenSign 6,986\u2605, cachet 15,235\u2605 for status pages)",
-      "reason": "already mainstream \u2014 multi-year, well-established self-hosted DocuSign/status-page alternatives with tens of thousands of combined stars; no material new development flagged this run",
+      "repo_url": "e-signature mainstream cluster (documenso 15,003★, docuseal 18,504★, OpenSign 6,986★, cachet 15,235★ for status pages)",
+      "reason": "already mainstream — multi-year, well-established self-hosted DocuSign/status-page alternatives with tens of thousands of combined stars; no material new development flagged this run",
       "date": "2026-09-13"
     },
     {
       "repo_url": "bensblueprints/* -mvp wave (resurfaced again this run) and api-evangelist org profiles (twenty, bitrix24, invoice-ninja, btcpay)",
-      "reason": "duplicate/not-actual-software \u2014 same rejected patterns as 2026-08-31 (marketing template dump) and 2026-09-05/06 (auto-generated third-party API profiles, not installable projects)",
+      "reason": "duplicate/not-actual-software — same rejected patterns as 2026-08-31 (marketing template dump) and 2026-09-05/06 (auto-generated third-party API profiles, not installable projects)",
       "date": "2026-09-13"
     },
     {
       "repo_url": "form-builder wave (formulaires, Open-Survey-Builder, jackpoll, formo, formsmith, forms-oss, formforge, Form.aro, effeff, Orbeon-CE) and self-hosted-CRM micro-wave (crm-app, mycorrhizal-crm, zero-cost-crm, TropaTT, Nika-Service-CRM)",
-      "reason": "duplicate/immature \u2014 saturated niches, mostly 0-12 stars, no standout differentiation from catalogued relaticle (CRM+MCP) or established Typeform/Google Forms alternatives",
+      "reason": "duplicate/immature — saturated niches, mostly 0-12 stars, no standout differentiation from catalogued relaticle (CRM+MCP) or established Typeform/Google Forms alternatives",
       "date": "2026-09-13"
     },
     {
       "repo_url": "self-hosted deployment-platform wave (jongo-os, eveland, ninedeploy, miabi, deploy-forge, implode, grass-worker, NextDeploy, dequel, and more)",
-      "reason": "duplicate/hype wave \u2014 same pattern as the 2026-08-31 PaaS wave; dozens of near-identical self-hosted-PaaS repos, all under 50 stars, surfaced within a 24-48h window, no differentiation",
+      "reason": "duplicate/hype wave — same pattern as the 2026-08-31 PaaS wave; dozens of near-identical self-hosted-PaaS repos, all under 50 stars, surfaced within a 24-48h window, no differentiation",
       "date": "2026-09-14"
     },
     {
       "repo_url": "self-hosted incident-management/status-page wave (OpsKnight, periapsis, sevitout, open-incident, StatusForge, sentinel, uptime-platform, and more)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical self-hosted on-call/incident/status-page repos, all under 50 stars",
+      "reason": "duplicate/hype wave — dozens of near-identical self-hosted on-call/incident/status-page repos, all under 50 stars",
       "date": "2026-09-14"
     },
     {
       "repo_url": "coding-agent-orchestration wave beyond dcouple/Pane (neutron, orchestra, pixcode, maestrus, LubbDubb, zimmer, ai-software-factory, kaos-control, atlas, threadcells, dagents, ccchat-hardening)",
-      "reason": "duplicate/hype wave \u2014 Pane (460 stars, catalogued today) and captain-claw (163 stars, filed as alternative) were the only entrants with real traction; the rest are single-digit-to-low-double-digit stars, same-week creation",
+      "reason": "duplicate/hype wave — Pane (460 stars, catalogued today) and captain-claw (163 stars, filed as alternative) were the only entrants with real traction; the rest are single-digit-to-low-double-digit stars, same-week creation",
       "date": "2026-09-14"
     },
     {
       "repo_url": "self-hosted error-tracking wave beyond bugsink/bugsink (telebugs, oopsie, sightpane, symfony-beacon, watchfire, spicytrack, thermite-rs, BugHan, celerbrake, sentori-selfhosted)",
-      "reason": "duplicate/immature \u2014 all single-digit-to-low-double-digit stars, days-to-weeks old, no standout maturity vs. catalogued Bugsink (2,069 stars, 2 years old)",
+      "reason": "duplicate/immature — all single-digit-to-low-double-digit stars, days-to-weeks old, no standout maturity vs. catalogued Bugsink (2,069 stars, 2 years old)",
       "date": "2026-09-14"
     },
     {
       "repo_url": "https://github.com/agenticode/kilter",
-      "reason": "too new / unverified \u2014 compelling EKS-aware K8s cost-optimizer architecture but single contributor, all 4 release tags published within the same hour (batch-generated, not organic history), 29 stars after 1.5 months, no independent validation; filed as Worth Watching",
+      "reason": "too new / unverified — compelling EKS-aware K8s cost-optimizer architecture but single contributor, all 4 release tags published within the same hour (batch-generated, not organic history), 29 stars after 1.5 months, no independent validation; filed as Worth Watching",
       "date": "2026-09-14"
     },
     {
       "repo_url": "api-evangelist org (lunary, langfuse, kion, dokploy, circleci, optscale, opencost profiles)",
-      "reason": "not actually software \u2014 auto-generated third-party API-surface profiles, same rejected pattern as prior runs",
+      "reason": "not actually software — auto-generated third-party API-surface profiles, same rejected pattern as prior runs",
       "date": "2026-09-14"
     },
     {
       "repo_url": "homelab/personal Infrastructure-as-Code repos (dozens of home-ops/homelab-iac dotfiles-style repos under a generic 'infrastructure as code' search)",
-      "reason": "not reusable tools \u2014 personal homelab configuration dumps, not installable software",
+      "reason": "not reusable tools — personal homelab configuration dumps, not installable software",
       "date": "2026-09-14"
     },
     {
       "repo_url": "https://github.com/tsymbaluyk/maskgate",
-      "reason": "not actually open source \u2014 repo README explicitly states 'this repository is a landing page only, the source code is proprietary and is not published here'; PII-masking-before-LLM concept is worth remembering if a genuinely open implementation surfaces",
+      "reason": "not actually open source — repo README explicitly states 'this repository is a landing page only, the source code is proprietary and is not published here'; PII-masking-before-LLM concept is worth remembering if a genuinely open implementation surfaces",
       "date": "2026-09-15"
     },
     {
       "repo_url": "https://github.com/mukundzha/hazzel",
-      "reason": "thin/too new \u2014 8 stars, 1 week old, no differentiation from already-catalogued coding-agent CLIs (VTCode etc.)",
+      "reason": "thin/too new — 8 stars, 1 week old, no differentiation from already-catalogued coding-agent CLIs (VTCode etc.)",
       "date": "2026-09-15"
     },
     {
       "repo_url": "https://github.com/vstorm-co/agenticos",
-      "reason": "inferior to catalogued alternative \u2014 overlaps closely with Preloop (agent control plane, catalogued 2026-09-09, PROTOTYPE 7.8) with far less traction (39 stars)",
+      "reason": "inferior to catalogued alternative — overlaps closely with Preloop (agent control plane, catalogued 2026-09-09, PROTOTYPE 7.8) with far less traction (39 stars)",
       "date": "2026-09-15"
     },
     {
       "repo_url": "https://github.com/keydrisLabs/mcp-auth-keydris-template",
-      "reason": "very low quality / likely spam \u2014 README and description read as auto-generated incoherent boilerplate, no license, 6 stars, 1 day old",
+      "reason": "very low quality / likely spam — README and description read as auto-generated incoherent boilerplate, no license, 6 stars, 1 day old",
       "date": "2026-09-16"
     },
     {
       "repo_url": "coding-agent-orchestration wave (continued: Untrivial-ai/agent-orchestrator, ruvnet/ruflo, omnigent-ai/omnigent, and a dozen more)",
-      "reason": "duplicate/hype wave \u2014 same niche as prior rejections (2026-09-14); Pane, Vicoa, and captain-claw remain the differentiated entrants, no new standout",
+      "reason": "duplicate/hype wave — same niche as prior rejections (2026-09-14); Pane, Vicoa, and captain-claw remain the differentiated entrants, no new standout",
       "date": "2026-09-16"
     },
     {
       "repo_url": "agent-memory wave (continued: Lyellr88/marm-memory, MemPalace/mempalace, AEndrix03/Graft)",
-      "reason": "duplicate/hype wave \u2014 same saturated niche rejected on 2026-09-09, no new differentiation",
+      "reason": "duplicate/hype wave — same saturated niche rejected on 2026-09-09, no new differentiation",
       "date": "2026-09-16"
     },
     {
       "repo_url": "https://github.com/diegosouzapw/OmniRoute",
-      "reason": "duplicate \u2014 same AI/LLM gateway wave rejected 2026-09-10 (gpt-load, control-layer, modelship, etc.); high star count (66,706) noted but no functional differentiation from the pattern already covered",
+      "reason": "duplicate — same AI/LLM gateway wave rejected 2026-09-10 (gpt-load, control-layer, modelship, etc.); high star count (66,706) noted but no functional differentiation from the pattern already covered",
       "date": "2026-09-16"
     },
     {
       "repo_url": "AI/LLM gateway wave (continued: helm-api, ai-skill-engine, aisix, hypitoken, control-layer, modelship, and more surfaced under 'API gateway self-hosted')",
-      "reason": "duplicate/hype wave \u2014 same saturated niche rejected repeatedly since 2026-09-10, no new differentiated entrant found today",
+      "reason": "duplicate/hype wave — same saturated niche rejected repeatedly since 2026-09-10, no new differentiated entrant found today",
       "date": "2026-09-17"
     },
     {
       "repo_url": "api-evangelist org profiles (twenty, bitrix24, invoice-ninja, btcpay, and others resurfaced)",
-      "reason": "not actually software \u2014 same auto-generated third-party API-profile pattern rejected repeatedly since 2026-09-05",
+      "reason": "not actually software — same auto-generated third-party API-profile pattern rejected repeatedly since 2026-09-05",
       "date": "2026-09-17"
     },
     {
       "repo_url": "https://github.com/stablyai/orca",
-      "reason": "already mainstream \u2014 71,316-star ADE for fleets of parallel coding agents; verified real multi-contributor team (not a star-farm) but far too large/well-known at this scale to be a personal-radar discovery",
+      "reason": "already mainstream — 71,316-star ADE for fleets of parallel coding agents; verified real multi-contributor team (not a star-farm) but far too large/well-known at this scale to be a personal-radar discovery",
       "date": "2026-09-18"
     },
     {
       "repo_url": "https://github.com/tt-a1i/archify",
-      "reason": "suspicious growth pattern \u2014 66,137 stars but only 191 watchers and commit history heavily concentrated in one author for a repo this size; same class of caution as XERJ (2026-09-17), not confirmed illegitimate but flagged rather than recommended",
+      "reason": "suspicious growth pattern — 66,137 stars but only 191 watchers and commit history heavily concentrated in one author for a repo this size; same class of caution as XERJ (2026-09-17), not confirmed illegitimate but flagged rather than recommended",
       "date": "2026-09-18"
     },
     {
       "repo_url": "https://github.com/arnavsharmaa/shadow",
-      "reason": "duplicate/no-traction \u2014 same 'time-travel debugging for AI agents' pitch as OrcaReplay (catalogued today), 0 stars, 11 days old",
+      "reason": "duplicate/no-traction — same 'time-travel debugging for AI agents' pitch as OrcaReplay (catalogued today), 0 stars, 11 days old",
       "date": "2026-09-18"
     },
     {
       "repo_url": "codebase-understanding-for-agents wave (SIA, gitsage, knot, CodeMind-AI, CodeAtlas x2, reposage, tracebook, ai-codebase-archaeologist, CodebaseQ-A, and dozens more surfaced under one search)",
-      "reason": "duplicate/hype wave \u2014 dozens of near-identical RAG/graph-based 'codebase understanding' repos pushed within days of each other; niche already covered by catalogued mex and ripwire without a new standout",
+      "reason": "duplicate/hype wave — dozens of near-identical RAG/graph-based 'codebase understanding' repos pushed within days of each other; niche already covered by catalogued mex and ripwire without a new standout",
       "date": "2026-09-18"
     },
     {
       "repo_url": "coding-agent-CLI wave (dscode, sid-code, GoatCode, thevibeworks/deepseek-pi, njfuzrs/sid-code, choijinwon/agent-oscode, and similar DeepSeek/Codex-harness clones)",
-      "reason": "duplicate/hype wave \u2014 same saturated 'build your own coding agent CLI' niche rejected in prior runs, no new differentiation",
+      "reason": "duplicate/hype wave — same saturated 'build your own coding agent CLI' niche rejected in prior runs, no new differentiation",
       "date": "2026-09-18"
     },
     {
       "repo_url": "https://github.com/manticoresoftware/manticoresearch",
-      "reason": "already established \u2014 12,018-star search database created 2017 (Sphinx-successor lineage), long history and steady growth; no material new development flagged this run",
+      "reason": "already established — 12,018-star search database created 2017 (Sphinx-successor lineage), long history and steady growth; no material new development flagged this run",
       "date": "2026-09-19"
     },
     {
       "repo_url": "PDF/document-extraction library wave around today's Xberg pick (yfedoseev/pdf_oxide, yfedoseev/office_oxide, firecrawl/pdf-inspector)",
-      "reason": "inferior scope to catalogued alternative \u2014 all three are narrower PDF/Office-only extraction libraries; Xberg (catalogued today) covers the same ground plus OCR/transcription/embeddings/code-intelligence with a comparable or better benchmark story. Noted in Xberg's Alternatives field rather than rejected outright \u2014 pdf_oxide in particular is a legitimate pick if raw single-format extraction speed matters more than breadth.",
+      "reason": "inferior scope to catalogued alternative — all three are narrower PDF/Office-only extraction libraries; Xberg (catalogued today) covers the same ground plus OCR/transcription/embeddings/code-intelligence with a comparable or better benchmark story. Noted in Xberg's Alternatives field rather than rejected outright — pdf_oxide in particular is a legitimate pick if raw single-format extraction speed matters more than breadth.",
       "date": "2026-09-19"
     },
     {
       "repo_url": "https://github.com/paradedb/paradedb",
-      "reason": "inferior fit vs catalogued alternative for this stack \u2014 broader all-in-one Postgres search+vector platform, but AGPL-3.0 vs. pg_textsearch's (catalogued today) permissive PostgreSQL License for the same core need (BM25 ranking); noted as an alternative in pg_textsearch's entry rather than a separate pick",
+      "reason": "inferior fit vs catalogued alternative for this stack — broader all-in-one Postgres search+vector platform, but AGPL-3.0 vs. pg_textsearch's (catalogued today) permissive PostgreSQL License for the same core need (BM25 ranking); noted as an alternative in pg_textsearch's entry rather than a separate pick",
       "date": "2026-09-19"
     },
     {
       "repo_url": "run-llama/liteparse",
-      "reason": "too new to independently verify differentiation \u2014 12,330 stars but from the well-known LlamaIndex org, high star count likely reflects parent-project audience rather than independent traction; not deep-reviewed this run, worth a second look if it develops its own track record",
+      "reason": "too new to independently verify differentiation — 12,330 stars but from the well-known LlamaIndex org, high star count likely reflects parent-project audience rather than independent traction; not deep-reviewed this run, worth a second look if it develops its own track record",
       "date": "2026-09-19"
     },
     {
       "repo_url": "https://github.com/tianma-if/edgeever",
-      "reason": "suspicious growth pattern \u2014 1,457 stars and 826 forks (57% fork/star ratio, far above normal) but only 5 subscribers on a repo created 2026-06-26 (~3 months old); same red-flag pattern as tt-a1i/archify (rejected 2026-09-18)",
+      "reason": "suspicious growth pattern — 1,457 stars and 826 forks (57% fork/star ratio, far above normal) but only 5 subscribers on a repo created 2026-06-26 (~3 months old); same red-flag pattern as tt-a1i/archify (rejected 2026-09-18)",
       "date": "2026-09-20"
     },
     {
       "repo_url": "self-hosted PM/invoicing/time-tracking/habit-tracker/personal-finance/helpdesk hype wave (BlakeEriks/stint, tengolabs/killbottleneck, Jduckworp/donebook, opusline/opusline, ConflictHQ/ezacto-oss, dozens of near-identical same-week repos across time-tracking, invoicing, habit-tracking, personal-finance, and helpdesk topic searches)",
-      "reason": "duplicate/hype wave \u2014 same saturated-wave pattern as prior self-hosted PaaS/deployment/incident-management waves; mostly 0-10 stars, days old, no differentiation from catalogued or mainstream incumbents",
+      "reason": "duplicate/hype wave — same saturated-wave pattern as prior self-hosted PaaS/deployment/incident-management waves; mostly 0-10 stars, days old, no differentiation from catalogued or mainstream incumbents",
       "date": "2026-09-20"
     },
     {
       "repo_url": "https://github.com/nocobase/nocobase",
-      "reason": "already mainstream \u2014 24,294-star no-code/low-code business-app platform active since 2020; NOASSERTION license needs clarification if ever revisited, but primarily excluded here as an already-established project with no material new development flagged this run",
+      "reason": "already mainstream — 24,294-star no-code/low-code business-app platform active since 2020; NOASSERTION license needs clarification if ever revisited, but primarily excluded here as an already-established project with no material new development flagged this run",
       "date": "2026-09-20"
     },
     {
       "repo_url": "https://github.com/Django-CRM/Django-CRM",
-      "reason": "already mainstream / crowded niche \u2014 created 2017, 2,423 stars, long-established self-hosted CRM; self-hosted CRM space already covered by rejected mainstream Twenty (2026-09-06)",
+      "reason": "already mainstream / crowded niche — created 2017, 2,423 stars, long-established self-hosted CRM; self-hosted CRM space already covered by rejected mainstream Twenty (2026-09-06)",
       "date": "2026-09-20"
     },
     {
       "repo_url": "https://github.com/mazer-dev/pejota",
-      "reason": "inferior fit vs catalogued/mainstream alternatives \u2014 PHP/Laravel freelancer ERP/CRM, no license declared (license: None), 165 stars; overlaps with catalogued Client St0r and solidtime for the freelancer-billing niche without clear differentiation",
+      "reason": "inferior fit vs catalogued/mainstream alternatives — PHP/Laravel freelancer ERP/CRM, no license declared (license: None), 165 stars; overlaps with catalogued Client St0r and solidtime for the freelancer-billing niche without clear differentiation",
       "date": "2026-09-20"
     },
     {
       "repo_url": "https://github.com/rasimme/FlowBoard",
-      "reason": "narrow ecosystem fit \u2014 project-context layer for AI agents, but package.json shows it is built and versioned specifically as an OpenClaw plugin (clawhub install spec, minHostVersion pin) despite README also mentioning external agents; Pad (catalogued today) covers the same niche with explicit multi-tool support instead of one-platform lock-in",
+      "reason": "narrow ecosystem fit — project-context layer for AI agents, but package.json shows it is built and versioned specifically as an OpenClaw plugin (clawhub install spec, minHostVersion pin) despite README also mentioning external agents; Pad (catalogued today) covers the same niche with explicit multi-tool support instead of one-platform lock-in",
       "date": "2026-09-20"
     },
     {
       "repo_url": "https://github.com/logtide-dev/logtide",
-      "reason": "duplicate / templated pitch \u2014 'privacy-first self-hosted Datadog & ELK alternative,' AGPL-3.0, single-contributor-dominant (1208 of ~1230 commits); redundant with catalogued OpenObserve and today's Rootprint pick, no clear technical differentiation found",
+      "reason": "duplicate / templated pitch — 'privacy-first self-hosted Datadog & ELK alternative,' AGPL-3.0, single-contributor-dominant (1208 of ~1230 commits); redundant with catalogued OpenObserve and today's Rootprint pick, no clear technical differentiation found",
       "date": "2026-09-21"
     },
     {
       "repo_url": "wasm-sandbox-for-agents wave (omnia, byte, cri, porta, miogram, cyfrworks, clawdius, Sluice, clanker, wasmagent-js, SwissArmyNoife, anvil, boxed, mcpbox)",
-      "reason": "duplicate/hype wave \u2014 same saturated 'sandboxed WASM runtime for AI agents' pitch as prior waves; agentOS and peerd (both catalogued today) were the only entrants with real engineering depth and traction",
+      "reason": "duplicate/hype wave — same saturated 'sandboxed WASM runtime for AI agents' pitch as prior waves; agentOS and peerd (both catalogued today) were the only entrants with real engineering depth and traction",
       "date": "2026-09-22"
     },
     {
       "repo_url": "https://github.com/Log2n-io/Typhon",
-      "reason": "unclear/restrictive licensing \u2014 source-available (PolyForm Small Business + Shield based), not OSI open source: free only pre-1.0, then capped at $2M revenue/50 people and barred from competing-product or managed-service use; also pre-alpha .NET/C#, outside primary stack. Architecturally interesting (ECS + ACID engine) so filed as Worth Watching rather than a hard reject",
+      "reason": "unclear/restrictive licensing — source-available (PolyForm Small Business + Shield based), not OSI open source: free only pre-1.0, then capped at $2M revenue/50 people and barred from competing-product or managed-service use; also pre-alpha .NET/C#, outside primary stack. Architecturally interesting (ECS + ACID engine) so filed as Worth Watching rather than a hard reject",
       "date": "2026-09-22"
     },
     {
       "repo_url": "novel-database-engine sweep (turing-db/turingdb, DeraineDB, ToucanDB, cameodb, luadb, iridium-sql, RedDB, Relatude.DB, and more)",
-      "reason": "duplicate/immature \u2014 mostly single-digit-to-low-hundreds stars, days-to-months old, no standout beyond Typhon (separately flagged for its license)",
+      "reason": "duplicate/immature — mostly single-digit-to-low-hundreds stars, days-to-months old, no standout beyond Typhon (separately flagged for its license)",
       "date": "2026-09-22"
     },
     {
       "repo_url": "https://github.com/profullstack/pairux.com",
-      "reason": "inferior to comparable alternative \u2014 same 'self-hosted Screenhero' pitch as TNTcraftHIM/Piik (382 stars, more complete self-hosting docs and desktop apps) with far less traction (20 stars); Piik filed as Worth Watching instead",
+      "reason": "inferior to comparable alternative — same 'self-hosted Screenhero' pitch as TNTcraftHIM/Piik (382 stars, more complete self-hosting docs and desktop apps) with far less traction (20 stars); Piik filed as Worth Watching instead",
       "date": "2026-09-22"
     },
     {
       "repo_url": "agent-memory wave, continued (nambok/mentedb, kunickiaj/codemem)",
-      "reason": "duplicate/hype wave \u2014 same saturated niche rejected repeatedly since 2026-09-09; mentedb is a genuine ground-up storage engine rather than a wrapper but showed no clear differentiation from catalogued mex within the time budget",
+      "reason": "duplicate/hype wave — same saturated niche rejected repeatedly since 2026-09-09; mentedb is a genuine ground-up storage engine rather than a wrapper but showed no clear differentiation from catalogued mex within the time budget",
       "date": "2026-09-22"
     },
     {
       "repo_url": "universal data-format converter wave, continued (JSON/CSV/YAML/TOML converters surfaced under experimental/cli-tool searches)",
-      "reason": "duplicate/hype wave \u2014 same saturated niche rejected 2026-09-12, no new standout entrant found this pass",
+      "reason": "duplicate/hype wave — same saturated niche rejected 2026-09-12, no new standout entrant found this pass",
       "date": "2026-09-22"
     },
     {
       "repo_url": "https://github.com/ModelEngine-Group/nexent",
-      "reason": "hype/marketing-heavy \u2014 crowded no-code AI-agent-builder-platform niche, in-README star-begging, 'Harness Engineering' jargon; no concrete differentiator surfaced within review budget",
+      "reason": "hype/marketing-heavy — crowded no-code AI-agent-builder-platform niche, in-README star-begging, 'Harness Engineering' jargon; no concrete differentiator surfaced within review budget",
       "date": "2026-09-23"
     },
     {
       "repo_url": "agent-orchestration-IDE wave (RunMaestro/Maestro, 23blocks-OS/ai-maestro, stagewise-io/stagewise)",
-      "reason": "duplicate/adjacent \u2014 Paseo and mngr (both catalogued today) were the clearly differentiated entrants in the 'manage/orchestrate coding agents' space this run; Maestro and stagewise are additionally AGPL-3.0",
+      "reason": "duplicate/adjacent — Paseo and mngr (both catalogued today) were the clearly differentiated entrants in the 'manage/orchestrate coding agents' space this run; Maestro and stagewise are additionally AGPL-3.0",
       "date": "2026-09-23"
     },
     {
       "repo_url": "https://github.com/nexu-io/open-design",
-      "reason": "off-profile \u2014 97,702-star 'coding agent as design engine' tool; contributor list shows genuine multi-author activity (not star-farmed) but design/prototyping use case doesn't fit this profile's primary relevance axes",
+      "reason": "off-profile — 97,702-star 'coding agent as design engine' tool; contributor list shows genuine multi-author activity (not star-farmed) but design/prototyping use case doesn't fit this profile's primary relevance axes",
       "date": "2026-09-23"
     },
     {
       "repo_url": "https://github.com/kavinsood/yaos",
-      "reason": "narrow ecosystem fit \u2014 GitHub description markets it as a general 'real-time sync engine powered by your own Cloudflare Worker' but the README reveals it is specifically an Obsidian vault sync plugin; Obsidian is not part of this profile's toolchain, same issue class as optimike-obsidian-mcp (2026-09-05)",
+      "reason": "narrow ecosystem fit — GitHub description markets it as a general 'real-time sync engine powered by your own Cloudflare Worker' but the README reveals it is specifically an Obsidian vault sync plugin; Obsidian is not part of this profile's toolchain, same issue class as optimike-obsidian-mcp (2026-09-05)",
       "date": "2026-09-24"
     },
     {
       "repo_url": "https://github.com/betterleaks/betterleaks",
-      "reason": "duplicate \u2014 secret scanner overlapping with already-catalogued mongodb/kingfisher (USE NOW, 8.4), no clear differentiation surfaced within review budget",
+      "reason": "duplicate — secret scanner overlapping with already-catalogued mongodb/kingfisher (USE NOW, 8.4), no clear differentiation surfaced within review budget",
       "date": "2026-09-24"
     },
     {
       "repo_url": "https://github.com/achtungsoftware/alarik",
-      "reason": "inferior to catalogued alternative \u2014 S3-compatible object storage positioned against MinIO/RustFS; already-catalogued RustFS has far more traction (33,744 vs 546 stars) and no clear technical edge found for alarik",
+      "reason": "inferior to catalogued alternative — S3-compatible object storage positioned against MinIO/RustFS; already-catalogued RustFS has far more traction (33,744 vs 546 stars) and no clear technical edge found for alarik",
       "date": "2026-09-24"
     },
     {
       "repo_url": "https://github.com/BrokkAi/mjolnir",
-      "reason": "duplicate \u2014 durable-session manager for multiple coding-agent CLIs, same niche as already-catalogued mngr/Paseo/AgentDock agent-orchestration cluster",
+      "reason": "duplicate — durable-session manager for multiple coding-agent CLIs, same niche as already-catalogued mngr/Paseo/AgentDock agent-orchestration cluster",
       "date": "2026-09-25"
     },
     {
       "repo_url": "https://github.com/flawiddsouza/Restfox",
-      "reason": "inferior to catalogued alternative \u2014 offline HTTP/Socket testing client with no differentiation vs. today's catalogued Resterm or already-known Hoppscotch/Bruno",
+      "reason": "inferior to catalogued alternative — offline HTTP/Socket testing client with no differentiation vs. today's catalogued Resterm or already-known Hoppscotch/Bruno",
       "date": "2026-09-25"
     },
     {
       "repo_url": "code-search-for-agents wave (flupkede/codesearch, nassim-arifette/jevgrep, bgts-ai-org/bgts-context-engine)",
-      "reason": "duplicate \u2014 near-identical hybrid vector+BM25 / graph-based code-search MCP servers, same niche as already-catalogued Semble/Repowise/trace-mcp and today's Codanna",
+      "reason": "duplicate — near-identical hybrid vector+BM25 / graph-based code-search MCP servers, same niche as already-catalogued Semble/Repowise/trace-mcp and today's Codanna",
       "date": "2026-09-25"
     },
     {
       "repo_url": "https://github.com/microcks/microcks and https://github.com/schemathesis/schemathesis",
-      "reason": "time-boxed out \u2014 mature, legitimate API testing/mocking projects but no angle specific enough to Sourav's stack surfaced against an already-full discovery queue this run; revisit on a future run rather than a hard reject",
+      "reason": "time-boxed out — mature, legitimate API testing/mocking projects but no angle specific enough to Sourav's stack surfaced against an already-full discovery queue this run; revisit on a future run rather than a hard reject",
       "date": "2026-09-25"
+    },
+    {
+      "repo_url": "RAG chatbot tutorial wave (BharateshPoojary/ask-pdf, Gayathri-Reddy874/documind-rag-assistant, and dozens of same-day Streamlit/FastAPI PDF-QA repos surfaced under topic:rag)",
+      "reason": "duplicate/hype wave — near-zero stars, same-day creation, tutorial-grade RAG chatbots with no differentiation",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "AI/LLM gateway wave, continued (EasyMetaAu/helm-api, sandeshnaroju/ai-skill-engine, api7/aisix, hypit-ai/hypitoken)",
+      "reason": "duplicate/hype wave — same saturated niche rejected repeatedly since 2026-09-10, no new standout",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "AdalFlow-alternative spam wave (ozynautetu-create/FlowForge-Optima, genoskietv/AdalFlow-Optimizer)",
+      "reason": "marketing-only — SEO-bait repos referencing an 'AdalFlow' framework with no real independent code",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "TypeSafe Jev reranker benchmark micro-wave (anessbelbati/jev-rerank-bench, WiktorB2004/llama-index-jev, shinpr/jev-reranker, anessbelbati/prompt-injection-vs-keyword-stuffing-ai-seo)",
+      "reason": "coordinated benchmark-and-promote pattern from one product's ecosystem, not independent findings",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "codebase-understanding-for-agents wave, continued (sdsrss/code-graph-mcp, ScriptedAlchemy/tracedecay, bvolpato/ivygrep, alex09x/prod-code)",
+      "reason": "duplicate/hype wave — same saturated niche as 2026-09-18/25; Graft (catalogued today) was the one entrant with genuinely differentiated published evidence",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "agent-memory wave, continued (FraiseHQ/fraise, kannaka-labs/kannaka-memory, raymondmdzz123/agent-memory, opok-ops/MindForge, tpsdev-ai/flair, FBISiri/engram, memtomem/memtomem)",
+      "reason": "duplicate/hype wave — same saturated niche rejected repeatedly since 2026-09-09",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "linny006/rag-radar and linny006/vector-db-live",
+      "reason": "resurfaced meta-tracker repos, already rejected 2026-09-05 as scraped listicles rather than tools",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "universal data-format converter wave, continued",
+      "reason": "duplicate/hype wave — same saturated niche rejected 2026-09-12/22, no new standout entrant found today",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "https://github.com/wlsdks/ontology-atlas",
+      "reason": "duplicate — shared human/agent Markdown codebase ontology, same niche as today's Graft pick and already-catalogued Codanna/mex; filed as Worth Watching pending a direct comparison against Graft",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "https://github.com/Tencent/WeKnora",
+      "reason": "off-profile integration surface — 30,154-star enterprise RAG/agent/wiki platform with real engineering depth, but built around WeChat/Feishu/DingTalk business-IM integrations with limited direct relevance to Sourav's stack; filed as Worth Watching rather than a full entry",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "https://github.com/galaxy-io/filament",
+      "reason": "unclear differentiation vs incumbents — pluggable data replication/CDC tool with real team and hosted-deploy options, but no concrete edge over Airbyte/Debezium surfaced within review budget; filed as Worth Watching",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "https://github.com/codelibs/fess",
+      "reason": "thin differentiation — mature (since ~2009) self-hosted enterprise search server on OpenSearch, but heavier Java stack with no clear edge over configuring OpenSearch/Elasticsearch directly for this profile's needs",
+      "date": "2026-09-26"
+    },
+    {
+      "repo_url": "https://github.com/AgamiAI/agami-core",
+      "reason": "inferior to today's catalogued alternative — same 'governed semantic layer over a database for AI agents' pitch as DatI (catalogued today), less concrete on the MCP-publishing/permission workflow",
+      "date": "2026-09-26"
     }
   ],
   "known_releases": {
@@ -1938,7 +2022,7 @@
       "date": "2026-09-16"
     },
     "Openpanel-dev/openpanel": {
-      "version": "unclear \u2014 GitHub tags are Docker image labels, not semver releases",
+      "version": "unclear — GitHub tags are Docker image labels, not semver releases",
       "date": "unclear"
     },
     "frain-dev/convoy": {
@@ -2280,16 +2364,48 @@
     "Divkix/Logwell": {
       "version": "v1.3.4",
       "date": "2026-09-25"
+    },
+    "trailhq/Graft": {
+      "version": "0.20.0 (npm, @nanonets/graft)",
+      "date": "unclear-no-github-release-tags"
+    },
+    "cocoindex-io/cocoindex": {
+      "version": "v1.0.24",
+      "date": "2026-09-20"
+    },
+    "oceanbase/seekdb": {
+      "version": "v1.4.0",
+      "date": "2026-08-27"
+    },
+    "Dicklesworthstone/frankensearch": {
+      "version": "v1.10.0",
+      "date": "2026-09-08"
+    },
+    "yimindev/dati": {
+      "version": "v0.6.3",
+      "date": "2026-09-23"
+    },
+    "Tencent/WeKnora": {
+      "version": "v0.8.2",
+      "date": "2026-09-24"
+    },
+    "galaxy-io/filament": {
+      "version": "v0.5.0",
+      "date": "2026-09-22"
+    },
+    "Amal-David/docingest": {
+      "version": "1.0.1 (npm, @docingest/mcp-server)",
+      "date": "unclear-no-github-release"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-09-12",
-      "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-6 volume across 8 parallel topic queries"
+      "note": "not used this run — GitHub Search API alone surfaced enough slot-6 volume across 8 parallel topic queries"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-25",
-      "note": "used for README fetches across the 8-candidate shortlist and to resolve Sourcebot's true license (FSL-1.1-ALv2) after the GitHub API reported license: NOASSERTION"
+      "last_ok": "2026-09-26",
+      "note": "used for README/LICENSE fetches across the 8-candidate deep-review shortlist, including confirming FrankenSearch's OpenAI/Anthropic rider text and seekdb's Apache-2.0 license"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -2297,15 +2413,15 @@
     },
     "api.github.com (cloud container)": {
       "last_ok": null,
-      "note": "BLOCKED at proxy \u2014 do not attempt from cloud session, always route through Mac shell per AGENT.md section 8"
+      "note": "BLOCKED at proxy — do not attempt from cloud session, always route through Mac shell per AGENT.md section 8"
     },
     "github.com/trending (WebFetch)": {
       "last_ok": null,
-      "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
+      "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-25",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries plus deep-review metadata/releases/contributors checks on an 8-candidate shortlist, well under rate limits"
+      "last_ok": "2026-09-26",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries (373 raw results) plus deep-review metadata/releases/contributors checks on a 10-candidate shortlist, well under rate limits (8350/hr available)"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
@@ -2316,16 +2432,20 @@
       "note": "checked imbue-mngr package version (0.2.17); confirmed it lags GitHub main by several months"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-24",
-      "note": "cross-checked @kaelio/ktx (0.16.0) and @zenstackhq/cli (3.9.6) published versions against GitHub tags \u2014 both matched"
+      "last_ok": "2026-09-26",
+      "note": "confirmed @nanonets/graft@0.20.0 and @docingest/mcp-server@1.0.1"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
-      "note": "fetched directly to verify LibreDB Studio's claimed PostgreSQL-project news/catalogue listing \u2014 confirmed genuine, not fabricated by the README"
+      "note": "fetched directly to verify LibreDB Studio's claimed PostgreSQL-project news/catalogue listing — confirmed genuine, not fabricated by the README"
     },
     "lobste.rs": {
       "last_ok": "2026-09-16",
       "note": "newest.json worked; front page was general tech/blog content, no project links worth following for slot 1"
+    },
+    "crates.io": {
+      "last_ok": "2026-09-16",
+      "note": "api.crates.io request failed today (empty/non-JSON response) — fell back to GitHub release tag for FrankenSearch version instead of retrying a third time"
     }
   },
   "previous_recommendations": [
@@ -2463,7 +2583,12 @@
     "codanna-code-intelligence-mcp",
     "resterm-terminal-api-client",
     "sourcebot-codebase-search",
-    "assaio-ai-coding-cost-analytics"
+    "assaio-ai-coding-cost-analytics",
+    "graft-codebase-context",
+    "cocoindex-incremental-indexing",
+    "seekdb-agent-state-store",
+    "frankensearch-hybrid-search",
+    "dati-database-mcp-gateway"
   ],
-  "notes": "2026-09-25: Single run, slot 3 (developer utilities, debugging, testing) per deterministic date formula (day_of_year 268 % 7 + 1 = 3). Catalogued 5 new: NestLens (mogretici/nestlens, MIT, 8.6, USE NOW \u2014 Laravel-Telescope-style debugging dashboard for NestJS, a direct match to Sourav's named stack), Codanna (bartolli/codanna, Apache-2.0, 8.3, PROTOTYPE \u2014 local code-intelligence MCP server fusing symbol/call-graph/semantic search into single MCP calls for coding agents), Resterm (unkn0wn-root/resterm, Apache-2.0, 8.0, PROTOTYPE \u2014 terminal API client with SSH-bastion/Kubernetes-port-forward tunnel directives baked into git-diffable .http request files), Sourcebot (sourcebot-dev/sourcebot, FSL-1.1-ALv2 \u2014 flagged loudly, source-available not OSI, converts to Apache-2.0 after 2 years \u2014 7.8, PROTOTYPE \u2014 self-hosted multi-repo code search plus grounded natural-language Q&A), and assaio (assaio/assaio, Apache-2.0, 7.4, PROTOTYPE \u2014 offline-first, privacy-preserving CLI reporting AI-coding cost/usage/activity across Claude Code/Codex/Copilot CLI/Cline/Gemini CLI from local logs only, directly relevant to this repo's own Claude-usage-budget question). No meaningful updates found for previously catalogued projects this run (no deep re-check of the full 139-project catalog was performed \u2014 out of daily run budget). Discovery confirmed 'code intelligence for AI coding agents' is now a saturated category: rejected a near-identical wave (flupkede/codesearch, nassim-arifette/jevgrep, bgts-ai-org/bgts-context-engine) and noted Cranot/roam-code as Worth Watching in the same niche pending a head-to-head comparison against Codanna. Also rejected BrokkAi/mjolnir (duplicate of the already-catalogued agent-orchestration cluster) and flawiddsouza/Restfox (no differentiation vs. today's Resterm pick), and time-boxed out microcks/microcks and schemathesis/schemathesis (mature but no stack-specific angle found this run). Filed truecourse-ai/truecourse (docs-as-tests, MIT core with enterprise-gated ee/ folder, default PostHog telemetry) and Divkix/Logwell (self-hosted OTLP logging on Postgres, explicitly alpha/not-production-ready per its own README) as Worth Watching. kunkka19xx/lgtm (terminal diff reviewer built around reviewing agent-written changes, single-dev, pre-1.0) was this run's Small but High-Leverage Utility pick. 'Still Worth Trying' rotated to Bernstein/Sidequest/Monoscope (the next-highest-score tier) since Kingfisher/AdminForth/RustFS were used in the 2026-09-24 digest. Discovery used 12 parallel GitHub Search API topic queries (debugging, debugger, testing-tools, test-automation, code-analysis, code-search, cli-tool, developer-tools, profiling, api-testing, database-tools, logging) covering 272 raw results, 241 not previously evaluated or catalogued; WebSearch and HN were not needed this run, consistent with recent runs finding the GitHub Search API alone sufficient for topic-scoped discovery."
+  "notes": "2026-09-26: Single run, slot 4 (data, search, documents, RAG) per deterministic date formula (day_of_year 269 % 7 + 1 = 4). Catalogued 5 new: Graft (trailhq/Graft, MIT, 8.3, PROTOTYPE — no-vector-DB coding-agent context layer built by NanoNets/Trail, benchmarked on SWE-bench Verified with published methodology, 33/50 vs 27/50 resolved), CocoIndex (cocoindex-io/cocoindex, Apache-2.0, 8.2, PROTOTYPE — declarative incremental data-transformation framework for RAG/agent indexing, 'React for data engineering' mental model), seekdb (oceanbase/seekdb, Apache-2.0, 8.0, PROTOTYPE — MySQL-protocol AI-native state store unifying vector/full-text/scalar with a novel FORK/MERGE copy-on-write sandbox for agent state), FrankenSearch (Dicklesworthstone/frankensearch, MIT with OpenAI/Anthropic Rider — flagged loudly, 7.6, PROTOTYPE — embeddable two-tier hybrid search Rust CLI, same author as already-catalogued Destructive Command Guard), and DatI (yimindev/dati, Apache-2.0, 7.5, PROTOTYPE — small single-dev governed database-to-MCP semantic gateway with per-user credential/data-scope isolation). No meaningful updates found for previously catalogued projects — PipesHub AI resurfaced in discovery at the same v0.8.0 release, no material change; a full re-check of the other 138 catalogued projects was not performed (out of daily run budget, consistent with recent practice). Discovery confirmed 'codebase context/understanding for AI coding agents' keeps growing as a saturated niche (Graft, sdsrss/code-graph-mcp, ScriptedAlchemy/tracedecay, wlsdks/ontology-atlas surfaced today alongside already-catalogued Codanna/mex/Repowise); filed ontology-atlas as Worth Watching pending a direct comparison against Graft rather than a separate entry. Also filed galaxy-io/filament (data replication/CDC, unclear edge over Airbyte/Debezium) and Tencent/WeKnora (30,154-star enterprise RAG/agent/wiki platform, real depth but WeChat/Feishu/DingTalk-centric integration surface with limited relevance to Sourav's stack) as Worth Watching. Rejected codelibs/fess (mature but thin differentiation vs. configuring OpenSearch directly) and AgamiAI/agami-core (inferior to today's DatI pick on the same pitch) after evaluation. Amal-David/docingest (documentation-site-to-MCP-context engine, 18 stars, live hosted corpus at docingest.com) was this run's Small but High-Leverage Utility pick, following the pattern of not giving utility picks a full catalog entry (consistent with 2026-09-25's lgtm). 'Still Worth Trying' rotated to LibreDB Studio/OpenDataLoader PDF/Dagu since Bernstein/Sidequest/Monoscope were used in the 2026-09-25 digest. Discovery used 12 parallel GitHub Search API topic queries (rag, vector-database, document-processing, full-text-search, knowledge-graph, embeddings, etl, data-pipeline, semantic-search, reranker, change-data-capture, text-to-sql) covering 373 raw results, heavily diluted by same-day tutorial/spam repos (RAG-chatbot tutorials, an 'AdalFlow alternative' SEO-bait cluster, a coordinated TypeSafe-Jev-reranker benchmark micro-wave); WebSearch and HN were not needed, GitHub Search API alone produced far more slot-4 volume than the run could review. crates.io lookup failed once for FrankenSearch's version (fell back to GitHub release tag, not retried a third time)."
 }
