@@ -1,6 +1,6 @@
 # Catalog
 
-_144 projects tracked. Last updated 2026-09-26._
+_147 projects tracked. Last updated 2026-09-27._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -48,6 +48,7 @@ _144 projects tracked. Last updated 2026-09-26._
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
 | [Bugsink](https://github.com/bugsink/bugsink) | USE NOW | 8.1/10 | developer productivity, observability, infrastructure | PolyForm Shield 1.0.0 (core); portions of the 'ee/' directory, if present, under a separate license; sentry/ subdirectory is BSD-3-Clause (Sentry copyright) | low | 2026-09-14 |
 | [mngr](https://github.com/imbue-ai/mngr) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, agent orchestration, developer productivity | MIT | low | 2026-09-23 |
+| [Calnode](https://github.com/Calnode/calnode) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure, scheduling | Apache-2.0 | low | 2026-09-27 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
 | [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
@@ -64,7 +65,7 @@ _144 projects tracked. Last updated 2026-09-26._
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
 | [ripwire](https://github.com/redhat-et/ripwire) | PROTOTYPE | 7.9/10 | AI agent infrastructure, code intelligence / context engineering, developer productivity | Apache-2.0 | low | 2026-09-09 |
 | [GEO Optimizer (GeoReady)](https://github.com/Auriti-Labs/geo-optimizer-skill) | USE NOW | 7.9/10 | developer productivity, product building blocks, small utility | MIT | low | 2026-09-12 |
-| [Kaneo](https://github.com/usekaneo/kaneo) | USE NOW | 7.9/10 | product infrastructure, developer productivity, self-hosted SaaS alternatives | MIT | low | 2026-09-20 |
+| [Kaneo](https://github.com/usekaneo/kaneo) | USE NOW | 7.9/10 | product infrastructure, developer productivity, self-hosted SaaS alternatives | MIT | low | 2026-09-27 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -132,6 +133,7 @@ _144 projects tracked. Last updated 2026-09-26._
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
+| [PNLCS (Panelica)](https://github.com/Panelica/pnlcs) | PROTOTYPE | 7.1/10 | product infrastructure, self-hosted SaaS alternatives, billing | MIT | medium | 2026-09-27 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
@@ -142,6 +144,7 @@ _144 projects tracked. Last updated 2026-09-26._
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
 | [Router.so](https://github.com/9d8dev/router) | PROTOTYPE | 6.9/10 | product infrastructure, small high-leverage utilities | AGPL-3.0 | low | 2026-09-24 |
 | [Opslane](https://github.com/opslane/opslane) | PROTOTYPE | 6.8/10 | developer productivity, debugging, observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-29 |
+| [Macro](https://github.com/macro-inc/macro) | STUDY | 6.8/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure | AGPL-3.0 | high | 2026-09-27 |
 | [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
 | [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-26",
+  "updated": "2026-09-27",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -7070,19 +7070,20 @@
       "why_not_build_it_myself": "A production-quality Kanban/PM UI with i18n, OpenAPI-checked API, and Postgres-side logic is significant build effort for something already mature and MIT-licensed.",
       "risks": [
         "crowded niche vs. Plane/Vikunja/Huly",
-        "no independent security audit found"
+        "no independent security audit found",
+        "v2.26.0 (2026-09-21) was a security release: prior to it, an unset AUTH_SECRET fell back to a publicly-known Better Auth default, making session cookies forgeable offline on self-hosted instances ≤v2.25.0 that didn't set the secret explicitly — upgrade immediately and rotate AUTH_SECRET if it was ever readable in a Helm/Deployment manifest."
       ],
       "first_seen": "2026-09-20",
-      "last_reviewed": "2026-09-20",
-      "last_meaningful_update": "2026-09-20",
-      "current_version": "v2.25.0",
-      "latest_release_date": "2026-09-17",
+      "last_reviewed": "2026-09-27",
+      "last_meaningful_update": "2026-09-27",
+      "current_version": "v2.28.3",
+      "latest_release_date": "2026-09-26",
       "source_links": [
         "https://github.com/usekaneo/kaneo",
         "https://kaneo.app"
       ],
       "aliases": [],
-      "notes": "Created 2024-12-31, 9,136 stars, 802 forks, healthy multi-contributor spread (andrejsshell, tinsever, randoneering, MonsPropre, and more).",
+      "notes": "Created 2024-12-31, 9,136 stars, 802 forks, healthy multi-contributor spread (andrejsshell, tinsever, randoneering, MonsPropre, and more). Updated 2026-09-27: now 9,236 stars, 823 forks; v2.26.0 shipped a broad security hardening pass (AUTH_SECRET now required ≥32 chars, project:share permission enforced, TRUSTED_PROXIES defaults to loopback, Postgres port no longer published in Compose, WebSocket Origin checks) with several breaking changes — self-hosters must read the v2.26.0 release notes before upgrading.",
       "acted_on": false
     },
     {
@@ -8953,6 +8954,190 @@
       ],
       "aliases": [],
       "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Calnode",
+      "slug": "calnode-scheduling-engine",
+      "repo_url": "https://github.com/Calnode/calnode",
+      "website": "https://github.com/Calnode/calnode",
+      "description": "Self-hostable Calendly/Cal.com-style scheduling engine shipped as a single Go binary with embedded SQLite — API-first, webhook-native, and with a native MCP server compiled into the binary for agent-driven booking.",
+      "category": [
+        "product infrastructure",
+        "self-hosted SaaS alternatives",
+        "AI & agent infrastructure",
+        "scheduling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial use, self-hosting, redistribution, or embedding. Nothing paywalled for self-host; optional built-in video needs a LiveKit endpoint (self-hosted or cloud).",
+      "deployment": [
+        "single Go binary",
+        "Docker",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "REST API (88 endpoints)",
+        "HMAC-signed webhooks",
+        "MCP server (stdio + Streamable HTTP)",
+        "web admin UI (SvelteKit)"
+      ],
+      "use_cases": [
+        "self-hosted client-booking page for consulting/PTaaS engagements, replacing a Calendly seat",
+        "agent-bookable meeting slots exposed as MCP tools for an AI assistant/receptionist",
+        "embeddable scheduling backend inside a product without adopting cal.com's full stack",
+        "webhook-driven booking automation into n8n/Make/internal systems"
+      ],
+      "product_opportunities": [
+        "white-label booking-as-a-feature inside an existing SaaS product (single binary is trivial to run per-tenant)",
+        "AI-agent front desk: pair the MCP server with a support/sales agent that books calls autonomously"
+      ],
+      "alternatives": [
+        "cal.com (AGPL-3.0, 500k+ LOC, needs Postgres+Redis+API server; mainstream, assumed known)",
+        "Calendly (closed SaaS)",
+        "asm0dey/calit (same pitch, Quarkus+Postgres — heavier JVM stack, 6 stars, less mature)"
+      ],
+      "why_it_matters": "Removes the operational weight of self-hosting cal.com (multi-service Postgres+Redis stack) for teams that just want a booking page plus an API — and it is the most genuinely agent-native scheduling tool found so far, with MCP compiled into the binary rather than bolted on.",
+      "why_not_build_it_myself": "DST-safe time handling, transactional double-booking guards, an OAuth 2.1 authorization server for agent Connect flows, and native-API calendar free/busy sync are all easy to get subtly wrong; this ships them tested with an OpenSSF Scorecard and a committed AUDIT.md.",
+      "risks": [
+        "pre-1.0 (v0.9.0), ~3 months old, one dominant contributor — breaking changes possible before 1.0",
+        "instance-per-tenant design means no built-in multi-tenant isolation if used to serve many customers from one deployment",
+        "video/recording features depend on a self-hosted or cloud LiveKit endpoint, an extra moving part"
+      ],
+      "first_seen": "2026-09-27",
+      "last_reviewed": "2026-09-27",
+      "last_meaningful_update": "2026-09-27",
+      "current_version": "v0.9.0",
+      "latest_release_date": "2026-09-10",
+      "source_links": [
+        "https://github.com/Calnode/calnode"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-06-23, 97 stars, 16 forks, OpenSSF Scorecard badge and an AUDIT.md in the repo. Go 1.26 + pure-Go SQLite (no CGO) + Litestream backups; public booking pages are server-rendered Go templates, admin UI is SvelteKit 5.",
+      "acted_on": false
+    },
+    {
+      "name": "PNLCS (Panelica)",
+      "slug": "pnlcs-whmcs-alternative",
+      "repo_url": "https://github.com/Panelica/pnlcs",
+      "website": "https://pnlcs.com",
+      "description": "Self-hosted, MIT-licensed hosting billing platform and client portal — an open alternative to WHMCS covering product catalog, recurring invoicing, domain/SSL management, support tickets, and reseller hosting, with a REST API and an MCP server.",
+      "category": [
+        "product infrastructure",
+        "self-hosted SaaS alternatives",
+        "billing"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.1,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, resale, modification, or embedding.",
+      "deployment": [
+        "Docker (official panelica/pnlcs-runtime image)",
+        "self-hosted",
+        "PHP/Laravel install"
+      ],
+      "interfaces": [
+        "web client portal + admin panel",
+        "REST API",
+        "MCP server"
+      ],
+      "use_cases": [
+        "self-hosted client billing portal for an MSSP or PTaaS practice invoicing clients on a recurring basis",
+        "reseller-hosting billing (domains, SSL, tickets, affiliate tracking) without a WHMCS license",
+        "server/module ecosystem familiar to anyone who has run WHMCS (deliberately similar data model)"
+      ],
+      "product_opportunities": [
+        "directly applicable to the MSSP security admin-portal SaaS side — client invoicing/ticketing without recurring WHMCS licensing cost",
+        "Proxmox VE module (tested end-to-end per README) makes it usable as a billing front-end for a self-hosted VPS reselling side business"
+      ],
+      "alternatives": [
+        "WHMCS (proprietary, per-license cost, the incumbent this targets)",
+        "FOSSBilling (older PHP project, GPL, less actively evolving)",
+        "Blesta (proprietary)"
+      ],
+      "why_it_matters": "Directly usable for the MSSP secondary context: a client billing/support portal with a tested Stripe gateway and Proxmox VE integration, MIT-licensed instead of paying for WHMCS or a proprietary panel.",
+      "why_not_build_it_myself": "Recurring billing, a domain/SSL registrar module ecosystem, and a reseller ticket/knowledge-base flow are a multi-week build; this ships them with a live production demo and a payment gateway confirmed tested in production.",
+      "risks": [
+        "Laravel/PHP stack, not the primary MERN/Node toolchain — self-host as a standalone app rather than a library to integrate",
+        "small team building it 'in spare time alongside our main product' per the README — single-team maintenance risk",
+        "young project (created 2026-04), 60 stars — not yet proven at scale"
+      ],
+      "first_seen": "2026-09-27",
+      "last_reviewed": "2026-09-27",
+      "last_meaningful_update": "2026-09-27",
+      "current_version": "v1.2.0",
+      "latest_release_date": "2026-07-10",
+      "source_links": [
+        "https://github.com/Panelica/pnlcs",
+        "https://pnlcs.com",
+        "https://docs.pnlcs.com",
+        "https://hosting.panelica.com"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-04-18, 60 stars, 21 forks. Built by the team behind the Panelica server management panel as a companion billing product; Stripe gateway and Proxmox VE module both confirmed tested in production per the README.",
+      "acted_on": false
+    },
+    {
+      "name": "Macro",
+      "slug": "macro-unified-workspace",
+      "repo_url": "https://github.com/macro-inc/macro",
+      "website": "https://macro.com",
+      "description": "All-in-one team workspace — email, chat, docs, tasks, calls, file storage, and CRM — unified over a single bidirectional graph backend so any object (an email, a task, a doc) can be @-linked, with team AI agents given shared memory across the whole graph.",
+      "category": [
+        "product infrastructure",
+        "self-hosted SaaS alternatives",
+        "AI & agent infrastructure"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.8,
+      "maturity": "emerging",
+      "integration_effort": "high",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged loudly. Self-hosting is permitted under AGPL terms; building a modified hosted service on top requires releasing source, or a separate commercial license (contact licensing@macro.com) or managed-hosting arrangement (self-host@macro.com).",
+      "deployment": [
+        "self-hosted (Docker Compose for local dev; Pulumi IaC for the maintainers' own cloud deploy)",
+        "hosted (macro.com)"
+      ],
+      "interfaces": [
+        "web app",
+        "MCP/agent tool surface",
+        "internal services (42 deployable services)"
+      ],
+      "use_cases": [
+        "studying a bidirectional-graph data model that unifies email/chat/docs/tasks/CRM instead of siloed apps glued together with Zapier/MCP",
+        "reference architecture for giving AI agents 'team-level shared memory' across every workspace surface rather than per-tool context"
+      ],
+      "product_opportunities": [
+        "the cross-object graph + agent-memory pattern is reusable in a narrower vertical product (e.g. a support-inbox-plus-CRM-plus-tasks tool) without needing all of Macro's surface area"
+      ],
+      "alternatives": [
+        "the SaaS stack it explicitly targets replacing: Slack + Linear + Notion + HubSpot + Superhuman",
+        "Twenty CRM, Docmost, AFFiNE (each cover one slice of the surface, none unify all of it)"
+      ],
+      "why_it_matters": "The architecture — one bidirectional graph backend shared by every workspace primitive, with agents as first-class citizens of that graph rather than bolted-on chat — is a genuinely different design point from 'ten SaaS tools plus Zapier,' worth studying even without adopting the whole platform.",
+      "why_not_build_it_myself": "Not the point of this entry — the value here is architectural study, not a build-vs-buy calculation; replicating even a slice (e.g. the email+CRM linkage) is still significant effort.",
+      "risks": [
+        "AGPL-3.0 licensing needs legal attention before any commercial derivative use",
+        "self-hosting footprint is large (167 Rust crates, 42 services, Pulumi-managed infra) — this is not a single-binary deploy",
+        "primarily a hosted-product company (macro.com) with source-available self-hosting as a secondary path, not the primary go-to-market — self-host support/documentation depth is unproven"
+      ],
+      "first_seen": "2026-09-27",
+      "last_reviewed": "2026-09-27",
+      "last_meaningful_update": "2026-09-27",
+      "current_version": "v2026.9.25.4",
+      "latest_release_date": "2026-09-26",
+      "source_links": [
+        "https://github.com/macro-inc/macro",
+        "https://macro.com",
+        "https://docs.macro.com"
+      ],
+      "aliases": [],
+      "notes": "Created 2025-11-08 (~10.5 months old), 4,455 stars, 432 forks, dogfooded for two years by a ~15-person team (NYC/Toronto) before open-sourcing. Built in SolidJS + Rust.",
       "acted_on": false
     }
   ]

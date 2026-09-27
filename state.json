@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-26",
-  "last_successful_run": "2026-09-26",
-  "run_count": 31,
-  "rotation_slot_last_used": 4,
+  "last_run": "2026-09-27",
+  "last_successful_run": "2026-09-27",
+  "run_count": 32,
+  "rotation_slot_last_used": 5,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -52,7 +52,8 @@
     "AI agent infrastructure — agent fleet management (mngr, Paseo), mobile/cross-platform agent-driven UI verification (agent-device), multi-host infra operation runtime (AgentDock)",
     "product infrastructure — AI-agent runtime security/governance, agent context layer for data warehouses, AI-engineering foundation framework for CRM/ERP, TypeScript data-access layer with built-in access control, self-hosted form backend",
     "developer utilities/debugging/testing — NestJS Telescope-style debugging dashboard, local code-intelligence MCP servers (crowded niche), self-hosted multi-repo code search + Q&A, terminal API client with SSH/k8s tunnels, offline AI-coding cost analytics",
-    "data/search/documents/RAG — coding-agent context layers (Graft), incremental RAG indexing engines (CocoIndex), AI-native agent state stores (seekdb), embeddable hybrid search (FrankenSearch), governed database-to-MCP gateways (DatI)"
+    "data/search/documents/RAG — coding-agent context layers (Graft), incremental RAG indexing engines (CocoIndex), AI-native agent state stores (seekdb), embeddable hybrid search (FrankenSearch), governed database-to-MCP gateways (DatI)",
+    "self-hosted SaaS alternatives / productivity — agent-native scheduling engine (Calnode), WHMCS-alternative hosting billing (PNLCS), all-in-one team workspace with bidirectional-graph agent memory (Macro, architecture study only)"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1139,7 +1140,17 @@
     "malloydata/publisher",
     "avison9/cdclint",
     "pt9912/pg-change-feed",
-    "get-dst/dst"
+    "get-dst/dst",
+    "Calnode/calnode",
+    "abhinavxd/libredesk",
+    "usekaneo/kaneo",
+    "macro-inc/macro",
+    "Panelica/pnlcs",
+    "melgarafael/DeskcommCRM",
+    "asm0dey/calit",
+    "Django-CRM/Django-CRM",
+    "Nosdesk/Nosdesk",
+    "OneMana-Soft/OneCamp-fe"
   ],
   "rejected": [
     {
@@ -1726,6 +1737,31 @@
       "repo_url": "https://github.com/AgamiAI/agami-core",
       "reason": "inferior to today's catalogued alternative — same 'governed semantic layer over a database for AI agents' pitch as DatI (catalogued today), less concrete on the MCP-publishing/permission workflow",
       "date": "2026-09-26"
+    },
+    {
+      "repo_url": "self-hosted all-in-one AI workspace wave, continued (Sentrello/Sentrello, Anton-Barinov/TropaTT, esmworks/esionage, grunion-ai/weave, KitionAI/kition, OneMana-Soft/OneCamp-fe)",
+      "reason": "duplicate/hype wave — six-plus same-day, mostly zero-to-low-star repos pitching 'self-hosted Notion/ClickUp/Slack alternative with built-in AI agent'; none differentiated enough from each other or from mainstream (Notion, AFFiNE, Docmost) to review individually",
+      "date": "2026-09-27"
+    },
+    {
+      "repo_url": "personal-crm wave (rontext, Kindred, contrack, monica-next, NetPro, and others under topic:personal-crm)",
+      "reason": "duplicate/hype wave — crowded niche of small (≤60 stars) personal relationship trackers, nothing production-grade or clearly differentiated",
+      "date": "2026-09-27"
+    },
+    {
+      "repo_url": "https://github.com/Django-CRM/Django-CRM",
+      "reason": "inferior to catalogued alternative — mature, legitimate self-hosted CRM (MIT, 2,428 stars, since 2017) but no clear edge over already-catalogued Relaticle for this profile's needs",
+      "date": "2026-09-27"
+    },
+    {
+      "repo_url": "https://github.com/melgarafael/DeskcommCRM",
+      "reason": "credible but risk-flagged — real WhatsApp-native AI sales CRM (Next.js/Supabase, MIT) with genuine commit history, but README is built around an affiliate hosting partnership and it hit 4,058 stars in ~5 months under one maintainer; filed as Worth Watching pending growth that decouples from the affiliate promotion, not rejected outright",
+      "date": "2026-09-27"
+    },
+    {
+      "repo_url": "https://github.com/asm0dey/calit",
+      "reason": "duplicate — same 'self-hosted Calendly alternative' pitch as today's Calnode pick, but on Quarkus + Postgres (heavier JVM stack), 6 stars, earlier-stage; noted as an alternative under Calnode rather than a separate entry",
+      "date": "2026-09-27"
     }
   ],
   "known_releases": {
@@ -2218,8 +2254,8 @@
       "date": "2026-09-19"
     },
     "usekaneo/kaneo": {
-      "version": "v2.25.0",
-      "date": "2026-09-17"
+      "version": "v2.28.3",
+      "date": "2026-09-26"
     },
     "solidtime-io/solidtime": {
       "version": "v0.20.1",
@@ -2396,16 +2432,28 @@
     "Amal-David/docingest": {
       "version": "1.0.1 (npm, @docingest/mcp-server)",
       "date": "unclear-no-github-release"
+    },
+    "Calnode/calnode": {
+      "version": "v0.9.0",
+      "date": "2026-09-10"
+    },
+    "Panelica/pnlcs": {
+      "version": "v1.2.0",
+      "date": "2026-07-10"
+    },
+    "macro-inc/macro": {
+      "version": "v2026.9.25.4",
+      "date": "2026-09-26"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-09-12",
-      "note": "not used this run — GitHub Search API alone surfaced enough slot-6 volume across 8 parallel topic queries"
+      "note": "not used this run — GitHub Search API alone surfaced enough slot-5 volume across 12+3 parallel topic queries"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-26",
-      "note": "used for README/LICENSE fetches across the 8-candidate deep-review shortlist, including confirming FrankenSearch's OpenAI/Anthropic rider text and seekdb's Apache-2.0 license"
+      "last_ok": "2026-09-27",
+      "note": "used for README/LICENSE/AUDIT.md/DEPLOY.md fetches on the Calnode/Panelica/Macro/DeskcommCRM shortlist"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -2420,8 +2468,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-26",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries (373 raw results) plus deep-review metadata/releases/contributors checks on a 10-candidate shortlist, well under rate limits (8350/hr available)"
+      "last_ok": "2026-09-27",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries plus a 10-repo deep-review shortlist (metadata, releases, contributors), well under rate limits (8,350/hr available, <100 used)"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
@@ -2588,7 +2636,10 @@
     "cocoindex-incremental-indexing",
     "seekdb-agent-state-store",
     "frankensearch-hybrid-search",
-    "dati-database-mcp-gateway"
+    "dati-database-mcp-gateway",
+    "calnode-scheduling-engine",
+    "pnlcs-whmcs-alternative",
+    "macro-unified-workspace"
   ],
-  "notes": "2026-09-26: Single run, slot 4 (data, search, documents, RAG) per deterministic date formula (day_of_year 269 % 7 + 1 = 4). Catalogued 5 new: Graft (trailhq/Graft, MIT, 8.3, PROTOTYPE — no-vector-DB coding-agent context layer built by NanoNets/Trail, benchmarked on SWE-bench Verified with published methodology, 33/50 vs 27/50 resolved), CocoIndex (cocoindex-io/cocoindex, Apache-2.0, 8.2, PROTOTYPE — declarative incremental data-transformation framework for RAG/agent indexing, 'React for data engineering' mental model), seekdb (oceanbase/seekdb, Apache-2.0, 8.0, PROTOTYPE — MySQL-protocol AI-native state store unifying vector/full-text/scalar with a novel FORK/MERGE copy-on-write sandbox for agent state), FrankenSearch (Dicklesworthstone/frankensearch, MIT with OpenAI/Anthropic Rider — flagged loudly, 7.6, PROTOTYPE — embeddable two-tier hybrid search Rust CLI, same author as already-catalogued Destructive Command Guard), and DatI (yimindev/dati, Apache-2.0, 7.5, PROTOTYPE — small single-dev governed database-to-MCP semantic gateway with per-user credential/data-scope isolation). No meaningful updates found for previously catalogued projects — PipesHub AI resurfaced in discovery at the same v0.8.0 release, no material change; a full re-check of the other 138 catalogued projects was not performed (out of daily run budget, consistent with recent practice). Discovery confirmed 'codebase context/understanding for AI coding agents' keeps growing as a saturated niche (Graft, sdsrss/code-graph-mcp, ScriptedAlchemy/tracedecay, wlsdks/ontology-atlas surfaced today alongside already-catalogued Codanna/mex/Repowise); filed ontology-atlas as Worth Watching pending a direct comparison against Graft rather than a separate entry. Also filed galaxy-io/filament (data replication/CDC, unclear edge over Airbyte/Debezium) and Tencent/WeKnora (30,154-star enterprise RAG/agent/wiki platform, real depth but WeChat/Feishu/DingTalk-centric integration surface with limited relevance to Sourav's stack) as Worth Watching. Rejected codelibs/fess (mature but thin differentiation vs. configuring OpenSearch directly) and AgamiAI/agami-core (inferior to today's DatI pick on the same pitch) after evaluation. Amal-David/docingest (documentation-site-to-MCP-context engine, 18 stars, live hosted corpus at docingest.com) was this run's Small but High-Leverage Utility pick, following the pattern of not giving utility picks a full catalog entry (consistent with 2026-09-25's lgtm). 'Still Worth Trying' rotated to LibreDB Studio/OpenDataLoader PDF/Dagu since Bernstein/Sidequest/Monoscope were used in the 2026-09-25 digest. Discovery used 12 parallel GitHub Search API topic queries (rag, vector-database, document-processing, full-text-search, knowledge-graph, embeddings, etl, data-pipeline, semantic-search, reranker, change-data-capture, text-to-sql) covering 373 raw results, heavily diluted by same-day tutorial/spam repos (RAG-chatbot tutorials, an 'AdalFlow alternative' SEO-bait cluster, a coordinated TypeSafe-Jev-reranker benchmark micro-wave); WebSearch and HN were not needed, GitHub Search API alone produced far more slot-4 volume than the run could review. crates.io lookup failed once for FrankenSearch's version (fell back to GitHub release tag, not retried a third time)."
+  "notes": "2026-09-27: Single run, slot 5 (self-hosted SaaS alternatives, productivity) per deterministic date formula (day_of_year 270 % 7 + 1 = 5). Catalogued 3 new: Calnode (Calnode/calnode, Apache-2.0, 8.1, PROTOTYPE — Calendly/Cal.com alternative as a single Go binary + embedded SQLite, MCP server compiled into the binary, OAuth 2.1 authorization server for agent Connect flows), PNLCS/Panelica (Panelica/pnlcs, MIT, 7.1, PROTOTYPE — self-hosted WHMCS alternative for hosting billing/client portals, directly applicable to the MSSP secondary context, Stripe + Proxmox VE tested in production), and Macro (macro-inc/macro, AGPL-3.0 — flagged loudly, 6.8, STUDY — all-in-one team workspace unifying email/chat/docs/tasks/CRM over a bidirectional graph with team-level AI agent memory; architecture worth studying, adoption not warranted given AGPL and self-hosting complexity). One meaningful update: Kaneo (already catalogued USE NOW) went v2.25.0 → v2.28.3, with v2.26.0 being a genuine security release fixing an auth-bypass-grade bug (unset AUTH_SECRET fell back to a publicly-known default, making session cookies forgeable) plus several other hardening changes and breaking changes — flagged prominently since self-hosted instances on 2.25.0 or earlier need to upgrade. Discovery used 12 parallel GitHub Search API topic queries (crm, helpdesk, invoicing, project-management, notion-alternative, airtable-alternative, time-tracking, booking, knowledge-base, erp, expense-tracker, self-hosted+productivity) plus 3 follow-up queries (status-page, personal-crm, linear-alternative), heavily diluted by a same-day 'all-in-one self-hosted AI workspace' spam wave (Sentrello, TropaTT, esionage, weave, Kition, OneCamp-fe) and a crowded, low-quality personal-CRM niche — both filed as rejected waves. melgarafael/DeskcommCRM (WhatsApp-native AI sales CRM, MIT, real code and commit history) was filed as Worth Watching rather than catalogued: credible tech but an affiliate-hosting-driven README and 4,058 stars in ~5 months under one maintainer warrant letting growth settle before treating star count as a technical-merit signal. Rejected Django-CRM (inferior to already-catalogued Relaticle) and asm0dey/calit (same pitch as Calnode, heavier JVM stack, noted as an alternative instead of a separate entry) after evaluation. No small utility met the bar for the Small but High-Leverage Utility slot this run; section omitted. 'Still Worth Trying' rotated to Kingfisher/AdminForth/ctx since Bernstein/Sidequest/Monoscope (2026-09-25) and LibreDB Studio/OpenDataLoader PDF/Dagu (2026-09-26) were used in the prior two digests. WebSearch and HN were not needed; GitHub Search API alone produced far more slot-5 volume than the run could review, consistent with recent practice. crates.io/pypi/npm not needed this run (no library-shaped candidates in the final shortlist)."
 }
