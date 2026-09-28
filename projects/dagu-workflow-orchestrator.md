@@ -51,3 +51,12 @@ USE NOW — low integration risk, immediately useful as a cron/Airflow replaceme
 ## Change History
 ### 2026-09-07
 Initial discovery and review. Slot 6 (infrastructure, observability, deployment) run.
+
+### 2026-09-28
+Meaningful update: v2.17.0-v2.17.2 (up from v2.16.2) added human-in-the-loop workflow
+steps (`human-task` with push-back and rewind), native browser automation actions
+(`browser.extract` / `browser.run`, with allowed-domain reporting and a replay cache),
+a `dagu start --only` flag to run selected steps, and a `secret resolve` CLI command.
+Real capability expansion — workflows can now pause for human input and drive a browser
+as a first-class step type — not a patch release. Does not change the USE NOW
+recommendation.

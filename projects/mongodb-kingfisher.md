@@ -54,3 +54,12 @@ all reachable Git history by default instead of just the branch tip, surfacing s
 that were committed and later deleted (previously required an explicit flag). This
 meaningfully increases what a routine CI scan catches, at the cost of longer scan times on
 large repos. Does not change the USE NOW recommendation.
+
+### 2026-09-28
+Meaningful update: v2.6.0 added opt-in scanning of GitHub gists plus GitLab and Bitbucket
+Cloud snippets (with full history), and cut peak scan memory by replacing the Bloom
+prefilter with exact-digest dedup plus an opt-in `--disk-offload` mode. v2.7.0 added opt-in
+bounded verification for ambiguous credentials (AWS, BrowserStack, ClickHouse Cloud,
+MongoDB Atlas, PlanetScale, Razorpay, Wiz) — tries a small number of candidate pairings
+within a time budget instead of reporting unverifiable noise. Genuine expansion of scan
+surface beyond git repos, not a routine patch. Does not change the USE NOW recommendation.

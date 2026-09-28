@@ -87,3 +87,11 @@ projects already using Sentry SDKs.
 ## Change History
 ### 2026-09-14
 Initial discovery and review. Catalogued as USE NOW, 8.1/10.
+
+### 2026-09-28
+Meaningful update: v2.6.0 (up from v2.5.1) added scoped personal/service API tokens with
+explicit per-capability permissions (read/triage/upload-debug-files, optionally limited
+to one project), enforced across both the canonical and Sentry-compatible APIs, plus
+request-URL search and a Google Chat alert destination. The scoped-token capability
+closes a real gap for giving a CI integration or third party access without a
+full-access token. Does not change the USE NOW recommendation.

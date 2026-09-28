@@ -1,6 +1,6 @@
 # Catalog
 
-_147 projects tracked. Last updated 2026-09-27._
+_151 projects tracked. Last updated 2026-09-28._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -13,12 +13,13 @@ _147 projects tracked. Last updated 2026-09-27._
 | [Destructive Command Guard (dcg)](https://github.com/Dicklesworthstone/destructive_command_guard) | USE NOW | 8.6/10 | AI & agent infrastructure, developer productivity, safety tooling | MIT License with OpenAI/Anthropic Rider (custom) | low | 2026-09-18 |
 | [agentOS (Rivet)](https://github.com/rivet-dev/agentos) | PROTOTYPE | 8.6/10 | AI & agent infrastructure, developer productivity, product building blocks | Apache-2.0 | low | 2026-09-22 |
 | [NestLens](https://github.com/mogretici/nestlens) | USE NOW | 8.6/10 | developer productivity, debugging, observability, small high-leverage utilities | MIT | low | 2026-09-25 |
+| [AgentSight](https://github.com/eunomia-bpf/agentsight) | PROTOTYPE | 8.6/10 | AI & agent infrastructure, developer productivity, observability | MIT | low | 2026-09-28 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | medium | 2026-08-29 |
-| [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-07 |
+| [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-28 |
 | [Graphify](https://github.com/Graphify-Labs/graphify) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, RAG infrastructure, developer productivity, coding agents | Apache-2.0 | low | 2026-09-16 |
 | [agent-device](https://github.com/callstack/agent-device) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, developer productivity, coding agents | MIT | medium | 2026-09-23 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
-| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-21 |
+| [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-28 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
 | [ctx](https://github.com/ctxrs/ctx) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source | low | 2026-09-04 |
 | [SnapOtter](https://github.com/snapotter-hq/SnapOtter) | USE NOW | 8.4/10 | product building blocks, small high-leverage utilities, developer productivity | AGPL-3.0 | low | 2026-09-17 |
@@ -46,9 +47,10 @@ _147 projects tracked. Last updated 2026-09-27._
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
-| [Bugsink](https://github.com/bugsink/bugsink) | USE NOW | 8.1/10 | developer productivity, observability, infrastructure | PolyForm Shield 1.0.0 (core); portions of the 'ee/' directory, if present, under a separate license; sentry/ subdirectory is BSD-3-Clause (Sentry copyright) | low | 2026-09-14 |
+| [Bugsink](https://github.com/bugsink/bugsink) | USE NOW | 8.1/10 | developer productivity, observability, infrastructure | PolyForm Shield 1.0.0 (core); portions of the 'ee/' directory, if present, under a separate license; sentry/ subdirectory is BSD-3-Clause (Sentry copyright) | low | 2026-09-28 |
 | [mngr](https://github.com/imbue-ai/mngr) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, agent orchestration, developer productivity | MIT | low | 2026-09-23 |
 | [Calnode](https://github.com/Calnode/calnode) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure, scheduling | Apache-2.0 | low | 2026-09-27 |
+| [mockd](https://github.com/getmockd/mockd) | PROTOTYPE | 8.1/10 | developer productivity, product infrastructure, AI & agent infrastructure | Apache-2.0 | low | 2026-09-28 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
 | [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
@@ -60,6 +62,7 @@ _147 projects tracked. Last updated 2026-09-27._
 | [ktx](https://github.com/Kaelio/ktx) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, data / analytics, RAG / context engineering | Apache-2.0 | low | 2026-09-24 |
 | [Resterm](https://github.com/unkn0wn-root/resterm) | PROTOTYPE | 8.0/10 | developer productivity, small high-leverage utilities, product building blocks | Apache-2.0 | low | 2026-09-25 |
 | [seekdb](https://github.com/oceanbase/seekdb) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, product building blocks, database tooling | Apache-2.0 | medium | 2026-09-26 |
+| [Qtap](https://github.com/qpoint-io/qtap) | PROTOTYPE | 8.0/10 | infrastructure, observability, security tooling | Apache-2.0 | medium | 2026-09-28 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-22 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
@@ -81,6 +84,7 @@ _147 projects tracked. Last updated 2026-09-27._
 | [peerd](https://github.com/NotASithLord/peerd) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, browser automation | Apache-2.0 | low | 2026-09-22 |
 | [Paseo](https://github.com/getpaseo/paseo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent orchestration, self-hosted SaaS alternatives | Apache-2.0 | low | 2026-09-23 |
 | [Sourcebot](https://github.com/sourcebot-dev/sourcebot) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code intelligence | FSL-1.1-ALv2 (Functional Source License) for the core, converting to Apache-2.0 two years after each version's release; a separate, distinct license applies to the enterprise ('ee/') directory (not fully inspected — treat as proprietary until confirmed). | medium | 2026-09-25 |
+| [Pikopod](https://github.com/Pikopod/pikopod) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 | low | 2026-09-28 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |

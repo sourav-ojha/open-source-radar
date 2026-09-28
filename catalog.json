@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "projects": [
     {
       "name": "html-to-markdown (Kreuzberg)",
@@ -806,17 +806,17 @@
         "Live validation calls out to provider APIs, so scanning must be run somewhere with appropriate network egress and rate-limit awareness"
       ],
       "first_seen": "2026-08-30",
-      "last_reviewed": "2026-09-21",
-      "last_meaningful_update": "2026-09-21",
-      "current_version": "v2.5.0",
-      "latest_release_date": "2026-09-18",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "v2.7.0",
+      "latest_release_date": "2026-09-24",
       "source_links": [
         "https://github.com/mongodb/kingfisher",
         "https://mongodb.github.io/kingfisher/",
         "https://www.mongodb.com/blog/post/product-release-announcements/introducing-kingfisher-real-time-secret-detection-validation"
       ],
       "aliases": [],
-      "notes": "Detector catalog is sourced in part from Betterleaks and Google OSV-SCALIBR's Veles detectors. | 2026-09-03: v2.1.0 adds GitHub App authentication for org-wide scans (avoids 1hr installation-token expiry), improved AWS/GCP blast-radius role-impact analysis, and a new `kingfisher blast-radius` single-finding command. Relevant to the MSSP/PTaaS secondary context. Does not change USE NOW status. | 2026-09-21: v2.5.0 changes a default behavior — `scan --branch <ref>` now scans all reachable Git history by default instead of just the branch tip, surfacing secrets that were committed and later deleted (previously required an explicit flag). This meaningfully increases what a routine CI scan catches, at the cost of longer scan times on large repos. Does not change USE NOW status.",
+      "notes": "2026-09-28: v2.6.0 added opt-in scanning of GitHub gists plus GitLab and Bitbucket Cloud snippets (with full history), and cut peak scan memory by removing the Bloom prefilter in favor of exact-digest dedup plus an opt-in --disk-offload mode. v2.7.0 added opt-in bounded verification for ambiguous credentials (AWS, BrowserStack, ClickHouse Cloud, MongoDB Atlas, PlanetScale, Razorpay, Wiz) that tries a small number of candidate pairings within a time budget rather than reporting unverifiable noise. Genuine expansion of scan surface beyond git repos, not a routine patch. Previously: v2.1.0 -> v2.5.0 flagged 2026-09-21 for the full-git-history-by-default behavior change.",
       "acted_on": false
     },
     {
@@ -3418,17 +3418,17 @@
         "Smaller community than Airflow means fewer third-party integrations/StackOverflow answers"
       ],
       "first_seen": "2026-09-07",
-      "last_reviewed": "2026-09-07",
-      "last_meaningful_update": "2026-09-07",
-      "current_version": "v2.16.2",
-      "latest_release_date": "2026-09-02",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "v2.17.2",
+      "latest_release_date": "2026-09-25",
       "source_links": [
         "https://github.com/dagucloud/dagu",
         "https://docs.dagu.sh",
         "https://dagu.sh"
       ],
       "aliases": [],
-      "notes": "Created 2022, actively maintained (release days before this review). 88 contributors. Not to be confused with Sidequest (already catalogued Node.js background job queue) - Dagu is a DAG-based workflow/orchestration engine for ops automation, a different niche.",
+      "notes": "2026-09-28: v2.17.0-v2.17.2 added human-in-the-loop workflow steps (human-task push-back and rewind), native browser automation actions (browser.extract / browser.run, with allowed-domain reporting and a replay cache), a `dagu start --only` flag to run selected steps, and a `secret resolve` CLI command. This is a real capability expansion (workflows can now pause for human input and drive a browser as a first-class step type), not a patch release. Previously reviewed at v2.16.2 on 2026-09-07.",
       "acted_on": false
     },
     {
@@ -5256,16 +5256,16 @@
         "License field reports as NOASSERTION via GitHub API — always read the actual LICENSE file, not the API badge, for this repo"
       ],
       "first_seen": "2026-09-14",
-      "last_reviewed": "2026-09-14",
-      "last_meaningful_update": "2026-09-14",
-      "current_version": "2.5.1",
-      "latest_release_date": "2026-08-31",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "2.6.1",
+      "latest_release_date": "2026-09-25",
       "source_links": [
         "https://github.com/bugsink/bugsink",
         "https://www.bugsink.com/docs/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: stars 2069, pushed_at 2026-09-13, archived false. License confirmed by reading raw LICENSE file (API reports NOASSERTION because PolyForm Shield isn't a GitHub-recognized SPDX key by default): PolyForm Shield 1.0.0 for the core, BSD-3-Clause for vendored sentry/ code.",
+      "notes": "2026-09-28: v2.6.0 added scoped personal/service API tokens with explicit per-capability permissions (read/triage/upload-debug-files, optionally limited to one project) enforced across both the canonical and Sentry-compatible APIs, plus request-URL search and Google Chat alert destinations. The scoped-token capability is the meaningful part — it closes a real gap for giving a CI integration or third party access without a full-access token. Previously reviewed at 2.5.1 on 2026-09-14.",
       "acted_on": false
     },
     {
@@ -9138,6 +9138,265 @@
       ],
       "aliases": [],
       "notes": "Created 2025-11-08 (~10.5 months old), 4,455 stars, 432 forks, dogfooded for two years by a ~15-person team (NYC/Toronto) before open-sourcing. Built in SolidJS + Rust.",
+      "acted_on": false
+    },
+    {
+      "name": "AgentSight",
+      "slug": "agentsight-ai-agent-observability",
+      "repo_url": "https://github.com/eunomia-bpf/agentsight",
+      "website": "https://arxiv.org/abs/2508.02736",
+      "description": "A local-first, eBPF-based \"top/strace for AI agents\": it attaches to the kernel and to TLS functions to observe prompts, model calls, tool decisions, file activity, and network activity for any running coding agent (Claude Code, Codex, Gemini CLI, OpenCode, OpenClaw, or an arbitrary command) with no SDK, proxy, or vendor integration required.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "observability"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT — no restrictions on commercial or embedded use.",
+      "deployment": [
+        "local CLI (cargo install or prebuilt binary)",
+        "runs as a host-level observability process, Linux only"
+      ],
+      "interfaces": [
+        "CLI (`agentsight top`, `agentsight vis`, `agentsight pprof`)",
+        "eBPF kernel probes",
+        "TLS traffic tracing"
+      ],
+      "use_cases": [
+        "watching what a coding agent (Claude Code, Codex, etc.) actually touched on disk/network during a run, independent of what its own logs claim",
+        "diagnosing stalls, retry loops, or runaway token/tool-call spend by connecting prompts to real system effects",
+        "auditing agent-initiated network calls and file writes for security review before trusting an agent with more autonomy",
+        "flamegraph-style profiling of where an agent session's time and resources actually went"
+      ],
+      "product_opportunities": [
+        "a lightweight always-on \"agent activity monitor\" layer for an internal coding-agent fleet, without instrumenting each agent/SDK individually"
+      ],
+      "agent_opportunities": [
+        "purpose-built as an observability layer *for* agent tools, not itself an agent tool — natural pairing with any coding-agent workflow already in use"
+      ],
+      "alternatives": [
+        "LangSmith, Langfuse, Arize Phoenix (application-level tracing, require owning/instrumenting the app code)",
+        "Helicone (gateway/proxy-level, requires routing provider traffic through it)"
+      ],
+      "why_it_matters": "Application- and gateway-level agent observability tools all require either owning the agent's source or routing its LLM calls through a proxy. AgentSight instead watches the actual OS-level effects (syscalls, TLS traffic, file writes) of a closed-source CLI agent, which is the only viable approach for third-party coding-agent binaries.",
+      "why_not_build_it_myself": "Building a correct eBPF-based syscall/TLS tracer that correlates kernel events back to agent sessions is a multi-week systems-programming project; this ships it as a single binary with a published research paper backing the methodology.",
+      "risks": [
+        "Linux-only, requires eBPF support and elevated privileges on the host — not usable for agents run on a Mac dev machine or inside restricted CI runners",
+        "young project (created mid-2025) relative to established application-level observability tools; commit history mixes a real maintainer with a large volume of CI-bot commits",
+        "eBPF probes attached to TLS functions are inherently kernel-version-sensitive; verify compatibility before relying on it for anything more than local debugging"
+      ],
+      "first_seen": "2026-09-28",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "v1.0.31",
+      "latest_release_date": "2026-09-05",
+      "source_links": [
+        "https://github.com/eunomia-bpf/agentsight",
+        "https://arxiv.org/abs/2508.02736"
+      ],
+      "aliases": [],
+      "notes": "Created 2025-07-07, 710 stars, 106 forks. Backed by a published paper (arXiv:2508.02736, also published at an ACM venue, DOI:10.1145/3766882.3767169) — unusually rigorous validation for a tool this young.",
+      "acted_on": false
+    },
+    {
+      "name": "Qtap",
+      "slug": "qtap-ebpf-network-visibility",
+      "repo_url": "https://github.com/qpoint-io/qtap",
+      "website": "https://qpoint.io/products/qtap",
+      "description": "An eBPF agent that attaches to TLS/SSL functions in the kernel to show the unencrypted contents of all egress network traffic on a host — full request/response bodies, with process/container/user/protocol context — without a proxy, certificate management, or any application code changes.",
+      "category": [
+        "infrastructure",
+        "observability",
+        "security tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 — no restrictions. The agent itself is the free/open core of Qpoint.io's commercial observability product; using it standalone (outside Qpoint's hosted platform) is explicitly supported and documented.",
+      "deployment": [
+        "Linux host agent (install script or binary)",
+        "Docker container (privileged or CAP_BPF + host PID namespace)"
+      ],
+      "interfaces": [
+        "CLI daemon",
+        "built-in DevTools web UI (Chrome-DevTools-style network tab)",
+        "plugin system for custom traffic processing"
+      ],
+      "use_cases": [
+        "seeing exactly what a Node/Python service is actually sending to a third-party API when the integration behaves unexpectedly, without adding logging to the app",
+        "security review of outbound traffic from an EC2/ECS/EB workload to confirm no unintended data exposure",
+        "debugging or reverse-engineering a legacy/undocumented internal service's network behavior with no source access",
+        "confirming a deploy didn't silently change what an application sends over the wire"
+      ],
+      "product_opportunities": [
+        "an internal \"what does this service actually send externally\" audit capability, directly useful for the MSSP security-portal context"
+      ],
+      "agent_opportunities": [
+        "none built in; the CLI output is scriptable enough that a coding agent could be given it as a debugging tool during a live troubleshooting session"
+      ],
+      "alternatives": [
+        "mitmproxy (requires proxy + cert trust)",
+        "tcpdump/Wireshark (no TLS decryption without keys)",
+        "application-level API gateway logging"
+      ],
+      "why_it_matters": "Most traffic-inspection tools require either a proxy (cert trust, app config changes) or access to TLS keys. Qtap decrypts at the kernel boundary via eBPF, so it works against any process on the host, including ones you don't control or can't modify.",
+      "why_not_build_it_myself": "Correctly hooking TLS library functions across OpenSSL/BoringSSL/etc. via eBPF, and reassembling protocol-aware request/response pairs, is a substantial and fragile systems project.",
+      "risks": [
+        "requires privileged or CAP_BPF host access to run — the agent itself becomes a meaningful part of the host's security surface and should be scoped tightly",
+        "no tagged GitHub releases at all — the project has no versioning scheme, so there is no way to pin or audit \"what changed\" between installs; always tracks the main branch",
+        "commercial company (Qpoint) behind it; long-term OSS investment is tied to their hosted-product business rather than the agent alone"
+      ],
+      "first_seen": "2026-09-28",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "Unclear based on available documentation — no tagged releases",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/qpoint-io/qtap",
+        "https://qpoint.io/products/qtap",
+        "https://docs.qpoint.io/qtap"
+      ],
+      "aliases": [],
+      "notes": "Created 2025-04-16, 1,460 stars, 55 forks, active multi-contributor team backed by Qpoint.io. Last push 2026-09-25.",
+      "acted_on": false
+    },
+    {
+      "name": "mockd",
+      "slug": "mockd-multiprotocol-mock-server",
+      "repo_url": "https://github.com/getmockd/mockd",
+      "website": "https://mockd.io",
+      "description": "A single Go binary that mocks HTTP, gRPC, GraphQL, WebSocket, MQTT, SSE, and SOAP from one CLI. Imports OpenAPI/Postman/HAR/WSDL specs, supports stateful CRUD mocks, chaos-injection profiles and circuit breakers, and ships a local MCP server so a coding agent can create or mutate mocks itself.",
+      "category": [
+        "developer productivity",
+        "product infrastructure",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted. A managed SaaS tier is listed as roadmap/not-yet-live, so there is currently no paid-tier feature gating to plan around.",
+      "deployment": [
+        "local binary (Go install / Homebrew / prebuilt)",
+        "Docker",
+        "CI pipeline"
+      ],
+      "interfaces": [
+        "CLI",
+        "Admin REST API",
+        "built-in web dashboard",
+        "local MCP server"
+      ],
+      "use_cases": [
+        "mocking a third-party API (payments, messaging, etc.) during development before real credentials or a sandbox account exist",
+        "integration tests against WebSocket/MQTT/gRPC/SOAP endpoints without standing up the real infrastructure",
+        "chaos-testing client resilience (timeouts, circuit-breaker trips, bandwidth throttling) before it happens in production",
+        "letting a coding agent spin up or adjust a mock backend for a frontend task via its built-in MCP server"
+      ],
+      "product_opportunities": [
+        "usable as the mock layer inside an internal contract-testing pipeline for any product with third-party API dependencies"
+      ],
+      "agent_opportunities": [
+        "ships a local MCP server specifically so an agent can generate/modify mocks — explicit, advertised first-class agent integration"
+      ],
+      "alternatives": [
+        "WireMock (JVM, per-protocol extensions)",
+        "Mockoon (Electron)",
+        "Prism (HTTP-only)",
+        "MockServer (JVM)",
+        "Beeceptor (SaaS, rate-limited free tier)",
+        "json-server (REST only)"
+      ],
+      "why_it_matters": "Every mainstream mock tool forces a choice: one protocol, a JVM/Electron runtime, or a paid cloud tier for chaos/circuit-breaker features. mockd bundles nine protocols, fault injection, and an MCP server into one dependency-free binary.",
+      "why_not_build_it_myself": "A protocol-agnostic mock server with stateful flows, OpenAPI/Postman/HAR import, and fault injection is a substantial multi-protocol project; this ships it ready-made under a permissive license.",
+      "risks": [
+        "solo-maintainer project (one contributor accounts for the overwhelming majority of commits) — real bus-factor risk",
+        "latest tagged release (v0.7.1, 2026-06-21) trails the `main` branch's last push (2026-09-17) by roughly three months, so newer functionality may be untagged/undocumented",
+        "the README's comparison table against WireMock/MockServer/etc. is self-authored marketing — treat feature claims about competitors as unverified"
+      ],
+      "first_seen": "2026-09-28",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "v0.7.1",
+      "latest_release_date": "2026-06-21",
+      "source_links": [
+        "https://github.com/getmockd/mockd",
+        "https://mockd.io",
+        "https://docs.mockd.io"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-02-04, 147 stars. Single dominant contributor (zach-snell, 561 of ~564 commits).",
+      "acted_on": false
+    },
+    {
+      "name": "Pikopod",
+      "slug": "pikopod-api-failure-sandbox",
+      "repo_url": "https://github.com/Pikopod/pikopod",
+      "website": "https://pikopod.com",
+      "description": "A Go binary that builds a deterministic failure-injection sandbox from a third-party API's own OpenAPI spec (declines, timeouts, retry storms, duplicate webhooks) with no fixtures authored by hand, plus a fail-open recording proxy that fingerprints real production failures and turns them into permanent replayable regression scenarios, plus a spec-diff CI gate that fails a build on a breaking provider API change.",
+      "category": [
+        "developer productivity",
+        "testing",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted.",
+      "deployment": [
+        "local CLI (`go install` or signed release binary)",
+        "CI pipeline (GitHub Actions integration documented)"
+      ],
+      "interfaces": [
+        "CLI",
+        "spec-diff CI gate",
+        "recording proxy mode (\"Observe\")"
+      ],
+      "use_cases": [
+        "testing payment/webhook retry and idempotency logic against realistic provider failure modes before it happens for real",
+        "catching a breaking change in a third-party API's spec in CI before it reaches production",
+        "turning an actual production incident (e.g. a specific 503 response) into a permanent, committed regression test",
+        "building a resilience test suite for a Stripe/Razorpay-style integration without depending on the provider's own limited sandbox"
+      ],
+      "product_opportunities": [
+        "directly applicable as an internal QA tool for any product with payment/webhook integrations — relevant to the MSSP/PTaaS billing surface"
+      ],
+      "agent_opportunities": [
+        "CLI is fully scriptable; could be wrapped as an MCP tool letting a coding agent generate resilience scenarios for a newly integrated third-party API"
+      ],
+      "alternatives": [
+        "hand-rolled fixture/mock files",
+        "mockd/WireMock-style general fault injection (not derived from the provider's own spec)",
+        "the provider's own sandbox (which, per Pikopod's pitch, only knows how to succeed)"
+      ],
+      "why_it_matters": "A provider's own sandbox cannot be asked to return a specific failure at a specific point in your state machine. Pikopod derives realistic failure archetypes directly from the provider's spec and can replay an exact production failure on demand, closing the gap between \"tested happy path\" and \"what actually broke.\"",
+      "why_not_build_it_myself": "Deriving failure scenarios automatically from an arbitrary OpenAPI spec, plus a fingerprinting/replay pipeline from live traffic, is meaningfully more work than authoring fixtures by hand for one integration at a time.",
+      "risks": [
+        "very young project (created 2026-09-11, ~2.5 weeks old, pre-1.0 at v0.1.2) — treat as an experiment, not production-relied-upon tooling yet",
+        "small team; several listed \"contributors\" are dependabot rather than humans",
+        "core claims (\"eleven failure stories bind with nothing authored\") are demonstrated in the README/demo but not yet independently validated at scale"
+      ],
+      "first_seen": "2026-09-28",
+      "last_reviewed": "2026-09-28",
+      "last_meaningful_update": "2026-09-28",
+      "current_version": "v0.1.2",
+      "latest_release_date": "2026-09-24",
+      "source_links": [
+        "https://github.com/Pikopod/pikopod",
+        "https://pikopod.com",
+        "https://docs.pikopod.com"
+      ],
+      "aliases": [],
+      "notes": "Created 2026-09-11, 66 stars in ~2.5 weeks. Releases are cosign-signed with SLSA provenance — unusually rigorous supply-chain practice for a project this young.",
       "acted_on": false
     }
   ]
