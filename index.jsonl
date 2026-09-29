@@ -149,3 +149,7 @@
 {"slug": "qtap-ebpf-network-visibility", "repo_url": "https://github.com/qpoint-io/qtap", "name": "Qtap", "status": "PROTOTYPE", "score": 8.0, "last_reviewed": "2026-09-28", "current_version": "Unclear based on available documentation — no tagged releases", "aliases": []}
 {"slug": "mockd-multiprotocol-mock-server", "repo_url": "https://github.com/getmockd/mockd", "name": "mockd", "status": "PROTOTYPE", "score": 8.1, "last_reviewed": "2026-09-28", "current_version": "v0.7.1", "aliases": []}
 {"slug": "pikopod-api-failure-sandbox", "repo_url": "https://github.com/Pikopod/pikopod", "name": "Pikopod", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-28", "current_version": "v0.1.2", "aliases": []}
+{"slug": "misata-synthetic-data", "repo_url": "https://github.com/rasinmuhammed/misata", "name": "Misata", "status": "PROTOTYPE", "score": 8.4, "last_reviewed": "2026-09-29", "current_version": "v0.9.6.60", "aliases": []}
+{"slug": "tanstack-ai", "repo_url": "https://github.com/TanStack/ai", "name": "TanStack AI", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-09-29", "current_version": "v0.63.0", "aliases": []}
+{"slug": "pixeltable", "repo_url": "https://github.com/pixeltable/pixeltable", "name": "Pixeltable", "status": "STUDY", "score": 7.7, "last_reviewed": "2026-09-29", "current_version": "v0.7.11", "aliases": []}
+{"slug": "tinybase", "repo_url": "https://github.com/tinyplex/tinybase", "name": "TinyBase", "status": "STUDY", "score": 7.3, "last_reviewed": "2026-09-29", "current_version": "v10.0.0", "aliases": []}

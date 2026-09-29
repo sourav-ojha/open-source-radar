@@ -1,6 +1,6 @@
 # Catalog
 
-_151 projects tracked. Last updated 2026-09-28._
+_155 projects tracked. Last updated 2026-09-29._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -24,6 +24,7 @@ _151 projects tracked. Last updated 2026-09-28._
 | [ctx](https://github.com/ctxrs/ctx) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source | low | 2026-09-04 |
 | [SnapOtter](https://github.com/snapotter-hq/SnapOtter) | USE NOW | 8.4/10 | product building blocks, small high-leverage utilities, developer productivity | AGPL-3.0 | low | 2026-09-17 |
 | [Nerdlog](https://github.com/dimonomid/nerdlog) | USE NOW | 8.4/10 | developer productivity, observability, infrastructure, small high-leverage utilities | BSD-2-Clause | low | 2026-09-21 |
+| [Misata](https://github.com/rasinmuhammed/misata) | PROTOTYPE | 8.4/10 | small high-leverage utilities, product building blocks, AI & agent infrastructure, developer productivity | MIT | low | 2026-09-29 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity, small utility, RAG infrastructure | MIT | low | 2026-08-29 |
 | [AdminForth](https://github.com/devforth/adminforth) | USE NOW | 8.3/10 | product infrastructure, admin panels, product building blocks | MIT | low | 2026-09-03 |
 | [haiku.rag](https://github.com/ggozad/haiku.rag) | PROTOTYPE | 8.3/10 | RAG infrastructure, AI agent infrastructure, developer productivity | MIT | medium | 2026-09-05 |
@@ -44,6 +45,7 @@ _151 projects tracked. Last updated 2026-09-28._
 | [netbridge](https://github.com/muhammedogz/netbridge) | USE NOW | 8.2/10 | developer productivity, debugging, Node.js / Next.js tooling | MIT | low | 2026-09-11 |
 | [doco-cd](https://github.com/kimdre/doco-cd) | PROTOTYPE | 8.2/10 | infrastructure, deployment, developer productivity, product infrastructure | Apache-2.0 | low | 2026-09-21 |
 | [CocoIndex](https://github.com/cocoindex-io/cocoindex) | PROTOTYPE | 8.2/10 | RAG infrastructure, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-09-26 |
+| [TanStack AI](https://github.com/TanStack/ai) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-09-29 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
@@ -89,6 +91,7 @@ _151 projects tracked. Last updated 2026-09-28._
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
 | [Open Mercato](https://github.com/open-mercato/open-mercato) | PROTOTYPE | 7.7/10 | product infrastructure, AI & agent infrastructure, developer productivity | MIT | high | 2026-09-24 |
+| [Pixeltable](https://github.com/pixeltable/pixeltable) | STUDY | 7.7/10 | RAG infrastructure, AI & agent infrastructure, product building blocks, data infrastructure | Apache-2.0 | medium | 2026-09-29 |
 | [notifkit](https://github.com/devkitshq/notifkit) | PROTOTYPE | 7.6/10 | product infrastructure, notifications, backend components | MIT | medium | 2026-08-30 |
 | [Verb Authority](https://github.com/yairsabag/verb-authority) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Autoprompt Skill](https://github.com/Spielewoy/autoprompt-skill) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -130,6 +133,7 @@ _151 projects tracked. Last updated 2026-09-28._
 | [Docling Studio](https://github.com/scub-france/docling-Studio) | PROTOTYPE | 7.3/10 | document processing, RAG infrastructure, developer productivity | MIT | medium | 2026-09-12 |
 | [solidtime](https://github.com/solidtime-io/solidtime) | PROTOTYPE | 7.3/10 | product infrastructure, self-hosted SaaS alternatives, product building blocks | AGPL-3.0 | medium | 2026-09-20 |
 | [FrankenTUI (ftui)](https://github.com/Dicklesworthstone/frankentui) | STUDY | 7.3/10 | developer productivity, small high-leverage utilities | MIT License with OpenAI/Anthropic Rider (custom) | high | 2026-09-22 |
+| [TinyBase](https://github.com/tinyplex/tinybase) | STUDY | 7.3/10 | product building blocks, developer productivity, small high-leverage utilities | MIT | medium | 2026-09-29 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
