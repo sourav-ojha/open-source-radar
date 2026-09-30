@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-09-29",
-  "last_successful_run": "2026-09-29",
-  "run_count": 34,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-09-30",
+  "last_successful_run": "2026-09-30",
+  "run_count": 35,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -55,7 +55,8 @@
     "data/search/documents/RAG \u2014 coding-agent context layers (Graft), incremental RAG indexing engines (CocoIndex), AI-native agent state stores (seekdb), embeddable hybrid search (FrankenSearch), governed database-to-MCP gateways (DatI)",
     "self-hosted SaaS alternatives / productivity \u2014 agent-native scheduling engine (Calnode), WHMCS-alternative hosting billing (PNLCS), all-in-one team workspace with bidirectional-graph agent memory (Macro, architecture study only)",
     "infrastructure/observability \u2014 eBPF-based observability (AI-agent activity monitoring, egress TLS traffic visibility), API mocking/contract-failure testing (multi-protocol mock server with MCP support, spec-derived third-party API failure sandboxes)",
-    "experimental/hidden gems (slot 7) \u2014 relational synthetic-data engines with exact outcome conformance (Misata, seedfaker), TanStack's React-native AI SDK, multimodal database/orchestration/serving-in-one-file (Pixeltable), reactive browser data-store/sync-engine with new in-browser relational persister (TinyBase v10); rejected a fraud-pattern architecture-diagram skill (archify, 50x star spike vs 6x fork growth) and several same-day hype waves (clipboard sync, voice agents, browser-use agents)"
+    "experimental/hidden gems (slot 7) \u2014 relational synthetic-data engines with exact outcome conformance (Misata, seedfaker), TanStack's React-native AI SDK, multimodal database/orchestration/serving-in-one-file (Pixeltable), reactive browser data-store/sync-engine with new in-browser relational persister (TinyBase v10); rejected a fraud-pattern architecture-diagram skill (archify, 50x star spike vs 6x fork growth) and several same-day hype waves (clipboard sync, voice agents, browser-use agents)",
+    "AI agents/MCP/coding productivity (slot 1) \u2014 cheap 'judge model' as a decision-sidecar pattern appearing independently across three same-week tools (Abide rule enforcement, jevgrep semantic code search, mu judgment kernel), agent memory with an explicit wrongness/decay signal (Hippo), team-wide coding-agent cost observability (Agent Console), NVIDIA's agent-skill evaluation pipeline (SkillEvaluator), Z.ai's official coding-agent workbench (ZCode)"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1223,7 +1224,87 @@
     "donislawdev/TestingFilesGenerator",
     "instancio/instancio",
     "joke2k/faker",
-    "benkeen/generatedata"
+    "benkeen/generatedata",
+    "zai-org/ZCode",
+    "dzhng/jevgrep",
+    "LockedinLabs-AI/agent-console",
+    "coldteadotai/abide",
+    "hraness/gobstopper",
+    "qybaihe/mu",
+    "NVIDIA/SkillEvaluator",
+    "kitfunso/hippo-memory",
+    "MKAbuMattar/black-iris",
+    "Sibhimanyu/heresay",
+    "yefengr/pi-reach",
+    "vincentlauriat/vibe-factory",
+    "MiniMax-AI/OpenAgentCore",
+    "hara-cli/hara",
+    "yanhenrique-dev/Monocode-linux",
+    "digitaldrywood/detent",
+    "nicobailon/pi-mcp-adapter",
+    "ch1lam/aice-cli",
+    "The-Geek-Freaks/NEOTH",
+    "corwinm/arashi",
+    "vasilenko92/spec_driven_development",
+    "ragnarwestad/aide",
+    "VoKhoiNhon/open-skill-standard",
+    "AsiaOstrich/universal-dev-standards",
+    "MarceloGiazzon/NPDevGeneral",
+    "morzecrew/torve",
+    "Jei-sKappa/antmay",
+    "pr0d1r2/sherd",
+    "seok-jun/adaptive-agentic-sdd",
+    "raccioly/docguard",
+    "qiz029/dscode",
+    "CosmosMind-ai/RSI-Harness",
+    "Agenta-AI/awesome-ai-agent-platforms",
+    "MichaelKinsy/PiG",
+    "agent-launch/agent-launcher",
+    "zhuyansen/awesome-claude-video-skills",
+    "Ryze-AI-Adgent/open-seo-mcp-skills",
+    "duty1g/x64dbg-mcp-server",
+    "2akouwu/reverify",
+    "cinderline/northcinder",
+    "jianruntech/geo-score",
+    "20000419/fauxnix",
+    "punkpeye/awesome-remote-mcp-servers",
+    "Claude-Reverser/IDA-instances-MCP",
+    "HexRaysSA/ida-mcp",
+    "CaptureGrubEnchant/SolidWorks",
+    "JordyZomer/lemmalog",
+    "KaiWU5/Awesome-AI4AI",
+    "js-lee-AI/awesome-llm-agent-papers",
+    "rails/lemans",
+    "Hona/openeval",
+    "cofy-x/axern",
+    "Andy-611/dairy-bench",
+    "strands-labs/benchmark-harnesses",
+    "ifBars/blender-agent-studio",
+    "augety121/MCP-State-Twin",
+    "AGI-Eval-Official/FORTE",
+    "bugbasesecurity/cloud-attack-range",
+    "Hoylon/peerbridge-mcp",
+    "egma-ai/jev-code-reviewer",
+    "ZJunCher/mr-agent",
+    "hieuphung97/dely",
+    "openqa-cn/codexqa",
+    "rediga/Salesforce-Code-Review-Agent",
+    "DiffoHQ/diffo",
+    "Moeeryani/Vibe-Coding-Production-Kit",
+    "henit-chobisa/deck",
+    "jerryyeungisjingyang/claude-like-codex-code-review",
+    "edhoferdian/EEF",
+    "klarluft/gitwarren-app",
+    "kerbelp/metatron",
+    "crewplaneai/crewplane",
+    "yvgude/lean-ctx",
+    "Jaffe2718/s1cap",
+    "frankxai/claude-skills-library",
+    "matrixarkai/TemporalStore",
+    "KazuCocoa/renma",
+    "conorbronsdon/agent-context-os",
+    "StanimirTenev/baton",
+    "earendil-works/pi"
   ],
   "rejected": [
     {
@@ -1875,6 +1956,36 @@
       "repo_url": "voice-agent and browser-agent topic searches (QwenAudio/qwen-audio-agent, streamcoreai/streamcore-server, socai-io/jev-social + related 'Jev' family, OyadotAI/oya-browser, fullselfbrowsing/FSB, and dozens more)",
       "reason": "duplicate/hype waves \u2014 both topics returned 40-65 same-week entrants with near-identical positioning ('realtime voice agent server', 'browser control plane for AI agents'); the mainstream leaders already known (Stagehand, browser-use) dominate, and no smaller entrant showed enough differentiation to review individually",
       "date": "2026-09-29"
+    },
+    {
+      "repo_url": "context-engineering topic search (yvgude/lean-ctx, matrixarkai/TemporalStore, KazuCocoa/renma, conorbronsdon/agent-context-os, StanimirTenev/baton, and infiniflow/ragflow, semantica-agi/semantica already mainstream/off-scope)",
+      "reason": "thin/duplicate wave \u2014 small context-management utilities with 0-200 stars and no clear differentiation from already-catalogued context/memory entries, or already-mainstream RAG platforms out of scope for a fresh writeup",
+      "date": "2026-09-30"
+    },
+    {
+      "repo_url": "spec-driven-development topic search (ragnarwestad/aide, morzecrew/torve, Jei-sKappa/antmay, pr0d1r2/sherd, seok-jun/adaptive-agentic-sdd, vasilenko92/spec_driven_development, MarceloGiazzon/NPDevGeneral)",
+      "reason": "duplicate/hype wave \u2014 0-star same-week entrants pitching near-identical 'SDD workflow for AI coding agents' framing, no independent traction or differentiation",
+      "date": "2026-09-30"
+    },
+    {
+      "repo_url": "https://github.com/zai-org/ZCode",
+      "reason": "off-profile as a full desktop/web/terminal coding workbench rather than an embeddable component; official Z.ai (Zhipu AI) backing and fast adoption (7,201 stars/2,187 forks in 10 days) noted, but it's a Cursor/Claude-Code-class competitor product, not a discovery that fits the build-a-component brief; filed as Worth Watching",
+      "date": "2026-09-30"
+    },
+    {
+      "repo_url": "https://github.com/qybaihe/mu",
+      "reason": "architecture-interesting (judgment-kernel decision points, notable contributors including Armin Ronacher and Mario Zechner) but pre-release (npm 0.1.7) built on the pi agent base; filed as Worth Watching / architecture study rather than a full entry",
+      "date": "2026-09-30"
+    },
+    {
+      "repo_url": "https://github.com/NVIDIA/SkillEvaluator",
+      "reason": "credible official NVIDIA project with real research backing (arXiv paper) for evaluating agent skills, but tied to NVIDIA's own Verified Skills/SkillSpector/Harbor pipeline for full value; filed as Worth Watching pending a lighter-weight standalone use case",
+      "date": "2026-09-30"
+    },
+    {
+      "repo_url": "earendil-works/pi",
+      "reason": "not a fresh discovery \u2014 110,531 stars, MIT, the common agent-toolkit base several of today's finds (jevgrep, mu, hippo-memory integrations) build on; already mainstream by scale, noted as context rather than catalogued separately",
+      "date": "2026-09-30"
     }
   ],
   "known_releases": {
@@ -2047,8 +2158,8 @@
       "date": "2026-09-04"
     },
     "mex-memory/mex": {
-      "version": "v0.8.2",
-      "date": "2026-09-13"
+      "version": "v0.8.3",
+      "date": "2026-09-27"
     },
     "arthurpanhku/dvalincode": {
       "version": "v0.20.1",
@@ -2127,8 +2238,8 @@
       "date": "2026-08-17"
     },
     "kerlenton/mcpsnoop": {
-      "version": "v0.21.0",
-      "date": "2026-08-23"
+      "version": "v0.22.0",
+      "date": "2026-09-11"
     },
     "atlassian-labs/mcp-compressor": {
       "version": "v0.31.10",
@@ -2311,8 +2422,8 @@
       "date": "2026-08-23"
     },
     "headroomlabs-ai/headroom": {
-      "version": "v0.37.0",
-      "date": "2026-08-27"
+      "version": "v0.39.1",
+      "date": "2026-09-26"
     },
     "snapotter-hq/SnapOtter": {
       "version": "v2.2.0",
@@ -2589,6 +2700,34 @@
     "tinyplex/tinybase": {
       "version": "v10.0.0",
       "date": "2026-09-24"
+    },
+    "coldteadotai/abide": {
+      "version": "0.0.7 (npm)",
+      "date": "Unclear based on available documentation (no tagged GitHub release)"
+    },
+    "dzhng/jevgrep": {
+      "version": "v0.6.0",
+      "date": "2026-09-29"
+    },
+    "kitfunso/hippo-memory": {
+      "version": "v1.52.9",
+      "date": "2026-09-29"
+    },
+    "LockedinLabs-AI/agent-console": {
+      "version": "v0.4.1",
+      "date": "2026-09-27"
+    },
+    "qybaihe/mu": {
+      "version": "0.1.7 (npm)",
+      "date": "Unclear based on available documentation (no tagged GitHub release)"
+    },
+    "NVIDIA/SkillEvaluator": {
+      "version": "v0.3.0",
+      "date": "2026-09-17"
+    },
+    "zai-org/ZCode": {
+      "version": "v3.14.3",
+      "date": "2026-09-24"
     }
   },
   "source_health": {
@@ -2597,8 +2736,8 @@
       "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-5 volume across 12+3 parallel topic queries"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-09-29",
-      "note": "used for README/LICENSE fetches on the misata/seedfaker/pixeltable/mlx-serve/TanStack-ai shortlist"
+      "last_ok": "2026-09-30",
+      "note": "used for README fetches on the 8-repo shortlist"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -2613,8 +2752,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-09-29",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 12 topic-scoped search queries plus repo/release/contributor lookups on an 8-repo deep-review shortlist, well under rate limits (8,350/hr available)"
+      "last_ok": "2026-09-30",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 8 parallel topic-scoped search queries (coding-agent, spec-driven-development, agent-skills, context-engineering, AI code review, coding agent, agent eval/benchmark, mcp server) plus repo/release/contributor lookups on an 8-repo deep-review shortlist, well under rate limits (8,350/hr available)"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
@@ -2625,8 +2764,8 @@
       "note": "checked imbue-mngr package version (0.2.17); confirmed it lags GitHub main by several months"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-09-29",
-      "note": "confirmed @tanstack/ai@0.63.0, MIT"
+      "last_ok": "2026-09-30",
+      "note": "confirmed npm versions for abide (0.0.7), mu-agent (0.1.7), hippo-memory (1.52.9), jevgrep (0.7.0)"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -2792,7 +2931,11 @@
     "misata-synthetic-data",
     "tanstack-ai",
     "pixeltable",
-    "tinybase"
+    "tinybase",
+    "abide-rule-enforcement",
+    "jevgrep-code-search",
+    "hippo-memory-agent-memory",
+    "agent-console-cost-observability"
   ],
-  "notes": "2026-09-29: Single run, slot 7 (experimental projects and hidden gems) per deterministic date formula (day_of_year 272 % 7 + 1 = 7). Catalogued 4 new: Misata (rasinmuhammed/misata, MIT, 8.4, PROTOTYPE) \u2014 relational synthetic-data engine that solves for rows hitting a declared aggregate outcome exactly, zero orphan FKs, native MCP server, solo-maintainer bus-factor risk; TanStack AI (TanStack/ai, MIT, 8.2, PROTOTYPE) \u2014 type-safe provider-agnostic TS AI SDK from the TanStack team, pre-1.0 but backed by a healthy multi-contributor team, direct alternative to Vercel AI SDK; Pixeltable (pixeltable/pixeltable, Apache-2.0, 7.7, STUDY) \u2014 multimodal database/orchestration/serving collapsed into one Python file, mature and multi-contributor but Python-only; TinyBase (tinyplex/tinybase, MIT, 7.3, STUDY) \u2014 reactive JS data store/sync engine, catalogued now on the trigger of its v10.0.0 release adding an in-browser relational-DB persister (TinyJoin) and an MSSQL persister. No meaningful updates found on spot-checked catalogued projects (agentOS/Rivet unchanged at v0.2.21). Rejected tt-a1i/archify a second time with an escalated fraud signal: 73,775 stars now vs 1,457 at the first rejection (2026-09-18), a 50x star increase against only a 6x fork increase \u2014 stronger evidence of manipulated stars, not organic growth. Rejected two same-day hype waves (clipboard-sync/cross-device-clipboard, ~145 results; voice-agent and browser-agent topics, ~40-65 results each) where mainstream leaders (Stagehand, browser-use) already dominate and no smaller entrant differentiated enough to review individually. Filed two Worth Watching: seedfaker (opendsr-std/seedfaker) \u2014 polyglot Rust-core deterministic data generator with production-data anonymization and distributed TB-scale generation, genuinely different from Misata but stuck at v0.4.0-alpha with no release since 2026-05; mlx-serve (ddalcu/mlx-serve) \u2014 impressive native Apple Silicon LLM/image/video/music/3D inference server, but macOS 26.2+-only and broad scope creep for an 8-month-old project. Small but High-Leverage Utility: seedfaker's `replace` command (deterministic PII anonymization of CSV/JSONL that preserves cross-file referential integrity). 'Still Worth Trying' rotated to LibreDB Studio/OpenDataLoader PDF/Dagu since skills/Benjamin-Plus/html-to-markdown (2026-09-28), Kingfisher/AdminForth/ctx (2026-09-27), and Bernstein/Sidequest/Monoscope (2026-09-25) were used in the prior three digests. Discovery used 12 parallel GitHub Search API topic queries (voice-agent, browser-agent, diagram-as-code, synthetic-data, clipboard-manager, file-sync, screenshot-automation, sandbox+wasm, local-first sync-engine, desktop-app+developer-tool, multimodal+agent, test-data-generator) plus a 10-repo deep-review shortlist (repo metadata, releases, contributors, READMEs, LICENSE files via raw.githubusercontent.com). WebSearch, HN, and Lobsters were not needed; GitHub Search API alone produced more slot-7 volume than the run's review budget could cover."
+  "notes": "2026-09-30: Single run, slot 1 (AI agents, MCP, coding productivity) per deterministic date formula (day_of_year 273 % 7 + 1 = 1). Catalogued 4 new, all PROTOTYPE: Abide (coldteadotai/abide, MIT, 7.5) \u2014 enforces prose AGENTS.md/CLAUDE.md rules per agent edit via a cheap typed judge model, npm 0.0.7, no GitHub release yet; jevgrep (dzhng/jevgrep, MIT, 7.6) \u2014 judge-model-ranked code search CLI/skill for coding agents, disclosed ~30% cost reduction on a 10-task SWE-bench sample, repo only 4 days old; Hippo/hippo-memory (kitfunso/hippo-memory, MIT, 7.8) \u2014 agent memory with an explicit wrong-marking/supersede decay mechanic, zero-dependency BM25 default, broadest agent-compatibility surface reviewed this run; Agent Console (LockedinLabs-AI/agent-console, MIT, 7.2) \u2014 local-first team-wide token/cost observability for Claude Code/Codex sessions, unusually rigorous supply-chain posture (SBOM, notarized builds, OpenSSF scorecard) for a 10-day-old project. Notable cross-cutting finding: three independent same-week projects (Abide, jevgrep, mu) use a cheap typed 'judge model' (Jev, from TypeSafe) as a decision-sidecar to the main generation model \u2014 flagged in the digest as an emerging agent-engineering primitive worth watching rather than a single vendor's marketing angle. Filed three Worth Watching: zai-org/ZCode (Z.ai's official coding-agent desktop/web/terminal workbench, 7,201 stars/2,187 forks in 10 days, but a full IDE-class competitor product rather than an embeddable component); qybaihe/mu (judgment-kernel coding agent with decision points, notable contributors including Armin Ronacher and Mario Zechner, pre-release); NVIDIA/SkillEvaluator (official multi-tier agent-skill evaluation framework with an arXiv paper, tied to NVIDIA's own Verified Skills pipeline for full value). Noted but not catalogued: earendil-works/pi, a 110,531-star MIT agent-toolkit that several of today's finds build on directly \u2014 already mainstream by scale, treated as context rather than a fresh discovery. Rejected two same-day hype waves: spec-driven-development topic search (7 near-identical 0-star 'SDD workflow' repos) and a context-engineering topic search (5 small 0-200-star context-management utilities plus already-mainstream RAG platforms out of scope). Spot-checked 5 previously catalogued high-score projects (mex, Monoscope, AgentSight, Headroom, mcpsnoop) for meaningful updates: all showed only routine patch/minor version bumps since last review, nothing rising to the 'meaningful update' bar in AGENT.md section 10, so no Meaningful Updates section this run. 'Still Worth Trying' rotated to Bernstein/Sidequest/Monoscope since LibreDB Studio/OpenDataLoader PDF/Dagu (2026-09-29), skills/Benjamin-Plus/html-to-markdown (2026-09-28), and Kingfisher/AdminForth/ctx (2026-09-27) were used in the prior three digests. Discovery used 8 parallel GitHub Search API topic/keyword queries (coding-agent, spec-driven-development, agent-skills, context-engineering, 'code review' agent, 'coding agent' recent, agent evaluation/benchmark, mcp server recent-high-star) plus an 8-repo deep-review shortlist (repo metadata, releases, contributors, READMEs via raw.githubusercontent.com, npm registry version cross-checks). WebSearch and HN/Lobsters were not needed; the GitHub Search API alone surfaced more slot-1 volume than the run's review budget could cover."
 }
