@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-09-30",
+  "updated": "2026-10-01",
   "projects": [
     {
       "name": "Xberg",
@@ -9894,6 +9894,329 @@
       ],
       "aliases": [],
       "notes": "Unusually rigorous supply-chain posture for its age: OpenSSF Scorecard/Best Practices badges, Apple notarization, SHA256SUMS, signed attestations, CycloneDX SBOM from v0.4.1.",
+      "acted_on": false
+    },
+    {
+      "name": "Grit",
+      "slug": "grit-fullstack-scaffold",
+      "repo_url": "https://github.com/MUKE-coder/grit",
+      "website": "https://gritframework.dev",
+      "description": "A full-stack application framework/generator for Go + Next.js: one command scaffolds a monorepo (API, admin, web, mobile, desktop) with auth, 2FA, passkeys, RBAC, an admin panel, background jobs/cron, file storage, email, webhooks, realtime, feature flags, a verifiable audit log, and one-command deploy already wired. `grit generate resource X` writes the Go model/service/handler/routes, a shared Zod schema, TypeScript types, React Query hooks, and an admin CRUD screen from one field-definition command. Positions itself explicitly as 'Laravel + Filament for Go and React.'",
+      "category": [
+        "product building blocks",
+        "developer productivity",
+        "backend components",
+        "admin panels"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified via GitHub API license field. No restrictions on commercial use, SaaS deployment, redistribution, or embedding.",
+      "deployment": [
+        "CLI installer (curl script or go install)",
+        "self-hosted via Docker Compose (Postgres/Redis/MinIO/Mailhog)",
+        "`grit deploy` over SSH with systemd + Caddy",
+        "documented guides for Railway, Render, Fly.io, Coolify, Dokploy"
+      ],
+      "interfaces": [
+        "CLI",
+        "generated REST API (Go)",
+        "generated Next.js web app",
+        "generated admin panel",
+        "Expo mobile client",
+        "Wails desktop client"
+      ],
+      "use_cases": [
+        "Standing up a client-facing or internal SaaS MVP (CRM, invoicing, support desk, inventory) in hours instead of assembling auth/admin/jobs/storage by hand",
+        "Prototyping a micro-SaaS idea far enough to validate it before committing to a hand-built backend",
+        "Generating an internal admin tool for an existing data model without hand-building CRUD screens",
+        "A reference architecture for 'what a batteries-included typed full-stack scaffold looks like' even if not adopted directly"
+      ],
+      "product_opportunities": [
+        "Directly accelerates the 'idea to shippable paid product' path called out as a primary axis \u2014 the generated audit log, RBAC, and billing-adjacent plugins (Stripe) are exactly the plumbing a micro-SaaS needs before it can charge anyone",
+        "Could serve as the scaffold for new client engagements if the Go backend is acceptable, cutting weeks off a build"
+      ],
+      "alternatives": [
+        "Laravel + Filament (PHP ecosystem) \u2014 the explicit model Grit is copying into Go/TypeScript",
+        "AdminForth (already catalogued, USE NOW) \u2014 narrower: generates only the admin panel over an existing backend, whereas Grit generates the whole stack including the backend itself",
+        "Hand-assembling Express/Fastify + Prisma + a React admin kit \u2014 the status quo this replaces, at the cost of adopting Go instead of Node for the backend"
+      ],
+      "why_it_matters": "Collapses the week-one setup tax of a new SaaS product (auth, 2FA, RBAC, admin panel, jobs, storage, audit log, deploy pipeline) into one CLI command, and keeps the generated code as plain, readable Go/Next.js rather than framework magic you can't see.",
+      "why_not_build_it_myself": "Each of auth+2FA+passkeys, an admin panel with filters/bulk-actions/CSV export, a verifiable audit log, and a deploy pipeline is individually a multi-day task; wiring all of them consistently across a monorepo is the kind of boilerplate that's exactly worth not re-doing per project.",
+      "risks": [
+        "Young project \u2014 created February 2026 (~8 months old), 136 stars, 17 forks; the calendar-style version numbers (v3.337.1) suggest frequent incremental builds rather than a settled semver cadence, so treat it as pre-1.0 in spirit",
+        "Backend is Go + GORM, not Node/Express \u2014 adopting it means maintaining a second backend language alongside the MERN stack rather than reusing existing skills directly",
+        "Contributor activity looks concentrated in a small team; bus-factor risk for anything you'd build a real product on top of"
+      ],
+      "first_seen": "2026-10-01",
+      "last_reviewed": "2026-10-01",
+      "last_meaningful_update": "2026-10-01",
+      "current_version": "v3.337.1",
+      "latest_release_date": "2026-10-01",
+      "source_links": [
+        "https://github.com/MUKE-coder/grit",
+        "https://gritframework.dev",
+        "https://demo.gritframework.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT license, 136 stars, 17 forks, pushed_at 2026-10-01 (release cut same day), created 2026-02-11, 33 open issues. README explicitly frames itself against Laravel+Filament and shows a live demo app (gritframework.dev) with real generated screens. Go toolchain not required to install (shell installer), but Go/Node/pnpm/Docker needed for local dev. `grit seed --count 1000000` claim (batched/resumable seeding) stated in README but not independently benchmarked this run.",
+      "acted_on": false
+    },
+    {
+      "name": "Vercel Workflow SDK",
+      "slug": "vercel-workflow-sdk",
+      "repo_url": "https://github.com/vercel/workflow",
+      "website": "https://workflow-sdk.dev",
+      "description": "A TypeScript/JavaScript library that makes server-side functions durable: it persists workflow progress, retries failed steps, and lets workflows suspend without consuming compute while waiting. Ships a Next.js integration (`withWorkflow`), a CLI observability UI (`npx workflow web`), and a pluggable storage backend ('World') so it can run with a bundled local backend in dev, a Postgres-backed World for self-hosting, or Vercel's managed backend in production.",
+      "category": [
+        "product building blocks",
+        "AI & agent infrastructure",
+        "backend components",
+        "job queues and schedulers"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, verified via GitHub API. No restrictions on commercial use or self-hosting; the Postgres World backend is open source, Vercel's managed backend is an optional convenience, not a requirement.",
+      "deployment": [
+        "npm package (`workflow`)",
+        "Next.js/Node.js server integration",
+        "self-hosted via Postgres-backed World",
+        "Vercel managed (optional)"
+      ],
+      "interfaces": [
+        "TypeScript/JavaScript library",
+        "API routes / Server Actions",
+        "CLI observability UI"
+      ],
+      "use_cases": [
+        "Multi-step onboarding or signup flows that must survive a deploy or a crashed process mid-way",
+        "AI agent pipelines that call multiple models/tools in sequence and need replay-safe retries",
+        "Long-running background jobs (report generation, data sync) without hand-rolled job-state tracking",
+        "Sagas spanning multiple third-party API calls where partial failure needs a defined recovery path"
+      ],
+      "product_opportunities": [
+        "Backbone for any product feature that currently relies on a fragile chain of webhook handlers and manual retry logic"
+      ],
+      "alternatives": [
+        "Temporal (mainstream, multi-language, heavier operational footprint) \u2014 Workflow SDK trades Temporal's generality for a zero-infra, TypeScript-native developer experience with first-class Next.js integration",
+        "Inngest (close competitor, hosted-first, broader existing ecosystem) \u2014 Workflow SDK is lighter-weight and ships framework-level integration out of the box rather than requiring a separate dashboard/service from day one",
+        "durable-workflow/workflow \u2014 same durable-execution category but Laravel/PHP-only; not applicable to a Node/Next.js stack (reviewed and rejected for that reason this run)"
+      ],
+      "why_it_matters": "Removes the need to hand-build retry/resume state machines for any multi-step server-side process \u2014 directly useful for AI-agent pipelines and onboarding flows in a Next.js/Node product.",
+      "why_not_build_it_myself": "Durable execution \u2014 replay-safe retries, suspending without holding compute, surviving process restarts \u2014 is a well-studied hard problem; Temporal and this SDK both exist because getting it right from scratch is a multi-week undertaking with easy-to-miss edge cases.",
+      "risks": [
+        "Young \u2014 created October 2025 (~1 year old) \u2014 early for a primitive you'd trust with business-critical workflow state",
+        "424 open issues against 2,442 stars is a high ratio; worth skimming issue themes for recurring pain points before depending on it in production",
+        "The smoothest path is tied to Vercel's platform; self-hosting via the Postgres World is documented but is the less-traveled path"
+      ],
+      "first_seen": "2026-10-01",
+      "last_reviewed": "2026-10-01",
+      "last_meaningful_update": "2026-10-01",
+      "current_version": "5.0.0 (npm; GitHub release tag lags at workflow@4.8.9, 2026-09-15 \u2014 npm registry is current)",
+      "latest_release_date": "2026-09-15 (GitHub tag); npm published more recently",
+      "source_links": [
+        "https://github.com/vercel/workflow",
+        "https://workflow-sdk.dev",
+        "https://www.npmjs.com/package/workflow"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 2,442 stars, 373 forks, pushed_at 2026-10-01, created 2025-10-23. npm registry shows workflow@5.0.0 (Apache-2.0) as latest, ahead of the GitHub release tag (4.8.9) \u2014 monorepo per-package tagging lag, not a staleness signal. Built and maintained by Vercel; README explicitly documents the dev/self-host/managed deployment spectrum and a 'Worlds' extension point for custom backends.",
+      "acted_on": false
+    },
+    {
+      "name": "OpenFGA",
+      "slug": "openfga-authorization-engine",
+      "repo_url": "https://github.com/openfga/openfga",
+      "website": "https://openfga.dev",
+      "description": "A high-performance, flexible authorization/permission engine inspired by Google Zanzibar. Developers model access control as relationship tuples (principal-action-resource plus derived roles/conditions for ABAC) and query a stateless Policy Decision Point over HTTP or gRPC. Ships SDKs for Node.js, Java, Go, Python, .NET, a CLI, a Terraform provider, and an in-browser playground; supports in-memory, PostgreSQL, MySQL, and SQLite (beta) storage.",
+      "category": [
+        "product building blocks",
+        "authorization",
+        "identity",
+        "backend components"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, verified via GitHub API. Fully permissive \u2014 no restrictions on commercial use, SaaS deployment, or embedding. Project is CNCF-incubating; no dual-licensing or open-core gating on the core engine.",
+      "deployment": [
+        "Docker",
+        "precompiled binary / Homebrew",
+        "Helm chart",
+        "embeddable Go library",
+        "Terraform provider for policy-as-code"
+      ],
+      "interfaces": [
+        "HTTP API",
+        "gRPC API",
+        "Node.js/Java/Go/Python/.NET SDKs",
+        "CLI",
+        "web Playground"
+      ],
+      "use_cases": [
+        "Fine-grained, per-resource permissions for a multi-tenant SaaS admin portal \u2014 directly applicable to the MSSP admin-portal product",
+        "Replacing scattered `if (user.role === 'admin')` checks across controllers with centralized, testable policy",
+        "Modeling ReBAC (relationship-based access, e.g. 'can view if a member of the team that owns this document') that a flat roles table can't express cleanly",
+        "Policy-as-code via the Terraform provider for teams wanting access control reviewed in pull requests"
+      ],
+      "product_opportunities": [
+        "Could be embedded as the authorization layer inside a commercial product to offer customers real per-object sharing/permissions, a feature that's expensive to retrofit later"
+      ],
+      "alternatives": [
+        "Cerbos (close competitor, also reviewed this run) \u2014 Apache-2.0 core Policy Decision Point with YAML policies that are arguably easier to author than OpenFGA's relationship-tuple model, plus an optional proprietary Cerbos Hub control plane; OpenFGA has the stronger adoption signal (Auth0, Grafana Labs, Docker, Canonical) and CNCF backing",
+        "Keycloak/Auth0 built-in authorization \u2014 heavier, bundles identity and authorization together, whereas OpenFGA is authorization-only and composes with any identity provider",
+        "A hand-rolled roles column (the default for most solo/small-team projects) \u2014 works until permissions need to express relationships or per-object sharing, at which point it requires a rewrite OpenFGA avoids"
+      ],
+      "why_it_matters": "Centralizes authorization logic that otherwise sprawls across controllers and grows inconsistent as a product's permission model gets more granular \u2014 directly relevant to building a multi-tenant admin-portal SaaS.",
+      "why_not_build_it_myself": "Zanzibar-style authorization \u2014 consistent, low-latency access checks across a relationship graph at scale \u2014 is a distributed-systems problem with known hard edge cases (consistency windows, cascading revocation); OpenFGA has already solved it with production adoption at Auth0/Grafana/Docker scale.",
+      "risks": [
+        "Relationship-tuple modeling has a real learning curve versus a simple roles table \u2014 worth the investment only once permission logic genuinely outgrows basic RBAC",
+        "Running OpenFGA is a separate service with its own datastore and deploy \u2014 an operational dependency to weigh against the value for a small product",
+        "Default in-memory store is explicitly non-persistent per the README; production requires wiring Postgres or MySQL from the start"
+      ],
+      "first_seen": "2026-10-01",
+      "last_reviewed": "2026-10-01",
+      "last_meaningful_update": "2026-10-01",
+      "current_version": "v1.21.0",
+      "latest_release_date": "2026-09-20",
+      "source_links": [
+        "https://github.com/openfga/openfga",
+        "https://openfga.dev",
+        "https://www.npmjs.com/package/@openfga/sdk"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 5,892 stars, 511 forks, pushed_at 2026-10-01, created 2022-06-08, 217 open issues. README lists production adopters (Auth0, Grafana Labs, Canonical, Docker, Agicap, Read.AI). npm @openfga/sdk at 0.9.7 (Apache-2.0), consistent with the server's license. CNCF Sandbox project.",
+      "acted_on": false
+    },
+    {
+      "name": "Evolu",
+      "slug": "evolu-local-first-platform",
+      "repo_url": "https://github.com/evoluhq/evolu",
+      "website": "https://www.evolu.dev",
+      "description": "A TypeScript local-first platform: a typed, SQLite-backed local data store with built-in end-to-end encryption and CRDT-based sync across devices via a relay server. Ships bindings for React, Next.js, Svelte, Vue, and React Native/Expo, aimed at building apps that work fully offline and sync when connectivity returns, without a hand-built backend sync layer.",
+      "category": [
+        "product building blocks",
+        "data sync",
+        "local-first",
+        "databases"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified via GitHub API. No restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "npm packages (framework-specific bindings)",
+        "self-hosted relay server for cross-device sync",
+        "React Native / Expo for mobile"
+      ],
+      "interfaces": [
+        "TypeScript library",
+        "local SQLite store",
+        "relay server protocol for sync"
+      ],
+      "use_cases": [
+        "Offline-first product features (field service, inventory, note-taking) that must keep working without a network connection",
+        "End-to-end-encrypted sync without standing up and securing a custom backend for it",
+        "PWA or mobile apps where instant local reads/writes matter more than server round-trips"
+      ],
+      "product_opportunities": [
+        "Removes the sync-engine problem for an entire recurring product category \u2014 offline-capable client apps \u2014 that would otherwise require weeks of custom CRDT/conflict-resolution work"
+      ],
+      "alternatives": [
+        "RxDB (mainstream-adjacent local-first database, ~23k stars) \u2014 broader ecosystem and replication targets, but Evolu differentiates on built-in end-to-end encryption and a smaller, SQLite-native, typed-schema surface",
+        "Yjs/Liveblocks (already evaluated in prior runs; document/rich-text CRDT focus) \u2014 Evolu instead targets a typed relational/SQLite data model, closer to 'offline Postgres' than 'offline Google Docs'",
+        "Supabase (mainstream, excluded from fresh discovery) \u2014 a hosted Postgres+realtime service; Evolu is local-first by default rather than server-first with sync bolted on"
+      ],
+      "why_it_matters": "Removes the need to hand-build an offline-sync layer \u2014 conflict resolution, encryption, a relay protocol \u2014 for any product feature that needs to work without a reliable network connection.",
+      "why_not_build_it_myself": "CRDT-correct offline sync with end-to-end encryption is a multi-week-plus correctness problem (conflict resolution edge cases, key management, relay protocol) that's easy to get subtly wrong.",
+      "risks": [
+        "The top-level README is thin on product description and points entirely to the docs site (evolu.dev) \u2014 verify current scope and stability there before committing, rather than relying on the GitHub README alone",
+        "Cross-device sync needs a self-hosted relay server \u2014 an additional operational component beyond the client library",
+        "Smaller ecosystem (1,899 stars, 73 forks) than RxDB; fewer production war stories to learn from"
+      ],
+      "first_seen": "2026-10-01",
+      "last_reviewed": "2026-10-01",
+      "last_meaningful_update": "2026-10-01",
+      "current_version": "@evolu/common@8.14.0 (npm)",
+      "latest_release_date": "2026-10-01",
+      "source_links": [
+        "https://github.com/evoluhq/evolu",
+        "https://www.evolu.dev",
+        "https://www.npmjs.com/package/@evolu/common"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,899 stars, 73 forks, pushed_at 2026-10-01, created 2022-09-25, 15 open issues (low relative to stars \u2014 healthy signal). npm @evolu/common at 8.14.0 (MIT), confirms active, frequent publishing despite thin GitHub README. Framework examples ship for React+Next.js, Svelte, and Vue, all PWA-oriented.",
+      "acted_on": false
+    },
+    {
+      "name": "model-compose",
+      "slug": "model-compose-ai-pipeline-yaml",
+      "repo_url": "https://github.com/hanyeol/model-compose",
+      "website": "",
+      "description": "A declarative, docker-compose-style way to define AI systems in one YAML file: chat APIs, RAG pipelines, ReAct agents, and MCP servers, composed from interchangeable components (models, agents, tools, memory) with no orchestration code. Supports local models and cloud APIs interchangeably, ships native drivers for Chroma/Milvus/Qdrant/FAISS/Neo4j/ArangoDB/Redis, and can expose any defined workflow as an MCP server by changing one adapter line.",
+      "category": [
+        "AI & agent infrastructure",
+        "RAG infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified via GitHub API. No restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "pip/uv package",
+        "Docker",
+        "single YAML file runs identically locally, in Docker, or in production"
+      ],
+      "interfaces": [
+        "YAML DSL",
+        "CLI (`model-compose up`)",
+        "HTTP server",
+        "MCP server (one-line adapter change)",
+        "bundled web UI"
+      ],
+      "use_cases": [
+        "Quickly prototyping a RAG pipeline (embed -> retrieve -> generate) without writing Python glue code",
+        "Turning an existing workflow into an MCP server for Claude/Cursor/ChatGPT with a one-line config change",
+        "Defining a ReAct agent (tools, system prompt, iteration limit) declaratively for fast iteration",
+        "Validating an AI product idea's pipeline shape before committing to hand-written orchestration code"
+      ],
+      "product_opportunities": [
+        "Fast way to stand up an internal AI-pipeline prototype to validate a product idea before building it properly in the real stack"
+      ],
+      "alternatives": [
+        "LangChain/LlamaIndex (mainstream, excluded from fresh discovery) \u2014 model-compose's difference is declarative YAML with zero Python glue code and docker-compose-style portability across local/cloud rather than a Python framework to code against",
+        "n8n (mainstream, excluded from fresh discovery) \u2014 model-compose is code-first and git-friendly (a text file, not a visual canvas) and ships native vector-DB drivers out of the box"
+      ],
+      "why_it_matters": "Collapses the orchestration boilerplate for chat APIs, RAG pipelines, and simple agents into one portable, git-friendly file \u2014 useful for validating an AI feature's shape before investing in custom code.",
+      "why_not_build_it_myself": "Not technically hard to build piecemeal, but tedious to re-build the same glue code (component wiring, streaming, MCP exposure) per project; this removes the repetition for prototyping specifically.",
+      "risks": [
+        "Apparent single-maintainer project (hanyeol), 117 stars \u2014 real bus-factor and longevity risk for anything beyond prototyping",
+        "GitHub release tags are stale (latest tag v0.4.0 from September 2025) despite active daily commits and PyPI publishing continuing to 0.4.113 \u2014 track the PyPI version, not the GitHub release tag, for currency",
+        "Declarative YAML pipelines hit a complexity ceiling quickly for genuinely custom agent logic \u2014 good for prototyping, not a replacement for hand-written orchestration in a mature product"
+      ],
+      "first_seen": "2026-10-01",
+      "last_reviewed": "2026-10-01",
+      "last_meaningful_update": "2026-10-01",
+      "current_version": "0.4.113 (PyPI; GitHub release tag lags at v0.4.0, 2025-09-02)",
+      "latest_release_date": "2025-09-02 (GitHub tag); PyPI publishes continuously, 0.4.113 as of this run",
+      "source_links": [
+        "https://github.com/hanyeol/model-compose",
+        "https://pypi.org/project/model-compose/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 117 stars, 17 forks, pushed_at 2026-10-01, created 2025-05-01, 5 open issues. PyPI confirms active publishing (0.4.113) well past the stale GitHub release tag (v0.4.0) \u2014 release-tagging discipline is weak but the package itself is actively maintained. README available in Korean and Chinese as well as English.",
       "acted_on": false
     }
   ]

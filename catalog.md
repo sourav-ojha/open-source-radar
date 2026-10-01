@@ -1,6 +1,6 @@
 # Catalog
 
-_159 projects tracked. Last updated 2026-09-30._
+_164 projects tracked. Last updated 2026-10-01._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -65,12 +65,14 @@ _159 projects tracked. Last updated 2026-09-30._
 | [Resterm](https://github.com/unkn0wn-root/resterm) | PROTOTYPE | 8.0/10 | developer productivity, small high-leverage utilities, product building blocks | Apache-2.0 | low | 2026-09-25 |
 | [seekdb](https://github.com/oceanbase/seekdb) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, product building blocks, database tooling | Apache-2.0 | medium | 2026-09-26 |
 | [Qtap](https://github.com/qpoint-io/qtap) | PROTOTYPE | 8.0/10 | infrastructure, observability, security tooling | Apache-2.0 | medium | 2026-09-28 |
+| [OpenFGA](https://github.com/openfga/openfga) | PROTOTYPE | 8.0/10 | product building blocks, authorization, identity, backend components | Apache-2.0 | medium | 2026-10-01 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-22 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
 | [ripwire](https://github.com/redhat-et/ripwire) | PROTOTYPE | 7.9/10 | AI agent infrastructure, code intelligence / context engineering, developer productivity | Apache-2.0 | low | 2026-09-09 |
 | [GEO Optimizer (GeoReady)](https://github.com/Auriti-Labs/geo-optimizer-skill) | USE NOW | 7.9/10 | developer productivity, product building blocks, small utility | MIT | low | 2026-09-12 |
 | [Kaneo](https://github.com/usekaneo/kaneo) | USE NOW | 7.9/10 | product infrastructure, developer productivity, self-hosted SaaS alternatives | MIT | low | 2026-09-27 |
+| [Vercel Workflow SDK](https://github.com/vercel/workflow) | PROTOTYPE | 7.9/10 | product building blocks, AI & agent infrastructure, backend components, job queues and schedulers | Apache-2.0 | low | 2026-10-01 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -88,6 +90,7 @@ _159 projects tracked. Last updated 2026-09-30._
 | [Sourcebot](https://github.com/sourcebot-dev/sourcebot) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code intelligence | FSL-1.1-ALv2 (Functional Source License) for the core, converting to Apache-2.0 two years after each version's release; a separate, distinct license applies to the enterprise ('ee/') directory (not fully inspected — treat as proprietary until confirmed). | medium | 2026-09-25 |
 | [Pikopod](https://github.com/Pikopod/pikopod) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 | low | 2026-09-28 |
 | [Hippo (hippo-memory)](https://github.com/kitfunso/hippo-memory) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent memory, developer productivity | MIT | low | 2026-09-30 |
+| [Grit](https://github.com/MUKE-coder/grit) | PROTOTYPE | 7.8/10 | product building blocks, developer productivity, backend components, admin panels | MIT | medium | 2026-10-01 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -142,6 +145,7 @@ _159 projects tracked. Last updated 2026-09-30._
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
 | [MillionSend](https://github.com/MillionSend/millionsend) | PROTOTYPE | 7.2/10 | product building blocks, email infrastructure, self-hosted SaaS alternative | AGPL-3.0 (core); MIT (SDKs) | low | 2026-09-15 |
 | [Agent Console](https://github.com/LockedinLabs-AI/agent-console) | PROTOTYPE | 7.2/10 | AI & agent infrastructure, observability, developer productivity | MIT | medium | 2026-09-30 |
+| [Evolu](https://github.com/evoluhq/evolu) | STUDY | 7.2/10 | product building blocks, data sync, local-first, databases | MIT | medium | 2026-10-01 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
@@ -155,6 +159,7 @@ _159 projects tracked. Last updated 2026-09-30._
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
 | [Router.so](https://github.com/9d8dev/router) | PROTOTYPE | 6.9/10 | product infrastructure, small high-leverage utilities | AGPL-3.0 | low | 2026-09-24 |
+| [model-compose](https://github.com/hanyeol/model-compose) | PROTOTYPE | 6.9/10 | AI & agent infrastructure, RAG infrastructure, developer productivity | MIT | low | 2026-10-01 |
 | [Opslane](https://github.com/opslane/opslane) | PROTOTYPE | 6.8/10 | developer productivity, debugging, observability, AI agent infrastructure | AGPL-3.0 | medium | 2026-08-29 |
 | [Macro](https://github.com/macro-inc/macro) | STUDY | 6.8/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure | AGPL-3.0 | high | 2026-09-27 |
 | [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
