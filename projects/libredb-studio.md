@@ -31,8 +31,15 @@ it deploys next to the data rather than needing a local install; or white-labele
 SSO as an internal database-ops portal.
 
 ## Agent / Automation Opportunities
-Ships AI-assisted query generation in the UI. No CLI or MCP surface identified in the
-README as of this review — primarily a human-facing web tool today.
+Ships AI-assisted query generation in the UI. As of v0.17.0 (2026-09-26) it also serves a
+native MCP server at `/api/mcp` — Claude Code, Codex, Cursor, VS Code, Gemini CLI, or
+OpenCode can call `list_connections`, `inspect_schema`, and `run_read_query` against any
+connection an operator explicitly opts in (`mcp: true`), with database-credential-level
+read-only enforcement (a read-only transaction/open/login check, not a SQL-text filter),
+per-user 30-day bearer tokens, and response paging capped at 500 rows / 32 KiB. This is a
+direct, well-scoped way to let a coding agent query staging/prod data safely without
+handing over raw credentials — upgrades this from a human-facing tool to an agent-facing
+one too.
 
 ## Integration
 Docker image and a Helm chart for Kubernetes are both available (`libredb/libredb-studio`
@@ -48,7 +55,7 @@ against those pages, not just the README's claim.
 
 ## Maturity
 Emerging but credible. Created 2025-12-23 (~9 months old), 21 contributors, active commits
-daily, current release 0.13.7 (2026-08-31), SonarCloud quality gate and Codecov badges in
+daily, current release 0.17.0 (2026-09-26), SonarCloud quality gate and Codecov badges in
 the README.
 
 ## License
@@ -75,3 +82,9 @@ database first.
 Discovered during slot 5 (self-hosted SaaS alternatives, productivity) run. Verified the
 PostgreSQL-project listing claim directly against postgresql.org's news page and confirmed
 MIT license and version via the GitHub API.
+
+### 2026-10-02
+Meaningful update: v0.17.0 added a native, read-only, role-scoped MCP server
+(`/api/mcp`). Confirmed via GitHub release notes. Moves this from a human-only tool to
+one with a direct agent-facing surface — recommendation unchanged (USE NOW) but the
+agent-opportunity case is now concrete rather than speculative.

@@ -40,10 +40,19 @@ MIT License with an OpenAI/Anthropic Rider (custom, not a standard OSI license t
 - Single primary maintainer (2,350 of 2,364 commits) — bus-factor risk despite the project's engineering polish.
 - Custom license rider is unusual; read it if your org has any OpenAI/Anthropic affiliation.
 - Allowlist/pack tuning needed up front to avoid over-blocking legitimate commands.
+- v0.15.1 shipped a fail-open bug under concurrent load (fixed in v0.15.2, see Change History) — a reminder that a safety tool like this needs its own release notes watched closely.
 
 ## Recommendation
-USE NOW — install it against whichever coding agent is the daily driver; the downside risk of *not* having this is exactly the kind of destructive-action mistake this operating spec explicitly warns about.
+USE NOW — install it against whichever coding agent is the daily driver; the downside risk of *not* having this is exactly the kind of destructive-action mistake this operating spec explicitly warns about. If already installed, confirm the version is v0.15.2 or later.
 
 ## Change History
 ### 2026-09-18
 Initial discovery and review. Rotation slot 3 (developer utilities, debugging, testing).
+
+### 2026-10-02
+Meaningful update (security fix): v0.15.2 fixes a fail-open bug in v0.15.1. Under load
+(~16 concurrent hook processes), a hook that exits silently is treated as "allow" by
+every agent — this let 3-9% of destructive commands requiring the embedded-script
+reader (e.g. `watch 'git reset' --hard`) bypass the guard. Confirmed via GitHub release
+notes. Anyone running dcg should upgrade immediately; recommendation stays USE NOW but
+this is exactly the kind of regression worth flagging loudly given the tool's job.
