@@ -50,3 +50,6 @@ PostgreSQL License (permissive, BSD/MIT-style). Verified against LICENSE file. N
 ## Change History
 ### 2026-09-19
 First discovered and reviewed. Verified via GitHub API and LICENSE file: PostgreSQL License, current version v1.4.0 (2026-08-18).
+
+### 2026-10-03
+Meaningful update: v1.5.0 (2026-10-01) added Boolean filtering via PostgreSQL `tsquery` (AND/OR/NOT, phrase, weight, prefix queries), beta managed per-index background compaction via `pg_durable`, PostgreSQL 19 beta support, Windows support, and controls restricting BM25 indexes on row-level-security-protected tables. v1.5.1 (2026-10-02) is a bugfix release on top of it. Recommendation unchanged (USE NOW) — the new Boolean-filter support makes it a closer substitute for a dedicated search engine's query syntax, strengthening the case rather than changing it.

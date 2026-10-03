@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-02",
-  "last_successful_run": "2026-10-02",
-  "run_count": 37,
-  "rotation_slot_last_used": 3,
+  "last_run": "2026-10-03",
+  "last_successful_run": "2026-10-03",
+  "run_count": 38,
+  "rotation_slot_last_used": 4,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -58,7 +58,8 @@
     "experimental/hidden gems (slot 7) — relational synthetic-data engines with exact outcome conformance (Misata, seedfaker), TanStack's React-native AI SDK, multimodal database/orchestration/serving-in-one-file (Pixeltable), reactive browser data-store/sync-engine with new in-browser relational persister (TinyBase v10); rejected a fraud-pattern architecture-diagram skill (archify, 50x star spike vs 6x fork growth) and several same-day hype waves (clipboard sync, voice agents, browser-use agents)",
     "AI agents/MCP/coding productivity (slot 1) — cheap 'judge model' as a decision-sidecar pattern appearing independently across three same-week tools (Abide rule enforcement, jevgrep semantic code search, mu judgment kernel), agent memory with an explicit wrongness/decay signal (Hippo), team-wide coding-agent cost observability (Agent Console), NVIDIA's agent-skill evaluation pipeline (SkillEvaluator), Z.ai's official coding-agent workbench (ZCode)",
     "product infrastructure (slot 2) — fine-grained authorization engines (OpenFGA vs Cerbos), TypeScript-native durable workflow SDKs (Vercel Workflow SDK vs durable-workflow/Laravel), full-stack Go+Next.js SaaS scaffolding (Grit), docker-compose-style declarative AI pipeline/MCP-server authoring (model-compose), local-first encrypted sync platform (Evolu)",
-    "developer utilities/debugging/testing (slot 3) — local git-diff review CLI with GitHub-style UI and AI-agent skill (difit), AI-agent behavioral diffing between runs (whatbroke), flaky-test quarantine/retry/partition CLI (Captain, RWX), Docker-label-driven Cloudflare Tunnel automation (DockFlare); noted same-week waves in self-hosted test-case-management clones (Suitest/Tesbo/thorotest/ttgo/unittcms) and AI flaky-test-detection repos, plus a suspected fake-star repo (dsh-plugin-radar, 1467 stars vs 2 watchers)"
+    "developer utilities/debugging/testing (slot 3) — local git-diff review CLI with GitHub-style UI and AI-agent skill (difit), AI-agent behavioral diffing between runs (whatbroke), flaky-test quarantine/retry/partition CLI (Captain, RWX), Docker-label-driven Cloudflare Tunnel automation (DockFlare); noted same-week waves in self-hosted test-case-management clones (Suitest/Tesbo/thorotest/ttgo/unittcms) and AI flaky-test-detection repos, plus a suspected fake-star repo (dsh-plugin-radar, 1467 stars vs 2 watchers)",
+    "data/search/documents/RAG (slot 4) - self-hosted multi-database workspace with AI chat + MCP server (WhoDB), governed text-to-SQL/GenBI agent-skill engine (WrenAI), Rust-native PDF/Office document extraction with npm/WASM bindings (unpdf/undoc), lightweight Postgres CDC vs Debezium (go-pq-cdc), Open Data Contract Standard enforcement CLI (datacontract-cli), static SQL lineage analysis (sqllineage)"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1377,7 +1378,79 @@
     "happo/happo",
     "reg-viz/reg-suit",
     "sherlo-io/sherlo",
-    "pact-foundation/pact-js"
+    "pact-foundation/pact-js",
+    "MLT-OSS/FirstData",
+    "opengeos/Earth-Engine-Catalog",
+    "clidey/whodb",
+    "apache/gravitino",
+    "open-metadata/OpenMetadata",
+    "datahub-project/datahub",
+    "intake/intake",
+    "laminlabs/lamindb",
+    "feast-dev/feast",
+    "redis-developer/redis-ai-resources",
+    "4paradigm/OpenMLDB",
+    "MatsMoll/aligned",
+    "beava-dev/beava",
+    "decodingai-magazine/personalized-recommender-course",
+    "animetanver-commits/fabric-unified-data-blueprint",
+    "datajoint/datajoint-python",
+    "rocky-data/rocky",
+    "alizahidraja/isnad",
+    "reata/sqllineage",
+    "caioricciuti/duck-ui",
+    "ralforion/orionbelt-semantic-layer",
+    "Canner/WrenAI",
+    "OtterMind/Chat2DB",
+    "holoviz/lumen",
+    "castorini/rank_llm",
+    "milvus-io/milvus-model",
+    "hotchpotch/jev-reranker",
+    "Nomad-why/FA-ops-rag",
+    "netease-youdao/BCEmbedding",
+    "instructkr/reranker-simple-benchmark",
+    "NovaSearch-Team/RAG-Retrieval",
+    "confluentinc/cli",
+    "confluentinc/schema-registry",
+    "b0o/SchemaStore.nvim",
+    "michelin/ns4kafka",
+    "vnvo/deltaforge",
+    "Aiven-Open/karapace",
+    "sourcemeta/one",
+    "confluentinc/kafka-rest",
+    "datacontract/datacontract-cli",
+    "sodadata/soda-core",
+    "aimdb-dev/aimdb",
+    "datacontract/datacontract-editor",
+    "govtech-data-practice/vowl",
+    "bitol-io/open-data-contract-standard",
+    "datacontract/open-data-contract-standard-excel-template",
+    "datacontract/open-data-contract-standard-python",
+    "iyulab/undoc",
+    "iyulab/unpdf",
+    "TejasS1233/opencode-parser",
+    "landing-ai/ade-cli",
+    "landing-ai/ade-document-processing-skills",
+    "GramosoftAI/GcrawlAI",
+    "ComPDFKit/compdf-mcp",
+    "dingodb/dingo",
+    "yousef-rafat/Magna",
+    "dannyl1u/doppelganger",
+    "VQLite/VQLite",
+    "Trendyol/go-pq-cdc",
+    "debezium/debezium",
+    "pingcap/tiflow",
+    "averemee-si/oracdc",
+    "kuvasz-io/kuvasz-streamer",
+    "zilliztech/milvus-cdc",
+    "jwplayer/southpaw",
+    "ray-project/deltacat",
+    "airbytehq/airbyte",
+    "danielroberts20/TravelNet",
+    "Altriaqe/OpenJobFlow",
+    "gcjk768/sg-car-market-tracker",
+    "rsync-ai/rsync.ai",
+    "Tnsor-Labs/brokoli"
   ],
   "rejected": [
     {
@@ -2109,6 +2182,56 @@
       "repo_url": "https://github.com/tusharxsharma/flakehunter",
       "reason": "hype wave: one of ~12 near-identical zero/low-star AI-flaky-test-detection repos appearing within days of each other; Captain CLI already covers the mature version of this niche",
       "date": "2026-10-02"
+    },
+    {
+      "repo_url": "https://github.com/landing-ai/ade-cli",
+      "reason": "thin wrapper / functionally unusable without proprietary infra — Apache-2.0 CLI, but every parse/extract call requires a LandingAI API key and consumes hosted credits; the open-source part is just the terminal client",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/OtterMind/Chat2DB",
+      "reason": "inferior differentiation vs today's catalogued WhoDB — similar text-to-SQL database client, 28,299 stars, but Java-based with a heavier footprint and no documented MCP server",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/feast-dev/feast",
+      "reason": "off-profile — mainstream ML feature store (7,320 stars), heavy MLOps ecosystem, limited direct relevance to a MERN/web-focused engineer",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/apache/gravitino",
+      "reason": "off-profile — enterprise-scale open data catalog (3,236 stars) requiring a whole foreign (Java/Hadoop-adjacent) ecosystem to get value",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/open-metadata/OpenMetadata",
+      "reason": "off-profile — enterprise data-catalog/governance platform (15,365 stars), heavy JVM stack, not a fit for a product-building/MERN profile",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/datahub-project/datahub",
+      "reason": "off-profile — same enterprise data-catalog category as OpenMetadata/Gravitino, heavy stack, no clear direct-use case for this profile",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/matrixarkai/TemporalStore",
+      "reason": "thin/unclear — vague 'temporal features, risk control' positioning surfaced in both feature-store and data-lineage searches with no concrete differentiation",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/getnao/nao",
+      "reason": "inferior to today's catalogued WrenAI — similar NL-to-SQL/dashboard analytics-agent pitch, less traction and fewer connectors; already evaluated 2026-10-01",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/ralforion/orionbelt-semantic-layer",
+      "reason": "source-available (not fully open) semantic/context layer for agentic text-to-SQL, overlaps with catalogued WrenAI with less traction and an unclear license",
+      "date": "2026-10-03"
+    },
+    {
+      "repo_url": "https://github.com/dingodb/dingo",
+      "reason": "thin differentiation — multi-modal vector database, 1,703 stars, but the already-catalogued vector-DB space (RushDB, LynseDB) covers this niche with more direct product fit",
+      "date": "2026-10-03"
     }
   ],
   "known_releases": {
@@ -2453,8 +2576,8 @@
       "date": "unclear"
     },
     "ispras/dedoc": {
-      "version": "v2.7",
-      "date": "2026-06-25"
+      "version": "v2.8",
+      "date": "2026-09-22"
     },
     "BirchKwok/lynsedb": {
       "version": "v0.9.0",
@@ -2589,8 +2712,8 @@
       "date": "2026-09-18"
     },
     "timescale/pg_textsearch": {
-      "version": "v1.4.0",
-      "date": "2026-08-18"
+      "version": "v1.5.1",
+      "date": "2026-10-02"
     },
     "pipeshub-ai/pipeshub-ai": {
       "version": "v0.8.0",
@@ -2887,6 +3010,34 @@
     "ChrispyBacon-dev/DockFlare": {
       "version": "v3.1.6",
       "date": "2026-09-20"
+    },
+    "clidey/whodb": {
+      "version": "0.134.0",
+      "date": "2026-09-30"
+    },
+    "Canner/WrenAI": {
+      "version": "wren-v0.15.0",
+      "date": "2026-09-21"
+    },
+    "iyulab/unpdf": {
+      "version": "v0.23.0",
+      "date": "2026-10-01"
+    },
+    "iyulab/undoc": {
+      "version": "v0.13.1",
+      "date": "2026-10-01"
+    },
+    "Trendyol/go-pq-cdc": {
+      "version": "v1.11.14",
+      "date": "2026-08-24"
+    },
+    "datacontract/datacontract-cli": {
+      "version": "1.2.2",
+      "date": "Unclear based on available documentation"
+    },
+    "reata/sqllineage": {
+      "version": "v1.5.9",
+      "date": "2026-09-05"
     }
   },
   "source_health": {
@@ -2895,8 +3046,8 @@
       "note": "not used this run — GitHub Search API alone surfaced enough slot-3 volume across 16 parallel topic queries"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-02",
-      "note": "README fetches on the deep-review shortlist all succeeded"
+      "last_ok": "2026-10-03",
+      "note": "README fetches on the deep-review shortlist (WhoDB, Rocky, datacontract-cli, unpdf, undoc, sourcemeta/one, ade-cli, WrenAI) all succeeded"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -2911,20 +3062,20 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-02",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; parallel topic-scoped search queries across developer-utility/debugging/testing sub-niches (snapshot testing, visual regression, contract testing, flaky-test detection, log viewers, HTTP recorders, dev tunnels, query profilers, self-hosted test management, CLI testing frameworks, code coverage viz, git diff tools) plus an 8-repo deep-review shortlist; well under rate limit (8,350/hr available)"
+      "last_ok": "2026-10-03",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~12 parallel topic-scoped search queries across data-catalog/feature-store/lineage/text-to-sql/reranker/schema-registry/data-contract/document-extraction/CDC/data-pipeline sub-niches plus a 10-repo deep-review shortlist (metadata+releases); well under rate limit (8,350/hr available)"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
       "note": "Show HN search over last 5 days worked fine; mostly small/thin novelty projects, no slot-7 candidates strong enough to deep-review from this pass"
     },
     "pypi.org": {
-      "last_ok": "2026-10-01",
-      "note": "confirmed model-compose at 0.4.113 on PyPI, well ahead of the stale GitHub release tag (v0.4.0)"
+      "last_ok": "2026-10-03",
+      "note": "confirmed datacontract-cli at 1.2.2"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-10-01",
-      "note": "confirmed npm versions for workflow (5.0.0), @openfga/sdk (0.9.7), @evolu/common (8.14.0)"
+      "last_ok": "2026-10-03",
+      "note": "confirmed @iyulab/unpdf (0.23.0) and @iyulab/undoc (0.13.1) versions and publish timestamps"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -2935,8 +3086,8 @@
       "note": "newest.json worked; front page was general tech/blog content, no project links worth following for slot 1"
     },
     "crates.io": {
-      "last_ok": "2026-09-16",
-      "note": "api.crates.io request failed today (empty/non-JSON response) — fell back to GitHub release tag for FrankenSearch version instead of retrying a third time"
+      "last_ok": null,
+      "note": "api.crates.io request failed again today (empty/non-JSON response, same as 2026-09-16) — relied on npm registry + GitHub release tags for unpdf instead; worth a third-strike note for future runs"
     }
   },
   "previous_recommendations": [
@@ -3103,7 +3254,13 @@
     "difit (yoshiko-pg/difit)",
     "whatbroke (arthi-arumugam-git/whatbroke)",
     "Captain CLI (rwx-research/captain)",
-    "DockFlare (ChrispyBacon-dev/DockFlare)"
+    "DockFlare (ChrispyBacon-dev/DockFlare)",
+    "WhoDB (clidey/whodb)",
+    "WrenAI (Canner/WrenAI)",
+    "unpdf / undoc (iyulab/unpdf, iyulab/undoc)",
+    "go-pq-cdc (Trendyol/go-pq-cdc)",
+    "Data Contract CLI (datacontract/datacontract-cli)",
+    "SQLLineage (reata/sqllineage)"
   ],
-  "notes": "2026-10-02: Slot 3 (developer utilities, debugging, testing) per day_of_year 275 % 7 + 1 = 3. Catalogued 4 new: difit (yoshiko-pg/difit, MIT, 8.2, USE NOW) — local CLI that renders git diffs in a GitHub-style web UI (commits/branches/working tree/live PRs), with AI-prompt-ready review comments and an official agent skill; 3,221 stars, actively released. whatbroke (arthi-arumugam-git/whatbroke, MIT, 7.1, PROTOTYPE) — CLI that diffs an AI agent's tool-calling behavior between two JSONL-recorded runs to catch silent regressions text-based evals miss (documented via real model-swap/vendor-swap/proxy-bug case studies); very early (21 stars) but a genuinely novel niche and a concrete micro-SaaS signal (hosted agent-regression-testing). Captain CLI (rwx-research/captain, MIT CLI / proprietary RWX Cloud tier, 6.9, PROTOTYPE) — flaky-test quarantine/retry/parallel-partition CLI from RWX; company-backed, open-core split flagged explicitly since the docs don't clarify whether local flaky-history state needs their backend. DockFlare (ChrispyBacon-dev/DockFlare, GPL-3.0, 7.0, PROTOTYPE) — Docker-label-driven Cloudflare Tunnel automation (tunnel+DNS+Access policy from compose labels); 2,472 stars, relevant to securely exposing self-hosted admin tools/demos without opening ports. Meaningful updates (2): LibreDB Studio shipped a native read-only, role-scoped MCP server at /api/mcp (v0.17.0) — upgrades it from a human-only tool to an agent-facing one, recommendation unchanged (USE NOW). Destructive Command Guard shipped a security fix (v0.15.2) for a fail-open bug in v0.15.1 that let 3-9% of destructive commands bypass the guard under concurrent load — flagged loudly per the tool's safety-critical job, recommendation unchanged (USE NOW) but upgrade is urgent for existing installs. Rejected/noted: a same-week wave of near-identical self-hosted test-case-management clones (Suitest, Tesbo Test Manager, thorotest, ttgo, unittcms) — none individually catalogued; Suitest (the most differentiated, MCP-native + self-hosted + BYO-LLM angle) moved to Worth Watching pending a track record rather than catalogued outright given its very early stage (36 stars, ~4 months old) and sales-pitch-heavy README. Also rejected a ~12-repo hype wave of zero/low-star 'AI flaky-test-detection' tools (Captain already covers the mature version of this niche), optave/ops-codegraph-tool (duplicate of the already-saturated code-graph+MCP-for-agents niche, weak issues-to-stars ratio), galasa-dev/galasa (mainframe/z-OS-oriented, wrong stack), and AdamPlatin123/dsh-plugin-radar (suspected fake stars: 1,467 stars vs only 2 watchers, 157 forks, ~2 months old, generic marketing description — same fraud pattern previously seen with archify). 'Still Worth Trying' rotated to LibreDB Studio, OpenDataLoader PDF, and Dagu (all unused in the last two runs' rotation, all 8.5+ score, 25-34 days old) since Beads/Graphify/SnapOtter were used 2026-10-01 and Bernstein/Sidequest/Monoscope were used 2026-09-30. Discovery used 8 GitHub Search API topic queries across developer-utility/debugging/testing sub-niches (two rounds after the first round's multi-word phrase queries returned mostly zero results — GitHub's search ANDs every term in name+description, so broad 2-word queries work far better than 4-5 word phrases; worth remembering for future runs) plus an 8-repo deep-review shortlist (repo metadata, releases, READMEs via raw.githubusercontent.com) and a targeted WebFetch on RWX's docs page for Captain's open-core boundary. WebSearch/HN/Lobsters were not needed."
+  "notes": "2026-10-03: Slot 4 (data, search, documents, RAG) per day_of_year 276 % 7 + 1 = 4. Catalogued 6 new: WhoDB (clidey/whodb, Apache-2.0, 8.6, USE NOW) — self-hosted multi-database workspace (Postgres/MySQL/MongoDB/Redis/Elasticsearch/ClickHouse/etc.) with schema graph, query scratchpad, optional AI chat, and an official CLI + MCP server; 5,031 stars, surfaced independently across three different search niches. WrenAI (Canner/WrenAI, Apache-2.0 core, 7.8, PROTOTYPE) — governed text-to-SQL/GenBI engine distributed as an agent skill/MCP server across 50+ coding agents, semantic layer as plain YAML/Markdown; recently pivoted away from its original Docker-based web app, so flagged as needing validation despite 17.8k stars. unpdf / undoc (iyulab/unpdf + iyulab/undoc, MIT, 8.1, PROTOTYPE) — sibling Rust PDF/Office-to-Markdown extraction libraries with native npm/WASM bindings (no Python sidecar needed), CJK/RTL support; very young (58/36 stars) but actively released daily across 4 package registries. go-pq-cdc (Trendyol/go-pq-cdc, MIT, 7.5, PROTOTYPE) — lightweight Postgres logical-replication CDC in Go, benchmarked against Debezium, production-used at Trendyol; Go-only, no Node binding. Data Contract CLI (datacontract/datacontract-cli, MIT, 7.6, PROTOTYPE) — mature (since 2023) CLI/library enforcing the Open Data Contract Standard against live data sources, schema+quality CI checks, breaking-change diff. SQLLineage (reata/sqllineage, MIT, 7.4, USE NOW) — today's Small but High-Leverage Utility pick: static SQL-text column-lineage analysis, zero infrastructure, mature since 2019. Meaningful updates (2): pg_textsearch v1.5.0 (2026-10-01) added Boolean tsquery filtering (AND/OR/NOT/phrase/weight/prefix), beta background compaction via pg_durable, PG19 beta and Windows support, and RLS-aware BM25 index restrictions, with v1.5.1 (2026-10-02) a bugfix release on top — recommendation unchanged (USE NOW). Dedoc v2.8 added native return_format='md' output, roughly halved its Docker image size, and sped up image-table recognition/skew correction — recommendation unchanged (USE NOW). Rejected/noted: landing-ai/ade-cli (Apache-2.0 CLI but every command requires a LandingAI API key and consumes hosted credits — thin wrapper, functionally unusable offline); Chat2DB (28,299★, inferior to WhoDB for this profile — heavier Java stack, no MCP server); feast-dev/feast, apache/gravitino, open-metadata/OpenMetadata, datahub-project/datahub (all off-profile enterprise-scale data-catalog/feature-store platforms requiring a foreign JVM/Hadoop-adjacent ecosystem); getnao/nao (inferior to WrenAI, re-evaluated from 2026-10-01); sourcemeta/one (BSL-1.1-licensed self-hosted JSON Schema registry, interesting but held to Worth Watching pending clarity on its license and track record); rocky-data/rocky (Apache-2.0 SQL compiler with compile-time type/contract checks and an AI-agent policy gate for pipeline changes — architecturally interesting but no Postgres/MongoDB adapter yet, Databricks/Snowflake/BigQuery/Trino/DuckDB only, held to Worth Watching). 'Still Worth Trying' rotated to Xberg, Destructive Command Guard, and Vercel Labs skills (none used in the last three runs' rotation; LibreDB Studio/OpenDataLoader PDF/Dagu were used 2026-10-02, Beads/Graphify/SnapOtter 2026-10-01, Bernstein/Sidequest/Monoscope 2026-09-30). Discovery used ~12 parallel GitHub Search API topic queries across data-catalog/feature-store/lineage/text-to-sql/reranker/schema-registry/data-contract/document-extraction/CDC/data-pipeline sub-niches, a 10-repo deep-review shortlist (metadata, releases, READMEs via raw.githubusercontent.com), and npm/PyPI registry checks for version verification. crates.io's API failed again today (third occurrence, same empty/non-JSON response as 2026-09-16) — npm/GitHub release tags substituted successfully each time; worth considering crates.io unreliable going forward rather than retrying it. WebSearch/HN/Lobsters were not needed."
 }

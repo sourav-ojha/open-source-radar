@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "projects": [
     {
       "name": "Xberg",
@@ -1827,16 +1827,16 @@
         "Requires PostgreSQL 17/18 (19 beta best-effort) and `shared_preload_libraries` changes — a server restart is needed to install, not a zero-downtime add"
       ],
       "first_seen": "2026-09-19",
-      "last_reviewed": "2026-09-19",
-      "last_meaningful_update": "2026-09-19",
-      "current_version": "v1.4.0",
-      "latest_release_date": "2026-08-18",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "v1.5.1",
+      "latest_release_date": "2026-10-02",
       "source_links": [
         "https://github.com/timescale/pg_textsearch",
         "https://timescale.github.io/pg_textsearch/benchmarks/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: license PostgreSQL, 3,985 stars, pushed_at 2026-09-19, created 2025-07-06. Multi-contributor (Timescale org, 5+ distinct contributors sampled). Real CI, benchmark workflow, and Coverity Scan badge in README — not just marketing claims.",
+      "notes": "GitHub API verified: license PostgreSQL, 3,985 stars, pushed_at 2026-09-19, created 2025-07-06. Multi-contributor (Timescale org, 5+ distinct contributors sampled). Real CI, benchmark workflow, and Coverity Scan badge in README — not just marketing claims. UPDATE 2026-10-03: v1.5.0 (2026-10-01) added Boolean tsquery filtering (AND/OR/NOT/phrase/weight/prefix), beta background compaction via pg_durable, PG19 beta support, Windows support, and RLS-aware BM25 index restrictions; v1.5.1 (2026-10-02) is a bugfix release on top. Recommendation unchanged (USE NOW).",
       "acted_on": false
     },
     {
@@ -3396,16 +3396,16 @@
         "14 open issues against 734 stars suggests some rough edges in less-common format paths"
       ],
       "first_seen": "2026-09-12",
-      "last_reviewed": "2026-09-12",
-      "last_meaningful_update": "2026-09-12",
-      "current_version": "v2.7",
-      "latest_release_date": "2026-06-25",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "v2.8",
+      "latest_release_date": "2026-09-22",
       "source_links": [
         "https://github.com/ispras/dedoc",
         "https://pypi.org/project/dedoc/"
       ],
       "aliases": [],
-      "notes": "",
+      "notes": " UPDATE 2026-10-03: v2.8 added native return_format='md' (Markdown) output, roughly halved the Docker image size, and sped up image table recognition/skew correction/PdfTabbyReader. Recommendation unchanged (USE NOW).",
       "acted_on": false
     },
     {
@@ -10452,6 +10452,416 @@
       ],
       "aliases": [],
       "notes": "2,472 stars, created April 2025, very low open-issue count (1) relative to star count. Discovered via a dev-tunnel search in the slot-3 run; adjacent to infra/self-hosting rather than core dev-utility/testing.",
+      "acted_on": false
+    },
+    {
+      "name": "WhoDB",
+      "slug": "whodb-database-workspace",
+      "repo_url": "https://github.com/clidey/whodb",
+      "website": "https://whodb.com",
+      "description": "Self-hosted, lightweight multi-database workspace (Postgres, MySQL/MariaDB/TiDB, SQLite/DuckDB, MongoDB/FerretDB, Redis/Valkey/Dragonfly, Elasticsearch/OpenSearch, ClickHouse, CockroachDB, YugabyteDB, QuestDB, Memcached) with a spreadsheet-style data grid, interactive schema graph, query scratchpad, import/export/mock-data generation, optional AI chat (bring-your-own OpenAI/Anthropic/Gemini/Ollama/LM Studio key), and a CLI + MCP server for agent access. Go backend, React/TS frontend.",
+      "category": [
+        "developer productivity",
+        "database tooling",
+        "AI & agent infrastructure",
+        "product building blocks"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.6,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 for WhoDB Community (this repo), confirmed via LICENSE file. Free to self-host and embed without restriction. A separate commercial 'WhoDB Platform' tier (SSO, shared projects, audit logs, pipelines) exists but is not required for the open-source feature set described here.",
+      "deployment": [
+        "docker",
+        "desktop app (macOS/Windows)",
+        "snap",
+        "cli",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "web UI",
+        "CLI",
+        "MCP server",
+        "REST/GraphQL backend (Go)"
+      ],
+      "use_cases": [
+        "Daily inspection/editing of Postgres and MongoDB data during MERN development without installing TablePlus/Studio3T/Compass separately",
+        "Giving a coding agent read/write DB access through the built-in MCP server instead of writing a custom DB tool",
+        "Onboarding a teammate onto an unfamiliar schema via the interactive relationship graph",
+        "Ad hoc plain-English queries against a client's database during MSSP engagement triage, with a local Ollama model so no data leaves the machine",
+        "Generating mock data and running quick imports/exports while prototyping a new product feature"
+      ],
+      "product_opportunities": [
+        "Could sit inside an internal admin tool as the 'raw data' escape hatch next to a purpose-built admin panel",
+        "MCP server makes it a reusable building block for any internal agent needing ad hoc DB access across a heterogeneous stack"
+      ],
+      "agent_opportunities": [
+        "Ships `whodb mcp serve` out of the box — no custom MCP wrapper needed to give an agent read/write DB access",
+        "CLI terminal UI usable directly inside a coding-agent tool loop for quick schema checks"
+      ],
+      "alternatives": [
+        "DBeaver / TablePlus / Studio3T — mainstream, feature-rich, but none ship an MCP server or single-binary self-hosted web deployment",
+        "Chat2DB (OtterMind, 28,299★) — similar text-to-SQL database client with more AI polish, but Java-based with a heavier footprint and no documented MCP server",
+        "Adminer — much lighter but SQL-only (no MongoDB/Redis/ClickHouse/Elasticsearch), no AI chat, no MCP"
+      ],
+      "why_it_matters": "One self-hosted tool covers the exact heterogeneous stack (Postgres, MongoDB, Redis, Elasticsearch, ClickHouse) a MERN-plus-AWS developer actually touches, instead of running a different GUI client per database — and the MCP server turns ad hoc DB exploration into an agent-callable capability for free.",
+      "why_not_build_it_myself": "A correct multi-DB schema introspector, relationship graph, and query editor across 15+ database engines is a multi-month effort; WhoDB has already solved the per-engine quirks (CockroachDB vs YugabyteDB vs Postgres dialects, Mongo vs FerretDB, etc.).",
+      "risks": [
+        "AI chat / text-to-SQL quality depends entirely on the chosen provider — no built-in evaluation of generated query correctness before execution",
+        "Open-core model: some governance features (SSO, audit logs, pipelines) are reserved for the paid Platform tier, so multi-user production deployments may eventually need it",
+        "5,031 stars but relatively young (June 2024) — verify encryption-key/session handling (documented, opt-in) before exposing beyond localhost"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "0.134.0",
+      "latest_release_date": "2026-09-30",
+      "source_links": [
+        "https://github.com/clidey/whodb",
+        "https://docs.whodb.com/",
+        "https://whodb.com/pricing/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 5,031 stars, pushed 2026-10-03, created 2024-06-11, not archived. README confirms Go backend + React/TS frontend, Docker/desktop/Snap/CLI distribution, and an official MCP server (`whodb mcp serve`). Surfaced independently across GitHub Search API queries for topic:data-catalog, topic:data-lineage, and topic:text-to-sql — a sign of broad, genuine feature overlap rather than coincidence.",
+      "acted_on": false
+    },
+    {
+      "name": "WrenAI (Wren Engine)",
+      "slug": "wrenai-genbi-text-to-sql",
+      "repo_url": "https://github.com/Canner/WrenAI",
+      "website": "https://getwren.ai",
+      "description": "Open-source governed text-to-SQL / \"GenBI\" engine: a semantic layer (MDL, plain YAML/Markdown kept in a git repo) sits in front of 22+ data sources (Postgres, BigQuery, Snowflake, ClickHouse, Redshift, Databricks, etc.) and is exposed to any AI coding agent (Claude Code, Cursor, Cline, Codex, 50+ others) via an MCP server, CLI, and agent skill — turning natural-language questions into governed SQL, charts, and dashboards instead of letting the agent write raw SQL against production directly.",
+      "category": [
+        "AI & agent infrastructure",
+        "data/search/documents/RAG",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Core engine (MDL semantic layer, governed text-to-SQL, MCP server, CLI, 22+ connectors) is Apache-2.0 per the repo's own license-overview file — free and self-hostable. Wren AI Cloud and self-hosted 'Enterprise Plus' are separate paid tiers (team-wide Git Sync deployment, extra governance) layered on top, not required for individual/self-hosted use.",
+      "deployment": [
+        "cli",
+        "mcp server",
+        "self-hosted",
+        "library (semantic layer as YAML)"
+      ],
+      "interfaces": [
+        "MCP server",
+        "CLI",
+        "agent skill (Claude Code/Cursor/Cline/Codex/50+ agents)"
+      ],
+      "use_cases": [
+        "Give a coding agent a governed way to answer 'what were last month's signups by plan' against a Postgres production replica without letting it write raw SQL",
+        "Build an internal GenBI feature (ask-your-database-in-English) for an admin-portal SaaS product",
+        "Maintain one semantic layer (metric/dimension definitions) shared across multiple agents and dashboards instead of redefining business logic per tool",
+        "Prototype a client-facing analytics assistant for the MSSP security admin-portal using the same engine"
+      ],
+      "product_opportunities": [
+        "Packaged as a 'talk to your data' add-on for a SaaS admin portal — the semantic layer plus MCP server does most of the governance work already",
+        "Could be the backend for a micro-SaaS offering non-technical teams natural-language reporting over their existing warehouse/Postgres"
+      ],
+      "agent_opportunities": [
+        "Primary distribution path IS an agent skill/MCP server — install directly into Claude Code and query data sources conversationally",
+        "Semantic layer plus governed SQL generation means an agent gets trustworthy, reviewable queries instead of hallucinated raw SQL"
+      ],
+      "alternatives": [
+        "getnao/nao (evaluated, not catalogued) — smaller, similar NL-to-SQL analytics-agent pitch, less traction and fewer connectors",
+        "holoviz/lumen — NL-to-SQL/charts/dashboards, Python-native, smaller community",
+        "Direct LLM + raw DB credentials (no semantic layer) — faster to wire up but no governance, no reusable metric definitions, and no guardrail against the agent hitting production directly"
+      ],
+      "why_it_matters": "Gives an AI agent a governed, reviewable path to query real data sources instead of handing it raw database credentials — directly extends the 'AI-agent leverage' axis into the BI/analytics surface area.",
+      "why_not_build_it_myself": "A semantic layer plus text-to-SQL translation that stays correct across 22+ SQL dialects, with an MCP server and multi-agent skill packaging, is a large and continuously-maintained surface; this is Apache-2.0 and already built.",
+      "risks": [
+        "Recently pivoted away from its original Docker-based GenBI app toward a skill/MCP-first distribution model (per the README's own FAQ) — the newer model has less track record than the project's overall 17.8k-star history suggests",
+        "Needs an LLM API key (or local model) to generate SQL; query correctness still depends on that model and the quality of the semantic layer definitions",
+        "22+ connector claim and governance depth not independently verified beyond the README and docs site in this pass"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "wren-v0.15.0",
+      "latest_release_date": "2026-09-21",
+      "source_links": [
+        "https://github.com/Canner/WrenAI",
+        "https://docs.getwren.ai",
+        "https://www.getwren.ai/git-sync"
+      ],
+      "aliases": [
+        "Wren Engine",
+        "Wren AI"
+      ],
+      "notes": "GitHub API verified: Apache-2.0 (multi-licensed repo — core/sdk/skills/examples Apache-2.0, docs CC-BY-4.0, per the repo's own LICENSE-overview file), 17,799 stars, pushed 2026-10-02, created 2024-03-13, latest release wren-v0.15.0 (2026-09-21). Surfaced from a topic:text-to-sql search; README explicitly documents the pivot from a Docker-based GenBI app to an agent-skill/MCP distribution model.",
+      "acted_on": false
+    },
+    {
+      "name": "unpdf / undoc",
+      "slug": "unpdf-undoc-document-extraction",
+      "repo_url": "https://github.com/iyulab/unpdf",
+      "website": "https://iyulab.github.io/unpdf/",
+      "description": "Sibling Rust libraries for high-performance document-to-Markdown/JSON extraction — unpdf for PDF (CJK/RTL support, multi-column layout detection via recursive XY-Cut, form-field extraction, streaming page-by-page parsing, image dedup), undoc for DOCX/XLSX/PPTX — both published as native Rust crates plus Python, .NET, and npm/WASM bindings usable directly from Node.js or the browser with no server-side process.",
+      "category": [
+        "product building blocks",
+        "document processing",
+        "small high-leverage utilities"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT on both repos, confirmed via GitHub metadata and badges. No restrictions on commercial use or embedding.",
+      "deployment": [
+        "npm package (wasm)",
+        "pip package",
+        "nuget package",
+        "cargo crate",
+        "cli (self-updating binary)"
+      ],
+      "interfaces": [
+        "library (Node.js/WASM)",
+        "library (Python)",
+        "library (.NET)",
+        "library (Rust)",
+        "CLI"
+      ],
+      "use_cases": [
+        "Extract PDF/DOCX/XLSX/PPTX to Markdown directly inside a Node.js backend for a RAG ingestion pipeline, without spinning up a separate Python microservice",
+        "Run the WASM build client-side in a browser for instant document preview/conversion with no upload to a server",
+        "Prepare CJK/RTL-heavy documents (Korean/Chinese/Japanese/Arabic/Hebrew) for LLM context where many PDF extractors mangle spacing/ordering",
+        "Bulk-convert a document archive to Markdown for a knowledge-base product, using the streaming API to bound memory on very large files"
+      ],
+      "product_opportunities": [
+        "Natural ingestion layer for a document-processing or knowledge-base micro-SaaS aimed at non-English-heavy markets (CJK support is a real differentiator)",
+        "Could back a lightweight 'convert any doc to clean Markdown' utility product given the WASM/browser path needs no backend at all"
+      ],
+      "agent_opportunities": [
+        "npm-installable and runnable fully in-process — easy to wrap as an MCP tool or agent-callable function without a sidecar service",
+        "CLI output (Markdown/JSON) is well-suited as a coding-agent tool call for reading arbitrary documents handed to it"
+      ],
+      "alternatives": [
+        "Xberg / Kreuzberg (catalogued, USE NOW) — far broader (107 formats, OCR, transcription, embeddings) but heavier and more complex; unpdf/undoc are narrower and lighter for the PDF/Office-only case",
+        "yfedoseev/pdf_oxide + office_oxide — same narrow-and-fast positioning, more language bindings (19-20) and a published benchmark suite; a close direct competitor worth comparing before committing",
+        "landing-ai/ade-cli — hosted/credit-metered commercial API behind an Apache-2.0 CLI, not usable offline; rejected today as a thin wrapper (see Rejected section)"
+      ],
+      "why_it_matters": "A document-to-Markdown extraction step that runs as a native npm dependency (including WASM in-browser) removes the usual need for a separate Python extraction microservice in an otherwise all-JS/TS stack.",
+      "why_not_build_it_myself": "Correct multi-column layout detection, CJK/RTL text ordering, and encrypted-PDF handling are nontrivial parsing problems; both libraries already ship published benchmarks, multi-language bindings, and active daily releases covering them.",
+      "risks": [
+        "Very young (unpdf created January 2026, undoc December 2025) with modest adoption so far (58 and 36 stars) — verify extraction quality against your own document samples before depending on it",
+        "Single-maintainer-presenting org (iyulab) — check for sustained maintenance over a longer window before deep production reliance",
+        "No OCR — these only extract embedded text/structure, so scanned/image-only PDFs still need a separate OCR step (Xberg or dedoc cover that case)"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "unpdf v0.23.0 / undoc v0.13.1",
+      "latest_release_date": "2026-10-01",
+      "source_links": [
+        "https://github.com/iyulab/unpdf",
+        "https://github.com/iyulab/undoc",
+        "https://www.npmjs.com/package/@iyulab/unpdf",
+        "https://crates.io/crates/unpdf"
+      ],
+      "aliases": [
+        "undoc (iyulab/undoc, sibling DOCX/XLSX/PPTX extractor)"
+      ],
+      "notes": "GitHub API + npm registry verified: both MIT, unpdf 58★ (created 2026-01-27, pushed 2026-10-01), undoc 36★ (created 2025-12-20, pushed 2026-10-01). npm dist-tags confirm unpdf@0.23.0 and undoc@0.13.1 published 2026-10-01, consistent with a very active daily-release cadence. Surfaced from a topic:document-extraction search filtered to pushed:>2026-06-01.",
+      "acted_on": false
+    },
+    {
+      "name": "go-pq-cdc",
+      "slug": "go-pq-cdc-postgres-cdc",
+      "repo_url": "https://github.com/Trendyol/go-pq-cdc",
+      "website": "https://pkg.go.dev/github.com/Trendyol/go-pq-cdc",
+      "description": "Lightweight Go library/binary for Change Data Capture on PostgreSQL using logical replication, streaming row-level changes to Kafka, Elasticsearch, or a custom sink — built and open-sourced by Trendyol (large e-commerce company) with a published benchmark against Debezium, plus a snapshot feature for point-in-time initial sync before streaming begins.",
+      "category": [
+        "product building blocks",
+        "infrastructure",
+        "data/search/documents/RAG"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub metadata. No restrictions.",
+      "deployment": [
+        "library (Go)",
+        "binary",
+        "docker"
+      ],
+      "interfaces": [
+        "library (Go)",
+        "streams to Kafka/Elasticsearch/custom sink"
+      ],
+      "use_cases": [
+        "Sync a Postgres table to Elasticsearch/OpenSearch for search without hand-rolling a polling or dual-write sync job",
+        "Feed row-level change events into a webhook/notification pipeline (e.g. notify on new orders) without standing up Kafka Connect",
+        "Point-in-time snapshot plus ongoing CDC for backfilling a new read replica or cache without downtime",
+        "Replace a heavier Debezium + Kafka Connect + JVM deployment with a single lightweight Go binary for a smaller-scale Postgres CDC need"
+      ],
+      "product_opportunities": [
+        "Could be the sync engine behind a 'keep your search index in sync with Postgres automatically' feature for a product or admin portal",
+        "Useful glue for a micro-SaaS that needs near-real-time replication without committing to a full streaming platform"
+      ],
+      "agent_opportunities": [
+        "Could back an MCP tool that notifies an agent of relevant database changes as they happen, rather than the agent polling"
+      ],
+      "alternatives": [
+        "Debezium (13,174★, mature, JVM/Kafka Connect-based) — the default mainstream choice, but far heavier infrastructure (Kafka Connect cluster, JVM) for a comparable job; go-pq-cdc publishes a direct benchmark against it",
+        "Supabase Realtime / pg_eventserv — simpler for Supabase-specific or notify-only use cases, not a general CDC-to-Kafka/Elasticsearch pipeline",
+        "pgoutput + custom consumer — the DIY path this project already wraps correctly (partitioning, crash recovery, snapshot)"
+      ],
+      "why_it_matters": "Gives a Postgres-only CDC path (the primary extra SQL DB in his stack) without pulling in a JVM/Kafka Connect deployment just to stream changes downstream.",
+      "why_not_build_it_myself": "Correctly handling Postgres logical replication slots, crash recovery, and chunked initial snapshotting for large tables is a multi-week correctness project; this is already production-used at Trendyol's scale.",
+      "risks": [
+        "Smaller community (211 stars) than Debezium; verify operational maturity (slot management, failover behavior) for a given production workload before relying on it at scale",
+        "Go-only — no native Node.js binding, so it runs as a standalone service/sidecar rather than an in-process library for a Node backend",
+        "Sinks currently documented are Kafka/Elasticsearch-oriented; a custom sink needs to be written for anything else"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "v1.11.14",
+      "latest_release_date": "2026-08-24",
+      "source_links": [
+        "https://github.com/Trendyol/go-pq-cdc",
+        "https://pkg.go.dev/github.com/Trendyol/go-pq-cdc"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 211 stars, pushed 2026-10-02, created 2024-04-27, latest release v1.11.14 (2026-08-24). Surfaced from a '\"change data capture\" in:description stars:>50' search; benchmark-vs-Debezium claim is in-repo (./benchmark directory) and referenced in the README but not independently re-run this pass.",
+      "acted_on": false
+    },
+    {
+      "name": "Data Contract CLI",
+      "slug": "datacontract-cli",
+      "repo_url": "https://github.com/datacontract/datacontract-cli",
+      "website": "https://datacontract.com",
+      "description": "Open-source CLI and Python library for authoring, linting, and testing Data Contracts against the Open Data Contract Standard (ODCS) — connects to a real data source (Postgres, Snowflake, BigQuery, Databricks, and 15+ others), runs schema and quality checks against live data, diffs two contract versions for breaking changes, and exports to SQL DDL, HTML, JSON Schema, and other formats.",
+      "category": [
+        "product building blocks",
+        "developer productivity",
+        "data/search/documents/RAG"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub metadata and PyPI.",
+      "deployment": [
+        "cli",
+        "library (Python)",
+        "docker",
+        "ci/cd step"
+      ],
+      "interfaces": [
+        "CLI",
+        "library (Python)",
+        "web UI (separate datacontract-editor)"
+      ],
+      "use_cases": [
+        "Enforce a schema/quality contract on a client-facing API or webhook payload so breaking changes are caught in CI before shipping (relevant to the MSSP admin-portal's client integrations)",
+        "Run `datacontract test` in CI against a staging Postgres database to catch a migration that silently breaks a documented schema",
+        "Generate SQL DDL or an HTML data dictionary straight from a YAML contract instead of hand-maintaining both",
+        "`datacontract breaking` as a CI gate before merging a schema change, independent of any specific ORM"
+      ],
+      "product_opportunities": [
+        "Could formalize the schema that client systems must send/receive when integrating with his SaaS products, with automatic CI enforcement",
+        "A documented, versioned contract format is a concrete selling point for an admin-portal SaaS onboarding enterprise clients with their own data feeds"
+      ],
+      "agent_opportunities": [
+        "An agent could be given `datacontract test` as a tool to self-verify a schema migration it just wrote actually matches the documented contract before declaring the task done"
+      ],
+      "alternatives": [
+        "sodadata/soda-core (2,433★) — overlapping data-quality-contract space, Soda's own DSL rather than the open ODCS standard",
+        "Great Expectations / dbt contracts — heavier, warehouse/dbt-ecosystem-specific; this tool is standard-based and source-agnostic",
+        "Hand-written JSON Schema + ad hoc validation — the status quo this replaces, with no changelog/breaking-diff tooling"
+      ],
+      "why_it_matters": "Turns 'does this data still match what we promised' into a one-command CI check instead of a manually-maintained schema doc that silently drifts from reality.",
+      "why_not_build_it_myself": "Supporting schema+quality checks across 15+ source types plus a breaking-change diff algorithm is a sizeable scope; this is mature (since 2023), MIT, and already standard-based (ODCS) rather than a bespoke format.",
+      "risks": [
+        "Self-reported '1.4M/month' PyPI download badge in the README is a static claim, not independently verified via pypistats in this pass — treat as marketing until confirmed",
+        "Authoring ODCS YAML contracts has a learning curve; value shows up over months of drift prevention, not on day one",
+        "Primarily aimed at data-warehouse workflows (Snowflake/BigQuery/Databricks get the most documentation); Postgres/MongoDB support works but is less battle-tested in the docs than the warehouse path"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "1.2.2",
+      "latest_release_date": "Unclear based on available documentation (PyPI metadata did not return an upload timestamp in this pass; GitHub shows active commits as of 2026-10-02)",
+      "source_links": [
+        "https://github.com/datacontract/datacontract-cli",
+        "https://datacontract.com",
+        "https://bitol-io.github.io/open-data-contract-standard/latest/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API + PyPI verified: MIT, 1,077 stars, pushed 2026-10-02, created 2023-07-24, PyPI latest version 1.2.2. Surfaced from a '\"data contract\" in:description' search. The README's download-count badge (1.4M/month) is a static image label, not verified live in this pass.",
+      "acted_on": false
+    },
+    {
+      "name": "SQLLineage",
+      "slug": "sqllineage-sql-lineage",
+      "repo_url": "https://github.com/reata/sqllineage",
+      "website": "https://sqllineage.readthedocs.io",
+      "description": "Python library and CLI that statically parses SQL (no live warehouse connection needed) to build table- and column-level lineage graphs — answers \"what feeds this table\" and \"what breaks if I change this column\" from the SQL text alone, with a built-in web UI for interactive visualization.",
+      "category": [
+        "developer productivity",
+        "data/search/documents/RAG",
+        "small high-leverage utilities"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.4,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub metadata. No restrictions.",
+      "deployment": [
+        "cli",
+        "library (Python)",
+        "web UI (local)"
+      ],
+      "interfaces": [
+        "CLI",
+        "library (Python)",
+        "web UI"
+      ],
+      "use_cases": [
+        "Before changing a column in a shared reporting view/migration, run sqllineage against the repo's SQL files to see every downstream consumer",
+        "Generate a visual lineage graph for onboarding documentation of a legacy reporting pipeline with no other docs",
+        "Embed in CI to flag a PR that touches a column with many downstream dependents for extra review",
+        "Audit a Postgres admin-portal's reporting SQL to find dead/duplicate queries that reference the same source table"
+      ],
+      "product_opportunities": [
+        "Could back a 'show me what this field feeds' feature inside an internal admin tool for auditing data flows"
+      ],
+      "agent_opportunities": [
+        "An agent making a schema change could call sqllineage first to self-check blast radius before writing a migration"
+      ],
+      "alternatives": [
+        "Rocky's `lineage-diff` (today's Worth Watching pick) — richer (PR-ready diff of what changed) but tied to a full SQL-compiler project and currently Databricks/Snowflake/BigQuery/DuckDB-only",
+        "dbt's built-in lineage — requires buying into the full dbt project structure; sqllineage works on raw SQL files with no framework"
+      ],
+      "why_it_matters": "Answers 'what depends on this column' from plain SQL text in seconds, instead of grepping across a repo or tracing it by hand before a risky schema change.",
+      "why_not_build_it_myself": "Parsing arbitrary SQL dialects into an accurate column-level dependency graph is a well-known hard problem; this has been maintained and dialect-hardened since 2019.",
+      "risks": [
+        "Static analysis only — it reads SQL text, so dynamically constructed SQL (string-built queries) won't lineage correctly",
+        "Best support is on common dialects; verify less-common syntax parses before relying on it for coverage"
+      ],
+      "first_seen": "2026-10-03",
+      "last_reviewed": "2026-10-03",
+      "last_meaningful_update": "2026-10-03",
+      "current_version": "v1.5.9",
+      "latest_release_date": "2026-09-05",
+      "source_links": [
+        "https://github.com/reata/sqllineage",
+        "https://sqllineage.readthedocs.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,677 stars, pushed 2026-10-02, created 2019-05-21, latest release v1.5.9 (2026-09-05). Surfaced from a topic:data-lineage search; picked as today's Small but High-Leverage Utility for being a narrow, mature, zero-infrastructure complement to the heavier picks above.",
       "acted_on": false
     }
   ]

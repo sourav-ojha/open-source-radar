@@ -44,3 +44,6 @@ USE NOW — broader format coverage than PDF-only tools already catalogued, matu
 ## Change History
 ### 2026-09-12
 Initial discovery and review.
+
+### 2026-10-03
+Meaningful update: v2.8 added a native `return_format="md"` (Markdown) output option directly in the dedoc API — previously the structured JSON tree had to be converted to Markdown downstream — and roughly halved the Docker image size, plus speed improvements to image table recognition, skew correction, and `PdfTabbyReader`. Recommendation unchanged (USE NOW); the native Markdown output removes a conversion step for RAG-pipeline use specifically.
