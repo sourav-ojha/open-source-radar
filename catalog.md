@@ -1,6 +1,6 @@
 # Catalog
 
-_174 projects tracked. Last updated 2026-10-03._
+_176 projects tracked. Last updated 2026-10-04._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -100,6 +100,7 @@ _174 projects tracked. Last updated 2026-10-03._
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
 | [Open Mercato](https://github.com/open-mercato/open-mercato) | PROTOTYPE | 7.7/10 | product infrastructure, AI & agent infrastructure, developer productivity | MIT | high | 2026-09-24 |
 | [Pixeltable](https://github.com/pixeltable/pixeltable) | STUDY | 7.7/10 | RAG infrastructure, AI & agent infrastructure, product building blocks, data infrastructure | Apache-2.0 | medium | 2026-09-29 |
+| [TimeTracker (DRYTRIX)](https://github.com/DRYTRIX/TimeTracker) | USE NOW | 7.7/10 | self-hosted SaaS alternatives, product building blocks, developer productivity | GPL-3.0 | low | 2026-10-04 |
 | [notifkit](https://github.com/devkitshq/notifkit) | PROTOTYPE | 7.6/10 | product infrastructure, notifications, backend components | MIT | medium | 2026-08-30 |
 | [Verb Authority](https://github.com/yairsabag/verb-authority) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Autoprompt Skill](https://github.com/Spielewoy/autoprompt-skill) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -158,6 +159,7 @@ _174 projects tracked. Last updated 2026-10-03._
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
 | [PNLCS (Panelica)](https://github.com/Panelica/pnlcs) | PROTOTYPE | 7.1/10 | product infrastructure, self-hosted SaaS alternatives, billing | MIT | medium | 2026-09-27 |
 | [whatbroke](https://github.com/arthi-arumugam-git/whatbroke) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, AI testing / agent evaluation | MIT | low | 2026-10-02 |
+| [BrightBean Studio](https://github.com/brightbeanxyz/brightbean-studio) | PROTOTYPE | 7.1/10 | self-hosted SaaS alternatives, product building blocks, micro-SaaS opportunity | AGPL-3.0 | low | 2026-10-04 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
