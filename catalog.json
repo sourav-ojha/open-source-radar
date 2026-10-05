@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-03",
+  "updated": "2026-10-05",
   "projects": [
     {
       "name": "Xberg",
@@ -10998,6 +10998,307 @@
       ],
       "aliases": [],
       "notes": "2,406 stars, 524 forks (21.8% fork ratio, consistent with organic adoption), created 2026-03-25.",
+      "acted_on": false
+    },
+    {
+      "name": "Floci",
+      "slug": "floci-aws-local-emulator",
+      "repo_url": "https://github.com/floci-io/floci",
+      "website": "https://floci.io/floci/",
+      "description": "Free, open-source local AWS emulator positioned as a drop-in LocalStack replacement \u2014 100+ AWS services on one port, migration guide included.",
+      "category": [
+        "infrastructure",
+        "developer productivity",
+        "AWS-adjacent tooling"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.5,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions. No feature gates or paid tier found anywhere in docs.",
+      "deployment": [
+        "Docker",
+        "Docker Compose",
+        "official CLI (floci start)"
+      ],
+      "interfaces": [
+        "REST (AWS-API-compatible)",
+        "CLI"
+      ],
+      "use_cases": [
+        "Local AWS dev/test without a real AWS account",
+        "CI integration tests against emulated S3/DynamoDB/SNS/SQS",
+        "Terraform/CDK/OpenTofu dry runs against a local endpoint",
+        "Local EKS/ECS/ALB architecture prototyping"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "LocalStack (now archived)",
+        "MiniStack",
+        "kumo"
+      ],
+      "why_it_matters": "LocalStack \u2014 the de facto standard for local AWS development \u2014 is archived (confirmed archived:true via GitHub API, no commits since 2026-03-23). Floci is a same-port, same-API drop-in replacement with zero migration friction, directly relevant to Sourav's AWS footprint (S3, EC2, ECR, Lambda, SQS, IAM, EB, ALB, EKS).",
+      "why_not_build_it_myself": "Re-implementing 100+ AWS service APIs faithfully enough for SDK/Terraform/CDK compatibility is a multi-year engineering effort; this already exists and is actively maintained.",
+      "risks": [
+        "Young project (created 2026-02-18), no multi-year track record",
+        "Very fast star growth (0 to 26k in ~7 months) \u2014 fork/contributor activity supports organic growth but worth re-checking over time",
+        "Stars:watchers ratio (26,370:86) is unusually wide"
+      ],
+      "first_seen": "2026-10-05",
+      "last_reviewed": "2026-10-05",
+      "last_meaningful_update": "2026-10-05",
+      "current_version": "v2.1.0",
+      "latest_release_date": "2026-09-15",
+      "source_links": [
+        "https://github.com/floci-io/floci",
+        "https://floci.io/floci/"
+      ],
+      "aliases": [],
+      "notes": "26,370 stars, 2,846 forks, 100 contributors, created 2026-02-18. Discovered because localstack/localstack shows archived:true via the GitHub API (pushed_at 2026-03-23). Part of a floci-io emulator family (AWS/Azure/GCP/OCI).",
+      "acted_on": false
+    },
+    {
+      "name": "MiniStack",
+      "slug": "ministack-aws-local-emulator",
+      "repo_url": "https://github.com/ministackorg/ministack",
+      "website": "https://ministack.org",
+      "description": "Free, open-source local AWS emulator (Python) with real backing infrastructure for stateful services (actual Postgres/MySQL/Redis containers), explicitly built as a response to LocalStack's paid-plan shift.",
+      "category": [
+        "infrastructure",
+        "developer productivity",
+        "AWS-adjacent tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "pip install",
+        "Docker",
+        "Docker Compose"
+      ],
+      "interfaces": [
+        "REST (AWS-API-compatible)",
+        "internal management API"
+      ],
+      "use_cases": [
+        "Local AWS dev/test where RDS/ElastiCache/ECS fidelity against real engines matters",
+        "Local Bedrock prototyping proxied to a local model server",
+        "Multi-tenant/multi-account local testing"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "LocalStack (now archived)",
+        "Floci",
+        "kumo"
+      ],
+      "why_it_matters": "Same LocalStack-archival trigger as Floci, but with a materially different architecture: real Postgres/MySQL/Redis/Docker containers behind stateful services instead of in-process mocks, which matters when test fidelity for those services is the priority.",
+      "why_not_build_it_myself": "Building faithful RDS/ElastiCache/ECS emulation backed by real engines, plus the AWS API surface on top, is a large undertaking already solved here.",
+      "risks": [
+        "Young project (created 2026-03-24), single-org maintained",
+        "Real-infra services require Docker-socket mounting, with associated CI/security caveats",
+        "Fast star growth alongside the same trigger as Floci \u2014 plausible but worth re-checking"
+      ],
+      "first_seen": "2026-10-05",
+      "last_reviewed": "2026-10-05",
+      "last_meaningful_update": "2026-10-05",
+      "current_version": "v1.5.21",
+      "latest_release_date": "2026-10-03",
+      "source_links": [
+        "https://github.com/ministackorg/ministack",
+        "https://ministack.org"
+      ],
+      "aliases": [],
+      "notes": "4,832 stars, 481 forks, 100 contributors, created 2026-03-24. README explicitly cites LocalStack's paid-plan shift as the reason for the project.",
+      "acted_on": false
+    },
+    {
+      "name": "MongoRescue",
+      "slug": "mongorescue-mongodb-backup-dr",
+      "repo_url": "https://github.com/YigitCittan/mongorescue",
+      "website": "",
+      "description": "Self-hosted MongoDB backup and disaster-recovery tool: streaming mongodump to disk or S3, checksum-verified and automated-restore-tested backups, safe-clone restores, encryption, dashboard, CLI, REST API, and MCP server. Single Go binary.",
+      "category": [
+        "product building blocks",
+        "infrastructure",
+        "database tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "Docker",
+        "desktop app (Windows/macOS/Linux)",
+        "single server binary"
+      ],
+      "interfaces": [
+        "Web dashboard",
+        "REST API",
+        "CLI",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Scheduled encrypted MongoDB backups to S3-compatible storage",
+        "Automated restore-tests that verify a backup actually restores",
+        "CI backup/restore scripting with stable exit codes",
+        "Agent-driven backup-health checks and restore rehearsals via MCP"
+      ],
+      "product_opportunities": [
+        "DR/backup-assurance layer for an MSSP/PTaaS client-facing admin portal"
+      ],
+      "alternatives": [
+        "hand-rolled mongodump/cron scripts",
+        "MongoDB Atlas backup (Atlas-only)",
+        "Percona Backup for MongoDB"
+      ],
+      "why_it_matters": "MongoDB is core to the MERN stack; this packages verified, safe-clone backup/restore plus an MCP server in one binary, replacing fragile hand-rolled cron scripts with no verification.",
+      "why_not_build_it_myself": "Streaming dumps with flat memory use, checksum verification, automated restore-testing, RPO/RTO tracking, and an MCP server together are a multi-week build to get right; this already exists.",
+      "risks": [
+        "Very new: created 2026-09-25 (10 days before review), 6 stars, 0 forks, 0 watchers",
+        "No independent community validation yet",
+        "Point-in-time recovery still in early design/implementation, not production-ready",
+        "Likely single or very small maintainer team \u2014 bus-factor risk for real DR dependency"
+      ],
+      "first_seen": "2026-10-05",
+      "last_reviewed": "2026-10-05",
+      "last_meaningful_update": "2026-10-05",
+      "current_version": "v0.18.0",
+      "latest_release_date": "2026-10-03",
+      "source_links": [
+        "https://github.com/YigitCittan/mongorescue"
+      ],
+      "aliases": [],
+      "notes": "6 stars, 0 forks, created 2026-09-25 \u2014 daily tagged releases v0.1.0 through v0.18.0 in 10 days, feature set far beyond typical for repo age.",
+      "acted_on": false
+    },
+    {
+      "name": "GoldenMatch",
+      "slug": "goldenmatch-entity-resolution",
+      "repo_url": "https://github.com/benseverndev-oss/goldenmatch",
+      "website": "https://docs.bensevern.dev/docs/",
+      "description": "Zero-config entity-resolution library (Python, with TypeScript/WASM and native SQL support) that deduplicates messy records into golden records without hand-written matching rules or a trained model.",
+      "category": [
+        "data/search/documents",
+        "product building blocks",
+        "micro-SaaS opportunity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "pip install",
+        "npm install",
+        "native SQL (Postgres/DuckDB)"
+      ],
+      "interfaces": [
+        "Python API",
+        "CLI",
+        "REST (claimed)",
+        "MCP server (claimed, not independently verified)"
+      ],
+      "use_cases": [
+        "Deduplicating customer/contact records before a CRM import or migration",
+        "Building a 'possible duplicate' review queue in an admin panel",
+        "Cleaning multi-source data before analytics to avoid double-counting customers"
+      ],
+      "product_opportunities": [
+        "Data-cleaning-as-a-service micro-SaaS for small businesses with messy CRM/spreadsheet data"
+      ],
+      "alternatives": [
+        "Splink",
+        "hand-rolled fuzzy matching"
+      ],
+      "why_it_matters": "Entity resolution is a recurring, genuinely hard problem for any product ingesting multi-source customer data; zero-config operation with an inspectable, reusable matching config is a real differentiator from Splink's manual-tuning model.",
+      "why_not_build_it_myself": "Getting fuzzy/exact matching, blocking keys, and auto-config right without a labeled training set is non-trivial; this packages it behind a one-line call.",
+      "risks": [
+        "Single-maintainer project with a sprawling family of sibling packages and marketing-heavy README language",
+        "Headline benchmark claims (vs. Splink, vs. rapidfuzz) not independently reproduced in this review",
+        "Small community (132 stars, 1 watcher)",
+        "MCP server and SQL-native claims read from docs, not independently exercised"
+      ],
+      "first_seen": "2026-10-05",
+      "last_reviewed": "2026-10-05",
+      "last_meaningful_update": "2026-10-05",
+      "current_version": "3.22.0",
+      "latest_release_date": "2026-09-26",
+      "source_links": [
+        "https://github.com/benseverndev-oss/goldenmatch",
+        "https://pypi.org/project/goldenmatch/"
+      ],
+      "aliases": [],
+      "notes": "132 stars, 15 forks, 1 watcher, created 2026-03-16. Benchmarks published in docs/benchmarks/ claim to beat hand-tuned Splink and process 250M rows in 11.2 minutes \u2014 unverified by this review.",
+      "acted_on": false
+    },
+    {
+      "name": "Breeze",
+      "slug": "breeze-rmm-psa-ai-operator",
+      "repo_url": "https://github.com/LanternOps/breeze",
+      "website": "https://breezermm.com",
+      "description": "Open-source RMM + PSA platform for MSPs/internal IT with an AI operator built into every page: device monitoring, patching, remote access, scripting, ticketing, quoting, and billing in one system.",
+      "category": [
+        "self-hosted SaaS alternatives",
+        "MSSP/MSP tooling",
+        "AI agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 network-use clause: self-hosting for internal/owned use carries no obligation, but reselling a modified instance as a hosted service to third-party clients would trigger source-disclosure requirements. Relevant given the MSSP context.",
+      "deployment": [
+        "Docker",
+        "self-hosted",
+        "cloud-hosted (breezermm.com, US/EU)"
+      ],
+      "interfaces": [
+        "Web UI",
+        "customer portal",
+        "Go agent (cross-platform binary)"
+      ],
+      "use_cases": [
+        "Device fleet monitoring, patching, and remote access for managed endpoints",
+        "Unified ticket-to-quote-to-invoice billing without a separate PSA sync step",
+        "Branded client self-service portal for ticket/device visibility",
+        "AI-operator-assisted alert triage with human-approval gating on risky actions"
+      ],
+      "product_opportunities": [
+        "Candidate RMM/PSA backbone for the existing MSSP admin-portal SaaS",
+        "Reference pattern for risk-classified AI-agent actions in an admin product"
+      ],
+      "alternatives": [
+        "Atera",
+        "NinjaOne",
+        "ConnectWise",
+        "Tactical RMM (RMM-only, GPL)"
+      ],
+      "why_it_matters": "Directly adjacent to the MSSP security admin-portal SaaS and PTaaS partnership context: RMM+PSA unification plus a risk-classified AI-operator design worth studying even independent of adoption.",
+      "why_not_build_it_myself": "A full RMM+PSA platform (device agent, remote access/TURN relay, patch management, ticketing/billing, multi-tenant RLS) is a multi-month-to-multi-year build; this is a working reference implementation with a published security posture.",
+      "risks": [
+        "AGPL-3.0 hosting obligation if reselling a modified instance to clients",
+        "Smaller community (126 stars, 2 watchers) relative to feature completeness",
+        "Not on the core MERN/AWS axis \u2014 relevant only through the secondary MSSP context"
+      ],
+      "first_seen": "2026-10-05",
+      "last_reviewed": "2026-10-05",
+      "last_meaningful_update": "2026-10-05",
+      "current_version": "v0.121.0",
+      "latest_release_date": "2026-10-03",
+      "source_links": [
+        "https://github.com/LanternOps/breeze",
+        "https://breezermm.com"
+      ],
+      "aliases": [],
+      "notes": "126 stars, 43 forks, created 2026-01-14. Published security whitepaper mapped to SOC 2 alignment; PostgreSQL row-level security enforced even against table owners.",
       "acted_on": false
     }
   ]

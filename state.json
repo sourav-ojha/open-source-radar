@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-04",
-  "last_successful_run": "2026-10-04",
-  "run_count": 39,
-  "rotation_slot_last_used": 5,
+  "last_run": "2026-10-05",
+  "last_successful_run": "2026-10-05",
+  "run_count": 40,
+  "rotation_slot_last_used": 6,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -60,7 +60,8 @@
     "product infrastructure (slot 2) \u2014 fine-grained authorization engines (OpenFGA vs Cerbos), TypeScript-native durable workflow SDKs (Vercel Workflow SDK vs durable-workflow/Laravel), full-stack Go+Next.js SaaS scaffolding (Grit), docker-compose-style declarative AI pipeline/MCP-server authoring (model-compose), local-first encrypted sync platform (Evolu)",
     "developer utilities/debugging/testing (slot 3) \u2014 local git-diff review CLI with GitHub-style UI and AI-agent skill (difit), AI-agent behavioral diffing between runs (whatbroke), flaky-test quarantine/retry/partition CLI (Captain, RWX), Docker-label-driven Cloudflare Tunnel automation (DockFlare); noted same-week waves in self-hosted test-case-management clones (Suitest/Tesbo/thorotest/ttgo/unittcms) and AI flaky-test-detection repos, plus a suspected fake-star repo (dsh-plugin-radar, 1467 stars vs 2 watchers)",
     "data/search/documents/RAG (slot 4) - self-hosted multi-database workspace with AI chat + MCP server (WhoDB), governed text-to-SQL/GenBI agent-skill engine (WrenAI), Rust-native PDF/Office document extraction with npm/WASM bindings (unpdf/undoc), lightweight Postgres CDC vs Debezium (go-pq-cdc), Open Data Contract Standard enforcement CLI (datacontract-cli), static SQL lineage analysis (sqllineage)",
-    "self-hosted SaaS alternatives / productivity (slot 5) \u2014 time tracking + invoicing with EU e-invoicing compliance (DRYTRIX/TimeTracker), self-hosted social media management with no feature gating (BrightBean Studio); rejected Notifuse (re-confirmed prior BSL rejection), a saturated personal-finance-tracker hype wave, link-in-bio wave, and Calendly-clone wave"
+    "self-hosted SaaS alternatives / productivity (slot 5) \u2014 time tracking + invoicing with EU e-invoicing compliance (DRYTRIX/TimeTracker), self-hosted social media management with no feature gating (BrightBean Studio); rejected Notifuse (re-confirmed prior BSL rejection), a saturated personal-finance-tracker hype wave, link-in-bio wave, and Calendly-clone wave",
+    "infrastructure/observability/deployment (slot 6) \u2014 LocalStack's archival (archived:true confirmed via GitHub API, no commits since 2026-03-23) surfaced a wave of local-AWS-emulator replacements: Floci (26.3k\u2605, drop-in, multi-cloud family), MiniStack (4.8k\u2605, real-backing-infra architecture), kumo (1.5k\u2605, Go-native, alternatives-only mention); plus a self-hosted MongoDB backup/DR tool with MCP server (MongoRescue, very new), an MSSP-adjacent RMM+PSA platform with an AI operator (Breeze, AGPL), and a zero-config entity-resolution library (GoldenMatch, marketing-heavy claims flagged for independent verification)"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1460,7 +1461,19 @@
     "colanode/colanode",
     "evergreen-it-dev/folio",
     "Peppermint-Lab/peppermint",
-    "Billionmail/BillionMail"
+    "Billionmail/BillionMail",
+    "floci-io/floci",
+    "ministackorg/ministack",
+    "sivchari/kumo",
+    "YigitCittan/mongorescue",
+    "LanternOps/breeze",
+    "benseverndev-oss/goldenmatch",
+    "localstack/localstack",
+    "opencost/opencost",
+    "cilium/cilium",
+    "truvity/openbao",
+    "it-minds/troupe",
+    "akhil-dara/sqlite-gui-analyzer"
   ],
   "rejected": [
     {
@@ -2356,8 +2369,8 @@
       "date": "2026-09-03"
     },
     "monoscope-tech/monoscope": {
-      "version": "v0.6.27",
-      "date": "2026-09-07"
+      "version": "v0.6.28",
+      "date": "2026-10-01"
     },
     "tsouza/cerberus": {
       "version": "v1.19.0",
@@ -2508,8 +2521,8 @@
       "date": "2026-08-05"
     },
     "dagucloud/dagu": {
-      "version": "v2.17.2",
-      "date": "2026-09-25"
+      "version": "v2.18.2",
+      "date": "2026-10-04"
     },
     "slothflowlabs/duckle": {
       "version": "v0.7.1",
@@ -2564,8 +2577,8 @@
       "date": "2026-07-05"
     },
     "rustfs/rustfs": {
-      "version": "1.0.0",
-      "date": "2026-09-16"
+      "version": "1.0.1",
+      "date": "2026-10-03"
     },
     "Openpanel-dev/openpanel": {
       "version": "unclear \u2014 GitHub tags are Docker image labels, not semver releases",
@@ -2784,12 +2797,12 @@
       "date": "2026-09-13"
     },
     "dimonomid/nerdlog": {
-      "version": "v1.11.0",
-      "date": "2026-09-17"
+      "version": "v1.13.0",
+      "date": "2026-10-03"
     },
     "kimdre/doco-cd": {
-      "version": "v0.119.0",
-      "date": "2026-09-17"
+      "version": "v0.123.0",
+      "date": "2026-09-29"
     },
     "rootprint/rootprint": {
       "version": "v0.4.3",
@@ -2860,8 +2873,8 @@
       "date": "2026-09-22"
     },
     "PrismorSec/prismor": {
-      "version": "v1.54.1",
-      "date": "2026-09-17"
+      "version": "v1.59.0",
+      "date": "2026-10-02"
     },
     "Kaelio/ktx": {
       "version": "v0.16.0",
@@ -2956,8 +2969,8 @@
       "date": "2026-09-26"
     },
     "eunomia-bpf/agentsight": {
-      "version": "v1.0.31",
-      "date": "2026-09-05"
+      "version": "v1.0.34",
+      "date": "2026-10-05"
     },
     "qpoint-io/qtap": {
       "version": "unclear-no-tagged-release",
@@ -3086,16 +3099,40 @@
     "brightbeanxyz/brightbean-studio": {
       "version": "unclear-no-tagged-release",
       "date": "unclear"
+    },
+    "floci-io/floci": {
+      "version": "v2.1.0",
+      "date": "2026-09-15"
+    },
+    "ministackorg/ministack": {
+      "version": "v1.5.21",
+      "date": "2026-10-03"
+    },
+    "sivchari/kumo": {
+      "version": "v0.31.0",
+      "date": "2026-09-29"
+    },
+    "YigitCittan/mongorescue": {
+      "version": "v0.18.0",
+      "date": "2026-10-03"
+    },
+    "LanternOps/breeze": {
+      "version": "v0.121.0",
+      "date": "2026-10-03"
+    },
+    "benseverndev-oss/goldenmatch": {
+      "version": "3.22.0",
+      "date": "2026-09-26"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-09-12",
-      "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-3 volume across 16 parallel topic queries"
+      "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-6 volume"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-04",
-      "note": "README/LICENSE/ARCHITECTURE fetches for DRYTRIX/TimeTracker and BrightBean Studio succeeded; Notifuse README/LICENSE also fetched (rejected on dedupe after fetch, not before \u2014 grep state.json rejected earlier next time)"
+      "last_ok": "2026-10-05",
+      "note": "README/LICENSE fetches for floci, ministack, mongorescue, goldenmatch, breeze all succeeded"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -3110,16 +3147,16 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-04",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~20 search queries across self-hosted-SaaS-alternative sub-niches (e-signature, survey, invoicing, social scheduler, password manager, team chat, newsletter, knowledge base, link-in-bio, booking, personal finance, helpdesk, OKR, inventory) plus metadata/release checks on the deep-review shortlist and 9 previously-catalogued projects; well under rate limit (8,350/hr available, 0 used at start)"
+      "last_ok": "2026-10-05",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~34 search queries across slot-6 infra/observability/deployment sub-niches plus metadata/release/README/LICENSE/commit checks on the deep-review shortlist and 8 previously-catalogued infra projects; well under rate limit (8,350/hr available, 0 used at start)"
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
       "note": "Show HN search over last 5 days worked fine; mostly small/thin novelty projects, no slot-7 candidates strong enough to deep-review from this pass"
     },
     "pypi.org": {
-      "last_ok": "2026-10-03",
-      "note": "confirmed datacontract-cli at 1.2.2"
+      "last_ok": "2026-10-05",
+      "note": "confirmed ministack (1.5.21) and goldenmatch (3.22.0) PyPI versions"
     },
     "registry.npmjs.org": {
       "last_ok": "2026-10-03",
@@ -3312,5 +3349,5 @@
     "TimeTracker (DRYTRIX/TimeTracker) \u2014 2026-10-04, USE NOW, 7.7",
     "BrightBean Studio (brightbeanxyz/brightbean-studio) \u2014 2026-10-04, PROTOTYPE, 7.1"
   ],
-  "notes": "2026-10-04: Slot 5 (self-hosted SaaS alternatives, productivity) per day_of_year 277 % 7 + 1 = 5. Catalogued 2 new: TimeTracker/DRYTRIX (github.com/DRYTRIX/TimeTracker, GPL-3.0, 7.7, USE NOW) \u2014 self-hosted time tracking + invoicing with EU e-invoicing compliance (Peppol/Factur-X/ZUGFeRD/XRechnung) and QuickBooks/Xero/Sage/DATEV/Gusto/ADP integrations, mature (628 stars, weekly releases, v5.17.2). BrightBean Studio (github.com/brightbeanxyz/brightbean-studio, AGPL-3.0, 7.1, PROTOTYPE) \u2014 self-hosted social media management (Buffer/Sendible alternative) across 10+ platforms via first-party APIs, zero feature gating, client approval portal; AGPL hosting obligation flagged if reselling a modified instance. Important process note: Notifuse (Notifuse/notifuse) was deep-reviewed (BSL 1.1 license details, README, architecture) before discovering it was already rejected on 2026-09-10 for the same BSL concern plus existing coverage by Posthorn \u2014 confirmed the prior rejection still holds and dropped it, but this wasted review time that a fuller rejected-list grep up front would have saved; grep the ENTIRE rejected list for repo name hits before deep-reviewing a candidate, not just the most recent entries. Rejected/noted waves: a large same-day personal-finance-tracker wave (fintrack, vaultbook, florin, Numera, Budget-Tracker, steward, finx, budget-buddy, sovereign-plugin-ledger, two unrelated same-named 'picsou-finance' repos, PersonalFinanceImproved, dhanam-core \u2014 0-519 stars, no differentiation); a link-in-bio/Linktree-alternative wave (0-26 stars); a self-hosted-Calendly wave duplicating already-catalogued Calnode; mainstream already-known e-signature tools (Documenso 15.3k\u2605, DocuSeal 18.6k\u2605, OpenSign 7.0k\u2605) assumed already known per section 7; Peppermint-Lab/peppermint (stale, pushed 13 months ago); SelmiAbderrahim/pssmngr.com (password manager, too early, v0.1.0 only). No meaningful updates found for previously catalogued self-hosted-SaaS-alternative projects spot-checked today (Relaticle, itsaplan, Bugsink, Kaneo, solidtime, Libredesk, Calnode, Flexprice, Meteroid) \u2014 all routine patch/minor bumps only. 'Still Worth Trying' rotated to Kingfisher, Benjamin-Plus Skill, and AdminForth (none used in the last four runs' rotation). Discovery used ~20 parallel GitHub Search API queries across self-hosted-SaaS-alternative sub-niches (e-signature, survey/forms, invoicing, social scheduler, password manager, team chat, newsletter, knowledge-base/Notion-alternative, link-in-bio, appointment booking, personal finance, helpdesk, OKR, inventory) plus README/LICENSE/ARCHITECTURE fetches via raw.githubusercontent.com for the deep-review shortlist. WebSearch/HN/Lobsters/crates.io/PyPI/npm were not needed this run."
+  "notes": "2026-10-05: Slot 6 (infrastructure, observability, deployment) per day_of_year 278 % 7 + 1 = 6. Headline finding: localstack/localstack now shows archived:true via the GitHub API (pushed_at 2026-03-23, no commits since) \u2014 confirmed directly, not via WebFetch cache. This reopened the local-AWS-emulator category. Catalogued 5 new: Floci (github.com/floci-io/floci, MIT, 8.5, USE NOW) \u2014 drop-in LocalStack replacement, 26.3k stars, migration guide, multi-cloud emulator family (AWS/Azure/GCP/OCI). MiniStack (github.com/ministackorg/ministack, MIT, 8.0, PROTOTYPE) \u2014 same trigger, distinct architecture backing stateful services (RDS/ElastiCache/ECS) with real Postgres/MySQL/Redis/Docker containers instead of in-process mocks. kumo (sivchari/kumo, 1.5k stars) noted as a third alternative (Go-native, single binary) but not catalogued as a full entry \u2014 mentioned under Floci/MiniStack's alternatives. MongoRescue (github.com/YigitCittan/mongorescue, MIT, 7.4, PROTOTYPE) \u2014 self-hosted MongoDB backup/DR with checksum-verified restores, dashboard, CLI, and an MCP server; flagged as very new (created 10 days before review, 6 stars/0 forks/0 watchers) despite an unusually complete feature set \u2014 treat as experimental, not production-ready. Breeze (github.com/LanternOps/breeze, AGPL-3.0, 7.0, PROTOTYPE) \u2014 RMM+PSA platform with an AI operator, relevant via the MSSP secondary context; AGPL hosting obligation flagged for any resold/modified hosted instance. GoldenMatch (github.com/benseverndev-oss/goldenmatch, MIT, 7.5, PROTOTYPE) \u2014 zero-config entity-resolution library; flagged the sprawling same-maintainer sibling-package family and marketing-heavy README claims (vs. Splink, 250M rows/11.2min) as unverified by this review. No meaningful updates found on 8 spot-checked previously-catalogued infra/observability projects (Dagu, Nerdlog, doco-cd, AgentSight, Monoscope, RustFS, Prismor, LibreDB Studio) \u2014 all routine patch/minor version bumps only. 'Still Worth Trying' rotated to ctx, Nerdlog, and html-to-markdown (Kreuzberg) \u2014 none used in the last 6 runs' rotation (AdminForth/Kingfisher/Benjamin-Plus Skill used 2026-10-04; Xberg/Destructive Command Guard/skills used 2026-10-03; LibreDB Studio/OpenDataLoader PDF/Dagu used 2026-10-02; Beads/Graphify/SnapOtter used 2026-10-01; Bernstein/Sidequest/Monoscope used 2026-09-30). Discovery used ~34 parallel GitHub Search API queries across infra/observability/deployment sub-niches (internal-developer-platform, backstage-alternative, canary/blue-green deployment, chaos engineering, drift detection, OpenTelemetry collector, service mesh, database backup, disaster recovery, GitOps, edge functions, container registry, k8s network policy, log anomaly detection, incident response, AWS Lambda cost, Terraform plan review, secrets rotation, synthetic monitoring, AWS emulator/LocalStack-alternative) \u2014 most recency-sorted queries surfaced noise (tiny/irrelevant repos pushed within the hour), so the AWS-emulator wave triggered by LocalStack's archival was the strongest find. WebSearch/HN/Lobsters/crates.io were not needed this run."
 }
