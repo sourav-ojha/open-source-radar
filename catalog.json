@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "projects": [
     {
       "name": "Xberg",
@@ -11299,6 +11299,230 @@
       ],
       "aliases": [],
       "notes": "126 stars, 43 forks, created 2026-01-14. Published security whitepaper mapped to SOC 2 alignment; PostgreSQL row-level security enforced even against table owners.",
+      "acted_on": false
+    },
+    {
+      "name": "CortexDB",
+      "slug": "cortexdb-agent-memory",
+      "repo_url": "https://github.com/liliang-cn/cortexdb",
+      "website": "https://liliang-cn.github.io/cortexdb/",
+      "description": "Pure-Go embedded agent memory and knowledge-graph engine living in one SQLite file: vectors, relational memory, RDF/SPARQL, Cypher, 80+ MCP tools, and native Claude Code/Codex plugins.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "embedded library",
+        "self-hosted gRPC shared-brain server"
+      ],
+      "interfaces": [
+        "Go library",
+        "Rust/Python/Node client bindings",
+        "MCP server",
+        "Claude Code / Codex plugin",
+        "gRPC"
+      ],
+      "use_cases": [
+        "Durable cross-session memory for Claude Code/Codex sessions",
+        "Embedded semantic+graph memory inside an internal Go/Node tool",
+        "Shared team knowledge base across multiple agent instances via cortexdb-grpc"
+      ],
+      "product_opportunities": [
+        "Lightweight agent-memory feature for a support/admin product without vector-DB + graph-DB infra"
+      ],
+      "alternatives": [
+        "Chroma/Qdrant + Neo4j stack",
+        "Sibyl-Memory",
+        "yantrikdb",
+        "NodeDB"
+      ],
+      "why_it_matters": "Collapses vector + relational + graph memory into one SQLite file with no embedding-model dependency and a one-line Claude Code/Codex plugin install.",
+      "why_not_build_it_myself": "Multi-paradigm query support (vector, Cypher, SPARQL) over one storage file is nontrivial to replicate; the MCP/plugin wiring is already done.",
+      "risks": [
+        "Effectively solo-maintained",
+        "Small community, little independent validation of recall quality yet"
+      ],
+      "first_seen": "2026-10-06",
+      "last_reviewed": "2026-10-06",
+      "last_meaningful_update": "2026-10-06",
+      "current_version": "v2.121.1",
+      "latest_release_date": "2026-10-06",
+      "source_links": [
+        "https://github.com/liliang-cn/cortexdb",
+        "https://liliang-cn.github.io/cortexdb/"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "claude-code-cache-fix",
+      "slug": "claude-code-cache-fix",
+      "repo_url": "https://github.com/cnighswonger/claude-code-cache-fix",
+      "website": "https://www.npmjs.com/package/claude-code-cache-fix",
+      "description": "Local proxy that repairs Claude Code prompt-cache bugs (unstable request-prefix ordering, TTL downgrades, retry storms) causing claimed up to 20x cost spikes on resumed sessions.",
+      "category": [
+        "developer productivity",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT per raw LICENSE file and npm registry metadata; GitHub's license-detection API misreports NOASSERTION on this repo, likely due to a non-standard multi-author copyright line \u2014 verified against the actual file, not the API field.",
+      "deployment": [
+        "local proxy (npm global install)"
+      ],
+      "interfaces": [
+        "CLI",
+        "local HTTP proxy"
+      ],
+      "use_cases": [
+        "Reduce Claude Code token spend on long-running or resumed sessions",
+        "Diagnose whether a project's sessions are hitting the cache-prefix-instability bug"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Do nothing and absorb the cost regression",
+        "Track the underlying Claude Code bug reports directly",
+        "GUI/VS Code wrapper forks with far less traction"
+      ],
+      "why_it_matters": "Directly reduces the cost of Claude Code, a tool already in daily use including for running this radar.",
+      "why_not_build_it_myself": "Requires reverse-engineering Anthropic's undocumented cache-key/prefix behavior and keeping the fix current against Claude Code releases \u2014 not a trivial one-off script.",
+      "risks": [
+        "Intercepts and rewrites live traffic to Anthropic's API \u2014 security-sensitive, read the Security Model section before enabling anything beyond default local-proxy mode",
+        "Optional --remote-control mode terminates TLS with a locally generated CA \u2014 materially higher trust requirement, avoid unless specifically needed",
+        "42 open issues against 436 stars is nontrivial \u2014 check current issues before relying on it",
+        "Built against undocumented Anthropic behavior that could change without notice"
+      ],
+      "first_seen": "2026-10-06",
+      "last_reviewed": "2026-10-06",
+      "last_meaningful_update": "2026-10-06",
+      "current_version": "v4.3.0",
+      "latest_release_date": "2026-07-17",
+      "source_links": [
+        "https://github.com/cnighswonger/claude-code-cache-fix",
+        "https://www.npmjs.com/package/claude-code-cache-fix"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "SparrowDB",
+      "slug": "sparrowdb-embedded-graph",
+      "repo_url": "https://github.com/ryaker/SparrowDB",
+      "website": "https://docs.rs/sparrowdb",
+      "description": "Embedded, Cypher-native graph database in Rust \u2014 \"the SQLite of graph databases\" \u2014 with Python, Node.js, and Ruby bindings and no server process.",
+      "category": [
+        "product building blocks",
+        "developer productivity"
+      ],
+      "status": "WATCH",
+      "relevance_score": 6.3,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "embedded library"
+      ],
+      "interfaces": [
+        "Rust crate",
+        "Python/Node.js/Ruby bindings"
+      ],
+      "use_cases": [
+        "Permission-graph or org-chart traversal embedded in a Node service",
+        "Prototype a recommendation-graph feature before committing to a full graph DB"
+      ],
+      "product_opportunities": [
+        "Lightweight related-items / permissions-graph feature without a graph-DB infra line item"
+      ],
+      "alternatives": [
+        "Neo4j",
+        "KuzuDB and other embedded graph databases",
+        "Modeling the graph in Postgres/Mongo with recursive queries"
+      ],
+      "why_it_matters": "An embedded graph DB with a real Node binding and Cypher support is a genuinely underserved niche for small embedded graph needs.",
+      "why_not_build_it_myself": "Implementing a real Cypher-compatible embedded query engine is significant work; not worth it for a feature-level need.",
+      "risks": [
+        "Pre-1.0 with a documented catastrophic data-corruption bug (versions <=0.1.26, fixed in 0.1.27) from concurrent writers lacking a lock file",
+        "Apparently single-maintainer, small community (79 stars)",
+        "crates.io API lookup failed during this review; version info relies on the GitHub release tag only"
+      ],
+      "first_seen": "2026-10-06",
+      "last_reviewed": "2026-10-06",
+      "last_meaningful_update": "2026-10-06",
+      "current_version": "v0.1.27",
+      "latest_release_date": "2026-08-17",
+      "source_links": [
+        "https://github.com/ryaker/SparrowDB",
+        "https://docs.rs/sparrowdb"
+      ],
+      "aliases": [],
+      "notes": "",
+      "acted_on": false
+    },
+    {
+      "name": "Dialog DB",
+      "slug": "dialog-db",
+      "repo_url": "https://github.com/dialog-db/dialog-db",
+      "website": "https://dialog.foundation/",
+      "description": "Experimental embeddable database for local-first software using a Datalog-style schema-on-read query API, targeting WASM and native runtimes.",
+      "category": [
+        "infrastructure, architecture, emerging tech",
+        "product building blocks"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.0,
+      "maturity": "experimental",
+      "integration_effort": "high",
+      "license": "MPL-2.0",
+      "commercial_use_notes": "MPL-2.0 is file-level weak copyleft: proprietary code can be combined with it, but modifications to MPL-licensed files must be shared back. Not a blocker for embedding; re-check once the project stabilizes and any redistribution is planned.",
+      "deployment": [
+        "embedded library (WASM or native)"
+      ],
+      "interfaces": [
+        "TypeScript/React packages",
+        "Rust core"
+      ],
+      "use_cases": [
+        "Study schema-on-read/Datalog query design for local-first sync",
+        "Spike a prototype to evaluate Datalog query ergonomics in TS/React"
+      ],
+      "product_opportunities": [
+        "Future local-first, multi-device sync layer if the project stabilizes"
+      ],
+      "alternatives": [
+        "Evolu (already catalogued)",
+        "Yjs",
+        "Automerge"
+      ],
+      "why_it_matters": "A meaningfully different, Datalog-based approach to local-first sync worth understanding architecturally versus CRDT-document sync.",
+      "why_not_build_it_myself": "Schema-on-read Datalog query engines with efficient replica sync are a substantial distributed-systems undertaking.",
+      "risks": [
+        "Explicitly experimental: no migration path for breaking binary-encoding/index changes",
+        "73 open issues against 181 stars \u2014 significant open surface area for its size",
+        "Low external validation so far (1 watcher)"
+      ],
+      "first_seen": "2026-10-06",
+      "last_reviewed": "2026-10-06",
+      "last_meaningful_update": "2026-10-06",
+      "current_version": "tonk-2026-10-03 (tag, no formal release)",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/dialog-db/dialog-db",
+        "https://dialog.foundation/"
+      ],
+      "aliases": [],
+      "notes": "Primary contributor Gozala (Irakli Gozalishvili, Tonk Labs per GitHub profile) has a public history of distributed/local-first systems work.",
       "acted_on": false
     }
   ]

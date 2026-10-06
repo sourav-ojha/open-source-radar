@@ -1,6 +1,6 @@
 # Catalog
 
-_181 projects tracked. Last updated 2026-10-05._
+_185 projects tracked. Last updated 2026-10-06._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -97,6 +97,7 @@ _181 projects tracked. Last updated 2026-10-05._
 | [Hippo (hippo-memory)](https://github.com/kitfunso/hippo-memory) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent memory, developer productivity | MIT | low | 2026-09-30 |
 | [Grit](https://github.com/MUKE-coder/grit) | PROTOTYPE | 7.8/10 | product building blocks, developer productivity, backend components, admin panels | MIT | medium | 2026-10-01 |
 | [WrenAI (Wren Engine)](https://github.com/Canner/WrenAI) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, data/search/documents/RAG, product building blocks | Apache-2.0 | medium | 2026-10-03 |
+| [CortexDB](https://github.com/liliang-cn/cortexdb) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-06 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -158,6 +159,7 @@ _181 projects tracked. Last updated 2026-10-05._
 | [MillionSend](https://github.com/MillionSend/millionsend) | PROTOTYPE | 7.2/10 | product building blocks, email infrastructure, self-hosted SaaS alternative | AGPL-3.0 (core); MIT (SDKs) | low | 2026-09-15 |
 | [Agent Console](https://github.com/LockedinLabs-AI/agent-console) | PROTOTYPE | 7.2/10 | AI & agent infrastructure, observability, developer productivity | MIT | medium | 2026-09-30 |
 | [Evolu](https://github.com/evoluhq/evolu) | STUDY | 7.2/10 | product building blocks, data sync, local-first, databases | MIT | medium | 2026-10-01 |
+| [claude-code-cache-fix](https://github.com/cnighswonger/claude-code-cache-fix) | PROTOTYPE | 7.2/10 | developer productivity, AI & agent infrastructure | MIT | low | 2026-10-06 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
@@ -181,7 +183,9 @@ _181 projects tracked. Last updated 2026-10-05._
 | [Macro](https://github.com/macro-inc/macro) | STUDY | 6.8/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure | AGPL-3.0 | high | 2026-09-27 |
 | [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
 | [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
+| [SparrowDB](https://github.com/ryaker/SparrowDB) | WATCH | 6.3/10 | product building blocks, developer productivity | MIT | low | 2026-10-06 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |
 | [AgentVM (DeepClause)](https://github.com/deepclause/agentvm) | WATCH | 6.1/10 | AI agent infrastructure, agent sandboxes, small utility | MIT | low | 2026-09-15 |
 | [Bookshelf](https://github.com/murerkinn/bookshelf) | WATCH | 6.0/10 | small utility, self-hosted | MIT | low | 2026-09-15 |
+| [Dialog DB](https://github.com/dialog-db/dialog-db) | STUDY | 6.0/10 | infrastructure/architecture, product building blocks | MPL-2.0 | high | 2026-10-06 |
 | [LightMem](https://github.com/zjunlp/LightMem) | WATCH | 5.5/10 | agent memory, AI agent infrastructure | MIT | high | 2026-08-29 |

@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-05",
-  "last_successful_run": "2026-10-05",
-  "run_count": 40,
-  "rotation_slot_last_used": 6,
+  "last_run": "2026-10-06",
+  "last_successful_run": "2026-10-06",
+  "run_count": 41,
+  "rotation_slot_last_used": 7,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -61,7 +61,8 @@
     "developer utilities/debugging/testing (slot 3) \u2014 local git-diff review CLI with GitHub-style UI and AI-agent skill (difit), AI-agent behavioral diffing between runs (whatbroke), flaky-test quarantine/retry/partition CLI (Captain, RWX), Docker-label-driven Cloudflare Tunnel automation (DockFlare); noted same-week waves in self-hosted test-case-management clones (Suitest/Tesbo/thorotest/ttgo/unittcms) and AI flaky-test-detection repos, plus a suspected fake-star repo (dsh-plugin-radar, 1467 stars vs 2 watchers)",
     "data/search/documents/RAG (slot 4) - self-hosted multi-database workspace with AI chat + MCP server (WhoDB), governed text-to-SQL/GenBI agent-skill engine (WrenAI), Rust-native PDF/Office document extraction with npm/WASM bindings (unpdf/undoc), lightweight Postgres CDC vs Debezium (go-pq-cdc), Open Data Contract Standard enforcement CLI (datacontract-cli), static SQL lineage analysis (sqllineage)",
     "self-hosted SaaS alternatives / productivity (slot 5) \u2014 time tracking + invoicing with EU e-invoicing compliance (DRYTRIX/TimeTracker), self-hosted social media management with no feature gating (BrightBean Studio); rejected Notifuse (re-confirmed prior BSL rejection), a saturated personal-finance-tracker hype wave, link-in-bio wave, and Calendly-clone wave",
-    "infrastructure/observability/deployment (slot 6) \u2014 LocalStack's archival (archived:true confirmed via GitHub API, no commits since 2026-03-23) surfaced a wave of local-AWS-emulator replacements: Floci (26.3k\u2605, drop-in, multi-cloud family), MiniStack (4.8k\u2605, real-backing-infra architecture), kumo (1.5k\u2605, Go-native, alternatives-only mention); plus a self-hosted MongoDB backup/DR tool with MCP server (MongoRescue, very new), an MSSP-adjacent RMM+PSA platform with an AI operator (Breeze, AGPL), and a zero-config entity-resolution library (GoldenMatch, marketing-heavy claims flagged for independent verification)"
+    "infrastructure/observability/deployment (slot 6) \u2014 LocalStack's archival (archived:true confirmed via GitHub API, no commits since 2026-03-23) surfaced a wave of local-AWS-emulator replacements: Floci (26.3k\u2605, drop-in, multi-cloud family), MiniStack (4.8k\u2605, real-backing-infra architecture), kumo (1.5k\u2605, Go-native, alternatives-only mention); plus a self-hosted MongoDB backup/DR tool with MCP server (MongoRescue, very new), an MSSP-adjacent RMM+PSA platform with an AI operator (Breeze, AGPL), and a zero-config entity-resolution library (GoldenMatch, marketing-heavy claims flagged for independent verification)",
+    "experimental/hidden gems (slot 7) \u2014 embedded single-paradigm-collapsing agent memory in SQLite (CortexDB), a Claude Code prompt-cache-regression proxy fix with direct cost impact on daily tool use, an embedded Cypher-native graph database with Node bindings pre-1.0 (SparrowDB, recent data-corruption bug transparently documented), and a Datalog-based local-first embeddable DB from a credible local-first-systems pedigree (Dialog DB, Tonk Labs); rejected a suspected fork-farm/fake-engagement LLM router (Fastllm-proxy \u2014 5+ zero-star forks all created by same-day, 0-follower bot-pattern accounts) and noted oversaturated same-week waves in git-worktree managers for parallel AI coding agents and LLM gateway/proxy products"
   ],
   "evaluated_repos": [
     "xberg-io/html-to-markdown",
@@ -1473,7 +1474,21 @@
     "cilium/cilium",
     "truvity/openbao",
     "it-minds/troupe",
-    "akhil-dara/sqlite-gui-analyzer"
+    "akhil-dara/sqlite-gui-analyzer",
+    "cnighswonger/claude-code-cache-fix",
+    "liliang-cn/cortexdb",
+    "dialog-db/dialog-db",
+    "NodeDB-Lab/nodedb",
+    "ryaker/SparrowDB",
+    "azrtydxb/Fastllm-proxy",
+    "zhh2001/rote",
+    "yantrikos/yantrikdb",
+    "ptweezy/cronstable",
+    "btsouth/toolport",
+    "api7/aisix",
+    "smg-project/smg",
+    "d-kuro/gwq",
+    "kbrdn1/gwm-cli"
   ],
   "rejected": [
     {
@@ -2285,6 +2300,26 @@
       "repo_url": "SelmiAbderrahim/pssmngr.com",
       "reason": "too early \u2014 v0.1.0 only, 74 stars but 27 open issues (weak bug/fix ratio for its size), README not resolvable at expected path",
       "date": "2026-10-04"
+    },
+    {
+      "repo_url": "https://github.com/azrtydxb/Fastllm-proxy",
+      "reason": "suspected fake engagement \u2014 93 forks vs 108 stars vs 0 watchers; sampled fork-owner accounts (juwanroob, logankos1, oberbrner) all created within the same minute on 2026-06-25 with 0 followers each, a bot-farm signature; marketing-heavy performance claims (0.76us/request) left unverified",
+      "date": "2026-10-06"
+    },
+    {
+      "repo_url": "https://github.com/NodeDB-Lab/nodedb",
+      "reason": "BUSL-1.1 (not fully open \u2014 production use allowed except as a resold Database Service, converts to Apache-2.0 in 2030); high open-issue ratio (31 issues/201 stars) and heavy marketing copy versus independently verifiable substance; filed as Worth Watching rather than a full entry",
+      "date": "2026-10-06"
+    },
+    {
+      "repo_url": "git-worktree-manager wave (wt, worktree-pool-manager, worktigre, speedy-git-ext, canopod, teebe, crow, gw, gwm-cli, jackiotyu/git-worktree-manager, gwq, worktree-manager, git-parsec, ouijit)",
+      "reason": "duplicate/hype wave \u2014 large same-week cluster of near-identical git-worktree managers for parallel AI-coding-agent workflows; no entrant differentiated enough to review individually, several already covered in substance by previously-catalogued agent-orchestration tools",
+      "date": "2026-10-06"
+    },
+    {
+      "repo_url": "LLM gateway/proxy wave (smg-project/smg, gebruder/wirken, LeenHawk/gproxy, majiayu000/litellm-rs, AprilNEA/BYOKEY, btsouth/toolport, api7/aisix, soapbucket/sbproxy)",
+      "reason": "oversaturated niche already covered multiple times in prior runs (inference-gateway, aisix precursor coverage, cuihuan/awesome-ai-gateway); no individual clear winner emerged today over existing catalogued entries",
+      "date": "2026-10-06"
     }
   ],
   "known_releases": {
@@ -3123,6 +3158,18 @@
     "benseverndev-oss/goldenmatch": {
       "version": "3.22.0",
       "date": "2026-09-26"
+    },
+    "liliang-cn/cortexdb": {
+      "version": "v2.121.1",
+      "date": "2026-10-06"
+    },
+    "cnighswonger/claude-code-cache-fix": {
+      "version": "v4.3.0",
+      "date": "2026-07-17"
+    },
+    "ryaker/SparrowDB": {
+      "version": "v0.1.27",
+      "date": "2026-08-17"
     }
   },
   "source_health": {
@@ -3131,8 +3178,8 @@
       "note": "not used this run \u2014 GitHub Search API alone surfaced enough slot-6 volume"
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-05",
-      "note": "README/LICENSE fetches for floci, ministack, mongorescue, goldenmatch, breeze all succeeded"
+      "last_ok": "2026-10-06",
+      "note": "README/LICENSE fetches for cortexdb, dialog-db, SparrowDB, NodeDB, rote, claude-code-cache-fix all succeeded"
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -3147,8 +3194,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-05",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~34 search queries across slot-6 infra/observability/deployment sub-niches plus metadata/release/README/LICENSE/commit checks on the deep-review shortlist and 8 previously-catalogued infra projects; well under rate limit (8,350/hr available, 0 used at start)"
+      "last_ok": "2026-10-06",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~20 search queries across slot-7 hidden-gem niches (wasm plugin runtimes, embedded/local-first DBs, terminal UI frameworks, AI code-review agents, LLM proxies/gateways, git worktree managers, cron schedulers, OpenAPI generators, SQLite-vector) plus metadata/release/README/LICENSE checks on the deep-review shortlist and a fork-farm sanity check; well under rate limit (8,350/hr available)."
     },
     "hn.algolia.com": {
       "last_ok": "2026-09-22",
@@ -3159,8 +3206,8 @@
       "note": "confirmed ministack (1.5.21) and goldenmatch (3.22.0) PyPI versions"
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-10-03",
-      "note": "confirmed @iyulab/unpdf (0.23.0) and @iyulab/undoc (0.13.1) versions and publish timestamps"
+      "last_ok": "2026-10-06",
+      "note": "confirmed claude-code-cache-fix version/license match GitHub LICENSE file content despite GitHub API's NOASSERTION license field"
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -3172,7 +3219,7 @@
     },
     "crates.io": {
       "last_ok": null,
-      "note": "api.crates.io request failed again today (empty/non-JSON response, same as 2026-09-16) \u2014 relied on npm registry + GitHub release tags for unpdf instead; worth a third-strike note for future runs"
+      "note": "api.crates.io request for sparrowdb failed again today (empty/non-JSON response) \u2014 third consecutive run with this failure; relied on GitHub release tag instead"
     }
   },
   "previous_recommendations": [
@@ -3347,7 +3394,11 @@
     "Data Contract CLI (datacontract/datacontract-cli)",
     "SQLLineage (reata/sqllineage)",
     "TimeTracker (DRYTRIX/TimeTracker) \u2014 2026-10-04, USE NOW, 7.7",
-    "BrightBean Studio (brightbeanxyz/brightbean-studio) \u2014 2026-10-04, PROTOTYPE, 7.1"
+    "BrightBean Studio (brightbeanxyz/brightbean-studio) \u2014 2026-10-04, PROTOTYPE, 7.1",
+    "CortexDB",
+    "claude-code-cache-fix",
+    "SparrowDB",
+    "Dialog DB"
   ],
-  "notes": "2026-10-05: Slot 6 (infrastructure, observability, deployment) per day_of_year 278 % 7 + 1 = 6. Headline finding: localstack/localstack now shows archived:true via the GitHub API (pushed_at 2026-03-23, no commits since) \u2014 confirmed directly, not via WebFetch cache. This reopened the local-AWS-emulator category. Catalogued 5 new: Floci (github.com/floci-io/floci, MIT, 8.5, USE NOW) \u2014 drop-in LocalStack replacement, 26.3k stars, migration guide, multi-cloud emulator family (AWS/Azure/GCP/OCI). MiniStack (github.com/ministackorg/ministack, MIT, 8.0, PROTOTYPE) \u2014 same trigger, distinct architecture backing stateful services (RDS/ElastiCache/ECS) with real Postgres/MySQL/Redis/Docker containers instead of in-process mocks. kumo (sivchari/kumo, 1.5k stars) noted as a third alternative (Go-native, single binary) but not catalogued as a full entry \u2014 mentioned under Floci/MiniStack's alternatives. MongoRescue (github.com/YigitCittan/mongorescue, MIT, 7.4, PROTOTYPE) \u2014 self-hosted MongoDB backup/DR with checksum-verified restores, dashboard, CLI, and an MCP server; flagged as very new (created 10 days before review, 6 stars/0 forks/0 watchers) despite an unusually complete feature set \u2014 treat as experimental, not production-ready. Breeze (github.com/LanternOps/breeze, AGPL-3.0, 7.0, PROTOTYPE) \u2014 RMM+PSA platform with an AI operator, relevant via the MSSP secondary context; AGPL hosting obligation flagged for any resold/modified hosted instance. GoldenMatch (github.com/benseverndev-oss/goldenmatch, MIT, 7.5, PROTOTYPE) \u2014 zero-config entity-resolution library; flagged the sprawling same-maintainer sibling-package family and marketing-heavy README claims (vs. Splink, 250M rows/11.2min) as unverified by this review. No meaningful updates found on 8 spot-checked previously-catalogued infra/observability projects (Dagu, Nerdlog, doco-cd, AgentSight, Monoscope, RustFS, Prismor, LibreDB Studio) \u2014 all routine patch/minor version bumps only. 'Still Worth Trying' rotated to ctx, Nerdlog, and html-to-markdown (Kreuzberg) \u2014 none used in the last 6 runs' rotation (AdminForth/Kingfisher/Benjamin-Plus Skill used 2026-10-04; Xberg/Destructive Command Guard/skills used 2026-10-03; LibreDB Studio/OpenDataLoader PDF/Dagu used 2026-10-02; Beads/Graphify/SnapOtter used 2026-10-01; Bernstein/Sidequest/Monoscope used 2026-09-30). Discovery used ~34 parallel GitHub Search API queries across infra/observability/deployment sub-niches (internal-developer-platform, backstage-alternative, canary/blue-green deployment, chaos engineering, drift detection, OpenTelemetry collector, service mesh, database backup, disaster recovery, GitOps, edge functions, container registry, k8s network policy, log anomaly detection, incident response, AWS Lambda cost, Terraform plan review, secrets rotation, synthetic monitoring, AWS emulator/LocalStack-alternative) \u2014 most recency-sorted queries surfaced noise (tiny/irrelevant repos pushed within the hour), so the AWS-emulator wave triggered by LocalStack's archival was the strongest find. WebSearch/HN/Lobsters/crates.io were not needed this run."
+  "notes": "2026-10-06: Slot 7 (experimental projects and hidden gems) per day_of_year 279 % 7 + 1 = 7. Catalogued 4 new: CortexDB (github.com/liliang-cn/cortexdb, MIT, 7.8, PROTOTYPE) \u2014 pure-Go embedded agent-memory + knowledge-graph engine in one SQLite file, no embedding model required, 80+ MCP tools, native Claude Code/Codex plugin install. claude-code-cache-fix (github.com/cnighswonger/claude-code-cache-fix, MIT despite GitHub API misreporting NOASSERTION \u2014 verified against raw LICENSE file and npm registry, 7.2, PROTOTYPE) \u2014 local proxy fixing Claude Code prompt-cache regressions claimed to cause up to 20x cost spikes on resumed sessions; directly relevant since Claude Code is the tool running this very radar, but flagged heavily for its MITM trust surface (optional TLS-termination mode). SparrowDB (github.com/ryaker/SparrowDB, MIT, 6.3, WATCH) \u2014 embedded Cypher-native graph DB with Node/Python/Ruby bindings, 'SQLite of graph databases'; pre-1.0 with a transparently-documented catastrophic data-corruption bug fixed only one release ago, so held to WATCH despite being a genuinely underserved niche. Dialog DB (github.com/dialog-db/dialog-db, MPL-2.0, 6.0, STUDY) \u2014 experimental Datalog-based embeddable local-first DB from Tonk Labs' Irakli Gozalishvili (confirmed via GitHub profile), distinct architecture from Evolu's CRDT/SQLite-replication approach; explicitly pre-production, filed as architecture study only. Rejected Fastllm-proxy as a suspected fake-engagement repo \u2014 sampled fork-owner accounts were all created within the same minute with 0 followers each, a bot-farm signature, despite marketing-heavy 0.76us/request performance claims. Noted two oversaturated same-week hype waves without a clear individual winner: git-worktree managers for parallel AI-coding-agent workflows (a dozen+ near-identical entrants), and LLM gateway/proxy products (another half-dozen entrants, niche already covered in prior runs). 'Still Worth Trying' rotated to agentOS (Rivet), haiku.rag, and RustFS \u2014 none used in the last several runs' rotation (ctx/Nerdlog/html-to-markdown used 2026-10-05; AdminForth/Kingfisher/Benjamin-Plus Skill used 2026-10-04; Xberg/Destructive Command Guard/skills used 2026-10-03; LibreDB Studio/OpenDataLoader PDF/Dagu used 2026-10-02; Beads/Graphify/SnapOtter used 2026-10-01; Bernstein/Sidequest/Monoscope used 2026-09-30). rote (github.com/zhh2001/rote, MIT, 364 stars) \u2014 a CLI cron replacement with persistent run history and a live terminal dashboard \u2014 filed as Small but High-Leverage Utility rather than a full catalog entry given its narrow scope. No meaningful-update spot checks performed this run (discovery-heavy run; budget spent on the slot-7 search breadth and the Fastllm-proxy fork-farm verification instead). WebSearch/HN/Lobsters were not needed this run \u2014 GitHub Search API alone surfaced enough slot-7 volume across ten+ parallel query niches."
 }
