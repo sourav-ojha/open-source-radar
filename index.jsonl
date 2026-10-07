@@ -183,3 +183,6 @@
 {"slug": "claude-code-cache-fix", "repo_url": "https://github.com/cnighswonger/claude-code-cache-fix", "name": "claude-code-cache-fix", "status": "PROTOTYPE", "score": 7.2, "last_reviewed": "2026-10-06", "current_version": "v4.3.0", "aliases": []}
 {"slug": "sparrowdb-embedded-graph", "repo_url": "https://github.com/ryaker/SparrowDB", "name": "SparrowDB", "status": "WATCH", "score": 6.3, "last_reviewed": "2026-10-06", "current_version": "v0.1.27", "aliases": []}
 {"slug": "dialog-db", "repo_url": "https://github.com/dialog-db/dialog-db", "name": "Dialog DB", "status": "STUDY", "score": 6.0, "last_reviewed": "2026-10-06", "current_version": "tonk-2026-10-03", "aliases": []}
+{"slug": "planning-with-files", "repo_url": "https://github.com/OthmanAdi/planning-with-files", "name": "Planning with Files", "status": "USE NOW", "score": 8.7, "last_reviewed": "2026-10-07", "current_version": "v3.23.0", "aliases": ["PWF"]}
+{"slug": "moai-adk", "repo_url": "https://github.com/modu-ai/moai-adk", "name": "MoAI-ADK", "status": "PROTOTYPE", "score": 7.7, "last_reviewed": "2026-10-07", "current_version": "v3.1.2", "aliases": []}
+{"slug": "agentos-framerslab", "repo_url": "https://github.com/framerslab/agentos", "name": "AgentOS (framerslab)", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-10-07", "current_version": "v0.10.37", "aliases": []}
