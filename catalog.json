@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-07",
+  "updated": "2026-10-09",
   "projects": [
     {
       "name": "Xberg",
@@ -142,17 +142,17 @@
         "Python/uv-based CLI tool, adds a non-Node dependency to an otherwise JS/TS-centric toolchain"
       ],
       "first_seen": "2026-08-30",
-      "last_reviewed": "2026-09-04",
-      "last_meaningful_update": "2026-09-04",
-      "current_version": "v3.19.1",
-      "latest_release_date": "2026-09-03",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v3.21.0",
+      "latest_release_date": "2026-10-05",
       "source_links": [
         "https://github.com/sipyourdrink-ltd/bernstein",
         "https://pypi.org/project/bernstein/",
         "https://bernstein.run"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 1036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases. Contributors include real humans beyond the primary author (Chirag6722, shanemmattner, vaibhav8a, Phoenix1504e, Louis20060723) plus renovate/dependabot/github-actions bot automation. UPDATE 2026-09-04: v3.18.2 -> v3.19.1 (94 changes) is a positioning shift, not a patch bump — the project now frames itself explicitly as 'a governance framework for AI agents': fail-closed approval timeouts, credential brokering that never stores secret values, HMAC-chained principal identity lifecycle with scope-narrowing on child identities, signed drift observations, per-principal/per-grant cost rollup with budget-cap chain events, and compliance evidence exports (ISO/IEC 42001 Annex A, W3C PROV-O, signed TRACE 0.2 records). Status kept at PROTOTYPE (still self-described beta) but this materially strengthens the MSSP/PTaaS product-opportunity angle already noted at first review.",
+      "notes": "GitHub API verified: Apache-2.0, 1036 stars, pushed_at 2026-08-30 (same day), created 2026-03-22. PyPI confirms v3.18.2, 158 releases. Contributors include real humans beyond the primary author (Chirag6722, shanemmattner, vaibhav8a, Phoenix1504e, Louis20060723) plus renovate/dependabot/github-actions bot automation. UPDATE 2026-09-04: v3.18.2 -> v3.19.1 (94 changes) is a positioning shift, not a patch bump — the project now frames itself explicitly as 'a governance framework for AI agents': fail-closed approval timeouts, credential brokering that never stores secret values, HMAC-chained principal identity lifecycle with scope-narrowing on child identities, signed drift observations, per-principal/per-grant cost rollup with budget-cap chain events, and compliance evidence exports (ISO/IEC 42001 Annex A, W3C PROV-O, signed TRACE 0.2 records). Status kept at PROTOTYPE (still self-described beta) but this materially strengthens the MSSP/PTaaS product-opportunity angle already noted at first review. UPDATE 2026-10-09: v3.19.1 -> v3.21.0. v3.21.0 (2026-10-05) fixes two privately/externally reported high-severity security advisories affecting every prior version through 3.20.0: GHSA-xw82-w5hr-hrm2 (an agent could write its own identity record and have it believed; an empty `<task>.approved` file passed for an operator's decision) and GHSA-4r8r-jx5c-w954 (workflow commands ran repository text in untrusted workspaces, a claim took its role from the request, and a receipt verified against whatever key it carried). v3.20.0 (2026-09-20) added a run scorecard, supervision-period conduct fold, and OSCAL assessment-results export. This is a major security development per section 10 and the main reason to revisit this entry now rather than a routine version bump.",
       "acted_on": false
     },
     {
@@ -11695,6 +11695,331 @@
       ],
       "aliases": [],
       "notes": "NVIDIA Inception program member. Created 2025-10-28. Not to be confused with rivet-dev/agentos (different project, same generic name).",
+      "acted_on": false
+    },
+    {
+      "name": "pgschema",
+      "slug": "pgschema-postgres-declarative-migration",
+      "repo_url": "https://github.com/pgplex/pgschema",
+      "website": "https://www.pgschema.com",
+      "description": "CLI that brings Terraform-style declarative schema migration to PostgreSQL — dump the live schema, edit the desired-state SQL file, generate a diff-based migration plan, and apply it with concurrent-change detection and lock-timeout control.",
+      "category": [
+        "product infrastructure",
+        "database tooling",
+        "developer productivity",
+        "CI/CD"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.7,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted commercial use/embedding.",
+      "deployment": [
+        "CLI binary",
+        "Docker",
+        "Nix",
+        "CI pipeline step"
+      ],
+      "interfaces": [
+        "CLI"
+      ],
+      "use_cases": [
+        "Replace hand-written up/down migration files with a single schema.sql diffed against the live DB",
+        "Run `pgschema plan` in CI to get a reviewable DDL diff before merging a schema change",
+        "Give a coding agent a deterministic, scriptable migration workflow instead of letting it hand-write ALTER statements",
+        "Manage RLS policies, triggers, materialized views, and custom aggregates declaratively instead of as ad hoc migration scripts"
+      ],
+      "product_opportunities": [
+        "A `pgschema plan` CI step turns schema review into a normal PR diff — useful for any Postgres-backed product",
+        "Agent-friendly plan/apply output makes it a natural tool to wire into an AI-assisted ops workflow"
+      ],
+      "agent_opportunities": [
+        "Deterministic plan/apply output (not freeform SQL) is explicitly designed to be driven by an AI agent — fits the agent-friendly dev tooling axis directly"
+      ],
+      "alternatives": [
+        "Atlas (ariga/atlas) — more mature, multi-dialect, broader adoption but heavier/more opinionated",
+        "golang-migrate / Flyway — imperative up/down migrations, the status quo",
+        "reshape (fabianlindfors) — zero-downtime imperative Postgres migrations, different philosophy (declarative vs imperative)"
+      ],
+      "why_it_matters": "Removes the standard 'hand-write an ALTER, hope it's right, write the down-migration too' loop for Postgres schema changes and replaces it with a Terraform-style plan/apply loop that's reviewable in a PR and safe to let an agent drive.",
+      "why_not_build_it_myself": "Correctly diffing Postgres DDL (RLS policies, triggers, materialized views, GRANT/REVOKE, lock-timeout-aware execution) is a multi-month undertaking; pgschema already covers an unusually complete slice of Postgres DDL per its docs.",
+      "risks": [
+        "Backed by Bytebase via the pgplex org — not a lone-maintainer toy, but check pgplex's commercial roadmap before depending on it long-term",
+        "Windows unsupported (WSL/Linux only)",
+        "Postgres-only — no MySQL/other-dialect story"
+      ],
+      "first_seen": "2026-10-09",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v1.13.1",
+      "latest_release_date": "2026-09-20",
+      "source_links": [
+        "https://github.com/pgplex/pgschema",
+        "https://www.pgschema.com",
+        "https://www.pgschema.com/blog/pgschema-postgres-declarative-schema-migration-like-terraform"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1056 stars, 64 forks, pushed 2026-09-20, created 2025-06-08 (not brand new). Part of the pgplex suite (pgconsole, pgschema, pgtui, pgparser) built by Bytebase, an established open-source DB-governance company — reduces solo-maintainer risk. README demonstrates comprehensive Postgres DDL coverage: RLS policies, triggers (incl. constraint triggers), materialized views, custom aggregates, sequences, domains, column-level GRANT/REVOKE.",
+      "acted_on": false
+    },
+    {
+      "name": "Plumber",
+      "slug": "plumber-cicd-security-scanner",
+      "repo_url": "https://github.com/getplumber/plumber",
+      "website": "https://getplumber.io",
+      "description": "CLI/Docker/GitHub-Action security scanner for GitHub Actions and GitLab CI pipelines — flags risky patterns (script injection, overly broad permissions, unpinned actions, secret exposure) across workflow YAML and repo settings, reporting in SARIF/GitLab-SAST/OCSF/CycloneDX and more.",
+      "category": [
+        "developer productivity",
+        "CI/CD",
+        "security"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MPL-2.0",
+      "commercial_use_notes": "MPL-2.0 is file-level weak copyleft — modifications to Plumber's own source must be shared if distributed, but running it against your pipelines or in your CI imposes no obligations on your code.",
+      "deployment": [
+        "CLI binary (Homebrew/mise)",
+        "Docker",
+        "GitHub Action",
+        "GitLab CI component"
+      ],
+      "interfaces": [
+        "CLI",
+        "GitHub Action",
+        "GitLab CI component",
+        "SARIF/Code Scanning integration"
+      ],
+      "use_cases": [
+        "Add a `plumber analyze` GitHub Action step that fails PRs introducing risky workflow patterns",
+        "Audit product and MSSP/PTaaS-side GitHub Actions workflows for supply-chain-style misconfigurations",
+        "One-off `plumber analyze github.com/owner/repo` audit of a third-party repo without cloning it",
+        "Export findings as CycloneDX/OCSF for feeding into existing security tooling"
+      ],
+      "product_opportunities": [
+        "A packaged 'CI/CD pipeline hygiene check' could be a quick-win addition to the MSSP/PTaaS service catalog — scanning client repos' Actions/GitLab-CI configs is a cheap, high-signal check"
+      ],
+      "agent_opportunities": [
+        "JSON/SARIF output is straightforward for an agent to consume and turn into a remediation PR"
+      ],
+      "alternatives": [
+        "zizmor — GitHub-Actions-only, narrower scope, no GitLab CI support",
+        "OpenSSF Scorecard — broader repo-health signal, not pipeline-config-specific",
+        "step-security/harden-runner — runtime egress control rather than static config scanning"
+      ],
+      "why_it_matters": "Covers both GitHub Actions and GitLab CI in one scanner with SARIF/Code-Scanning/GitLab-SAST-native output, and has visible real-world adoption (Delve, Lightpanda, Bunkerity, Stellarium, ciso-assistant-community listed as adopters; a public radar claims 20k repos scanned) rather than being a solo weekend project.",
+      "why_not_build_it_myself": "Enumerating risky GitHub-Actions/GitLab-CI patterns (script injection via untrusted input, overly broad permissions, unpinned third-party actions) and keeping that list current is ongoing security research, not a one-off script.",
+      "risks": [
+        "Young project (created 2026-01), so the ruleset and format support will keep shifting",
+        "MPL-2.0 is uncommon enough to double-check against company OSS-license policy before adopting at the MSSP",
+        "105 open issues against a small team — triage backlog to watch"
+      ],
+      "first_seen": "2026-10-09",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v0.6.0",
+      "latest_release_date": "2026-10-08",
+      "source_links": [
+        "https://github.com/getplumber/plumber",
+        "https://getplumber.io",
+        "https://hub.docker.com/r/getplumber/plumber"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MPL-2.0, 821 stars, 36 forks, pushed today, created 2026-01-19. OpenSSF Scorecard and SLSA Level 3 badges in README (self-reported, not independently re-verified this run). Adopters list in README includes real, verifiable projects (go-delve/delve 24.9k★, lightpanda-io/browser 36k★) — a stronger adoption signal than star count alone.",
+      "acted_on": false
+    },
+    {
+      "name": "roborev",
+      "slug": "roborev-continuous-agent-code-review",
+      "repo_url": "https://github.com/kenn-io/roborev",
+      "website": "https://roborev.io",
+      "description": "Local daemon that reviews every git commit in the background as coding agents write code, surfacing findings in a TUI/browser UI and feeding them back into the active agent session via per-agent hooks (Claude Code, Codex, Gemini CLI, Copilot CLI, Cursor, and others); can auto-apply fixes via `roborev fix`/`refine`.",
+      "category": [
+        "AI agent infrastructure",
+        "coding agents",
+        "developer productivity",
+        "code review"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted.",
+      "deployment": [
+        "CLI binary",
+        "git post-commit hook",
+        "local daemon — no hosted service"
+      ],
+      "interfaces": [
+        "CLI",
+        "TUI",
+        "native browser UI (served locally)",
+        "agent hooks"
+      ],
+      "use_cases": [
+        "Catch duplication/complexity/dead-code/security issues an agent introduces per-commit, before they compound across a long session",
+        "Run `roborev refine` before opening a PR to iterate until all background reviews pass",
+        "Keep an accountability log of what an autonomous/semi-autonomous agent actually committed, separate from the agent's own self-report",
+        "Feed findings back into the live Claude Code/Codex session via the agent-hook instead of a separate PR-review pass"
+      ],
+      "product_opportunities": [
+        "Could tighten the loop on any heavily agent-assisted delivery work — complements Bernstein's audit/governance angle with per-commit code-quality review rather than process/identity governance"
+      ],
+      "agent_opportunities": [
+        "Purpose-built as agent-loop infrastructure — the whole point is feeding review state back into the coding agent mid-session, directly the agent-accountability axis"
+      ],
+      "alternatives": [
+        "seoes/proval (already catalogued) — self-hosted LLM PR-review agent for GitLab/Forgejo/GitHub, reviews at PR time; roborev reviews every local commit continuously, before a PR exists",
+        "Manual re-prompting an agent to self-review its own diff (status quo)"
+      ],
+      "why_it_matters": "PR-time review tools catch problems after an agent has already built on top of them for hours; reviewing every commit in the background and piping findings straight back into the same agent session catches drift while it's still cheap to fix.",
+      "why_not_build_it_myself": "The two-layer hook design (git post-commit + live agent-session hook across 9+ different coding agents) is the fiddly integration work that makes this useful day one instead of a one-off script.",
+      "risks": [
+        "Young (created 2026-01), fast-moving (v0.71.0, frequent releases) — expect breaking changes",
+        "Relies on whichever coding agent/model is configured to do the actual review, so review quality is only as good as that model",
+        "60 open issues, 11 watchers — small team, worth checking issue responsiveness before relying on it"
+      ],
+      "first_seen": "2026-10-09",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v0.71.0",
+      "latest_release_date": "2026-10-03",
+      "source_links": [
+        "https://github.com/kenn-io/roborev",
+        "https://roborev.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1748 stars, 165 forks, pushed today, created 2026-01-05. Reasonable fork:star ratio (~9.4%) suggests real usage rather than a pure star campaign.",
+      "acted_on": false
+    },
+    {
+      "name": "Browser Debugger CLI (bdg)",
+      "slug": "browser-debugger-cli",
+      "repo_url": "https://github.com/szymdzum/browser-debugger-cli",
+      "website": "https://www.npmjs.com/package/browser-debugger-cli",
+      "description": "npm CLI that keeps a Chrome session open in the background and exposes DOM, network, console, cookies and raw CDP as short shell commands — built so a coding agent (or a human) can debug/automate a page without an MCP server, a Playwright script, or screenshots.",
+      "category": [
+        "AI agent infrastructure",
+        "developer productivity",
+        "browser automation",
+        "debugging"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted.",
+      "deployment": [
+        "npm global install",
+        "local CLI, drives a local/remote Chrome via CDP"
+      ],
+      "interfaces": [
+        "CLI",
+        "raw CDP passthrough"
+      ],
+      "use_cases": [
+        "Let Claude Code/Codex debug a broken frontend flow (failed fetch, missing cookie, console error) without wiring up an MCP browser server",
+        "Reuse an already-logged-in browser session's cookies/localStorage from the shell instead of re-authenticating",
+        "Ad hoc DOM/accessibility-tree inspection (`bdg dom a11y tree`) while debugging a React app",
+        "Script-free browser automation when writing a full Playwright test is overkill for a one-off check"
+      ],
+      "product_opportunities": [
+        "Could shorten the debug loop on React/Next.js frontends when working alongside a coding agent"
+      ],
+      "agent_opportunities": [
+        "Squarely an agent tool: plain-process output designed to pipe into `jq` and cost an agent few tokens, explicitly positioned against MCP-server/screenshot-based browser tools"
+      ],
+      "alternatives": [
+        "MCP browser servers (e.g. Playwright MCP, browser-use) — require an MCP client, typically return more tokens (screenshots/structured state) per call",
+        "Chrome DevTools MCP (ChromeDevTools/chrome-devtools-mcp, already catalogued) — MCP-based, heavier integration; bdg is a plain CLI with no MCP dependency"
+      ],
+      "why_it_matters": "Avoids two common costs of agent browser tooling — MCP server setup and screenshot-heavy token usage — by exposing CDP as plain CLI commands that pipe into jq.",
+      "why_not_build_it_myself": "Wrapping CDP into a stable, agent-friendly CLI surface (compact JSON, a11y tree, network/cookie introspection) across Chrome versions is exactly the kind of fiddly maintenance work worth not duplicating.",
+      "risks": [
+        "Young (created 2025-10, ~1 year), fast release cadence (v0.15.0) — API surface may still shift",
+        "Only 170 stars/1 watcher — small sample size, worth a hands-on trial before relying on it",
+        "Chrome/CDP-only — no Firefox/Safari story"
+      ],
+      "first_seen": "2026-10-09",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v0.15.0",
+      "latest_release_date": "2026-10-08",
+      "source_links": [
+        "https://github.com/szymdzum/browser-debugger-cli",
+        "https://www.npmjs.com/package/browser-debugger-cli"
+      ],
+      "aliases": [],
+      "notes": "GitHub API + npm verified: MIT, 170 stars, pushed today, created 2025-10-31. npm registry confirms v0.15.0/MIT matches the GitHub tag exactly.",
+      "acted_on": false
+    },
+    {
+      "name": "EasyPostman",
+      "slug": "easy-postman",
+      "repo_url": "https://github.com/lakernote/easy-postman",
+      "website": null,
+      "description": "Open-source desktop app combining Postman-style API debugging (HTTP/SSE/WebSocket, collections, pre/post scripts, assertions) with JMeter-style load testing (thread groups, distributed master/worker runs, live metrics) in one Java 17 application; the same workspace runs headless via CLI in CI or is exposed to AI clients (Codex, Claude Desktop, Cursor) through a built-in MCP server.",
+      "category": [
+        "product infrastructure",
+        "developer productivity",
+        "API testing"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted.",
+      "deployment": [
+        "Desktop installer (Win/Mac/Linux)",
+        "cross-platform JAR (needs Java 17+)",
+        "headless CLI for CI",
+        "MCP server"
+      ],
+      "interfaces": [
+        "Desktop GUI",
+        "CLI",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Replace a paid Postman Team plan for collection sharing by using Git-backed workspaces instead",
+        "Run the same collection as a functional test and a JMeter-style load test without switching tools",
+        "Run collections headless in CI via the CLI instead of Newman",
+        "Expose saved API collections to an AI client (Claude Desktop, Cursor, Codex) via the built-in MCP server"
+      ],
+      "product_opportunities": [
+        "A free, self-hosted Postman+JMeter combo removes a recurring SaaS cost (Postman Team seats) for small teams without giving up load testing"
+      ],
+      "agent_opportunities": [
+        "Built-in MCP server means an agent can run saved API requests directly instead of being handed curl commands to reconstruct"
+      ],
+      "alternatives": [
+        "Bruno/Hoppscotch/Insomnia — free Postman alternatives, but none bundle JMeter-style load testing",
+        "Postman (paid teams tier) — the SaaS this replaces",
+        "k6/JMeter standalone — load testing without the API-client/collections layer"
+      ],
+      "why_it_matters": "Most open-source Postman alternatives stop at request collections; bundling load testing and an MCP server in the same local-first app covers more of the API-development lifecycle without adding SaaS seats.",
+      "why_not_build_it_myself": "Not something to build — it's an off-the-shelf desktop tool; the value is simply not paying for Postman Team seats or juggling a separate JMeter setup.",
+      "risks": [
+        "Java 17 desktop app — outside the core JS/TS stack, though it's used as an end-user tool, not integrated as a library",
+        "Smaller community (722 stars) than Bruno/Hoppscotch/Insomnia, so fewer eyes on edge cases",
+        "No official website beyond GitHub/Gitee — verify provenance before enterprise use"
+      ],
+      "first_seen": "2026-10-09",
+      "last_reviewed": "2026-10-09",
+      "last_meaningful_update": "2026-10-09",
+      "current_version": "v6.2.4",
+      "latest_release_date": "2026-10-08",
+      "source_links": [
+        "https://github.com/lakernote/easy-postman",
+        "https://gitee.com/lakernote/easy-postman"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 722 stars, 61 forks, pushed today, created 2025-06-18. README explicitly lists MCP server + headless CLI as first-class, not an afterthought.",
       "acted_on": false
     }
   ]
