@@ -1,6 +1,6 @@
 # Catalog
 
-_198 projects tracked. Last updated 2026-10-10._
+_201 projects tracked. Last updated 2026-10-11._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -52,6 +52,7 @@ _198 projects tracked. Last updated 2026-10-10._
 | [CocoIndex](https://github.com/cocoindex-io/cocoindex) | PROTOTYPE | 8.2/10 | RAG infrastructure, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-09-26 |
 | [TanStack AI](https://github.com/TanStack/ai) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-09-29 |
 | [difit](https://github.com/yoshiko-pg/difit) | USE NOW | 8.2/10 | developer productivity, small high-leverage utilities, AI & agent infrastructure | MIT | low | 2026-10-02 |
+| [Velox](https://github.com/getvelox/velox) | PROTOTYPE | 8.2/10 | product building blocks, billing / monetization, AI infrastructure | MIT | low | 2026-10-11 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
@@ -184,6 +185,7 @@ _198 projects tracked. Last updated 2026-10-10._
 | [XERJ](https://github.com/xerj-org/xerj) | STUDY | 7.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-17 |
 | [DockFlare](https://github.com/ChrispyBacon-dev/DockFlare) | PROTOTYPE | 7.0/10 | infrastructure, self-hosted SaaS alternatives, product infrastructure | GPL-3.0 | low | 2026-10-02 |
 | [Breeze](https://github.com/LanternOps/breeze) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternatives, MSSP/MSP tooling, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-05 |
+| [openheard](https://github.com/Heilonng23/openheard) | PROTOTYPE | 7.0/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | low | 2026-10-11 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
@@ -197,6 +199,7 @@ _198 projects tracked. Last updated 2026-10-10._
 | [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
 | [MuninnDB](https://github.com/scrypster/muninndb) | WATCH | 6.6/10 | AI & agent infrastructure, agent memory | Business Source License 1.1 (BSL) — converts to Apache-2.0 on 2030-02-26 | low | 2026-10-10 |
 | [SparrowDB](https://github.com/ryaker/SparrowDB) | WATCH | 6.3/10 | product building blocks, developer productivity | MIT | low | 2026-10-06 |
+| [GoCommerce](https://github.com/itswadesh/gocommerce) | STUDY | 6.3/10 | product building blocks, e-commerce infrastructure, self-hosted SaaS alternative | MIT | medium | 2026-10-11 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |
 | [AgentVM (DeepClause)](https://github.com/deepclause/agentvm) | WATCH | 6.1/10 | AI agent infrastructure, agent sandboxes, small utility | MIT | low | 2026-09-15 |
 | [Bookshelf](https://github.com/murerkinn/bookshelf) | WATCH | 6.0/10 | small utility, self-hosted | MIT | low | 2026-09-15 |

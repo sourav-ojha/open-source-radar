@@ -196,3 +196,6 @@
 {"slug": "cocoindex-code-ast-search", "repo_url": "https://github.com/cocoindex-io/cocoindex-code", "name": "CocoIndex Code (ccc)", "status": "PROTOTYPE", "score": 7.9, "last_reviewed": "2026-10-10", "current_version": "v0.2.42", "aliases": []}
 {"slug": "graft-mcp-api-synthesis", "repo_url": "https://github.com/getmodern-ai/graft", "name": "Graft (getmodern-ai)", "status": "STUDY", "score": 7.2, "last_reviewed": "2026-10-10", "current_version": "v0.1.0", "aliases": []}
 {"slug": "muninndb-cognitive-agent-memory", "repo_url": "https://github.com/scrypster/muninndb", "name": "MuninnDB", "status": "WATCH", "score": 6.6, "last_reviewed": "2026-10-10", "current_version": "v0.11.0", "aliases": []}
+{"slug": "velox-ai-billing-engine", "repo_url": "https://github.com/getvelox/velox", "name": "Velox", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-10-11", "current_version": "v0.3.2", "aliases": []}
+{"slug": "openheard-feedback-board", "repo_url": "https://github.com/Heilonng23/openheard", "name": "openheard", "status": "PROTOTYPE", "score": 7.0, "last_reviewed": "2026-10-11", "current_version": "v0.1.0", "aliases": []}
+{"slug": "gocommerce-headless-commerce", "repo_url": "https://github.com/itswadesh/gocommerce", "name": "GoCommerce", "status": "STUDY", "score": 6.3, "last_reviewed": "2026-10-11", "current_version": "unclear", "aliases": []}

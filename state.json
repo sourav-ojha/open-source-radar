@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-10",
-  "last_successful_run": "2026-10-10",
-  "run_count": 44,
-  "rotation_slot_last_used": 4,
+  "last_run": "2026-10-11",
+  "last_successful_run": "2026-10-11",
+  "run_count": 45,
+  "rotation_slot_last_used": 5,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -65,37 +65,10 @@
     "experimental/hidden gems (slot 7) — embedded single-paradigm-collapsing agent memory in SQLite (CortexDB), a Claude Code prompt-cache-regression proxy fix with direct cost impact on daily tool use, an embedded Cypher-native graph database with Node bindings pre-1.0 (SparrowDB, recent data-corruption bug transparently documented), and a Datalog-based local-first embeddable DB from a credible local-first-systems pedigree (Dialog DB, Tonk Labs); rejected a suspected fork-farm/fake-engagement LLM router (Fastllm-proxy — 5+ zero-star forks all created by same-day, 0-follower bot-pattern accounts) and noted oversaturated same-week waves in git-worktree managers for parallel AI coding agents and LLM gateway/proxy products",
     "AI agents/MCP/coding productivity (slot 1) — persistent cross-agent plan-file skill solving context-rot after /clear and compaction (Planning with Files, 27.3k★ but flagged for a low star:watcher ratio), a Claude-Code-specific verification harness with Claude×GLM cost routing (MoAI-ADK), and a TypeScript-native embeddable agent framework with persistent memory and runtime tool-forging (AgentOS/framerslab, name-collides with but is unrelated to the already-catalogued agentOS/Rivet); noted a saturated same-week spec-driven-development wave (Spec Kitty, buildermethods/agent-os, GSD Pi) without a clear second winner beyond MoAI-ADK, Steve Yegge's Gastown org extracting its orchestration SDK as Gas City (immature/convoluted naming, filed as watch-only), and a noisy one-day flood of near-identical MCP registry/marketplace and Claude Code plugin-marketplace repos with no standout",
     "developer utilities/debugging/testing (slot 3) — Terraform-style declarative Postgres schema migration backed by Bytebase (pgschema), multi-platform CI/CD security scanner for GitHub Actions + GitLab CI with real-project adoption (Plumber), continuous per-commit AI code review daemon that feeds findings back into the live agent session (roborev), MCP-free raw-CDP browser debugging CLI for coding agents (bdg), and a self-hosted Postman+JMeter desktop app with a built-in MCP server (EasyPostman); flagged a saturated self-hosted-DB-client-with-AI/MCP wave (GoNavi, masume, lazydb, dbflux, data-peek, dearsql) against the already-catalogued WhoDB/narwhal, and a saturated same-week 'multi-agent AI code review' wave with roborev as the one standout; also found a major security fix (two high-severity advisories) in the already-catalogued Bernstein orchestrator",
-    "data/search/documents/RAG (slot 4) — embedded single-file graph+vector+FTS database with Node/Python/Go/Java bindings (LatticeDB), row-level-security-aware text-to-SQL schema pruning (schemagate), AST-based coding-agent code search built on the CocoIndex engine (CocoIndex Code/ccc), on-demand sandboxed API-integration synthesis over MCP (Graft/getmodern-ai, name-collides with but is unrelated to the already-catalogued Graft/trailhq codebase-context tool), and a decay/reinforcement agent-memory engine flagged loudly for a BSL-plus-patent licensing combination (MuninnDB); noted fastCRW's org rename (us/crw -> fastcrw/crw, bookkeeping only); rejected a large same-day wave of 0-star RAG/text-to-SQL/document-QA tutorial repos and reconfirmed mainstream vector-DB/search infra (Milvus, Qdrant, pgvector, Weaviate, ParadeDB, Manticore) as already-known or previously rejected"
+    "data/search/documents/RAG (slot 4) — embedded single-file graph+vector+FTS database with Node/Python/Go/Java bindings (LatticeDB), row-level-security-aware text-to-SQL schema pruning (schemagate), AST-based coding-agent code search built on the CocoIndex engine (CocoIndex Code/ccc), on-demand sandboxed API-integration synthesis over MCP (Graft/getmodern-ai, name-collides with but is unrelated to the already-catalogued Graft/trailhq codebase-context tool), and a decay/reinforcement agent-memory engine flagged loudly for a BSL-plus-patent licensing combination (MuninnDB); noted fastCRW's org rename (us/crw -> fastcrw/crw, bookkeeping only); rejected a large same-day wave of 0-star RAG/text-to-SQL/document-QA tutorial repos and reconfirmed mainstream vector-DB/search infra (Milvus, Qdrant, pgvector, Weaviate, ParadeDB, Manticore) as already-known or previously rejected",
+    "self-hosted SaaS alternatives / productivity (slot 5) — AI-token-native usage billing engine with published failure-correctness benchmarks despite 4 stars (Velox), a zero-VPS Cloudflare-only Canny alternative distinct from the catalogued Quackback (openheard), and a Go commerce-engine library studied for its outbox-event architecture despite a stack mismatch (GoCommerce); rejected a saturated personal-finance-tracker wave (reconfirmed from 2026-10-04), an invoicing/invoice-generator wave, a Typeform-alternative form-builder wave, and re-confirmed prior rejections of reloop, Notifuse and edgeever's suspicious star/fork pattern"
   ],
   "evaluated_repos": [
-    "pontusab/workbench",
-    "experientiallabs/experiential",
-    "oomol-lab/open-connector",
-    "beizhu-1209/AIHelms",
-    "CloakHQ/CloakBrowser",
-    "t3ratech/mcp-session-bridge",
-    "NAEOS-foundation/naeos",
-    "darksworm/doormouse",
-    "openadmin-team/openadmin-py",
-    "NurulAffie/lexy-angular-dashboard-lite",
-    "arhamkhnz/next-shadcn-admin-dashboard",
-    "dgenio/ChainWeaver",
-    "Masterplanner25/Nodus",
-    "maatini/bpmninja",
-    "vikrant-project/aether-cicd",
-    "czpython/druks",
-    "coleam00/Archon",
-    "ZibbyDev/agent-workflow",
-    "ridi-oss/proxy-monster",
-    "sipyourdrink-ltd/bernstein",
-    "attenu-io/attenu-guard",
-    "sambai-dev/coop",
-    "izored/OpenMemo",
-    "sandbaseai/sandbase-harness",
-    "sameeeeeeep/switchboard",
-    "artokun/comfyui-mcp",
-    "CodesWhat/drydock",
-    "devkitshq/notifkit",
     "TheDuffman85/crowdsec-web-ui",
     "nousergon/flow-doctor",
     "modyra/modyra",
@@ -1567,7 +1540,35 @@
     "fastcrw/crw",
     "aegif/NemakiWare",
     "marc-ing/permission-aware-agentic-rag",
-    "unclecode/crawl4ai"
+    "unclecode/crawl4ai",
+    "Heilonng23/openheard",
+    "getvelox/velox",
+    "itswadesh/gocommerce",
+    "trieu/leo-cdp-framework",
+    "alexanderritik/BYOT",
+    "peters/localci",
+    "luispdoesai/openFunnel",
+    "grunion-ai/weave",
+    "esmworks/leafdesk",
+    "bemmoly/bemmoly",
+    "sarim2000/pennywiseai-tracker",
+    "kirill-markin/expense-budget-tracker",
+    "OmkarPathak/TrackMyRupee",
+    "KenTaniguchi-R/ledgr",
+    "econumo/econumo",
+    "ilramdhan/dompetku",
+    "eitchtee/WYGIWYH",
+    "letehaha/moneymatter",
+    "TNT-Likely/BeeCount",
+    "oss-apps/split-pro",
+    "getpoka/poka-ce",
+    "InvoicePlane/InvoicePlane",
+    "Bookipi-Group/bookipi-cli",
+    "bilalpiaic/Easy-Books",
+    "Rabbit-Company/RabbitPay-Server",
+    "Hydrodamalishassle177/pnlcs",
+    "Abhishekpundir23/formo",
+    "PaNdassauro/forms-oss"
   ],
   "rejected": [
     {
@@ -2464,6 +2465,26 @@
       "repo_url": "aegif/NemakiWare",
       "reason": "legacy project (created 2013), old-generation Java CMIS ECM repo, not a fresh discovery despite 'permission-aware RAG' framing in its description",
       "date": "2026-10-10"
+    },
+    {
+      "repo_url": "https://github.com/trieu/leo-cdp-framework",
+      "reason": "unclear licensing — no license file detected via GitHub API despite open-source framing; niche CDP with low star count",
+      "date": "2026-10-11"
+    },
+    {
+      "repo_url": "personal-finance-tracker wave (pennywiseai-tracker, expense-budget-tracker, TrackMyRupee, ledgr, econumo, dompetku, WYGIWYH, moneymatter, BeeCount, split-pro, poka-ce)",
+      "reason": "duplicate/hype — saturated same-week wave of near-identical self-hosted personal finance trackers, reconfirmed from prior 2026-10-04 rejection; moneymatter's built-in MCP server was the only differentiator and not enough on its own",
+      "date": "2026-10-11"
+    },
+    {
+      "repo_url": "invoicing wave (Bookipi CLI, Easy-Books, RabbitPay-Server, and related 0-2 star invoice/quote builders)",
+      "reason": "hype/thin — no differentiation from each other or from established InvoicePlane",
+      "date": "2026-10-11"
+    },
+    {
+      "repo_url": "Typeform-alternative form-builder wave (formo, form-builder-mvp, forms-oss, formforge x2)",
+      "reason": "hype/thin — all 0 stars, no differentiation",
+      "date": "2026-10-11"
     }
   ],
   "known_releases": {
@@ -3370,12 +3391,24 @@
     "fastcrw/crw": {
       "version": "v0.37.2",
       "date": "2026-09-30"
+    },
+    "getvelox/velox": {
+      "version": "v0.3.2",
+      "date": "Unclear based on available documentation"
+    },
+    "Heilonng23/openheard": {
+      "version": "v0.1.0",
+      "date": "2026-09-25"
+    },
+    "itswadesh/gocommerce": {
+      "version": "unclear (README claims 1.0, no tag found)",
+      "date": "Unclear based on available documentation"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-09-12",
-      "note": "not used this run — GitHub Search API alone surfaced enough slot-3 volume"
+      "last_ok": "2026-10-11",
+      "note": "used for openalternative.co / general 'new self-hosted' queries; returned only stale directory roundups, no fresh-launch signal for this specific week."
     },
     "raw.githubusercontent.com": {
       "last_ok": "2026-10-10",
@@ -3394,12 +3427,12 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-10",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~20 search queries across slot-4 niches (hybrid search, text-to-sql, document QA, embedding caching, RAG eval, semantic layers, MCP+database, chunking, permission-aware RAG, web crawlers, OCR-free parsing, embedding fine-tuning) plus metadata/release/contributor/language checks on the deep-review shortlist and the fastCRW org-rename check; well under rate limit (8,350/hr available)."
+      "last_ok": "2026-10-11",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; ~15 search queries across slot-5 niches (newsletter/email-marketing, feedback/roadmap voting, booking/scheduling, knowledge-base/wiki, expense-tracker, invoicing, admin-panel) plus metadata/contributor/release checks on the deep-review shortlist (velox, openheard, gocommerce, quackback comparison); well under rate limit (8350/hr available, 0 used at start)."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-09-22",
-      "note": "Show HN search over last 5 days worked fine; mostly small/thin novelty projects, no slot-7 candidates strong enough to deep-review from this pass"
+      "last_ok": "2026-10-11",
+      "note": "Show HN search_by_date over last 7 days worked fine; mostly tiny novelty projects (1-15 points), no slot-5 candidates strong enough to deep-review from this pass; localci and BYOT noted as Worth Watching instead."
     },
     "pypi.org": {
       "last_ok": "2026-10-10",
@@ -3616,7 +3649,10 @@
     "CocoIndex Code (cocoindex-io/cocoindex-code) — 2026-10-10, PROTOTYPE, 7.9",
     "schemagate (ashishsinha1602/schemagate) — 2026-10-10, PROTOTYPE, 7.8",
     "Graft/getmodern-ai (getmodern-ai/graft) — 2026-10-10, STUDY, 7.2",
-    "MuninnDB (scrypster/muninndb) — 2026-10-10, WATCH, 6.6"
+    "MuninnDB (scrypster/muninndb) — 2026-10-10, WATCH, 6.6",
+    "Velox (getvelox/velox) — 2026-10-11, PROTOTYPE, 8.2",
+    "openheard (Heilonng23/openheard) — 2026-10-11, PROTOTYPE, 7.0",
+    "GoCommerce (itswadesh/gocommerce) — 2026-10-11, STUDY, 6.3"
   ],
-  "notes": "2026-10-10: Slot 4 (data, search, documents, RAG) per day_of_year 283 % 7 + 1 = 4. Catalogued 5 new: LatticeDB (jeffhajewski/latticedb, MIT, 8.3, PROTOTYPE) — embedded single-file graph+vector+FTS database (Zig core, Python/Node/Go/Java bindings), strong perf numbers, single-maintainer risk and a notably low watcher:star ratio (2:733) that could not be forensically checked because the stargazers API endpoint returned 403 under this workflow's token. schemagate (ashishsinha1602/schemagate, Apache-2.0, 7.8, PROTOTYPE) — row-level-security-aware schema pruning for text-to-SQL agents across 5 DB engines; only 8 stars but unusually mature packaging (CI, 5 PyPI releases in 3 weeks, OpenSSF badge, MCP registry listing, public benchmarks) directly relevant to the MSSP/security-admin-portal context. CocoIndex Code (cocoindex-io/cocoindex-code, Apache-2.0, 7.9, PROTOTYPE) — AST-based code search CLI built on the already-catalogued CocoIndex engine, packaged as a Claude Code/Grok skill + MCP server; separate repo from the core CocoIndex engine (cocoindex-incremental-indexing), same org. Graft/getmodern-ai (getmodern-ai/graft, Apache-2.0 core, 7.2, STUDY) — on-demand sandboxed API-integration synthesis over MCP with a credential-injecting proxy; explicitly name-collides with but is unrelated to the already-catalogued Graft (trailhq/Graft, codebase-context tool) — flagged in both records to prevent future confusion; v0.1.0, single maintainer, no security audit, Docker-socket mount disclosed candidly in its own release notes. MuninnDB (scrypster/muninndb, BSL 1.1 + provisional patent, 6.6, WATCH) — decay/reinforcement agent-memory engine, real multi-contributor team and working single-binary implementation, but BSL-plus-patent licensing combination flagged loudly per section 14 as the dominant risk rather than the technology. Maintenance fix: fastCRW (crw) GitHub org renamed us/crw -> fastcrw/crw (old URL 404s); repo_url updated, old identifier kept as alias; not treated as a Meaningful Update since no functional change occurred. Rejected a large same-day wave of 0-star RAG/text-to-SQL/document-QA tutorial and portfolio repos (dozens, across hybrid-search/embedding-cache/RAG-eval/chunking searches), re-confirmed ParadeDB and Manticore Search as previously-rejected mainstream infra with no new material change, and noted aegif/NemakiWare (2013-era Java CMIS ECM repo) as a legacy project rather than a fresh discovery despite its 'permission-aware RAG' framing. Filed AwesomeDog/soma (local-first hybrid BM25+vector+HyDE file search, 4 stars) as Worth Watching rather than catalogued — too early for independent adoption signal. 'Still Worth Trying' rotated to Xberg, Bernstein, and LibreDB Studio — none used in the last several runs' rotation (Sidequest/Monoscope/NestLens used 2026-10-09; agent-device/Headroom/mcp-debugger used 2026-10-07; agentOS/Rivet/haiku.rag/RustFS used 2026-10-06; ctx/Nerdlog/html-to-markdown used 2026-10-05; AdminForth/Kingfisher/Benjamin-Plus Skill used 2026-10-04). WebSearch/HN/Lobsters not used this run — GitHub Search API alone surfaced enough slot-4 volume across ~12 query niches, though signal-to-noise was notably low (mostly same-day tutorial repos with 0-1 stars)."
+  "notes": "2026-10-11: Slot 5 (self-hosted SaaS alternatives, productivity) per day_of_year 284 % 7 + 1 = 5. Catalogued 3 new: Velox (getvelox/velox, MIT, 8.2, PROTOTYPE) — AI-token-native usage billing engine, 4 stars/effectively solo but backed by unusually rigorous published failure-correctness benchmarks (leader SIGKILL kill-points, forced race, documented negative control); differentiated from the already-catalogued Lago/Meteroid/OpenMeter/Flexprice by native model x token_type pricing, a LiteLLM ingestion path, and free per-customer margin/COGS tracking. openheard (Heilonng23/openheard, AGPL-3.0, 7.0, PROTOTYPE) — Canny-alternative feedback board/roadmap/changelog running entirely on Cloudflare's free tier (Worker + D1 + KV + R2), zero VPS; compared directly against the already-catalogued Quackback (AGPL-3.0, heavier all-in-one support suite) to confirm real architectural differentiation rather than a near-duplicate — Quackback itself resurfaced (310 stars, steady commits) but nothing meaningful enough to flag as a Meaningful Update. GoCommerce (itswadesh/gocommerce, MIT, 6.3, STUDY) — composable commerce engine as a Go library with a clean outbox-event architecture and an agent-safe MCP module, but Go is a secondary stack fit here (Medusa.js/Vendure are the natural Node/TS equivalents) and its claimed '1.0' stability is unverified by any community beyond 6 stars, so filed as architecture study rather than adoption candidate. Rejected a saturated personal-finance-tracker wave (reconfirmed from 2026-10-04), an invoicing/invoice-generator wave, a Typeform-alternative form-builder wave, and re-confirmed prior rejections of reloop-labs/reloop (2026-09-10), Notifuse (2026-10-04) and tianma-if/edgeever's suspicious fork/star pattern (2026-09-20, now at 2184 stars/826 forks, same pattern persists). Noted BYOT (alexanderritik/BYOT) as the Small-but-High-Leverage Utility of the day (run existing Playwright/k6 test suites as scheduled production monitors) and localci (peters/localci, 1 day old) plus openFunnel as Worth Watching. 'Still Worth Trying' rotated to pg_textsearch, Pad, and Cynative — none used in any prior run's rotation (checked against every daily digest's Still Worth Trying section to date, not just the last several runs), since the top ~25 scorers have already cycled through repeatedly. WebSearch and HN Algolia were both used this run; neither surfaced slot-5-specific signal beyond what GitHub Search API found directly."
 }

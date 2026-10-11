@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-10",
+  "updated": "2026-10-11",
   "projects": [
     {
       "name": "Xberg",
@@ -12332,6 +12332,210 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 1099 stars, pushed_at 2026-08-21. STUDY-classified, not adoption-classified.",
+      "acted_on": false
+    },
+    {
+      "name": "Velox",
+      "slug": "velox-ai-billing-engine",
+      "repo_url": "https://github.com/getvelox/velox",
+      "website": "",
+      "description": "Self-hosted, MIT-licensed billing engine purpose-built for AI and usage-heavy SaaS: multi-dimensional token metering (model × token_type), prepaid commits with drawdown, per-customer margin/COGS tracking, and a LiteLLM proxy integration that ingests dimensioned token events with no SDK. Stripe still executes the underlying card charge as a plain PaymentIntent, so Stripe Billing's 0.5% fee disappears and billing data stays in your own infra.",
+      "category": [
+        "product building blocks",
+        "billing / monetization",
+        "AI infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, nothing gated — dunning, audit log, row-level-security multi-tenancy and every other feature ship unlocked, with an explicit public commitment that nothing currently shipped will ever move behind a paid key. No AGPL/SSPL/BSL concerns. Self-hosting shifts billing-data compliance obligations onto the operator; the project states this directly rather than implying self-hosted equals compliant.",
+      "deployment": [
+        "Docker Compose (self-hosted, single VM)",
+        "single Go binary + Postgres + Redis + static dashboard + nginx front door"
+      ],
+      "interfaces": [
+        "REST API",
+        "signed webhooks (72h dual-signing rotation)",
+        "operator dashboard (Node/React)",
+        "OpenTelemetry tracing export",
+        "public token-authenticated customer cost-visibility endpoint"
+      ],
+      "use_cases": [
+        "Meter and bill customers for AI-agent/LLM token usage by model and token type without building a custom metering pipeline",
+        "Sell prepaid usage commits (\"pay $9k, get $10k\") with automatic drawdown against usage",
+        "See per-customer margin (billed revenue vs. stamped provider COGS) to catch customers who are unprofitable at current pricing",
+        "Drop into an existing LiteLLM proxy deployment and get dimensioned token billing with zero extra ingestion code",
+        "Run Stripe-grade subscription/invoicing primitives (proration, dunning, credit notes, hosted invoice pages) without paying Stripe Billing's percentage fee"
+      ],
+      "product_opportunities": [
+        "Use as the billing/metering backbone for any AI-feature add-on sold inside an existing product, including the MSSP admin-portal SaaS if AI features are ever metered separately",
+        "Offer as the reference billing layer for a new micro-SaaS built around LLM usage, instead of hand-rolling usage tracking + Stripe Billing glue"
+      ],
+      "agent_opportunities": [
+        "LiteLLM spend-callback integration turns an existing coding-agent/LLM-gateway deployment into billed, margin-tracked usage automatically"
+      ],
+      "alternatives": [
+        "Lago (catalogued)",
+        "Meteroid (catalogued)",
+        "OpenMeter (catalogued)",
+        "Flexprice (catalogued)",
+        "Stripe Billing (proprietary)"
+      ],
+      "why_it_matters": "The existing catalogued usage-billing engines (Lago, Meteroid, OpenMeter, Flexprice) are general-purpose metering platforms; none of them ship AI-token-dimensioned pricing, a LiteLLM ingestion path, or per-customer margin/COGS as first-class, unlocked features. For anyone billing for LLM usage specifically, this removes a multi-week build (meter design, pricing-rule engine, dunning, margin reporting) rather than adapting a generic metering tool to the AI-token shape by hand.",
+      "why_not_build_it_myself": "The hard parts — idempotent multi-dimension metering with disjoint-claim pricing rules, atomic prepaid-commit funding/drawdown, leader-elected billing-cycle jobs with documented zero-duplicate-invoice failure testing, and a transactional outbox for webhooks/emails — are exactly the kind of correctness-critical plumbing that is easy to get subtly wrong and expensive to debug in production once money is involved.",
+      "risks": [
+        "Pre-1.0: public API is stabilising, not frozen; breaking changes land on MINOR releases until 1.0.0",
+        "Effectively a single-maintainer project (1,640 of ~1,649 commits from one author) — real bus-factor risk despite the engineering rigor",
+        "Only 4 GitHub stars at review time — no independent community validation yet of the correctness claims beyond the project's own published benchmarks",
+        "No Kubernetes/Helm packaging yet (deliberately deferred); single-VM Docker Compose is the only documented self-host path today",
+        "Self-hosting billing data transfers compliance obligations (PCI/data-residency) to the operator — the project is explicit about this rather than implying otherwise"
+      ],
+      "first_seen": "2026-10-11",
+      "last_reviewed": "2026-10-11",
+      "last_meaningful_update": "2026-10-11",
+      "current_version": "v0.3.2",
+      "latest_release_date": "Unclear based on available documentation — GitHub tags confirm v0.3.2 as latest but no releases API entry with a date was found",
+      "source_links": [
+        "https://github.com/getvelox/velox",
+        "https://github.com/getvelox/velox/blob/main/docs/benchmarks/failure-correctness.md",
+        "https://github.com/getvelox/velox/blob/main/docs/benchmarks/sustained-throughput.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 4 stars, 1 fork, pushed_at 2026-10-11, created_at 2026-04-07, archived:false, 19 open issues (active development). Single dominant contributor (sagarsuperuser, 1640 commits) plus dependabot. Published, reproducible failure-correctness benchmarks (leader SIGKILL at five kill points, partition drill) claim 0 duplicate/lost invoices with a documented negative control showing the same test fails hard (103 invoices for 40 periods) when a specific index is dropped — unusually rigorous verification method for a 4-star repo.",
+      "acted_on": false
+    },
+    {
+      "name": "openheard",
+      "slug": "openheard-feedback-board",
+      "repo_url": "https://github.com/Heilonng23/openheard",
+      "website": "https://openheard.com",
+      "description": "Open-source feedback board, public roadmap and changelog — a Canny alternative designed to run entirely on Cloudflare's free tier (one Worker, one D1 database, KV, R2 for images). Ships an HTTP API, an MCP server, an embeddable widget, a help center, and email notifications for voters/subscribers.",
+      "category": [
+        "product building blocks",
+        "self-hosted SaaS alternative",
+        "customer feedback / support"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — network copyleft, flagged loudly per AGENT.md §14. Fine to self-host as-is for an internal or own-product feedback board. Modifying it and re-offering the modified version as a hosted service to third parties would trigger source-release obligations. The project's own cloud offering (openheard.com) is the vendor's dual-licensing path, not a template for building a competing hosted fork.",
+      "deployment": [
+        "Cloudflare Workers + D1 + KV + R2 (self-host, two-command deploy)",
+        "hosted cloud (openheard.com)"
+      ],
+      "interfaces": [
+        "REST API (/api/v1)",
+        "MCP server (/api/mcp)",
+        "embeddable JS widget",
+        "agent skill (skills/openheard)",
+        "RSS feed (changelog)"
+      ],
+      "use_cases": [
+        "Run a self-hosted feedback board + roadmap + changelog for a micro-SaaS product with zero servers to operate",
+        "Embed the feedback widget directly inside a product's own UI via one script tag",
+        "Let Claude Code or another coding agent triage and act on feedback through the MCP server or the bundled agent skill",
+        "Import an existing Canny export (CSV) to migrate off a paid tool"
+      ],
+      "product_opportunities": [
+        "Use as the zero-infrastructure feedback/roadmap/changelog layer for a new micro-SaaS where standing up Postgres + Docker for a feedback board is not worth the ops overhead"
+      ],
+      "agent_opportunities": [
+        "MCP server plus a dedicated agent skill teaches Claude Code and other coding agents the product's own feedback-triage workflows directly"
+      ],
+      "alternatives": [
+        "Quackback (catalogued — broader all-in-one support suite: live chat, ticketing, status page, mobile SDKs, AI copilot)",
+        "Fider (older self-hosted OSS alternative, narrower feature set)",
+        "Canny",
+        "Featurebase",
+        "UserVoice"
+      ],
+      "why_it_matters": "Quackback (already catalogued) is the heavier, more complete answer to 'self-host a Canny alternative' — support inbox, status page, mobile SDKs, an AI agent. openheard deliberately does less and runs on nothing: no VPS, no Postgres, no Docker host to patch, just a Cloudflare account and two commands. For a solo or two-person product where the ops burden of running even a small Postgres+Docker service is real, that is the more honest trade.",
+      "why_not_build_it_myself": "A public voting board, status timeline, roadmap, changelog with RSS, help center with search, and an embeddable widget is a multi-week build on its own before any auth, email notifications, or API/MCP surface is added.",
+      "risks": [
+        "AGPL-3.0 — see commercial_use_notes",
+        "Effectively single-maintainer (259 of 268 commits) — real bus-factor risk one month after creation",
+        "Only one release so far (v0.1.0) and no CLI or docs site yet (both listed as \"coming next\")",
+        "Cloudflare-specific architecture (Workers/D1/R2) — does not fit an AWS-centric deployment without rearchitecting, unlike a plain Docker image"
+      ],
+      "first_seen": "2026-10-11",
+      "last_reviewed": "2026-10-11",
+      "last_meaningful_update": "2026-10-11",
+      "current_version": "v0.1.0",
+      "latest_release_date": "2026-09-25",
+      "source_links": [
+        "https://github.com/Heilonng23/openheard",
+        "https://openheard.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 177 stars, 18 forks, pushed_at 2026-10-03, created_at 2026-09-04, archived:false, 0 open issues. Contributors: Heilonng23 (259 commits), chrisjohnleah (8), jonokellermann (1).",
+      "acted_on": false
+    },
+    {
+      "name": "GoCommerce",
+      "slug": "gocommerce-headless-commerce",
+      "repo_url": "https://github.com/itswadesh/gocommerce",
+      "website": "https://kitcommerce.store/gocommerce/",
+      "description": "Composable commerce engine as a Go library, not a monolith or a hosted platform: products/variants, inventory, carts, checkout, orders, payments, fulfillment and durable (outbox-pattern) events over a single PostgreSQL database. Integrations (Stripe, SendGrid, Meilisearch, Klaviyo, an MCP tool surface) are ordinary Go packages wired together in main(). Claims a stable 1.0 API/HTTP contract.",
+      "category": [
+        "product building blocks",
+        "e-commerce infrastructure",
+        "self-hosted SaaS alternative"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.3,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial or SaaS use.",
+      "deployment": [
+        "single Go binary + PostgreSQL (self-hosted)",
+        "embedded as a Go library inside a larger application"
+      ],
+      "interfaces": [
+        "Go library import",
+        "HTTP admin panel",
+        "REST (OpenAPI)",
+        "webhooks via transactional outbox",
+        "MCP server (ext/mcp) exposing store operations as agent tools with an audit trail"
+      ],
+      "use_cases": [
+        "Add commerce primitives (catalog, cart, checkout, orders, payments) to a Go backend without adopting a full commerce platform",
+        "Study the outbox-pattern event design and single-binary-plus-Postgres production architecture",
+        "Let a coding agent operate a store (read catalog, check orders, trigger diagnostics) through the dedicated MCP module, bounded by the same invariants a human admin has"
+      ],
+      "product_opportunities": [
+        "A narrow, embeddable commerce layer for a product that needs basic checkout/orders without justifying a dedicated commerce platform"
+      ],
+      "agent_opportunities": [
+        "Ships a purpose-built MCP module (ext/mcp) that exposes domain services — not raw SQL — as agent tools, with the same audit trail and invariants the admin panel and CLI use"
+      ],
+      "alternatives": [
+        "Medusa.js (Node/TS, far more mainstream and a better stack fit for a MERN/Next.js-first developer)",
+        "Vendure (Node/TS)",
+        "Saleor (Python/GraphQL)"
+      ],
+      "why_it_matters": "The architecture (durable outbox events, one state machine shared by REST/webhooks/CSV import/MCP/admin actions, zero plugin-registry indirection) is a clean reference for building correctness-sensitive domain services, regardless of whether Go commerce specifically gets adopted.",
+      "why_not_build_it_myself": "Payments, inventory and order-state-machine correctness under concurrent writes is exactly the kind of domain where a hand-rolled version tends to accumulate edge-case bugs; studying a worked design is cheaper than re-deriving it.",
+      "risks": [
+        "Claims a stable '1.0' API after roughly 6 weeks of history and 6 GitHub stars — no independent community vetting of that stability claim, and payments/commerce correctness is high-stakes to get wrong",
+        "Effectively solo-plus-AI-assisted (171 commits from the author, 5 from an AI-attributed contributor)",
+        "Go is a secondary language for the operator profile this catalog is tuned for; Medusa.js/Vendure (Node/TS) are a more natural stack fit if the goal is adoption rather than architecture study"
+      ],
+      "first_seen": "2026-10-11",
+      "last_reviewed": "2026-10-11",
+      "last_meaningful_update": "2026-10-11",
+      "current_version": "Unclear based on available documentation — README claims '1.0' status but no corresponding GitHub release/tag was found",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/itswadesh/gocommerce",
+        "https://kitcommerce.store/gocommerce/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 6 stars, 0 forks, pushed_at 2026-10-10, created_at 2026-08-30, archived:false, 1 open issue. Contributors: itswadesh (171 commits), claude (5, AI-attributed).",
       "acted_on": false
     }
   ]
