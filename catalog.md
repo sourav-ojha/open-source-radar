@@ -1,6 +1,6 @@
 # Catalog
 
-_201 projects tracked. Last updated 2026-10-11._
+_205 projects tracked. Last updated 2026-10-12._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -22,6 +22,7 @@ _201 projects tracked. Last updated 2026-10-11._
 | [Graphify](https://github.com/Graphify-Labs/graphify) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, RAG infrastructure, developer productivity, coding agents | Apache-2.0 | low | 2026-09-16 |
 | [agent-device](https://github.com/callstack/agent-device) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, developer productivity, coding agents | MIT | medium | 2026-09-23 |
 | [Floci](https://github.com/floci-io/floci) | USE NOW | 8.5/10 | infrastructure, developer productivity, AWS-adjacent tooling | MIT | low | 2026-10-05 |
+| [Artifact Keeper](https://github.com/artifact-keeper/artifact-keeper) | PROTOTYPE | 8.5/10 | product infrastructure, developer productivity, backend components | MIT | medium | 2026-10-12 |
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
 | [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-28 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -84,6 +85,7 @@ _201 projects tracked. Last updated 2026-10-11._
 | [Kaneo](https://github.com/usekaneo/kaneo) | USE NOW | 7.9/10 | product infrastructure, developer productivity, self-hosted SaaS alternatives | MIT | low | 2026-09-27 |
 | [Vercel Workflow SDK](https://github.com/vercel/workflow) | PROTOTYPE | 7.9/10 | product building blocks, AI & agent infrastructure, backend components, job queues and schedulers | Apache-2.0 | low | 2026-10-01 |
 | [CocoIndex Code (ccc)](https://github.com/cocoindex-io/cocoindex-code) | PROTOTYPE | 7.9/10 | developer productivity, AI & agent infrastructure, coding agents | Apache-2.0 | low | 2026-10-10 |
+| [Terraducktel](https://github.com/mormor83/terraducktel) | PROTOTYPE | 7.9/10 | infrastructure, deployment, product infrastructure | MIT | medium | 2026-10-12 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -132,6 +134,7 @@ _201 projects tracked. Last updated 2026-10-11._
 | [jevgrep](https://github.com/dzhng/jevgrep) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, developer productivity, code search | MIT | low | 2026-09-30 |
 | [Data Contract CLI](https://github.com/datacontract/datacontract-cli) | PROTOTYPE | 7.6/10 | product building blocks, developer productivity, data/search/documents/RAG | MIT | medium | 2026-10-03 |
 | [Browser Debugger CLI (bdg)](https://github.com/szymdzum/browser-debugger-cli) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity, browser automation, debugging | MIT | low | 2026-10-09 |
+| [redStackPRO](https://github.com/devZero-Security/redStackPRO) | PROTOTYPE | 7.6/10 | infrastructure, security, architecture | MIT (GOAD templates GPLv3) | medium | 2026-10-12 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
@@ -146,6 +149,7 @@ _201 projects tracked. Last updated 2026-10-11._
 | [go-pq-cdc](https://github.com/Trendyol/go-pq-cdc) | PROTOTYPE | 7.5/10 | product building blocks, infrastructure, data/search/documents/RAG | MIT | medium | 2026-10-03 |
 | [GoldenMatch](https://github.com/benseverndev-oss/goldenmatch) | PROTOTYPE | 7.5/10 | data/search/documents, product building blocks, micro-SaaS opportunity | MIT | low | 2026-10-05 |
 | [roborev](https://github.com/kenn-io/roborev) | PROTOTYPE | 7.5/10 | AI agent infrastructure, coding agents, developer productivity, code review | MIT | low | 2026-10-09 |
+| [Stashbase CLI](https://github.com/stashbase/cli) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, security, developer productivity | Apache-2.0 | low | 2026-10-12 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
