@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-12",
-  "last_successful_run": "2026-10-12",
-  "run_count": 46,
-  "rotation_slot_last_used": 6,
+  "last_run": "2026-10-13",
+  "last_successful_run": "2026-10-13",
+  "run_count": 47,
+  "rotation_slot_last_used": 7,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -67,20 +67,10 @@
     "developer utilities/debugging/testing (slot 3) \u2014 Terraform-style declarative Postgres schema migration backed by Bytebase (pgschema), multi-platform CI/CD security scanner for GitHub Actions + GitLab CI with real-project adoption (Plumber), continuous per-commit AI code review daemon that feeds findings back into the live agent session (roborev), MCP-free raw-CDP browser debugging CLI for coding agents (bdg), and a self-hosted Postman+JMeter desktop app with a built-in MCP server (EasyPostman); flagged a saturated self-hosted-DB-client-with-AI/MCP wave (GoNavi, masume, lazydb, dbflux, data-peek, dearsql) against the already-catalogued WhoDB/narwhal, and a saturated same-week 'multi-agent AI code review' wave with roborev as the one standout; also found a major security fix (two high-severity advisories) in the already-catalogued Bernstein orchestrator",
     "data/search/documents/RAG (slot 4) \u2014 embedded single-file graph+vector+FTS database with Node/Python/Go/Java bindings (LatticeDB), row-level-security-aware text-to-SQL schema pruning (schemagate), AST-based coding-agent code search built on the CocoIndex engine (CocoIndex Code/ccc), on-demand sandboxed API-integration synthesis over MCP (Graft/getmodern-ai, name-collides with but is unrelated to the already-catalogued Graft/trailhq codebase-context tool), and a decay/reinforcement agent-memory engine flagged loudly for a BSL-plus-patent licensing combination (MuninnDB); noted fastCRW's org rename (us/crw -> fastcrw/crw, bookkeeping only); rejected a large same-day wave of 0-star RAG/text-to-SQL/document-QA tutorial repos and reconfirmed mainstream vector-DB/search infra (Milvus, Qdrant, pgvector, Weaviate, ParadeDB, Manticore) as already-known or previously rejected",
     "self-hosted SaaS alternatives / productivity (slot 5) \u2014 AI-token-native usage billing engine with published failure-correctness benchmarks despite 4 stars (Velox), a zero-VPS Cloudflare-only Canny alternative distinct from the catalogued Quackback (openheard), and a Go commerce-engine library studied for its outbox-event architecture despite a stack mismatch (GoCommerce); rejected a saturated personal-finance-tracker wave (reconfirmed from 2026-10-04), an invoicing/invoice-generator wave, a Typeform-alternative form-builder wave, and re-confirmed prior rejections of reloop, Notifuse and edgeever's suspicious star/fork pattern",
-    "infrastructure/observability/deployment (slot 6) \u2014 universal multi-format artifact registry as an Artifactory/Nexus alternative (Artifact Keeper), self-hosted Terraform Cloud/Spacelift alternative (Terraducktel), topology-to-Terraform compiler for authorized red-team/cyber-range infra directly relevant to the PTaaS context (redStackPRO), request-level secrets/egress proxy for coding agents (Stashbase CLI, outside-slot but high-value); noted a two-entrant same-month 'Vector fleet control plane' wave (Vectory, VortexFLOW) with no clear winner yet, a novel but very-early dual-wire-protocol (Elasticsearch+Loki) log search engine (rSearch, 2 stars/1 fork), and a Cloudflare-native STS pattern for CI OIDC-to-API-token exchange (cloudflare-sts); loki-vl-proxy (Loki-compatible proxy for VictoriaLogs) was the utility of the day; rejected a weak-signal Terraform/OpenTofu graph orchestrator (terragraph, 12 issues vs 10 stars), a mongorescue duplicate, and reconfirmed the saturated self-hosted-PaaS wave (miabi/hakopod/cubeship/ninedeploy)"
+    "infrastructure/observability/deployment (slot 6) \u2014 universal multi-format artifact registry as an Artifactory/Nexus alternative (Artifact Keeper), self-hosted Terraform Cloud/Spacelift alternative (Terraducktel), topology-to-Terraform compiler for authorized red-team/cyber-range infra directly relevant to the PTaaS context (redStackPRO), request-level secrets/egress proxy for coding agents (Stashbase CLI, outside-slot but high-value); noted a two-entrant same-month 'Vector fleet control plane' wave (Vectory, VortexFLOW) with no clear winner yet, a novel but very-early dual-wire-protocol (Elasticsearch+Loki) log search engine (rSearch, 2 stars/1 fork), and a Cloudflare-native STS pattern for CI OIDC-to-API-token exchange (cloudflare-sts); loki-vl-proxy (Loki-compatible proxy for VictoriaLogs) was the utility of the day; rejected a weak-signal Terraform/OpenTofu graph orchestrator (terragraph, 12 issues vs 10 stars), a mongorescue duplicate, and reconfirmed the saturated self-hosted-PaaS wave (miabi/hakopod/cubeship/ninedeploy)",
+    "experimental/hidden gems (slot 7) \u2014 a zero-setup, zero-latency coding-agent sandbox from the Sigstore team with OpenSSF review and named Datadog/Okta production testimonials (nono), a self-hosted personal-AI-agent access-control and audit broker (Personal Agent Proxy), a self-hosted LLM-graded merge gate that tests whether a PR's human author understands their own (possibly AI-written) diff rather than reviewing the code itself (vibecheck), and a rigorously benchmarked zero-dependency PDF accessibility checker with semantic rules beyond what veraPDF/PAC test (outloud, utility of the day); noted a huge same-day hype wave of near-identical, mostly 0-300-star 'agent sandbox' / 'agent runtime' / 'agent memory architecture' repos with no standout beyond nono, a mainstream-scale LLM gateway (Bifrost, 8,738 stars) already past the household-name threshold, and three early/narrower entrants held to Worth Watching (capsulerun/Capsule WASM task sandbox, chkit ClickHouse migrations, vne .env util for coding agents)."
   ],
   "evaluated_repos": [
-    "otterdeploy/otterdeploy",
-    "kubeara/core",
-    "appaloft/appaloft",
-    "acidtib/jiji",
-    "UpstandPlatform/upstand",
-    "ARTFROST1/FreimDeploy",
-    "fusuyfusuy/pikpik",
-    "piperbox/piper",
-    "DeploCloud/deplo",
-    "harsharahul/docklets",
-    "glincker/levelrail",
     "6454934/pinqops",
     "nima-salamat/django-paas-deployer",
     "nima-salamat/react-paas-deployer",
@@ -1569,7 +1559,18 @@
     "cubeshipd/cubeship",
     "ninedeploy/ninedeploy",
     "kapicorp/kapitan",
-    "goharbor/harbor"
+    "goharbor/harbor",
+    "nolabs-ai/nono",
+    "Cloudgeni-ai/opengeni",
+    "silentnoisehun/microscope-memory",
+    "maximhq/bifrost",
+    "visionably/outloud",
+    "obsessiondb/chkit",
+    "pro-vi/vne",
+    "personalagentproxy/proxy",
+    "bhurghundii/vibecheck.dev",
+    "triggeredcode/lucid",
+    "Ayobamiu/usefulness-search"
   ],
   "rejected": [
     {
@@ -2501,6 +2502,36 @@
       "repo_url": "self-hosted PaaS wave (miabi, hakopod, cubeship, ninedeploy)",
       "reason": "reconfirmed saturated self-hosted-deployment-platform niche (Coolify/Dokploy-adjacent, docker push -> live with HTTPS); none differentiated enough from each other or from already-catalogued entries",
       "date": "2026-10-12"
+    },
+    {
+      "repo_url": "same-day 'agent sandbox / agent runtime / agent memory architecture' hype wave (loomcycle, term-mesh, orbit, vanguard, mahi, skillsaas, gohort, bnbloc, omnia, DojoGenesis/gateway, orka, TAP-Runtime, agentplug, portmark, runtara, Cogitator-AI, nine, cadorange, finstack-ai, agent-governance-policies, wisp, ClawPowers-Skills, HomeOS, posterchanai, XDrive, xopc, bloud, finlynq, SmartBrain_3000, OneShelf, nutritrace, stratus-backend, agent-kernel, gleann, MasonAgent, DBA-public, Maxim, agent-memory-system, Cellium-Agent, hermes-memory-stack, mynd, continuity, sekf--memory-governance)",
+      "reason": "hype wave \u2014 dozens of near-identical same-day 'AI agent sandbox/runtime/memory' repos, mostly 0-300 stars, no entrant differentiated enough beyond today's catalogued nono",
+      "date": "2026-10-13"
+    },
+    {
+      "repo_url": "https://github.com/maximhq/bifrost",
+      "reason": "mainstream-scale \u2014 8,738 stars, 1,382 forks; already past the household-name threshold for an LLM gateway, same oversaturated niche flagged 2026-10-06",
+      "date": "2026-10-13"
+    },
+    {
+      "repo_url": "https://github.com/Cloudgeni-ai/opengeni",
+      "reason": "inferior differentiation \u2014 durable/replayable agent sessions with human approvals overlaps already-catalogued agent orchestration tools (Bernstein, Paseo, mngr), 201 stars not enough to justify a near-duplicate entry",
+      "date": "2026-10-13"
+    },
+    {
+      "repo_url": "https://github.com/silentnoisehun/microscope-memory",
+      "reason": "marketing-heavy claims flagged for independent verification \u2014 '13-layer consciousness architecture', 'sub-microsecond queries' language with only 16 stars and a single contributor",
+      "date": "2026-10-13"
+    },
+    {
+      "repo_url": "https://github.com/triggeredcode/lucid",
+      "reason": "too early \u2014 3 stars, created the previous day, voice-to-diagram tool with no independent traction yet",
+      "date": "2026-10-13"
+    },
+    {
+      "repo_url": "https://github.com/Ayobamiu/usefulness-search",
+      "reason": "hackathon demo, explicitly simulated pricing data, 2 stars \u2014 not a real product yet",
+      "date": "2026-10-13"
     }
   ],
   "known_releases": {
@@ -3431,16 +3462,28 @@
     "devZero-Security/redStackPRO": {
       "version": "v0.9.1",
       "date": "2026-10-03"
+    },
+    "nolabs-ai/nono": {
+      "version": "v0.79.0",
+      "date": "2026-09-30"
+    },
+    "visionably/outloud": {
+      "version": "0.2.1",
+      "date": "2026-10-06"
+    },
+    "bhurghundii/vibecheck.dev": {
+      "version": "v0.1.0",
+      "date": "2026-10-12"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-10-12",
-      "note": "general 'self-hosted observability/deployment 2026' and Show HN queries returned mostly stale roundups/vendor blogs; GitHub Search API topic queries were the effective discovery channel this run."
+      "last_ok": "2026-10-13",
+      "note": "general 'Show HN hidden gem' and 'site:news.ycombinator.com Show HN self-hosted' queries returned stale/irrelevant roundup pages again; HN Algolia's own API and the GitHub search API were the effective discovery channels this run, consistent with recent prior runs."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-12",
-      "note": "README fetches for artifact-keeper, terraducktel, redStackPRO, loki-vl-proxy all succeeded; stashbase/cli needed its actual default branch (master, not main) after a 404 on main."
+      "last_ok": "2026-10-13",
+      "note": "README fetches for nono, capsulerun/runtime, outloud, personalagentproxy/proxy, vibecheck.dev all succeeded on first try (main branch)."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -3455,16 +3498,16 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-12",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; topic/search queries across slot-6 niches (observability, deployment, gitops, secrets-management, IaC, service-mesh, log-management, container-registry, disaster-recovery, k8s-cost) plus metadata/contributor/release checks on the deep-review shortlist (artifact-keeper, terraducktel, redStackPRO, stashbase); well under rate limit (8350/hr available, 0 used at start)."
+      "last_ok": "2026-10-13",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; search/repositories topic queries across agent-sandbox, WASM-runtime, personal-cloud, local-first-db, agent-memory niches plus metadata/contributor/release checks on the deep-review shortlist; well under rate limit (8350/hr available, 0 used at start)."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-10-11",
-      "note": "Show HN search_by_date over last 7 days worked fine; mostly tiny novelty projects (1-15 points), no slot-5 candidates strong enough to deep-review from this pass; localci and BYOT noted as Worth Watching instead."
+      "last_ok": "2026-10-13",
+      "note": "search_by_date with a numericFilters query failed (empty response, likely a URL-encoding issue with the && in the filter); a plain tags=show_hn query without numericFilters worked fine and surfaced outloud, vibecheck.dev, personalagentproxy, vne, chkit from the last ~24h of Show HN posts."
     },
     "pypi.org": {
-      "last_ok": "2026-10-10",
-      "note": "confirmed schemagate (1.3.0) and cocoindex-code (0.2.42) versions matching GitHub tags."
+      "last_ok": "2026-10-13",
+      "note": "confirmed outloud version 0.2.1 and upload_time (2026-10-06) matching GitHub repo activity."
     },
     "registry.npmjs.org": {
       "last_ok": "2026-10-10",
@@ -3684,7 +3727,11 @@
     "Artifact Keeper (artifact-keeper/artifact-keeper) \u2014 2026-10-12, PROTOTYPE, 8.5",
     "Terraducktel (mormor83/terraducktel) \u2014 2026-10-12, PROTOTYPE, 7.9",
     "redStackPRO (devZero-Security/redStackPRO) \u2014 2026-10-12, PROTOTYPE, 7.6",
-    "Stashbase CLI (stashbase/cli) \u2014 2026-10-12, PROTOTYPE, 7.5"
+    "Stashbase CLI (stashbase/cli) \u2014 2026-10-12, PROTOTYPE, 7.5",
+    "nono (nolabs-ai/nono) \u2014 2026-10-13, USE NOW, 8.6",
+    "outloud (visionably/outloud) \u2014 2026-10-13, USE NOW, 8.1",
+    "vibecheck (bhurghundii/vibecheck.dev) \u2014 2026-10-13, PROTOTYPE, 7.1",
+    "Personal Agent Proxy (personalagentproxy/proxy) \u2014 2026-10-13, PROTOTYPE, 6.9"
   ],
-  "notes": "2026-10-12: Slot 6 (infrastructure, observability, deployment) per day_of_year 285 % 7 + 1 = 6. Catalogued 4 new: Artifact Keeper (artifact-keeper/artifact-keeper, MIT, 8.5, PROTOTYPE) \u2014 45+ format self-hosted artifact registry with a real contributor base (74 contributors, 1123 stars) and inline Trivy/Grype scanning, direct Artifactory-migration tooling; the standout find despite sitting one category over from the slot (product infrastructure). Terraducktel (mormor83/terraducktel, MIT, 7.9, PROTOTYPE) \u2014 self-hosted Terraform Cloud/Spacelift alternative (plan/gate/apply/drift), pre-1.0, flagged for its docker.sock-dependent executor privilege model. redStackPRO (devZero-Security/redStackPRO, MIT core/GPLv3 GOAD templates, 7.6, PROTOTYPE) \u2014 topology-to-Terraform+Ansible compiler for authorized red-team/cyber-range infra, directly relevant to the PTaaS partnership context, flagged loudly for authorized-use-only scoping and solo-maintainer/two-week-old status despite 141 stars. Stashbase CLI (stashbase/cli, Apache-2.0 open-core, 7.5, PROTOTYPE) \u2014 request-level secrets/egress proxy for coding agents, outside slot 6 but kept for AI-agent-leverage relevance; maintainers candidly state the native sandbox is not a hard security boundary. loki-vl-proxy (Loki-compatible proxy for VictoriaLogs, 46 stars, well-tested) was the Small-but-High-Leverage Utility. Noted a two-entrant same-month 'Vector fleet control plane' wave (Vectory, VortexFLOW, both <10 stars, no clear winner) and a novel but very-early dual-ES/Loki-wire-protocol log engine (rSearch, 2 stars/1 fork, GPL-3.0) and a Cloudflare-native STS pattern (cloudflare-sts, 0 stars) as Worth Watching. Rejected cloudfluent/terragraph (weak issue:star ratio), a mongorescue duplicate, and reconfirmed the saturated self-hosted-PaaS wave (miabi/hakopod/cubeship/ninedeploy). 'Still Worth Trying' rotated to AgentSight, mcp-debugger, and Headroom \u2014 none used in any prior run's rotation to date. WebSearch returned mostly stale roundups this run; the GitHub Search API topic-query approach was the effective discovery channel for slot 6."
+  "notes": "2026-10-13: Slot 7 (experimental projects and hidden gems) per day_of_year 286 % 7 + 1 = 7. Catalogued 4 new: nono (nolabs-ai/nono, Apache-2.0, 8.6, USE NOW) \u2014 zero-setup process-level sandbox for coding agents with nested per-tool command sandboxing and an L7 credential proxy; built by Sigstore-team maintainers, OpenSSF Best Practices badge, named (unverified) Datadog/Okta production testimonials; the standout find of the run. outloud (visionably/outloud, Apache-2.0, 8.1, USE NOW) \u2014 zero-dependency PDF accessibility checker (PDF/UA-1 + WCAG 2.2) with 35 semantic rules beyond what veraPDF/PAC test, backed by an unusually rigorous dated benchmark for a two-week-old project; today's Small but High-Leverage Utility. vibecheck (bhurghundii/vibecheck.dev, MIT, 7.1, PROTOTYPE) \u2014 self-hosted merge gate that LLM-quizzes a PR author on their own diff instead of reviewing the code, aimed squarely at rubber-stamped AI-generated PRs; one month old, 5 stars, worth a side-project trial. Personal Agent Proxy (personalagentproxy/proxy, MIT, 6.9, PROTOTYPE) \u2014 self-hosted access-control/audit broker for personal AI agents across connected services; 7 days old, 95 stars, real Bun/TS monorepo but undocumented security internals, flagged as pre-alpha. Noted a huge same-day hype wave of near-identical 'agent sandbox / agent runtime / agent memory architecture' repos (dozens, mostly 0-300 stars) with no standout beyond nono, a mainstream-scale LLM gateway (Bifrost, 8,738 stars) already past the household-name threshold, and held three narrower/earlier entrants to Worth Watching (capsulerun/Capsule WASM task sandbox, obsessiondb/chkit ClickHouse migrations, pro-vi/vne .env util for coding agents). 'Still Worth Trying' rotated to Xberg, Bernstein, and Sidequest \u2014 none used in the prior rotation (AgentSight, mcp-debugger, Headroom). WebSearch again returned stale roundups for 'Show HN' queries; HN Algolia's own API (plain tags=show_hn, no numericFilters) and the GitHub Search API were the effective discovery channels."
 }

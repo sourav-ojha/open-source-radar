@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "projects": [
     {
       "name": "Xberg",
@@ -12785,6 +12785,273 @@
       ],
       "aliases": [],
       "notes": "12 stars, 0 open issues, actively committed at review time.",
+      "acted_on": false
+    },
+    {
+      "name": "nono",
+      "slug": "nono-agent-sandbox",
+      "repo_url": "https://github.com/nolabs-ai/nono",
+      "website": "https://nono.sh",
+      "description": "Zero-setup, zero-latency sandbox for running coding agents (Claude Code, Codex, Cursor-style CLIs, OpenCode, Hermes, Copilot, OpenClaw) with least-privilege filesystem, network, and credential policies. No daemon, container, or VM \u2014 runs as a process-level sandbox on macOS, Linux, and Windows (WSL2). Delegated tools (git, gh, curl, kubectl, MCP clients) get their own nested command sandboxes with an L7 credential proxy, so a secret given to an agent session is not automatically available to every tool it shells out to. Ships a public registry of per-agent policy profiles and FFI bindings for Rust, Python, TypeScript, and Go.",
+      "category": [
+        "AI & agent infrastructure",
+        "coding agents",
+        "security",
+        "developer productivity"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, verified via GitHub API license field. No restrictions on commercial use, redistribution, or embedding.",
+      "deployment": [
+        "CLI binary (curl install/Homebrew/Nix)",
+        "library (Rust/Python/TypeScript/Go FFI bindings)",
+        "GitHub Action (agent-sign)"
+      ],
+      "interfaces": [
+        "CLI",
+        "library (Rust)",
+        "library (Python)",
+        "library (TypeScript)",
+        "library (Go)",
+        "GitHub Action"
+      ],
+      "use_cases": [
+        "Run Claude Code or Codex against a real repo with filesystem/network access scoped to exactly what the task needs",
+        "Give an agent a GitHub token through a credential proxy that only allows specific API methods/paths, instead of an ambient env var any tool can read",
+        "Nest a separate, tighter sandbox around delegated tools (git, gh, ssh, package managers) so the agent's broad session grants don't inherit down to them",
+        "Pull a reviewed, versioned policy profile from the community registry instead of hand-writing a sandbox policy per agent",
+        "CI step that signs/verifies agent-authored commits (agent-sign GitHub Action) for supply-chain accountability"
+      ],
+      "product_opportunities": [
+        "Could underpin a client-facing 'show me what the agent could touch' governance feature for the MSSP admin-portal SaaS",
+        "Usable as the sandboxing layer inside an internal multi-agent orchestration product rather than building process isolation from scratch"
+      ],
+      "agent_opportunities": [
+        "Purpose-built for wrapping coding-agent CLIs directly (first-class profiles for Claude Code, Codex, Hermes, OpenCode, Copilot, OpenClaw)",
+        "FFI bindings mean the policy engine can be embedded inside a custom agent orchestrator rather than shelled out to",
+        "Registry (registry.nono.sh) gives reusable, shareable policy profiles per agent/tool combination"
+      ],
+      "alternatives": [
+        "AgentVM / DeepClause (catalogued, WATCH, 6.1) \u2014 WASM-based, heavier and less mature",
+        "AgentKernel (catalogued, PROTOTYPE, 7.6) \u2014 microVM-based, stronger isolation guarantee but real VM overhead vs nono's zero-setup process sandbox",
+        "Pikopod (catalogued, PROTOTYPE, 7.8) \u2014 solves a different problem (simulating third-party API failures), not a general agent sandbox"
+      ],
+      "why_it_matters": "Running coding agents with real repo/credential access is the default today; nono is the first in this space with credible production validation (OpenSSF Best Practices badge, built by the team behind Sigstore, named testimonials from Datadog and Okta security engineers) rather than just a README pitch, and its per-tool nested sandboxing (the agent's grants don't automatically flow to git/gh/curl) is a meaningfully more careful model than the single flat policy most competitors ship.",
+      "why_not_build_it_myself": "A correct least-privilege sandbox with filesystem/network/credential scoping, nested per-tool policies, and an L7 credential proxy is a multi-week security-engineering project with easy-to-miss escape paths; this one is already OpenSSF-reviewed and cross-platform (macOS/Linux/WSL2).",
+      "risks": [
+        "Pre-1.0: README states APIs are still stabilizing and may change before a 1.0 release",
+        "Datadog/Okta production-use quotes are maintainer-supplied marketing copy and cannot be independently verified from the repo alone",
+        "The community registry (registry.nono.sh) of shared agent policy profiles is a new supply-chain trust surface if profiles are pulled from unreviewed third parties rather than authored locally"
+      ],
+      "first_seen": "2026-10-13",
+      "last_reviewed": "2026-10-13",
+      "last_meaningful_update": "2026-10-13",
+      "current_version": "v0.79.0",
+      "latest_release_date": "2026-09-30",
+      "source_links": [
+        "https://github.com/nolabs-ai/nono",
+        "https://nono.sh",
+        "https://docs.nono.sh",
+        "https://registry.nono.sh"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 4,467 stars, 302 forks, pushed_at 2026-10-13 (actively maintained), created 2026-01-31. Contributors include recognizable Sigstore-project maintainers (lukehinds, kipz). 17 watchers vs 4,467 stars is a low ratio in isolation, but real contributor identities, an OpenSSF Best Practices badge, and a working CI pipeline argue against the fake-star pattern flagged elsewhere in this catalog (e.g. dsh-plugin-radar). Latest release v0.79.0 (2026-09-30) confirmed via releases/latest API.",
+      "acted_on": false
+    },
+    {
+      "name": "outloud",
+      "slug": "outloud-pdf-accessibility-checker",
+      "repo_url": "https://github.com/visionably/outloud",
+      "website": "https://visionably.ai/research/outloud",
+      "description": "PDF accessibility checker that runs locally in the terminal, CI, or a local browser app: PDF/UA-1 (ISO 14289-1) conformance plus 35 semantic rules that catch what key-existence validators like veraPDF and PAC miss (alt text that is a filename, table header cells that are empty, prose marked as decorative so screen readers skip it). Pure Python (pikepdf-based), no JVM, no upload \u2014 nothing leaves the machine. Outputs exit codes, JSON, SARIF 2.1.0 (for GitHub code scanning), and single-file HTML reports; also usable as a Python library.",
+      "category": [
+        "document processing",
+        "small high-leverage utilities",
+        "developer productivity",
+        "CI/CD"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, confirmed via GitHub API license field (PyPI metadata omits the license classifier, GitHub is authoritative). No restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "pip/pipx package",
+        "uv tool",
+        "CLI",
+        "Docker-free local app",
+        "GitHub Action-compatible (CI step)"
+      ],
+      "interfaces": [
+        "CLI",
+        "library (Python)",
+        "local browser app (stdlib HTTP server, binds localhost)"
+      ],
+      "use_cases": [
+        "CI gate that fails a build when generated/uploaded PDFs (invoices, reports, compliance docs) are not screen-reader accessible",
+        "One-off terminal check before publishing or handing off a client deliverable PDF",
+        "SARIF output wired into GitHub code scanning for a visible accessibility findings list on PRs",
+        "Comparing a remediated PDF against its original to confirm structure/text/appearance was not lost in remediation"
+      ],
+      "product_opportunities": [
+        "Accessibility compliance (WCAG 2.2/PDF-UA) is a real procurement requirement for enterprise and government contracts; a self-hosted checker is a differentiator for any document-generation feature in a SaaS product",
+        "Could be wrapped as an MCP tool or CLI step in an automated document-QA pipeline"
+      ],
+      "agent_opportunities": [
+        "Usable directly as a library (`from outloud import check`) inside an automated document-generation/QA agent pipeline",
+        "SARIF output is a natural fit for a coding-agent CI loop that needs machine-readable findings with a one-line fix per issue"
+      ],
+      "alternatives": [
+        "PAC (proprietary, free, Windows-only) \u2014 the closest feature match for per-criterion WCAG/PDF-UA views, but no CLI or CI integration",
+        "veraPDF (GPL/MPL, JVM) \u2014 the reference PDF/UA-1 conformance validator; outloud is explicitly calibrated to agree with it (160/160 on its own fixture+real-file test set) but 2-10x faster with no JVM startup cost",
+        "pdfa11y (MIT) \u2014 faster still, but README author's own comparison doc states it misses most of the semantic-layer findings outloud is built around"
+      ],
+      "why_it_matters": "Existing tools either require Windows (PAC) or a JVM and only check that required tags/attributes exist rather than whether they are meaningful (veraPDF); outloud adds a second layer of 35 semantic rules (empty-but-present header cells, filename-as-alt-text, decorative-tagged prose) that catch real accessibility failures in files that already pass conformance validators.",
+      "why_not_build_it_myself": "Correctly walking a PDF's content stream, merging glyph-level text ops into words/lines, and mapping findings to both ISO 14289-1/Matterhorn checkpoints and WCAG 2.2 criteria is a multi-week correctness project; this one ships with 95 tests, a fixture builder, and a published benchmark comparing itself against the two reference tools.",
+      "risks": [
+        "Very young (first PyPI release 2026-10-06, 13 GitHub stars) \u2014 low external validation beyond the maintainer's own published benchmark",
+        "Single-maintainer project (Visionably); semantic rules are explicitly described in the README as heuristics, not certification-grade",
+        "PDF/UA-2 and colour-contrast (WCAG 1.4.3/1.4.11) are not implemented yet (roadmap items)"
+      ],
+      "first_seen": "2026-10-13",
+      "last_reviewed": "2026-10-13",
+      "last_meaningful_update": "2026-10-13",
+      "current_version": "0.2.1",
+      "latest_release_date": "2026-10-06",
+      "source_links": [
+        "https://github.com/visionably/outloud",
+        "https://pypi.org/project/outloud/",
+        "https://visionably.ai/research/outloud"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 13 stars, pushed_at 2026-10-06, created 2026-09-17. PyPI version 0.2.1 cross-checked against PyPI release metadata (upload_time 2026-10-06), matching GitHub activity. README publishes an explicit, dated (17 September 2026) benchmark methodology against veraPDF 1.26.5 and pdfa11y comparing agreement rates and speed across five corpora -- unusually rigorous and honest for a 2-week-old project ('what it is not' section explicitly disclaims certification/legal-advice status). Selected as today's Small but High-Leverage Utility.",
+      "acted_on": false
+    },
+    {
+      "name": "Personal Agent Proxy",
+      "slug": "personal-agent-proxy",
+      "repo_url": "https://github.com/personalagentproxy/proxy",
+      "website": "https://personalagentproxy.com",
+      "description": "Self-hostable access-control and audit layer for personal AI agents (Claude, ChatGPT, Grok, and other agent products). Connect personal services once, grant each agent granular, revocable permissions per connection, and get an audit log of what each agent actually did -- without handing a copy of the underlying service's data into the agent provider's own database. TypeScript/Bun monorepo (web dashboard, docs site, marketing site, Postgres-backed db package), MIT-licensed, Docker and Render.com deployable.",
+      "category": [
+        "AI & agent infrastructure",
+        "security",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.9,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API license field. No restrictions on commercial use or embedding.",
+      "deployment": [
+        "Docker / docker-compose",
+        "Render.com (render.yaml included)",
+        "hosted instance (app.personalagentproxy.com) as a non-self-hosted alternative"
+      ],
+      "interfaces": [
+        "web dashboard",
+        "presumably a connection/permission API (not yet documented in the README)"
+      ],
+      "use_cases": [
+        "Give a personal assistant agent (e.g. a Claude- or ChatGPT-based assistant) scoped access to one connected service (email, calendar) without exposing the rest of the account",
+        "Audit trail of exactly what an agent read or acted on across connected personal services",
+        "Run multiple personal agents against the same connected accounts with independently revocable permissions per agent"
+      ],
+      "product_opportunities": [
+        "The access-control + audit pattern here is directly reusable in a product that needs to let end users grant third-party AI agents scoped access to their account data -- relevant to the admin-portal SaaS's own permissioning model"
+      ],
+      "agent_opportunities": [
+        "Positions itself explicitly as agent-agnostic middleware between a user's personal services and whatever agent product they use"
+      ],
+      "alternatives": [
+        "Stashbase CLI (catalogued, PROTOTYPE, 7.5) -- narrower scope: a request-level secrets/egress proxy specifically for coding agents, not a general personal-service permission broker"
+      ],
+      "why_it_matters": "As personal AI agents proliferate (assistants from multiple vendors each wanting access to email/calendar/etc.), a single self-hosted permission and audit layer in front of all of them is a cleaner model than granting each vendor's agent its own direct OAuth access to everything.",
+      "why_not_build_it_myself": "Per-agent, per-connection permission scoping plus an audit trail that does not require copying the underlying service's data into the agent vendor's infrastructure is a non-trivial access-control design; this project has already built the dashboard and connection-management UI around it.",
+      "risks": [
+        "7 days old at time of review (created 2026-10-06), 2 contributors, no tagged releases yet -- pre-alpha",
+        "README is almost entirely marketing imagery; the actual permission/audit mechanics are not documented outside the hosted docs site, which was not independently verified this run",
+        "A product whose entire value proposition is brokering access to personal accounts is exactly the kind of thing that should not be trusted with real credentials before its security model has had independent scrutiny"
+      ],
+      "first_seen": "2026-10-13",
+      "last_reviewed": "2026-10-13",
+      "last_meaningful_update": "2026-10-13",
+      "current_version": "Unclear based on available documentation (no tagged GitHub releases yet)",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/personalagentproxy/proxy",
+        "https://personalagentproxy.com",
+        "https://docs.personalagentproxy.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 95 stars (fast growth for a 7-day-old repo), 13 forks, pushed_at 2026-10-13, created 2026-10-06. Repo contents confirm a real Bun/TypeScript monorepo (packages/db, packages/web, packages/docs, packages/website, Dockerfile, docker-compose.yml, render.yaml) rather than a thin landing-page repo. Two named contributors (arnestrickmann, hkonsti). Flagged PROTOTYPE rather than USE NOW given its age and the unverified security model for a product centered on access brokering.",
+      "acted_on": false
+    },
+    {
+      "name": "vibecheck",
+      "slug": "vibecheck-pr-comprehension-gate",
+      "repo_url": "https://github.com/bhurghundii/vibecheck.dev",
+      "website": "https://bhurghundii.com/vibecheck.dev/",
+      "description": "Self-hosted GitHub merge gate that tests whether a PR's author understands their own change before the PR can merge, rather than reviewing the code itself. On PR open, it reads the diff, generates a scoped question per ~15 changed lines (always starting with 'how does this change work at a high level?'), the author answers in plain English one question at a time, and an LLM (BYOK Anthropic Claude) grades each answer against its own blind interpretation of the diff. A commit status (`vibecheck/verdict`) gates the merge via branch protection. FastAPI + Postgres, Docker Compose deploy, no GitHub App/OAuth -- just a bearer-token-authenticated GitHub Action.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "CI/CD"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.1,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API license field. No restrictions on commercial or internal use.",
+      "deployment": [
+        "Docker Compose (self-hosted only, no hosted option)",
+        "Railway (documented deploy guide)"
+      ],
+      "interfaces": [
+        "GitHub Action (bearer-token webhook)",
+        "FastAPI service",
+        "GitHub commit-status check"
+      ],
+      "use_cases": [
+        "Merge gate on a team repo where AI-assisted PRs are common, to confirm the human author can explain the change before it ships",
+        "Cheap filter for drive-by AI-generated PRs on an open-source project that nobody has read closely",
+        "Self-check: run it on your own PRs to verify you actually understood what your coding agent produced before requesting human review"
+      ],
+      "product_opportunities": [
+        "The 'exam sheet generated from a diff, graded leniently by an LLM against its own blind read' mechanism is a reusable pattern for any internal tool that needs to verify human comprehension of AI-generated artifacts, not just code"
+      ],
+      "agent_opportunities": [
+        "Directly targets the AI-coding-agent era problem of PRs nobody (including the nominal author) actually understands"
+      ],
+      "alternatives": [
+        "roborev (catalogued) -- reviews the code itself and feeds findings back into the agent session; vibecheck instead tests the human, a distinct and complementary angle",
+        "Generic AI PR-review bots (CodeRabbit-style) -- optimize for finding bugs in the diff, not for verifying author comprehension"
+      ],
+      "why_it_matters": "As more code ships from coding agents, the bottleneck shifts from writing code to someone actually understanding it before it merges; vibecheck is a narrow, testable answer to that specific failure mode (rubber-stamped 'LGTM, CI green' merges) rather than another AI code-review tool.",
+      "why_not_build_it_myself": "The diff-to-exam-sheet generation, one-question-at-a-time flow, and blind-interpretation grading loop is a small but fiddly prompt-engineering and workflow problem that this project has already built, tested (public pass/fail demo PRs in its own repo), and wired into GitHub branch protection.",
+      "risks": [
+        "Solo-maintainer indie project, 1 month old, 5 GitHub stars -- essentially unproven outside its own repo",
+        "BYOK Anthropic Claude only today; no multi-provider support yet per the README",
+        "Self-hosted only (Docker + Postgres), adding real ops overhead for a single CI gate; grading quality of free-text answers at scale is unverified",
+        "Maintainer's own README calls out the irony of needing AI to police AI-generated code -- a lightly tongue-in-cheek project, worth testing on a side project before trusting it on anything business-critical"
+      ],
+      "first_seen": "2026-10-13",
+      "last_reviewed": "2026-10-13",
+      "last_meaningful_update": "2026-10-13",
+      "current_version": "v0.1.0",
+      "latest_release_date": "2026-10-12",
+      "source_links": [
+        "https://github.com/bhurghundii/vibecheck.dev",
+        "https://bhurghundii.com/vibecheck.dev/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 5 stars, 1 fork, pushed_at 2026-10-13, created 2026-09-12. Latest tagged release v0.1.0 published 2026-10-12. README includes two linked live demo PRs (one passing, one failing) inside its own repo as evidence the mechanism actually works, which is unusually concrete for a project this size.",
       "acted_on": false
     }
   ]
