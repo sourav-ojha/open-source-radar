@@ -1,6 +1,6 @@
 # Catalog
 
-_213 projects tracked. Last updated 2026-10-14._
+_215 projects tracked. Last updated 2026-10-15._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -55,6 +55,7 @@ _213 projects tracked. Last updated 2026-10-14._
 | [CocoIndex](https://github.com/cocoindex-io/cocoindex) | PROTOTYPE | 8.2/10 | RAG infrastructure, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-09-26 |
 | [TanStack AI](https://github.com/TanStack/ai) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-09-29 |
 | [difit](https://github.com/yoshiko-pg/difit) | USE NOW | 8.2/10 | developer productivity, small high-leverage utilities, AI & agent infrastructure | MIT | low | 2026-10-02 |
+| [Hexclave](https://github.com/hexclave/hexclave) | PROTOTYPE | 8.1/10 | product building blocks, auth/identity, billing, AI agent infrastructure | Split: MIT (client) / AGPLv3 (server) | medium | 2026-10-15 |
 | [Velox](https://github.com/getvelox/velox) | PROTOTYPE | 8.2/10 | product building blocks, billing / monetization, AI infrastructure | MIT | low | 2026-10-11 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
@@ -103,7 +104,7 @@ _213 projects tracked. Last updated 2026-10-14._
 | [coding-agent-search (cass)](https://github.com/Dicklesworthstone/coding_agent_session_search) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure | MIT License with OpenAI/Anthropic Rider (custom) | low | 2026-09-18 |
 | [PipesHub AI](https://github.com/pipeshub-ai/pipeshub-ai) | PROTOTYPE | 7.8/10 | RAG infrastructure, AI & agent infrastructure, product building blocks | Apache-2.0 | medium | 2026-09-19 |
 | [peerd](https://github.com/NotASithLord/peerd) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, browser automation | Apache-2.0 | low | 2026-09-22 |
-| [Paseo](https://github.com/getpaseo/paseo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent orchestration, self-hosted SaaS alternatives | Apache-2.0 | low | 2026-09-23 |
+| [Paseo](https://github.com/getpaseo/paseo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent orchestration, self-hosted SaaS alternatives | Apache-2.0 | low | 2026-10-15 |
 | [Sourcebot](https://github.com/sourcebot-dev/sourcebot) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code intelligence | FSL-1.1-ALv2 (Functional Source License) for the core, converting to Apache-2.0 two years after each version's release; a separate, distinct license applies to the enterprise ('ee/') directory (not fully inspected — treat as proprietary until confirmed). | medium | 2026-09-25 |
 | [Pikopod](https://github.com/Pikopod/pikopod) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 | low | 2026-09-28 |
 | [Hippo (hippo-memory)](https://github.com/kitfunso/hippo-memory) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent memory, developer productivity | MIT | low | 2026-09-30 |
@@ -189,6 +190,7 @@ _213 projects tracked. Last updated 2026-10-14._
 | [whatbroke](https://github.com/arthi-arumugam-git/whatbroke) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, AI testing / agent evaluation | MIT | low | 2026-10-02 |
 | [BrightBean Studio](https://github.com/brightbeanxyz/brightbean-studio) | PROTOTYPE | 7.1/10 | self-hosted SaaS alternatives, product building blocks, micro-SaaS opportunity | AGPL-3.0 | low | 2026-10-04 |
 | [vibecheck](https://github.com/bhurghundii/vibecheck.dev) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, CI/CD | MIT | medium | 2026-10-13 |
+| [Roled](https://github.com/roledio/roled) | PROTOTYPE | 7.0/10 | product building blocks, auth/identity | Apache-2.0 | low | 2026-10-15 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |

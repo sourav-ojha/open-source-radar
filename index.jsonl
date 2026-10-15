@@ -78,7 +78,7 @@
 {"slug": "coding-agent-session-search", "repo_url": "https://github.com/Dicklesworthstone/coding_agent_session_search", "name": "coding-agent-search (cass)", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-18", "current_version": "v0.8.0", "aliases": ["cass"]}
 {"slug": "pipeshub-ai", "repo_url": "https://github.com/pipeshub-ai/pipeshub-ai", "name": "PipesHub AI", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-19", "current_version": "v0.8.0", "aliases": []}
 {"slug": "peerd", "repo_url": "https://github.com/NotASithLord/peerd", "name": "peerd", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-22", "current_version": "v0.7.3", "aliases": []}
-{"slug": "paseo-agent-orchestrator", "repo_url": "https://github.com/getpaseo/paseo", "name": "Paseo", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-23", "current_version": "v0.9.1", "aliases": []}
+{"slug": "paseo-agent-orchestrator", "repo_url": "https://github.com/getpaseo/paseo", "name": "Paseo", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-10-15", "current_version": "v0.11.2", "aliases": []}
 {"slug": "sourcebot-codebase-search", "repo_url": "https://github.com/sourcebot-dev/sourcebot", "name": "Sourcebot", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-25", "current_version": "v5.1.14", "aliases": []}
 {"slug": "pikopod-api-failure-sandbox", "repo_url": "https://github.com/Pikopod/pikopod", "name": "Pikopod", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-09-28", "current_version": "v0.1.2", "aliases": []}
 {"slug": "rebase-postgres-baas", "repo_url": "https://github.com/rebasepro/rebase", "name": "Rebase", "status": "PROTOTYPE", "score": 7.7, "last_reviewed": "2026-09-03", "current_version": "v0.17.3", "aliases": []}
@@ -211,3 +211,5 @@
 {"slug": "dejavu-agent-session-memory", "repo_url": "https://github.com/vshulcz/deja-vu", "name": "deja-vu", "status": "PROTOTYPE", "score": 8.0, "last_reviewed": "2026-10-14", "current_version": "v0.22.1", "aliases": []}
 {"slug": "squeeze-agent-output-compression", "repo_url": "https://github.com/cauebraz/squeeze", "name": "squeeze", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-10-14", "current_version": "none", "aliases": []}
 {"slug": "patient-zero-supply-chain-scanner", "repo_url": "https://github.com/0xSteph/patient-zero", "name": "patient-zero", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-10-14", "current_version": "0.2.1", "aliases": []}
+{"slug": "hexclave-user-infrastructure", "repo_url": "https://github.com/hexclave/hexclave", "name": "Hexclave", "status": "PROTOTYPE", "score": 8.1, "last_reviewed": "2026-10-15", "current_version": "dashboard-v1.0.130", "aliases": []}
+{"slug": "roled-user-role-management", "repo_url": "https://github.com/roledio/roled", "name": "Roled", "status": "PROTOTYPE", "score": 7.0, "last_reviewed": "2026-10-15", "current_version": "auth/v0.27.1", "aliases": []}
