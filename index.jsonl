@@ -217,3 +217,6 @@
 {"slug": "cakewalk-mcp-test-kitchen", "repo_url": "https://github.com/cakewalk-security/cakewalk-mcp-test-kitchen", "name": "Cakewalk MCP Test Kitchen", "status": "PROTOTYPE", "score": 7.2, "last_reviewed": "2026-10-16", "current_version": "", "aliases": []}
 {"slug": "vayu-api-client-load-testing", "repo_url": "https://github.com/athrvk/vayu", "name": "vayu", "status": "PROTOTYPE", "score": 6.8, "last_reviewed": "2026-10-16", "current_version": "v0.43.0", "aliases": []}
 {"slug": "commit-check", "repo_url": "https://github.com/commit-check/commit-check", "name": "commit-check", "status": "USE NOW", "score": 7.3, "last_reviewed": "2026-10-16", "current_version": "v2.19.0", "aliases": []}
+{"slug": "edge-python", "repo_url": "https://github.com/dylan-sutton-chavez/edge-python", "name": "Edge Python", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-10-20", "current_version": "v0.9.6", "aliases": []}
+{"slug": "hyvor-relay", "repo_url": "https://github.com/hyvor/relay", "name": "Hyvor Relay", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-10-20", "current_version": "v0.0.46", "aliases": []}
+{"slug": "openkruise-agents", "repo_url": "https://github.com/openkruise/agents", "name": "OpenKruise Agents", "status": "STUDY", "score": 7.0, "last_reviewed": "2026-10-20", "current_version": "v0.6.0", "aliases": []}
