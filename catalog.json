@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "projects": [
     {
       "name": "Xberg",
@@ -5931,16 +5931,16 @@
         "GitHub's license badge/API is misleading (NOASSERTION) despite the actual terms being permissive Apache-2.0"
       ],
       "first_seen": "2026-09-23",
-      "last_reviewed": "2026-10-15",
-      "last_meaningful_update": "2026-10-15",
-      "current_version": "v0.11.2",
-      "latest_release_date": "2026-10-09",
+      "last_reviewed": "2026-10-21",
+      "last_meaningful_update": "2026-10-21",
+      "current_version": "v0.12.0",
+      "latest_release_date": "2026-10-19",
       "source_links": [
         "https://github.com/getpaseo/paseo",
         "https://paseo.sh"
       ],
       "aliases": [],
-      "notes": "Contributor history shows one dominant author plus several other active contributors and bot-driven CI, consistent with genuine active maintenance rather than a star-farmed repo. 2026-10-15: v0.11.0 added a browsable community plugin registry (paseo.sh/plugins) with one-command install — the plugin surface flagged as a risk on first review (2026-09-23) is now a formal, documented ecosystem feature. Risk about running untrusted plugin code stands and is now more directly actionable given the registry makes installing third-party plugins easier.",
+      "notes": "Contributor history shows one dominant author plus several other active contributors and bot-driven CI, consistent with genuine active maintenance rather than a star-farmed repo. 2026-10-15: v0.11.0 added a browsable community plugin registry (paseo.sh/plugins) with one-command install — the plugin surface flagged as a risk on first review (2026-09-23) is now a formal, documented ecosystem feature. Risk about running untrusted plugin code stands and is now more directly actionable given the registry makes installing third-party plugins easier. 2026-10-21: v0.11.2 -> v0.12.0 — added background workspaces (new, hidden-by-default workspace mode), sender-name attribution on inter-agent messages, and Claude Mythos 5.1 model support, plus 120+ fixes. Meaningful per §10 (new functionality, UX for multi-agent coordination); recommendation unchanged (PROTOTYPE).",
       "acted_on": false
     },
     {
@@ -13826,6 +13826,254 @@
       ],
       "aliases": [],
       "notes": "Found inside a same-day wave of ~30 near-identical 'agent sandbox' repos; this was the one differentiated, credibly-backed entrant. STUDY rather than PROTOTYPE because adoption requires a Kubernetes commitment this profile doesn't currently have.",
+      "acted_on": false
+    },
+    {
+      "name": "AI-DLC Workflows",
+      "slug": "aidlc-workflows",
+      "repo_url": "https://github.com/awslabs/aidlc-workflows",
+      "website": "https://awslabs.github.io/aidlc-workflows/",
+      "description": "AWS Labs' harness-neutral AI-Driven Life Cycle: a deterministic workflow engine (5 phases, 33 stages, 14 agents, human approval gates, 121-event audit trail) layered on top of Claude Code, Codex CLI, Cursor, Kiro, opencode, and GitHub Copilot. One core engine, thin per-harness integrations, invoked as /aidlc (or $aidlc in Codex).",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "agent orchestration"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT-0",
+      "commercial_use_notes": "MIT-0 (MIT No Attribution) verified via GitHub API license field — the most permissive common OSS license, no attribution required, zero commercial-use friction.",
+      "deployment": [
+        "CLI installer (curl/PowerShell)",
+        "harness plugin (Claude Code, Cursor, Kiro, Codex, opencode, Copilot)"
+      ],
+      "interfaces": [
+        "CLI",
+        "slash command (/aidlc)",
+        "agent-harness plugin"
+      ],
+      "use_cases": [
+        "Replace an ad-hoc CLAUDE.md + hand-rolled slash commands with a structured, phase-gated workflow for a non-trivial feature",
+        "Force an approval checkpoint before an agent moves from design to implementation on a change that matters",
+        "Get an audit trail of what an agent decided and why, across a multi-session feature build",
+        "Run the same structured workflow across whichever coding agent is open that day (Claude Code at the desk, Codex CLI over SSH) without relearning a tool-specific process"
+      ],
+      "product_opportunities": [
+        "Internal standard for how AI-agent-assisted feature work gets structured and reviewed before merging, applicable to his own MSSP/PTaaS codebases"
+      ],
+      "agent_opportunities": [
+        "Harness-neutral design is itself the agent opportunity — one workflow definition usable from Claude Code, Codex, Cursor, Kiro, or Copilot without rewriting process docs per tool"
+      ],
+      "alternatives": [
+        "MoAI-ADK (catalogued, STUDY) — Claude Code-specific verification harness with Claude×GLM cost routing, narrower tool scope",
+        "Spec Kitty, buildermethods/agent-os, GSD Pi (all evaluated, not catalogued — saturated spec-driven-development wave with no standout at the time) — AI-DLC differentiates on official AWS backing, genuine multi-harness support, and a visible daily release cadence rather than a single-author weekend project",
+        "shinpr/ai-coding-project-boilerplate (catalogued today) — much lighter-weight, TypeScript-specific, single-harness (Claude Code) alternative for teams who want less process overhead"
+      ],
+      "why_it_matters": "AWS's own answer to 'how do we stop a coding agent from going off the rails on a real feature' — phase gates and an audit trail where most competing spec-driven-dev tools are single-author side projects with no comparable backing or multi-harness design.",
+      "why_not_build_it_myself": "The 14-agent role split, 33-stage state machine, and per-harness adapter layer (6 different agent CLIs, each with different plugin/hook mechanics) represent weeks of process-design and integration work already solved and actively maintained (daily preview releases).",
+      "risks": [
+        "Heavy process for a solo developer — 5 phases/33 stages/14 agents is built for team workflows; likely needs Lite-mode-equivalent trimming for one-person use (no such mode confirmed, unlike shinpr's boilerplate)",
+        "Early product category (created Nov 2025) despite the backing — versioning (v2.11.1) and preview-tag-per-day cadence suggest the workflow structure itself is still being tuned",
+        "No formal Releases/CHANGELOG surfaced via API at review time beyond the latest tag; harder to audit what changed between versions than a project with full release notes"
+      ],
+      "first_seen": "2026-10-21",
+      "last_reviewed": "2026-10-21",
+      "last_meaningful_update": "2026-10-21",
+      "current_version": "v2.11.1",
+      "latest_release_date": "2026-10-20",
+      "source_links": [
+        "https://github.com/awslabs/aidlc-workflows",
+        "https://awslabs.github.io/aidlc-workflows/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT-0, 5,433 stars, 979 forks, 51 subscribers, pushed_at 2026-10-21 (actively maintained), created 2025-11-13, archived:false, awslabs org (verified). Contributors endpoint shows 10+ distinct real contributors (apackeer:1211, leandrodamascena:78, wowzoo:47, and others) with substantive recent commit messages — not a single-author or bot-farmed repo despite the fork:star ratio looking high relative to many of today's other GitHub search results. Tags show near-daily preview releases (v2.11.2-preview.20261020.1 etc). WebFetch used for prose description only (architecture, install steps); version/license/star numbers all from the GitHub API per AGENT.md §8.",
+      "acted_on": false
+    },
+    {
+      "name": "ChunkHound",
+      "slug": "chunkhound",
+      "repo_url": "https://github.com/chunkhound/chunkhound",
+      "website": "https://chunkhound.ai",
+      "description": "Local-first codebase-intelligence MCP server: Tree-sitter parsing across a dozen+ languages, semantic + regex code search, git-history search (by commit/tag/branch/range), and web research grounded back to the local codebase with cited answers. CLI (index/search/research/websearch) plus MCP integration for coding agents.",
+      "category": [
+        "developer productivity",
+        "AI & agent infrastructure",
+        "code search / RAG"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified via GitHub API license field. No commercial-use restrictions.",
+      "deployment": [
+        "pip package",
+        "MCP server",
+        "CLI"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server",
+        "library (Python)"
+      ],
+      "use_cases": [
+        "Give a coding agent cited, grounded answers about a large unfamiliar codebase instead of letting it guess from partial context",
+        "Search git history by commit range/tag/branch when tracking down when and why a behavior changed",
+        "Ground a research question ('does our auth code match the library's current docs') against both the local code and a live web search in one query",
+        "Local-only indexing (Ollama embeddings) for a codebase that cannot have its content sent to an external embedding API"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Ships as an MCP server directly — drop into Claude Code / Cursor / any MCP-capable agent for grounded code search",
+        "CLI usable standalone in CI or a script for codebase Q&A without any agent harness"
+      ],
+      "alternatives": [
+        "mex (catalogued, PROTOTYPE 8.1) and Semble (catalogued, PROTOTYPE 8.1) — both cover local code search for agents; ChunkHound differentiates with git-history search and web-research grounding with citations, which neither of those offers",
+        "zvec-grep (evaluated, Worth Watching previously) — narrower, embedding-focused grep replacement"
+      ],
+      "why_it_matters": "Most code-search-for-agents tools stop at 'find relevant code.' ChunkHound adds git-history search and cited external-web grounding in the same tool, which is useful when the question is 'did this already get fixed' or 'does this still match the vendor's docs' rather than just 'where is this code.'",
+      "why_not_build_it_myself": "Tree-sitter multi-language parsing, a working embedding-provider abstraction (VoyageAI/OpenAI/Ollama), and git-history-aware search are each non-trivial to get right; this has 16 months of iteration, a PyPI package, and 1,332 commits behind it already.",
+      "risks": [
+        "README carries a '100% AI Generated' badge — worth independently verifying code quality/test coverage rather than taking maturity signals at face value",
+        "Semantic search requires a paid embedding provider (VoyageAI recommended) or a local Ollama setup; regex-only mode works without one but loses the main value proposition",
+        "Crowded niche (code-search-for-agents) with several similar entrants already catalogued — differentiation rests on the git-history and web-research features specifically, not raw search quality"
+      ],
+      "first_seen": "2026-10-21",
+      "last_reviewed": "2026-10-21",
+      "last_meaningful_update": "2026-10-21",
+      "current_version": "v6.1.0",
+      "latest_release_date": "2026-10-20",
+      "source_links": [
+        "https://github.com/chunkhound/chunkhound",
+        "https://pypi.org/project/chunkhound/",
+        "https://chunkhound.ai"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,454 stars, 142 forks, 7 subscribers, pushed_at 2026-10-20, created 2025-06-04, archived:false. 10 distinct contributors on the contributors endpoint (ofriw:1058, grzegorznowak:109, and 8 others). PyPI confirms v6.1.0 matching the GitHub release tag. Low subscriber count relative to stars noted but not treated as disqualifying given the long (16-month) organic growth history, real release cadence, and genuine multi-contributor commit activity — contrast with same-day-spike repos flagged elsewhere in today's run.",
+      "acted_on": false
+    },
+    {
+      "name": "ai-coding-project-boilerplate",
+      "slug": "ai-coding-project-boilerplate",
+      "repo_url": "https://github.com/shinpr/ai-coding-project-boilerplate",
+      "website": "",
+      "description": "TypeScript project starter purpose-built for structured Claude Code development: a CLI (npx create-ai-project) that scaffolds a TS/Node repo with pre-wired Biome/Vitest, a project-level CLAUDE.md, and a slash-command workflow (/implement, /design, /plan, /build, /review, /diagnose) with two modes — Normal (design+security review gates, lint/test after each task) and Lite (checks run once before review). Includes /project-inject for recording project context and /create-skill for task-specific guidance.",
+      "category": [
+        "developer productivity",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, verified via GitHub API license field.",
+      "deployment": [
+        "npx CLI scaffolder",
+        "project template"
+      ],
+      "interfaces": [
+        "CLI",
+        "Claude Code slash commands"
+      ],
+      "use_cases": [
+        "Bootstrap a new TypeScript/Node service or micro-SaaS repo with Claude Code guardrails already wired in, instead of hand-writing a CLAUDE.md and ad-hoc commands each time",
+        "Use Lite Mode for a fast-moving solo side project, Normal Mode when a change needs a documented design + security pass before implementation",
+        "Hand a half-finished design off between sessions or to a second contributor via the approval-gated /design and /plan split"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Directly structures how Claude Code is used on a TS project — relevant as a starting template for any new MERN/TS-stack project he spins up"
+      ],
+      "alternatives": [
+        "AI-DLC Workflows (catalogued today) — far heavier process (33 stages, 6 harnesses) for team-scale work; this is the single-harness, single-maintainer, lighter-weight alternative for a TS-only solo/small-team project",
+        "MoAI-ADK (catalogued, STUDY) — Claude×GLM cost-routing focus rather than workflow structure"
+      ],
+      "why_it_matters": "A ready-made, opinionated TS project skeleton with Claude Code quality gates already configured removes the recurring setup cost of writing a CLAUDE.md and custom slash commands from scratch on every new TypeScript project.",
+      "why_not_build_it_myself": "The command set, two-mode design/security-gate split, and multilingual CLAUDE.md templates already exist and are actively iterated (v2.2.2, released days ago); replicating the command definitions and hook wiring is a day or two of setup work saved per new project.",
+      "risks": [
+        "Single-maintainer project (667 of ~673 commits from one author plus dependabot) — continuity risk if the author stops maintaining it",
+        "Only 234 stars / 3 subscribers — genuinely small-scale adoption, no independent validation of the workflow beyond the author's own usage",
+        "Tightly coupled to Claude Code's plugin/command conventions; not portable to other coding agents the way AI-DLC Workflows is"
+      ],
+      "first_seen": "2026-10-21",
+      "last_reviewed": "2026-10-21",
+      "last_meaningful_update": "2026-10-21",
+      "current_version": "v2.2.2",
+      "latest_release_date": "2026-10-14",
+      "source_links": [
+        "https://github.com/shinpr/ai-coding-project-boilerplate",
+        "https://www.npmjs.com/package/create-ai-project"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 234 stars, 28 forks, 3 subscribers, pushed_at 2026-10-21, created 2025-07-27, archived:false. npm registry confirms create-ai-project at 2.2.2 (MIT), matching the GitHub release tag.",
+      "acted_on": false
+    },
+    {
+      "name": "Datus Agent",
+      "slug": "datus-agent",
+      "repo_url": "https://github.com/Datus-ai/Datus-agent",
+      "website": "https://datus.ai/",
+      "description": "CLI-first data-engineering agent: a SQL client with a semantic layer (\"Dosi\") that compiles one business-domain model into SQL for 13+ dialects across 21 database adapters. Exposes a REST/MCP API (Datus-API, datus-mcp) for other agents/apps, plus a chat surface (web/Slack/Feishu/VS Code). Context engine combines a business-domain tree with vector search over embedded LanceDB/SQLite, or shared PostgreSQL storage for teams.",
+      "category": [
+        "data / search / RAG",
+        "product building blocks",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 confirmed by reading the LICENSE file directly via raw.githubusercontent.com — the GitHub API's license field reports NOASSERTION (likely a license-file-format detection miss, not an actual licensing restriction). No commercial-use restrictions under the actual Apache-2.0 text.",
+      "deployment": [
+        "pip package / CLI",
+        "MCP server (datus-mcp)",
+        "REST API (Datus-API)",
+        "chat integrations (Slack, Feishu, VS Code)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server",
+        "REST API",
+        "chat (Slack/Feishu/VS Code)"
+      ],
+      "use_cases": [
+        "Natural-language-to-SQL against Postgres (already in his stack) without hand-building a text-to-SQL pipeline",
+        "Give a coding agent an MCP-exposed semantic layer over a data warehouse instead of letting it write raw, schema-blind SQL",
+        "Share one business-domain semantic model across a CLI, a Slack bot, and application code via the REST API, rather than re-deriving query logic per surface"
+      ],
+      "product_opportunities": [
+        "Could underpin an internal analytics/reporting feature for the MSSP admin-portal SaaS without building a custom text-to-SQL layer"
+      ],
+      "agent_opportunities": [
+        "Native MCP server (datus-mcp) for Claude Desktop/Cursor-style clients; subagents and skills follow the agentskills.io convention"
+      ],
+      "alternatives": [
+        "Canner/WrenAI (catalogued) — broader governed text-to-SQL/GenBI agent-skill engine; Datus differentiates with a CLI-first workflow for data engineers specifically and a multi-dialect semantic-model compiler",
+        "OtterMind/Chat2DB (evaluated) — narrower chat-first SQL client without the semantic-layer compilation step"
+      ],
+      "why_it_matters": "Removes the recurring glue work of hand-writing dialect-specific SQL and ad-hoc context for an LLM to query a data warehouse correctly, by compiling one semantic model to 13+ SQL dialects and exposing it over MCP/REST for reuse across tools.",
+      "why_not_build_it_myself": "The semantic-model compiler (one model to 13+ SQL dialects), 21 database adapters, and context engine blending a domain tree with vector search are each substantial scope; pre-1.0 but under active multi-contributor development with a real company behind it.",
+      "risks": [
+        "Pre-1.0 (v0.4.3) — API and CLI surface likely still shifting; treat as a prototype-stage dependency, not a production data-pipeline component yet",
+        "GitHub API reports the license as NOASSERTION despite a genuine Apache-2.0 LICENSE file in the repo — worth re-confirming before any commercial redistribution decision, since automated license scanners elsewhere may also misdetect it",
+        "Outside today's rotation slot (data/RAG, not AI-agent/MCP) — catalogued anyway per §5 given direct fit with the Postgres/data-engineering axis"
+      ],
+      "first_seen": "2026-10-21",
+      "last_reviewed": "2026-10-21",
+      "last_meaningful_update": "2026-10-21",
+      "current_version": "v0.4.3",
+      "latest_release_date": "2026-10-15",
+      "source_links": [
+        "https://github.com/Datus-ai/Datus-agent",
+        "https://pypi.org/project/datus-agent/",
+        "https://datus.ai/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: license NOASSERTION (automated detection), but raw.githubusercontent.com LICENSE file content confirmed as genuine Apache License 2.0 text — recommend treating as Apache-2.0 with the API discrepancy flagged. 1,860 stars, 275 forks, 23 subscribers, pushed_at 2026-10-21, created 2025-07-04, archived:false. Contributors endpoint shows 10 distinct real contributors across the Datus-ai org. PyPI confirms datus-agent at 0.4.3.",
       "acted_on": false
     }
   ]

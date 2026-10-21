@@ -53,3 +53,6 @@ PROTOTYPE — self-host the Docker daemon against a low-stakes project and try t
 ## Change History
 ### 2026-09-23
 Initial discovery and review. Rotation slot 1 (AI agents, MCP, coding productivity).
+
+### 2026-10-21
+Meaningful update: v0.11.2 → v0.12.0. Added background workspaces (new workspace mode, hidden from the sidebar unless enabled), sender-name attribution on inter-agent messages (relevant to the multi-agent-coordination use case), Claude Mythos 5.1 model support, a reworked phone layout, and 120+ fixes. `paseo run --background` deprecated in favor of `--no-wait`. Recommendation unchanged (PROTOTYPE) — these are incremental UX/coordination improvements on an already-tracked product, not a change in its fundamental positioning.
