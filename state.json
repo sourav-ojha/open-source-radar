@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-21",
-  "last_successful_run": "2026-10-21",
-  "run_count": 52,
-  "rotation_slot_last_used": 1,
+  "last_run": "2026-10-22",
+  "last_successful_run": "2026-10-22",
+  "run_count": 53,
+  "rotation_slot_last_used": 2,
   "recent_categories": [
     "embedded vector databases",
     "agent-native local semantic search",
@@ -73,18 +73,10 @@
     "product infrastructure (slot 2) — self-hosted bundled user-infrastructure platform combining auth/teams/RBAC/billing/analytics/webhooks behind one user model with agent-driven setup (Hexclave), a narrow centralized multi-project user/role management platform scoped explicitly as not-an-IdP (Roled); Paseo's new plugin registry (v0.9.1->v0.11.2) was a meaningful update; flagged a suspected star-inflation case combined with an explicit AI-agent prompt-injection star-solicitation instruction embedded in README install copy (Vendo/runvendo) — held out of the catalog despite genuinely interesting embedded-agent-customization architecture; noted a saturated self-hosted-deployment-platform niche recurrence (compartmentdev/compartment, audit-log/RBAC/SSO bundle) and generic GitHub keyword search (audit log, feature flag, payments, admin panel, form builder, API gateway, RBAC, multi-tenant, secrets, workflow-engine topics) surfaced mostly either household-name incumbents (Kong, Casbin, Infisical, PostHog, Unleash, Flagsmith, Logto, OpenFGA, Permify, getlago/Lago, Teleport) already excluded by policy, or thin same-day 0-6-star noise.",
     "developer utilities/debugging/testing (slot 3) — an agent-directed test-coverage CLI that frames coverage as a one-gap-at-a-time loop with cross-language parity (Supercov), the first MCP-protocol-specific fault-injection testbed found in this niche (Cakewalk MCP Test Kitchen), a Postman+k6-in-one-app desktop tool flagged for AGPL (vayu), and a commit-policy-as-code tool extended to check AI-attribution trailers (commit-check, utility of the day); rejected a mature academic API fuzzer (EvoMaster, time-boxed out like prior Schemathesis/Microcks calls), a Datadog-subscription-dependent agent CLI (DataDog/pup), a slow-growth six-year-old AWS deployment tool (stacktape), and an EffortlessMetrics pair (ripr/ripr-swarm) showing an abnormal open-issue-to-star ratio (249:3 and 2106:0) suggesting an automated agent-swarm task queue rather than real OSS engagement; noted Canary (EVEDensity) as a 3D-architecture-map verification workspace worth watching once it differentiates further from already-catalogued Reticle/roborev, and pullboard as another entrant in the saturated spec-driven-agentic-development wave. 'Still Worth Trying' rotated to OpenDataLoader PDF, Graphify, and agent-device — none used in recent prior rotations.",
     "experimental/hidden gems (slot 7) — a dependency-free sandboxed-Python-to-WebAssembly compiler/VM with capability-gated I/O aimed at agent code execution (Edge Python), a self-hosted AGPL transactional-email API from a verified company that replaces SES/Mailgun/SendGrid (Hyvor Relay, caught outside-slot but kept per §5), and a CNCF OpenKruise sub-project giving Kubernetes-native, E2B-API-compatible agent-sandbox lifecycle management as a self-hosted alternative to E2B Cloud (OpenKruise Agents). Today's GitHub search surfaced a huge same-day wave (~30 repos) of near-identical 'agent sandbox' / 'agent runtime' projects with no standout beyond OpenKruise Agents, and a parallel saturated wave of 'AI pentest agent' repos (ARTEX, cain-agent, watchtower, Atlas, CyberPenda, etc.) with no new entrant clearing the bar. Rejected trhhubsd/ARTEX for a textbook fake-engagement signature (1,366 stars against 646 forks but only 1 watcher) and DarthMiaul/WasmQuay for a fabricated-maturity signature (commit history dated back to 2015, two years before the repo's own 2017 creation date, on an account whose other repos show the same creation-date-vs-activity mismatch) — a manipulation pattern worth watching for on this account going forward. A copy-on-write sandbox filesystem for agents (lydakis/sandfs) and a self-hosted functional language with explicit effects compiling to JVM/C/GPU (dawn-lang) were held to Worth Watching as too early to catalogue. 'Still Worth Trying' rotated to WhoDB, Dagu, and Floci — none used in the prior several rotations.",
-    "AI agents/MCP/coding productivity (slot 1) — an official AWS Labs harness-neutral agent workflow engine with phase gates and an audit trail (AI-DLC Workflows), its direct lightweight TypeScript/Claude-Code-only counterpart (ai-coding-project-boilerplate), a codebase-intelligence MCP server differentiated by git-history search plus cited web-research grounding (ChunkHound), and a CLI-first data-engineering agent with a multi-dialect semantic-SQL layer and native MCP server caught outside-slot but kept per §5 (Datus Agent, Apache-2.0 confirmed by reading the LICENSE file directly after the GitHub API misreported NOASSERTION). Paseo's v0.11.2->v0.12.0 release (background workspaces, inter-agent sender attribution) was a meaningful update. The day's generic 'coding agent'/'agent orchestration' GitHub searches surfaced a near-total wave of fake-engagement repos (ChesterRa/cccc, wangmiaozero/pi-harness, mindmuxai/brain.md, mvschwarz/openrig, Th0rgal/orb, ColeMurray/background-agents — star:watcher ratios from 49:1 to 267:1) and re-confirmed two prior inflated-engagement rejections (OrchestratorInc/agent-orchestrator, mksglu/context-mode); held to Worth Watching as too new/unproven: wangjohn/agent-archive (Claude Code/Codex/Cursor session handoff to S3/R2), XAGI-Lab/melra (MCP write-gating/approval runtime), and gauge-sh/gauge-cli ('Agent Experience' hillclimbing CLI, 1 day old). LippInc/catnap (a Claude Code mod that has Claude self-compact at a clean task boundary instead of mid-task, via context-usage thresholds and a handoff-note hook) was today's Small but High-Leverage Utility — clever design but too new (4 stars, 4 days old) for a formal catalog entry."
+    "AI agents/MCP/coding productivity (slot 1) — an official AWS Labs harness-neutral agent workflow engine with phase gates and an audit trail (AI-DLC Workflows), its direct lightweight TypeScript/Claude-Code-only counterpart (ai-coding-project-boilerplate), a codebase-intelligence MCP server differentiated by git-history search plus cited web-research grounding (ChunkHound), and a CLI-first data-engineering agent with a multi-dialect semantic-SQL layer and native MCP server caught outside-slot but kept per §5 (Datus Agent, Apache-2.0 confirmed by reading the LICENSE file directly after the GitHub API misreported NOASSERTION). Paseo's v0.11.2->v0.12.0 release (background workspaces, inter-agent sender attribution) was a meaningful update. The day's generic 'coding agent'/'agent orchestration' GitHub searches surfaced a near-total wave of fake-engagement repos (ChesterRa/cccc, wangmiaozero/pi-harness, mindmuxai/brain.md, mvschwarz/openrig, Th0rgal/orb, ColeMurray/background-agents — star:watcher ratios from 49:1 to 267:1) and re-confirmed two prior inflated-engagement rejections (OrchestratorInc/agent-orchestrator, mksglu/context-mode); held to Worth Watching as too new/unproven: wangjohn/agent-archive (Claude Code/Codex/Cursor session handoff to S3/R2), XAGI-Lab/melra (MCP write-gating/approval runtime), and gauge-sh/gauge-cli ('Agent Experience' hillclimbing CLI, 1 day old). LippInc/catnap (a Claude Code mod that has Claude self-compact at a clean task boundary instead of mid-task, via context-usage thresholds and a handoff-note hook) was today's Small but High-Leverage Utility — clever design but too new (4 stars, 4 days old) for a formal catalog entry.",
+    "product infrastructure / APIs / backend components (slot 2) - a multi-threaded Redis/Valkey-compatible cache with built-in full-text+vector search (KiviDB), the first MCP-server-specific analytics/observability tool with an 8-language conformance-tested SDK family (mcpspan), a dependency-free single-binary webhook reliability layer with HMAC verification, retries, and a replayable DLQ (Simple Relay), a contract-first TypeScript REST API framework with boot-time misconfiguration refusal and built-in MCP/A2A agent-endpoint modules (DaloyJS), and a small stateless webhook-to-notification relay from the home-operations/onedr0p community used as today's utility (chaski). Noted real-world use of the GitHub API's subscribers_count field (true watch count, distinct from the search API's watchers_count which mirrors stars) as a more reliable fraud-signal input than previously assumed, but confirmed near-zero subscribers is normal for small young repos and not alone a fraud signal. Rejected saturated same-week waves in webhook keyword noise (crypto/trading-bot spam), CRDT/realtime-collaboration tutorial clones, OCR/document-extraction pipelines, and form-builder repos; held handlewithcarecollective/correct-hooks, GaIsBAX/Webhix, and soulteary/warden to Worth Watching as too new or too thin. 'Still Worth Trying' rotated to Sidequest, Monoscope, and LibreDB Studio - none used in the prior two rotations."
   ],
   "evaluated_repos": [
-    "terok-ai/terok",
-    "BA-CalderonMorales/agent-harness",
-    "prime-radiant-inc/evener",
-    "ForgeAILab/forge",
-    "reyamira/models",
-    "mosonlab/anneal",
-    "sageox/ox",
-    "vinta/hal-9000",
-    "navikt/cplt",
     "Fmarzochi/EGC",
     "edgehero/pi-dispatch",
     "devswha/gajae-code-app",
@@ -1575,7 +1567,16 @@
     "wangjohn/agent-archive",
     "gauge-sh/gauge-cli",
     "XAGI-Lab/melra",
-    "gabe4coding/claude-code-mode"
+    "gabe4coding/claude-code-mode",
+    "kividbio/kividb",
+    "mcpspan/mcpspan",
+    "simple-relay/simple-relay",
+    "daloyjs/daloy",
+    "home-operations/chaski",
+    "handlewithcarecollective/correct-hooks",
+    "GaIsBAX/Webhix",
+    "soulteary/warden",
+    "eyupio/zoomies"
   ],
   "rejected": [
     {
@@ -2657,6 +2658,31 @@
       "repo_url": "generic 'mcp server' GitHub keyword search (~30 same-hour near-zero-star repos)",
       "reason": "hype wave / thin — no standout entrant, mostly single-purpose zero-star repos created within the same hour",
       "date": "2026-10-21"
+    },
+    {
+      "repo_url": "generic 'webhook' GitHub keyword search (Stablecoin-Payment-Gateway, Snoop-Forge-Studio payload builder, TradingView-Pipe-Executor trading bot, discord-webhook-orchestrator)",
+      "reason": "hype/unrelated - crypto-payment, pentest-payload-builder, and trading-bot noise with no OSS product-infra value",
+      "date": "2026-10-22"
+    },
+    {
+      "repo_url": "same-day CRDT/realtime-collaboration wave (tandem, crdt-collab, liveboard, gopad, komuboard, realtime-collaboration-suite, canvaslive, workroom)",
+      "reason": "saturated tutorial-tier wave - near-identical Yjs/CRDT whiteboard and doc-editor clones, all 0-2 stars, no standout differentiator",
+      "date": "2026-10-22"
+    },
+    {
+      "repo_url": "same-week OCR/document-extraction wave (ingestlib, PaddleDoc, Receiptory, id-atlas, free-ocr-api, ocrbase, AtharDoc, filemindr)",
+      "reason": "saturated niche - near-identical self-hosted LLM+OCR document pipelines, mostly 0-5 stars, no entrant clearly ahead of already-catalogued document-processing tools",
+      "date": "2026-10-22"
+    },
+    {
+      "repo_url": "form-builder keyword search (api-evangelist/reform, formkit, formforge, headless-wagtail-advanced-form-builder)",
+      "reason": "thin - either a third-party API profile page (not the product itself) or near-zero-star single-maintainer repos with no differentiation",
+      "date": "2026-10-22"
+    },
+    {
+      "repo_url": "https://github.com/handlewithcarecollective/correct-hooks",
+      "reason": "too new/thin - 4 stars, 0 forks, 1 month old; webhook-auth library idea is sound but not enough external validation yet, held to Worth Watching",
+      "date": "2026-10-22"
     }
   ],
   "known_releases": {
@@ -3663,6 +3689,26 @@
     "Datus-ai/Datus-agent": {
       "version": "v0.4.3",
       "date": "2026-10-15"
+    },
+    "kividbio/kividb": {
+      "version": "v1.1.0",
+      "date": "2026-10-16"
+    },
+    "mcpspan/mcpspan": {
+      "version": "v0.7.0",
+      "date": "2026-10-16"
+    },
+    "simple-relay/simple-relay": {
+      "version": "v0.9.0",
+      "date": "2026-10-21"
+    },
+    "daloyjs/daloy": {
+      "version": "v1.15.0",
+      "date": "2026-10-20"
+    },
+    "home-operations/chaski": {
+      "version": "0.5.3",
+      "date": "2026-10-21"
     }
   },
   "source_health": {
@@ -3671,8 +3717,8 @@
       "note": "a targeted 'site:news.ycombinator.com Show HN coding agent OR MCP October 2026' query returned mostly stale/unrelated results; hn.algolia.com direct search_by_date remains the more reliable path for fresh Show HN discovery, consistent with prior runs' finding."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-21",
-      "note": "LICENSE file fetch for Datus-ai/Datus-agent confirmed genuine Apache-2.0 text despite the GitHub API's license field reporting NOASSERTION — same class of automated-detection miss as getpaseo/paseo (2026-09-23)."
+      "last_ok": "2026-10-22",
+      "note": "confirmed simple-relay/simple-relay LICENSE as genuine AGPL-3.0 text and daloyjs/daloy LICENSE as genuine MIT text."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -3687,20 +3733,20 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-21",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; 8350/hr available at start, used for search/repositories across coding-agent, agent-orchestration, agent-evaluation and context-engineering keywords plus metadata/contributor/release checks on ~20 candidates."
+      "last_ok": "2026-10-22",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used; search/repositories across webhook, job-queue, secrets-management, realtime-collaboration/CRDT, notification-service, form-builder, API-gateway, audit-log, OCR/document-extraction keywords, plus repos/releases/contributors checks on ~15 candidates. subscribers_count (true watch count) confirmed reliable via baseline checks against sindresorhus/got, expressjs/express, vercel/next.js - useful for fraud-signal triage going forward, but near-zero subscribers on young small repos (under a few hundred stars) is normal and not a fraud signal by itself; the more reliable tell remains an extreme mismatch between stars/forks and subscribers (e.g. hundreds of forks against 0-1 subscribers)."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-10-21",
-      "note": "search_by_date on tags=show_hn for 'agent' and 'mcp' over the last 5-7 days worked fine; volume was almost entirely 1-5 point posts, most too new/thin to catalogue (held to Worth Watching or the day's utility pick)."
+      "last_ok": "2026-10-22",
+      "note": "search_by_date on tags=show_hn for self-hosted/queue/payments/secrets/feature-flags/audit-log/object-storage/admin-panel/backend-API/workflow-engine/cache over 7-45 day windows; most results were thin personal projects/games, but surfaced KiviDB (69pt), chaski-adjacent webhook tooling, and mcpspan (1pt, caught on substance not traction)."
     },
     "pypi.org": {
       "last_ok": "2026-10-13",
       "note": "confirmed outloud version 0.2.1 and upload_time (2026-10-06) matching GitHub repo activity."
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-10-16",
-      "note": "confirmed supercov at 4.12.2, published via GitHub Actions OIDC trusted publishing."
+      "last_ok": "2026-10-22",
+      "note": "confirmed @daloyjs/core latest 1.15.0, published 2026-10-20, matching GitHub release tag; also confirmed mcpspan SDK npm package at 0.7.0."
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -3724,11 +3770,6 @@
     }
   },
   "previous_recommendations": [
-    "drydock-container-watcher",
-    "notifkit",
-    "proxy-monster",
-    "monoscope",
-    "loongsuite-pilot",
     "gortex",
     "anythingmcp",
     "cerberus-clickhouse-gateway",
@@ -3923,8 +3964,13 @@
     "vayu (athrvk/vayu) — 2026-10-16, PROTOTYPE, 6.8",
     "Edge Python (dylan-sutton-chavez/edge-python) — 2026-10-20, PROTOTYPE, 7.8",
     "Hyvor Relay (hyvor/relay) — 2026-10-20, PROTOTYPE, 7.6",
-    "OpenKruise Agents (openkruise/agents) — 2026-10-20, STUDY, 7.0"
+    "OpenKruise Agents (openkruise/agents) — 2026-10-20, STUDY, 7.0",
+    "KiviDB (kividbio/kividb)",
+    "mcpspan (mcpspan/mcpspan)",
+    "Simple Relay (simple-relay/simple-relay)",
+    "DaloyJS (daloyjs/daloy)",
+    "chaski (home-operations/chaski)"
   ],
-  "notes": "2026-10-21: Slot 1 (AI agents, MCP, coding productivity) per day_of_year 294 % 7 + 1 = 1. Catalogued 4 new: AI-DLC Workflows (awslabs/aidlc-workflows, MIT-0, 8.0, PROTOTYPE) — AWS Labs' harness-neutral, phase-gated workflow engine for coding agents across 6 harnesses, verified multi-contributor and actively released (near-daily preview tags). ai-coding-project-boilerplate (shinpr/ai-coding-project-boilerplate, MIT, 7.4, PROTOTYPE) — its lightweight, single-maintainer, TypeScript/Claude-Code-only counterpart. ChunkHound (chunkhound/chunkhound, MIT, 7.8, PROTOTYPE) — codebase-intelligence MCP server differentiated by git-history search plus cited web-research grounding against mex/Semble. Datus Agent (Datus-ai/Datus-agent, Apache-2.0, 7.2, PROTOTYPE) — CLI-first data-engineering agent with a multi-dialect semantic-SQL compiler and native MCP server; caught outside slot per §5 given the direct Postgres/data-engineering fit; license required reading the LICENSE file directly since the GitHub API misreported NOASSERTION. Meaningful update: Paseo v0.11.2->v0.12.0 (background workspaces, inter-agent sender attribution, Claude Mythos 5.1 support). Today's 'coding agent'/'agent orchestration' GitHub searches were dominated by an extreme, near-universal fake-engagement pattern (star:watcher ratios 49:1-267:1 on nearly every new/unknown repo touched today, well beyond the 260:1-650:1 range first flagged 2026-10-18) — treated subscriber/contributor/commit-diversity signals as the reliable discriminator instead of star counts throughout this run. Held to Worth Watching: wangjohn/agent-archive, XAGI-Lab/melra, gauge-sh/gauge-cli. 'Still Worth Trying' rotated to Xberg, Bernstein, and Planning with Files (the three highest-scoring eligible USE NOW/PROTOTYPE entries not used in the immediately preceding WhoDB/Dagu/Floci rotation).",
+  "notes": "2026-10-22: Slot 2 (product infrastructure, APIs, backend components) per day_of_year 295 % 7 + 1 = 2. Catalogued 5 new: KiviDB (kividbio/kividb, AGPL-3.0, 8.0, PROTOTYPE) - multi-threaded Redis/Valkey-compatible store with built-in full-text+vector search, 6 days old but unusually substantive for its age (published benchmark methodology, cluster mode, ACLs). mcpspan (mcpspan/mcpspan, MIT, 7.8, PROTOTYPE) - first catalogued MCP-server-specific analytics tool, 8-language SDK family checked against a shared conformance suite, single-maintainer risk. Simple Relay (simple-relay/simple-relay, AGPL-3.0, 7.5, PROTOTYPE) - dependency-free single Go binary for durable webhook ingestion/delivery with HMAC verification, retries, and a replayable DLQ; directly applicable to the MSSP admin-portal's billing/partner-webhook needs. DaloyJS (daloyjs/daloy, MIT, 7.0, STUDY) - contract-first TypeScript REST framework with boot-time misconfiguration refusal and built-in MCP/A2A modules; filed STUDY not PROTOTYPE since full adoption competes with his existing Express/NestJS investment, but the guardrail pattern is worth borrowing. chaski (home-operations/chaski, AGPL-3.0, 7.0, PROTOTYPE) - small stateless webhook-to-notification relay from the onedr0p/home-operations community, today's Small but High-Leverage Utility. Verified via GitHub API's subscribers_count field (true watch count) as distinct from the search API's watchers_count (which always mirrors stargazers_count) - baseline-checked against sindresorhus/got, expressjs/express, vercel/next.js, tj/commander.js to confirm the field itself works; concluded near-zero subscribers on a small young repo is normal, not a fraud signal by itself, refining the star:watcher fraud-detection heuristic flagged in prior runs' notes. Held to Worth Watching: handlewithcarecollective/correct-hooks (webhook-auth library, too new), GaIsBAX/Webhix (self-hosted webhook inspector, stale since June), soulteary/warden (auth-gateway allowlist API, too thin at 5 stars). Rejected same-week saturated waves in webhook keyword noise (crypto/trading-bot spam dominating generic 'webhook' GitHub search), CRDT/realtime-collaboration tutorial clones, OCR/document-extraction pipelines, and form-builder repos - none offered a standout entrant. 'Still Worth Trying' rotated to Sidequest, Monoscope, and LibreDB Studio (not used in the two immediately preceding rotations: Xberg/Bernstein/Planning-with-Files, then WhoDB/Dagu/Floci).",
   "updated": null
 }

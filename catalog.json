@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "projects": [
     {
       "name": "Xberg",
@@ -14074,6 +14074,315 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: license NOASSERTION (automated detection), but raw.githubusercontent.com LICENSE file content confirmed as genuine Apache License 2.0 text — recommend treating as Apache-2.0 with the API discrepancy flagged. 1,860 stars, 275 forks, 23 subscribers, pushed_at 2026-10-21, created 2025-07-04, archived:false. Contributors endpoint shows 10 distinct real contributors across the Datus-ai org. PyPI confirms datus-agent at 0.4.3.",
+      "acted_on": false
+    },
+    {
+      "name": "KiviDB",
+      "slug": "kividb-redis-vector-cache",
+      "repo_url": "https://github.com/kividbio/kividb",
+      "website": "https://kividb.io",
+      "description": "Multi-threaded, RESP2/RESP3-compatible Redis/Valkey alternative written in Rust, sharded per CPU core, with built-in full-text search (BM25) and vector search (FLAT/HNSW) via Redis Stack-style FT.* commands. Drop-in for existing redis-cli / Redis client libraries; snapshot + AOF persistence, optional io_uring on Linux, cluster mode with gossip/replication/ACLs.",
+      "category": [
+        "product building blocks",
+        "data / search / RAG",
+        "infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0, flagged per policy. Per the project's own README, applications connecting to KiviDB over the network are separate programs and not themselves subject to the AGPL; the obligation is on modified copies of KiviDB itself offered as a network service, which must have their source made available. A commercial license is offered for organizations that cannot accept AGPL terms (e.g. if embedding/redistributing a modified build). Using an unmodified KiviDB as a self-hosted backend behind a product is the low-risk case; modifying and redistributing it is not.",
+      "deployment": [
+        "Docker (Docker Hub / GHCR, amd64+arm64, distroless image available)",
+        "release binaries (Linux/macOS) and .deb/.rpm with systemd unit",
+        "cluster mode (gossip, failure detection, failover, replication, ACL file)"
+      ],
+      "interfaces": [
+        "RESP2/RESP3 (existing Redis client libraries and redis-cli work unchanged)",
+        "FT.* search commands (Redis Stack-compatible)",
+        "Lua scripting (optional build feature)"
+      ],
+      "use_cases": [
+        "Replace a Redis instance plus a separate vector DB and full-text search engine with one self-hosted process for a micro-SaaS",
+        "Drop-in cache layer for an existing Express/Node app already using ioredis/node-redis — no client code changes, just a different port (6380 by default)",
+        "Self-hosted vector search for a RAG feature without standing up pgvector, Qdrant, or similar as a separate service",
+        "Run alongside an existing Redis (different default port) to pilot the search/vector features before any cutover"
+      ],
+      "product_opportunities": [
+        "Collapses cache + full-text search + vector search into one self-hosted component for a small product, reducing the infra surface a solo/small-team SaaS has to operate and pay for"
+      ],
+      "agent_opportunities": [
+        "Could back an agent memory/RAG layer over a protocol (RESP) Node already has mature client libraries for, rather than adding a new vector-DB client dependency"
+      ],
+      "alternatives": [
+        "Redis/Valkey — the mainstream baseline; single-threaded by default, no built-in vector/text search",
+        "Dragonfly — a more established multi-threaded Redis-compatible alternative; the vendor's own benchmark shows Dragonfly still wins on non-pipelined GET/SET and high-recall vector search, so KiviDB is not a universal win",
+        "KeyDB — older multi-threaded Redis fork; maintenance pace has slowed relative to both of the above"
+      ],
+      "why_it_matters": "One self-hosted, wire-compatible process covers cache, full-text search, and vector search with published (if vendor-run) benchmarks, instead of operating three separate systems for a small product's infra.",
+      "why_not_build_it_myself": "A sharded per-core command engine, io_uring integration, HNSW+BM25 search layered onto a Redis-compatible wire protocol, and cluster/replication/ACL support are each non-trivial engineering; this ships all of it pre-built with integration tests and a documented benchmark methodology.",
+      "risks": [
+        "6 days old at review (created 2026-10-16) — pre-production, long-term maintenance and roadmap unproven",
+        "AGPL-3.0 — flagged per policy, see commercial_use_notes",
+        "Vendor's own benchmark shows it loses to Dragonfly on non-pipelined ops and at higher vector-search recall settings — evaluate against the actual workload, not the headline number",
+        "Benchmark is from a single controlled AWS session run by the vendor, not independently reproduced"
+      ],
+      "first_seen": "2026-10-22",
+      "last_reviewed": "2026-10-22",
+      "last_meaningful_update": "2026-10-22",
+      "current_version": "v1.1.0",
+      "latest_release_date": "2026-10-16",
+      "source_links": [
+        "https://github.com/kividbio/kividb",
+        "https://kividb.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 396 stars, 6 subscribers, 14 forks, 13 open issues, created 2026-10-16, pushed_at 2026-10-21, archived:false, 6 distinct contributors. Show HN post at 69 points / 2026-10-19.",
+      "acted_on": false
+    },
+    {
+      "name": "mcpspan",
+      "slug": "mcpspan-mcp-server-analytics",
+      "repo_url": "https://github.com/mcpspan/mcpspan",
+      "website": "https://mcpspan.com",
+      "description": "Self-hosted, open-source analytics and observability for MCP servers: per-tool/resource/prompt call counts by client, latency percentiles, response-size distributions, token cost of the tool list an agent sees, failure/rejection tracking with suggested close matches, step-by-step session replay, release-over-release comparison, and alerting (Slack/Discord/webhook). One instrument() call per server via SDKs in 8 languages, all checked against a shared conformance test suite; can also forward to OpenTelemetry.",
+      "category": [
+        "AI & agent infrastructure",
+        "product building blocks",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "Docker Compose (self-hosted, `docker compose up -d`)",
+        "SDK instrumentation (TypeScript, Python, Go, C#/.NET, Java/Kotlin, Rust, Ruby, PHP)"
+      ],
+      "interfaces": [
+        "Web dashboard",
+        "per-language SDK",
+        "OpenTelemetry export",
+        "CSV/NDJSON export",
+        "Slack/Discord/webhook alerts"
+      ],
+      "use_cases": [
+        "Instrument an internal or product-facing MCP server to see which tools agents actually call versus which are dead weight inflating the tool-list token cost",
+        "Catch a flaky or failing MCP tool via latency/error alerts before a user or downstream agent notices",
+        "Compare tool usage and performance across MCP server releases when iterating on an agent-facing tool surface",
+        "Export session-level call traces (NDJSON) for debugging a specific agent interaction"
+      ],
+      "product_opportunities": [
+        "If an MCP server ships as part of a product (e.g. an agent-facing API for the MSSP admin portal), this is the observability layer most MCP servers ship without by default"
+      ],
+      "agent_opportunities": [
+        "Purpose-built agent infrastructure — the first catalogued tool that treats MCP tool-call behavior (not just LLM calls generally) as the thing being observed"
+      ],
+      "alternatives": [
+        "Laminar / Langfuse-style LLM tracing (Laminar catalogued) — covers general LLM call tracing but not MCP-protocol-specific concepts like tool-definition token cost or 'tools shown but never called'",
+        "Hand-rolled logging inside the MCP server — the status quo this replaces"
+      ],
+      "why_it_matters": "No other catalogued tool answers 'which of my MCP tools are agents actually using, and what is the tool list costing me in context tokens' — this is MCP-specific analytics backed by a conformance-tested, 8-language SDK family rather than a single-language prototype.",
+      "why_not_build_it_myself": "Multi-language SDK parity across 8 languages with a shared conformance suite, OpenTelemetry bridging, and a release-comparison dashboard is realistically a multi-week build for value that would otherwise be scoped down to logging for one server in one language.",
+      "risks": [
+        "Single-maintainer project (1 contributor on GitHub) — bus-factor risk",
+        "Very new (created 2026-10-03), 20 stars — unproven at any real scale",
+        "Server-side storage/internals are not documented in the README — confirm retention and storage requirements before production use"
+      ],
+      "first_seen": "2026-10-22",
+      "last_reviewed": "2026-10-22",
+      "last_meaningful_update": "2026-10-22",
+      "current_version": "v0.7.0",
+      "latest_release_date": "2026-10-16",
+      "source_links": [
+        "https://github.com/mcpspan/mcpspan",
+        "https://mcpspan.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 20 stars, 0 subscribers, 0 forks, created 2026-10-03, pushed_at 2026-10-21/22, archived:false, 1 contributor. Discovered via Show HN (2026-10-20, 1 point — low HN traction, catalogued on README/architecture substance instead).",
+      "acted_on": false
+    },
+    {
+      "name": "Simple Relay",
+      "slug": "simple-relay-webhook-reliability",
+      "repo_url": "https://github.com/simple-relay/simple-relay",
+      "website": "https://simplerelay.dev",
+      "description": "Single Go binary, self-hosted reliability layer for HTTP and webhook traffic: inbound requests are committed to embedded SQLite (WAL mode, single-writer with micro-batching) before acknowledgment, then delivered with exponential-backoff-plus-jitter retries. Built-in HMAC verification presets for Stripe/GitHub plus generic HMAC-SHA256, a synchronous proxy mode (retries on 429/5xx, honors Retry-After), an asynchronous job mode (202 Accepted + background delivery), and a dead-letter queue with one-off or bulk replay via an embedded web UI.",
+      "category": [
+        "product building blocks",
+        "infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0, flagged per policy. Running it unmodified as internal infrastructure behind a product (receiving/forwarding webhooks) does not itself require disclosing the product's own source. Modifying Simple Relay and offering the modified version as a network-accessible service would trigger AGPL's source-disclosure requirement. Verify with counsel before any plan that involves forking or white-labeling the binary itself.",
+      "deployment": [
+        "Docker (ghcr.io/simple-relay/simple-relay)",
+        "standalone Go binary (CGO_ENABLED=0 build)"
+      ],
+      "interfaces": [
+        "HTTP webhook ingestion (with HMAC verification)",
+        "synchronous HTTP proxy",
+        "asynchronous job API",
+        "embedded web UI",
+        "/healthz"
+      ],
+      "use_cases": [
+        "Stripe/GitHub webhook ingestion for the MSSP admin-portal SaaS with signature verification and guaranteed delivery instead of hand-rolling retry logic",
+        "Durable outbound webhook delivery to a product's own customers/partners, with a DLQ and replay instead of a bespoke BullMQ-based queue",
+        "Buffer a flaky downstream integration behind the synchronous proxy mode without changing the calling code"
+      ],
+      "product_opportunities": [
+        "Directly replaces the webhook-ingestion-plus-retry-queue component that otherwise gets custom-built for any SaaS with billing events, partner integrations, or outbound notification delivery"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Svix (MIT, self-hostable webhooks-as-a-service) — more full-featured (fan-out, portal UI for customers) but needs Postgres plus optional Redis; heavier to run than a single dependency-free binary",
+        "Hookdeck — hosted-first, not self-host-primary the way Simple Relay is",
+        "Hand-rolled BullMQ/Node retry queue — the status quo this replaces for a Node stack, at the cost of building and maintaining the DLQ/replay/HMAC logic yourself"
+      ],
+      "why_it_matters": "Webhook reliability (durable receipt, provider-specific signature verification, retries, a replayable dead-letter queue) is boilerplate every SaaS with billing or partner integrations eventually builds; this does it correctly in one dependency-free binary.",
+      "why_not_build_it_myself": "Getting at-least-once delivery semantics, per-provider HMAC verification, jittered backoff, and a DLQ-with-replay UI right is realistically a few days of work normally duplicated across projects; here it needs no external database or broker and already has real usage (10 open issues).",
+      "risks": [
+        "AGPL-3.0 — flagged per policy, see commercial_use_notes",
+        "3 weeks old (created 2026-10-07), 42 stars — early-stage and unaudited",
+        "Some performance claims in the README (e.g. 'sub-microsecond' hot reload of routing rules) are not backed by published benchmarks"
+      ],
+      "first_seen": "2026-10-22",
+      "last_reviewed": "2026-10-22",
+      "last_meaningful_update": "2026-10-22",
+      "current_version": "v0.9.0",
+      "latest_release_date": "2026-10-21",
+      "source_links": [
+        "https://github.com/simple-relay/simple-relay",
+        "https://simplerelay.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 42 stars, 0 subscribers, 0 forks, 10 open issues, created 2026-10-07, pushed_at 2026-10-21, archived:false, 4 contributors. LICENSE file confirmed as genuine AGPL-3.0 text via raw.githubusercontent.com.",
+      "acted_on": false
+    },
+    {
+      "name": "DaloyJS",
+      "slug": "daloyjs-rest-api-framework",
+      "repo_url": "https://github.com/daloyjs/daloy",
+      "website": "https://daloyjs.dev",
+      "description": "TypeScript REST API framework (`@daloyjs/core`) running on Node, Bun, Deno, Cloudflare Workers, Vercel, Fastly, Lambda, and Azure. Each route definition is the single source of truth for request/response validation (via Standard Schema: Zod, Valibot, ArkType, or TypeBox), generated types, OpenAPI 3.1 docs (Scalar/Swagger/Redoc), and a generated typed in-process client. Ships security guardrails on by default (body-size limits, prototype-pollution-safe JSON parsing, path-traversal rejection, RFC 9457 error bodies, boot-time refusal on known misconfigurations like a weak session secret or missing CSRF protection), plus middleware for CORS/CSRF/rate limiting/sessions/JWT/idempotency/response caching, and dedicated MCP/A2A agent-endpoint modules.",
+      "category": [
+        "product building blocks",
+        "developer productivity"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "npm package (@daloyjs/core), runs on Node/Bun/Deno/Cloudflare Workers/Vercel/Fastly/Lambda/Azure"
+      ],
+      "interfaces": [
+        "REST/HTTP",
+        "OpenAPI 3.1 (Scalar/Swagger UI/Redoc)",
+        "generated typed in-process client",
+        "MCP/A2A agent-endpoint modules"
+      ],
+      "use_cases": [
+        "Architecture reference for adding contract-first OpenAPI generation plus a typed client to an existing Express/NestJS service, without adopting the whole framework",
+        "Candidate framework for a new greenfield micro-SaaS backend, where boot-time security guardrails catch a misconfigured session secret or missing CSRF protection before it ships",
+        "Reference for exposing an agent-facing (MCP/A2A) API surface from a REST framework rather than bolting it on separately"
+      ],
+      "product_opportunities": [
+        "The 'refuse to boot on a known misconfiguration' pattern (weak session secret, missing CSRF, auth declared without an auth hook) is a concrete idea worth lifting into any Node service regardless of framework choice"
+      ],
+      "agent_opportunities": [
+        "Built-in MCP and A2A agent-endpoint middleware modules — one of the few REST frameworks treating agent-facing endpoints as first-class rather than an afterthought"
+      ],
+      "alternatives": [
+        "Express (his current stack) — DaloyJS's entire pitch is the boilerplate (validation, OpenAPI, typed client, security defaults) Express leaves to the developer",
+        "NestJS (his current stack) — heavier, DI-based; DaloyJS is lighter-weight and portable to edge runtimes",
+        "Encore.ts (open source, ~11k GitHub stars) — similar contract-first/typed-API pitch plus infrastructure-as-code provisioning (databases, Pub/Sub, cron) that DaloyJS does not attempt; more established and used in production (e.g. Groupon) but more opinionated about infrastructure",
+        "Hono — minimal and edge-first, but without DaloyJS's bundled contract-first OpenAPI/typed-client/security-guardrail stack"
+      ],
+      "why_it_matters": "Demonstrates a concrete, checkable pattern — contract-first route definitions driving types, OpenAPI docs, a typed client, and security defaults from one source — that reduces boilerplate and misconfiguration risk currently assembled by hand across Express/NestJS middleware choices.",
+      "why_not_build_it_myself": "Standard Schema integration, OpenAPI 3.1 generation, typed in-process client generation, boot-time misconfiguration detection, and edge-runtime portability are each individually buildable, but assembling and testing all of them coherently is a multi-week effort; here they're integrated with a stated 5-year security-support commitment on the 1.x line.",
+      "risks": [
+        "1.x with 2 contributors — small team, unproven at scale despite rigorous CI (CodeQL, OpenSSF Scorecard, zizmor, >=90% coverage gates)",
+        "README leans on 'vibe-coding era' AI-security marketing framing; some claims are weaker than headlined (its slopsquatting/package-allowlist defense runs only in this repo's own CI, not scaffolded into generated user apps)",
+        "Migrating an existing Express/NestJS service is a real framework-adoption decision, not a drop-in swap — treat as something to study and borrow patterns from rather than migrate to directly"
+      ],
+      "first_seen": "2026-10-22",
+      "last_reviewed": "2026-10-22",
+      "last_meaningful_update": "2026-10-22",
+      "current_version": "v1.15.0",
+      "latest_release_date": "2026-10-20",
+      "source_links": [
+        "https://github.com/daloyjs/daloy",
+        "https://daloyjs.dev",
+        "https://www.npmjs.com/package/@daloyjs/core"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 28 stars, 0 subscribers, 2 forks, created 2026-05-14, pushed_at 2026-10-22, archived:false, 2 contributors. npm registry confirms @daloyjs/core latest 1.15.0, published 2026-10-20 (README text referenced an unreleased 1.16.0 at fetch time).",
+      "acted_on": false
+    },
+    {
+      "name": "chaski",
+      "slug": "chaski-webhook-relay",
+      "repo_url": "https://github.com/home-operations/chaski",
+      "website": "",
+      "description": "Small, stateless webhook relay: receives JSON on a named route (`POST /hooks/{route}`), optionally gates it with a CEL expression, renders titles/messages/headers per request via sandboxed Go templates (no filesystem/network access), and fans out concurrently to one or more targets — Apprise-backed notification channels (Discord, Slack, Telegram, ntfy, Pushover, and more) or generic HTTP requests. Inbound verification via HMAC, a shared token, or a built-in GitHub preset; optional SMTP ingestion lets email-only devices reach the same routes. Config is a single YAML file or merged config.d fragments; ships health/readiness endpoints, Prometheus metrics, and a `?dryRun=1` preview plus offline/end-to-end `chaski validate`/`chaski send` test commands.",
+      "category": [
+        "product building blocks",
+        "infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0, flagged per policy. Used unmodified as an internal notification-routing component, not a blocker; modifying and redistributing it as a network service would trigger source-disclosure.",
+      "deployment": [
+        "Helm (OCI chart, distroless image, rolling updates, restarts on config change)",
+        "binary via Homebrew or GitHub releases"
+      ],
+      "interfaces": [
+        "HTTP webhook ingestion",
+        "CLI (`chaski validate`, `chaski send`)",
+        "Prometheus metrics",
+        "optional SMTP ingestion"
+      ],
+      "use_cases": [
+        "Route GitHub webhook events (PR opened by a specific author, deploy failed) to different Slack/Discord channels per rule without writing a relay service",
+        "Turn monitoring/Alertmanager alerts into templated, severity-prioritized phone notifications for the MSSP admin-portal's own infra monitoring",
+        "Receive device/printer/NAS/UPS email alerts and route them into the same notification channels as webhook-based alerts"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "n8n/Zapier-style automation tools (mainstream, excluded by policy) — far heavier for 'route an event to a channel with a template'",
+        "Hand-rolled webhook-to-Slack glue scripts — the status quo this replaces"
+      ],
+      "why_it_matters": "Saves building and maintaining a small bespoke relay service every time an external event (GitHub, Alertmanager, a NAS) needs to become a routed, templated notification — one YAML file instead of a custom microservice.",
+      "why_not_build_it_myself": "CEL-based gating, per-target Go-template rendering with sandboxing, HMAC/GitHub-preset verification, and config hot-reload are already done; maintained by home-operations (the onedr0p-led self-hosted/k8s-at-home community), a credible source for infra-glue tools.",
+      "risks": [
+        "AGPL-3.0 — flagged per policy",
+        "Narrow scope — notification routing only, not useful beyond that",
+        "23 stars, young project (created 2026-06-20), though actively maintained (renovate bot, recent releases)"
+      ],
+      "first_seen": "2026-10-22",
+      "last_reviewed": "2026-10-22",
+      "last_meaningful_update": "2026-10-22",
+      "current_version": "0.5.3",
+      "latest_release_date": "2026-10-21",
+      "source_links": [
+        "https://github.com/home-operations/chaski"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 23 stars, 0 subscribers, 1 fork, created 2026-06-20, pushed_at 2026-10-21, archived:false, 3 contributors including onedr0p. Selected as today's Small but High-Leverage Utility.",
       "acted_on": false
     }
   ]

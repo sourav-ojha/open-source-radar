@@ -1,6 +1,6 @@
 # Catalog
 
-_226 projects tracked. Last updated 2026-10-21._
+_231 projects tracked. Last updated 2026-10-22._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -84,6 +84,7 @@ _226 projects tracked. Last updated 2026-10-21._
 | [deja-vu](https://github.com/vshulcz/deja-vu) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-14 |
 | [Supercov](https://github.com/supercorp-ai/supercov) | PROTOTYPE | 8.0/10 | developer productivity, testing, AI & agent infrastructure | MIT (core CLI). The optional quality/security scoring feature calls a separate paid API ("TypeSafe AI"/Jev, ~$0.01/MB, cached by content) — not required for core coverage reporting. | low | 2026-10-16 |
 | [AI-DLC Workflows](https://github.com/awslabs/aidlc-workflows) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity, agent orchestration | MIT-0 | low | 2026-10-21 |
+| [KiviDB](https://github.com/kividbio/kividb) | PROTOTYPE | 8.0/10 | product building blocks, data / search / RAG, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-22 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
@@ -116,6 +117,7 @@ _226 projects tracked. Last updated 2026-10-21._
 | [schemagate](https://github.com/ashishsinha1602/schemagate) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks, security | Apache-2.0 | low | 2026-10-10 |
 | [Edge Python](https://github.com/dylan-sutton-chavez/edge-python) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, developer productivity, experimental / hidden gems | Apache-2.0 | medium | 2026-10-20 |
 | [ChunkHound](https://github.com/chunkhound/chunkhound) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code search / RAG | MIT | low | 2026-10-21 |
+| [mcpspan](https://github.com/mcpspan/mcpspan) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-10-22 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -161,6 +163,7 @@ _226 projects tracked. Last updated 2026-10-21._
 | [roborev](https://github.com/kenn-io/roborev) | PROTOTYPE | 7.5/10 | AI agent infrastructure, coding agents, developer productivity, code review | MIT | low | 2026-10-09 |
 | [Stashbase CLI](https://github.com/stashbase/cli) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, security, developer productivity | Apache-2.0 | low | 2026-10-12 |
 | [squeeze](https://github.com/cauebraz/squeeze) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-14 |
+| [Simple Relay](https://github.com/simple-relay/simple-relay) | PROTOTYPE | 7.5/10 | product building blocks, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
@@ -209,6 +212,8 @@ _226 projects tracked. Last updated 2026-10-21._
 | [openheard](https://github.com/Heilonng23/openheard) | PROTOTYPE | 7.0/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | low | 2026-10-11 |
 | [Roled](https://github.com/roledio/roled) | PROTOTYPE | 7.0/10 | product building blocks, auth/identity | Apache-2.0 | low | 2026-10-15 |
 | [OpenKruise Agents](https://github.com/openkruise/agents) | STUDY | 7.0/10 | AI & agent infrastructure, infrastructure, self-hosted SaaS alternatives | Apache-2.0 | high | 2026-10-20 |
+| [DaloyJS](https://github.com/daloyjs/daloy) | STUDY | 7.0/10 | product building blocks, developer productivity | MIT | medium | 2026-10-22 |
+| [chaski](https://github.com/home-operations/chaski) | PROTOTYPE | 7.0/10 | product building blocks, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
