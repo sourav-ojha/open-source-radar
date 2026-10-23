@@ -229,3 +229,8 @@
 {"slug": "simple-relay-webhook-reliability", "repo_url": "https://github.com/simple-relay/simple-relay", "name": "Simple Relay", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-10-22", "current_version": "v0.9.0", "aliases": []}
 {"slug": "daloyjs-rest-api-framework", "repo_url": "https://github.com/daloyjs/daloy", "name": "DaloyJS", "status": "STUDY", "score": 7.0, "last_reviewed": "2026-10-22", "current_version": "v1.15.0", "aliases": []}
 {"slug": "chaski-webhook-relay", "repo_url": "https://github.com/home-operations/chaski", "name": "chaski", "status": "PROTOTYPE", "score": 7.0, "last_reviewed": "2026-10-22", "current_version": "0.5.3", "aliases": []}
+{"slug":"mutator-mutation-testing","repo_url":"https://github.com/unclebob/mutator","name":"mutator","status":"STUDY","score":7.5,"last_reviewed":"2026-10-23","current_version":"unreleased","aliases":[]}
+{"slug":"code-quality-ai-agent-gate","repo_url":"https://github.com/smixs/code-quality","name":"Code Quality","status":"PROTOTYPE","score":8.0,"last_reviewed":"2026-10-23","current_version":"v1.3.3","aliases":[]}
+{"slug":"monorepo-doctor-skill","repo_url":"https://github.com/santoshyadavdev/monorepo-doctor","name":"monorepo-doctor","status":"PROTOTYPE","score":7.8,"last_reviewed":"2026-10-23","current_version":"unreleased","aliases":[]}
+{"slug":"autotesthub","repo_url":"https://github.com/HelloBommmb/AutotestHub","name":"AutotestHub","status":"STUDY","score":6.8,"last_reviewed":"2026-10-23","current_version":"unreleased","aliases":[]}
+{"slug":"actionrepro-ci-reproduction","repo_url":"https://github.com/Krem24919/ActionRepro","name":"ActionRepro","status":"PROTOTYPE","score":7.3,"last_reviewed":"2026-10-23","current_version":"v0.1.1","aliases":[]}

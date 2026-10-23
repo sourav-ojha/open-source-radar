@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-22",
+  "updated": "2026-10-23",
   "projects": [
     {
       "name": "Xberg",
@@ -14383,6 +14383,297 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: AGPL-3.0, 23 stars, 0 subscribers, 1 fork, created 2026-06-20, pushed_at 2026-10-21, archived:false, 3 contributors including onedr0p. Selected as today's Small but High-Leverage Utility.",
+      "acted_on": false
+    },
+    {
+      "name": "mutator",
+      "slug": "mutator-mutation-testing",
+      "repo_url": "https://github.com/unclebob/mutator",
+      "website": "",
+      "description": "Single-binary mutation testing tool covering Clojure, Java, Go, TypeScript, Rust, and Python in one run, with differential re-runs and a kill/survive snapshot consumed by the author's uml-viewer.",
+      "category": [
+        "developer productivity",
+        "testing",
+        "code quality"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.5,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "0BSD",
+      "commercial_use_notes": "0BSD, maximally permissive, no attribution required.",
+      "deployment": [
+        "CLI binary"
+      ],
+      "interfaces": [
+        "CLI"
+      ],
+      "use_cases": [
+        "Run mutator --changed in CI on a PR's touched files to catch tests that would pass even if the logic were wrong",
+        "Audit legacy code with suspiciously high coverage but a history of regressions",
+        "Use deterministic exit codes (0/2/3) as a CI gate without the full uml-viewer stack",
+        "Reuse existing coverage reports via --use-existing-coverage to avoid re-instrumenting a slow suite"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Grade a coding agent's 'add tests' output by mutation score instead of line coverage, which is much harder to game"
+      ],
+      "alternatives": [
+        "StrykerJS — the mature, JS/TS-native mutation testing incumbent with IDE integration; the safer default for actual adoption today",
+        "PIT (Java) / cargo-mutants (Rust) — mature single-language mutation testers",
+        "EffortlessMetrics/ripr — previously rejected (2026-10-16) adjacent test-oracle-gap detector"
+      ],
+      "why_it_matters": "Mutation testing checks whether a suite would notice broken logic, not just whether a line ran — a real gap in most JS/TS test suites that coverage percentages hide.",
+      "why_not_build_it_myself": "A correct multi-language mutation-rule engine with coverage-aware skipping and differential re-runs is a substantial undertaking to build from scratch for a one-off check.",
+      "risks": [
+        "Single maintainer, no tagged releases — experimental",
+        "Full value (namespace attribution, CRAP scoring) requires checking out sibling repos crapper and uml-viewer",
+        "StrykerJS is lower-friction for a team that just wants mutation testing on JS/TS today"
+      ],
+      "first_seen": "2026-10-23",
+      "last_reviewed": "2026-10-23",
+      "last_meaningful_update": "2026-10-23",
+      "current_version": "unreleased",
+      "latest_release_date": "",
+      "source_links": [
+        "https://github.com/unclebob/mutator"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: 0BSD, 53 stars, 6 forks, created 2026-09-30, pushed 2026-10-21, not archived, 0 releases. Author account verified as Robert C. Martin (Clean Code author, 17.3k followers, cleancoder.com).",
+      "acted_on": false
+    },
+    {
+      "name": "Code Quality",
+      "slug": "code-quality-ai-agent-gate",
+      "repo_url": "https://github.com/smixs/code-quality",
+      "website": "",
+      "description": "A non-blocking quality advisor for coding agents: git hooks and agent-lifecycle hooks that flag test tampering, hold a CRAP-complexity bar on changed functions, check diff coverage, and scan for secrets, across 12 languages from one config file.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "testing"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use and embedding.",
+      "deployment": [
+        "Agent plugin/hook install (Claude Code, Codex, Grok, pi, omp, OpenCode)"
+      ],
+      "interfaces": [
+        "CLI",
+        "agent hooks"
+      ],
+      "use_cases": [
+        "Install as a Claude Code plugin to get a red-flag report after every agent turn touching tests",
+        "Catch an agent quietly raising a function's complexity while 'fixing' something else via the CRAP-bar check",
+        "Backstop agent-generated commits against pasted secrets",
+        "Catch agent-added code with no corresponding test via diff-coverage checks on a PR"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Ships as installable hooks/plugins across six agent harnesses with a non-blocking Stop-hook pattern — directly reusable design for agent oversight in any product that lets users run agents against their own code"
+      ],
+      "alternatives": [
+        "commit-check (already catalogued) — adjacent commit-policy-as-code niche, no test-tampering or complexity checks",
+        "roborev (already catalogued) — broader LLM-driven continuous code review vs. this tool's deterministic-first approach",
+        "Plain CI coverage gates (Codecov etc.) — catch coverage drops, not test tampering"
+      ],
+      "why_it_matters": "Answers 'did the agent fix the code or the tests' with a deterministic, non-blocking advisory layer that fits directly into an agent-heavy workflow without adding a review bottleneck.",
+      "why_not_build_it_myself": "A 12-language rule set for test-tampering, complexity, diff-coverage, and secrets detection, wired into six different agent harnesses' hook systems, is a lot of integration surface to replicate.",
+      "risks": [
+        "Single maintainer, 19 stars — low community validation so far",
+        "Bun dependency adds a runtime requirement",
+        "README reports Grok 1.0.40 hook dispatch broken in a live check at time of writing"
+      ],
+      "first_seen": "2026-10-23",
+      "last_reviewed": "2026-10-23",
+      "last_meaningful_update": "2026-10-23",
+      "current_version": "v1.3.3",
+      "latest_release_date": "2026-09-28",
+      "source_links": [
+        "https://github.com/smixs/code-quality"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 19 stars, 2 forks, created 2026-09-21, pushed 2026-10-04, not archived, 4 releases (latest v1.3.3, 2026-09-28). 407 passing tests back the rule set; single contributor (86 commits).",
+      "acted_on": false
+    },
+    {
+      "name": "monorepo-doctor",
+      "slug": "monorepo-doctor-skill",
+      "repo_url": "https://github.com/santoshyadavdev/monorepo-doctor",
+      "website": "https://monorepo-skills.dev",
+      "description": "A read-only AI agent skill that audits npm/yarn/pnpm/bun JS/TS workspaces (deeper rules for Nx/Turborepo) for package boundaries, circular dependencies, task-cache correctness, CI test coverage, and test code leaking into production, writing an evidence-backed Markdown/JSON report.",
+      "category": [
+        "developer productivity",
+        "AI & agent infrastructure",
+        "code analysis"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use and embedding.",
+      "deployment": [
+        "Agent skill (Claude Code-style SKILL.md)"
+      ],
+      "interfaces": [
+        "agent skill"
+      ],
+      "use_cases": [
+        "Run the audit skill on an existing Nx/Turborepo monorepo for a baseline report before a planned refactor",
+        "Use the severity-ranked circular-dependency check to triage risky cycles vs. idiomatic lazy ORM references",
+        "Feed the Markdown/JSON report into a PR template or CI comment",
+        "Hand the baseline to the companion monorepo-boundaries-cleanup skill to open small PRs paying down violations"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Explicitly split into a read-only diagnostic skill and a separate edit-and-open-PR skill — a clean pattern for keeping an agent's destructive actions behind a human checkpoint"
+      ],
+      "alternatives": [
+        "Nx enforce-module-boundaries / turbo boundaries / dependency-cruiser — the linter-level enforcement this skill builds on top of",
+        "knip — unused-dependency detection, used as an input signal rather than a competitor",
+        "Manual madge/dependency-graph audits — the status quo this replaces"
+      ],
+      "why_it_matters": "JS/TS monorepos are exactly the shape of project most likely to accumulate the boundary and cache-correctness problems this checks for, and it lands as a read-only audit before anything touches code.",
+      "why_not_build_it_myself": "Replicating five independent, false-positive-tuned audits (e.g. severity-graded file cycles, lazy-ORM-reference exceptions) across Nx/Turborepo/plain workspaces is significant tuning work to redo from scratch.",
+      "risks": [
+        "8 stars, 2 contributors, 12 days old — essentially unvalidated outside its own docs",
+        "Node ≥ 22.5 requirement may be ahead of some existing CI images",
+        "Deeper rules are Nx/Turborepo-specific; plain workspaces get shallower checks only"
+      ],
+      "first_seen": "2026-10-23",
+      "last_reviewed": "2026-10-23",
+      "last_meaningful_update": "2026-10-23",
+      "current_version": "unreleased",
+      "latest_release_date": "",
+      "source_links": [
+        "https://github.com/santoshyadavdev/monorepo-doctor",
+        "https://monorepo-skills.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 8 stars, 1 fork, created 2026-10-10, pushed 2026-10-22, not archived, 0 releases, 2 contributors.",
+      "acted_on": false
+    },
+    {
+      "name": "AutotestHub",
+      "slug": "autotesthub",
+      "repo_url": "https://github.com/HelloBommmb/AutotestHub",
+      "website": "",
+      "description": "Self-hosted regression-testing framework with a web console spanning API execution plans, browser tests (pytest+Playwright), and AI agent conversation/tool-call evaluation, built around an observe-confirm-publish-run-compare workflow with immutable case baselines.",
+      "category": [
+        "testing",
+        "AI & agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.8,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use and embedding.",
+      "deployment": [
+        "Docker Compose (self-hosted)"
+      ],
+      "interfaces": [
+        "web console",
+        "CLI"
+      ],
+      "use_cases": [
+        "Capture a failed AI agent session, confirm correct behavior, and get automatic baseline comparison on later prompt/model changes",
+        "Run API execution plans and Playwright browser tests from one console with shared regression batches",
+        "Retrieve comparison results via CLI for a CI gate instead of reviewing every run manually",
+        "Track behavior of AI-assisted triage/reporting features in an admin-portal product as prompts change"
+      ],
+      "product_opportunities": [
+        "The observe-confirm-publish-run-compare pattern is reusable even without adopting the full tool, for any product shipping agent-facing features"
+      ],
+      "agent_opportunities": [
+        "AI agent evaluation is a first-class test channel (session traces, confirmed rules, judge profiles), not bolted onto a generic test runner"
+      ],
+      "alternatives": [
+        "Playwright/pytest directly — what this wraps for the browser channel",
+        "Ad-hoc eval harnesses (LangSmith, custom scripts) — cover agent evaluation without the unified regression workflow",
+        "vibecheck (already catalogued) — adjacent but different, an LLM-graded PR comprehension gate rather than a regression framework"
+      ],
+      "why_it_matters": "Forces a human confirmation step before a case becomes a baseline, which is the standard failure mode (baselines silently edited to match current behavior) this design specifically prevents.",
+      "why_not_build_it_myself": "A unified API/browser/agent regression console with immutable baselines and a scheduler/worker backend is a multi-week build to replicate from scratch for a narrow internal need.",
+      "risks": [
+        "Single contributor, zero forks, zero tagged releases — unproven outside its own author's use",
+        "Python/Postgres/Redis/three-worker footprint is heavier than the JS/TS-first bias generally prefers",
+        "No evidence yet of production use beyond its own documentation"
+      ],
+      "first_seen": "2026-10-23",
+      "last_reviewed": "2026-10-23",
+      "last_meaningful_update": "2026-10-23",
+      "current_version": "unreleased",
+      "latest_release_date": "",
+      "source_links": [
+        "https://github.com/HelloBommmb/AutotestHub"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 21 stars, 0 forks, created 2026-10-09, pushed 2026-10-15, not archived, 0 releases, single contributor (19 commits).",
+      "acted_on": false
+    },
+    {
+      "name": "ActionRepro",
+      "slug": "actionrepro-ci-reproduction",
+      "repo_url": "https://github.com/Krem24919/ActionRepro",
+      "website": "",
+      "description": "Node.js CLI that turns a failed GitHub Actions run into a local reproducibility bundle: fetches the run/logs via the GitHub API or a local log file, detects the ecosystem, extracts the likely failure cause and repro command, redacts secrets heuristically — no LLM, no backend, no telemetry.",
+      "category": [
+        "developer productivity",
+        "CI/CD",
+        "debugging"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.3,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use.",
+      "deployment": [
+        "CLI binary",
+        "GitHub Action (optional)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP"
+      ],
+      "use_cases": [
+        "Run actionrepro <run-url> the moment CI fails to get a local repro bundle instead of reading logs in the GitHub UI",
+        "Use local-file mode for air-gapped or already-downloaded logs",
+        "Use the verify command to confirm a fix resolves the extracted failure before pushing",
+        "Wire into a coding agent via MCP so it gets a structured repro bundle instead of parsing raw CI output"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Deliberately rule-based (no LLM) extraction producing structured evidence that an agent can reason over via MCP, rather than parsing raw logs itself"
+      ],
+      "alternatives": [
+        "act (nektos/act) — runs GitHub Actions workflows locally wholesale; heavier, requires Docker, versus this tool's narrower 'reproduce this one failure' scope",
+        "Manually re-reading workflow logs in the GitHub UI — the status quo this replaces"
+      ],
+      "why_it_matters": "Collapses the universal 'scroll CI logs to guess what broke' annoyance into one command that hands back a runnable local repro, directly useful for the Node/React/GitHub Actions slice of the stack.",
+      "why_not_build_it_myself": "Multi-ecosystem failure-cause extraction (11 ecosystems) plus heuristic secret redaction plus an MCP server is more scope than is worth building for a one-off script.",
+      "risks": [
+        "3 stars, single contributor, 18 days old — no outside validation yet",
+        "Secret redaction is explicitly heuristic, not guaranteed",
+        "Not published to npm yet; install from source only at time of review"
+      ],
+      "first_seen": "2026-10-23",
+      "last_reviewed": "2026-10-23",
+      "last_meaningful_update": "2026-10-23",
+      "current_version": "v0.1.1",
+      "latest_release_date": "2026-10-10",
+      "source_links": [
+        "https://github.com/Krem24919/ActionRepro"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 3 stars, 1 fork, created 2026-10-05, pushed 2026-10-10, not archived, 5 releases (latest v0.1.1). Today's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]
