@@ -89,3 +89,12 @@ permanently or fold it into a CI/agent pipeline more broadly.
 ## Change History
 ### 2026-09-16
 Initial discovery and review. Rotation slot 1 (AI agents, MCP, coding productivity).
+
+### 2026-10-24
+Meaningful update: v0.37.0 → v0.41.0. Added native Google Antigravity IDE integration (v0.41.0),
+a schema-v2 routing/compression training signal (v0.38.0), and clearer per-message compression
+diagnostics (v0.39.0/v0.40.0). v0.40.0 is a breaking change making usage reporting opt-in behind a
+new `HEADROOM_LICENSE` env var — the project remains Apache-2.0 end-to-end (re-verified), but this
+is the first sign of a commercial-tier layer being built alongside the OSS core, worth re-checking
+on a future review. Stars grew 72k → 77.7k (not meaningful alone per AGENT.md §10, noted only for
+context). Status and score unchanged.

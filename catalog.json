@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "projects": [
     {
       "name": "Xberg",
@@ -1956,17 +1956,17 @@
         "Compression is inherently lossy in the general case; correctness depends on the router picking the right compressor and the CCR fallback actually getting invoked when detail is needed"
       ],
       "first_seen": "2026-09-16",
-      "last_reviewed": "2026-09-16",
-      "last_meaningful_update": "2026-09-16",
-      "current_version": "v0.37.0",
-      "latest_release_date": "2026-08-27",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v0.41.0",
+      "latest_release_date": "2026-10-14",
       "source_links": [
         "https://github.com/headroomlabs-ai/headroom",
         "https://docs.headroomlabs.ai/docs",
         "https://huggingface.co/chopratejas/kompress-v2-base"
       ],
       "aliases": [],
-      "notes": "265 contributors confirmed via API. Complementary to already-catalogued mcp-compressor rather than duplicate — different compression target (outputs/logs/RAG vs. tool schemas).",
+      "notes": "265 contributors confirmed via API. Complementary to already-catalogued mcp-compressor rather than duplicate — different compression target (outputs/logs/RAG vs. tool schemas). 2026-10-24 update: v0.37.0 -> v0.41.0. Added native Google Antigravity IDE integration (v0.41.0), a schema-v2 routing/compression training signal (v0.38.0), and clearer per-message compression diagnostics (v0.39.0/v0.40.0). v0.40.0 is a breaking change that makes usage reporting opt-in behind a HEADROOM_LICENSE env var - the project is still Apache-2.0 end-to-end (re-verified), but this is the first sign of a commercial-tier layer being built alongside the OSS core, worth re-checking on a future review. Stars grew 72k -> 77.7k (not meaningful alone per AGENT.md section 10, noted only for context).",
       "acted_on": false
     },
     {
@@ -6340,7 +6340,7 @@
         "security"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.8,
+      "relevance_score": 8.0,
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "Apache-2.0",
@@ -6379,17 +6379,17 @@
         "Narrow scope by design: this controls what enters the prompt, not a replacement for database-level RLS/grants, which should stay in place as defense in depth"
       ],
       "first_seen": "2026-10-10",
-      "last_reviewed": "2026-10-10",
-      "last_meaningful_update": "2026-10-10",
-      "current_version": "v1.3.0",
-      "latest_release_date": "2026-10-09",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v1.10.0",
+      "latest_release_date": "2026-10-20",
       "source_links": [
         "https://github.com/ashishsinha1602/schemagate",
         "https://pypi.org/project/schemagate/",
         "https://ashishsinha1602.github.io/schemagate/"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 8 stars, created 2026-09-06, pushed 2026-10-10 (five releases v0.1.58->v1.3.0 in under three weeks). PyPI confirms 1.3.0 matching the GitHub tag. Solo-maintained (248 of 252 commits from the author).",
+      "notes": "GitHub API verified: Apache-2.0, 8 stars, created 2026-09-06, pushed 2026-10-10 (five releases v0.1.58->v1.3.0 in under three weeks). PyPI confirms 1.3.0 matching the GitHub tag. Solo-maintained (248 of 252 commits from the author). 2026-10-24 update: v1.3.0 -> v1.10.0 (8 releases in 10 days), stars grew to 105. Now publishes BIRD Mini-Dev EX benchmark scores (SQLite 81.0 / PostgreSQL 72.6 / MySQL 72.4) and a UniQL Oracle score (64.5% first try) as badges, ships an in-browser demo, and adds a \"Coming from Vanna\" comparison doc. The MCP Registry listing was already in place at first review, not new. Meaningful update: published, reproducible benchmark numbers are new verifiable evidence of quality, not just patch churn.",
       "acted_on": false
     },
     {
@@ -9706,16 +9706,16 @@
         "57 stars, ~3.5 months old — competes in a crowded self-hosted-wiki space without long track record yet"
       ],
       "first_seen": "2026-09-02",
-      "last_reviewed": "2026-09-02",
-      "last_meaningful_update": "2026-09-02",
-      "current_version": "v0.8.0",
-      "latest_release_date": "2026-07-05",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v0.11.0",
+      "latest_release_date": "2026-10-13",
       "source_links": [
         "https://github.com/zcag/tela",
         "https://raw.githubusercontent.com/zcag/tela/main/README.md"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: AGPL-3.0, 57 stars, created 2026-05-18, pushed_at 2026-09-02, not archived.",
+      "notes": "GitHub API verified: AGPL-3.0, 57 stars, created 2026-05-18, pushed_at 2026-09-02, not archived. 2026-10-24 update: v0.8.0 -> v0.11.0. v0.10.0 added Sheets, a new collaborative spreadsheet document type alongside the existing markdown docs (full-page grid editor, live cell presence) - a genuine expansion of what the wiki can hold, not just a bug-fix release. v0.11.0 adds self-hosted-instance update notifications for admins. Stars grew 57 -> 85.",
       "acted_on": false
     },
     {
@@ -14674,6 +14674,313 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 3 stars, 1 fork, created 2026-10-05, pushed 2026-10-10, not archived, 5 releases (latest v0.1.1). Today's Small but High-Leverage Utility pick.",
+      "acted_on": false
+    },
+    {
+      "name": "sage-wiki",
+      "slug": "sage-wiki-agent-knowledge-graph",
+      "repo_url": "https://github.com/xoai/sage-wiki",
+      "website": "",
+      "description": "A graph memory and knowledge base that AI agents and humans build and query together: drop in documents, an LLM compiler extracts entities/relations into an interlinked wiki with a knowledge graph, agents query it over MCP (19 tools) while humans browse the same data as Obsidian-native markdown. Optional 'evidenced graph' mode adds typed relations, provenance, confidence scores, and per-fact citations. Single Go binary; scales from a personal vault to a Postgres/pgvector-backed team or company hub.",
+      "category": [
+        "data/search/documents/RAG",
+        "AI & agent infrastructure",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use.",
+      "deployment": [
+        "single Go binary (local)",
+        "self-hosted server",
+        "Docker",
+        "Postgres/pgvector backend for team/company scale"
+      ],
+      "interfaces": [
+        "MCP server (19 tools)",
+        "CLI/TUI",
+        "web UI",
+        "Obsidian-compatible markdown vault"
+      ],
+      "use_cases": [
+        "Drop project docs, call transcripts, and code notes into a personal vault and let agents query it over MCP instead of re-reading raw files every session",
+        "Overlay an existing Obsidian vault and run fully on local models for a zero-cost personal knowledge base",
+        "Share one wiki via git or a self-hosted server as a lightweight, agent-writable team knowledge hub",
+        "Turn on the evidenced-graph passes when an answer needs to cite which source document actually supports it, not just a plausible-looking chunk",
+        "Use `wiki_graph_query` for multi-hop relational questions (e.g. 'what depends on X') that plain vector search answers badly"
+      ],
+      "product_opportunities": [
+        "The compile-once/query-many pattern (ingest -> LLM-extracted graph -> cited answers) is a reusable architecture for any internal 'ask your docs' feature without re-building entity resolution and citation tracking from scratch"
+      ],
+      "agent_opportunities": [
+        "19 MCP tools plus generated agent-skill files that teach an agent when to search vs. capture vs. compile new sources",
+        "Review-gated entity resolution (e.g. 'K8s' and 'Kubernetes' merge only after approval) is a concrete pattern for safe agent-driven data cleanup"
+      ],
+      "alternatives": [
+        "Graphiti (getzep/graphiti, 32k stars) - mainstream real-time knowledge-graph-for-agents library; sage-wiki is narrower (markdown-first, Obsidian-compatible, human-browsable) rather than a general graph-memory SDK",
+        "Plain vector-store RAG over a docs folder - answers single-hop lookups fine but can't do multi-hop relational queries or carry citations the way sage-wiki's evidenced graph does",
+        "Notion/Confluence + a bolted-on AI chat - no native graph structure or agent-write access"
+      ],
+      "why_it_matters": "Most agent-memory tools are either a vector store with no relational structure or a graph database with no human-readable surface. sage-wiki's bet - markdown that's both a human wiki and a compiled knowledge graph queryable by an agent over MCP - is a more honest answer to 'how do I give an agent durable, inspectable memory of my own stuff' than yet another vector DB.",
+      "why_not_build_it_myself": "LLM-driven entity/relation extraction, review-gated entity resolution, provenance-bearing citations, tiered compilation for 100K+ documents, and a dual human/agent interface (Obsidian markdown + MCP) is a multi-week build; here it is a single binary.",
+      "risks": [
+        "stars:watchers ratio is 637:4 (159:1) - elevated versus a typical small project, though 10 contributors, frequent real releases (v0.2.10 to v0.2.12 across two months), and substantive non-templated docs argue against the fake-engagement pattern flagged elsewhere in this catalog; still worth re-checking on next review",
+        "6.5 months old, created 2026-04-04 - emerging rather than proven at scale",
+        "Full evidenced-graph mode (triples + resolution passes) adds one or more LLM calls per document; cost scales with corpus size if not run on local models"
+      ],
+      "first_seen": "2026-10-24",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v0.2.12",
+      "latest_release_date": "2026-10-24",
+      "source_links": [
+        "https://github.com/xoai/sage-wiki",
+        "https://github.com/xoai/sage"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 637 stars, 105 forks, 4 subscribers, 10 contributors, created 2026-04-04, pushed 2026-10-24, not archived. Grown out of Andrej Karpathy's 'LLM-compiled personal knowledge base' idea, built on the author's own Sage agent framework.",
+      "acted_on": false
+    },
+    {
+      "name": "Infino",
+      "slug": "infino-embedded-hybrid-retrieval",
+      "repo_url": "https://github.com/infino-ai/infino",
+      "website": "http://infino.ai",
+      "description": "Embedded retrieval library (Rust, with Python/Node/Rust bindings) providing full-text (BM25), vector, hybrid, and SQL query over a single Parquet-backed table, stored on local disk or object storage. No server process to run; `infino.connect()` in-process, with published warm-latency benchmarks at 1M and 10M documents.",
+      "category": [
+        "data/search/documents/RAG",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted commercial use.",
+      "deployment": [
+        "embedded library (npm/pip/cargo)",
+        "local disk",
+        "object storage (S3-compatible)"
+      ],
+      "interfaces": [
+        "Node.js library (@infino-ai/infino)",
+        "Python library",
+        "Rust crate"
+      ],
+      "use_cases": [
+        "Replace a bolted-together Postgres-FTS-plus-pgvector or Elasticsearch-plus-a-vector-DB combo with one embedded table that does BM25 + vector + SQL together",
+        "Add hybrid search to a small Node/Express service without standing up a separate search cluster",
+        "Store the index as Parquet on S3/R2 for a serverless or multi-instance deployment that needs no persistent search server",
+        "Prototype RAG retrieval locally (`memory://`), then move the same table definition to object storage for production without changing query code"
+      ],
+      "product_opportunities": [
+        "A single `hybrid_search()` call fusing BM25 and vector ranking is the kind of building block that removes a full sprint of search-infra work from any feature that needs 'search my data' in a product"
+      ],
+      "agent_opportunities": [
+        "Lightweight enough to embed directly inside an MCP server or agent tool as the retrieval backend, rather than requiring a networked vector-DB dependency"
+      ],
+      "alternatives": [
+        "pgvector + Postgres full-text search - already free if Postgres is in the stack, but requires running and tuning Postgres as the search layer",
+        "Qdrant/Weaviate/Milvus - full vector-DB servers; more capable at large scale, heavier to run for a single small service",
+        "turbopuffer, Marqo - commercial/cloud-first alternatives doing a similar vector+BM25-on-object-storage design, not self-hostable the same way"
+      ],
+      "why_it_matters": "For a MERN-plus-AWS stack, an embeddable library that does BM25+vector+SQL on plain Parquet (local or S3) removes the need to run and operate a separate search service just to add 'search' or basic RAG retrieval to a side project or product feature.",
+      "why_not_build_it_myself": "Fusing BM25 and ANN vector ranking correctly, with acceptable latency on object storage (not just local disk), is a non-trivial systems problem; published benchmarks (591μs-5ms vector top-10 at 1M-10M docs) show real engineering behind the claim.",
+      "risks": [
+        "Young project (created 2026-05-19), pre-1.0 (v0.11.11) - API surface may still shift",
+        "14 contributors and 139 stars - real but modest adoption so far, limited production track record",
+        "Installs the mimalloc global allocator by default, which needs an explicit opt-out if embedded in a process with its own allocator"
+      ],
+      "first_seen": "2026-10-24",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v0.11.11",
+      "latest_release_date": "2026-10-23",
+      "source_links": [
+        "https://github.com/infino-ai/infino",
+        "https://crates.io/crates/infino",
+        "https://docs.rs/infino"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 139 stars, 26 forks, 1 subscriber, 14 contributors, created 2026-05-19, pushed 2026-10-24, not archived. Published npm (@infino-ai/infino), PyPI (infino), and crates.io (infino) packages confirmed consistent with GitHub release tags.",
+      "acted_on": false
+    },
+    {
+      "name": "oxidize-pdf",
+      "slug": "oxidize-pdf-rust-toolkit",
+      "repo_url": "https://github.com/bzsanti/oxidizePdf",
+      "website": "",
+      "description": "A pure-Rust PDF toolkit (no C bindings, no native crypto library) for generating, parsing, modifying, extracting from, and validating PDFs, including PDF/A validation and digital-signature verification. Includes a `rag_chunks()` method that returns structure-aware chunks (text, page numbers, bounding boxes, element types, heading context, token estimates) for direct use in a RAG ingestion pipeline.",
+      "category": [
+        "data/search/documents/RAG",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use.",
+      "deployment": [
+        "Rust crate (cargo add)",
+        "CLI/sidecar binary for non-Rust stacks"
+      ],
+      "interfaces": [
+        "Rust library",
+        "crates.io package"
+      ],
+      "use_cases": [
+        "Replace a native-dependency PDF library (pdfium, poppler, libreoffice headless) with a dependency-free Rust one where deployment simplicity (single static binary, no C toolchain in the Docker image) matters more than raw feature parity",
+        "Generate structure-aware RAG chunks directly from parsing, instead of parsing with one library and hand-rolling chunk metadata (headings, bounding boxes, token counts) separately",
+        "Run as a small sidecar HTTP/CLI service from a Node/Express backend when PDF generation or structured extraction is needed but the rest of the stack stays JS/TS",
+        "Validate PDF/A compliance or verify digital signatures without shelling out to a Java-based validator"
+      ],
+      "product_opportunities": [
+        "A no-ML, deterministic PDF-to-RAG-chunk pipeline is attractive as an embeddable component inside a document-ingestion product where predictable, auditable output matters more than squeezing out marginal accuracy gains from an LLM-based parser"
+      ],
+      "agent_opportunities": [
+        "Could be wrapped as a small MCP server or CLI tool for an agent that needs to read, generate, or chunk PDFs without pulling in a heavyweight Python/C PDF stack"
+      ],
+      "alternatives": [
+        "pdf-parse / pdf.js (Node) - mature JS-native options, but text extraction only, no structure-aware chunking or PDF/A validation",
+        "PyMuPDF/pdfplumber - stronger parsing fidelity in some cases but require a Python process and native (C) dependencies",
+        "unpdf/undoc (already catalogued) - also Rust-native with npm/WASM bindings; oxidize-pdf's differentiator is also handling PDF *generation* and PDF/A/signature validation, not just extraction"
+      ],
+      "why_it_matters": "A single, dependency-free crate that covers generate/parse/modify/extract/validate removes the need to juggle separate libraries for each PDF operation, and the built-in RAG-chunk output saves hand-building chunk metadata for any document-ingestion pipeline.",
+      "why_not_build_it_myself": "A from-scratch PDF parser/generator with PDF/A validation and signature verification, all without native crypto or C bindings, is months of work; 7,993 tests and a v5.5.1 release history show this has already absorbed a lot of edge-case handling.",
+      "risks": [
+        "No official Node/WASM bindings yet - using it from a JS/TS stack means running it as a Rust binary/sidecar rather than a direct `npm install`",
+        "Page rasterization (rendering to a bitmap) is explicitly out of scope; a separate renderer (e.g. Pdfium) is needed for that use case",
+        "Solo-maintainer-led project (12 contributors, 192 stars) - verify critical-path PDF/A or signature claims against the project's own published claims inventory before relying on them for compliance use"
+      ],
+      "first_seen": "2026-10-24",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v5.5.1",
+      "latest_release_date": "2026-10-23",
+      "source_links": [
+        "https://github.com/bzsanti/oxidizePdf",
+        "https://crates.io/crates/oxidize-pdf",
+        "https://docs.rs/oxidize-pdf"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 192 stars, 27 forks, 3 subscribers, 12 contributors, created 2025-07-07, pushed 2026-10-24, not archived. README links a docs/CLAIMS.md 'claims inventory' documenting evidence/limits for PDF/A and signature support, a notably rigorous practice for a small project.",
+      "acted_on": false
+    },
+    {
+      "name": "Knowhere",
+      "slug": "knowhere-document-intelligence",
+      "repo_url": "https://github.com/Ontos-AI/knowhere",
+      "website": "https://knowhereto.ai",
+      "description": "Document parsing and retrieval system that turns unstructured files (including long/complex PDFs and PowerPoint) into persistent, hierarchy-aware 'memory' for AI agents: dual Vision + Text parsing tracks converge into one schema with citations back to source pages/sections, and an MCP-native 'agent-native retrieval' mode lets an agent decide how to search/traverse/cite rather than running a fixed RAG pipeline.",
+      "category": [
+        "data/search/documents/RAG"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.8,
+      "maturity": "emerging",
+      "integration_effort": "high",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Core `knowhere` repo is Apache-2.0. The companion `knowhere-self-hosted` deployment repo carries no license file of its own (it is a thin Docker-Compose wrapper, not a separate codebase).",
+      "deployment": [
+        "Docker Compose (self-hosted repo)",
+        "managed cloud API (knowhereto.ai)"
+      ],
+      "interfaces": [
+        "REST API",
+        "MCP server",
+        "web dashboard"
+      ],
+      "use_cases": [
+        "Study the dual vision-track/text-track parsing design for documents that mix clean text with scanned pages, tables, and diagrams in the same file",
+        "Reference implementation for 'agent-native retrieval' (agent chooses search/traverse/cite actions against a hierarchy-aware index) versus a fixed retrieve-then-generate pipeline",
+        "Evaluate for ultra-long PDF/atlas-style document ingestion (hundreds of pages) if the external API dependencies below are acceptable"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "MCP-native retrieval tools exposing hierarchy-aware navigation (not just flat chunk search) is a pattern worth copying for any internal document-QA agent tool"
+      ],
+      "alternatives": [
+        "OpenDataLoader PDF, Dedoc, unpdf/undoc (already catalogued) - fully self-contained document-parsing tools with no mandatory third-party API calls",
+        "LlamaParse/LlamaCloud, Mindee, Unstructured - comparable managed document-intelligence APIs, all cloud-first like Knowhere's default path"
+      ],
+      "why_it_matters": "The dual vision+text parsing and agent-native (rather than fixed-pipeline) retrieval design is a genuinely more current take on document RAG than most catalogued parsers, but the documented self-hosted setup requires a MinerU API key for PDF parsing and a DeepSeek or Alibaba Cloud LLM key for the pipeline by default - undercutting the 'self-hosted' pitch for anyone who wants it running without a third-party API dependency.",
+      "why_not_build_it_myself": "Hierarchy reconstruction plus a unified vision/text schema plus agent-native MCP retrieval tools is a substantial build; this is worth reading as a reference even if the hosted dependency rules out direct adoption today.",
+      "risks": [
+        "AGENT.md quality filter: 'open-source' products functionally unusable without proprietary infrastructure should be penalized - Knowhere's documented self-hosted path defaults to the MinerU cloud API for PDF parsing and DeepSeek/Alibaba for the LLM pipeline; a fully local path would require swapping in a custom parser and local LLM, which the README allows for but does not document end-to-end",
+        "stars:subscribers ratio is 3,756:84 (44:1) - not as extreme as prior flagged fraud cases but on the higher side; 338 forks and 9 contributors argue for real engagement rather than inflation",
+        "Company pushes a managed-cloud free-credits offer prominently in the README, consistent with an open-core go-to-market rather than a community-first OSS project"
+      ],
+      "first_seen": "2026-10-24",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v1.2.30",
+      "latest_release_date": "2026-10-24",
+      "source_links": [
+        "https://github.com/Ontos-AI/knowhere",
+        "https://github.com/Ontos-AI/knowhere-self-hosted",
+        "https://docs.knowhereto.ai/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0 (core repo), 3,756 stars, 338 forks, 84 subscribers, 9 contributors, created 2026-04-30, pushed 2026-10-24, not archived. Self-hosted companion repo confirmed to require MINERU_API_KEYS plus a DeepSeek or DashScope LLM key by default via its own README.",
+      "acted_on": false
+    },
+    {
+      "name": "chunklet-py",
+      "slug": "chunklet-py-text-chunker",
+      "repo_url": "https://github.com/speedyk-005/chunklet-py",
+      "website": "https://speedyk-005.github.io/chunklet-py/",
+      "description": "Python text-splitting library for RAG/LLM pipelines that chunks by natural boundaries (sentence, paragraph, code structure) rather than raw character counts, with automatic language detection across 60+ languages, configurable token/line/function limits, chunk overlap, and rich per-chunk metadata (source, span, document structure).",
+      "category": [
+        "data/search/documents/RAG"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, unrestricted commercial use.",
+      "deployment": [
+        "pip install (Python library)"
+      ],
+      "interfaces": [
+        "Python library",
+        "PyPI package"
+      ],
+      "use_cases": [
+        "Replace a hand-rolled character-count text splitter in a Python RAG pipeline with one that respects sentence/paragraph/code boundaries and tracks source spans for citations",
+        "Chunk mixed-language document sets without writing per-language splitting rules",
+        "Chunk source code by function/class boundaries rather than arbitrary line counts when feeding code into an LLM context window"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "A reliable, boundary-aware chunker is a small but recurring dependency in any document-ingestion or RAG agent tool"
+      ],
+      "alternatives": [
+        "LangChain's text splitters - more features bundled with the rest of LangChain's surface area; this is a standalone, lighter dependency if LangChain itself is not already in use",
+        "Hand-rolled regex/character-count splitting - the status quo this directly replaces"
+      ],
+      "why_it_matters": "Text chunking is one of those small jobs every RAG pipeline reinvents badly; a focused, well-tested (passing CI, coverage-tracked) library for it removes a recurring, easy-to-get-subtly-wrong piece of plumbing.",
+      "why_not_build_it_myself": "Correct sentence/paragraph boundary detection across 60+ languages plus code-aware chunking is more surface area than is worth hand-rolling for one project.",
+      "risks": [
+        "88 stars, 3 subscribers, 4 forks - small, early-stage user base",
+        "v3 release notes flag breaking changes from v2 - API not yet fully stable",
+        "Python-only - using it from a Node/TS stack means a subprocess or microservice call, not a direct import"
+      ],
+      "first_seen": "2026-10-24",
+      "last_reviewed": "2026-10-24",
+      "last_meaningful_update": "2026-10-24",
+      "current_version": "v3.0.1",
+      "latest_release_date": "2026-10-01",
+      "source_links": [
+        "https://github.com/speedyk-005/chunklet-py",
+        "https://pypi.org/project/chunklet-py"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 88 stars, 4 forks, 3 subscribers, created 2025-07-22, pushed 2026-10-24, not archived. Today's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]

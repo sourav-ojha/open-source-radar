@@ -48,3 +48,9 @@ AGPL-3.0. AGPL-3.0 — flagged loudly per AGENT.md: fine for internal self-hoste
 ## Change History
 ### 2026-09-02
 First discovered and reviewed. Verified via GitHub API: license AGPL-3.0, current version v0.8.0 (2026-07-05).
+
+### 2026-10-24
+Meaningful update: v0.8.0 → v0.11.0. v0.10.0 added Sheets, a new collaborative spreadsheet
+document type alongside the existing markdown docs (full-page grid editor, live cell presence) —
+a genuine expansion of what the wiki can hold, not a bug-fix release. v0.11.0 adds self-hosted
+instance update notifications for admins. Stars grew 57 → 85. License and status unchanged.

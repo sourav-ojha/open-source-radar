@@ -48,3 +48,12 @@ PROTOTYPE — a small, well-engineered utility solving a real and specific probl
 ## Change History
 ### 2026-10-10
 Discovered via GitHub search (slot 4: data, search, documents, RAG). First catalog entry.
+
+### 2026-10-24
+Meaningful update: v1.3.0 → v1.10.0 (8 releases in 10 days). Now publishes BIRD Mini-Dev EX
+benchmark scores (SQLite 81.0 / PostgreSQL 72.6 / MySQL 72.4) and a UniQL Oracle score (64.5%
+first try) as badges, ships an in-browser demo requiring no install/database/model call, and adds
+a "Coming from Vanna" comparison doc positioning it directly against the mainstream text-to-SQL
+tool. Stars grew 8 → 105. The MCP Registry listing noted in the original entry was already in
+place, not new. Still solo-maintained Apache-2.0; score bumped 7.8 → 8.0 on the strength of the
+published, independently-reproducible benchmark numbers.
