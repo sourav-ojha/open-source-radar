@@ -239,3 +239,7 @@
 {"slug": "oxidize-pdf-rust-toolkit", "repo_url": "https://github.com/bzsanti/oxidizePdf", "name": "oxidize-pdf", "status": "PROTOTYPE", "score": 7.6, "last_reviewed": "2026-10-24", "current_version": "v5.5.1", "aliases": []}
 {"slug": "knowhere-document-intelligence", "repo_url": "https://github.com/Ontos-AI/knowhere", "name": "Knowhere", "status": "STUDY", "score": 6.8, "last_reviewed": "2026-10-24", "current_version": "v1.2.30", "aliases": []}
 {"slug": "chunklet-py-text-chunker", "repo_url": "https://github.com/speedyk-005/chunklet-py", "name": "chunklet-py", "status": "PROTOTYPE", "score": 6.9, "last_reviewed": "2026-10-24", "current_version": "v3.0.1", "aliases": []}
+{"slug":"keygate-license-management","repo_url":"https://github.com/tabloy/keygate","name":"Keygate","status":"PROTOTYPE","score":8.0,"last_reviewed":"2026-10-25","current_version":"v0.1.16","aliases":[]}
+{"slug":"atomic-semantic-knowledge-base","repo_url":"https://github.com/kenforthewin/atomic","name":"Atomic","status":"PROTOTYPE","score":7.5,"last_reviewed":"2026-10-25","current_version":"v1.45.0","aliases":[]}
+{"slug":"shoutrrr-social-scheduler","repo_url":"https://github.com/coollabsio/shoutrrr","name":"Shoutrrr","status":"PROTOTYPE","score":6.8,"last_reviewed":"2026-10-25","current_version":"v1.5.7","aliases":[]}
+{"slug":"brief-project-toolchain-detector","repo_url":"https://github.com/git-pkgs/brief","name":"brief","status":"USE NOW","score":7.2,"last_reviewed":"2026-10-25","current_version":"v0.14.2","aliases":[]}
