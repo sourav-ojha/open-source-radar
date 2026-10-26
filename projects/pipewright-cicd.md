@@ -23,6 +23,8 @@ Could replace ad hoc EC2/EB/ALB deploy scripting for small side-project or clien
 ## Agent / Automation Opportunities
 Optional AI assist for failure diagnosis, repo-analysis-to-pipeline-draft, and a natural-language-to-shell assistant in the ops terminal — all explicitly degradable, core CI/CD does not depend on them.
 
+**2026-10-26 update:** v1.9.0 added an MCP server embedded in the Pipewright binary itself (shares its port, no separate deployment). It exposes project/pipeline queries, pipeline triggering, and run/deployment history to any MCP-aware agent, with read-only-by-default, expiring, project-scoped tokens. v1.9.2 extended this to agent-proposed pipeline/project configuration changes, gated behind a required manual web approval before anything is applied — a sensible pattern for giving a coding agent write access to CI/CD config without full trust.
+
 ## Integration
 Single static binary; Docker is only required for isolated builds/container deployment (without it, builds degrade to a stub runner). Console, SSH deployment, and notifications work without Docker. Integration effort: **Low**.
 
@@ -49,3 +51,6 @@ PROTOTYPE — the scope and packaging are genuinely differentiated, but low cont
 ## Change History
 ### 2026-09-07
 Initial discovery and review. Slot 6 (infrastructure, observability, deployment) run.
+
+### 2026-10-26
+Meaningful update. v1.9.0 added an MCP server embedded directly in the Pipewright binary (no separate deployment) — query projects/pipelines, trigger authorized pipelines, read run/deployment history; project-scoped MCP tokens default to read-only with explicit, expiring trigger permission. v1.9.2 extended this to MCP-driven pipeline/project configuration changes, gated behind a web-based manual-approval step. v1.9.3+ added "release safeguarding": a manual 5/10/15-minute read-only post-deploy health observation (image version, container liveness, restarts, Docker health) with an optional evidence-cited AI explanation generated only on explicit per-use consent. Grew from 34 to 131 stars since the first review but still only 2 contributors — bus-factor risk unchanged. Score raised 7.5 → 7.9.

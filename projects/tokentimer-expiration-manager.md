@@ -84,3 +84,6 @@ certificate-deployment access.
 ## Change History
 ### 2026-09-17
 Initial discovery and cataloguing.
+
+### 2026-10-26
+Meaningful update. v0.18.0 added guided Vault-backed certificate distribution and Active Directory Certificate Services (AD CS) enrollment for Windows/IIS machines, extending CertOps beyond ACME/DNS-01 into enterprise/Windows PKI environments a client might actually run — a genuine scope expansion, not a routine patch. Grew from 43 to 57 stars with 7 contributors (up from a thinner base at first review). Score raised 7.5 → 7.6.
