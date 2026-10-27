@@ -246,3 +246,7 @@
 {"slug": "formae-iac-discovery", "repo_url": "https://github.com/platform-engineering-labs/formae", "name": "formae", "status": "PROTOTYPE", "score": 8.2, "last_reviewed": "2026-10-26", "current_version": "0.90.5", "aliases": []}
 {"slug": "nora-artifact-registry", "repo_url": "https://github.com/getnora-io/nora", "name": "Nora", "status": "PROTOTYPE", "score": 7.8, "last_reviewed": "2026-10-26", "current_version": "v1.4.2", "aliases": []}
 {"slug": "dopbase-secrets-manager", "repo_url": "https://github.com/dopbase/dopbase", "name": "Dopbase", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-10-26", "current_version": "0.1.10", "aliases": []}
+{"slug": "detest-go-deterministic-simulation-testing", "repo_url": "https://github.com/k1LoW/detest", "name": "detest", "status": "STUDY", "score": 7.0, "last_reviewed": "2026-10-27", "current_version": "v0.9.0", "aliases": []}
+{"slug": "rostam-vector-kv-engine", "repo_url": "https://github.com/rostamlabs/rostam", "name": "Rostam", "status": "PROTOTYPE", "score": 7.4, "last_reviewed": "2026-10-27", "current_version": "v0.7.0", "aliases": []}
+{"slug": "guardianwaf-self-hosted-waf", "repo_url": "https://github.com/GuardianWAF/GuardianWAF", "name": "GuardianWAF", "status": "PROTOTYPE", "score": 7.5, "last_reviewed": "2026-10-27", "current_version": "v0.5.0", "aliases": []}
+{"slug": "shopnex-self-hosted-ecommerce", "repo_url": "https://github.com/shopnex-ai/shopnex", "name": "Shopnex", "status": "PROTOTYPE", "score": 7.3, "last_reviewed": "2026-10-27", "current_version": "v0.8.0", "aliases": []}

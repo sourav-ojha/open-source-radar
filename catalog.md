@@ -1,6 +1,6 @@
 # Catalog
 
-_248 projects tracked. Last updated 2026-10-26._
+_252 projects tracked. Last updated 2026-10-27._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -174,6 +174,7 @@ _248 projects tracked. Last updated 2026-10-26._
 | [Simple Relay](https://github.com/simple-relay/simple-relay) | PROTOTYPE | 7.5/10 | product building blocks, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [mutator](https://github.com/unclebob/mutator) | STUDY | 7.5/10 | developer productivity, testing, code quality | 0BSD | medium | 2026-10-23 |
 | [Atomic](https://github.com/kenforthewin/atomic) | PROTOTYPE | 7.5/10 | self-hosted SaaS alternatives, data/search/documents/RAG, AI & agent infrastructure | MIT | low | 2026-10-25 |
+| [GuardianWAF](https://github.com/GuardianWAF/GuardianWAF) | PROTOTYPE | 7.5/10 | security tooling, product infrastructure, self-hosted SaaS alternative | MIT | low | 2026-10-27 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
@@ -186,6 +187,7 @@ _248 projects tracked. Last updated 2026-10-26._
 | [MongoRescue](https://github.com/YigitCittan/mongorescue) | PROTOTYPE | 7.4/10 | product building blocks, infrastructure, database tooling | MIT | low | 2026-10-05 |
 | [AgentOS (framerslab)](https://github.com/framerslab/agentos) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, product building blocks | Apache-2.0 | low | 2026-10-07 |
 | [ai-coding-project-boilerplate](https://github.com/shinpr/ai-coding-project-boilerplate) | PROTOTYPE | 7.4/10 | developer productivity, AI & agent infrastructure | MIT | low | 2026-10-21 |
+| [Rostam](https://github.com/rostamlabs/rostam) | PROTOTYPE | 7.4/10 | data infrastructure, vector database, AI agent infrastructure | Apache-2.0 | medium | 2026-10-27 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-24 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |
@@ -197,6 +199,7 @@ _248 projects tracked. Last updated 2026-10-26._
 | [commit-check](https://github.com/commit-check/commit-check) | USE NOW | 7.3/10 | developer productivity, CI/CD, small high-leverage utilities | MIT | low | 2026-10-16 |
 | [ActionRepro](https://github.com/Krem24919/ActionRepro) | PROTOTYPE | 7.3/10 | developer productivity, CI/CD, debugging | MIT | low | 2026-10-23 |
 | [Dopbase](https://github.com/dopbase/dopbase) | PROTOTYPE | 7.3/10 | product infrastructure, secrets management, security tooling | Apache-2.0 | low | 2026-10-26 |
+| [Shopnex](https://github.com/shopnex-ai/shopnex) | PROTOTYPE | 7.3/10 | product infrastructure, e-commerce, self-hosted SaaS alternative | MIT | medium | 2026-10-27 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
@@ -227,6 +230,7 @@ _248 projects tracked. Last updated 2026-10-26._
 | [OpenKruise Agents](https://github.com/openkruise/agents) | STUDY | 7.0/10 | AI & agent infrastructure, infrastructure, self-hosted SaaS alternatives | Apache-2.0 | high | 2026-10-20 |
 | [DaloyJS](https://github.com/daloyjs/daloy) | STUDY | 7.0/10 | product building blocks, developer productivity | MIT | medium | 2026-10-22 |
 | [chaski](https://github.com/home-operations/chaski) | PROTOTYPE | 7.0/10 | product building blocks, infrastructure | AGPL-3.0 | low | 2026-10-22 |
+| [detest](https://github.com/k1LoW/detest) | STUDY | 7.0/10 | developer productivity, testing, architecture pattern | MIT | low | 2026-10-27 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
