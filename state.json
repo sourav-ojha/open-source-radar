@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-27",
-  "last_successful_run": "2026-10-27",
-  "run_count": 58,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-10-28",
+  "last_successful_run": "2026-10-28",
+  "run_count": 59,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -67,29 +67,10 @@
     "data/search/documents/RAG (slot 4) \u2014 a markdown-native graph memory agents and humans build and query together over MCP, with an opt-in evidenced/cited mode (sage-wiki), an embedded Parquet-backed BM25+vector+SQL retrieval library with npm/pip/cargo bindings (Infino), a pure-Rust dependency-free PDF toolkit with built-in structure-aware RAG chunking (oxidize-pdf), and a document-intelligence platform with a genuinely newer dual vision+text parsing architecture whose documented self-hosted path depends on the MinerU API plus a DeepSeek/Alibaba LLM key by default (Knowhere, filed STUDY rather than PROTOTYPE on that basis). schemagate's jump from v1.3.0/8 stars to v1.10.0/105 stars brought published BIRD Mini-Dev EX and UniQL Oracle benchmark scores and an in-browser demo \u2014 a meaningful update. Headroom (v0.37.0->v0.41.0, 72k->77.7k stars) gained a native Google Antigravity IDE integration and, more notably, an opt-in usage-reporting/HEADROOM_LICENSE mechanism in v0.40.0 \u2014 the first visible sign of a commercial layer next to the still-Apache-2.0 OSS core. Tela (v0.8.0->v0.11.0) added a new collaborative Sheets document type. chunklet-py (language-aware RAG text chunker, 60+ languages) was today's Small but High-Leverage Utility. Noted a new recurring noise pattern: api-evangelist/* repos are third-party descriptive profiles of other companies' public APIs (Mindee, LlamaParse, turbopuffer, Marqo, Scale AI, Snowplow, etc.), not real tools, and should be skipped on sight going forward. Rejected the near-total wave of zero-star same-hour RAG/vector-search/document- parsing student repos from today's generic keyword searches, and excluded getzep/graphiti (32k stars) and cube-js/cube (21k stars) as already past the household-name threshold. 'Still Worth Trying' rotated to pgschema, agentOS (Rivet), and Destructive Command Guard \u2014 none used in the four immediately preceding rotations.",
     "self-hosted SaaS alternatives / productivity (slot 5) \u2014 a self-hosted software license-management + Stripe billing + auto-update-feed backend aimed squarely at indie/SaaS developers shipping a paid product (Keygate), a notably more mature-than-usual self-hosted semantic personal knowledge base with LLM wiki synthesis and a paid cloud tier proving sustainability (Atomic), and a second, more credibly-backed entrant (Coolify's team) in the self-hosted social-scheduler niche already covered by the catalogued BrightBean Studio (Shoutrrr, PHP/Laravel, narrower feature set, simpler single-container deploy); a single-binary project-toolchain/dependency detector built explicitly for coding-agent bootstrap and PTaaS-style first-pass threat-modeling (brief, git-pkgs) was today's Small but High-Leverage Utility. Held Dayotter (AI-native Calendly alternative, 49 stars, too new/thin) and DocsMint (agent+human knowledge base with MCP/REST/SDK/CLI, Apache-2.0, Bun/Svelte/TS stack) to Worth Watching \u2014 DocsMint pitches almost the same agent-plus-human-knowledge-base idea as yesterday's freshly catalogued sage-wiki and needs another cycle to show independent differentiation. Reconfirmed the prior suspicious-growth rejection of tianma-if/edgeever (now 2,583 stars, same fork/star-ratio red flag) and excluded HKUDS/nanobot (49.3k stars, academic org, 8 months old) as already past the mainstream/household-name threshold for self-hosted agent frameworks. Rejected a thin self-hosted-PaaS entrant (glincker/levelrail, 1 subscriber vs 12 forks, saturated niche) and two low-signal subscription-management repos (Wondermove-Inc/saaslens \u2014 stale since July; suyijun8182/easysub \u2014 generic, 0 subscribers). 'Still Worth Trying' rotated to OpenDataLoader PDF, Graphify, and agent-device \u2014 none used in the five immediately preceding rotations.",
     "infrastructure/observability/deployment (slot 6) \u2014 a stateless, discovery-first infrastructure-as-code tool with a native MCP server for AI agents (formae, FSL-1.1-ALv2 license flagged), a lightweight no-database self-hosted artifact registry/pull-through cache compared directly against the already-catalogued Artifact Keeper (Nora), and a single-file self-hosted secrets manager explicitly positioned against Vault/OpenBao's operational weight (Dopbase). Pipewright (v1.5.3->v1.9.5) and TokenTimer (v0.16.1->v0.18.1) both had meaningful updates: Pipewright added an embedded, approval-gated MCP server plus an automated post-deploy health-verification ('release safeguarding') feature; TokenTimer added Vault-backed certificate distribution and AD CS/Windows-IIS enrollment. Held an early-alpha FinOps safe-rightsizing control plane (Consize, Kubernetes+Prometheus only so far) and an eBPF ransomware-detection agent with a self-contradictory free-vs-commercial-tier README claim (Talus) to Worth Watching. Rejected a same-week attack-surface-management/CTEM hype wave (openctemio/openctem most complete but thin, TurlaFSB/ASM-, lunafox, nous, exact-surface all under 60 stars with no standout), antgroup/CloudRec as a weaker-differentiated duplicate of the already-catalogued Cynative in the CSPM niche, kubeopt as a stale duplicate of Consize's FinOps niche, and pinkpixel-dev/keyper plus roxy-wi/RMON for thin traction and non-OSI licensing (Elastic License 2.0 on RMON). vps_pilot (single Go binary + tiny Rust agent VPS dashboard) was today's Small but High-Leverage Utility.",
-    "experimental/hidden gems (slot 7) \u2014 an in-process Deterministic Simulation Testing framework for Go built on testing/synctest and stateless model checking, from a credible prolific Go OSS author (k1LoW/detest, 0 stars, catalogued on architecture merit not traction), an embeddable Go engine combining a vector DB (HNSW/IVF/Vamana) and a sub-microsecond KV store behind one interface with an MCP server for agent memory (rostamlabs/rostam, Apache-2.0, beta, self-reported benchmarks explicitly caveated by its own authors), a zero-dependency single-binary Go WAF with tokenizer-based cumulative threat scoring and a 44-tool MCP server, directly relevant to the MSSP/PTaaS secondary context (GuardianWAF, MIT core with planned future commercial cluster tier), and a Node/Postgres self-hosted Shopify alternative with a Shopify-aligned Storefront API and an out-of-process app-marketplace SDK (shopnex-ai/shopnex, MIT). vertti/preflight (single-binary container/CI validation toolkit: command/env/file/HTTP/TCP/checksum checks) was today's Small but High-Leverage Utility. A same-day GitHub 'self-hosted alternative' keyword search surfaced a wave of near-identical repos (openma-ai/open-managed-agents 338\u2605/1 subscriber, SourceWeft 329\u2605/2 subscribers, Kabanya/Pomodoist 454\u2605/3 subscribers, plus several 'local-first AI workspace' repos \u2014 LodyAI/Lody 1572\u2605/5 subs, zhitongblog/solomd 1393\u2605/6 subs, glanderness/BeefTV 1887\u2605/12 subs, ai4s-research/open-science 2046\u2605/6 subs, ling-stack-org/ling-stack 996\u2605/0 subs) all showing star:subscriber ratios from ~150:1 to effectively infinite \u2014 reconfirmed the inflated-engagement pattern flagged in prior runs and excluded all of them. 'Still Worth Trying' rotated to nono, ctx, and SnapOtter \u2014 none used in the eight immediately preceding rotations."
+    "experimental/hidden gems (slot 7) \u2014 an in-process Deterministic Simulation Testing framework for Go built on testing/synctest and stateless model checking, from a credible prolific Go OSS author (k1LoW/detest, 0 stars, catalogued on architecture merit not traction), an embeddable Go engine combining a vector DB (HNSW/IVF/Vamana) and a sub-microsecond KV store behind one interface with an MCP server for agent memory (rostamlabs/rostam, Apache-2.0, beta, self-reported benchmarks explicitly caveated by its own authors), a zero-dependency single-binary Go WAF with tokenizer-based cumulative threat scoring and a 44-tool MCP server, directly relevant to the MSSP/PTaaS secondary context (GuardianWAF, MIT core with planned future commercial cluster tier), and a Node/Postgres self-hosted Shopify alternative with a Shopify-aligned Storefront API and an out-of-process app-marketplace SDK (shopnex-ai/shopnex, MIT). vertti/preflight (single-binary container/CI validation toolkit: command/env/file/HTTP/TCP/checksum checks) was today's Small but High-Leverage Utility. A same-day GitHub 'self-hosted alternative' keyword search surfaced a wave of near-identical repos (openma-ai/open-managed-agents 338\u2605/1 subscriber, SourceWeft 329\u2605/2 subscribers, Kabanya/Pomodoist 454\u2605/3 subscribers, plus several 'local-first AI workspace' repos \u2014 LodyAI/Lody 1572\u2605/5 subs, zhitongblog/solomd 1393\u2605/6 subs, glanderness/BeefTV 1887\u2605/12 subs, ai4s-research/open-science 2046\u2605/6 subs, ling-stack-org/ling-stack 996\u2605/0 subs) all showing star:subscriber ratios from ~150:1 to effectively infinite \u2014 reconfirmed the inflated-engagement pattern flagged in prior runs and excluded all of them. 'Still Worth Trying' rotated to nono, ctx, and SnapOtter \u2014 none used in the eight immediately preceding rotations.",
+    "AI agents/MCP/coding productivity (slot 1) \u2014 a crowdsourced, evidence-graded corpus of coding-agent failure/fix lessons served over MCP (MisakaNet, 543 stars, Apache-2.0), a 28-package/240-tool MCP wrapper suite replacing raw CLI output with structured JSON to cut agent context spend (Pare), and a statement-level policy/masking/audit gateway for AI-agent access to Postgres (Midplane, very early but directly relevant to the MSSP/PTaaS context). Paseo (v0.12.0->v0.14.0-beta.1, cross-machine agent delegation via `host add` over SSH/relay) and schemagate (v1.10.0->v1.14.0, LlamaIndex integration plus a new deep_answer MCP tool) both had meaningful updates. Rejected a confirmed template-spam wave of near-identical 'genpark-*' agent-governance skill repos duplicated across two GitHub orgs (alphaparkinc/Alpha-Park), each sitting at exactly 7 stars with marketing-heavy, substance-light READMEs; reconfirmed the ongoing oversaturation of generic 'coding agent orchestration'/'agent sandbox' GitHub search results (git-worktree-per-agent managers, desktop multi-agent cockpits) with no new standout. Held Qsnh/skillsgist (self-hosted Agent Skills registry), david-engelmann/maidan (agent-swarm task queue with results delivered to GitHub/Slack/Linear), and kitepon/aiterm-mcp (tmux-backed MCP terminal that launches other coding agents) to Worth Watching as too thin for a full catalog entry. 'Still Worth Trying' rotated to Xberg, Bernstein, and Beads \u2014 none used in the five immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "keploy/keploy",
-    "reticlehq/reticle",
-    "cypress-io/cypress",
-    "jbunds/coverage",
-    "testdriverai/testdriverai",
-    "ArnaudBuchholz/ui5-test-runner",
-    "Slaviors-Group/dawg",
-    "danuez/data",
-    "zemanlx/kat",
-    "scrutinydebugger/scrutiny-main",
-    "gtramontina/ooze",
-    "Fast-meadowvole9864/Strategy-Factory",
-    "tinymce/bedrock",
-    "stryker-mutator/weapon-regex",
-    "typelate/dom",
-    "alexandrmotologa/mock-api-py",
-    "rowhitswami/flakestat",
-    "aldanedev-create/flaxon",
-    "nose-devs/nose2",
-    "viktor-podzigun/eventually",
     "radekBednarik/pairwise-tui",
     "gechandesu/httest",
     "BhagyasriUddandam/evallint",
@@ -1569,7 +1550,27 @@
     "SourceWeft/SourceWeft",
     "qauth-labs/qauth",
     "Kabanya/Pomodoist",
-    "tabloy/keygate"
+    "tabloy/keygate",
+    "Ikalus1988/MisakaNet",
+    "Dave-London/Pare",
+    "midplaneai/midplane",
+    "Qsnh/skillsgist",
+    "HasanKhatib/hikma-ai",
+    "RavaniRoshan/skillproof",
+    "david-engelmann/maidan",
+    "kitepon/aiterm-mcp",
+    "elsechord/CyberGuard",
+    "alphaparkinc/genpark-autonomous-ai-fleet-governance-circuit-breaker-skill",
+    "alphaparkinc/genpark-agent-api-governance-and-rbac-policy-proxy-skill",
+    "alphaparkinc/genpark-enterprise-merkle-audit-proof-anchor-skill",
+    "alphaparkinc/genpark-agentic-recurrent-subscription-autopilot-skill",
+    "alphaparkinc/genpark-enterprise-context-permission-boundary-auditor-skill",
+    "alphaparkinc/genpark-agentic-operational-cost-and-token-auditor-skill",
+    "alphaparkinc/genpark-enterprise-compliance-pii-redaction-sentinel-skill",
+    "vks-forge/forge",
+    "SakanaAI/AI-Scientist-v3",
+    "HexaDev-De/Swarm",
+    "monochrome-muncher/hivemind"
   ],
   "rejected": [
     {
@@ -2806,6 +2807,16 @@
       "repo_url": "https://github.com/zizq-labs/zizq",
       "reason": "thin signal \u2014 single-binary job queue server, NOASSERTION license, 30 stars/0 subscribers/0 forks",
       "date": "2026-10-27"
+    },
+    {
+      "repo_url": "https://github.com/alphaparkinc/genpark-autonomous-ai-fleet-governance-circuit-breaker-skill",
+      "reason": "template-spam \u2014 identical 'genpark-*' agent-governance skill posted under both alphaparkinc and Alpha-Park orgs, exactly 7 stars, marketing copy ('Century Milestone Master Controller') with no substantive implementation shown",
+      "date": "2026-10-28"
+    },
+    {
+      "repo_url": "https://github.com/david-engelmann/maidan",
+      "reason": "thin traction \u2014 agent-swarm coordination layer with a genuinely distinct 'results to GitHub/Slack/Linear' angle, but 0 subscribers and 39 open issues against 7 stars; held to Worth Watching",
+      "date": "2026-10-28"
     }
   ],
   "known_releases": {
@@ -3390,8 +3401,8 @@
       "date": "2026-09-22"
     },
     "getpaseo/paseo": {
-      "version": "v0.12.0",
-      "date": "2026-10-19"
+      "version": "v0.14.0-beta.1",
+      "date": "2026-10-27"
     },
     "PrismorSec/prismor": {
       "version": "v1.59.0",
@@ -3694,8 +3705,8 @@
       "date": "2026-08-29"
     },
     "ashishsinha1602/schemagate": {
-      "version": "v1.10.0",
-      "date": "2026-10-20"
+      "version": "v1.14.0",
+      "date": "2026-10-27"
     },
     "cocoindex-io/cocoindex-code": {
       "version": "v0.2.42",
@@ -3904,16 +3915,28 @@
     "shopnex-ai/shopnex": {
       "version": "v0.8.0",
       "date": "2026-10-24"
+    },
+    "Ikalus1988/MisakaNet": {
+      "version": "v2.50.1",
+      "date": "2026-10-25"
+    },
+    "Dave-London/Pare": {
+      "version": "@paretools/test@0.23.3",
+      "date": "2026-10-19"
+    },
+    "midplaneai/midplane": {
+      "version": "v0.23.0",
+      "date": "2026-10-27"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-10-25",
-      "note": "generic 'Show HN self-hosted SaaS alternative' query returned stale/unrelated results again; targeted queries combining a specific product category plus a feature term (e.g. license management + Stripe) worked better than broad self-hosted-SaaS phrasing."
+      "last_ok": "2026-10-28",
+      "note": "generic 'Show HN MCP server' and 'new Claude Code skill this week' queries again returned mostly undated directory/aggregator pages rather than dated launches; targeted GitHub API searches by topic/keyword with a created:/pushed: date filter were far more useful for finding genuinely new repos than WebSearch this run."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-27",
-      "note": "fetched READMEs for k1LoW/detest, rostamlabs/rostam, GuardianWAF/GuardianWAF, shopnex-ai/shopnex, vertti/preflight directly \u2014 all license fields matched what the GitHub API reported (MIT/Apache-2.0), no NOASSERTION mismatches found this run."
+      "last_ok": "2026-10-28",
+      "note": "fetched READMEs for MisakaNet, Pare, and Midplane directly \u2014 all license fields matched the GitHub API (Apache-2.0 / MIT / MIT)."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -3928,8 +3951,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-27",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used (8350/hr limit, 0 used at start). ~10 search/repositories queries across local-first, deterministic-simulation-testing, single-binary/zero-dependency, embedded-database, effect-system, chaos-engineering, and self-hosted-alternative keyword searches, plus repos/releases checks on ~15 candidates. Confirmed the recurring star:subscriber inflated-engagement pattern again today across a same-day wave of 'local-first AI workspace' and 'self-hosted X alternative' repos."
+      "last_ok": "2026-10-28",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used (8350/hr limit, 0 used at start). ~6 search/repositories queries (mcp-server topic, coding-agent orchestration, MCP governance, agent skill registry) plus repos/releases checks on ~16 candidates and 5 already-tracked projects (Paseo, Bernstein, SkillSpector, ChunkHound, Planning with Files, Destructive Command Guard, Beads, agentOS, NestLens, Headroom, schemagate, TokenTimer, Pipewright). Confirmed a template-spam pattern (identical repos, identical star counts) across two GitHub orgs."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-22",
@@ -4015,8 +4038,11 @@
     "detest (k1LoW) - STUDY - 2026-10-27",
     "Rostam (rostamlabs) - PROTOTYPE - 2026-10-27",
     "GuardianWAF - PROTOTYPE - 2026-10-27",
-    "Shopnex (shopnex-ai) - PROTOTYPE - 2026-10-27"
+    "Shopnex (shopnex-ai) - PROTOTYPE - 2026-10-27",
+    "MisakaNet (Ikalus1988) - PROTOTYPE - 2026-10-28",
+    "Pare (Dave-London) - PROTOTYPE - 2026-10-28",
+    "Midplane (midplaneai) - PROTOTYPE - 2026-10-28"
   ],
-  "notes": "2026-10-27: Slot 7 (experimental projects and hidden gems) per day_of_year 300 % 7 + 1 = 7. Catalogued 4 new: detest (k1LoW/detest, MIT, 7.0, STUDY) \u2014 an in-process Deterministic Simulation Testing framework for Go built on testing/synctest, bringing a FoundationDB/TigerBeetle-style technique to ordinary application code by simulating at client-library boundaries (database/sql, http.RoundTripper) rather than requiring a bespoke runtime; 0 stars/0 subscribers but catalogued on the author's track record (k1LoW: tbls, runn, octocov) and genuine architectural novelty \u2014 filed STUDY rather than PROTOTYPE since it's Go-only and this profile is primarily Node/Mongo. Rostam (rostamlabs/rostam, Apache-2.0, 7.4, PROTOTYPE) \u2014 an embeddable Go engine combining a vector database (HNSW/IVF/Vamana) and a sub-microsecond KV store behind one interface, usable as a library, standalone server, or Raft cluster, with an MCP server for agent memory; beta, very small team (37 stars/1 subscriber) for an ambitious scope, and its own benchmark page explicitly caveats the headline Milvus/pgvector/Qdrant comparison numbers as non-reproduced same-session results. GuardianWAF (GuardianWAF/GuardianWAF, MIT core, 7.5, PROTOTYPE) \u2014 a zero-dependency single-binary Go WAF using tokenizer-based cumulative threat scoring instead of regex rules, deployable as a proxy, Go library middleware, or sidecar, with SIEM export and a 44-tool MCP server; directly relevant to the MSSP/PTaaS secondary context, single-maintainer risk, cluster mode flagged as a planned future commercial tier. Shopnex (shopnex-ai/shopnex, MIT, 7.3, PROTOTYPE) \u2014 a self-hosted Shopify alternative on Node/pnpm/Postgres with an Astro storefront, a Shopify-aligned Storefront API, Liquid themes, and an out-of-process app-marketplace SDK; squarely in-stack, but no production-readiness statement and an explicit 'claim your fresh install immediately' security caveat in its own docs. A same-day GitHub 'self-hosted alternative' and 'local-first' keyword search surfaced a large wave of repos with star:subscriber ratios from ~115:1 to effectively infinite (openma-ai/open-managed-agents, SourceWeft, Kabanya/Pomodoist, LodyAI/Lody, zhitongblog/solomd, glanderness/BeefTV, ai4s-research/open-science, ling-stack-org/ling-stack) \u2014 reconfirmed the inflated-engagement pattern flagged in prior runs and excluded the whole wave rather than spending review budget on any single one. Held Dicklesworthstone/frankengraphdb (new entry in the author's prolific 'Franken' series, NOASSERTION license, 0 subscribers) and zizq-labs/zizq (single-binary job queue, NOASSERTION, 0 subscribers) out as too thin this run. Rejected qauth-labs/qauth as a saturated/excluded Keycloak-alternative niche entrant with an unusual 267-open-issues-vs-26-stars ratio. vertti/preflight (single-binary container/CI validation toolkit \u2014 command/env/file/HTTP/TCP/checksum checks, Apache-2.0, well-documented with gosec/govulncheck scanning) was today's Small but High-Leverage Utility. No previously tracked project resurfaced with a material change this run, so Meaningful Updates is empty. 'Still Worth Trying' rotated to nono, ctx, and SnapOtter \u2014 none used in the eight immediately preceding rotations.",
-  "updated": null
+  "notes": "2026-10-28: Slot 1 (AI agents, MCP, coding productivity) per day_of_year 301 % 7 + 1 = 1. Catalogued 3 new: MisakaNet (Ikalus1988/MisakaNet, Apache-2.0, 7.6, PROTOTYPE) \u2014 a git-backed, evidence-graded, community-reviewed corpus of coding-agent failure/fix lessons served over MCP, distinct from personal-memory tools (MemPalace/Hippo/deja-vu) already catalogued since it's a shared public corpus rather than one agent's session history. Pare (Dave-London/Pare, MIT, 7.3, PROTOTYPE) \u2014 28 MCP server packages / 240 tools returning structured JSON instead of raw CLI text for git/npm/docker/test-runner/etc., aimed at cutting agent context spend at the source rather than compressing after the fact like Headroom/Paritok/squeeze. Midplane (midplaneai/midplane, MIT, 6.9, PROTOTYPE) \u2014 a statement-level parse/policy/mask/audit gateway between AI agents and Postgres; very early (5 stars) with unaudited security claims but a genuinely runnable local quickstart and directly relevant to the MSSP/PTaaS secondary context. Two meaningful updates: Paseo (v0.12.0->v0.14.0-beta.1, cross-machine agent delegation via host add over SSH/relay) and schemagate (v1.10.0->v1.14.0, LlamaIndex integration plus a new opt-in deep_answer MCP tool). Rejected a confirmed template-spam wave (genpark-* skills duplicated across alphaparkinc/Alpha-Park, 7 stars each). Updated: 2026-10-28.",
+  "updated": "2026-10-28"
 }
