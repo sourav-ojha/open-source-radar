@@ -45,3 +45,6 @@ PROTOTYPE, with an explicit youth caveat — the architecture and supply-chain h
 ## Change History
 ### 2026-09-28
 Initial discovery and review. Slot 6 run; found via GitHub Search API `topic:chaos-engineering+created:>2025-06-01` query.
+
+### 2026-10-29
+Meaningful update: v0.1.2 → v0.2.0 (2026-10-04). Added **divergence detection** — every production exchange is replayed through a fork of the linked sandbox, and a `behaviour_divergence` event (categorized `spec_drift`, `undocumented_rule`, or `provider_failure`) fires on the first difference, with `rule promote <fingerprint>` turning a divergence into a permanent sandbox rule after confirmation. Added an inbound webhook tap (records and reports duplicate/out-of-order webhook deliveries), `agent incidents import <bundle>` for installing a recorded production incident locally, and a dedicated GitHub Action (`spec-diff-action`, cosign-verified) for CI. This moves Pikopod from "spec-derived failure sandbox" toward a self-correcting sandbox that reconciles itself against live production traffic — a meaningful architecture step, not just a patch release. Still pre-1.0; risk assessment from the initial review stands.
