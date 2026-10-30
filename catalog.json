@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "projects": [
     {
       "name": "Xberg",
@@ -16204,6 +16204,322 @@
       ],
       "aliases": [],
       "notes": "Small but High-Leverage Utility of the day, 2026-10-29.",
+      "acted_on": false
+    },
+    {
+      "name": "CATS",
+      "slug": "cats-rest-api-fuzzer",
+      "repo_url": "https://github.com/Endava/cats",
+      "website": "https://endava.github.io/cats/",
+      "description": "A REST API fuzzer and negative-testing tool: generates, runs, and reports thousands of boundary, type-coercion, injection, and stateful negative-path tests from an OpenAPI 3.0/3.1 contract with no test code written by hand; self-healing against spec changes.",
+      "category": [
+        "developer productivity",
+        "API development",
+        "testing"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no commercial-use restrictions.",
+      "deployment": [
+        "Homebrew (`brew install cats`)",
+        "native binary",
+        "uberjar (Java 25+)",
+        "CI step"
+      ],
+      "interfaces": [
+        "CLI",
+        "TUI",
+        "HTML report",
+        "JSON report"
+      ],
+      "use_cases": [
+        "zero-code negative/boundary testing of an existing OpenAPI-described REST API",
+        "CI quality gate via --qualityGate exit codes",
+        "security/compliance fuzzing profiles out of the box",
+        "stateful checks: IDOR, PUT idempotency, update-read consistency, ETag handling, deleted-resource availability",
+        "replaying a specific failing test case as a curl command for bug reports"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "deterministic exit-code gate and structured JSON/HTML report a coding agent can parse and summarize as a 'run negative tests' tool"
+      ],
+      "alternatives": [
+        "Schemathesis, EvoMaster (both previously time-boxed out of this catalog as generic fuzzers with no stack-specific angle)",
+        "Dredd",
+        "manual Postman/Newman negative-test collections"
+      ],
+      "why_it_matters": "Automates the negative-path testing category (malformed input, boundary values, already-deleted resources) that gets skipped under deadline pressure, and regenerates tests automatically when the OpenAPI spec changes instead of going stale.",
+      "why_not_build_it_myself": "160+ purpose-built fuzzers covering type coercion, injection, and stateful consistency checks, plus dependency-aware request ordering across endpoints, represents years of accumulated edge-case knowledge that would take a long time to replicate by hand.",
+      "risks": [
+        "Java-based for the uberjar path (native binaries avoid this but there's no native Windows binary)",
+        "only 11 subscribers despite 1,378 stars and 6 years of history — worth checking issue responsiveness before leaning on it for release-blocking CI"
+      ],
+      "first_seen": "2026-10-30",
+      "last_reviewed": "2026-10-30",
+      "last_meaningful_update": "2026-10-30",
+      "current_version": "cats-15.3.0",
+      "latest_release_date": "2026-10-30",
+      "source_links": [
+        "https://github.com/Endava/cats",
+        "https://endava.github.io/cats/"
+      ],
+      "aliases": [],
+      "notes": "Created 2020, still actively released the same day as this review; documented history of finding real bugs in HashiCorp Vault and Gitea.",
+      "acted_on": false
+    },
+    {
+      "name": "Debug Anything",
+      "slug": "debug-anything-mcp",
+      "repo_url": "https://github.com/shreyassaw5394/debuganything",
+      "website": "https://debuganything.dev",
+      "description": "An MCP server and CLI giving a coding agent black-box observation of any running process, container, or pod — syscalls, CPU flamegraphs, thread stacks, sockets/fds, packets, heap retainers, container state — by wrapping strace/py-spy/perf/lsof/tcpdump/gdb/lldb/Node's inspector and turning their output into evidence-cited findings, with zero instrumentation or restart.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "debugging"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "npx (no install)",
+        "MCP server (stdio)",
+        "CLI",
+        "Claude Code plugin",
+        "Python package for LangChain/LlamaIndex/CrewAI"
+      ],
+      "interfaces": [
+        "MCP server",
+        "CLI",
+        "Python SDK"
+      ],
+      "use_cases": [
+        "diagnosing a Node/Python process leak, hang, or crash without manual strace/perf/gdb invocation",
+        "finding what process holds a busy port",
+        "Docker container OOMKill / restart-loop diagnosis",
+        "CI hang forensics via a companion GitHub Action",
+        "thread-dump deadlock detection with the exact blocking lines named"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "purpose-built MCP tool: evidence-contract schema rejects findings without cited evidence, auto-setup for Claude Code/Codex/Cursor/Gemini CLI, proactive hook nudges the agent toward it on EADDRINUSE/OOM/segfault signals"
+      ],
+      "alternatives": [
+        "mcp-debugger (already catalogued, USE NOW) — complementary step-through debugging, needs a known breakpoint location",
+        "Microsoft DebugMCP — same step-through category"
+      ],
+      "why_it_matters": "An agent can read every line of source and still have no way to answer why a running process is misbehaving; this gives it the black-box observation layer that step-through MCP debuggers don't cover, with hard safety caps and evidence citation so findings are auditable rather than plausible-sounding guesses.",
+      "why_not_build_it_myself": "Wrapping strace/perf/py-spy/lsof/tcpdump/gdb output into a consistent, evidence-cited schema across Linux/macOS with per-OS capability detection is substantial integration work this packages for free.",
+      "risks": [
+        "two weeks old (created 2026-10-17), 13 stars, small contributor base so far",
+        "several tools need root/elevated ptrace permissions on Linux; macOS coverage is narrower (no strace/perf equivalents); Windows not supported yet",
+        "raw artifacts on disk are explicitly not redacted"
+      ],
+      "first_seen": "2026-10-30",
+      "last_reviewed": "2026-10-30",
+      "last_meaningful_update": "2026-10-30",
+      "current_version": "1.0.1",
+      "latest_release_date": "Unclear based on available documentation — no GitHub release tag, npm shows 1.0.1",
+      "source_links": [
+        "https://github.com/shreyassaw5394/debuganything",
+        "https://debuganything.dev",
+        "https://registry.npmjs.org/debuganything"
+      ],
+      "aliases": [],
+      "notes": "Engineering signals (evidence contract, honest per-OS capability matrix, hard resource caps, Discord community, documented roadmap) are unusually mature for the repo's age.",
+      "acted_on": false
+    },
+    {
+      "name": "dánwò",
+      "slug": "danwo-e2e-testing",
+      "repo_url": "https://github.com/carbonmeai/danwo",
+      "website": "https://danwo.dev",
+      "description": "An E2E testing framework for web/Android/iOS that drives the UI via locators or cached plain-English agent steps, with an opt-in backend layer: emulated third-party providers (Stripe, Clerk, Resend, Google, Slack, 20+ more) behind a proxy, post-test invariants against the DB/provider state, and built-in fault injection (danwo matrix reruns a test per fault — 500s, declined payments, duplicate webhooks, lost DB commits).",
+      "category": [
+        "developer productivity",
+        "testing",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "Apache-2.0 (code); \"dánwò\" name/logo trademarked by Carbonme Inc.",
+      "commercial_use_notes": "Apache-2.0 for the code, no restriction on commercial use; the name/logo trademark is standard and not a usage blocker.",
+      "deployment": [
+        "npx @danwo/cli init",
+        "CI (GitHub Check + PR comment)",
+        "local emulator/simulator for mobile"
+      ],
+      "interfaces": [
+        "CLI",
+        "SDK (TypeScript)",
+        "MCP server",
+        "dashboard"
+      ],
+      "use_cases": [
+        "fault-matrix testing of checkout/signup/webhook flows for idempotency gaps",
+        "offline testing against emulated Stripe/Clerk/Resend/Slack/Google instead of sandbox keys",
+        "migrating an existing Playwright or Cypress suite incrementally",
+        "plain-English test steps cached after first run to avoid per-CI-run model costs",
+        "cross-platform coverage: web, React Native/Expo, native Android/iOS"
+      ],
+      "product_opportunities": [
+        "pressure-testing idempotency/webhook handling before a paying customer hits the edge case, directly relevant to a billing- or webhook-handling SaaS"
+      ],
+      "agent_opportunities": [
+        "skill + MCP server for Claude Code/Cursor/Codex; every run produces a flight record (video, steps, calls) surfaced over MCP for agent consumption"
+      ],
+      "alternatives": [
+        "Playwright/Cypress/Detox directly — UI-driving without provider emulation or fault injection"
+      ],
+      "why_it_matters": "Combines UI-driving, real provider emulation, and systematic fault injection with invariant-judging in one framework — no other self-hostable tool found doing all three together, and the fault matrix targets exactly the idempotency/webhook-duplication bug class that's expensive to find in production.",
+      "why_not_build_it_myself": "Building provider emulators for 20+ third-party services plus a fault-injection proxy and invariant-judging harness is a multi-week undertaking this gives for free, if the early-stage API churn is tolerable.",
+      "risks": [
+        "9 days old at review time; the project's own docs state \"danwo is early: APIs will change\"",
+        "single-vendor-controlled emulation proxy — new providers/edge cases depend on the maintainers keeping pace",
+        "no independent third-party adoption signal yet"
+      ],
+      "first_seen": "2026-10-30",
+      "last_reviewed": "2026-10-30",
+      "last_meaningful_update": "2026-10-30",
+      "current_version": "0.1.6",
+      "latest_release_date": "2026-10-27",
+      "source_links": [
+        "https://github.com/carbonmeai/danwo",
+        "https://danwo.dev",
+        "https://registry.npmjs.org/@danwo/cli"
+      ],
+      "aliases": [],
+      "notes": "Backed by named company Carbonme Inc.; real docs site and 8-example gallery (Next.js/Hono/Postgres/Stripe, Clerk, Better Auth, SwiftUI, Jetpack Compose, Flutter) despite the project's age.",
+      "acted_on": false
+    },
+    {
+      "name": "Assay (assay-evals)",
+      "slug": "assay-evals-behavioral-regression",
+      "repo_url": "https://github.com/tap222/assay-evals",
+      "website": "Unclear based on available documentation — no dedicated project site found beyond the GitHub repo",
+      "description": "Behavioral regression testing for AI apps/agents in Python and TypeScript: a pytest plugin and a Jest/Vitest/node:test helper that auto-wraps an existing LLM SDK client, records each test case's tool calls/cost/context against its own last passing run, and separates real regressions from noise via repeated-sample comparison and judge calibration against human labels.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "testing"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.3,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "pip install assay-server",
+        "npm install assay-evals",
+        "pytest plugin",
+        "Jest/Vitest/node:test helper",
+        "CI (PR check)"
+      ],
+      "interfaces": [
+        "pytest plugin",
+        "Jest/Vitest/node:test SDK",
+        "CLI (assay init/test/diff)"
+      ],
+      "use_cases": [
+        "gating a prompt-engineering PR on behavioral regressions, not just output-quality checks",
+        "auto-wrapping an OpenAI/Anthropic/Vercel AI SDK client for call-level recording with no manual trace instrumentation",
+        "case-by-case diff after a model swap before shipping it",
+        "document-extraction regression metrics for structured-extraction agents",
+        "surfacing \"3 regressed, 1 flaky\" directly in a PR comment"
+      ],
+      "product_opportunities": [
+        "same micro-SaaS shape as the already-catalogued whatbroke — a narrow CI-gate-as-a-service for tool-calling agents, with judge-calibration-against-human-labels as an added trust angle"
+      ],
+      "agent_opportunities": [
+        "assert_called/assert_not_called/assert_max_steps primitives are a reusable deterministic pattern for grading an agent's tool usage without another LLM judge"
+      ],
+      "alternatives": [
+        "whatbroke (already catalogued, PROTOTYPE) — same core idea via manual JSONL trace instrumentation instead of SDK-client wrapping",
+        "promptfoo, LangSmith — output-quality scoring, not tool-call behavioral diffing"
+      ],
+      "why_it_matters": "Catches the specific blind spot where an agent's final reply still reads fine but its tool-calling behavior silently changed (e.g. skipping a refund approval step) — the same failure mode whatbroke targets, but with automatic SDK-client instrumentation instead of hand-written trace emission, plus statistical noise-vs-regression separation and human-label-calibrated judging.",
+      "why_not_build_it_myself": "The repeated-sample noise/regression separation and human-label judge calibration (reported via Cohen's kappa) are non-trivial statistical plumbing this provides out of the box.",
+      "risks": [
+        "single-maintainer, five weeks old, no established production user base yet",
+        "substantial functional overlap with the already-catalogued whatbroke — adopting both would be redundant"
+      ],
+      "first_seen": "2026-10-30",
+      "last_reviewed": "2026-10-30",
+      "last_meaningful_update": "2026-10-30",
+      "current_version": "npm assay-evals 0.2.0 / PyPI assay-server 0.7.0",
+      "latest_release_date": "2026-10-21",
+      "source_links": [
+        "https://github.com/tap222/assay-evals",
+        "https://pypi.org/project/assay-server/",
+        "https://www.npmjs.com/package/assay-evals"
+      ],
+      "aliases": [],
+      "notes": "Compare against whatbroke before adopting either — overlapping niche, different integration mechanism (SDK-wrap vs manual trace emission).",
+      "acted_on": false
+    },
+    {
+      "name": "llmock (llm-mock)",
+      "slug": "llmock-local-llm-mock-server",
+      "repo_url": "https://github.com/piyook/llm-mock",
+      "website": "Unclear based on available documentation — no dedicated project site found beyond the GitHub repo",
+      "description": "A local mock LLM API server speaking the OpenAI, Claude, and Gemini wire formats — fixture replies, Claude-style tool calls, streaming, error simulation, and a dashboard — so AI-integration code can be tested offline, deterministically, and at zero API cost.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "small high-leverage utilities"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.4,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no commercial-use restrictions.",
+      "deployment": [
+        "npx llmock",
+        "local install"
+      ],
+      "interfaces": [
+        "HTTP API (OpenAI/Claude/Gemini-compatible)",
+        "dashboard"
+      ],
+      "use_cases": [
+        "deterministic, offline tests for AI-agent integration code instead of hitting real provider APIs",
+        "simulating provider error responses to test retry/fallback logic",
+        "developing a Claude tool-calling feature offline with canned fixture responses",
+        "inspecting exactly what payload a client SDK sent, via the dashboard"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "drop-in CI fixture for any agent-framework test suite (LangChain, Vercel AI SDK, custom loops) that calls an OpenAI/Claude/Gemini-shaped endpoint"
+      ],
+      "alternatives": [
+        "hand-rolled nock/msw mocks per provider (more setup, no built-in streaming/tool-call fixture support)",
+        "hitting the real API in a sandboxed test account (cost and flakiness)"
+      ],
+      "why_it_matters": "Removes the cost and non-determinism tax of testing LLM-API integration code against the real API, across all three major wire formats in one server instead of three separate mocks.",
+      "why_not_build_it_myself": "Keeping a mock in sync with three providers' streaming and tool-call wire formats is ongoing maintenance this already does.",
+      "risks": [
+        "modest traction (22 stars) — worth a quick smoke test against the exact SDK version in use, since wire-format compatibility can drift as providers update their APIs"
+      ],
+      "first_seen": "2026-10-30",
+      "last_reviewed": "2026-10-30",
+      "last_meaningful_update": "2026-10-30",
+      "current_version": "3.13.0",
+      "latest_release_date": "2026-10-28",
+      "source_links": [
+        "https://github.com/piyook/llm-mock"
+      ],
+      "aliases": [],
+      "notes": "Small but High-Leverage Utility of the day, 2026-10-30. Created May 2024, 2+ years old, actively maintained.",
       "acted_on": false
     }
   ]

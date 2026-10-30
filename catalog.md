@@ -1,10 +1,11 @@
 # Catalog
 
-_260 projects tracked. Last updated 2026-10-29._
+_265 projects tracked. Last updated 2026-10-30._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
 | [Xberg](https://github.com/xberg-io/xberg) | USE NOW | 8.8/10 | document processing, RAG infrastructure, product building blocks, AI & agent infrastructure | MIT | low | 2026-09-19 |
+| [CATS](https://github.com/Endava/cats) | USE NOW | 8.8/10 | developer productivity, API development, testing | Apache-2.0 | low | 2026-10-30 |
 | [Bernstein](https://github.com/sipyourdrink-ltd/bernstein) | PROTOTYPE | 8.7/10 | AI agent infrastructure, coding agents, agent orchestration, developer productivity | Apache-2.0 | low | 2026-10-09 |
 | [Planning with Files](https://github.com/OthmanAdi/planning-with-files) | USE NOW | 8.7/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-07 |
 | [pgschema](https://github.com/pgplex/pgschema) | PROTOTYPE | 8.7/10 | product infrastructure, database tooling, developer productivity, CI/CD | Apache-2.0 | low | 2026-10-09 |
@@ -59,6 +60,7 @@ _260 projects tracked. Last updated 2026-10-29._
 | [Velox](https://github.com/getvelox/velox) | PROTOTYPE | 8.2/10 | product building blocks, billing / monetization, AI infrastructure | MIT | low | 2026-10-11 |
 | [sage-wiki](https://github.com/xoai/sage-wiki) | PROTOTYPE | 8.2/10 | data/search/documents/RAG, AI & agent infrastructure, product building blocks | MIT | low | 2026-10-24 |
 | [formae](https://github.com/platform-engineering-labs/formae) | PROTOTYPE | 8.2/10 | infrastructure, infrastructure as code, AI & agent infrastructure | FSL-1.1-ALv2 (Functional Source License) | medium | 2026-10-26 |
+| [Debug Anything](https://github.com/shreyassaw5394/debuganything) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, developer productivity, debugging | MIT | low | 2026-10-30 |
 | [mex](https://github.com/mex-memory/mex) | PROTOTYPE | 8.1/10 | developer productivity, AI agent infrastructure, documentation, code search | MIT | low | 2026-09-04 |
 | [Temps](https://github.com/gotempsh/temps) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternative, AI agent tooling | Apache-2.0 | medium | 2026-09-09 |
 | [Semble](https://github.com/MinishLab/semble) | PROTOTYPE | 8.1/10 | AI & agent infrastructure, developer productivity, code search / RAG | MIT | low | 2026-09-11 |
@@ -127,6 +129,7 @@ _260 projects tracked. Last updated 2026-10-29._
 | [monorepo-doctor](https://github.com/santoshyadavdev/monorepo-doctor) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code analysis | MIT | low | 2026-10-23 |
 | [Infino](https://github.com/infino-ai/infino) | PROTOTYPE | 7.8/10 | data/search/documents/RAG, product building blocks | Apache-2.0 | low | 2026-10-24 |
 | [Nora](https://github.com/getnora-io/nora) | PROTOTYPE | 7.8/10 | product infrastructure, developer productivity, backend components | MIT | low | 2026-10-26 |
+| [dánwò](https://github.com/carbonmeai/danwo) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 (code); "dánwò" name/logo trademarked by Carbonme Inc. | medium | 2026-10-30 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -204,6 +207,7 @@ _260 projects tracked. Last updated 2026-10-29._
 | [Dopbase](https://github.com/dopbase/dopbase) | PROTOTYPE | 7.3/10 | product infrastructure, secrets management, security tooling | Apache-2.0 | low | 2026-10-26 |
 | [Shopnex](https://github.com/shopnex-ai/shopnex) | PROTOTYPE | 7.3/10 | product infrastructure, e-commerce, self-hosted SaaS alternative | MIT | medium | 2026-10-27 |
 | [Pare](https://github.com/Dave-London/Pare) | PROTOTYPE | 7.3/10 | AI & agent infrastructure, MCP servers, developer productivity | MIT | low | 2026-10-28 |
+| [Assay (assay-evals)](https://github.com/tap222/assay-evals) | PROTOTYPE | 7.3/10 | AI & agent infrastructure, developer productivity, testing | MIT | low | 2026-10-30 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
@@ -256,6 +260,7 @@ _260 projects tracked. Last updated 2026-10-29._
 | [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
 | [MuninnDB](https://github.com/scrypster/muninndb) | WATCH | 6.6/10 | AI & agent infrastructure, agent memory | Business Source License 1.1 (BSL) — converts to Apache-2.0 on 2030-02-26 | low | 2026-10-10 |
 | [Bullpane](https://github.com/madmorett/bullpane) | USE NOW | 6.5/10 | developer productivity, product infrastructure, small high-leverage utilities, job queues | MIT (core) + commercial license for `ee/` Pro features | low | 2026-10-29 |
+| [llmock (llm-mock)](https://github.com/piyook/llm-mock) | PROTOTYPE | 6.4/10 | AI & agent infrastructure, developer productivity, small high-leverage utilities | MIT | low | 2026-10-30 |
 | [SparrowDB](https://github.com/ryaker/SparrowDB) | WATCH | 6.3/10 | product building blocks, developer productivity | MIT | low | 2026-10-06 |
 | [GoCommerce](https://github.com/itswadesh/gocommerce) | STUDY | 6.3/10 | product building blocks, e-commerce infrastructure, self-hosted SaaS alternative | MIT | medium | 2026-10-11 |
 | [website2markdown](https://github.com/Digidai/website2markdown) | WATCH | 6.2/10 | small utility, document processing, AI agent infrastructure | Apache-2.0 | low | 2026-08-29 |
