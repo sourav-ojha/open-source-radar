@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "projects": [
     {
       "name": "Xberg",
@@ -16520,6 +16520,264 @@
       ],
       "aliases": [],
       "notes": "Small but High-Leverage Utility of the day, 2026-10-30. Created May 2024, 2+ years old, actively maintained.",
+      "acted_on": false
+    },
+    {
+      "name": "Antfly",
+      "slug": "antfly-search-inference-db",
+      "repo_url": "https://github.com/antflydb/antfly",
+      "website": "https://antfly.io",
+      "description": "A search-and-inference database (Zig core) that puts full-text (BM25), dense + sparse vector search, graph traversal, and in-process embedding/reranking/OCR/transcription models over one table, with built-in RAG agents, MCP/A2A protocol adapters, and a Postgres CDC mirror.",
+      "category": [
+        "data/search/documents/RAG",
+        "AI & agent infrastructure",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.3,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or SaaS use. A hosted Antfly Cloud option exists alongside the self-hosted core.",
+      "deployment": [
+        "Docker / docker-compose",
+        "Kubernetes manifests",
+        "single `.aflite` file (Antfly Lite, embeddable)",
+        "Homebrew (macOS/Linux)",
+        "build from source (Zig)",
+        "managed: Antfly Cloud"
+      ],
+      "interfaces": [
+        "HTTP/REST API",
+        "CLI (`antfly`)",
+        "TypeScript SDK (@antfly/sdk) and embedded package (@antfly/embedded)",
+        "Go / Python / Rust SDKs and embedded bindings",
+        "C API (libantfly)",
+        "browser WASM build",
+        "PostgreSQL extension (antfly_postgres, `@@@` operator)",
+        "MCP and A2A protocol adapters",
+        "React components (@antfly/components)"
+      ],
+      "use_cases": [
+        "replace a separate Elasticsearch/Algolia + Pinecone/Qdrant + Neo4j stack with one engine for a product's search feature",
+        "stand up site search, support-answer, or ticket-routing RAG agents from the documented end-to-end guides instead of wiring LangChain glue",
+        "mirror a Postgres table into Antfly via logical replication (CDC) to get hybrid search over existing app data with no ETL job to maintain",
+        "run it embedded (Antfly Lite / @antfly/embedded) inside a Node service or browser for local-first search without standing up a server",
+        "expose it to a coding agent or any MCP/A2A client as a ready-made retrieval/knowledge-graph tool"
+      ],
+      "product_opportunities": [
+        "a micro-SaaS 'search + RAG backend' offering that undercuts assembling Algolia + Pinecone + a reranker + a RAG framework separately",
+        "embed as the retrieval layer inside a commercial product (support bot, docs search) without taking on three separate vendor bills"
+      ],
+      "agent_opportunities": [
+        "native MCP and A2A protocol adapters mean a coding agent or any agent framework can query it directly as a tool",
+        "built-in query-builder agent turns a natural-language question into a structured Antfly query with its own retrieval-quality eval metrics"
+      ],
+      "alternatives": [
+        "Elasticsearch/OpenSearch + a separate vector DB (Qdrant/Milvus/pgvector) + a graph DB, wired together by hand",
+        "ParadeDB (already catalogued) — Postgres-native full-text + vector, narrower scope, no built-in inference/RAG/graph",
+        "WhoDB / other self-hosted multi-DB workspaces (already catalogued) — a client over existing databases, not a storage engine itself"
+      ],
+      "why_it_matters": "It collapses the usual three-to-four-service stack behind a RAG or hybrid-search feature (full-text engine, vector DB, graph DB, embedding/reranking glue) into one Apache-2.0 engine with real embeddable bindings for TypeScript, which is unusually convenient for a Node/React stack rather than requiring a Python-first ecosystem.",
+      "why_not_build_it_myself": "The hard parts here (RaBitQ-compressed vector indexes with SPFresh-style updates, SPLADE sparse vectors, reciprocal-rank fusion, cross-encoder/ColBERT reranking, Raft-based distribution, Postgres CDC replication) are each multi-week projects on their own; building all of them to get one hybrid-search feature is not a reasonable trade.",
+      "risks": [
+        "pre-1.0 (latest tag v0.2.5) with a Zig core — expect breaking changes before a 1.0; the SQL/Postgres-wire-protocol and serverless-over-object-storage features are explicitly marked in-progress",
+        "only 1 GitHub subscriber against 480 stars and 32 forks is an unusual ratio, though the real fork count, Homebrew tap, Docker registry, and documented Postgres extension argue against a fake-engagement pattern — worth a second look if adoption signals don't grow",
+        "running the full server (vs. the embedded library) means operating a new piece of distributed infrastructure (multi-Raft) rather than a managed service"
+      ],
+      "first_seen": "2026-10-31",
+      "last_reviewed": "2026-10-31",
+      "last_meaningful_update": "2026-10-31",
+      "current_version": "v0.2.5",
+      "latest_release_date": "2026-09-28",
+      "source_links": [
+        "https://github.com/antflydb/antfly",
+        "https://antfly.io/docs"
+      ],
+      "aliases": [],
+      "notes": "Discovered 2026-10-31 (slot 4: data/search/documents/RAG). Created 2026-03-15 (~7.5 months old), 480 stars / 32 forks / 56 open issues at review time — active development, not abandoned.",
+      "acted_on": false
+    },
+    {
+      "name": "mcp-memory-service",
+      "slug": "mcp-memory-service-doobidoo",
+      "repo_url": "https://github.com/doobidoo/mcp-memory-service",
+      "website": "https://mcpmemory.services",
+      "description": "A self-hosted, framework-agnostic persistent memory backend for AI agents — REST API, MCP, OAuth 2.0 + Dynamic Client Registration, CLI and dashboard over one service — with a typed causal knowledge graph (causes/fixes/contradicts edges) and local ONNX embeddings, so memory never leaves your infrastructure.",
+      "category": [
+        "AI & agent infrastructure",
+        "data/search/documents/RAG"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.0,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or SaaS use.",
+      "deployment": [
+        "pip install mcp-memory-service",
+        "self-hosted service (REST/MCP)",
+        "Docker"
+      ],
+      "interfaces": [
+        "framework-agnostic REST API",
+        "MCP (stdio and remote, with OAuth 2.0 + DCR)",
+        "CLI",
+        "web dashboard",
+        "SSE (real-time memory-store/delete notifications)"
+      ],
+      "use_cases": [
+        "give Claude Code, Claude Desktop, or any MCP client cross-session memory of architecture decisions and code patterns instead of re-explaining context every session",
+        "share one memory backend across multiple agent frameworks (LangGraph, CrewAI, AutoGen) and Claude via the same REST API",
+        "scope and retrieve memories per agent identity in a multi-agent setup via the X-Agent-ID header",
+        "replace a hand-rolled Redis + Pinecone memory stack for an agent pipeline with one self-hosted Apache-2.0 service"
+      ],
+      "product_opportunities": [
+        "a shared-memory layer behind a multi-agent internal tool, with OAuth-gated remote access for teammates' agents"
+      ],
+      "agent_opportunities": [
+        "native MCP server with remote MCP + OAuth 2.0/DCR support, so it can be exposed securely beyond localhost to teammates' coding agents",
+        "typed causal knowledge-graph edges (causes/fixes/contradicts) let an agent query not just facts but relationships between past decisions"
+      ],
+      "alternatives": [
+        "Hippo, CortexDB, deja-vu, MuninnDB (already catalogued agent-memory tools) — all weeks-to-months old; this one has a 2-year track record and 2,056 stars, the most mature entrant in the niche seen so far",
+        "hand-wiring Redis + a vector DB as a memory store"
+      ],
+      "why_it_matters": "The agent-memory niche has produced a wave of very young (days-to-weeks old) competing tools over the past several runs; this one predates nearly all of them by roughly two years, has a materially larger community (369 forks, 2,056 stars), and adds production-oriented features (OAuth2 + Dynamic Client Registration for remote MCP, SSE events, typed causal edges) that the newer entrants don't have yet.",
+      "why_not_build_it_myself": "A causal knowledge graph plus OAuth-gated remote MCP access plus local ONNX embeddings is a multi-week build; this ships it as a 60-second pip install.",
+      "risks": [
+        "the project's own marketing (dedicated website, demo video) is more polished than most entries in this niche — worth confirming the causal-consolidation claims hold up under real multi-agent load before relying on it for anything business-critical",
+        "saturated niche — evaluate directly against already-catalogued Hippo/CortexDB/deja-vu for your specific workflow rather than adopting more than one"
+      ],
+      "first_seen": "2026-10-31",
+      "last_reviewed": "2026-10-31",
+      "last_meaningful_update": "2026-10-31",
+      "current_version": "v12.4.0",
+      "latest_release_date": "2026-10-26",
+      "source_links": [
+        "https://github.com/doobidoo/mcp-memory-service",
+        "https://mcpmemory.services"
+      ],
+      "aliases": [],
+      "notes": "Discovered 2026-10-31 (slot 4). Created 2024-12-26 (~2 years old), 2,056 stars / 369 forks / 12 subscribers at review time.",
+      "acted_on": false
+    },
+    {
+      "name": "PurRDF",
+      "slug": "purrdf-rdf-engine",
+      "repo_url": "https://github.com/Blackcat-Informatics/purrdf",
+      "website": "https://blackcat-informatics.github.io/purrdf/",
+      "description": "A single Rust RDF 1.2 engine (shared across Rust/Python/JS-WASM/C) that answers BM25 full-text search, exact GeoSPARQL 1.1 topological queries, and exact/approximate embedding kNN inside the same SPARQL evaluator over one dataset, plus SHACL/ShEx validation and Datalog/OWL reasoning, with deterministic fixed-point arithmetic and a published-paper-grade design.",
+      "category": [
+        "data/search/documents/RAG",
+        "infrastructure/architecture"
+      ],
+      "status": "STUDY",
+      "relevance_score": 6.8,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "MIT OR Apache-2.0 OR MulanPSL-2.0",
+      "commercial_use_notes": "Triple-licensed, caller's choice of MIT, Apache-2.0, or MulanPSL-2.0 — all permissive, no commercial restrictions.",
+      "deployment": [
+        "Rust crate (crates.io)",
+        "Python package (PyPI)",
+        "npm package (@blackcatinformatics/purrdf)",
+        "WebAssembly (browser)",
+        "C via FFI"
+      ],
+      "interfaces": [
+        "Rust API (full feature surface)",
+        "SPARQL 1.1/1.2 query and Update",
+        "Python and npm packages (data-shaped property functions and path witnesses only — not the full text/geo/vector producer registration)",
+        "browser playground"
+      ],
+      "use_cases": [
+        "study its fused SPARQL retrieval model (joining full-text, GeoSPARQL spatial predicates, and embedding kNN in one query with reciprocal-rank fusion) as a design reference for a future in-house retrieval layer",
+        "build a Rust-hosted knowledge-graph application that needs RDF + validation (SHACL/ShEx) + reasoning (OWL/Datalog) + retrieval in one dependency instead of five",
+        "use the npm/Python packages for lighter RDF data-shape and path-witness work where the full retrieval fusion isn't needed"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "the browser WASM build could back an in-browser, no-server knowledge-graph explorer or agent-memory demo"
+      ],
+      "alternatives": [
+        "RDFLib/Apache Jena for RDF-only work (no built-in BM25/vector/geo fusion)",
+        "a Postgres + pgvector + PostGIS combination for the same three retrieval modes, at the cost of running three subsystems instead of one"
+      ],
+      "why_it_matters": "It is a rare example of academically rigorous (DOI-citable, exact fixed-point arithmetic, formally specified codecs) infrastructure software solving three retrieval problems — text, geo, and vector — inside one typed SPARQL evaluator, which is a genuinely novel architecture worth understanding even though the practical npm/Python surface is deliberately narrower than the Rust one.",
+      "why_not_build_it_myself": "Getting exact fixed-point BM25, GeoSPARQL topology, and deterministic HNSW to compose correctly inside one query evaluator — with reproducible results across native and WASM — is a research-grade problem, not a weekend build.",
+      "risks": [
+        "very young (created 2026-07-01) with modest traction (52 stars, 2 forks) — treat as an architecture study, not production infrastructure, until it accumulates more real-world use",
+        "the npm and Python packages intentionally do not expose the text/geo/vector retrieval fusion that makes the Rust core interesting, which limits direct value for a Node-first stack",
+        "Kickstarter-style funding link in the README for a related project (ThemisDB, by a different team found the same day) is unrelated to PurRDF itself but is a reminder to keep verifying claims independently in this space"
+      ],
+      "first_seen": "2026-10-31",
+      "last_reviewed": "2026-10-31",
+      "last_meaningful_update": "2026-10-31",
+      "current_version": "rust-v3.0.1",
+      "latest_release_date": "2026-10-03",
+      "source_links": [
+        "https://github.com/Blackcat-Informatics/purrdf",
+        "https://blackcat-informatics.github.io/purrdf/"
+      ],
+      "aliases": [],
+      "notes": "Discovered 2026-10-31 (slot 4). Created 2026-07-01 (~4 months old), 52 stars / 2 forks / 28 open issues at review time. Backed by Blackcat Informatics Inc. with a DOI-registered release.",
+      "acted_on": false
+    },
+    {
+      "name": "PII-Shield",
+      "slug": "pii-shield-log-sanitization",
+      "repo_url": "https://github.com/pii-shield/pii-shield",
+      "website": "https://pii-shield.com",
+      "description": "A zero-code Kubernetes sidecar (also usable as a CLI or in-process WASM module) that redacts PII and detects secrets in logs via entropy analysis before they leave the pod, preserving JSON structure, for GDPR/SOC2 log-sanitization without a hosted service.",
+      "category": [
+        "infrastructure/observability/deployment",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or SaaS use.",
+      "deployment": [
+        "Kubernetes Operator (Helm-based, injects a distroless sidecar)",
+        "in-process WASM SDK (Python: pii-shield-wasi, npm: @aragossa/pii-shield-wasi)",
+        "CLI"
+      ],
+      "interfaces": [
+        "K8s sidecar (log interception)",
+        "CLI",
+        "WASM SDKs (Python, npm)"
+      ],
+      "use_cases": [
+        "redact customer PII from application logs on an EKS cluster before they hit CloudWatch/a log aggregator, for GDPR/SOC2 compliance",
+        "catch accidentally-logged API keys/secrets via entropy analysis as a defense-in-depth layer alongside existing secret scanning",
+        "embed the WASM SDK directly in a Node service for <1ms in-process redaction without a sidecar hop"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "hand-rolled regex log scrubbing (fragile, no entropy-based secret detection)",
+        "vikasgautam18/pii-shield (Microsoft dev-community blog project) and the PyPI `pii-shield` package by Intellirim — unrelated, differently-scoped projects sharing the same name, per the project's own README disclaimer"
+      ],
+      "why_it_matters": "Directly relevant to the EKS/ALB side of the AWS stack and to the MSSP/PTaaS secondary context — a drop-in sidecar is a lower-effort compliance control than building log redaction into every service.",
+      "why_not_build_it_myself": "Entropy-based secret detection plus JSON-structure-preserving redaction plus a Kubernetes operator is more undifferentiated plumbing than is worth building for a compliance checkbox.",
+      "risks": [
+        "the Kubernetes operator deployment mode is explicitly in a 'stabilization phase' per the project's own status table — the CLI/core-scanner path is the better-tested one for now",
+        "0 GitHub subscribers against 178 stars/12 forks — modest but not alarming for a 9-month-old project; corroborated by real external signals (OpenSSF Best Practices badge, Artifact Hub listing, Docker pull badge)"
+      ],
+      "first_seen": "2026-10-31",
+      "last_reviewed": "2026-10-31",
+      "last_meaningful_update": "2026-10-31",
+      "current_version": "v2.3.1",
+      "latest_release_date": "2026-10-27",
+      "source_links": [
+        "https://github.com/pii-shield/pii-shield",
+        "https://pii-shield.com"
+      ],
+      "aliases": [],
+      "notes": "Small but High-Leverage Utility of the day, 2026-10-31. Created 2026-01-30 (~9 months old).",
       "acted_on": false
     }
   ]

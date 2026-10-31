@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-30",
-  "last_successful_run": "2026-10-30",
-  "run_count": 61,
-  "rotation_slot_last_used": 3,
+  "last_run": "2026-10-31",
+  "last_successful_run": "2026-10-31",
+  "run_count": 62,
+  "rotation_slot_last_used": 4,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -70,21 +70,10 @@
     "experimental/hidden gems (slot 7) — an in-process Deterministic Simulation Testing framework for Go built on testing/synctest and stateless model checking, from a credible prolific Go OSS author (k1LoW/detest, 0 stars, catalogued on architecture merit not traction), an embeddable Go engine combining a vector DB (HNSW/IVF/Vamana) and a sub-microsecond KV store behind one interface with an MCP server for agent memory (rostamlabs/rostam, Apache-2.0, beta, self-reported benchmarks explicitly caveated by its own authors), a zero-dependency single-binary Go WAF with tokenizer-based cumulative threat scoring and a 44-tool MCP server, directly relevant to the MSSP/PTaaS secondary context (GuardianWAF, MIT core with planned future commercial cluster tier), and a Node/Postgres self-hosted Shopify alternative with a Shopify-aligned Storefront API and an out-of-process app-marketplace SDK (shopnex-ai/shopnex, MIT). vertti/preflight (single-binary container/CI validation toolkit: command/env/file/HTTP/TCP/checksum checks) was today's Small but High-Leverage Utility. A same-day GitHub 'self-hosted alternative' keyword search surfaced a wave of near-identical repos (openma-ai/open-managed-agents 338★/1 subscriber, SourceWeft 329★/2 subscribers, Kabanya/Pomodoist 454★/3 subscribers, plus several 'local-first AI workspace' repos — LodyAI/Lody 1572★/5 subs, zhitongblog/solomd 1393★/6 subs, glanderness/BeefTV 1887★/12 subs, ai4s-research/open-science 2046★/6 subs, ling-stack-org/ling-stack 996★/0 subs) all showing star:subscriber ratios from ~150:1 to effectively infinite — reconfirmed the inflated-engagement pattern flagged in prior runs and excluded all of them. 'Still Worth Trying' rotated to nono, ctx, and SnapOtter — none used in the eight immediately preceding rotations.",
     "AI agents/MCP/coding productivity (slot 1) — a crowdsourced, evidence-graded corpus of coding-agent failure/fix lessons served over MCP (MisakaNet, 543 stars, Apache-2.0), a 28-package/240-tool MCP wrapper suite replacing raw CLI output with structured JSON to cut agent context spend (Pare), and a statement-level policy/masking/audit gateway for AI-agent access to Postgres (Midplane, very early but directly relevant to the MSSP/PTaaS context). Paseo (v0.12.0->v0.14.0-beta.1, cross-machine agent delegation via `host add` over SSH/relay) and schemagate (v1.10.0->v1.14.0, LlamaIndex integration plus a new deep_answer MCP tool) both had meaningful updates. Rejected a confirmed template-spam wave of near-identical 'genpark-*' agent-governance skill repos duplicated across two GitHub orgs (alphaparkinc/Alpha-Park), each sitting at exactly 7 stars with marketing-heavy, substance-light READMEs; reconfirmed the ongoing oversaturation of generic 'coding agent orchestration'/'agent sandbox' GitHub search results (git-worktree-per-agent managers, desktop multi-agent cockpits) with no new standout. Held Qsnh/skillsgist (self-hosted Agent Skills registry), david-engelmann/maidan (agent-swarm task queue with results delivered to GitHub/Slack/Linear), and kitepon/aiterm-mcp (tmux-backed MCP terminal that launches other coding agents) to Worth Watching as too thin for a full catalog entry. 'Still Worth Trying' rotated to Xberg, Bernstein, and Beads — none used in the five immediately preceding rotations.",
     "product infrastructure / APIs / backend components (slot 2) — a single-binary, OpenID-Certified Rust IAM server with first-class DPoP/token-exchange/CIBA support for the agentic-access era (Issuerd), a self-hosted cookieless web-analytics platform tying traffic to Stripe revenue with a built-in MCP server (OpenAnalytics), a KeePass-compatible secrets manager with a per-field MCP approval gate for coding agents (keypaste, standout of a same-week 'agent secrets manager' wave over sallyport/OpenKeylet/vahta/jitpass), and a Git server rebuilt on modern-database design principles (object-storage log-structured layers, Raft-replicated per-repo ledger) filed as an architecture study (Enroute). Bullpane, a production-safe self-hosted BullMQ dashboard, was today's Small but High-Leverage Utility. Pikopod's v0.1.2->v0.2.0 release (divergence detection against live production traffic, incident import/export) was a meaningful update. Held out as too-new-to-catalogue-yet: DeterminFlow (stale 48 days despite 941 stars), open-flow (custom hosted-service-restricted license), and burrow (solid but overshadowed by Issuerd). Rejected a wave of high-star but off-topic Chinese LLM-account-pool/reverse-proxy gateway repos (workbuddy2api family) recurring across unrelated topic searches. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Artifact Keeper — none used in the nine immediately preceding rotations.",
-    "developer utilities/debugging/testing (slot 3) — a mature, actively-released REST API fuzzer with a documented real-world bug-finding record (Endava/CATS, self-healing zero-code negative testing against OpenAPI specs), an unusually well-engineered MCP server giving coding agents black-box process/container observation via strace/perf/gdb with an evidence-citation schema (Debug Anything), a company-backed E2E testing framework pairing UI-driving with real provider emulation and systematic fault injection (dánwò, Carbonme Inc.), and a pytest/Jest-native behavioral-regression tool for AI agents that auto-wraps an existing LLM SDK client (Assay/assay-evals, compared directly against the already-catalogued whatbroke). llmock (local multi-provider LLM mock server, 2+ years old) was today's Small but High-Leverage Utility. Flagged a fourth/fifth independent same-niche 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, flashback, time-travel-debugger-mcp — all 0-1 stars) duplicating the already-catalogued OrcaReplay, rejected oimo-ai/apgar as a thin duplicate of the whatbroke niche, and reconfirmed the same-day '2026' marketing-title content-farm pattern first flagged on 2026-10-23 recurring in a Roblox/developer-tool batch. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack (Android/JVM, not core MERN/Node). 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations."
+    "developer utilities/debugging/testing (slot 3) — a mature, actively-released REST API fuzzer with a documented real-world bug-finding record (Endava/CATS, self-healing zero-code negative testing against OpenAPI specs), an unusually well-engineered MCP server giving coding agents black-box process/container observation via strace/perf/gdb with an evidence-citation schema (Debug Anything), a company-backed E2E testing framework pairing UI-driving with real provider emulation and systematic fault injection (dánwò, Carbonme Inc.), and a pytest/Jest-native behavioral-regression tool for AI agents that auto-wraps an existing LLM SDK client (Assay/assay-evals, compared directly against the already-catalogued whatbroke). llmock (local multi-provider LLM mock server, 2+ years old) was today's Small but High-Leverage Utility. Flagged a fourth/fifth independent same-niche 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, flashback, time-travel-debugger-mcp — all 0-1 stars) duplicating the already-catalogued OrcaReplay, rejected oimo-ai/apgar as a thin duplicate of the whatbroke niche, and reconfirmed the same-day '2026' marketing-title content-farm pattern first flagged on 2026-10-23 recurring in a Roblox/developer-tool batch. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack (Android/JVM, not core MERN/Node). 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations.",
+    "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "scub-france/docling-Studio",
-    "rafaeljung71/ash4d-local-ai-agent-hub",
-    "AdamRussak/self-doc",
-    "deepaksinghcs14/agent-nexus",
-    "aakashmanandhar/data-eng-portfolio",
-    "andino-agents/knowledge-base",
-    "DarshanAguru/feenion",
-    "asaptf/swift-extract",
-    "ranro01/document-intelligence",
-    "karthik15072004/neostats-document-intelligence",
-    "ankitkumar25-rk/Texter",
-    "wildanisme/ocr",
     "kuruba1033/AI-Engineer-Internship-Document-Extraction",
     "Git-Lister/Certain-Tree",
     "ayushagarwal13/AI-Document-Analyst",
@@ -1572,7 +1561,19 @@
     "yokomohoyo/insomnium",
     "WebFuzzing/EvoMaster",
     "dmux/minilake",
-    "SpectoLabs/hoverfly"
+    "SpectoLabs/hoverfly",
+    "antflydb/antfly",
+    "Blackcat-Informatics/purrdf",
+    "doobidoo/mcp-memory-service",
+    "mnemosyne-oss/mnemosyne",
+    "lance-format/lance",
+    "TulipFarm/huntsman",
+    "pii-shield/pii-shield",
+    "makr-code/ThemisDB",
+    "xerj-org/xerj",
+    "zcag/tela",
+    "getpaseo/paseo",
+    "headroomlabs-ai/headroom"
   ],
   "rejected": [
     {
@@ -2869,6 +2870,16 @@
       "repo_url": "https://github.com/yokomohoyo/insomnium",
       "reason": "a straight fork of Kong/Insomnia with no independent differentiation found; Insomnia itself is an already-known mainstream tool",
       "date": "2026-10-30"
+    },
+    {
+      "repo_url": "https://github.com/lance-format/lance",
+      "reason": "mainstream/household-name-adjacent within AI/ML engineering (7,236 stars, LanceDB ecosystem, widely integrated with Pandas/DuckDB/Polars/PyTorch) despite not being on the explicit do-not-recommend list",
+      "date": "2026-10-31"
+    },
+    {
+      "repo_url": "https://github.com/makr-code/ThemisDB",
+      "reason": "too early (9 stars, NOASSERTION license) with a Kickstarter funding solicitation in the README — marketing-heavy signal per quality filters",
+      "date": "2026-10-31"
     }
   ],
   "known_releases": {
@@ -3305,8 +3316,8 @@
       "date": "2026-08-23"
     },
     "headroomlabs-ai/headroom": {
-      "version": "v0.41.0",
-      "date": "2026-10-14"
+      "version": "v0.42.0",
+      "date": "2026-10-26"
     },
     "snapotter-hq/SnapOtter": {
       "version": "v2.2.0",
@@ -3453,8 +3464,8 @@
       "date": "2026-09-22"
     },
     "getpaseo/paseo": {
-      "version": "v0.14.0-beta.1",
-      "date": "2026-10-27"
+      "version": "v0.14.0",
+      "date": "2026-10-29"
     },
     "PrismorSec/prismor": {
       "version": "v1.59.0",
@@ -4019,16 +4030,32 @@
     "piyook/llm-mock": {
       "version": "3.13.0",
       "date": "2026-10-28"
+    },
+    "antflydb/antfly": {
+      "version": "v0.2.5",
+      "date": "2026-09-28"
+    },
+    "doobidoo/mcp-memory-service": {
+      "version": "v12.4.0",
+      "date": "2026-10-26"
+    },
+    "Blackcat-Informatics/purrdf": {
+      "version": "rust-v3.0.1",
+      "date": "2026-10-03"
+    },
+    "pii-shield/pii-shield": {
+      "version": "v2.3.1",
+      "date": "2026-10-27"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-10-29",
-      "note": "used for independent corroboration of openanalytics (found third-party Railway deploy templates and an MCP marketplace listing, confirming real external adoption) and issuerd (no independent coverage found yet, too new; verified certification claim directly against openid.net's own registry instead)."
+      "last_ok": "2026-10-31",
+      "note": "queried for 'new open source RAG tool October 2026 Show HN' and an openalternative-style self-hosted search/document directory query — both returned mostly stale or undated results, no new slot-4 leads beyond what GitHub search surfaced."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-30",
-      "note": "fetched READMEs for cats, debuganything, danwo, assay-evals, llm-mock — all substance verified directly, no WebFetch-on-rendered-page shortcuts taken."
+      "last_ok": "2026-10-31",
+      "note": "fetched READMEs for antfly, purrdf, mcp-memory-service, mnemosyne, pii-shield — all substance verified directly, no WebFetch-on-rendered-page shortcuts taken."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4043,12 +4070,12 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-30",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used at start. ~16 search/repositories keyword queries (mutation, flaky test, time-travel debugging, log tailing, contract testing, bisect, terminal debugger, test generation, coverage MCP, REPL debugging, API testing, CLI debugger, schema linting, code review CLI, developer tool, self-hosted observability) plus repos/releases checks on 15 shortlisted candidates. No rate-limit pressure."
+      "last_ok": "2026-10-31",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit. ~12 search/repositories keyword queries (semantic cache, reranker, document chunking, data lineage, knowledge graph construction, entity extraction, hybrid search, PDF table extraction, RAG evaluation, web crawler markdown, schema inference, PII redaction, structured extraction) plus repos/releases checks on 8 shortlisted candidates and 2 version-check lookups (Paseo, Headroom). No rate-limit pressure. Generic keyword search was heavily dominated by same-second hackathon/tutorial 0-star repos regardless of query; stars:>100 threshold queries were the only reliable signal today."
     },
     "hn.algolia.com": {
-      "last_ok": "2026-10-30",
-      "note": "search_by_date on tags=show_hn for debug/testing/cli queries over a 14-day window; mostly thin personal projects, nothing new enough to catalogue beyond what GitHub search already surfaced."
+      "last_ok": "2026-10-31",
+      "note": "search_by_date on query=RAG and tags=show_hn over a 10-14 day window; mostly thin personal projects and off-topic stories, nothing new enough for slot 4 beyond what GitHub search already surfaced."
     },
     "pypi.org": {
       "last_ok": "2026-10-30",
@@ -4142,8 +4169,12 @@
     "OpenAnalytics (OpenLabs-so/openanalytics) — 2026-10-29, PROTOTYPE, 7.4",
     "keypaste (notinferred/keypaste) — 2026-10-29, PROTOTYPE, 6.9",
     "Bullpane (madmorett/bullpane) — 2026-10-29, USE NOW, 6.5",
-    "Enroute (enroute-sh/enroute) — 2026-10-29, STUDY, 6.2"
+    "Enroute (enroute-sh/enroute) — 2026-10-29, STUDY, 6.2",
+    "Antfly (antflydb/antfly) — 2026-10-31, PROTOTYPE, 8.3",
+    "mcp-memory-service (doobidoo/mcp-memory-service) — 2026-10-31, USE NOW, 8.0",
+    "PII-Shield (pii-shield/pii-shield) — 2026-10-31, PROTOTYPE, 7.0",
+    "PurRDF (Blackcat-Informatics/purrdf) — 2026-10-31, STUDY, 6.8"
   ],
-  "notes": "2026-10-30: Slot 3 (developer utilities, debugging, testing) per day_of_year 303 % 7 + 1 = 3. Catalogued 5 new: CATS (Endava/cats, Apache-2.0, 8.8, USE NOW) — a mature, actively-released (6 years, v15.3.0 shipped same day) REST API fuzzer that automates negative-path OpenAPI testing with zero code and a documented bug-finding record against HashiCorp Vault and Gitea; a stronger, more specific pitch than the previously time-boxed-out Schemathesis/EvoMaster. Debug Anything (shreyassaw5394/debuganything, MIT, 8.2, PROTOTYPE) — a two-week-old but unusually well-engineered MCP server giving coding agents black-box observation of any running process/container via strace/py-spy/perf/lsof/tcpdump/gdb with an evidence-citation schema; explicitly and correctly positions itself as complementary to the already-catalogued mcp-debugger rather than competing with it. dánwò (carbonmeai/danwo, Apache-2.0, 7.8, PROTOTYPE) — a company-backed (Carbonme Inc.) E2E testing framework combining UI-driving, real third-party provider emulation (Stripe, Clerk, Resend, Google, Slack, 20+ more), and systematic fault injection with invariant judging; 9 days old and the project's own docs warn 'APIs will change.' Assay/assay-evals (tap222/assay-evals, MIT, 7.3, PROTOTYPE) — pytest/Jest-native behavioral regression testing for AI agents, auto-wrapping an existing LLM SDK client; overlaps substantially with the already-catalogued whatbroke, kept as a more polished, more statistically rigorous alternative rather than an addition to adopt alongside it. llmock (piyook/llm-mock, MIT, 6.4, PROTOTYPE) was today's Small but High-Leverage Utility — a 2+-year-old, actively maintained local mock LLM API server (OpenAI/Claude/Gemini-compatible) for deterministic, zero-cost AI-integration testing. No meaningful updates to existing entries today. Rejected a fourth/fifth independent same-week 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, time-travel-debugger-mcp, flashback — all 0-1 stars) as duplicates of the already-catalogued OrcaReplay, oimo-ai/apgar as a thin duplicate of the whatbroke niche, and a same-day '2026' marketing-title content-farm wave reconfirming the pattern first flagged 2026-10-23. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack. 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations. Updated: 2026-10-30.",
-  "updated": "2026-10-28"
+  "notes": "2026-10-31: Slot 4 (data, search, documents, RAG) per day_of_year 304 % 7 + 1 = 4. Catalogued 4 new: Antfly (antflydb/antfly, Apache-2.0, 8.3, PROTOTYPE) — a Zig-core search-and-inference database unifying BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and a genuinely embeddable TypeScript SDK; pre-1.0 (v0.2.5) but with real infrastructure investment (Homebrew tap, Docker registry, Postgres extension, hosted cloud option). mcp-memory-service (doobidoo/mcp-memory-service, Apache-2.0, 8.0, USE NOW) — the most mature agent-memory tool found to date (~2 years old vs. weeks-old competitors), with OAuth2+DCR-gated remote MCP and a typed causal knowledge graph; the clear first pick among the catalogued agent-memory tools (Hippo, CortexDB, deja-vu, MuninnDB). PII-Shield (pii-shield/pii-shield, Apache-2.0, 7.0, PROTOTYPE) was today's Small but High-Leverage Utility — a zero-code K8s sidecar plus WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context; the K8s operator path is still stabilizing per its own status table. PurRDF (Blackcat-Informatics/purrdf, MIT OR Apache-2.0 OR MulanPSL-2.0, 6.8, STUDY) — a rigorously engineered, DOI-citable Rust RDF engine unifying BM25 full-text, exact GeoSPARQL, and embedding kNN inside one SPARQL evaluator; filed STUDY rather than PROTOTYPE since its npm/Python bindings deliberately expose only a thin surface, not the retrieval fusion that makes the Rust core interesting. No meaningful updates today: checked Paseo (v0.14.0-beta.1 -> v0.14.0, beta-to-stable promotion only) and Headroom (v0.41.0 -> v0.42.0, batch/savings-tracking fixes only) — neither changed the evaluation. Generic GitHub keyword search on crowded AI/RAG terms was almost entirely same-second hackathon/tutorial noise even with stars/pushed-date filters; stars:>100 threshold queries were the only reliable signal. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and ThemisDB (9 stars, NOASSERTION license, Kickstarter link in README) for marketing-heavy immaturity. Held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, heavy marketing badges, overlaps already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations. Updated: 2026-10-31.",
+  "updated": "2026-10-31"
 }
