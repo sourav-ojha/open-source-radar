@@ -30,7 +30,7 @@ Docker Compose is the recommended path (`docker-compose.yml` + `.env` with `JWT_
 Three-layer Stripe reliability (webhook + success-page verification + periodic sync) to never miss a payment. Atomic quota/activation enforcement at the database level avoids double-counting under concurrent retries. License-verify endpoints collapse all "license-knowable" failures to a single 404, closing off key-enumeration. Idempotency-Key middleware on writes. Ed25519 per-product signing keys for release feeds, encrypted at rest under AES-256-GCM + HKDF-derived subkeys.
 
 ## Maturity
-Emerging. v0.1.16, created 2026-03-26, pushed 2026-10-24 (active, roughly weekly releases). 135 stars, 32 forks, 2 subscribers, 7 contributors (lead author ~43/61 commits among top contributors).
+Emerging. v0.1.19, created 2026-03-26, pushed 2026-10-31 (active, roughly weekly releases). 188 stars, 64 forks, 5 subscribers, 7 contributors (lead author ~43/61 commits among top contributors).
 
 ## License
 AGPL-3.0. The network-use clause does not block the primary use case (self-hosting it as your own licensing backend) — it only applies if you modify Keygate itself and offer that modified version as a hosted service to third parties.
@@ -39,9 +39,9 @@ AGPL-3.0. The network-use clause does not block the primary use case (self-hosti
 Keygen, Cryptlex, LicenseSpring (all commercial SaaS). The default alternative today is a hand-rolled Stripe webhook + license table.
 
 ## Risks / Limitations
-- Pre-1.0 and young (7 months, 135 stars) — pilot on a low-stakes product before trusting it with primary revenue.
+- Pre-1.0 and young (7-8 months, 188 stars) — pilot on a low-stakes product before trusting it with primary revenue.
 - AGPL-3.0 flagged per policy, though not a practical blocker here.
-- Only 2 GitHub subscribers; sustained maintenance beyond the current pace is unproven.
+- Only 5 GitHub subscribers; sustained maintenance beyond the current pace is unproven.
 
 ## Recommendation
 PROTOTYPE — worth standing up against a low-stakes product (e.g. a CLI tool or internal utility sold to a small number of users) before trusting it with primary revenue.
@@ -49,3 +49,6 @@ PROTOTYPE — worth standing up against a low-stakes product (e.g. a CLI tool or
 ## Change History
 ### 2026-10-25
 Discovered via GitHub search for self-hosted license/subscription management tooling (slot 5: self-hosted SaaS alternatives, productivity). First-time review.
+
+### 2026-11-01
+Meaningful update: v0.1.16 → v0.1.19 (135 → 188 stars, 32 → 64 forks). Added per-seat licensing (buyers pick seat count at checkout, change it later in the self-service portal; new `license.quantity_changed` webhook) and per-member license keys with per-device revocation on member removal (v0.1.17). Fixed two correctness issues in the billing path: Stripe refunds/disputes now correctly scope what they revoke (a full refund or lost dispute of the current period cancels the subscription and revokes the license; a refund of a past period is only audited), and a prior bug where failed webhook-driven license updates answered Stripe 200 instead of 500 — so Stripe never retried them — is fixed (v0.1.18/v0.1.19).

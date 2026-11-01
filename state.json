@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-10-31",
-  "last_successful_run": "2026-10-31",
-  "run_count": 62,
-  "rotation_slot_last_used": 4,
+  "last_run": "2026-11-01",
+  "last_successful_run": "2026-11-01",
+  "run_count": 63,
+  "rotation_slot_last_used": 5,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -71,17 +71,10 @@
     "AI agents/MCP/coding productivity (slot 1) — a crowdsourced, evidence-graded corpus of coding-agent failure/fix lessons served over MCP (MisakaNet, 543 stars, Apache-2.0), a 28-package/240-tool MCP wrapper suite replacing raw CLI output with structured JSON to cut agent context spend (Pare), and a statement-level policy/masking/audit gateway for AI-agent access to Postgres (Midplane, very early but directly relevant to the MSSP/PTaaS context). Paseo (v0.12.0->v0.14.0-beta.1, cross-machine agent delegation via `host add` over SSH/relay) and schemagate (v1.10.0->v1.14.0, LlamaIndex integration plus a new deep_answer MCP tool) both had meaningful updates. Rejected a confirmed template-spam wave of near-identical 'genpark-*' agent-governance skill repos duplicated across two GitHub orgs (alphaparkinc/Alpha-Park), each sitting at exactly 7 stars with marketing-heavy, substance-light READMEs; reconfirmed the ongoing oversaturation of generic 'coding agent orchestration'/'agent sandbox' GitHub search results (git-worktree-per-agent managers, desktop multi-agent cockpits) with no new standout. Held Qsnh/skillsgist (self-hosted Agent Skills registry), david-engelmann/maidan (agent-swarm task queue with results delivered to GitHub/Slack/Linear), and kitepon/aiterm-mcp (tmux-backed MCP terminal that launches other coding agents) to Worth Watching as too thin for a full catalog entry. 'Still Worth Trying' rotated to Xberg, Bernstein, and Beads — none used in the five immediately preceding rotations.",
     "product infrastructure / APIs / backend components (slot 2) — a single-binary, OpenID-Certified Rust IAM server with first-class DPoP/token-exchange/CIBA support for the agentic-access era (Issuerd), a self-hosted cookieless web-analytics platform tying traffic to Stripe revenue with a built-in MCP server (OpenAnalytics), a KeePass-compatible secrets manager with a per-field MCP approval gate for coding agents (keypaste, standout of a same-week 'agent secrets manager' wave over sallyport/OpenKeylet/vahta/jitpass), and a Git server rebuilt on modern-database design principles (object-storage log-structured layers, Raft-replicated per-repo ledger) filed as an architecture study (Enroute). Bullpane, a production-safe self-hosted BullMQ dashboard, was today's Small but High-Leverage Utility. Pikopod's v0.1.2->v0.2.0 release (divergence detection against live production traffic, incident import/export) was a meaningful update. Held out as too-new-to-catalogue-yet: DeterminFlow (stale 48 days despite 941 stars), open-flow (custom hosted-service-restricted license), and burrow (solid but overshadowed by Issuerd). Rejected a wave of high-star but off-topic Chinese LLM-account-pool/reverse-proxy gateway repos (workbuddy2api family) recurring across unrelated topic searches. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Artifact Keeper — none used in the nine immediately preceding rotations.",
     "developer utilities/debugging/testing (slot 3) — a mature, actively-released REST API fuzzer with a documented real-world bug-finding record (Endava/CATS, self-healing zero-code negative testing against OpenAPI specs), an unusually well-engineered MCP server giving coding agents black-box process/container observation via strace/perf/gdb with an evidence-citation schema (Debug Anything), a company-backed E2E testing framework pairing UI-driving with real provider emulation and systematic fault injection (dánwò, Carbonme Inc.), and a pytest/Jest-native behavioral-regression tool for AI agents that auto-wraps an existing LLM SDK client (Assay/assay-evals, compared directly against the already-catalogued whatbroke). llmock (local multi-provider LLM mock server, 2+ years old) was today's Small but High-Leverage Utility. Flagged a fourth/fifth independent same-niche 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, flashback, time-travel-debugger-mcp — all 0-1 stars) duplicating the already-catalogued OrcaReplay, rejected oimo-ai/apgar as a thin duplicate of the whatbroke niche, and reconfirmed the same-day '2026' marketing-title content-farm pattern first flagged on 2026-10-23 recurring in a Roblox/developer-tool batch. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack (Android/JVM, not core MERN/Node). 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations.",
-    "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations."
+    "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations.",
+    "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "kuruba1033/AI-Engineer-Internship-Document-Extraction",
-    "Git-Lister/Certain-Tree",
-    "ayushagarwal13/AI-Document-Analyst",
-    "ritikkumar79/ai-document-extraction-validation",
-    "Sushankumar2134/WellFox",
-    "Wikolabs/docextract",
-    "NerdSnipe-Inc/ScanLens",
-    "roberthalfway204/Document-Intelligent-Assistant",
     "anushapbhapri-byte/ai-ocr-document-analyzer",
     "Skalith/ai-document-processing",
     "mayaramyadav/laravel-ocr",
@@ -1573,7 +1566,15 @@
     "xerj-org/xerj",
     "zcag/tela",
     "getpaseo/paseo",
-    "headroomlabs-ai/headroom"
+    "headroomlabs-ai/headroom",
+    "abishekmuthian/open-payment-host",
+    "Honorboxx/honorbox",
+    "ZAK123DSFDF/refearnapp",
+    "izzipizzy/slimtds",
+    "letsrevel/revel-backend",
+    "letsrevel/revel-frontend",
+    "gethardcount/hardcount",
+    "getvelox/velox"
   ],
   "rejected": [
     {
@@ -2880,6 +2881,11 @@
       "repo_url": "https://github.com/makr-code/ThemisDB",
       "reason": "too early (9 stars, NOASSERTION license) with a Kickstarter funding solicitation in the README — marketing-heavy signal per quality filters",
       "date": "2026-10-31"
+    },
+    {
+      "repo_url": "https://github.com/izzipizzy/slimtds",
+      "reason": "held out on dual-use grounds — a PHP/FrankenPHP affiliate traffic-distribution-system whose schema types include classic cloaking patterns (serving different content to bots vs. real visitors) that overlap with ad-fraud/detection-evasion tooling; also a PHP stack mismatch against the MERN bias",
+      "date": "2026-11-01"
     }
   ],
   "known_releases": {
@@ -3787,10 +3793,6 @@
       "version": "v0.37.2",
       "date": "2026-09-30"
     },
-    "getvelox/velox": {
-      "version": "v0.3.2",
-      "date": "Unclear based on available documentation"
-    },
     "Heilonng23/openheard": {
       "version": "v0.1.0",
       "date": "2026-09-25"
@@ -3936,8 +3938,8 @@
       "date": "2026-10-01"
     },
     "tabloy/keygate": {
-      "version": "v0.1.16",
-      "date": "2026-10-23"
+      "version": "v0.1.19",
+      "date": "2026-10-28"
     },
     "kenforthewin/atomic": {
       "version": "v1.45.0",
@@ -4046,16 +4048,32 @@
     "pii-shield/pii-shield": {
       "version": "v2.3.1",
       "date": "2026-10-27"
+    },
+    "gethardcount/hardcount": {
+      "version": "v0.9.1",
+      "date": "2026-10-29"
+    },
+    "Honorboxx/honorbox": {
+      "version": "v0.6.0",
+      "date": "2026-07-27"
+    },
+    "abishekmuthian/open-payment-host": {
+      "version": "v0.3.14 (README badge, no GitHub tag)",
+      "date": "Unclear based on available documentation"
+    },
+    "ZAK123DSFDF/refearnapp": {
+      "version": "v1.4.0",
+      "date": "2026-05-16"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-10-31",
-      "note": "queried for 'new open source RAG tool October 2026 Show HN' and an openalternative-style self-hosted search/document directory query — both returned mostly stale or undated results, no new slot-4 leads beyond what GitHub search surfaced."
+      "last_ok": "2026-11-01",
+      "note": "queried for Show-HN-style self-hosted-SaaS-alternative posts (returned only stale roundup/directory articles, no new leads) and for third-party corroboration of HonorBox's claims (found independent SaaS-directory comparison pages confirming the live-store and paid-add-on claims)."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-10-31",
-      "note": "fetched READMEs for antfly, purrdf, mcp-memory-service, mnemosyne, pii-shield — all substance verified directly, no WebFetch-on-rendered-page shortcuts taken."
+      "last_ok": "2026-11-01",
+      "note": "fetched READMEs for honorbox, open-payment-host, refearnapp, slimtds, docsmint directly; no WebFetch-on-rendered-page shortcuts taken."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4070,8 +4088,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-10-31",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit. ~12 search/repositories keyword queries (semantic cache, reranker, document chunking, data lineage, knowledge graph construction, entity extraction, hybrid search, PDF table extraction, RAG evaluation, web crawler markdown, schema inference, PII redaction, structured extraction) plus repos/releases checks on 8 shortlisted candidates and 2 version-check lookups (Paseo, Headroom). No rate-limit pressure. Generic keyword search was heavily dominated by same-second hackathon/tutorial 0-star repos regardless of query; stars:>100 threshold queries were the only reliable signal today."
+      "last_ok": "2026-11-01",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~10 search/repositories keyword queries (gumroad alternative, affiliate tracking, membership platform, community platform, course platform, expense management, testimonial collection, waitlist tool) plus repos/releases checks on 10 tracked slot-5 projects and 3 shortlisted new candidates plus letsrevel. Resolved one HTTP 301 repository-rename redirect (getvelox/velox -> gethardcount/hardcount) via /repositories/{id}. No rate-limit pressure."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-31",
@@ -4173,8 +4191,13 @@
     "Antfly (antflydb/antfly) — 2026-10-31, PROTOTYPE, 8.3",
     "mcp-memory-service (doobidoo/mcp-memory-service) — 2026-10-31, USE NOW, 8.0",
     "PII-Shield (pii-shield/pii-shield) — 2026-10-31, PROTOTYPE, 7.0",
-    "PurRDF (Blackcat-Informatics/purrdf) — 2026-10-31, STUDY, 6.8"
+    "PurRDF (Blackcat-Informatics/purrdf) — 2026-10-31, STUDY, 6.8",
+    "Hardcount, formerly Velox (gethardcount/hardcount) — 2026-11-01, PROTOTYPE, 8.3 (meaningful update)",
+    "Keygate (tabloy/keygate) — 2026-11-01, PROTOTYPE, 8.1 (meaningful update)",
+    "HonorBox (Honorboxx/honorbox) — 2026-11-01, PROTOTYPE, 7.8",
+    "Open Payment Host (abishekmuthian/open-payment-host) — 2026-11-01, PROTOTYPE, 7.6",
+    "RefearnApp (ZAK123DSFDF/refearnapp) — 2026-11-01, PROTOTYPE, 7.1"
   ],
-  "notes": "2026-10-31: Slot 4 (data, search, documents, RAG) per day_of_year 304 % 7 + 1 = 4. Catalogued 4 new: Antfly (antflydb/antfly, Apache-2.0, 8.3, PROTOTYPE) — a Zig-core search-and-inference database unifying BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and a genuinely embeddable TypeScript SDK; pre-1.0 (v0.2.5) but with real infrastructure investment (Homebrew tap, Docker registry, Postgres extension, hosted cloud option). mcp-memory-service (doobidoo/mcp-memory-service, Apache-2.0, 8.0, USE NOW) — the most mature agent-memory tool found to date (~2 years old vs. weeks-old competitors), with OAuth2+DCR-gated remote MCP and a typed causal knowledge graph; the clear first pick among the catalogued agent-memory tools (Hippo, CortexDB, deja-vu, MuninnDB). PII-Shield (pii-shield/pii-shield, Apache-2.0, 7.0, PROTOTYPE) was today's Small but High-Leverage Utility — a zero-code K8s sidecar plus WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context; the K8s operator path is still stabilizing per its own status table. PurRDF (Blackcat-Informatics/purrdf, MIT OR Apache-2.0 OR MulanPSL-2.0, 6.8, STUDY) — a rigorously engineered, DOI-citable Rust RDF engine unifying BM25 full-text, exact GeoSPARQL, and embedding kNN inside one SPARQL evaluator; filed STUDY rather than PROTOTYPE since its npm/Python bindings deliberately expose only a thin surface, not the retrieval fusion that makes the Rust core interesting. No meaningful updates today: checked Paseo (v0.14.0-beta.1 -> v0.14.0, beta-to-stable promotion only) and Headroom (v0.41.0 -> v0.42.0, batch/savings-tracking fixes only) — neither changed the evaluation. Generic GitHub keyword search on crowded AI/RAG terms was almost entirely same-second hackathon/tutorial noise even with stars/pushed-date filters; stars:>100 threshold queries were the only reliable signal. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and ThemisDB (9 stars, NOASSERTION license, Kickstarter link in README) for marketing-heavy immaturity. Held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, heavy marketing badges, overlaps already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations. Updated: 2026-10-31.",
+  "notes": "2026-11-01: Slot 5 (self-hosted SaaS alternatives, productivity) per day_of_year 305 % 7 + 1 = 5. Catalogued 3 new: HonorBox (Honorboxx/honorbox, MIT, 7.8, PROTOTYPE) — a zero-server, zero-database Gumroad alternative built from GitHub Pages + Stripe Payment Links + a GitHub Action that invites buyers as repo collaborators, with proactive re-invite before GitHub's 7-day expiry; genuinely novel architecture for this niche. Open Payment Host (abishekmuthian/open-payment-host, AGPL-3.0, 7.6, PROTOTYPE) — a 4-year-old, actively-maintained self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with automatic per-country payment routing and Listmonk/Mailchimp sync; used in production by its own author. RefearnApp (ZAK123DSFDF/refearnapp, AGPL-3.0, 7.1, PROTOTYPE) — the first self-hostable Next.js/Cloudflare-Workers-native affiliate/referral tracker found to date, positioned against Rewardful/FirstPromoter/Tolt; latest GitHub tag is 5 months stale relative to main, flagged. Two meaningful updates: Velox renamed itself to Hardcount at v0.9.0 (getvelox/velox now 301-redirects to gethardcount/hardcount) and shipped ten releases since the 2026-10-11 review fixing a real correctness gap (LiteLLM proxy usage silently not recorded prior to v0.5.0) plus production-hardening; and Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug. Held slimTDS (izzipizzy/slimtds) out of the catalog on dual-use grounds (cloaking-pattern schema types overlapping ad-fraud/evasion tooling, plus a PHP stack mismatch) rather than rejecting it purely on traction. Held letsrevel/revel (self-hosted event/ticketing/membership platform, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held for a second cycle with no new differentiation found from the already-catalogued sage-wiki. Generic GitHub keyword search on several other slot-5 niches (membership platform, community platform, course platform, expense management, testimonial collection, waitlist tool) returned no results meeting the stars:>10-30 threshold used, suggesting those specific niches are either saturated by mainstream tools already excluded by policy or genuinely thin on GitHub-indexed self-hosted entrants right now. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations. Updated: 2026-11-01.",
   "updated": "2026-10-31"
 }

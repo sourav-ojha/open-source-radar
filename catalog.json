@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "projects": [
     {
       "name": "Xberg",
@@ -12344,18 +12344,18 @@
       "acted_on": false
     },
     {
-      "name": "Velox",
+      "name": "Hardcount (formerly Velox)",
       "slug": "velox-ai-billing-engine",
-      "repo_url": "https://github.com/getvelox/velox",
+      "repo_url": "https://github.com/gethardcount/hardcount",
       "website": "",
-      "description": "Self-hosted, MIT-licensed billing engine purpose-built for AI and usage-heavy SaaS: multi-dimensional token metering (model × token_type), prepaid commits with drawdown, per-customer margin/COGS tracking, and a LiteLLM proxy integration that ingests dimensioned token events with no SDK. Stripe still executes the underlying card charge as a plain PaymentIntent, so Stripe Billing's 0.5% fee disappears and billing data stays in your own infra.",
+      "description": "Self-hosted, MIT-licensed billing engine purpose-built for AI and usage-heavy SaaS: multi-dimensional token metering (model x token_type), prepaid commits with drawdown, per-customer margin/COGS tracking, and a LiteLLM proxy integration that ingests dimensioned token events with no SDK. Renamed from Velox to Hardcount in v0.9.0 (2026-10-28); same project, same author, same architecture. Stripe still executes the underlying card charge as a plain PaymentIntent, so Stripe Billing's 0.5% fee disappears and billing data stays in your own infra.",
       "category": [
         "product building blocks",
         "billing / monetization",
         "AI infrastructure"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 8.2,
+      "relevance_score": 8.3,
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "MIT",
@@ -12395,24 +12395,26 @@
       "why_it_matters": "The existing catalogued usage-billing engines (Lago, Meteroid, OpenMeter, Flexprice) are general-purpose metering platforms; none of them ship AI-token-dimensioned pricing, a LiteLLM ingestion path, or per-customer margin/COGS as first-class, unlocked features. For anyone billing for LLM usage specifically, this removes a multi-week build (meter design, pricing-rule engine, dunning, margin reporting) rather than adapting a generic metering tool to the AI-token shape by hand.",
       "why_not_build_it_myself": "The hard parts — idempotent multi-dimension metering with disjoint-claim pricing rules, atomic prepaid-commit funding/drawdown, leader-elected billing-cycle jobs with documented zero-duplicate-invoice failure testing, and a transactional outbox for webhooks/emails — are exactly the kind of correctness-critical plumbing that is easy to get subtly wrong and expensive to debug in production once money is involved.",
       "risks": [
-        "Pre-1.0: public API is stabilising, not frozen; breaking changes land on MINOR releases until 1.0.0",
-        "Effectively a single-maintainer project (1,640 of ~1,649 commits from one author) — real bus-factor risk despite the engineering rigor",
-        "Only 4 GitHub stars at review time — no independent community validation yet of the correctness claims beyond the project's own published benchmarks",
-        "No Kubernetes/Helm packaging yet (deliberately deferred); single-VM Docker Compose is the only documented self-host path today",
-        "Self-hosting billing data transfers compliance obligations (PCI/data-residency) to the operator — the project is explicit about this rather than implying otherwise"
+        "Pre-1.0 API (v0.9.x); the v0.9.0 rename release itself is a breaking, fresh-install-only migration — it cannot upgrade a database created by Velox v0.8.x or earlier",
+        "Still effectively single-maintainer",
+        "Still tiny community (6 stars at review time) despite ten tagged releases of real production-hardening work since last review",
+        "No Kubernetes/Helm packaging yet",
+        "Self-hosting transfers billing-data compliance obligations to the operator"
       ],
       "first_seen": "2026-10-11",
-      "last_reviewed": "2026-10-11",
-      "last_meaningful_update": "2026-10-11",
-      "current_version": "v0.3.2",
-      "latest_release_date": "Unclear based on available documentation — GitHub tags confirm v0.3.2 as latest but no releases API entry with a date was found",
+      "last_reviewed": "2026-11-01",
+      "last_meaningful_update": "2026-11-01",
+      "current_version": "v0.9.1",
+      "latest_release_date": "2026-10-29",
       "source_links": [
-        "https://github.com/getvelox/velox",
-        "https://github.com/getvelox/velox/blob/main/docs/benchmarks/failure-correctness.md",
-        "https://github.com/getvelox/velox/blob/main/docs/benchmarks/sustained-throughput.md"
+        "https://github.com/gethardcount/hardcount",
+        "https://github.com/gethardcount/hardcount/releases"
       ],
-      "aliases": [],
-      "notes": "GitHub API verified: MIT, 4 stars, 1 fork, pushed_at 2026-10-11, created_at 2026-04-07, archived:false, 19 open issues (active development). Single dominant contributor (sagarsuperuser, 1640 commits) plus dependabot. Published, reproducible failure-correctness benchmarks (leader SIGKILL at five kill points, partition drill) claim 0 duplicate/lost invoices with a documented negative control showing the same test fails hard (103 invoices for 40 periods) when a specific index is dropped — unusually rigorous verification method for a 4-star repo.",
+      "aliases": [
+        "getvelox/velox",
+        "Velox"
+      ],
+      "notes": "GitHub API verified: MIT, 4 stars, 1 fork, pushed_at 2026-10-11, created_at 2026-04-07, archived:false, 19 open issues (active development). Single dominant contributor (sagarsuperuser, 1640 commits) plus dependabot. Published, reproducible failure-correctness benchmarks (leader SIGKILL at five kill points, partition drill) claim 0 duplicate/lost invoices with a documented negative control showing the same test fails hard (103 invoices for 40 periods) when a specific index is dropped — unusually rigorous verification method for a 4-star repo. UPDATE 2026-11-01: project renamed Velox -> Hardcount at v0.9.0 (2026-10-28); GitHub redirects getvelox/velox -> gethardcount/hardcount (HTTP 301, confirmed via API). Between the 2026-10-11 review (v0.3.2, 4 stars) and now (v0.9.1, 6 stars), ten tagged releases shipped real production-hardening: idempotency keys required on all usage-event ingestion endpoints (v0.7.0), a documented LiteLLM integration bug fix where proxy usage was silently not recorded at all prior to v0.5.0, mandatory multi-replica stop-all-then-start rollout support (v0.4.0), a security-review-driven fix requiring METRICS_TOKEN in production, a repair command for interrupted database migrations, private-IP webhook URL rejection, and a one-command Docker install with a full API reference. This is a meaningful update: the project went from 'engineering looks rigorous but had a real correctness gap in its flagship LiteLLM integration' to 'gap fixed, hardened for real partner installs, and renamed under a clearer brand' in three weeks.",
       "acted_on": false
     },
     {
@@ -15003,7 +15005,7 @@
         "micro-SaaS opportunity"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 8.0,
+      "relevance_score": 8.1,
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "AGPL-3.0",
@@ -15024,7 +15026,8 @@
         "Subscription/entitlement management for a SaaS product with Stripe already as the payment processor",
         "Auto-update release feed for a shipped native app (Sparkle/Velopack/Tauri) gated by license/maintenance period",
         "Usage-based quota enforcement (API calls, storage, bandwidth) with atomic, retry-safe counting",
-        "Floating/concurrent-seat licensing for an internal tool sold to teams"
+        "Floating/concurrent-seat licensing for an internal tool sold to teams",
+        "Sell per-seat team plans where buyers pick seat count at checkout and change it later via the self-service portal"
       ],
       "product_opportunities": [
         "Drop-in licensing+billing backend for any future packaged product (desktop tool, CLI, browser extension) instead of hand-rolling Stripe webhooks, activation limits, and update feeds",
@@ -15039,21 +15042,21 @@
       "why_it_matters": "Licensing, usage metering, and auto-update distribution are exactly the kind of scaffolding that eats a week of engineering time before a side project can actually charge money. Keygate bundles all three behind one binary and your own Stripe account instead of a $50-300/month SaaS subscription or a custom half-build.",
       "why_not_build_it_myself": "Atomic activation-limit enforcement under retries, Ed25519-signed release feeds compatible with three different native auto-updaters, three-layer Stripe reliability (webhook + success-page + periodic sync), and license-key-enumeration-safe verify endpoints are each individually fiddly to get right; here they come integrated and already battle-tested against real edge cases (idempotency keys, dunning schedules, plan upgrades with proration).",
       "risks": [
-        "Pre-1.0 (v0.1.16) with only 135 stars and 7 contributors — young enough that a production licensing/billing path should be piloted on a low-stakes product first, not trusted immediately with primary revenue",
+        "Pre-1.0 (v0.1.19) with 188 stars and 7 contributors — young enough that a production licensing/billing path should be piloted on a low-stakes product first, not trusted immediately with primary revenue",
         "AGPL-3.0 — flagged per policy even though the network-use clause does not block the primary self-hosted use case",
         "2 subscribers on GitHub is thin; sustained maintenance is unproven beyond ~7 months of history"
       ],
       "first_seen": "2026-10-25",
-      "last_reviewed": "2026-10-25",
-      "last_meaningful_update": "2026-10-25",
-      "current_version": "v0.1.16",
-      "latest_release_date": "2026-10-23",
+      "last_reviewed": "2026-11-01",
+      "last_meaningful_update": "2026-11-01",
+      "current_version": "v0.1.19",
+      "latest_release_date": "2026-10-28",
       "source_links": [
         "https://github.com/tabloy/keygate",
         "https://keygate.app"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: AGPL-3.0, 135 stars, 32 forks, 2 subscribers, 7 contributors (lead author alanisme: 43/61 commits across top contributors), created 2026-03-26, pushed 2026-10-24, not archived, 7 open issues. Go backend confirmed via pkg.go.dev. Active weekly release cadence since March.",
+      "notes": "GitHub API verified: AGPL-3.0, 135 stars, 32 forks, 2 subscribers, 7 contributors (lead author alanisme: 43/61 commits across top contributors), created 2026-03-26, pushed 2026-10-24, not archived, 7 open issues. Go backend confirmed via pkg.go.dev. Active weekly release cadence since March. UPDATE 2026-11-01: v0.1.16 -> v0.1.19 (135 -> 188 stars, 32 -> 64 forks). Added per-seat licensing (buyers pick seat count at checkout, change it later in the portal; webhook event license.quantity_changed) and per-member license keys with per-device revocation on member removal (v0.1.17). Fixed two correctness issues: Stripe refunds/disputes now correctly scope what they revoke (a full refund or lost dispute of the current period cancels the subscription and revokes the license; a refund of a past period is only audited, not acted on) and a prior bug where failed webhook-driven license updates answered Stripe 200 instead of 500, so Stripe never retried them (v0.1.18/v0.1.19). Meaningful update: per-seat licensing is new functionality, and the refund/dispute scoping fix closes a real correctness gap in the billing path.",
       "acted_on": false
     },
     {
@@ -16778,6 +16781,204 @@
       ],
       "aliases": [],
       "notes": "Small but High-Leverage Utility of the day, 2026-10-31. Created 2026-01-30 (~9 months old).",
+      "acted_on": false
+    },
+    {
+      "name": "HonorBox",
+      "slug": "honorbox-serverless-digital-store",
+      "repo_url": "https://github.com/Honorboxx/honorbox",
+      "website": "https://honorboxx.github.io/honorbox/",
+      "description": "A zero-server, zero-database Gumroad/Lemon Squeezy alternative: a static storefront built by a tiny Node script and hosted free on GitHub Pages, checkout via Stripe Payment Links on the seller's own Stripe account, and fulfillment via a scheduled GitHub Action that invites each buyer's GitHub account as a collaborator on a private product repo (with automatic re-invite before GitHub's 7-day expiry). No webhooks, no server, and no database required; an opt-in webhook mode exists for near-instant delivery.",
+      "category": [
+        "self-hosted SaaS alternatives",
+        "micro-SaaS opportunity",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions. The maintainer sells a paid 'HonorBox Pro Audit & Reconciliation Suite' as an add-on service, but the core engine used to run the storefront and fulfillment is entirely free and unlocked.",
+      "deployment": [
+        "GitHub Pages (storefront)",
+        "GitHub Actions (fulfillment, scheduled polling)",
+        "no server, no database"
+      ],
+      "interfaces": [
+        "Stripe Payment Links",
+        "GitHub REST API (collaborator invites)",
+        "optional Stripe webhook mode"
+      ],
+      "use_cases": [
+        "Sell a one-off digital product (template, script, ebook, internal tool) with literally zero hosting cost or infra to babysit",
+        "Replace manual 'take payment then add buyer as GitHub collaborator by hand' workflows with the exact same mechanism, automated",
+        "Run a storefront for a side project or micro-SaaS add-on without standing up a backend for it",
+        "Use the 'bring your own store' mode to bolt automated fulfillment onto an existing Stripe + private-repo setup without adopting the rest of the suite"
+      ],
+      "product_opportunities": [
+        "Sell internal scripts/templates/starter kits as paid digital products with no new infra",
+        "Package a one-off commercial add-on for the MSSP admin-portal SaaS (a report template, a hardening checklist, a Terraform module) without building a storefront for it"
+      ],
+      "agent_opportunities": [
+        "The fulfillment script (`scripts/fulfill.js`) is a ~one-file, config-driven building block an agent could wire into any payment-link-to-repo-access workflow without the rest of the suite"
+      ],
+      "alternatives": [
+        "Gumroad (proprietary, 10%+50c fee)",
+        "Lemon Squeezy (proprietary, 5%+50c)",
+        "Polar (proprietary, free tier, also offers instant private-GitHub-repo-access as a built-in benefit)",
+        "open-payment-host (catalogued same run — full self-hosted server vs. HonorBox's serverless approach)"
+      ],
+      "why_it_matters": "This removes the two things that make a 'just sell this one digital thing' idea annoying to start: standing up a storefront, and building (or babysitting) fulfillment. HonorBox needs no server to run or pay for, which is a materially different trade-off from every self-hosted Gumroad alternative in the catalog, all of which need a running service. For small, infrequent digital-product sales the zero-infra approach is strictly simpler, at the cost of VAT handling and the buyer trusting a repo-collaborator invite instead of a direct download.",
+      "why_not_build_it_myself": "The fiddly part is not the storefront, it's the edge cases in unattended fulfillment: GitHub collaborator invitations expire after 7 days and need re-issuing, Stripe Payment Links need to be polled or hooked reliably, and a buyer who misses the invite email should not silently lose what they paid for. HonorBox has already worked through that reissue logic and documents it plainly rather than leaving it to be discovered in production.",
+      "risks": [
+        "Very early: created July 2026, 21 stars, 1 fork, effectively single-maintainer",
+        "Not a merchant of record — the seller is legally the merchant and must handle their own VAT/sales-tax obligations; the project is explicit about this rather than implying otherwise",
+        "Delivery via GitHub collaborator access only suits products that are files/code in a repo, not e.g. a hosted service or a license key for third-party software",
+        "Scheduled-polling fulfillment (default mode) has an inherent delivery lag of minutes, not seconds, unless the opt-in webhook mode is configured"
+      ],
+      "first_seen": "2026-11-01",
+      "last_reviewed": "2026-11-01",
+      "last_meaningful_update": "2026-11-01",
+      "current_version": "v0.6.0",
+      "latest_release_date": "2026-07-27",
+      "source_links": [
+        "https://github.com/Honorboxx/honorbox",
+        "https://github.com/Honorboxx/honorbox/blob/main/docs/bring-your-own-store.md",
+        "https://github.com/Honorboxx/honorbox/blob/main/docs/tax.md",
+        "https://honorboxx.github.io/honorbox/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 21 stars, 1 fork, 0 subscribers (normal for a repo this small/new, not itself a red flag), 3 open issues, created 2026-07-18, pushed 2026-10-12, archived:false, latest tag v0.6.0 (2026-07-27). The repo itself is a live working store (honorboxx.github.io/honorbox) selling a real paid add-on (HonorBox Pro), which is independently corroborated by third-party SaaS-directory listings (aiindigo.com comparison pages, productcool.com) rather than being purely self-asserted. README includes an honest comparison table against Gumroad/Lemon Squeezy/Polar that does not oversell the trade-offs (no VAT handling, no instant delivery guarantee).",
+      "acted_on": false
+    },
+    {
+      "name": "Open Payment Host",
+      "slug": "open-payment-host-gumroad-alternative",
+      "repo_url": "https://github.com/abishekmuthian/open-payment-host",
+      "website": "https://abishek.openpaymenthost.com",
+      "description": "A self-hosted, minimalist Go web app for selling digital products, subscriptions, and newsletters without paying a platform fee on top of payment-processing fees: Stripe, PayPal, Razorpay and Square support with an automatic per-country payment-gateway router, Listmonk/Mailchimp audience sync, and S3/Cloudflare R2 pre-signed-URL file delivery.",
+      "category": [
+        "self-hosted SaaS alternatives",
+        "micro-SaaS opportunity",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged loudly: fine to self-host and sell through, since you are not redistributing modified source as a competing hosted service, but modifying the code and offering it as a hosted payments platform to third parties would trigger AGPL's source-disclosure requirement.",
+      "deployment": [
+        "Docker / one-click Railway template",
+        "single Go binary + SQLite",
+        "self-hosted VM"
+      ],
+      "interfaces": [
+        "WYSIWYG product-page editor",
+        "REST API & webhooks (experimental)",
+        "Stripe/PayPal/Razorpay/Square integrations",
+        "Listmonk/Mailchimp sync"
+      ],
+      "use_cases": [
+        "Sell digital files, one-time products, or subscriptions without a Gumroad/Ko-fi/Buy-Me-a-Coffee percentage fee on top of processing fees",
+        "Route checkout to a different payment gateway per customer country (e.g. Razorpay for India, Stripe elsewhere) for parity pricing or redundancy",
+        "Deliver paid files via pre-signed S3/R2 URLs instead of building that delivery pipeline by hand",
+        "Grow a newsletter audience automatically from paying customers via the Listmonk/Mailchimp integration"
+      ],
+      "product_opportunities": [
+        "Self-hosted payments layer for a small digital-product or paid-content side business, independent of any platform's take rate",
+        "A reusable multi-gateway checkout component pattern (price-ID in, rest automatic) worth studying even where this exact app isn't adopted"
+      ],
+      "agent_opportunities": [
+        "Experimental REST API & webhook surface could let an agent provision or update products programmatically once it stabilizes"
+      ],
+      "alternatives": [
+        "Gumroad, Buy Me a Coffee, Ko-fi (proprietary)",
+        "HonorBox (catalogued same run — zero-server, narrower scope)",
+        "Lemon Squeezy, Polar (proprietary)"
+      ],
+      "why_it_matters": "Four years of continuous, if slow, development by one maintainer who uses it to run his own payments (payments.abishekmuthian.com) is a stronger maturity signal than most entrants in this niche. The per-country payment-gateway router and the Listmonk/Mailchimp sync are genuinely differentiated features not found in the other self-hosted Gumroad alternatives reviewed to date.",
+      "why_not_build_it_myself": "Multi-gateway checkout (Stripe + PayPal + Razorpay + Square) with country-based routing, plus presigned-URL file delivery and WYSIWYG product pages, is a multi-week build to get right across four different payment APIs' idiosyncrasies — this has already absorbed that integration cost.",
+      "risks": [
+        "AGPL-3.0 — must be flagged for any commercial/hosted use beyond simple self-hosting",
+        "Maintainer explicitly labels it work-in-progress; 'possible unknown bugs' is a direct quote from the README",
+        "API/webhook support marked experimental",
+        "Small team/single-maintainer; 0 open issues on a 243-star, 4-year-old repo is unusual and could mean either very tight maintenance or low real usage pressure — unclear which from available signals",
+        "No documentation site yet (listed as a pending goal)"
+      ],
+      "first_seen": "2026-11-01",
+      "last_reviewed": "2026-11-01",
+      "last_meaningful_update": "2026-11-01",
+      "current_version": "v0.3.14 (per README badge; no corresponding GitHub Releases entry found)",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/abishekmuthian/open-payment-host",
+        "https://abishek.openpaymenthost.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 243 stars, 12 forks, 4 subscribers, 0 open issues, created 2022-11-24, pushed 2026-09-29, archived:false. No tagged GitHub release exists despite the README's 'Version 0.3.14' badge — version comes from a static badge image, not a git tag, so treat the version number as self-reported rather than API-confirmed.",
+      "acted_on": false
+    },
+    {
+      "name": "RefearnApp",
+      "slug": "refearnapp-affiliate-tracking",
+      "repo_url": "https://github.com/ZAK123DSFDF/refearnapp",
+      "website": "https://refearnapp.com",
+      "description": "A self-hostable affiliate/referral tracking platform positioned as an open-source alternative to Rewardful, FirstPromoter, and Tolt: click/conversion tracking on the Cloudflare Workers edge network, Stripe & Paddle integrations, PayPal mass payouts, coupon-code tracking, and an affiliate-facing portal, built as a Next.js + Postgres (Drizzle ORM) + Upstash Redis pnpm monorepo.",
+      "category": [
+        "self-hosted SaaS alternatives",
+        "micro-SaaS opportunity",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.1,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 on the self-hosted edition; all features are free and unlocked for self-hosters per the README. A paid 'Managed Cloud' tier is sold separately — that's the vendor's own hosted offering, not a feature gate on the open-source code.",
+      "deployment": [
+        "Docker (primary)",
+        "Cloudflare Workers (tracking layer)",
+        "self-hosted Postgres + Upstash Redis"
+      ],
+      "interfaces": [
+        "affiliate-facing portal",
+        "REST API (implied by dashboard)",
+        "Stripe/Paddle/PayPal payout integrations"
+      ],
+      "use_cases": [
+        "Run a referral/affiliate program for a product without paying Rewardful/FirstPromoter/Tolt's per-referral or monthly SaaS fee",
+        "Track clicks and conversions at the edge for near-zero added latency on referral links",
+        "Pay out affiliates via PayPal mass payouts or Stripe/Paddle instead of handling payouts manually",
+        "Run coupon-code-based attribution for a launch or affiliate campaign"
+      ],
+      "product_opportunities": [
+        "Bolt a referral program onto an existing or future micro-SaaS product without building click/conversion tracking and payout logic from scratch"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Rewardful, FirstPromoter, Tolt (all proprietary, per-referral or monthly fee)"
+      ],
+      "why_it_matters": "Referral-driven growth is a cheap, high-leverage channel for a small paid product, and the proprietary alternatives all charge recurring fees scaled to referral volume. This is the first self-hostable, Next.js/Cloudflare-native entrant in this niche found to date, and its stack (Next.js, Drizzle, Cloudflare Workers) matches the tooling already in use rather than requiring a new ecosystem.",
+      "why_not_build_it_myself": "Edge-latency click tracking, conversion attribution windows, coupon-code matching, and multi-gateway payout logic (Stripe, Paddle, PayPal mass payouts) are enough separate pieces of correctness-sensitive plumbing that reusing a maintained implementation beats rebuilding it for a side feature.",
+      "risks": [
+        "AGPL-3.0 — flag for any commercial/hosted redistribution",
+        "Latest GitHub tag (v1.4.0, 2026-05-16) is five months stale relative to the last push (2026-10-29) — the project is not cutting releases in step with its own development, so 'current_version' understates what's actually in main",
+        "README leads with a 'Launch Special / Lifetime Access' upsell for the managed cloud tier, which reads more like a landing page than documentation — worth confirming the self-hosted docs are equally complete before committing",
+        "Only 47 stars / 1 subscriber at review time; real but limited independent validation"
+      ],
+      "first_seen": "2026-11-01",
+      "last_reviewed": "2026-11-01",
+      "last_meaningful_update": "2026-11-01",
+      "current_version": "v1.4.0 (stale tag; main has advanced considerably since)",
+      "latest_release_date": "2026-05-16",
+      "source_links": [
+        "https://github.com/ZAK123DSFDF/refearnapp",
+        "https://refearnapp.com/docs"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 47 stars, 17 forks (an unusually high fork:star ratio for this catalog, which more often signals genuine developer engagement than the inflated-engagement pattern flagged on other repos, where fork counts are low relative to stars), 1 subscriber, 9 open issues, created 2025-03-28, pushed 2026-10-29, archived:false. Listed on Product Hunt with an active Discord.",
       "acted_on": false
     }
   ]
