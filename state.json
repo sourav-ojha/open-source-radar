@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-01",
-  "last_successful_run": "2026-11-01",
-  "run_count": 63,
-  "rotation_slot_last_used": 5,
+  "last_run": "2026-11-02",
+  "last_successful_run": "2026-11-02",
+  "run_count": 64,
+  "rotation_slot_last_used": 6,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -72,38 +72,10 @@
     "product infrastructure / APIs / backend components (slot 2) — a single-binary, OpenID-Certified Rust IAM server with first-class DPoP/token-exchange/CIBA support for the agentic-access era (Issuerd), a self-hosted cookieless web-analytics platform tying traffic to Stripe revenue with a built-in MCP server (OpenAnalytics), a KeePass-compatible secrets manager with a per-field MCP approval gate for coding agents (keypaste, standout of a same-week 'agent secrets manager' wave over sallyport/OpenKeylet/vahta/jitpass), and a Git server rebuilt on modern-database design principles (object-storage log-structured layers, Raft-replicated per-repo ledger) filed as an architecture study (Enroute). Bullpane, a production-safe self-hosted BullMQ dashboard, was today's Small but High-Leverage Utility. Pikopod's v0.1.2->v0.2.0 release (divergence detection against live production traffic, incident import/export) was a meaningful update. Held out as too-new-to-catalogue-yet: DeterminFlow (stale 48 days despite 941 stars), open-flow (custom hosted-service-restricted license), and burrow (solid but overshadowed by Issuerd). Rejected a wave of high-star but off-topic Chinese LLM-account-pool/reverse-proxy gateway repos (workbuddy2api family) recurring across unrelated topic searches. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Artifact Keeper — none used in the nine immediately preceding rotations.",
     "developer utilities/debugging/testing (slot 3) — a mature, actively-released REST API fuzzer with a documented real-world bug-finding record (Endava/CATS, self-healing zero-code negative testing against OpenAPI specs), an unusually well-engineered MCP server giving coding agents black-box process/container observation via strace/perf/gdb with an evidence-citation schema (Debug Anything), a company-backed E2E testing framework pairing UI-driving with real provider emulation and systematic fault injection (dánwò, Carbonme Inc.), and a pytest/Jest-native behavioral-regression tool for AI agents that auto-wraps an existing LLM SDK client (Assay/assay-evals, compared directly against the already-catalogued whatbroke). llmock (local multi-provider LLM mock server, 2+ years old) was today's Small but High-Leverage Utility. Flagged a fourth/fifth independent same-niche 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, flashback, time-travel-debugger-mcp — all 0-1 stars) duplicating the already-catalogued OrcaReplay, rejected oimo-ai/apgar as a thin duplicate of the whatbroke niche, and reconfirmed the same-day '2026' marketing-title content-farm pattern first flagged on 2026-10-23 recurring in a Roblox/developer-tool batch. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack (Android/JVM, not core MERN/Node). 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations.",
     "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations.",
-    "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations."
+    "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations.",
+    "infrastructure/observability/deployment (slot 6) — an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "anushapbhapri-byte/ai-ocr-document-analyzer",
-    "Skalith/ai-document-processing",
-    "mayaramyadav/laravel-ocr",
-    "AyushBire/Intelligent-Document-Data-Preprocessing-System",
-    "khma-92/Veriflow",
-    "beingamanforever/notSoSmartOCR",
-    "ispras/dedoc",
-    "keshavagr273/DocSaarthi",
-    "gowtham007777/Phase_1",
-    "asifbhaixd/OCR-based-Customs-Document-Processing",
-    "crokz1801/AI-Vault-Intelligent-Document-Retrieval",
-    "AlkanolAgrawal/intyrasense",
-    "philadelfic/LLM-second-brain",
-    "oxyc/den-embed",
-    "MontyGovernance/montycat-mcp",
-    "Destrayon/Connapse",
-    "MontyGovernance/montycat_python",
-    "MontyGovernance/montycat_rust",
-    "MontyGovernance/montycat_dart",
-    "MontyGovernance/montycat_node",
-    "bigint/rag.computer",
-    "rush-db/rushdb",
-    "siaarzh/scrybe",
-    "openviglet/turing-ce",
-    "BirchKwok/lynsedb",
-    "pal404error/sift",
-    "Aevorine/Synorive",
-    "flyewi/eleventy-plugin-ai-search",
-    "jedsilvan/local-pdf-rag",
     "n1ra7/semantic-code-search",
     "Ashutosh3021/Galvan-Prime",
     "backblaze-b2-samples/clip-visual-product-search",
@@ -1574,7 +1546,36 @@
     "letsrevel/revel-backend",
     "letsrevel/revel-frontend",
     "gethardcount/hardcount",
-    "getvelox/velox"
+    "getvelox/velox",
+    "grafana/gcx",
+    "Duops/SherlockOps",
+    "drifthoundhq/drifthound",
+    "WozzHQ/wozz",
+    "kaskol10/karpenter-optimizer",
+    "poixeai/proxify",
+    "hoilc/scoop-lemon",
+    "harness/mcp-server",
+    "hongbo-miao/hongbomiao.com",
+    "nicolerenee/infra",
+    "pando85/homelab",
+    "rootsongjc/awesome-cloud-native",
+    "the911fund/skill-of-skills",
+    "joryirving/home-ops",
+    "Corsinvest/awesome-proxmox-ve",
+    "evenfire-ai/evenfire",
+    "piotrkulpinski/open-source-alternatives",
+    "kubestellar/console",
+    "DriftGuard/DriftGuard",
+    "fekri600/tf-aws-drift-detection",
+    "terramate-io/terramate",
+    "kubermesh/kubermesh",
+    "cloud-custodian/cloud-custodian",
+    "ashwathstephen/sairo",
+    "XgridInc/xkops",
+    "oslabs-beta/spyglass",
+    "jammanning2010-svg/kubeflow-trainer-orchestrator",
+    "coollabsio/coolify",
+    "henrygd/beszel"
   ],
   "rejected": [
     {
@@ -2886,6 +2887,11 @@
       "repo_url": "https://github.com/izzipizzy/slimtds",
       "reason": "held out on dual-use grounds — a PHP/FrankenPHP affiliate traffic-distribution-system whose schema types include classic cloaking patterns (serving different content to bots vs. real visitors) that overlap with ad-fraud/detection-evasion tooling; also a PHP stack mismatch against the MERN bias",
       "date": "2026-11-01"
+    },
+    {
+      "repo_url": "https://github.com/poixeai/proxify",
+      "reason": "stale (no push since 2025-12-19) and inferior to the already-saturated LLM-gateway/AI-API-proxy niche (Bifrost, inference-gateway) noted in prior runs",
+      "date": "2026-11-02"
     }
   ],
   "known_releases": {
@@ -3130,8 +3136,8 @@
       "date": "2026-08-30"
     },
     "huangchengsir/pipewright": {
-      "version": "v1.9.5",
-      "date": "2026-10-25"
+      "version": "v2.0.0",
+      "date": "2026-11-02"
     },
     "HugoRCD/shelve": {
       "version": "@shelve/cli@5.3.0",
@@ -3334,8 +3340,8 @@
       "date": "2026-09-25"
     },
     "tokentimerch/tokentimer-core": {
-      "version": "v0.18.1",
-      "date": "2026-10-26"
+      "version": "v0.18.2",
+      "date": "2026-10-27"
     },
     "xerj-org/xerj": {
       "version": "v1.0.0-rc.74",
@@ -3418,8 +3424,8 @@
       "date": "2026-09-29"
     },
     "cynative/cynative": {
-      "version": "v1.12.1",
-      "date": "2026-09-17"
+      "version": "v1.14.1",
+      "date": "2026-10-21"
     },
     "Dicklesworthstone/frankentui": {
       "version": "v0.8.0",
@@ -3702,24 +3708,24 @@
       "date": "unclear"
     },
     "floci-io/floci": {
-      "version": "v2.1.0",
-      "date": "2026-09-15"
+      "version": "2.4.0",
+      "date": "2026-10-31"
     },
     "ministackorg/ministack": {
-      "version": "v1.5.21",
-      "date": "2026-10-03"
+      "version": "v1.5.35",
+      "date": "2026-10-30"
     },
     "sivchari/kumo": {
       "version": "v0.31.0",
       "date": "2026-09-29"
     },
     "YigitCittan/mongorescue": {
-      "version": "v0.18.0",
-      "date": "2026-10-03"
+      "version": "v0.28.0",
+      "date": "2026-10-14"
     },
     "LanternOps/breeze": {
-      "version": "v0.121.0",
-      "date": "2026-10-03"
+      "version": "v0.125.0",
+      "date": "2026-10-27"
     },
     "benseverndev-oss/goldenmatch": {
       "version": "3.22.0",
@@ -3802,12 +3808,12 @@
       "date": "Unclear based on available documentation"
     },
     "artifact-keeper/artifact-keeper": {
-      "version": "v1.10.2",
-      "date": "2026-10-02"
+      "version": "v1.11.10",
+      "date": "2026-10-29"
     },
     "mormor83/terraducktel": {
-      "version": "v1.4.0",
-      "date": "2026-10-05"
+      "version": "v1.6.0",
+      "date": "2026-10-20"
     },
     "devZero-Security/redStackPRO": {
       "version": "v0.9.1",
@@ -3958,8 +3964,8 @@
       "date": "2026-10-21"
     },
     "getnora-io/nora": {
-      "version": "v1.4.2",
-      "date": "2026-10-25"
+      "version": "v1.4.3",
+      "date": "2026-10-26"
     },
     "dopbase/dopbase": {
       "version": "0.1.10",
@@ -4064,16 +4070,32 @@
     "ZAK123DSFDF/refearnapp": {
       "version": "v1.4.0",
       "date": "2026-05-16"
+    },
+    "stashbase/cli": {
+      "version": "v0.26.0",
+      "date": "2026-11-02"
+    },
+    "bex-co/bex": {
+      "version": "bex-cli/v0.3.3",
+      "date": "2026-10-16"
+    },
+    "grafana/gcx": {
+      "version": "v1.7.1",
+      "date": "2026-10-21"
+    },
+    "Duops/SherlockOps": {
+      "version": "v1.2.8",
+      "date": "2026-09-17"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-11-01",
-      "note": "queried for Show-HN-style self-hosted-SaaS-alternative posts (returned only stale roundup/directory articles, no new leads) and for third-party corroboration of HonorBox's claims (found independent SaaS-directory comparison pages confirming the live-store and paid-add-on claims)."
+      "last_ok": "2026-11-02",
+      "note": "queried for Show-HN-style infra/deployment launches and general 'new open source observability/deployment tool 2026' and openalternative.co leads; mostly stale directory/roundup pages, but surfaced the SherlockOps-adjacent 'AI root cause analysis alerts' lead that led to the GitHub search which found it."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-01",
-      "note": "fetched READMEs for honorbox, open-payment-host, refearnapp, slimtds, docsmint directly; no WebFetch-on-rendered-page shortcuts taken."
+      "last_ok": "2026-11-02",
+      "note": "fetched READMEs/ADRs for bex (ADR002 architecture), gcx, SherlockOps directly; no WebFetch-on-rendered-page shortcuts taken."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4088,8 +4110,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-01",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~10 search/repositories keyword queries (gumroad alternative, affiliate tracking, membership platform, community platform, course platform, expense management, testimonial collection, waitlist tool) plus repos/releases checks on 10 tracked slot-5 projects and 3 shortlisted new candidates plus letsrevel. Resolved one HTTP 301 repository-rename redirect (getvelox/velox -> gethardcount/hardcount) via /repositories/{id}. No rate-limit pressure."
+      "last_ok": "2026-11-02",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~15 search/repositories keyword queries (GitOps, certificate management, database backup, chaos engineering, log aggregation, edge functions, drift detection, service mesh, bare metal, API gateway, secrets manager, VPS dashboard, container security, Kubernetes cost, static hosting, zero trust, new k8s operators, database proxy) plus repos/releases checks on 16 tracked slot-6 projects and 3 new candidates (bex, gcx, SherlockOps) and several Worth Watching/rejected candidates. No rate-limit pressure."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-31",
@@ -4129,19 +4151,6 @@
     }
   },
   "previous_recommendations": [
-    "MuninnDB (scrypster/muninndb) — 2026-10-10, WATCH, 6.6",
-    "Velox (getvelox/velox) — 2026-10-11, PROTOTYPE, 8.2",
-    "openheard (Heilonng23/openheard) — 2026-10-11, PROTOTYPE, 7.0",
-    "GoCommerce (itswadesh/gocommerce) — 2026-10-11, STUDY, 6.3",
-    "Artifact Keeper (artifact-keeper/artifact-keeper) — 2026-10-12, PROTOTYPE, 8.5",
-    "Terraducktel (mormor83/terraducktel) — 2026-10-12, PROTOTYPE, 7.9",
-    "redStackPRO (devZero-Security/redStackPRO) — 2026-10-12, PROTOTYPE, 7.6",
-    "Stashbase CLI (stashbase/cli) — 2026-10-12, PROTOTYPE, 7.5",
-    "nono (nolabs-ai/nono) — 2026-10-13, USE NOW, 8.6",
-    "outloud (visionably/outloud) — 2026-10-13, USE NOW, 8.1",
-    "vibecheck (bhurghundii/vibecheck.dev) — 2026-10-13, PROTOTYPE, 7.1",
-    "Personal Agent Proxy (personalagentproxy/proxy) — 2026-10-13, PROTOTYPE, 6.9",
-    "skillspector-skill-security-scanner",
     "dejavu-agent-session-memory",
     "squeeze-agent-output-compression",
     "patient-zero-supply-chain-scanner",
@@ -4196,8 +4205,13 @@
     "Keygate (tabloy/keygate) — 2026-11-01, PROTOTYPE, 8.1 (meaningful update)",
     "HonorBox (Honorboxx/honorbox) — 2026-11-01, PROTOTYPE, 7.8",
     "Open Payment Host (abishekmuthian/open-payment-host) — 2026-11-01, PROTOTYPE, 7.6",
-    "RefearnApp (ZAK123DSFDF/refearnapp) — 2026-11-01, PROTOTYPE, 7.1"
+    "RefearnApp (ZAK123DSFDF/refearnapp) — 2026-11-01, PROTOTYPE, 7.1",
+    "bex (bex-co/bex) — 2026-11-02, PROTOTYPE, 7.6",
+    "SherlockOps (Duops/SherlockOps) — 2026-11-02, PROTOTYPE, 7.4",
+    "gcx, Grafana CLI (grafana/gcx) — 2026-11-02, PROTOTYPE, 6.8",
+    "MongoRescue (YigitCittan/mongorescue) — 2026-11-02, PROTOTYPE, 7.7 (meaningful update)",
+    "Breeze (LanternOps/breeze) — 2026-11-02, PROTOTYPE, 7.2 (meaningful update)"
   ],
-  "notes": "2026-11-01: Slot 5 (self-hosted SaaS alternatives, productivity) per day_of_year 305 % 7 + 1 = 5. Catalogued 3 new: HonorBox (Honorboxx/honorbox, MIT, 7.8, PROTOTYPE) — a zero-server, zero-database Gumroad alternative built from GitHub Pages + Stripe Payment Links + a GitHub Action that invites buyers as repo collaborators, with proactive re-invite before GitHub's 7-day expiry; genuinely novel architecture for this niche. Open Payment Host (abishekmuthian/open-payment-host, AGPL-3.0, 7.6, PROTOTYPE) — a 4-year-old, actively-maintained self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with automatic per-country payment routing and Listmonk/Mailchimp sync; used in production by its own author. RefearnApp (ZAK123DSFDF/refearnapp, AGPL-3.0, 7.1, PROTOTYPE) — the first self-hostable Next.js/Cloudflare-Workers-native affiliate/referral tracker found to date, positioned against Rewardful/FirstPromoter/Tolt; latest GitHub tag is 5 months stale relative to main, flagged. Two meaningful updates: Velox renamed itself to Hardcount at v0.9.0 (getvelox/velox now 301-redirects to gethardcount/hardcount) and shipped ten releases since the 2026-10-11 review fixing a real correctness gap (LiteLLM proxy usage silently not recorded prior to v0.5.0) plus production-hardening; and Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug. Held slimTDS (izzipizzy/slimtds) out of the catalog on dual-use grounds (cloaking-pattern schema types overlapping ad-fraud/evasion tooling, plus a PHP stack mismatch) rather than rejecting it purely on traction. Held letsrevel/revel (self-hosted event/ticketing/membership platform, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held for a second cycle with no new differentiation found from the already-catalogued sage-wiki. Generic GitHub keyword search on several other slot-5 niches (membership platform, community platform, course platform, expense management, testimonial collection, waitlist tool) returned no results meeting the stars:>10-30 threshold used, suggesting those specific niches are either saturated by mainstream tools already excluded by policy or genuinely thin on GitHub-indexed self-hosted entrants right now. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations. Updated: 2026-11-01.",
+  "notes": "2026-11-02: Slot 6 (infrastructure, observability, deployment) per day_of_year 306 % 7 + 1 = 6. Catalogued 3 new: bex (bex-co/bex, Apache-2.0, 7.6, PROTOTYPE) — an AI-native, self-hosted Render alternative on a Cluster-API-based Kubernetes substrate where the MCP deploy tool and human dashboard drive the same operator; explicitly not production-ready per its own README, first surfaced 2026-09-21 and deep-reviewed today. SherlockOps (Duops/SherlockOps, MIT, 7.4, PROTOTYPE) — a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB/any MCP server, with a self-hosted-LLM escape hatch (Ollama/vLLM) relevant to the MSSP context; very small (18 stars, 1 maintainer) but unusually broad in scope. gcx (grafana/gcx, Apache-2.0, 6.8, PROTOTYPE) — Grafana Labs' own official, GA agentic CLI, turning alert investigation and dashboard-as-code into shell commands and agent skills. Two meaningful updates: MongoRescue (v0.18.0->v0.28.0) added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze (v0.121.0->v0.125.0) added Huntress/SentinelOne EDR deployment-from-policy, deepening MSSP relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway (poixeai/proxify). Generic searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin same-day noise — no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations. Updated: 2026-11-02.",
   "updated": "2026-10-31"
 }

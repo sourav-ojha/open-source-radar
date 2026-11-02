@@ -57,3 +57,6 @@ PROTOTYPE — the feature design is exactly right for a self-hosted MERN stack's
 ## Change History
 ### 2026-10-05
 Initial discovery via GitHub Search API during slot 6 (infrastructure/observability/deployment) research. Confirmed MIT license, read the full README and release history (v0.1.0 → v0.18.0 in 10 days).
+
+### 2026-11-02
+Meaningful update: ten releases since last review (v0.18.0 → v0.28.0). Added active-passive high availability (v0.27.0, stated as "phase 1"), a nightly fault-injection/chaos test suite exercising backups, restores, purges, migrations, key rotation, and PITR (v0.26.0), privacy/erasure-request tooling (v0.24.0), TLS connection material (v0.25.0), S3 multipart part-size tuning (v0.23.0), a fix for CVE-2026-78667 (net/http DoS, v0.25.1), and KMS-wrapped `secret.key` via Vault Transit (v0.28.0). This is a real maturity jump in the engineering — HA and chaos-testing push it noticeably closer to a production-candidate backup tool — though community validation (still 7 stars) hasn't caught up yet. Score raised 7.4 → 7.7; status held at PROTOTYPE pending independent track record.

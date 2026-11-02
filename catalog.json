@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "projects": [
     {
       "name": "Xberg",
@@ -9495,8 +9495,8 @@
         "database tooling"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.4,
-      "maturity": "experimental",
+      "relevance_score": 7.7,
+      "maturity": "emerging",
       "integration_effort": "low",
       "license": "MIT",
       "commercial_use_notes": "MIT, no restrictions.",
@@ -9531,18 +9531,19 @@
         "Very new: created 2026-09-25 (10 days before review), 6 stars, 0 forks, 0 watchers",
         "No independent community validation yet",
         "Point-in-time recovery still in early design/implementation, not production-ready",
-        "Likely single or very small maintainer team — bus-factor risk for real DR dependency"
+        "Likely single or very small maintainer team — bus-factor risk for real DR dependency",
+        "UPDATE 2026-11-02: HA is explicitly 'phase 1' and still new; chaos-test suite is self-reported, not independently audited"
       ],
       "first_seen": "2026-10-05",
-      "last_reviewed": "2026-10-05",
-      "last_meaningful_update": "2026-10-05",
-      "current_version": "v0.18.0",
-      "latest_release_date": "2026-10-03",
+      "last_reviewed": "2026-11-02",
+      "last_meaningful_update": "2026-11-02",
+      "current_version": "v0.28.0",
+      "latest_release_date": "2026-10-14",
       "source_links": [
         "https://github.com/YigitCittan/mongorescue"
       ],
       "aliases": [],
-      "notes": "6 stars, 0 forks, created 2026-09-25 — daily tagged releases v0.1.0 through v0.18.0 in 10 days, feature set far beyond typical for repo age.",
+      "notes": "6 stars, 0 forks, created 2026-09-25 — daily tagged releases v0.1.0 through v0.18.0 in 10 days, feature set far beyond typical for repo age. UPDATE 2026-11-02: ten releases since last review (v0.18.0->v0.28.0) added active-passive HA (v0.27.0, phase 1), a nightly fault-injection/chaos test suite covering backups/restores/purges/migrations/key-rotation/PITR (v0.26.0), privacy/erasure-request tooling (v0.24.0), TLS material support (v0.25.0), S3 multipart tuning (v0.23.0), a CVE-2026-78667 (net/http DoS) fix (v0.25.1), and KMS-wrapped secret.key via Vault Transit (v0.28.0). Still 7 stars — maturity gain is in the engineering, not yet in community validation.",
       "acted_on": false
     },
     {
@@ -11242,7 +11243,7 @@
         "AI agent infrastructure"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.0,
+      "relevance_score": 7.2,
       "maturity": "emerging",
       "integration_effort": "medium",
       "license": "AGPL-3.0",
@@ -11271,7 +11272,8 @@
         "Atera",
         "NinjaOne",
         "ConnectWise",
-        "Tactical RMM (RMM-only, GPL)"
+        "Tactical RMM (RMM-only, GPL)",
+        "Huntress, SentinelOne (now integrable as deployed/managed EDR within Breeze rather than pure alternatives)"
       ],
       "why_it_matters": "Directly adjacent to the MSSP security admin-portal SaaS and PTaaS partnership context: RMM+PSA unification plus a risk-classified AI-operator design worth studying even independent of adoption.",
       "why_not_build_it_myself": "A full RMM+PSA platform (device agent, remote access/TURN relay, patch management, ticketing/billing, multi-tenant RLS) is a multi-month-to-multi-year build; this is a working reference implementation with a published security posture.",
@@ -11281,16 +11283,16 @@
         "Not on the core MERN/AWS axis — relevant only through the secondary MSSP context"
       ],
       "first_seen": "2026-10-05",
-      "last_reviewed": "2026-10-05",
-      "last_meaningful_update": "2026-10-05",
-      "current_version": "v0.121.0",
-      "latest_release_date": "2026-10-03",
+      "last_reviewed": "2026-11-02",
+      "last_meaningful_update": "2026-11-02",
+      "current_version": "v0.125.0",
+      "latest_release_date": "2026-10-27",
       "source_links": [
         "https://github.com/LanternOps/breeze",
         "https://breezermm.com"
       ],
       "aliases": [],
-      "notes": "126 stars, 43 forks, created 2026-01-14. Published security whitepaper mapped to SOC 2 alignment; PostgreSQL row-level security enforced even against table owners.",
+      "notes": "126 stars, 43 forks, created 2026-01-14. Published security whitepaper mapped to SOC 2 alignment; PostgreSQL row-level security enforced even against table owners. UPDATE 2026-11-02: v0.121.0->v0.125.0 added client e-sign agreements, ticket merge with business-hours SLA/routing rules, Windows update rings, an expanded Trust Center, connection-health monitoring, and — most relevant to the MSSP/PTaaS context — Huntress and SentinelOne EDR deployment from policy plus EDR detections and response actions surfaced directly in the platform.",
       "acted_on": false
     },
     {
@@ -16979,6 +16981,202 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: AGPL-3.0, 47 stars, 17 forks (an unusually high fork:star ratio for this catalog, which more often signals genuine developer engagement than the inflated-engagement pattern flagged on other repos, where fork counts are low relative to stars), 1 subscriber, 9 open issues, created 2025-03-28, pushed 2026-10-29, archived:false. Listed on Product Hunt with an active Discord.",
+      "acted_on": false
+    },
+    {
+      "name": "bex",
+      "slug": "bex-ai-native-paas",
+      "repo_url": "https://github.com/bex-co/bex",
+      "website": "https://bex.co",
+      "description": "Open-source, Apache-2.0, AI-native alternative to Render: git push to HTTPS deploy on your own infrastructure (Hetzner or local Docker), built on a self-managed Kubernetes substrate (Cluster API) with a Go operator, Render-compatible render.yaml Blueprints, and one control plane (dashboard, REST, GraphQL, MCP, CLI, Kubernetes resources) that humans and coding agents drive identically.",
+      "category": [
+        "self-hosted SaaS alternatives",
+        "infrastructure/deployment",
+        "AI & agent infrastructure",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "experimental",
+      "integration_effort": "high",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or embedded use. Clean licensing for client-facing or redistributed deployments once the project matures past its current explicit not-production-ready stage.",
+      "deployment": [
+        "Kubernetes (Cluster API-provisioned)",
+        "local via kind + Docker-container machines",
+        "Hetzner (CAPH) for production-shaped clusters",
+        "self-managed, no SaaS dependency"
+      ],
+      "interfaces": [
+        "Web dashboard",
+        "REST API",
+        "GraphQL API",
+        "MCP server (remote + stdio)",
+        "Render-compatible CLI",
+        "Kubernetes CRDs"
+      ],
+      "use_cases": [
+        "Self-hosted Heroku/Render-style git-push deploy for internal tools without a recurring PaaS bill",
+        "Give a coding agent the same deploy control plane a human has — the MCP deploy tool takes a repo + render.yaml in one call",
+        "Managed Postgres/Valkey-backed services without standing up RDS/ElastiCache for small internal apps",
+        "Study the Cluster API + bin-packing + idle-hibernation ('sleep = free') architecture for a future internal platform"
+      ],
+      "product_opportunities": [
+        "Could underpin an internal 'deploy preview' or ephemeral-environment feature for a product, once past its pre-production stage"
+      ],
+      "agent_opportunities": [
+        "Native MCP server with a deploy tool — repo + manifest in, running HTTPS service out, in one call; no separate agent-facing API to maintain"
+      ],
+      "alternatives": [
+        "Coolify",
+        "Dokploy",
+        "CapRover",
+        "Railway/Render/Heroku (proprietary)"
+      ],
+      "why_it_matters": "Most self-hosted PaaS alternatives (Coolify, Dokploy, CapRover) are docker-compose-first and treat agents as, at best, API consumers bolted onto a human-first dashboard. bex is built the other way: dashboard, REST, GraphQL, MCP, and CLI all drive the same operator with no dashboard-only actions, so an agent's deploy is identical to a human's. That agent-first control-plane design, not the PaaS feature list, is the actual differentiator.",
+      "why_not_build_it_myself": "A Cluster API-based self-managed Kubernetes substrate with bin-packing, idle-hibernation, and one operator reachable from five different interfaces is a multi-month platform-engineering build; evaluating this is far cheaper than building an equivalent control plane even for internal tooling only.",
+      "risks": [
+        "README states explicitly: 'bex is in active development and is not ready for production workloads' — APIs and config can still change",
+        "Effectively a 2-person project beyond bots (puncsky, doranoda) despite being 2+ years old (created 2024-04-30) — bus-factor risk",
+        "Requires real Kubernetes operational knowledge (Cluster API, kind, clusterctl) to self-host, unlike single-binary alternatives — high integration effort",
+        "No independent production track record found yet beyond the vendor's own bex.co hosted instance"
+      ],
+      "first_seen": "2026-11-02",
+      "last_reviewed": "2026-11-02",
+      "last_meaningful_update": "2026-11-02",
+      "current_version": "bex-cli/v0.3.3 (per-component release tagging; no single project-wide version number)",
+      "latest_release_date": "2026-10-16",
+      "source_links": [
+        "https://github.com/bex-co/bex",
+        "https://bex.co",
+        "https://github.com/bex-co/bex/blob/main/docs/ADR002-architecture.md",
+        "https://github.com/bex-co/bex/blob/main/docs/ADR018-render-parity.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 578 stars, 65 forks, 45 subscribers, 11 open issues, created 2024-04-30, pushed 2026-11-02 (actively developed same day as this review). First surfaced and held to Worth Watching on 2026-09-21 pending a deep review; catalogued today after confirming sustained 2+ year activity.",
+      "acted_on": false
+    },
+    {
+      "name": "gcx (Grafana CLI)",
+      "slug": "gcx-grafana-agentic-cli",
+      "repo_url": "https://github.com/grafana/gcx",
+      "website": "https://grafana.com",
+      "description": "Official, Apache-2.0, Generally Available CLI from Grafana Labs giving terminal and coding-agent access to a Grafana OSS/Enterprise/Cloud deployment's dashboards, alerts, SLOs, metrics, logs, and traces — ships a suite of agent skills for alert investigation, dashboard-as-code, and SLO management, as a shell-native companion to the separate Grafana MCP server.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "observability"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions. Some commands only work against Grafana Cloud's commercial product tiers (SLO, Synthetic Monitoring, IRM, k6, Fleet, Assistant) — those are paywalled by Grafana Cloud itself, not by this CLI's license.",
+      "deployment": [
+        "Single Go binary",
+        "works against self-hosted Grafana OSS/Enterprise or Grafana Cloud"
+      ],
+      "interfaces": [
+        "CLI",
+        "shell scripting / CI pipelines",
+        "agent skills for coding agents"
+      ],
+      "use_cases": [
+        "Let a coding agent query production metrics/logs/traces and root-cause an alert without leaving the terminal",
+        "Dashboard-as-code / GitOps workflows for Grafana dashboards via gcx resources pull/push",
+        "SLO and alert-rule management scriptable from CI",
+        "Alert investigation as an agent skill instead of a manual Grafana-UI triage pass"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Ships dedicated agent skills (alert investigation, dashboard creation/GitOps, SLO management, observability setup) for use by any agentic coding tool"
+      ],
+      "alternatives": [
+        "Grafana MCP server (same ecosystem, MCP protocol instead of shell commands)",
+        "Grafana Assistant (in-product LLM, Cloud-feature-gated)",
+        "raw Grafana HTTP API scripting"
+      ],
+      "why_it_matters": "If Grafana/Prometheus/Loki is already the observability stack (common on EKS-based infra), gcx turns alert investigation into something a coding agent can do directly from the terminal instead of requiring a human to open a dashboard — extends the AI-agent-leverage axis into an infra-ops task.",
+      "why_not_build_it_myself": "Grafana Labs maintains the compatibility matrix across Grafana 12/13, OSS/Enterprise/Cloud, and the signal-query APIs (PromQL/LogQL/Tempo/Pyroscope); reproducing that surface for a hand-rolled script is not worth it given this is free, officially maintained, and already GA.",
+      "risks": [
+        "Only useful if Grafana is already part of the stack — no standalone value otherwise",
+        "Grafana-Cloud-only features (SLO, Synthetic Monitoring, IRM, Assistant) require a paid tier, not evident from the CLI name alone",
+        "346 open issues on a tool created 2026-03-23 — active usage, but also a still-shifting API surface (app-platform API migration ongoing per its own docs)"
+      ],
+      "first_seen": "2026-11-02",
+      "last_reviewed": "2026-11-02",
+      "last_meaningful_update": "2026-11-02",
+      "current_version": "v1.7.1",
+      "latest_release_date": "2026-10-21",
+      "source_links": [
+        "https://github.com/grafana/gcx"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 811 stars, 65 forks, 7 subscribers, 346 open issues, created 2026-03-23, pushed same day as this review. Official Grafana Labs org, not a third-party wrapper.",
+      "acted_on": false
+    },
+    {
+      "name": "SherlockOps",
+      "slug": "sherlockops-ai-alert-triage",
+      "repo_url": "https://github.com/Duops/SherlockOps",
+      "website": "",
+      "description": "Self-hosted, MIT, single-service (Docker Compose) alert-triage agent: receives webhooks from Alertmanager, Grafana, Zabbix, Datadog, ELK, or Loki, investigates the firing alert with an LLM (Claude, OpenAI, or any OpenAI-compatible endpoint including self-hosted Ollama/vLLM) that can call Prometheus/Loki/Kubernetes/AWS CloudWatch/GCP Monitoring/Azure Monitor/PostgreSQL/MongoDB/any MCP server as tools, and posts a root-cause analysis back to Slack, Telegram, or MS Teams within seconds of the initial alert.",
+      "category": [
+        "AI & agent infrastructure",
+        "infrastructure/observability",
+        "MSSP/MSP tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "Docker Compose",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "Webhook receivers (6 named formats + generic JSON)",
+        "Slack/Telegram/MS Teams bot",
+        "MCP client (consumes any MCP server as a tool)"
+      ],
+      "use_cases": [
+        "Automatic first-pass root-cause analysis posted to Slack/Telegram within seconds of an Alertmanager/Grafana/Datadog alert firing",
+        "On-call triage assistant that checks Prometheus/Loki/Kubernetes pod status/CloudWatch/PostgreSQL replication lag before a human opens a dashboard",
+        "MSSP/PTaaS context: a cheap first-pass incident-investigation layer across a client's heterogeneous monitoring stack (AWS, GCP, Azure, Yandex, DigitalOcean are all supported tool targets)",
+        "Bring-your-own self-hosted LLM (Ollama/vLLM) for alert triage without sending infra data to a third-party API"
+      ],
+      "product_opportunities": [
+        "Could be positioned as a white-labeled alert-triage add-on inside the existing MSSP admin-portal SaaS"
+      ],
+      "agent_opportunities": [
+        "Consumes any MCP server as an investigation tool, so its tool surface is extensible without forking the project; built around an LLM-with-tool-calls loop rather than a fixed rule engine"
+      ],
+      "alternatives": [
+        "PagerDuty/Opsgenie AI features (proprietary, per-seat)",
+        "manual on-call triage (status quo)",
+        "Rootly/Blameless incident-response AI add-ons (proprietary)"
+      ],
+      "why_it_matters": "Directly automates a recurring, time-boxed task (first-pass alert triage) across exactly the monitoring stack already in play (AWS/CloudWatch, Prometheus/Grafana/Loki), and its MCP-server tool support means its investigation surface is extensible without forking the project.",
+      "why_not_build_it_myself": "The alert-format normalization across six different monitoring systems, the two-phase fast-ack-then-investigate webhook design, and per-destination message formatting (thread reply vs. message edit vs. card update) are enough undifferentiated plumbing that reuse beats a rebuild for what would otherwise be a side project.",
+      "risks": [
+        "Very small and new: 18 stars, 1 fork, 0 subscribers, created 2026-04-01, last pushed 2026-10-05 — essentially unvalidated by any community beyond the author",
+        "Depth of each per-system tool (AWS/GCP/Azure/MongoDB/etc.) versus breadth is not independently verified here beyond reading the README",
+        "Single-maintainer project (Duops) — bus-factor risk if depended on for real on-call coverage",
+        "Sends alert/investigation context to a third-party LLM API unless configured against a self-hosted Ollama/vLLM endpoint — relevant to flag given the MSSP client-data context"
+      ],
+      "first_seen": "2026-11-02",
+      "last_reviewed": "2026-11-02",
+      "last_meaningful_update": "2026-11-02",
+      "current_version": "v1.2.8",
+      "latest_release_date": "2026-09-17",
+      "source_links": [
+        "https://github.com/Duops/SherlockOps"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 18 stars, 1 fork, 0 subscribers, 1 open issue, created 2026-04-01, pushed 2026-10-05.",
       "acted_on": false
     }
   ]

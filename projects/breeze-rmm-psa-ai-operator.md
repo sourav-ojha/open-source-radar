@@ -54,3 +54,6 @@ PROTOTYPE — worth a closer look specifically through the MSSP lens (and its se
 ## Change History
 ### 2026-10-05
 Initial discovery via GitHub Search API during slot 6 research. Confirmed AGPL-3.0 license and read the published security-practices documentation.
+
+### 2026-11-02
+Meaningful update: v0.121.0 → v0.125.0 added client e-sign agreements, ticket merge with business-hours SLA and routing rules, Windows feature-update rings, an expanded Trust Center, connection-health monitoring for integrations, and — most relevant to the MSSP/PTaaS context — Huntress and SentinelOne EDR deployment driven directly from policy, plus EDR detections and response actions surfaced in the platform itself rather than requiring a separate console. This deepens Breeze's relevance as an MSSP-tooling candidate specifically on the security-operations side. Score raised 7.0 → 7.2; status held at PROTOTYPE, AGPL hosting caveat unchanged.
