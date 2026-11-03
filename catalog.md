@@ -1,6 +1,6 @@
 # Catalog
 
-_275 projects tracked. Last updated 2026-11-02._
+_280 projects tracked. Last updated 2026-11-03._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -103,8 +103,10 @@ _275 projects tracked. Last updated 2026-11-02._
 | [Kaneo](https://github.com/usekaneo/kaneo) | USE NOW | 7.9/10 | product infrastructure, developer productivity, self-hosted SaaS alternatives | MIT | low | 2026-09-27 |
 | [Vercel Workflow SDK](https://github.com/vercel/workflow) | PROTOTYPE | 7.9/10 | product building blocks, AI & agent infrastructure, backend components, job queues and schedulers | Apache-2.0 | low | 2026-10-01 |
 | [CocoIndex Code (ccc)](https://github.com/cocoindex-io/cocoindex-code) | PROTOTYPE | 7.9/10 | developer productivity, AI & agent infrastructure, coding agents | Apache-2.0 | low | 2026-10-10 |
+| [Paseo](https://github.com/getpaseo/paseo) | PROTOTYPE | 7.9/10 | AI & agent infrastructure, agent orchestration, self-hosted SaaS alternatives | Apache-2.0 | low | 2026-11-03 |
 | [Pipewright](https://github.com/huangchengsir/pipewright) | PROTOTYPE | 7.9/10 | deployment, CI/CD, infrastructure, developer productivity | MIT | low | 2026-10-26 |
 | [Terraducktel](https://github.com/mormor83/terraducktel) | PROTOTYPE | 7.9/10 | infrastructure, deployment, product infrastructure | MIT | medium | 2026-10-12 |
+| [veil](https://github.com/lemonadesaltbagel/veil) | PROTOTYPE | 7.9/10 | AI & agent infrastructure, coding agents, MSSP/security tooling | Apache-2.0 | low | 2026-11-03 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -118,7 +120,6 @@ _275 projects tracked. Last updated 2026-11-02._
 | [coding-agent-search (cass)](https://github.com/Dicklesworthstone/coding_agent_session_search) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure | MIT License with OpenAI/Anthropic Rider (custom) | low | 2026-09-18 |
 | [PipesHub AI](https://github.com/pipeshub-ai/pipeshub-ai) | PROTOTYPE | 7.8/10 | RAG infrastructure, AI & agent infrastructure, product building blocks | Apache-2.0 | medium | 2026-09-19 |
 | [peerd](https://github.com/NotASithLord/peerd) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, browser automation | Apache-2.0 | low | 2026-09-22 |
-| [Paseo](https://github.com/getpaseo/paseo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent orchestration, self-hosted SaaS alternatives | Apache-2.0 | low | 2026-10-28 |
 | [Sourcebot](https://github.com/sourcebot-dev/sourcebot) | PROTOTYPE | 7.8/10 | developer productivity, AI & agent infrastructure, code intelligence | FSL-1.1-ALv2 (Functional Source License) for the core, converting to Apache-2.0 two years after each version's release; a separate, distinct license applies to the enterprise ('ee/') directory (not fully inspected — treat as proprietary until confirmed). | medium | 2026-09-25 |
 | [Pikopod](https://github.com/Pikopod/pikopod) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 | low | 2026-10-29 |
 | [Hippo (hippo-memory)](https://github.com/kitfunso/hippo-memory) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, agent memory, developer productivity | MIT | low | 2026-09-30 |
@@ -133,6 +134,8 @@ _275 projects tracked. Last updated 2026-11-02._
 | [Nora](https://github.com/getnora-io/nora) | PROTOTYPE | 7.8/10 | product infrastructure, developer productivity, backend components | MIT | low | 2026-10-26 |
 | [dánwò](https://github.com/carbonmeai/danwo) | PROTOTYPE | 7.8/10 | developer productivity, testing, product infrastructure | Apache-2.0 (code); "dánwò" name/logo trademarked by Carbonme Inc. | medium | 2026-10-30 |
 | [HonorBox](https://github.com/Honorboxx/honorbox) | PROTOTYPE | 7.8/10 | self-hosted SaaS alternatives, micro-SaaS opportunity, product building blocks | MIT | low | 2026-11-01 |
+| [Kanzo](https://github.com/emanuele-em/kanzo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, coding agents, developer productivity, micro-SaaS building block | AGPL-3.0 | low | 2026-11-03 |
+| [Kensaku](https://github.com/yjid/kensaku) | PROTOTYPE | 7.8/10 | developer productivity, small utility, AI & agent infrastructure | MIT | low | 2026-11-03 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -168,6 +171,7 @@ _275 projects tracked. Last updated 2026-11-02._
 | [MisakaNet](https://github.com/Ikalus1988/MisakaNet) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent memory, coding agents, developer productivity | Apache-2.0 | low | 2026-10-28 |
 | [Open Payment Host](https://github.com/abishekmuthian/open-payment-host) | PROTOTYPE | 7.6/10 | self-hosted SaaS alternatives, micro-SaaS opportunity, product building blocks | AGPL-3.0 | medium | 2026-11-01 |
 | [bex](https://github.com/bex-co/bex) | PROTOTYPE | 7.6/10 | self-hosted SaaS alternatives, infrastructure/deployment, AI & agent infrastructure, product infrastructure | Apache-2.0 | high | 2026-11-02 |
+| [nomore](https://github.com/globalmpc/nomore) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, developer productivity, small utility | MIT | low | 2026-11-03 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
@@ -200,6 +204,7 @@ _275 projects tracked. Last updated 2026-11-02._
 | [Rostam](https://github.com/rostamlabs/rostam) | PROTOTYPE | 7.4/10 | data infrastructure, vector database, AI agent infrastructure | Apache-2.0 | medium | 2026-10-27 |
 | [OpenAnalytics](https://github.com/OpenLabs-so/openanalytics) | PROTOTYPE | 7.4/10 | product infrastructure, analytics, self-hosted SaaS alternative, AI & agent infrastructure | AGPL-3.0 | medium | 2026-10-29 |
 | [SherlockOps](https://github.com/Duops/SherlockOps) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, infrastructure/observability, MSSP/MSP tooling | MIT | low | 2026-11-02 |
+| [pngdeer](https://github.com/heydeer/pngdeer) | PROTOTYPE | 7.4/10 | small utility, product building blocks | MIT | low | 2026-11-03 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-24 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |

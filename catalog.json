@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "projects": [
     {
       "name": "Xberg",
@@ -5893,7 +5893,7 @@
         "self-hosted SaaS alternatives"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.8,
+      "relevance_score": 7.9,
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "Apache-2.0",
@@ -5932,16 +5932,16 @@
         "GitHub's license badge/API is misleading (NOASSERTION) despite the actual terms being permissive Apache-2.0"
       ],
       "first_seen": "2026-09-23",
-      "last_reviewed": "2026-10-28",
-      "last_meaningful_update": "2026-10-28",
-      "current_version": "v0.14.0-beta.1",
-      "latest_release_date": "2026-10-27",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "v0.15.0",
+      "latest_release_date": "2026-11-03",
       "source_links": [
         "https://github.com/getpaseo/paseo",
         "https://paseo.sh"
       ],
       "aliases": [],
-      "notes": "Contributor history shows one dominant author plus several other active contributors and bot-driven CI, consistent with genuine active maintenance rather than a star-farmed repo. 2026-10-15: v0.11.0 added a browsable community plugin registry (paseo.sh/plugins) with one-command install — the plugin surface flagged as a risk on first review (2026-09-23) is now a formal, documented ecosystem feature. Risk about running untrusted plugin code stands and is now more directly actionable given the registry makes installing third-party plugins easier. 2026-10-21: v0.11.2 -> v0.12.0 — added background workspaces (new, hidden-by-default workspace mode), sender-name attribution on inter-agent messages, and Claude Mythos 5.1 model support, plus 120+ fixes. Meaningful per §10 (new functionality, UX for multi-agent coordination); recommendation unchanged (PROTOTYPE). 2026-10-28: v0.12.0 -> v0.14.0-beta.1 added cross-machine agent delegation (`paseo host add` over SSH/relay, an agent can hand work to another machine's daemon), per-agent plugin tool/MCP-server configuration at session open, and collapsible conversation-turn summaries — a meaningful architecture step (multi-host agent fleets, not just single-machine orchestration).",
+      "notes": "Contributor history shows one dominant author plus several other active contributors and bot-driven CI, consistent with genuine active maintenance rather than a star-farmed repo. 2026-10-15: v0.11.0 added a browsable community plugin registry (paseo.sh/plugins) with one-command install — the plugin surface flagged as a risk on first review (2026-09-23) is now a formal, documented ecosystem feature. Risk about running untrusted plugin code stands and is now more directly actionable given the registry makes installing third-party plugins easier. 2026-10-21: v0.11.2 -> v0.12.0 — added background workspaces (new, hidden-by-default workspace mode), sender-name attribution on inter-agent messages, and Claude Mythos 5.1 model support, plus 120+ fixes. Meaningful per §10 (new functionality, UX for multi-agent coordination); recommendation unchanged (PROTOTYPE). 2026-10-28: v0.12.0 -> v0.14.0-beta.1 added cross-machine agent delegation (`paseo host add` over SSH/relay, an agent can hand work to another machine's daemon), per-agent plugin tool/MCP-server configuration at session open, and collapsible conversation-turn summaries — a meaningful architecture step (multi-host agent fleets, not just single-machine orchestration). 2026-11-03: v0.14.0-beta.1 -> v0.15.0 — daemon restarts now keep terminal programs running, and an opt-in 'agent recovery' setting resumes interrupted agents in their existing conversations after a host restart or crash. Meaningful per §10 (real reliability/operability improvement for multi-host agent fleets, directly reduces the cost of a daemon restart losing in-flight agent work); recommendation unchanged (PROTOTYPE), score nudged 7.8 -> 7.9.",
       "acted_on": false
     },
     {
@@ -17177,6 +17177,298 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 18 stars, 1 fork, 0 subscribers, 1 open issue, created 2026-04-01, pushed 2026-10-05.",
+      "acted_on": false
+    },
+    {
+      "name": "Kanzo",
+      "slug": "kanzo-agent-kanban",
+      "repo_url": "https://github.com/emanuele-em/kanzo",
+      "website": "",
+      "description": "A kanban board and an MCP server in one 4.5 MB Rust binary: a human works the board in a browser, coding agents take tasks, move cards and comment over MCP, and the terminal (`kanzo` CLI) is a third equal interface onto the same data. No account, no server process to configure, no database.",
+      "category": [
+        "AI & agent infrastructure",
+        "coding agents",
+        "developer productivity",
+        "micro-SaaS building block"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged per policy. Running it locally or on a home server for personal/team task tracking carries no obligation. The risk is specific: offering a modified Kanzo as a hosted, multi-tenant service to third parties would require releasing that modified source under AGPL too. Fine for internal/self-hosted use; a blocker only if the plan were to white-label it inside a paid hosted product.",
+      "deployment": [
+        "installed locally",
+        "self-hosted (single static binary)",
+        "runs on a Raspberry Pi as a shared board host",
+        "accessed via MCP"
+      ],
+      "interfaces": [
+        "MCP server (`kanzo mcp`, stdio or HTTP at /mcp)",
+        "CLI",
+        "local web UI (localhost:4242)"
+      ],
+      "use_cases": [
+        "a shared backlog a coding agent pulls its next task from, with the human watching cards move in a browser",
+        "a Raspberry Pi as the always-on board host for several laptops' agents to share",
+        "marking tasks 'Human' so agents leave them alone until picked up manually",
+        "a lightweight personal task tracker with zero setup, independent of the agent-sharing feature"
+      ],
+      "product_opportunities": [
+        "the live-share/sync protocol (direct LAN share, or relay through a Pi or VPN) is a reusable local-first sync pattern for other small team tools beyond task tracking"
+      ],
+      "alternatives": [
+        "Taskosaur, Kaneo, It's a Plan (self-hosted PM tools already in this catalog — all human-first with an API bolted on, not agent-native)",
+        "Linear/Trello/Jira (proprietary, no native agent protocol)",
+        "a bespoke MCP wrapper hand-built around an existing tracker's API"
+      ],
+      "why_it_matters": "Every other self-hosted kanban/PM tool already in this catalog is a human tool with an API added afterward. Kanzo inverts that: the MCP server, the CLI and the browser board are three equal clients of the same store from day one, so a coding agent taking a task and a human watching it happen are the same operation, not a workaround.",
+      "why_not_build_it_myself": "The live-share/sync protocol (direct LAN share, relay through a Pi, or over a VPN, with auto-reconnect and project auto-detection from a repo's git remote) plus a working MCP server is a few real days of plumbing that already works end to end and ships as a 4.5 MB binary.",
+      "risks": [
+        "AGPL-3.0 — revisit if a hosted/multi-tenant version is ever considered",
+        "9 days old (created 2026-10-25), v0.3.0, one dominant author (emanuele-em) plus 4 other contributors — no long track record yet",
+        "the share/sync feature moves board data over LAN/VPN; the encryption-at-rest/in-transit specifics of that sync protocol were not independently audited here"
+      ],
+      "first_seen": "2026-11-03",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "v0.3.0",
+      "latest_release_date": "2026-11-01",
+      "source_links": [
+        "https://github.com/emanuele-em/kanzo",
+        "https://crates.io/crates/kanzo"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 922 stars, 58 forks, 6 subscribers, 1 open issue, created 2026-10-25, pushed 2026-11-02. Stars:forks ratio (~16:1) is healthy for a 9-day-old repo, unlike the inflated-engagement cases flagged elsewhere in this catalog. Published crate confirmed on crates.io (keywords: todo, mcp, kanban, claude, agents).",
+      "acted_on": false
+    },
+    {
+      "name": "Kensaku",
+      "slug": "kensaku-local-search",
+      "repo_url": "https://github.com/yjid/kensaku",
+      "website": "",
+      "description": "A cross-platform local file-search launcher (Rust) that indexes file names, text inside documents (PDF/DOCX/EPUB/50+ formats), and OCR'd text inside images and screenshots, plus semantic/natural-language queries ('screenshots from last week'). Nothing leaves the machine. Ships a desktop app, a `kensaku-cli`, and an MCP server.",
+      "category": [
+        "developer productivity",
+        "small utility",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "installed locally (desktop app, macOS/Windows/Linux)",
+        "CLI (kensaku-cli)",
+        "fully local — no server/cloud component"
+      ],
+      "interfaces": [
+        "desktop GUI",
+        "CLI (`kensaku-cli search`, `--json` output)",
+        "MCP server (stdio, or HTTP with a loopback-only bearer token)"
+      ],
+      "use_cases": [
+        "find a file by what was in it, not its filename ('the PDF about database indexing')",
+        "search screenshots by OCR'd text ('the one with the CUDA error')",
+        "give a coding agent MCP access to search the whole filesystem for a referenced file instead of guessing paths",
+        "natural-language time filters ('invoices from last 30 days') instead of remembering a folder structure"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Everything (Windows, filenames only)",
+        "Listary, PowerToys Run (filename/launcher only, no content/OCR)",
+        "macOS Spotlight/mdfind (no OCR, no MCP)"
+      ],
+      "why_it_matters": "The closest comparable tools (Everything, Listary, PowerToys Run) only index filenames. Kensaku indexes file content, OCRs images, supports semantic queries, and exposes all of it over MCP — directly useful for an agent trying to locate 'that config file' or 'the invoice PDF' without being told the exact path.",
+      "why_not_build_it_myself": "cross-platform full-text + OCR + semantic indexing with sub-millisecond queries over 100,000+ files is a real systems-engineering project, not a quick script.",
+      "risks": [
+        "10 days old (created 2026-10-24); builds are not yet code-signed, so macOS/Windows show first-run security warnings by design",
+        "first run requires downloading OCR/semantic model packs — initial indexing cost on a large disk was not tested here",
+        "6 contributors but one dominant author — bus-factor risk"
+      ],
+      "first_seen": "2026-11-03",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "v1.0.12",
+      "latest_release_date": "2026-11-02",
+      "source_links": [
+        "https://github.com/yjid/kensaku"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 613 stars, 44 forks, 3 subscribers, 9 open issues, created 2026-10-24, pushed 2026-11-03. Actively released (v1.0.12 already, multiple releases inside a 10-day window).",
+      "acted_on": false
+    },
+    {
+      "name": "veil",
+      "slug": "veil-agent-pii-proxy",
+      "repo_url": "https://github.com/lemonadesaltbagel/veil",
+      "website": "",
+      "description": "A local privacy proxy (Python, PyPI package `veil-proxy`) that sits between a coding agent CLI (Claude Code, Codex, Aider, or any Anthropic/OpenAI-compatible client) and the model provider. It deterministically pseudonymizes names, emails, phone numbers, addresses, IDs and secrets before a request leaves the machine, and swaps the real values back into the agent's local tool output, so the model reasons about real bugs without ever seeing who they happened to.",
+      "category": [
+        "AI & agent infrastructure",
+        "coding agents",
+        "MSSP/security tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions.",
+      "deployment": [
+        "installed locally (pip/Homebrew)",
+        "runs as a local proxy on 127.0.0.1:8787"
+      ],
+      "interfaces": [
+        "local HTTP proxy implementing the Anthropic Messages API, Bedrock InvokeModel, Vertex rawPredict, Microsoft Foundry, and OpenAI Chat Completions/Responses",
+        "CLI (`veil`, `veil-hook`)",
+        "team pseudonym-secret sharing via AWS Secrets Manager / GCP Secret Manager / 1Password / Vault / file"
+      ],
+      "use_cases": [
+        "run Claude Code/Codex/Aider against a real production DB dump or real customer logs without the model ever seeing a real name, email, card number or address",
+        "team-wide `managed-settings` policy forcing Claude Code through veil so redaction can't be bypassed",
+        "MSSP context: investigate a client incident locally with an AI agent without sending client PII to a third-party model",
+        "prove the redaction works by diffing a captured session's 'what was on disk' vs 'what the model got' log lines"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Microsoft Presidio (general PII redaction library, no agent-session pseudonym-consistency design, no per-provider wire adapters)",
+        "manual data scrubbing before giving an agent access (status quo)",
+        "trusting the model provider's data-handling terms (status quo)"
+      ],
+      "why_it_matters": "This is exactly the risk created by letting a coding agent run shell commands or DB queries against anything resembling production data. veil is the first tool found in this niche doing deterministic, reversible pseudonymization — the model reasons about 'First_Cfbf Last_Cfbf' and the real values are swapped back in locally — rather than one-way redaction that would break the agent's ability to act on the data at all.",
+      "why_not_build_it_myself": "the per-provider wire-protocol adapters (Anthropic Messages, Bedrock's binary event stream, Vertex rawPredict, OpenAI Responses/Chat Completions), a consistent pseudonym vault, and a real-time Aho-Corasick scrub/unscrub pipeline is substantial, fiddly engineering that is already built and unusually well documented.",
+      "risks": [
+        "explicitly alpha software; the README's own Limitations section is unusually candid (short-value matching gaps, fragment-search gaps, local transcripts still hold real data, an agent with shell access could discover an unanticipated bypass)",
+        "single maintainer (lemonadesaltbagel), no independent download-count history beyond PyPI's own numbers",
+        "the local machine itself is explicitly 'trusted' in the threat model — this protects what leaves the machine, not what happens on it"
+      ],
+      "first_seen": "2026-11-03",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "0.3.2 (PyPI veil-proxy)",
+      "latest_release_date": "Unclear based on available documentation — no GitHub Releases page; versioned via PyPI only",
+      "source_links": [
+        "https://github.com/lemonadesaltbagel/veil",
+        "https://pypi.org/project/veil-proxy/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 95 stars, 12 forks, 7 subscribers, 1 open issue, created 2026-10-21, pushed 2026-10-31. PyPI confirms package `veil-proxy` at version 0.3.2. No GitHub Release tags found (/releases/latest returned 404) — version tracked via PyPI instead of guessed.",
+      "acted_on": false
+    },
+    {
+      "name": "pngdeer",
+      "slug": "pngdeer-image-compressor",
+      "repo_url": "https://github.com/heydeer/pngdeer",
+      "website": "https://heydeer.ai/open-source/pngdeer",
+      "description": "A lossy PNG/JPEG/AVIF/animated-PNG compressor (Rust) with no quality slider: for each image it searches palette sizes 2-256, with and without dithering, scores results with the SSIMULACRA2 perceptual metric, and keeps the smallest file that still looks right. The same Rust code runs identically as a CLI and as a browser WASM app (nothing uploaded).",
+      "category": [
+        "small utility",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "installed locally (Homebrew tap, cargo)",
+        "browser (WASM, fully client-side)",
+        "CLI, scriptable in a build pipeline"
+      ],
+      "interfaces": [
+        "CLI",
+        "browser WASM app"
+      ],
+      "use_cases": [
+        "a pre-commit or CI image-optimization step for a web app's asset pipeline, replacing a recurring TinyPNG subscription",
+        "one-off compression of screenshots or marketing assets before upload",
+        "batch AVIF/WebP conversion for a product site, same tool for PNG and JPEG photo sources"
+      ],
+      "product_opportunities": [
+        "the palette-search-plus-perceptual-scoring engine could be wrapped as a small internal API/Lambda for an asset pipeline instead of paying for TinyPNG"
+      ],
+      "alternatives": [
+        "TinyPNG (proprietary SaaS — the project's explicit benchmark target)",
+        "pngquant/oxipng/ImageOptim (open-source, but the README's measured leaderboard claims to beat them)",
+        "Squoosh (Google's browser tool, manual quality slider instead of automatic selection)"
+      ],
+      "why_it_matters": "Directly replaces a recurring paid SaaS dependency (TinyPNG) with an open-source tool the README claims beats it by 8-12% at equal perceptual quality on the median image, and the same Rust code runs identically in the CLI and in-browser via WASM, which makes the claim at least structurally checkable rather than purely vendor-reported.",
+      "why_not_build_it_myself": "the automatic palette-size search plus SSIMULACRA2 perceptual scoring across PNG/JPEG(mozjpeg)/AVIF encoders, with an identical WASM port of the same code path, is a nontrivial image-processing project most people would not build for a one-off need.",
+      "risks": [
+        "9 days old (created 2026-10-25), only 2 contributors (a company account, heydeer, plus an AI coding-assistant commit co-author) — the comparative benchmark claims against TinyPNG and 8 open-source quantizers are self-reported and not independently reproduced here",
+        "no published npm/library package found — CLI binary and browser app only, so embedding in a Node/Next.js build pipeline currently means shelling out to the binary rather than importing a library",
+        "no GitHub Releases page; versioning is tag-only (latest tag v0.2.1)"
+      ],
+      "first_seen": "2026-11-03",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "v0.2.1 (tag only, no GitHub Release notes)",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/heydeer/pngdeer",
+        "https://heydeer.ai/open-source/pngdeer"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 427 stars, 39 forks, 2 subscribers, 1 open issue, created 2026-10-25, pushed 2026-11-03. Stars:forks ratio (~11:1) is healthy, not consistent with inflated-engagement patterns flagged elsewhere.",
+      "acted_on": false
+    },
+    {
+      "name": "nomore",
+      "slug": "nomore-claude-code-rule-miner",
+      "repo_url": "https://github.com/globalmpc/nomore",
+      "website": "",
+      "description": "A local CLI (no LLM required by default) that finds the corrections a developer keeps repeating to Claude Code and turns them into evidence-backed CLAUDE.md rules, each one traceable to a specific GitHub issue and its reaction count. Ships with a ready-made 20-rule starter pack mined from roughly 8,000 ranked anthropics/claude-code issues.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity",
+        "small utility"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "CLI (npx @globalmpc/nomore)",
+        "local only, no server, no LLM call by default"
+      ],
+      "interfaces": [
+        "CLI",
+        "produces a CLAUDE.md-format rules file"
+      ],
+      "use_cases": [
+        "pull the 20-rule starter pack into a project's CLAUDE.md in one command via `@nomore-rules.md` import",
+        "run locally against a project's own correction history to surface repeated instructions and turn them into a standing rule",
+        "propose a new community rule back via the project's issue template, backed by the same methodology"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "hand-maintained CLAUDE.md (status quo)",
+        "Claude's own built-in memory/feedback behavior (persistent across sessions but not an explicit, shareable, versioned rules file)",
+        "no directly equivalent correction-mining tool found elsewhere in this catalog"
+      ],
+      "why_it_matters": "Operationalizes exactly the 'feedback memory' problem this radar process itself has to manage by hand — a corpus-backed starter rule pack plus a local miner for an individual's own repeated corrections, each rule traceable to the GitHub issue and reaction count that justified it rather than asserted from vibes.",
+      "why_not_build_it_myself": "the issue-mining, title-similarity clustering, and reaction-based ranking pipeline against ~8,000 GitHub issues is a repeatable data-engineering exercise most people would not build just to get a rules starter pack.",
+      "risks": [
+        "10 days old, single contributor account (`agent-mpc` — the name suggests this may itself be an agent-run or agent-assisted account) — worth tracking for independent maintenance",
+        "0 forks despite 101 stars and 4 subscribers — a mild flag, though the subscriber count is proportionally normal and not consistent with the extreme fake-engagement ratios (150:1+, 0 subscribers) seen elsewhere in this catalog",
+        "the local correction-mining feature itself was not hands-on verified here, only the pre-built rule pack's documented methodology"
+      ],
+      "first_seen": "2026-11-03",
+      "last_reviewed": "2026-11-03",
+      "last_meaningful_update": "2026-11-03",
+      "current_version": "Unclear based on available documentation — no GitHub Releases/tags found at time of review",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/globalmpc/nomore"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 101 stars, 0 forks, 4 subscribers, 1 open issue, created 2026-10-24, pushed 2026-11-03 (today). Today's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]

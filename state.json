@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-02",
-  "last_successful_run": "2026-11-02",
-  "run_count": 64,
-  "rotation_slot_last_used": 6,
+  "last_run": "2026-11-03",
+  "last_successful_run": "2026-11-03",
+  "run_count": 65,
+  "rotation_slot_last_used": 7,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -73,20 +73,10 @@
     "developer utilities/debugging/testing (slot 3) — a mature, actively-released REST API fuzzer with a documented real-world bug-finding record (Endava/CATS, self-healing zero-code negative testing against OpenAPI specs), an unusually well-engineered MCP server giving coding agents black-box process/container observation via strace/perf/gdb with an evidence-citation schema (Debug Anything), a company-backed E2E testing framework pairing UI-driving with real provider emulation and systematic fault injection (dánwò, Carbonme Inc.), and a pytest/Jest-native behavioral-regression tool for AI agents that auto-wraps an existing LLM SDK client (Assay/assay-evals, compared directly against the already-catalogued whatbroke). llmock (local multi-provider LLM mock server, 2+ years old) was today's Small but High-Leverage Utility. Flagged a fourth/fifth independent same-niche 'time-travel debugging for AI agents' wave (rerunner, ReBaseAgent, agent-replay, flashback, time-travel-debugger-mcp — all 0-1 stars) duplicating the already-catalogued OrcaReplay, rejected oimo-ai/apgar as a thin duplicate of the whatbroke niche, and reconfirmed the same-day '2026' marketing-title content-farm pattern first flagged on 2026-10-23 recurring in a Roblox/developer-tool batch. Held PatilShreyas/debroid (276-star Android debugger for AI agents) to Worth Watching as off-stack (Android/JVM, not core MERN/Node). 'Still Worth Trying' rotated to Kingfisher, AdminForth, and RustFS — none used in the ten immediately preceding rotations.",
     "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations.",
     "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations.",
-    "infrastructure/observability/deployment (slot 6) — an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations."
+    "infrastructure/observability/deployment (slot 6) — an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations.",
+    "experimental projects and hidden gems (slot 7) — a tiny Rust single-binary kanban board that treats an MCP-connected coding agent and a human browser user as equal first-class clients of the same board, zero setup, live LAN/Pi/VPN share (kanzo, AGPL-3.0 flagged), a cross-platform local file-search launcher that indexes file content, OCRs screenshots, and answers semantic/natural-language queries over MCP where every comparable tool (Everything/Listary/PowerToys Run) only indexes filenames (kensaku), and a local privacy proxy that deterministically pseudonymizes PII/secrets for any Anthropic/OpenAI-compatible coding-agent CLI before a request leaves the machine, then reverses it locally — directly relevant to the MSSP/PTaaS client-data context (veil). A Rust PNG/JPEG/AVIF compressor claiming 8-12% smaller files than TinyPNG at equal SSIMULACRA2-measured perceptual quality, with the same code running as CLI and browser WASM (pngdeer), was held as a fourth discovery rather than padded past it. A Claude-Code correction-mining CLI that turns repeated corrections into evidence-backed CLAUDE.md rules, shipped with a 20-rule starter pack mined from ~8,000 ranked anthropics/claude-code issues, was today's Small but High-Leverage Utility (nomore). Paseo shipped v0.15.0 (daemon-restart-survives terminal programs, opt-in agent-recovery resuming interrupted agents after a host crash/restart) — a meaningful reliability update. Rejected a CTF-competition-specific multi-agent pentest harness with a marketing-heavy README and an unusual 505-forks-vs-3-subscribers ratio (N1nEmAn/sapper-v2), a thin single-skill entrant in the already-saturated AI-pentest-agent wave with a NOASSERTION license (hassan-algo/open-sesame), and flagged two fresh suspicious-engagement cases for future tracking: a TUI API client at 100 stars/1 fork/0 subscribers four days old (4yk5/Ghostman) and a 'headless coding agent harness' at 577 stars/8 forks/5 subscribers created only 2 days before review (Balanov/uncut). Held out, not rejected: a PR-risk-assessment CLI distinct from the catalogued roborev but with 0 subscribers (winnin/farol), and a well-built local agentic-pentesting workspace overshadowed by PTaaS being secondary context here and an already-saturated niche (dbx0/executioner). Web search for Show HN / lobste.rs / openalternative.co leads returned mostly stale or undated results today — GitHub's search/repositories API remained the dominant, reliable discovery source. 'Still Worth Trying' rotated to Misata, Prismor, and Codanna — none used in the prior twelve-plus rotations."
   ],
   "evaluated_repos": [
-    "n1ra7/semantic-code-search",
-    "Ashutosh3021/Galvan-Prime",
-    "backblaze-b2-samples/clip-visual-product-search",
-    "theBGuy/discord-semantic-search",
-    "Coookei/Semantic-Search-Platform",
-    "bluto447/open-brain",
-    "patakuti/lkrag-lite",
-    "ABDELRAHMAN-ELRAYES/Vaira",
-    "LocketKeyLLC/scaffold-engine",
-    "AdminGodZ/AdminSearch",
-    "Seminarclass/torrentsearch",
     "elmohq/elmo",
     "adikeshri/tachyon",
     "scaso01/monster-search",
@@ -1575,7 +1565,18 @@
     "oslabs-beta/spyglass",
     "jammanning2010-svg/kubeflow-trainer-orchestrator",
     "coollabsio/coolify",
-    "henrygd/beszel"
+    "henrygd/beszel",
+    "emanuele-em/kanzo",
+    "yjid/kensaku",
+    "lemonadesaltbagel/veil",
+    "4yk5/Ghostman",
+    "N1nEmAn/sapper-v2",
+    "dbx0/executioner",
+    "hassan-algo/open-sesame",
+    "Balanov/uncut",
+    "winnin/farol",
+    "globalmpc/nomore",
+    "heydeer/pngdeer"
   ],
   "rejected": [
     {
@@ -2892,6 +2893,36 @@
       "repo_url": "https://github.com/poixeai/proxify",
       "reason": "stale (no push since 2025-12-19) and inferior to the already-saturated LLM-gateway/AI-API-proxy niche (Bifrost, inference-gateway) noted in prior runs",
       "date": "2026-11-02"
+    },
+    {
+      "repo_url": "https://github.com/N1nEmAn/sapper-v2",
+      "reason": "competition-specific artifact (3rd Tencent Intelligent Attack-Defense Challenge CTF entry), marketing-heavy README ('the Nuwa Test', 'AI ape looked up at the stars'), explicitly scoped by its own author to competition scenarios rather than general reuse; 505 forks against only 3 subscribers is an unusual engagement ratio",
+      "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/hassan-algo/open-sesame",
+      "reason": "thin — a single Claude Code skill rather than a framework, 0 subscribers, NOASSERTION license, part of the already-saturated 'AI pentest agent' wave repeatedly rejected in prior runs (ARTEX, cain-agent, watchtower, Atlas, CyberPenda)",
+      "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/4yk5/Ghostman",
+      "reason": "suspicious engagement — 100 stars vs 1 fork and 0 subscribers on a repo created 4 days before review; too early to separate from the inflated-engagement pattern flagged elsewhere, revisit only if forks/subscribers catch up",
+      "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/Balanov/uncut",
+      "reason": "suspicious engagement — 577 stars / 8 forks / 5 subscribers on a repo created 2 days before review (2026-11-01), a star-velocity pattern consistent with inflated engagement rather than organic adoption; revisit only if fork/subscriber counts catch up",
+      "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/winnin/farol",
+      "reason": "held out, not rejected — PR-risk CLI (riskiest files, diff coverage, contract breaks) is a genuinely distinct niche from the catalogued roborev, but 0 subscribers despite 172 stars/5 forks and only 10 days old; revisit if independent adoption shows up",
+      "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/dbx0/executioner",
+      "reason": "held out, not rejected — well-built local agentic-pentesting workspace with a healthy ~5:1 stars:forks ratio and real docs/demo, but PTaaS/pentest-agent tooling is explicitly secondary context here and an already-saturated niche (ARTEX, cain-agent, watchtower, Atlas, CyberPenda previously rejected); revisit only if it becomes clearly superior to that wave",
+      "date": "2026-11-03"
     }
   ],
   "known_releases": {
@@ -3476,8 +3507,8 @@
       "date": "2026-09-22"
     },
     "getpaseo/paseo": {
-      "version": "v0.14.0",
-      "date": "2026-10-29"
+      "version": "v0.15.0",
+      "date": "2026-11-03"
     },
     "PrismorSec/prismor": {
       "version": "v1.59.0",
@@ -4148,6 +4179,14 @@
     "openid.net": {
       "last_ok": "2026-10-29",
       "note": "fetched the OpenID Foundation's certified-OIDC-implementations registry directly to verify issuerd's self-reported certification claim — confirmed, 'issuerd' is listed."
+    },
+    "WebSearch (Show HN / lobste.rs / openalternative.co)": {
+      "last_ok": "2026-11-03",
+      "note": "Queries returned mostly stale/undated or irrelevant aggregator pages today rather than genuine failures; GitHub search/repositories API carried the bulk of discovery this run."
+    },
+    "GitHub API": {
+      "last_ok": "2026-11-03",
+      "note": "8,350/hr limit, used well under 100 calls, no rate pressure."
     }
   },
   "previous_recommendations": [
@@ -4213,5 +4252,5 @@
     "Breeze (LanternOps/breeze) — 2026-11-02, PROTOTYPE, 7.2 (meaningful update)"
   ],
   "notes": "2026-11-02: Slot 6 (infrastructure, observability, deployment) per day_of_year 306 % 7 + 1 = 6. Catalogued 3 new: bex (bex-co/bex, Apache-2.0, 7.6, PROTOTYPE) — an AI-native, self-hosted Render alternative on a Cluster-API-based Kubernetes substrate where the MCP deploy tool and human dashboard drive the same operator; explicitly not production-ready per its own README, first surfaced 2026-09-21 and deep-reviewed today. SherlockOps (Duops/SherlockOps, MIT, 7.4, PROTOTYPE) — a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB/any MCP server, with a self-hosted-LLM escape hatch (Ollama/vLLM) relevant to the MSSP context; very small (18 stars, 1 maintainer) but unusually broad in scope. gcx (grafana/gcx, Apache-2.0, 6.8, PROTOTYPE) — Grafana Labs' own official, GA agentic CLI, turning alert investigation and dashboard-as-code into shell commands and agent skills. Two meaningful updates: MongoRescue (v0.18.0->v0.28.0) added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze (v0.121.0->v0.125.0) added Huntress/SentinelOne EDR deployment-from-policy, deepening MSSP relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway (poixeai/proxify). Generic searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin same-day noise — no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations. Updated: 2026-11-02.",
-  "updated": "2026-10-31"
+  "updated": "2026-11-03"
 }
