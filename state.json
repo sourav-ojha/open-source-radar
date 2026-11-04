@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-03",
-  "last_successful_run": "2026-11-03",
-  "run_count": 65,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-11-04",
+  "last_successful_run": "2026-11-04",
+  "run_count": 66,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -74,44 +74,10 @@
     "data/search/documents/RAG (slot 4) — a Zig-core unified search-and-inference database combining BM25/dense+sparse vector/graph retrieval with in-process RAG agents, MCP/A2A adapters, and genuinely embeddable TypeScript bindings (Antfly), the most mature entrant yet in the saturated agent-memory niche at ~2 years old vs. weeks-old competitors (mcp-memory-service/doobidoo), and an academically rigorous Rust-first RDF engine unifying BM25+GeoSPARQL+vector-kNN retrieval inside one SPARQL evaluator, filed STUDY given its npm/Python bindings deliberately expose only a thin surface (PurRDF). PII-Shield (zero-code K8s sidecar + WASM SDK for entropy-based log PII/secret redaction, directly relevant to the EKS/MSSP context) was today's Small but High-Leverage Utility. Checked Paseo (beta->stable promotion) and Headroom (batch/savings-tracking fixes) for meaningful updates — neither qualified. Generic GitHub keyword search on crowded AI/RAG terms (semantic cache, reranker, document chunking, knowledge graph construction, entity extraction) was almost entirely hackathon/tutorial noise even with stars/pushed-date filters; useful signal came from stars:>100 threshold queries instead. Rejected Lance/LanceDB (7,236 stars) as already past the household-name threshold within AI/ML engineering circles, and held Huntsman (3-star, 4-day-old self-hosted Firecrawl-compatible scraper) and mnemosyne (3,563-star SQLite agent-memory layer, marketing-badge-heavy, substantially overlapping the already-catalogued CortexDB) to Worth Watching. 'Still Worth Trying' rotated to WhoDB, Floci, and Dagu — none used in the eleven immediately preceding rotations.",
     "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations.",
     "infrastructure/observability/deployment (slot 6) — an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations.",
-    "experimental projects and hidden gems (slot 7) — a tiny Rust single-binary kanban board that treats an MCP-connected coding agent and a human browser user as equal first-class clients of the same board, zero setup, live LAN/Pi/VPN share (kanzo, AGPL-3.0 flagged), a cross-platform local file-search launcher that indexes file content, OCRs screenshots, and answers semantic/natural-language queries over MCP where every comparable tool (Everything/Listary/PowerToys Run) only indexes filenames (kensaku), and a local privacy proxy that deterministically pseudonymizes PII/secrets for any Anthropic/OpenAI-compatible coding-agent CLI before a request leaves the machine, then reverses it locally — directly relevant to the MSSP/PTaaS client-data context (veil). A Rust PNG/JPEG/AVIF compressor claiming 8-12% smaller files than TinyPNG at equal SSIMULACRA2-measured perceptual quality, with the same code running as CLI and browser WASM (pngdeer), was held as a fourth discovery rather than padded past it. A Claude-Code correction-mining CLI that turns repeated corrections into evidence-backed CLAUDE.md rules, shipped with a 20-rule starter pack mined from ~8,000 ranked anthropics/claude-code issues, was today's Small but High-Leverage Utility (nomore). Paseo shipped v0.15.0 (daemon-restart-survives terminal programs, opt-in agent-recovery resuming interrupted agents after a host crash/restart) — a meaningful reliability update. Rejected a CTF-competition-specific multi-agent pentest harness with a marketing-heavy README and an unusual 505-forks-vs-3-subscribers ratio (N1nEmAn/sapper-v2), a thin single-skill entrant in the already-saturated AI-pentest-agent wave with a NOASSERTION license (hassan-algo/open-sesame), and flagged two fresh suspicious-engagement cases for future tracking: a TUI API client at 100 stars/1 fork/0 subscribers four days old (4yk5/Ghostman) and a 'headless coding agent harness' at 577 stars/8 forks/5 subscribers created only 2 days before review (Balanov/uncut). Held out, not rejected: a PR-risk-assessment CLI distinct from the catalogued roborev but with 0 subscribers (winnin/farol), and a well-built local agentic-pentesting workspace overshadowed by PTaaS being secondary context here and an already-saturated niche (dbx0/executioner). Web search for Show HN / lobste.rs / openalternative.co leads returned mostly stale or undated results today — GitHub's search/repositories API remained the dominant, reliable discovery source. 'Still Worth Trying' rotated to Misata, Prismor, and Codanna — none used in the prior twelve-plus rotations."
+    "experimental projects and hidden gems (slot 7) — a tiny Rust single-binary kanban board that treats an MCP-connected coding agent and a human browser user as equal first-class clients of the same board, zero setup, live LAN/Pi/VPN share (kanzo, AGPL-3.0 flagged), a cross-platform local file-search launcher that indexes file content, OCRs screenshots, and answers semantic/natural-language queries over MCP where every comparable tool (Everything/Listary/PowerToys Run) only indexes filenames (kensaku), and a local privacy proxy that deterministically pseudonymizes PII/secrets for any Anthropic/OpenAI-compatible coding-agent CLI before a request leaves the machine, then reverses it locally — directly relevant to the MSSP/PTaaS client-data context (veil). A Rust PNG/JPEG/AVIF compressor claiming 8-12% smaller files than TinyPNG at equal SSIMULACRA2-measured perceptual quality, with the same code running as CLI and browser WASM (pngdeer), was held as a fourth discovery rather than padded past it. A Claude-Code correction-mining CLI that turns repeated corrections into evidence-backed CLAUDE.md rules, shipped with a 20-rule starter pack mined from ~8,000 ranked anthropics/claude-code issues, was today's Small but High-Leverage Utility (nomore). Paseo shipped v0.15.0 (daemon-restart-survives terminal programs, opt-in agent-recovery resuming interrupted agents after a host crash/restart) — a meaningful reliability update. Rejected a CTF-competition-specific multi-agent pentest harness with a marketing-heavy README and an unusual 505-forks-vs-3-subscribers ratio (N1nEmAn/sapper-v2), a thin single-skill entrant in the already-saturated AI-pentest-agent wave with a NOASSERTION license (hassan-algo/open-sesame), and flagged two fresh suspicious-engagement cases for future tracking: a TUI API client at 100 stars/1 fork/0 subscribers four days old (4yk5/Ghostman) and a 'headless coding agent harness' at 577 stars/8 forks/5 subscribers created only 2 days before review (Balanov/uncut). Held out, not rejected: a PR-risk-assessment CLI distinct from the catalogued roborev but with 0 subscribers (winnin/farol), and a well-built local agentic-pentesting workspace overshadowed by PTaaS being secondary context here and an already-saturated niche (dbx0/executioner). Web search for Show HN / lobste.rs / openalternative.co leads returned mostly stale or undated results today — GitHub's search/repositories API remained the dominant, reliable discovery source. 'Still Worth Trying' rotated to Misata, Prismor, and Codanna — none used in the prior twelve-plus rotations.",
+    "AI agents/MCP/coding productivity (slot 1) — a Certificate-Transparency-style tamper-evident audit trail for AI-agent tool calls with a published 480-trial proof section and PyPI package (Tracekit), a self-hosted trace-native CI/CD pipeline that turns an agent's production failures directly into CI regression tests with no hand-authored dataset but no tagged release yet (Tracely), and a self-hosted agent-to-phone voice-call escalation channel that rings a locked Android phone over VoIP with no Twilio dependency, today's Small but High-Leverage Utility (agentring). A hidden-gem outside the slot's immediate adoption path: earshot, a remarkably well-documented and self-critical toolkit giving coding agents the ability to \"hear\" (describe, match, critique and synthesize audio/sound design) via CLI/Python API/MCP server, filed as an architecture study given narrow applicability to a MERN/AWS stack. Rejected decionis/agent-safe-pipeline for a classic open-core trap (the OSS gateway \"decides nothing itself\" — real authorization requires the proprietary Decionis hosted control plane) and phone-harness/mcp for not actually being deployable open source (the repo is just setup docs for a hosted SaaS MCP connector). Flagged qybaihe/bla (2,108 stars in 10 days, GitHub-Trending self-promotion badge, anti-reverse-engineering obfuscation tooling) as trending/marketing-driven and excluded it. Reconfirmed a systemic pattern from recent runs: several of today's otherwise-substantive finds (Tracekit 136:1, earshot 423:1, Tracely 405:1 stars:subscribers) show the same elevated ratio previously used to reject thinner repos, but all three pair it with real fork counts and open-issue activity (unlike the 0-fork/0-issue cases rejected before), so they were catalogued on substance with the ratio flagged rather than treated as disqualifying on its own. Held Qsnh/skillsgist (no growth since 2026-10-21), ShuaiMXu/happyhands (alpha UI-review tool), Sheernox/cedr (1-day-old kitchen-sink agent-dev-tools bundle) and yoanbernabeu/skillcrew (thin team skill registry) to Worth Watching. Checked Paseo, MisakaNet, SkillSpector, SkillEvaluator, agentOS (framerslab), midplane, chunkhound, deja-vu, Pare, moai-adk, planning-with-files, aidlc-workflows, ai-coding-project-boilerplate and ZCode for meaningful updates — all incremental patch/bugfix releases, none cleared the bar on their own. 'Still Worth Trying' rotated to html-to-markdown (Kreuzberg), haiku.rag, and Headroom — none used in the fourteen immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "elmohq/elmo",
-    "adikeshri/tachyon",
-    "scaso01/monster-search",
-    "intikhab49/Lead-finder",
-    "beneglo/liberdex",
-    "Heshamus/better-search-lab",
-    "DevAnimecx/jiro",
-    "meme-search/meme-search",
-    "ICIJ/datashare-client",
-    "GentelZole/deepsearch",
-    "RAGHAV2710/kaatil",
-    "Ashish6298/opensearch",
-    "jweezy119/bottollbooth",
-    "wave-cl/bti",
-    "saeed1197/VolatileGUI",
-    "vaibhv19/Phoenix",
-    "ICIJ/datashare",
-    "mattmaas/searxng-mcp",
-    "bitsocialnet/bitsocial-indexer",
-    "vesivanov/bot-observability",
-    "BeOngam/personal-search-engine",
-    "okmito/private_search",
-    "mariskaablaze995/LiteDoc",
-    "steve-space/llm-document-parser",
-    "jeorgeiiii/AI-Invoice-Analyzer",
-    "tmase/pdf_extraction",
-    "poirotw66/pdf-to-markdown-converter",
-    "hmz-021010/ResearchPDF2LLM",
-    "ShivamMalge/LightningParse",
-    "hassanharis/OTSE-Optical-Transceiver-Spec-Extractor",
-    "LaxmiNarayana31/schema-doc-parser",
-    "Magraa/FinAudit-AI",
-    "kanizmadix/docintel-kit",
-    "ZhangHan200005/EcoData_Extraction",
-    "HeyHuman-machine/paper-extractor",
     "itsmrad/plancover-gmc-policy-extraction",
     "dungnotnull/fitness-survey-ocr",
     "Swarup-Ingale/LLM-Document-Parser",
@@ -1576,7 +1542,42 @@
     "Balanov/uncut",
     "winnin/farol",
     "globalmpc/nomore",
-    "heydeer/pngdeer"
+    "heydeer/pngdeer",
+    "getpaseo/paseo",
+    "Ikalus1988/MisakaNet",
+    "Dave-London/Pare",
+    "midplaneai/midplane",
+    "NVIDIA/SkillSpector",
+    "modu-ai/moai-adk",
+    "framerslab/agentos",
+    "minipuft/claude-prompts-mcp",
+    "OthmanAdi/planning-with-files",
+    "awslabs/aidlc-workflows",
+    "shinpr/ai-coding-project-boilerplate",
+    "chunkhound/chunkhound",
+    "vshulcz/deja-vu",
+    "cauebraz/squeeze",
+    "0xSteph/patient-zero",
+    "NVIDIA/SkillEvaluator",
+    "zai-org/ZCode",
+    "decionis/agent-safe-pipeline",
+    "Cygnux-Labs/Tracekit",
+    "jwuthri-cloud/Tracely-ai",
+    "qybaihe/bla",
+    "harish-gaggar/mcp-server-gateway",
+    "phone-harness/mcp",
+    "mutonby/agentring",
+    "eliasbiondo/antirion",
+    "respanai/respan-gateway",
+    "tomtomsatnav/agent-orchestration-standard",
+    "Leonxlnx/earshot",
+    "Anubis-Security-Tool/anubis",
+    "DukeDeSouth/m7-mcp-oss",
+    "eduwxyz/tucano",
+    "ShuaiMXu/happyhands",
+    "Sheernox/cedr",
+    "yoanbernabeu/skillcrew",
+    "Qsnh/skillsgist"
   ],
   "rejected": [
     {
@@ -2923,6 +2924,61 @@
       "repo_url": "https://github.com/dbx0/executioner",
       "reason": "held out, not rejected — well-built local agentic-pentesting workspace with a healthy ~5:1 stars:forks ratio and real docs/demo, but PTaaS/pentest-agent tooling is explicitly secondary context here and an already-saturated niche (ARTEX, cain-agent, watchtower, Atlas, CyberPenda previously rejected); revisit only if it becomes clearly superior to that wave",
       "date": "2026-11-03"
+    },
+    {
+      "repo_url": "https://github.com/decionis/agent-safe-pipeline",
+      "reason": "open-core trap - the open-source gateway \"decides nothing itself\"; real authorization runs on the proprietary hosted Decionis control plane, and the in-repo demo authority explicitly \"proves nothing about a real one\"",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/phone-harness/mcp",
+      "reason": "not deployable open source - repo is only setup docs for a hosted SaaS MCP connector (mcp.phone-harness.com); \"nothing to set up, no Mac, no adb\" confirms no self-hostable code here",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/qybaihe/bla",
+      "reason": "trending/marketing-driven - 2,108 stars in 10 days with a self-promoted GitHub-Trending badge, anti-reverse-engineering obfuscation tooling with narrow applicability and an elevated stars:subscribers ratio (263:1)",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/Anubis-Security-Tool/anubis",
+      "reason": "saturated AI-pentest-agent wave plus suspicious engagement (407 stars vs 1 subscriber)",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/harish-gaggar/mcp-server-gateway",
+      "reason": "587 stars vs 0 subscribers, NOASSERTION license, stale since 2026-10-03",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/DukeDeSouth/m7-mcp-oss",
+      "reason": "thin (0 subscribers), another entrant in the saturated spec-driven-development wave",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/eduwxyz/tucano",
+      "reason": "0 subscribers, saturated multi-agent-orchestration-on-your-desktop wave with no clear differentiation",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/Qsnh/skillsgist",
+      "reason": "reconfirmed prior Worth-Watching hold - no growth since 2026-10-21 (48 stars, 0 subscribers)",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/ShuaiMXu/happyhands",
+      "reason": "held out, not rejected - alpha UI-design-review tool for coding agents with a healthy ~92:1 stars:forks ratio, but only 2 subscribers and explicitly alpha; too thin for a full entry this run",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/Sheernox/cedr",
+      "reason": "held out, not rejected - kitchen-sink agent-dev-tools bundle (routing, merge-gate, skill pinning, usage monitoring), 1 day old at review, too early to judge focus",
+      "date": "2026-11-04"
+    },
+    {
+      "repo_url": "https://github.com/yoanbernabeu/skillcrew",
+      "reason": "thin - team skill registry, 36 stars, 0 forks, 0 subscribers",
+      "date": "2026-11-04"
     }
   ],
   "known_releases": {
@@ -3495,8 +3551,8 @@
       "date": "2026-06-18"
     },
     "minipuft/claude-prompts-mcp": {
-      "version": "v4.0.1",
-      "date": "2026-08-16"
+      "version": "v5.1.1",
+      "date": "2026-10-06"
     },
     "uvwt/agentdock": {
       "version": "v0.8.3",
@@ -3659,12 +3715,12 @@
       "date": "Unclear based on available documentation (no tagged GitHub release)"
     },
     "NVIDIA/SkillEvaluator": {
-      "version": "v0.3.0",
-      "date": "2026-09-17"
+      "version": "v0.7.2",
+      "date": "2026-11-04"
     },
     "zai-org/ZCode": {
-      "version": "v3.14.3",
-      "date": "2026-09-24"
+      "version": "v3.17.1",
+      "date": "2026-10-30"
     },
     "openfga/openfga": {
       "version": "v1.21.0",
@@ -3775,16 +3831,16 @@
       "date": "2026-08-17"
     },
     "OthmanAdi/planning-with-files": {
-      "version": "v3.23.0",
-      "date": "2026-10-06"
+      "version": "v3.28.0",
+      "date": "2026-11-03"
     },
     "modu-ai/moai-adk": {
       "version": "v3.1.2",
       "date": "2026-08-21"
     },
     "framerslab/agentos": {
-      "version": "v0.10.37",
-      "date": "2026-10-07"
+      "version": "v0.15.95",
+      "date": "2026-11-03"
     },
     "pgplex/pgschema": {
       "version": "v1.13.1",
@@ -3863,12 +3919,12 @@
       "date": "2026-10-12"
     },
     "NVIDIA/SkillSpector": {
-      "version": "v2.12.0",
-      "date": "2026-09-23"
+      "version": "v2.13.3",
+      "date": "2026-11-02"
     },
     "vshulcz/deja-vu": {
-      "version": "v0.22.1",
-      "date": "2026-10-12"
+      "version": "v0.23.5",
+      "date": "2026-11-03"
     },
     "cauebraz/squeeze": {
       "version": "none (pre-release)",
@@ -3911,16 +3967,16 @@
       "date": "2026-10-09"
     },
     "awslabs/aidlc-workflows": {
-      "version": "v2.11.1",
-      "date": "2026-10-20"
+      "version": "v2.11.3",
+      "date": "2026-11-04"
     },
     "chunkhound/chunkhound": {
       "version": "v6.1.0",
       "date": "2026-10-20"
     },
     "shinpr/ai-coding-project-boilerplate": {
-      "version": "v2.2.2",
-      "date": "2026-10-14"
+      "version": "v2.2.5",
+      "date": "2026-11-03"
     },
     "Datus-ai/Datus-agent": {
       "version": "v0.4.3",
@@ -4019,16 +4075,16 @@
       "date": "2026-10-24"
     },
     "Ikalus1988/MisakaNet": {
-      "version": "v2.50.1",
-      "date": "2026-10-25"
+      "version": "v3.5.0",
+      "date": "2026-11-01"
     },
     "Dave-London/Pare": {
       "version": "@paretools/test@0.23.3",
       "date": "2026-10-19"
     },
     "midplaneai/midplane": {
-      "version": "v0.23.0",
-      "date": "2026-10-27"
+      "version": "v0.26.1",
+      "date": "2026-10-29"
     },
     "issuerd/issuerd": {
       "version": "v0.1.24",
@@ -4117,16 +4173,32 @@
     "Duops/SherlockOps": {
       "version": "v1.2.8",
       "date": "2026-09-17"
+    },
+    "Cygnux-Labs/Tracekit": {
+      "version": "v1.5.3",
+      "date": "2026-11-03"
+    },
+    "jwuthri-cloud/Tracely-ai": {
+      "version": "unclear-no-tagged-release (PyPI tracelyai-sdk 0.0.1)",
+      "date": "unclear"
+    },
+    "Leonxlnx/earshot": {
+      "version": "v0.4.0",
+      "date": "2026-10-22"
+    },
+    "mutonby/agentring": {
+      "version": "v0.2.0",
+      "date": "2026-10-28"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-11-02",
-      "note": "queried for Show-HN-style infra/deployment launches and general 'new open source observability/deployment tool 2026' and openalternative.co leads; mostly stale directory/roundup pages, but surfaced the SherlockOps-adjacent 'AI root cause analysis alerts' lead that led to the GitHub search which found it."
+      "last_ok": "2026-11-04",
+      "note": "queried for Show HN AI coding agent / MCP server leads and new Claude Code plugin/skill leads for November 2026; both returned stale or undated aggregator/roundup content with nothing new - GitHub's search/repositories API carried essentially all of today's real discovery."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-02",
-      "note": "fetched READMEs/ADRs for bex (ADR002 architecture), gcx, SherlockOps directly; no WebFetch-on-rendered-page shortcuts taken."
+      "last_ok": "2026-11-04",
+      "note": "fetched READMEs directly for Tracekit, Tracely-ai, earshot, agentring, decionis/agent-safe-pipeline, phone-harness/mcp, qybaihe/bla to verify substance and self-hostability before cataloguing or rejecting."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4141,16 +4213,16 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-02",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~15 search/repositories keyword queries (GitOps, certificate management, database backup, chaos engineering, log aggregation, edge functions, drift detection, service mesh, bare metal, API gateway, secrets manager, VPS dashboard, container security, Kubernetes cost, static hosting, zero trust, new k8s operators, database proxy) plus repos/releases checks on 16 tracked slot-6 projects and 3 new candidates (bex, gcx, SherlockOps) and several Worth Watching/rejected candidates. No rate-limit pressure."
+      "last_ok": "2026-11-04",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~14 search/repositories keyword queries (prompt management, browser agent, claude code hook, mcp gateway, recent mcp-server topic, agent handoff, agent skill registry, mcp observability, agent memory, skill marketplace, mcp security scanner, agent evaluation, ai code review agent, agent token cost) plus repos/releases checks on 17 tracked slot-1-adjacent projects and ~14 new candidates. No rate-limit pressure."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-31",
       "note": "search_by_date on query=RAG and tags=show_hn over a 10-14 day window; mostly thin personal projects and off-topic stories, nothing new enough for slot 4 beyond what GitHub search already surfaced."
     },
     "pypi.org": {
-      "last_ok": "2026-10-30",
-      "note": "confirmed assay-server 0.7.0."
+      "last_ok": "2026-11-04",
+      "note": "confirmed tracekit-ai 1.5.3, tracelyai-sdk 0.0.1 (no tagged GitHub release behind it); also confirmed the PyPI name 'earshot' belongs to an unrelated project (pykeio/earshot, a VAD library), so Leonxlnx/earshot has no PyPI package yet."
     },
     "registry.npmjs.org": {
       "last_ok": "2026-10-30",
@@ -4249,8 +4321,12 @@
     "SherlockOps (Duops/SherlockOps) — 2026-11-02, PROTOTYPE, 7.4",
     "gcx, Grafana CLI (grafana/gcx) — 2026-11-02, PROTOTYPE, 6.8",
     "MongoRescue (YigitCittan/mongorescue) — 2026-11-02, PROTOTYPE, 7.7 (meaningful update)",
-    "Breeze (LanternOps/breeze) — 2026-11-02, PROTOTYPE, 7.2 (meaningful update)"
+    "Breeze (LanternOps/breeze) — 2026-11-02, PROTOTYPE, 7.2 (meaningful update)",
+    "Tracekit (Cygnux-Labs/Tracekit) — 2026-11-04, PROTOTYPE, 8.0",
+    "earshot (Leonxlnx/earshot) — 2026-11-04, PROTOTYPE, 7.4",
+    "Tracely (jwuthri-cloud/Tracely-ai) — 2026-11-04, PROTOTYPE, 7.1",
+    "agentring (mutonby/agentring) — 2026-11-04, PROTOTYPE, 7.0"
   ],
-  "notes": "2026-11-02: Slot 6 (infrastructure, observability, deployment) per day_of_year 306 % 7 + 1 = 6. Catalogued 3 new: bex (bex-co/bex, Apache-2.0, 7.6, PROTOTYPE) — an AI-native, self-hosted Render alternative on a Cluster-API-based Kubernetes substrate where the MCP deploy tool and human dashboard drive the same operator; explicitly not production-ready per its own README, first surfaced 2026-09-21 and deep-reviewed today. SherlockOps (Duops/SherlockOps, MIT, 7.4, PROTOTYPE) — a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB/any MCP server, with a self-hosted-LLM escape hatch (Ollama/vLLM) relevant to the MSSP context; very small (18 stars, 1 maintainer) but unusually broad in scope. gcx (grafana/gcx, Apache-2.0, 6.8, PROTOTYPE) — Grafana Labs' own official, GA agentic CLI, turning alert investigation and dashboard-as-code into shell commands and agent skills. Two meaningful updates: MongoRescue (v0.18.0->v0.28.0) added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze (v0.121.0->v0.125.0) added Huntress/SentinelOne EDR deployment-from-policy, deepening MSSP relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway (poixeai/proxify). Generic searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin same-day noise — no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations. Updated: 2026-11-02.",
+  "notes": "2026-11-04: Slot 1 (AI agents, MCP, coding productivity) per day_of_year 308 % 7 + 1 = 1. Catalogued 4 new: Tracekit (Cygnux-Labs/Tracekit, MIT, 8.0, PROTOTYPE) — a Certificate-Transparency-style tamper-evident audit trail for AI-agent tool calls, signed into an append-only hash chain, with a published 480-trial proof section and a PyPI package working with 25 agent frameworks. earshot (Leonxlnx/earshot, MIT, 7.4, PROTOTYPE) — gives a coding agent hearing: describes, matches, critiques and synthesizes audio/sound design via CLI/Python API/MCP server, with an unusually candid self-critique of its own models' limits; filed as a hidden-gem architecture study given narrow direct applicability to a MERN/AWS stack. Tracely (jwuthri-cloud/Tracely-ai, MIT, 7.1, PROTOTYPE) — self-hosted trace-native CI/CD that turns an agent's production failures directly into regression tests with no hand-authored eval dataset, held cautiously given no tagged GitHub release yet. agentring (mutonby/agentring, Apache-2.0, 7.0, PROTOTYPE) — a self-hosted VoIP channel letting a coding agent ring a locked Android phone for a human decision, no Twilio dependency; today's Small but High-Leverage Utility. Rejected decionis/agent-safe-pipeline (open-core trap: the OSS gateway \"decides nothing itself\", real authorization needs the proprietary Decionis control plane) and phone-harness/mcp (not deployable open source, just docs for a hosted SaaS MCP connector). Flagged qybaihe/bla (2,108 stars in 10 days, self-promoted GitHub-Trending badge, anti-reverse-engineering obfuscation tooling) as trending/marketing-driven and excluded it, alongside Anubis-Security-Tool/anubis and harish-gaggar/mcp-server-gateway for suspicious engagement and licensing/staleness issues respectively. Noted that three of today's four catalogued finds carry an elevated stars:subscribers ratio (136:1 to 423:1) but were kept because they pair it with real fork counts and open-issue activity, unlike the 0-fork/0-issue cases this catalog has rejected before — a judgment call worth revisiting if independent adoption doesn't show up on a future pass. Checked Paseo, MisakaNet, SkillSpector, SkillEvaluator, agentOS (framerslab), midplane, chunkhound, deja-vu, Pare, moai-adk, planning-with-files, aidlc-workflows, ai-coding-project-boilerplate and ZCode for meaningful updates — all incremental patch/bugfix releases, none cleared the bar. Held Qsnh/skillsgist, ShuaiMXu/happyhands, Sheernox/cedr and yoanbernabeu/skillcrew to Worth Watching. 'Still Worth Trying' rotated to html-to-markdown (Kreuzberg), haiku.rag, and Headroom — none used in the fourteen immediately preceding rotations. Updated: 2026-11-04.",
   "updated": "2026-11-03"
 }

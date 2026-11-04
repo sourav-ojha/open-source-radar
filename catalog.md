@@ -1,6 +1,6 @@
 # Catalog
 
-_280 projects tracked. Last updated 2026-11-03._
+_284 projects tracked. Last updated 2026-11-04._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -95,6 +95,7 @@ _280 projects tracked. Last updated 2026-11-03._
 | [KiviDB](https://github.com/kividbio/kividb) | PROTOTYPE | 8.0/10 | product building blocks, data / search / RAG, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [Code Quality](https://github.com/smixs/code-quality) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity, testing | MIT | low | 2026-10-23 |
 | [mcp-memory-service](https://github.com/doobidoo/mcp-memory-service) | USE NOW | 8.0/10 | AI & agent infrastructure, data/search/documents/RAG | Apache-2.0 | low | 2026-10-31 |
+| [Tracekit](https://github.com/Cygnux-Labs/Tracekit) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, security, developer productivity | MIT | low | 2026-11-04 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-22 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
@@ -205,6 +206,7 @@ _280 projects tracked. Last updated 2026-11-03._
 | [OpenAnalytics](https://github.com/OpenLabs-so/openanalytics) | PROTOTYPE | 7.4/10 | product infrastructure, analytics, self-hosted SaaS alternative, AI & agent infrastructure | AGPL-3.0 | medium | 2026-10-29 |
 | [SherlockOps](https://github.com/Duops/SherlockOps) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, infrastructure/observability, MSSP/MSP tooling | MIT | low | 2026-11-02 |
 | [pngdeer](https://github.com/heydeer/pngdeer) | PROTOTYPE | 7.4/10 | small utility, product building blocks | MIT | low | 2026-11-03 |
+| [earshot](https://github.com/Leonxlnx/earshot) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, small utility, developer productivity | MIT | medium | 2026-11-04 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-24 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |
@@ -239,6 +241,7 @@ _280 projects tracked. Last updated 2026-11-03._
 | [BrightBean Studio](https://github.com/brightbeanxyz/brightbean-studio) | PROTOTYPE | 7.1/10 | self-hosted SaaS alternatives, product building blocks, micro-SaaS opportunity | AGPL-3.0 | low | 2026-10-04 |
 | [vibecheck](https://github.com/bhurghundii/vibecheck.dev) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, CI/CD | MIT | medium | 2026-10-13 |
 | [RefearnApp](https://github.com/ZAK123DSFDF/refearnapp) | PROTOTYPE | 7.1/10 | self-hosted SaaS alternatives, micro-SaaS opportunity, product building blocks | AGPL-3.0 | medium | 2026-11-01 |
+| [Tracely](https://github.com/jwuthri-cloud/Tracely-ai) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, testing | MIT | medium | 2026-11-04 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
@@ -252,6 +255,7 @@ _280 projects tracked. Last updated 2026-11-03._
 | [chaski](https://github.com/home-operations/chaski) | PROTOTYPE | 7.0/10 | product building blocks, infrastructure | AGPL-3.0 | low | 2026-10-22 |
 | [detest](https://github.com/k1LoW/detest) | STUDY | 7.0/10 | developer productivity, testing, architecture pattern | MIT | low | 2026-10-27 |
 | [PII-Shield](https://github.com/pii-shield/pii-shield) | PROTOTYPE | 7.0/10 | infrastructure/observability/deployment, product building blocks | Apache-2.0 | low | 2026-10-31 |
+| [agentring](https://github.com/mutonby/agentring) | PROTOTYPE | 7.0/10 | AI & agent infrastructure, small utility, developer productivity | Apache-2.0 | low | 2026-11-04 |
 | [Weir](https://github.com/IdoGol24/weir) | WATCH | 6.9/10 | AI testing, agent evaluation, LLM observability, security | Apache-2.0 | low | 2026-08-29 |
 | [Capptivo](https://github.com/SECHAK-AG/capptivo) | PROTOTYPE | 6.9/10 | small utilities, developer productivity | MIT | low | 2026-09-06 |
 | [GithubStarsManager](https://github.com/AmintaCCCP/GithubStarsManager) | PROTOTYPE | 6.9/10 | small high-leverage utilities, developer productivity, AI & agent infrastructure | MIT | low | 2026-09-20 |
