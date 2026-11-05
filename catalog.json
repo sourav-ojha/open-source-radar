@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "projects": [
     {
       "name": "Xberg",
@@ -17712,6 +17712,275 @@
       ],
       "aliases": [],
       "notes": "273 stars / 34 forks / 3 subscribers / 4 open issues at review - small but plausible engagement for its age, no red flags. Today's Small but High-Leverage Utility.",
+      "acted_on": false
+    },
+    {
+      "name": "Casdoor",
+      "slug": "casdoor-agent-iam",
+      "repo_url": "https://github.com/casdoor/casdoor",
+      "website": "https://casdoor.org",
+      "description": "Self-hosted identity and access management (IAM) / SSO server with OAuth2, OIDC, SAML, CAS, LDAP, SCIM, WebAuthn/passkeys and MFA, now positioned as \"agent-first\" with a built-in LLM MCP & agent gateway sitting on top of the same identity and policy engine used for human SSO.",
+      "category": [
+        "product infrastructure",
+        "authentication/identity",
+        "AI & agent infrastructure",
+        "security"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.2,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, confirmed via GitHub API license field. No restrictions on commercial use, SaaS deployment, or embedding; a corporate-friendly OSS license.",
+      "deployment": [
+        "docker",
+        "docker-compose",
+        "binary",
+        "kubernetes (community helm charts)"
+      ],
+      "interfaces": [
+        "REST API",
+        "OIDC/OAuth2 provider",
+        "SAML IdP",
+        "web UI",
+        "MCP gateway"
+      ],
+      "use_cases": [
+        "Central SSO/IdP for the MSSP admin-portal SaaS and any other internal tool, replacing a hand-rolled Passport.js/OAuth server",
+        "RBAC/multi-tenant user management for a new product instead of building an auth service from scratch",
+        "Single OIDC provider that both human users and coding/AI agents authenticate against, so agent tool calls inherit the same roles/policies as humans",
+        "LDAP/SAML bridge for enterprise customers who demand SSO integration with their own IdP"
+      ],
+      "product_opportunities": [
+        "White-label SSO/IdP layer for the MSSP admin-portal product so enterprise customers get SAML/LDAP support without building it"
+      ],
+      "agent_opportunities": [
+        "Built-in MCP & agent gateway lets an agent authenticate through the same OIDC flow as a human user, rather than a separate static API key",
+        "Could front other self-hosted MCP servers with Casdoor's existing RBAC instead of standing up a second auth layer (as Issuerd/keypaste-style tools do standalone)"
+      ],
+      "alternatives": [
+        "Keycloak - already assumed known/excluded per AGENT.md household-name policy, heavier JVM footprint",
+        "Logto - lighter weight; Casdoor has broader protocol support (CAS, LDAP, SCIM) and the new agent-gateway angle",
+        "Authup, Issuerd (already catalogued) - narrower, agent/DPoP-focused IAM servers; Casdoor is the more general-purpose, longer-lived SSO product of the group"
+      ],
+      "why_it_matters": "Most teams eventually need a real SSO/IdP layer once they sell to a second customer that demands it; Casdoor removes that build from scratch, and its new agent-gateway feature means the same policy engine can govern both human dashboard logins and AI-agent tool calls, which is exactly the overlap this catalog's primary relevance axis cares about.",
+      "why_not_build_it_myself": "OIDC/SAML/LDAP/SCIM protocol compliance and MFA/WebAuthn flows are each weeks of correctness-sensitive work with real security risk if done wrong; six years of production hardening already cover this.",
+      "risks": [
+        "Very broad feature surface - evaluate only the pieces actually needed (SSO vs. the newer agent-gateway) rather than adopting everything at once",
+        "The \"agent-first\" pivot is recent; verify the MCP/agent-gateway code path specifically before relying on it in production, independent of the mature core IAM functionality",
+        "Primarily a Go/React codebase, not Node - fine as a standalone service but not an embeddable Node library"
+      ],
+      "first_seen": "2026-11-05",
+      "last_reviewed": "2026-11-05",
+      "last_meaningful_update": "2026-11-05",
+      "current_version": "v4.25.0",
+      "latest_release_date": "2026-10-30",
+      "source_links": [
+        "https://github.com/casdoor/casdoor",
+        "https://casdoor.org",
+        "https://api.github.com/repos/casdoor/casdoor"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 14,762 stars, pushed_at 2026-11-05 (same-day commit), created 2020-10-22. Long-running, highly active project (weekly releases). Description self-describes as 'Agent-first IAM / LLM MCP & agent gateway' - this phrase itself is the signal; the core SSO/IdP product has existed for years and was not independently deep-reviewed before now.",
+      "acted_on": false
+    },
+    {
+      "name": "Octelium",
+      "slug": "octelium-zero-trust-gateway",
+      "repo_url": "https://github.com/octelium/octelium",
+      "website": "https://octelium.com",
+      "description": "Self-hosted, unified zero-trust secure access platform built on Kubernetes - operates as a zero-config remote-access VPN, ZTNA/BeyondCorp platform, ngrok/Cloudflare-Tunnel alternative, API gateway, AI/LLM gateway, MCP-gateway infrastructure for agent architectures, and a lightweight PaaS for containerized apps, all behind one identity-based policy engine.",
+      "category": [
+        "infrastructure",
+        "security",
+        "AI & agent infrastructure",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0, confirmed via LICENSE file and GitHub API (README also displays an Apache-2.0 badge, likely for a client-library subcomponent - verify per-directory licensing before redistribution). Self-hosting internally is unrestricted; redistributing a modified Octelium as a hosted service to third parties would trigger AGPL's source-disclosure requirement - flag loudly before embedding in any commercial hosted product.",
+      "deployment": [
+        "kubernetes (single-node or multi-node)",
+        "self-hosted cluster on any VPS (DigitalOcean/Hetzner/AWS EC2/Vultr)"
+      ],
+      "interfaces": [
+        "CLI (octeliumctl)",
+        "WireGuard/QUIC client",
+        "REST/gRPC API",
+        "policy-as-code (CEL/OPA)",
+        "MCP gateway",
+        "AI/LLM gateway"
+      ],
+      "use_cases": [
+        "Zero-trust remote access into AWS/EKS infra and internal services instead of a traditional VPN or paying for Tailscale/Twingate",
+        "Secretless access to AWS S3/Lambda and other SaaS APIs for both humans and workloads, removing long-lived API keys from circulation",
+        "Self-hosted ngrok/Cloudflare-Tunnel replacement for exposing local dev services or demoing client work without a third-party tunnel dependency",
+        "MCP-gateway and A2A-architecture infrastructure giving coding/AI agents identity-based, policy-controlled access to internal services instead of static credentials",
+        "A lightweight self-hosted PaaS (Vercel/Netlify-style) for deploying containerized Next.js/Node apps on his own AWS infra"
+      ],
+      "product_opportunities": [
+        "Internal zero-trust access layer for the MSSP/PTaaS infra that doubles as a sellable 'how we secure agent access' story to clients"
+      ],
+      "agent_opportunities": [
+        "Purpose-built MCP-gateway and A2A support with OAuth2 client-credentials auth and per-request policy-as-code access control - directly relevant to exposing internal tools/data to agents safely",
+        "Cordium (companion project, octelium/cordium) gives agents sandboxed, identity-based remote access without distributing credentials to the sandbox - not independently reviewed this run"
+      ],
+      "alternatives": [
+        "Teleport, Cloudflare Access, Tailscale - commercial/SaaS-dependent equivalents for ZTNA; Octelium is the fully self-hosted, no-cloud-control-plane version",
+        "ngrok/Cloudflare Tunnel - narrower, Octelium replaces this as one of several use cases rather than being a direct competitor",
+        "Already-catalogued agent-security gateways (Issuerd, Midplane) are narrower (IAM-only or SQL-only); Octelium's breadth (network + API + AI gateway in one identity model) is the differentiator, at the cost of needing Kubernetes"
+      ],
+      "why_it_matters": "Combines three things usually bought or built separately - a zero-trust VPN/ZTNA layer, an API/AI gateway, and secretless access to cloud APIs - under one identity-based policy engine, which is directly relevant to both his AWS infrastructure work and to safely exposing internal services to AI agents without static credentials.",
+      "why_not_build_it_myself": "A correct zero-trust policy engine (per-request ABAC with CEL/OPA, WireGuard/QUIC tunneling, OIDC/SAML federation, secretless credential injection) is a multi-month distributed-systems project; this is an 18-month-old, actively released (v0.49.0, weekly cadence), 4,100-star project doing exactly that.",
+      "risks": [
+        "AGPL-3.0 - fine for internal self-hosting, must be revisited before embedding in any hosted commercial offering",
+        "Requires a Kubernetes cluster (even single-node) - adds operational surface versus a single binary",
+        "18 months old and fast-moving (v0.49.0); verify the specific MCP-gateway/AI-gateway features are stable before depending on them, independent of the more mature VPN/ZTNA core"
+      ],
+      "first_seen": "2026-11-05",
+      "last_reviewed": "2026-11-05",
+      "last_meaningful_update": "2026-11-05",
+      "current_version": "v0.49.0",
+      "latest_release_date": "2026-11-01",
+      "source_links": [
+        "https://github.com/octelium/octelium",
+        "https://octelium.com",
+        "https://api.github.com/repos/octelium/octelium"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 4,154 stars, 159 forks, 20 subscribers (healthy ratio), pushed_at 2026-11-05, created 2025-05-18. Companion sandbox project Cordium (octelium/cordium) referenced in README but not independently reviewed this run.",
+      "acted_on": false
+    },
+    {
+      "name": "ThinkWatch",
+      "slug": "thinkwatch-ai-mcp-gateway",
+      "repo_url": "https://github.com/ThinkWatchProject/ThinkWatch",
+      "website": "https://thinkwat.ch/thinkwatch",
+      "description": "Self-hosted AI API and MCP gateway for organizations - every LLM request and MCP tool call passes through one Rust gateway that authenticates against the org's OIDC IdP, enforces per-user/role rate limits and budgets, redacts secrets/PII, blocks dangerous tool calls and prompt-injection content, and writes a ClickHouse-backed audit trail, acting like \"a bastion host for AI access.\"",
+      "category": [
+        "AI & agent infrastructure",
+        "product infrastructure",
+        "security",
+        "observability"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "BSL-1.1",
+      "commercial_use_notes": "Business Source License 1.1. Free production use up to 10,000,000 billable tokens and 10,000 MCP tool calls per calendar month; beyond that a commercial license is required per LICENSING.md. Converts to GPL-2.0-or-later on 2030-04-02. The companion ThinkWatch Core crates and ThinkWatch Lite desktop app are separately MIT-licensed. For a solo developer or small team's own agent usage this free tier is generous, but flag it loudly before offering ThinkWatch-based access to paying customers.",
+      "deployment": [
+        "docker-compose",
+        "kubernetes (helm chart)"
+      ],
+      "interfaces": [
+        "OpenAI/Anthropic/Gemini-compatible gateway API",
+        "MCP gateway",
+        "admin web console + API",
+        "webhooks/Kafka/Syslog export"
+      ],
+      "use_cases": [
+        "Single governed entry point for every Claude Code/Cursor/CI-pipeline call to OpenAI/Anthropic/Gemini/Bedrock, with per-user budgets and cost-center chargeback reports",
+        "MCP tool calls proxied through per-user OAuth so each agent action to GitHub/Notion/Linear/Slack shows up in that upstream's own audit log under the real user, not a shared service account",
+        "PII/secrets redaction guard on prompts and responses before they leave the network - directly relevant when running agents against MSSP/PTaaS client data",
+        "Prompt-injection and dangerous-tool-call content filtering as a safety net in front of agents with write access"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Acts as the governance layer this catalog has repeatedly looked for in standalone pieces (Issuerd for IAM, Midplane for SQL, keypaste for secrets) but bundled specifically for the AI-request/MCP-call path with cost accounting built in",
+        "ThinkWatch Lite (separate MIT repo) gives the same gateway as a free local desktop app for individual use before standing up the full org version"
+      ],
+      "alternatives": [
+        "Issuerd (catalogued) - general-purpose agentic-access IAM server, not LLM/MCP-call-specific",
+        "mcpspan, Pare (catalogued) - MCP observability/context-compression, not a governance+cost+redaction gateway",
+        "Commercial LLM gateways (Portkey, LiteLLM proxy) - ThinkWatch adds MCP-call identity and security guards neither focuses on as centrally"
+      ],
+      "why_it_matters": "Puts a single point of control, cost visibility and content/PII safety net in front of every agent's model and tool calls, which is the kind of thing worth having before agents are given broader write access to real infrastructure or client data.",
+      "why_not_build_it_myself": "A correct OpenAI/Anthropic/Gemini format-conversion layer, per-user MCP OAuth with cached tool lists, sliding-window rate limiting and a ClickHouse audit pipeline is weeks of work most teams would rather not redo; this ships it pre-built with a documented threat model.",
+      "risks": [
+        "7 months old (created 2026-04); verify stability under real multi-week load before trusting budgets/audit data for anything compliance-sensitive",
+        "BSL-1.1, not OSI-approved open source - re-read LICENSING.md if usage approaches the free-tier caps",
+        "License field reported NOASSERTION by the GitHub API; confirmed BSL-1.1 only by reading the LICENSE file directly"
+      ],
+      "first_seen": "2026-11-05",
+      "last_reviewed": "2026-11-05",
+      "last_meaningful_update": "2026-11-05",
+      "current_version": "v3.11.0",
+      "latest_release_date": "2026-11-03",
+      "source_links": [
+        "https://github.com/ThinkWatchProject/ThinkWatch",
+        "https://thinkwat.ch/thinkwatch",
+        "https://raw.githubusercontent.com/ThinkWatchProject/ThinkWatch/main/LICENSE"
+      ],
+      "aliases": [],
+      "notes": "GitHub API reported license as NOASSERTION; fetched LICENSE directly from raw.githubusercontent.com and confirmed Business Source License 1.1 with the specific usage-grant terms quoted above. 814 stars, 23 forks, 4 subscribers, created 2026-04-02, pushed_at 2026-11-04. Companion repos ThinkWatch-Core and ThinkWatch-Lite (both MIT) not independently reviewed this run.",
+      "acted_on": false
+    },
+    {
+      "name": "docs.plus",
+      "slug": "docs-plus-collab-editor",
+      "repo_url": "https://github.com/docs-plus/docs.plus",
+      "website": "https://docs.plus",
+      "description": "Self-hostable, open-source real-time collaborative document editor (Etherpad-descended) built on Tiptap/ProseMirror/Yjs, with a chatroom attached to every heading, per-section unread counts, filterable/shareable document views, and an MCP integration letting Claude/ChatGPT/Cursor edit documents directly.",
+      "category": [
+        "product building blocks",
+        "collaboration",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 6.8,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API and README badge. No restrictions on commercial use, embedding, or redistribution.",
+      "deployment": [
+        "docker-compose (8-service stack)",
+        "self-hosted with own Postgres + Supabase + S3-compatible storage"
+      ],
+      "interfaces": [
+        "web app",
+        "REST API",
+        "MCP server",
+        "Tiptap extensions package"
+      ],
+      "use_cases": [
+        "Embeddable collaborative-editing feature for a product (e.g. shared notes/specs inside the MSSP admin portal) instead of building realtime editing + comments from scratch",
+        "Internal team wiki/spec tool with a chatroom per section, avoiding a Notion/Confluence subscription for straightforward docs",
+        "Self-hosted alternative to Google Docs for teams that need to keep documents off third-party servers",
+        "A micro-SaaS starting point: the chatroom-per-heading + unread-count model is a distinct enough UX to be a standalone product, not just a clone"
+      ],
+      "product_opportunities": [
+        "The chatroom-per-heading UX is distinct enough from generic collaborative editors to be repackaged as a narrow micro-SaaS (e.g. collaborative spec review) rather than just an internal tool"
+      ],
+      "agent_opportunities": [
+        "Ships an MCP server so Claude/ChatGPT/Cursor can read and write directly inside a shared document - a genuine agent-capability hook on top of a product feature"
+      ],
+      "alternatives": [
+        "Liveblocks, Yjs (raw) - lower-level realtime-collab primitives Sourav would have to assemble into a product himself; docs.plus is the assembled product",
+        "Outline, HackMD - other self-hosted collaborative-doc tools; docs.plus's per-heading chatroom and MCP integration are its distinguishing feature versus either"
+      ],
+      "why_it_matters": "A 6-year-old, MIT-licensed, actively maintained collaborative editor with a genuinely distinct UX (comment threads scoped to a document section rather than the whole page) removes a multi-week realtime-editor build if a product idea needs this kind of feature.",
+      "why_not_build_it_myself": "CRDT-based realtime sync (Yjs + Hocuspocus), presence, conflict-free collaborative editing and the save/version-history pipeline are each non-trivial correctness problems; this project has solved them with 6 years of production use.",
+      "risks": [
+        "Requires Supabase specifically for auth/storage policies (self-hosted Supabase is supported but adds another moving part) rather than a generic auth provider",
+        "Modest community size (98 stars, 6 subscribers) relative to its age - verify it is still being maintained beyond the maintainers' own hosted docs.plus instance before depending on it",
+        "S3-compatible object storage is mandatory even for small deployments - local disk is explicitly unsupported"
+      ],
+      "first_seen": "2026-11-05",
+      "last_reviewed": "2026-11-05",
+      "last_meaningful_update": "2026-11-05",
+      "current_version": "v2.2.0",
+      "latest_release_date": "2026-10-22",
+      "source_links": [
+        "https://github.com/docs-plus/docs.plus",
+        "https://docs.plus",
+        "https://github.com/docs-plus/docs.plus/blob/master/docs/self-hosting/README.md"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 98 stars, 6 subscribers, created 2020-07-16, pushed_at 2026-11-05 (same-day commit activity). Originated from Etherpad per README. Self-hosting doc confirms the 8-service Docker Compose architecture and mandatory external Postgres/Supabase/S3 dependencies described above.",
       "acted_on": false
     }
   ]
