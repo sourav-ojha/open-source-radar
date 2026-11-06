@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "projects": [
     {
       "name": "Xberg",
@@ -17981,6 +17981,240 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 98 stars, 6 subscribers, created 2020-07-16, pushed_at 2026-11-05 (same-day commit activity). Originated from Etherpad per README. Self-hosting doc confirms the 8-service Docker Compose architecture and mandatory external Postgres/Supabase/S3 dependencies described above.",
+      "acted_on": false
+    },
+    {
+      "name": "mongo-migrate-kit",
+      "slug": "mongo-migrate-kit",
+      "repo_url": "https://github.com/guptasantosh327/mongo-migrate-kit",
+      "website": "https://mongo-migrate-kit.vercel.app/",
+      "description": "Production-grade MongoDB migration toolkit for Node.js \u2014 single-file runs, real rollbacks (batch/step/file/redo), dry-run previews, transactions, lifecycle hooks, SHA-256 tamper detection, and MongoDB-native locking. A modern migrate-mongo alternative with a VS Code GUI extension.",
+      "category": [
+        "product building blocks",
+        "developer productivity",
+        "database tooling"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT \u2014 unrestricted commercial/SaaS use, embeddable in any product.",
+      "deployment": [
+        "npm package",
+        "CLI",
+        "library"
+      ],
+      "interfaces": [
+        "CLI",
+        "Node.js API (TypeScript/ESM/CJS)",
+        "VS Code extension"
+      ],
+      "use_cases": [
+        "Replace migrate-mongo in any existing Node/Mongo project for safer rollbacks and dry-run previews",
+        "Roll back a single bad migration file by name instead of the whole batch",
+        "Preview exactly what a migration will do before touching a shared staging/prod database",
+        "Catch a migration edited after it was applied via SHA-256 checksum verification",
+        "Wrap a risky migration in a transaction so it fully commits or fully aborts"
+      ],
+      "product_opportunities": [
+        "Worth standardizing on across his own MERN products as the default migration layer rather than re-solving rollback/locking/dry-run per project."
+      ],
+      "alternatives": [
+        "migrate-mongo (less granular rollback, no dry-run, no tamper detection)",
+        "umzug (framework-agnostic, more assembly required for Mongo)",
+        "Mongock (JVM-only)"
+      ],
+      "why_it_matters": "Direct fit for the MERN stack: adds the rollback granularity, dry-run safety, and tamper detection that migrate-mongo (the incumbent most MERN projects use) lacks.",
+      "why_not_build_it_myself": "Locking, checksum verification, and transaction-wrapped rollback-by-batch/step/file is fiddly correctness work not worth re-deriving per project.",
+      "risks": [
+        "Tiny project \u2014 21 stars, 1 subscriber, single maintainer, 5 months old",
+        "No tagged GitHub releases; version provenance runs through npm only",
+        "Worth a trial run on a side project before trusting it against production data"
+      ],
+      "first_seen": "2026-11-06",
+      "last_reviewed": "2026-11-06",
+      "last_meaningful_update": "2026-11-06",
+      "current_version": "1.6.0 (npm)",
+      "latest_release_date": "2026-10-19",
+      "source_links": [
+        "https://github.com/guptasantosh327/mongo-migrate-kit",
+        "https://mongo-migrate-kit.vercel.app/",
+        "https://www.npmjs.com/package/mongo-migrate-kit"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 21 stars/1 fork/1 subscriber, created 2026-06-01, pushed 2026-10-19, no GitHub release tags \u2014 npm registry (1.6.0, published 2026-10-19) is the authoritative version source.",
+      "acted_on": false
+    },
+    {
+      "name": "lazyjournal",
+      "slug": "lazyjournal",
+      "repo_url": "https://github.com/Lifailon/lazyjournal",
+      "website": "https://pkg.go.dev/github.com/Lifailon/lazyjournal",
+      "description": "Terminal UI for viewing logs from journald, auditd, the filesystem, Docker/Podman containers, Compose stacks, and Kubernetes pods in one screen, with regex/fuzzy filtering and a web mode for browser access from inside a container.",
+      "category": [
+        "developer productivity",
+        "infrastructure",
+        "observability"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT \u2014 no restrictions.",
+      "deployment": [
+        "single binary",
+        "Docker",
+        "Homebrew",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "TUI",
+        "web mode (browser)"
+      ],
+      "use_cases": [
+        "Single TUI to tail systemd service logs, Docker/Podman container logs, Compose stack logs, and k8s pod logs on an EC2/EKS box",
+        "Regex/fuzzy-filter a noisy log stream live instead of piping through grep repeatedly",
+        "Run inside a container and open the TUI in a browser for a remote box without a full SSH+tmux setup",
+        "Fast first-look triage tool for the MSSP admin-portal's own infra before reaching for a full observability stack"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "lazydocker (Docker-only)",
+        "lnav (no native Docker/k8s source list)",
+        "stern/k9s (Kubernetes-focused only)",
+        "Dozzle (web UI, Docker-only)"
+      ],
+      "why_it_matters": "One of the few tools unifying journald + auditd + Docker + Podman + Compose + Kubernetes log sources behind a single lazy*-style TUI rather than one source per tool.",
+      "why_not_build_it_myself": "Source-specific log APIs (journald vs docker vs k8s) each have their own quirks; not worth hand-rolling a TUI over all four.",
+      "risks": [
+        "Single primary maintainer",
+        "Interactive workstation/bastion tool, not a substitute for a real log-aggregation pipeline at scale"
+      ],
+      "first_seen": "2026-11-06",
+      "last_reviewed": "2026-11-06",
+      "last_meaningful_update": "2026-11-06",
+      "current_version": "0.8.7",
+      "latest_release_date": "2026-11-05",
+      "source_links": [
+        "https://github.com/Lifailon/lazyjournal"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,440 stars/35 forks/8 subscribers, created 2024-11-12, pushed 2026-11-05, latest release 0.8.7 (2026-11-05).",
+      "acted_on": false
+    },
+    {
+      "name": "codeburn",
+      "slug": "codeburn-ai-cost-tracker",
+      "repo_url": "https://github.com/getagentseal/codeburn",
+      "website": "https://codeburn.app/",
+      "description": "Free, local-first tracker of AI coding-agent token usage and cost across 37+ tools (Claude Code, Cursor, Codex, Gemini CLI, and others), by model, project, and task, via `npx codeburn` or native desktop apps.",
+      "category": [
+        "AI & agent infrastructure",
+        "developer productivity"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT \u2014 no restrictions.",
+      "deployment": [
+        "npx",
+        "npm global install",
+        "Homebrew",
+        "native desktop app (macOS/Windows/Linux)"
+      ],
+      "interfaces": [
+        "CLI",
+        "desktop GUI"
+      ],
+      "use_cases": [
+        "Spot a runaway-cost coding-agent session (wrong model, oversized context) while it's happening",
+        "See per-project, per-model agent spend without waiting for a monthly provider bill",
+        "Compare actual Claude Code vs Cursor vs Codex spend across side projects",
+        "A zero-setup personal equivalent of the catalogued team-focused Agent Console"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Agent Console (catalogued \u2014 team dashboard, needs deployment)",
+        "ccusage (narrower, Claude-Code-specific)",
+        "manual provider billing dashboards"
+      ],
+      "why_it_matters": "Personal, zero-infra alternative to the team-oriented Agent Console: no backend to run, covers 37+ tools, ships as a real cross-platform app rather than just a CLI.",
+      "why_not_build_it_myself": "Parsing 37 different tools' local usage/session log formats into one consistent cost model is integration-surface work not worth re-deriving solo.",
+      "risks": [
+        "Elevated stars:subscribers ratio (~355:1), flagged per our running fake-engagement heuristic, but paired with real fork activity (910), real open issues (30), a verified Claude/Codex open-source grant credit, and a genuine Product Hunt launch \u2014 reads as organic growth",
+        "Local-only; no multi-seat team rollup"
+      ],
+      "first_seen": "2026-11-06",
+      "last_reviewed": "2026-11-06",
+      "last_meaningful_update": "2026-11-06",
+      "current_version": "0.9.27",
+      "latest_release_date": "2026-10-11",
+      "source_links": [
+        "https://github.com/getagentseal/codeburn",
+        "https://codeburn.app/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 11,704 stars/910 forks/33 subscribers, created 2026-04-13, pushed 2026-11-06, latest GitHub release mac-v0.9.27 matching npm 0.9.27.",
+      "acted_on": false
+    },
+    {
+      "name": "Drydock (git fleet)",
+      "slug": "drydock-git-fleet-tui",
+      "repo_url": "https://github.com/yetidevworks/drydock",
+      "website": "https://yetidevworks.com/drydock",
+      "description": "Single Rust binary, live TUI dashboard of uncommitted/unpushed/unreleased work across every git repo under configured root directories. Unrelated to the already-catalogued Drydock (CodesWhat/drydock, container-image watcher) despite the identical name.",
+      "category": [
+        "developer productivity",
+        "small high-leverage utilities"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT \u2014 no restrictions.",
+      "deployment": [
+        "single binary",
+        "Homebrew",
+        "cargo install"
+      ],
+      "interfaces": [
+        "TUI",
+        "CLI"
+      ],
+      "use_cases": [
+        "Live dashboard over a tree of repos (e.g. ~/Projects or $GHQ_ROOT) showing what's uncommitted, unpushed, or unreleased",
+        "Filter to \"touched in the last day/week\" across many repos",
+        "Check release state (unreleased/released/needs release/held) before a batch-release day",
+        "Catch commits on a side branch that never got pushed"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "gita, myrepos (mr) \u2014 batch-run git commands but no live dashboard",
+        "hand-rolled shell loop over git status",
+        "VS Code multi-root workspace (no release-state tracking)"
+      ],
+      "why_it_matters": "Answers \"where did I leave work\" across an entire fleet of local checkouts in one screen, which a shell loop over git status does not do cleanly.",
+      "why_not_build_it_myself": "Per-root caching and cross-branch unpushed-commit detection across dozens of repos is more plumbing than a one-off script is worth.",
+      "risks": [
+        "Name collides with the unrelated, already-catalogued Drydock (container-image watcher, AGPL-3.0) \u2014 disambiguate carefully",
+        "Small and young (326 stars, 2 subscribers, 3 months old), macOS/Linux only"
+      ],
+      "first_seen": "2026-11-06",
+      "last_reviewed": "2026-11-06",
+      "last_meaningful_update": "2026-11-06",
+      "current_version": "v1.3.1",
+      "latest_release_date": "2026-11-02",
+      "source_links": [
+        "https://github.com/yetidevworks/drydock",
+        "https://yetidevworks.com/drydock"
+      ],
+      "aliases": [],
+      "notes": "Today's Small but High-Leverage Utility. GitHub API verified: MIT, 326 stars/12 forks/2 subscribers, created 2026-07-30, pushed 2026-11-02, latest release v1.3.1 (2026-11-02).",
       "acted_on": false
     }
   ]

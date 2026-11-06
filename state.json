@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-05",
-  "last_successful_run": "2026-11-05",
-  "run_count": 67,
-  "rotation_slot_last_used": 2,
+  "last_run": "2026-11-06",
+  "last_successful_run": "2026-11-06",
+  "run_count": 68,
+  "rotation_slot_last_used": 3,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -76,27 +76,10 @@
     "infrastructure/observability/deployment (slot 6) \u2014 an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest \u2014 none used in the six immediately preceding rotations.",
     "experimental projects and hidden gems (slot 7) \u2014 a tiny Rust single-binary kanban board that treats an MCP-connected coding agent and a human browser user as equal first-class clients of the same board, zero setup, live LAN/Pi/VPN share (kanzo, AGPL-3.0 flagged), a cross-platform local file-search launcher that indexes file content, OCRs screenshots, and answers semantic/natural-language queries over MCP where every comparable tool (Everything/Listary/PowerToys Run) only indexes filenames (kensaku), and a local privacy proxy that deterministically pseudonymizes PII/secrets for any Anthropic/OpenAI-compatible coding-agent CLI before a request leaves the machine, then reverses it locally \u2014 directly relevant to the MSSP/PTaaS client-data context (veil). A Rust PNG/JPEG/AVIF compressor claiming 8-12% smaller files than TinyPNG at equal SSIMULACRA2-measured perceptual quality, with the same code running as CLI and browser WASM (pngdeer), was held as a fourth discovery rather than padded past it. A Claude-Code correction-mining CLI that turns repeated corrections into evidence-backed CLAUDE.md rules, shipped with a 20-rule starter pack mined from ~8,000 ranked anthropics/claude-code issues, was today's Small but High-Leverage Utility (nomore). Paseo shipped v0.15.0 (daemon-restart-survives terminal programs, opt-in agent-recovery resuming interrupted agents after a host crash/restart) \u2014 a meaningful reliability update. Rejected a CTF-competition-specific multi-agent pentest harness with a marketing-heavy README and an unusual 505-forks-vs-3-subscribers ratio (N1nEmAn/sapper-v2), a thin single-skill entrant in the already-saturated AI-pentest-agent wave with a NOASSERTION license (hassan-algo/open-sesame), and flagged two fresh suspicious-engagement cases for future tracking: a TUI API client at 100 stars/1 fork/0 subscribers four days old (4yk5/Ghostman) and a 'headless coding agent harness' at 577 stars/8 forks/5 subscribers created only 2 days before review (Balanov/uncut). Held out, not rejected: a PR-risk-assessment CLI distinct from the catalogued roborev but with 0 subscribers (winnin/farol), and a well-built local agentic-pentesting workspace overshadowed by PTaaS being secondary context here and an already-saturated niche (dbx0/executioner). Web search for Show HN / lobste.rs / openalternative.co leads returned mostly stale or undated results today \u2014 GitHub's search/repositories API remained the dominant, reliable discovery source. 'Still Worth Trying' rotated to Misata, Prismor, and Codanna \u2014 none used in the prior twelve-plus rotations.",
     "AI agents/MCP/coding productivity (slot 1) \u2014 a Certificate-Transparency-style tamper-evident audit trail for AI-agent tool calls with a published 480-trial proof section and PyPI package (Tracekit), a self-hosted trace-native CI/CD pipeline that turns an agent's production failures directly into CI regression tests with no hand-authored dataset but no tagged release yet (Tracely), and a self-hosted agent-to-phone voice-call escalation channel that rings a locked Android phone over VoIP with no Twilio dependency, today's Small but High-Leverage Utility (agentring). A hidden-gem outside the slot's immediate adoption path: earshot, a remarkably well-documented and self-critical toolkit giving coding agents the ability to \"hear\" (describe, match, critique and synthesize audio/sound design) via CLI/Python API/MCP server, filed as an architecture study given narrow applicability to a MERN/AWS stack. Rejected decionis/agent-safe-pipeline for a classic open-core trap (the OSS gateway \"decides nothing itself\" \u2014 real authorization requires the proprietary Decionis hosted control plane) and phone-harness/mcp for not actually being deployable open source (the repo is just setup docs for a hosted SaaS MCP connector). Flagged qybaihe/bla (2,108 stars in 10 days, GitHub-Trending self-promotion badge, anti-reverse-engineering obfuscation tooling) as trending/marketing-driven and excluded it. Reconfirmed a systemic pattern from recent runs: several of today's otherwise-substantive finds (Tracekit 136:1, earshot 423:1, Tracely 405:1 stars:subscribers) show the same elevated ratio previously used to reject thinner repos, but all three pair it with real fork counts and open-issue activity (unlike the 0-fork/0-issue cases rejected before), so they were catalogued on substance with the ratio flagged rather than treated as disqualifying on its own. Held Qsnh/skillsgist (no growth since 2026-10-21), ShuaiMXu/happyhands (alpha UI-review tool), Sheernox/cedr (1-day-old kitchen-sink agent-dev-tools bundle) and yoanbernabeu/skillcrew (thin team skill registry) to Worth Watching. Checked Paseo, MisakaNet, SkillSpector, SkillEvaluator, agentOS (framerslab), midplane, chunkhound, deja-vu, Pare, moai-adk, planning-with-files, aidlc-workflows, ai-coding-project-boilerplate and ZCode for meaningful updates \u2014 all incremental patch/bugfix releases, none cleared the bar on their own. 'Still Worth Trying' rotated to html-to-markdown (Kreuzberg), haiku.rag, and Headroom \u2014 none used in the fourteen immediately preceding rotations.",
-    "product infrastructure / APIs / backend components (slot 2) \u2014 three independent projects pivoting existing infrastructure toward AI-agent gateway governance: a mature six-year-old self-hosted IAM/SSO server rebranded \"agent-first\" with a built-in MCP & agent gateway on its existing identity engine (Casdoor), an 18-month-old Kubernetes-native zero-trust access platform (VPN/ZTNA/ngrok-alternative/PaaS) that added an AI/MCP gateway on the same identity model (Octelium, AGPL-3.0 flagged), and a purpose-built AI API + MCP governance gateway with per-user budgets, PII/secrets redaction and prompt-injection filtering (ThinkWatch, BSL-1.1 flagged \u2014 confirmed by reading the LICENSE file directly after the GitHub API misreported NOASSERTION). A fourth, unrelated find \u2014 a 6-year-old MIT collaborative document editor with a distinctive per-heading-chatroom UX and an MCP integration (docs.plus) \u2014 was catalogued as a product-building-block. hookdeck/hookdeck-cli (free permanent webhook tunnel URLs plus an MCP server) was today's Small but High-Leverage Utility, held out of the main catalog because its resource-management features depend on Hookdeck's hosted backend. Held speakeasy-api/gram (thin differentiation, 0 subscribers despite real company backing), agentic-community/mcp-gateway-registry (reasonable traction but overlaps today's three catalogued gateways with no distinct angle yet), and CodingFeng101/CanvasAnvil (AI diagram-to-.drawio maker, too early) to Worth Watching. Rejected activeing123/mcptoon as a duplicate of the already-saturated MCP-context-compression niche (Headroom/Pare/squeeze) despite an elevated 210:1 star:subscriber ratio, deck9/input as another entrant in the previously-flagged saturated form-builder wave, and anousss007/laravel-vigilance as off-stack (PHP/Laravel). Confirmed generic sort=updated GitHub search queries without a stars filter are pure noise (same-minute pushes to unrelated personal projects) - stars:>N + pushed:>DATE filtered queries were the only useful signal today. 'Still Worth Trying' rotated to Xberg, Bernstein, and NestLens \u2014 none used in the seven immediately preceding rotations."
+    "product infrastructure / APIs / backend components (slot 2) \u2014 three independent projects pivoting existing infrastructure toward AI-agent gateway governance: a mature six-year-old self-hosted IAM/SSO server rebranded \"agent-first\" with a built-in MCP & agent gateway on its existing identity engine (Casdoor), an 18-month-old Kubernetes-native zero-trust access platform (VPN/ZTNA/ngrok-alternative/PaaS) that added an AI/MCP gateway on the same identity model (Octelium, AGPL-3.0 flagged), and a purpose-built AI API + MCP governance gateway with per-user budgets, PII/secrets redaction and prompt-injection filtering (ThinkWatch, BSL-1.1 flagged \u2014 confirmed by reading the LICENSE file directly after the GitHub API misreported NOASSERTION). A fourth, unrelated find \u2014 a 6-year-old MIT collaborative document editor with a distinctive per-heading-chatroom UX and an MCP integration (docs.plus) \u2014 was catalogued as a product-building-block. hookdeck/hookdeck-cli (free permanent webhook tunnel URLs plus an MCP server) was today's Small but High-Leverage Utility, held out of the main catalog because its resource-management features depend on Hookdeck's hosted backend. Held speakeasy-api/gram (thin differentiation, 0 subscribers despite real company backing), agentic-community/mcp-gateway-registry (reasonable traction but overlaps today's three catalogued gateways with no distinct angle yet), and CodingFeng101/CanvasAnvil (AI diagram-to-.drawio maker, too early) to Worth Watching. Rejected activeing123/mcptoon as a duplicate of the already-saturated MCP-context-compression niche (Headroom/Pare/squeeze) despite an elevated 210:1 star:subscriber ratio, deck9/input as another entrant in the previously-flagged saturated form-builder wave, and anousss007/laravel-vigilance as off-stack (PHP/Laravel). Confirmed generic sort=updated GitHub search queries without a stars filter are pure noise (same-minute pushes to unrelated personal projects) - stars:>N + pushed:>DATE filtered queries were the only useful signal today. 'Still Worth Trying' rotated to Xberg, Bernstein, and NestLens \u2014 none used in the seven immediately preceding rotations.",
+    "developer utilities/debugging/testing (slot 3) \u2014 a MongoDB migration toolkit filling the real gaps in migrate-mongo (dry-run, granular rollback, tamper detection) directly relevant to the MERN stack (mongo-migrate-kit), a mature multi-source log TUI unifying journald+auditd+Docker+Podman+Compose+Kubernetes behind one filterable screen (lazyjournal), and a local-first AI-coding-agent cost tracker across 37+ tools with real cross-platform app distribution and a Claude/Codex open-source grant credit (codeburn, elevated stars:subscribers ratio flagged but paired with real fork/issue activity and judged organic). A single-binary Rust git-fleet TUI dashboard (yetidevworks/drydock) was today's Small but High-Leverage Utility \u2014 notable for an unrelated name collision with the already-catalogued Drydock (CodesWhat/drydock, container-image watcher); catalogued separately under drydock-git-fleet-tui with a disambiguation note in both project files. Rejected winebarrel/pistachio as a near-duplicate of the already-catalogued pgschema (Postgres declarative schema niche), noting its new Amazon Aurora DSQL support as the one AWS-relevant differentiator worth a second look later. Held zifter/clickhouse-migrations (out-of-stack, ClickHouse-specific) and keploy/keploy (19.5k stars, close to mainstream scale, unclear differentiation from Playwright+mocking) to Worth Watching. Confirmed generic in:readme keyword searches (visual regression, snapshot testing, contract testing, profiler CLI, release automation, code-doc generators) are low-signal right now \u2014 giant awesome-lists and AI-agent-hype repos with sprawling READMEs dominate regardless of search term; topic:-tag searches (topic:profiling, topic:log-viewer, topic:database-migration, topic:contract-testing, topic:terminal-ui, topic:repl, topic:api-testing) were far more precise and should be preferred for sub-niches with an established GitHub topic tag. 'Still Worth Trying' rotated to Monoscope, LibreDB Studio, and Destructive Command Guard \u2014 none used in the five immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "mverab/eGEOagents",
-    "rubenmarcus/aeo.js",
-    "Canonry/aeo-audit",
-    "api-evangelist/geocitation",
-    "ferinazumaDEV/generative-engine-optimization-handbook",
-    "Broadcastwell/state-of-geo-2026",
-    "Asmadey/aeo-geo-skill",
-    "api-evangelist/scrunch-ai",
-    "Jannat63/AI-Ready-Audit-SEO-GEO-AEO-Skill-for-Claude",
-    "MeKrishnaKumar/DigiMarketer",
-    "estevecastells/awesome-ai-search",
-    "aeokit-dev/aeo-agent",
-    "mahope/transmute",
-    "jotishkumar122-sys/Third-Project.py",
-    "nlink-jp/csv-to-json",
-    "nolesdev/fileshift",
-    "wingkwong/polyconv",
-    "newzhanghao/morph-cli",
     "Qwer-dev-coder/RepKonvert",
     "PolskiGlizda/dconv",
     "irmakoznrgz/dynamic-data-converter",
@@ -1578,7 +1561,25 @@
     "anousss007/laravel-vigilance",
     "ThinkWatchProject/ThinkWatch-Core",
     "ThinkWatchProject/ThinkWatch-Lite",
-    "octelium/cordium"
+    "octelium/cordium",
+    "guptasantosh327/mongo-migrate-kit",
+    "yetidevworks/drydock",
+    "winebarrel/pistachio",
+    "Lifailon/lazyjournal",
+    "getagentseal/codeburn",
+    "zifter/clickhouse-migrations",
+    "keploy/keploy",
+    "pamburus/hl",
+    "cobusgreyling/loop-engineering",
+    "dimonomid/nerdlog",
+    "pgplex/pgschema",
+    "Endava/cats",
+    "supercorp-ai/supercov",
+    "smixs/code-quality",
+    "Krem24919/ActionRepro",
+    "shreyassaw5394/debuganything",
+    "carbonmeai/danwo",
+    "tap222/assay-evals"
   ],
   "rejected": [
     {
@@ -3015,6 +3016,11 @@
       "repo_url": "https://github.com/hookdeck/hookdeck-cli",
       "reason": "held out of main catalog, used as Small but High-Leverage Utility instead - core Event Gateway resource-management features depend on Hookdeck's hosted backend, not fully self-hostable",
       "date": "2026-11-05"
+    },
+    {
+      "repo_url": "https://github.com/winebarrel/pistachio",
+      "reason": "near-duplicate of the already-catalogued pgschema (declarative Postgres schema/plan-apply niche); new Amazon Aurora DSQL support (v1.81.0+) is the one AWS-relevant differentiator, worth a second look if pgschema stalls",
+      "date": "2026-11-06"
     }
   ],
   "known_releases": {
@@ -3979,8 +3985,8 @@
       "date": "2026-10-10"
     },
     "supercorp-ai/supercov": {
-      "version": "v4.12.2",
-      "date": "2026-10-16"
+      "version": "v4.24.2",
+      "date": "2026-11-06"
     },
     "athrvk/vayu": {
       "version": "v0.43.0",
@@ -4143,8 +4149,8 @@
       "date": "2026-10-14"
     },
     "Endava/cats": {
-      "version": "cats-15.3.0",
-      "date": "2026-10-30"
+      "version": "cats-15.4.0",
+      "date": "2026-11-03"
     },
     "shreyassaw5394/debuganything": {
       "version": "1.0.1",
@@ -4241,6 +4247,22 @@
     "docs-plus/docs.plus": {
       "version": "v2.2.0",
       "date": "2026-10-22"
+    },
+    "guptasantosh327/mongo-migrate-kit": {
+      "version": "1.6.0 (npm, no GitHub release tags)",
+      "date": "2026-10-19"
+    },
+    "Lifailon/lazyjournal": {
+      "version": "0.8.7",
+      "date": "2026-11-05"
+    },
+    "getagentseal/codeburn": {
+      "version": "mac-v0.9.27 (npm 0.9.27)",
+      "date": "2026-10-11"
+    },
+    "yetidevworks/drydock": {
+      "version": "v1.3.1",
+      "date": "2026-11-02"
     }
   },
   "source_health": {
@@ -4249,8 +4271,8 @@
       "note": "queried for Show HN AI coding agent / MCP server leads and new Claude Code plugin/skill leads for November 2026; both returned stale or undated aggregator/roundup content with nothing new - GitHub's search/repositories API carried essentially all of today's real discovery."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-05",
-      "note": "fetched READMEs for octelium/octelium and ThinkWatchProject/ThinkWatch, LICENSE files for ThinkWatch (confirmed BSL-1.1 after GitHub API reported NOASSERTION) and speakeasy-api/gram (confirmed AGPL-3.0), and docs-plus/docs.plus's self-hosting doc."
+      "last_ok": "2026-11-06",
+      "note": "fetched READMEs for mongo-migrate-kit, yetidevworks/drydock, winebarrel/pistachio, Lifailon/lazyjournal, and getagentseal/codeburn to verify positioning and differentiation claims."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4265,8 +4287,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-05",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8350/hr limit, 0 used before this run. ~15 search/repositories queries (audit log, reporting engine, job scheduler/workflow engine, admin panel generator, secrets manager, API gateway, realtime collaboration/CRDT, OCR/document processing, notification service, feature flag+MCP, payments/billing, MCP database gateway, feature-flag stars-filtered, audit-log stars-filtered, forms stars-filtered, job-queue stars-filtered, API-gateway+MCP stars-filtered, secrets stars-filtered, admin-panel stars-filtered) plus repos/releases/org checks on ~10 shortlisted candidates. No rate-limit pressure. Confirmed sort=updated without a stars filter is pure noise; stars:>N + pushed:>DATE filters produced the real signal."
+      "last_ok": "2026-11-06",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8,350/hr limit, well under 50 calls used. topic:-tag search queries (topic:profiling, topic:log-viewer, topic:devtools, topic:code-generation, topic:database-migration, topic:release-management, topic:changelog, topic:visual-regression-testing, topic:contract-testing, topic:terminal-ui, topic:repl, topic:api-testing) produced far more relevant results than generic in:readme keyword queries, which returned mostly giant awesome-lists / AI-agent-hype repos matching the search term somewhere in a long README regardless of relevance."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-31",
@@ -4277,8 +4299,8 @@
       "note": "confirmed tracekit-ai 1.5.3, tracelyai-sdk 0.0.1 (no tagged GitHub release behind it); also confirmed the PyPI name 'earshot' belongs to an unrelated project (pykeio/earshot, a VAD library), so Leonxlnx/earshot has no PyPI package yet."
     },
     "registry.npmjs.org": {
-      "last_ok": "2026-10-30",
-      "note": "confirmed debuganything 1.0.1, @danwo/cli 0.1.6, assay-evals 0.2.0, llmock (package name 'llmock' not 'llm-mock') 3.13.0 \u2014 all matched GitHub release tags or package.json where present."
+      "last_ok": "2026-11-06",
+      "note": "confirmed mongo-migrate-kit 1.6.0 and codeburn 0.9.27 against GitHub release tags/pushed dates."
     },
     "postgresql.org": {
       "last_ok": "2026-09-06",
@@ -4381,8 +4403,12 @@
     "Casdoor (casdoor/casdoor) \u2014 2026-11-05, USE NOW, 8.2",
     "Octelium (octelium/octelium) \u2014 2026-11-05, PROTOTYPE, 7.6",
     "ThinkWatch (ThinkWatchProject/ThinkWatch) \u2014 2026-11-05, PROTOTYPE, 7.5",
-    "docs.plus (docs-plus/docs.plus) \u2014 2026-11-05, PROTOTYPE, 6.8"
+    "docs.plus (docs-plus/docs.plus) \u2014 2026-11-05, PROTOTYPE, 6.8",
+    "mongo-migrate-kit (guptasantosh327/mongo-migrate-kit)",
+    "lazyjournal (Lifailon/lazyjournal)",
+    "codeburn (getagentseal/codeburn)",
+    "Drydock / git fleet (yetidevworks/drydock)"
   ],
-  "notes": "2026-11-05: Slot 2 (product infrastructure, APIs, backend components) per day_of_year 309 % 7 + 1 = 2. Catalogued 4 new: Casdoor (casdoor/casdoor, Apache-2.0, 8.2, USE NOW) \u2014 mature 6-year-old self-hosted IAM/SSO server rebranded 'agent-first' with a built-in MCP & agent gateway on its existing identity engine. Octelium (octelium/octelium, AGPL-3.0, 7.6, PROTOTYPE) \u2014 Kubernetes-native zero-trust access platform (VPN/ZTNA/ngrok-alternative/PaaS/AI-MCP-gateway) under one identity-based policy engine. ThinkWatch (ThinkWatchProject/ThinkWatch, BSL-1.1, 7.5, PROTOTYPE) \u2014 purpose-built AI API + MCP governance gateway with per-user budgets, PII/secrets redaction and prompt-injection filtering; license confirmed BSL-1.1 via LICENSE file after GitHub API misreported NOASSERTION. docs.plus (docs-plus/docs.plus, MIT, 6.8, PROTOTYPE) \u2014 6-year-old self-hostable collaborative document editor with a distinctive per-heading-chatroom UX and an MCP integration. hookdeck/hookdeck-cli (free permanent webhook tunnel URLs + MCP server) was today's Small but High-Leverage Utility, held out of the main catalog since its resource-management features depend on Hookdeck's hosted backend. Held speakeasy-api/gram, agentic-community/mcp-gateway-registry, and CodingFeng101/CanvasAnvil to Worth Watching. Rejected activeing123/mcptoon (duplicate MCP-context-compression niche), deck9/input (saturated form-builder wave), and anousss007/laravel-vigilance (off-stack PHP/Laravel). Confirmed GitHub search sort=updated without a stars filter is pure same-minute noise; stars:>N + pushed:>DATE filtered queries were the only useful discovery signal today. 'Still Worth Trying' rotated to Xberg, Bernstein, and NestLens \u2014 none used in the seven immediately preceding rotations. Updated: 2026-11-05.",
-  "updated": "2026-11-03"
+  "notes": "2026-11-06: Slot 3 (developer utilities, debugging, testing) per day_of_year 310 % 7 + 1 = 3. Catalogued 4 new: mongo-migrate-kit (guptasantosh327/mongo-migrate-kit, MIT, 7.6, PROTOTYPE) \u2014 MongoDB migration toolkit for Node.js fixing migrate-mongo's gaps (dry-run, granular rollback, SHA-256 tamper detection, native locking); small (21 stars) but directly MERN-relevant, held to PROTOTYPE given project age. lazyjournal (Lifailon/lazyjournal, MIT, 7.8, USE NOW) \u2014 mature TUI unifying journald/auditd/Docker/Podman/Compose/Kubernetes logs in one screen. codeburn (getagentseal/codeburn, MIT, 7.4, USE NOW) \u2014 free local-first AI-coding-agent cost tracker across 37+ tools, cross-platform native apps, differentiated from the already-catalogued team-oriented Agent Console by being zero-infra/personal; elevated stars:subscribers ratio (~355:1) flagged but judged organic given real fork/issue activity and a verified Claude/Codex open-source grant credit. Drydock / git fleet (yetidevworks/drydock, MIT, 7.2, USE NOW) \u2014 today's Small but High-Leverage Utility, a single Rust binary TUI dashboard of uncommitted/unpushed/unreleased work across a fleet of git repos; name-collides with the unrelated, already-catalogued Drydock (CodesWhat/drydock, container-image watcher) \u2014 catalogued separately as drydock-git-fleet-tui with disambiguation notes in both project files. Rejected winebarrel/pistachio as a near-duplicate of the catalogued pgschema in the Postgres declarative-schema niche (Aurora DSQL support flagged as a possible future differentiator). Held zifter/clickhouse-migrations (out-of-stack) and keploy/keploy (19.5k stars, close to mainstream, unclear differentiation) to Worth Watching. No meaningful updates found on checked tracked projects (Supercov, CATS, ActionRepro, Debug Anything, d\u00e1nw\u00f2, Assay, Code Quality) \u2014 all patch-level churn. Confirmed generic in:readme keyword GitHub searches are low-signal right now (dominated by awesome-lists/agent-hype repos); topic:-tag searches were far more precise and should be preferred going forward for niches with an established topic tag. 'Still Worth Trying' rotated to Monoscope, LibreDB Studio, and Destructive Command Guard \u2014 none used in the five immediately preceding rotations. Updated: 2026-11-06.",
+  "updated": "2026-11-06"
 }

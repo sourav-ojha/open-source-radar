@@ -1,6 +1,6 @@
 # Catalog
 
-_288 projects tracked. Last updated 2026-11-05._
+_292 projects tracked. Last updated 2026-11-06._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -112,6 +112,7 @@ _288 projects tracked. Last updated 2026-11-05._
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
+| [lazyjournal](https://github.com/Lifailon/lazyjournal) | USE NOW | 7.8/10 | developer productivity, infrastructure, observability | MIT | low | 2026-11-06 |
 | [AnythingMCP](https://github.com/HelpCode-ai/anythingmcp) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks | AGPL-3.0 | medium | 2026-08-31 |
 | [Saccade](https://github.com/nanlogic/saccade) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, browser agents | Apache-2.0 | medium | 2026-09-01 |
 | [mcp-ts-core](https://github.com/cyanheads/mcp-ts-core) | PROTOTYPE | 7.8/10 | AI agent infrastructure, product infrastructure | Apache-2.0 | low | 2026-09-02 |
@@ -166,6 +167,7 @@ _288 projects tracked. Last updated 2026-11-05._
 | [jevgrep](https://github.com/dzhng/jevgrep) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, developer productivity, code search | MIT | low | 2026-09-30 |
 | [Data Contract CLI](https://github.com/datacontract/datacontract-cli) | PROTOTYPE | 7.6/10 | product building blocks, developer productivity, data/search/documents/RAG | MIT | medium | 2026-10-03 |
 | [Browser Debugger CLI (bdg)](https://github.com/szymdzum/browser-debugger-cli) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity, browser automation, debugging | MIT | low | 2026-10-09 |
+| [mongo-migrate-kit](https://github.com/guptasantosh327/mongo-migrate-kit) | PROTOTYPE | 7.6/10 | product building blocks, developer productivity, database tooling | MIT | low | 2026-11-06 |
 | [TokenTimer](https://github.com/tokentimerch/tokentimer-core) | PROTOTYPE | 7.6/10 | product building blocks, security tooling, infrastructure | AGPL-3.0 (confirmed via repository LICENSE file text; GitHub API reports license: NOASSERTION, likely because the LICENSE file's header doesn't match a standard SPDX template exactly — don't trust the API badge alone here, the file itself is unambiguous) | medium | 2026-10-26 |
 | [redStackPRO](https://github.com/devZero-Security/redStackPRO) | PROTOTYPE | 7.6/10 | infrastructure, security, architecture | MIT (GOAD templates GPLv3) | medium | 2026-10-12 |
 | [Hyvor Relay](https://github.com/hyvor/relay) | PROTOTYPE | 7.6/10 | product building blocks, self-hosted SaaS alternatives, notifications / email | AGPL-3.0 | medium | 2026-10-20 |
@@ -210,6 +212,7 @@ _288 projects tracked. Last updated 2026-11-05._
 | [SherlockOps](https://github.com/Duops/SherlockOps) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, infrastructure/observability, MSSP/MSP tooling | MIT | low | 2026-11-02 |
 | [pngdeer](https://github.com/heydeer/pngdeer) | PROTOTYPE | 7.4/10 | small utility, product building blocks | MIT | low | 2026-11-03 |
 | [earshot](https://github.com/Leonxlnx/earshot) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, small utility, developer productivity | MIT | medium | 2026-11-04 |
+| [codeburn](https://github.com/getagentseal/codeburn) | USE NOW | 7.4/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-11-06 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-24 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |
@@ -236,6 +239,7 @@ _288 projects tracked. Last updated 2026-11-05._
 | [Cakewalk MCP Test Kitchen](https://github.com/cakewalk-security/cakewalk-mcp-test-kitchen) | PROTOTYPE | 7.2/10 | AI & agent infrastructure, testing, developer productivity | MIT | medium | 2026-10-16 |
 | [Datus Agent](https://github.com/Datus-ai/Datus-agent) | PROTOTYPE | 7.2/10 | data / search / RAG, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-10-21 |
 | [brief](https://github.com/git-pkgs/brief) | USE NOW | 7.2/10 | small high-leverage utilities, AI & agent infrastructure | MIT | low | 2026-10-25 |
+| [Drydock (git fleet)](https://github.com/yetidevworks/drydock) | USE NOW | 7.2/10 | developer productivity, small high-leverage utilities | MIT | low | 2026-11-06 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [Markdown Vault MCP](https://github.com/pvliesdonk/markdown-vault-mcp) | PROTOTYPE | 7.1/10 | small utility, AI agent infrastructure, document processing | MIT | low | 2026-09-02 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
