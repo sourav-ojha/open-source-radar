@@ -60,3 +60,16 @@ published, independently-reproducible benchmark numbers.
 
 ### 2026-10-28
 Meaningful update: v1.10.0 → v1.14.0. Added a LlamaIndex retriever (`schemagate.integrations.llamaindex.SchemagateRetriever`) alongside the existing LangChain one, extending framework coverage; added a `deep_answer` MCP tool (opt-in via `SCHEMAGATE_MCP_DEEP=1`) that lets the model inspect a bounded sample of rows (EXPLORE step, first 10 rows) before committing to a final answer, rather than answering blind off the schema alone; added per-call `top_k` override and reranker `summary_width` tuning for wide tables with terse column names; fixed a hung-catalogue-re-read bug (now bounded by `SCHEMAGATE_REREAD_TIMEOUT`, default 30s, instead of blocking all queued callers indefinitely) and a SQL-injection-adjacent parsing bug where a trailing natural-language sentence after a model's SQL could be sent to the database or cause a false "multiple statements" rejection. New ecosystem integration plus a new agent-facing capability (deep_answer) — recommendation unchanged (PROTOTYPE), but the deep_answer feature is worth testing directly since it changes schemagate from pure schema-filtering into a (bounded, opt-in) data-aware answering step.
+
+### 2026-11-07
+Meaningful update: v1.14.0 → v1.16.0, driven mainly by three security advisories fixed in rapid
+succession (v1.15.1–v1.15.7): a query hidden inside a string the database executes is now refused
+(GHSA-r77g-5v43-wh54, PostgreSQL), a restricted table could still leak via foreign-key expansion
+(GHSA-xp79-wpv4-qj59), and a web page could drive a local Studio session without authorization
+(GHSA-5fcm-hgr8-...). Also confirmed #1 on the live BIRD Mini-Dev leaderboard across all three
+dialects (independently merged by BIRD, not just self-reported), and added a Pydantic AI
+capability (`SchemagateCapability`) giving an agent a `select_schema(question)` tool directly,
+alongside the existing LangChain/LlamaIndex integrations. Given this is an access-control tool,
+three real security advisories fixed inside two weeks is the most relevant signal in this update —
+worth re-confirming the current version is in use on anything already running schemagate.
+Recommendation unchanged (PROTOTYPE), score unchanged (8.0) pending hands-on testing.

@@ -50,3 +50,14 @@ PROTOTYPE — worth a hands-on trial against a non-critical database to evaluate
 ## Change History
 ### 2026-09-26
 Initial discovery and review.
+
+### 2026-11-07
+Meaningful update: v0.6.3 → v0.10.1 (14 releases over six weeks). The significant change is
+schema-scoped data access in v0.9.0: data sources can now be scoped to a specific schema
+(`schema_scope`), so table access, metadata, and MCP exposure are all managed per schema instead
+of per database connection — a materially finer-grained permission boundary than existed before,
+directly relevant to this project's core "governed DB-to-MCP gateway" pitch. v0.10.0 added
+classified JDBC connection-failure diagnostics (auth vs. host-unreachable vs. database-not-found
+vs. network-timeout vs. driver issues). Recommendation unchanged (PROTOTYPE) — the schema-scoping
+addition is worth re-testing against the original permission-model concern raised in the first
+review.

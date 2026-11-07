@@ -52,3 +52,14 @@ AGPL-3.0, flagged loudly per policy. Per the project's own README, applications 
 ## Change History
 ### 2026-10-22
 First discovered via Hacker News Show HN (69 points, 2026-10-19). Verified via GitHub API (AGPL-3.0, 396 stars, 6 subscribers, 14 forks, 13 open issues, created 2026-10-16, 6 contributors).
+
+### 2026-11-07
+Meaningful update: v1.1.0 → v1.2.0, with a security release in between (v1.1.3, fixing three
+vulnerabilities reported by an external researcher — everyone on 1.1.x or the 1.2.0 release
+candidates was told to upgrade). v1.2.0 itself reworks durability: with the append-only file on,
+a write is now acknowledged only once it is actually durable, rather than before. For a project
+explicitly positioning itself as "a better Redis," fixing a write-acknowledgment durability gap
+is a real correctness improvement, not a minor patch. Stars grew 396 → 968 in just over two
+weeks. Recommendation unchanged (PROTOTYPE) — still worth evaluating on a non-critical workload,
+with the security-release history now itself a data point on how the small team responds to
+real vulnerability reports.
