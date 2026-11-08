@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "projects": [
     {
       "name": "Xberg",
@@ -18581,6 +18581,253 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 378 stars, 2 subscribers, 21 forks, created 2026-07-20, pushed 2026-11-07 (today). Today's Small but High-Leverage Utility.",
+      "acted_on": false
+    },
+    {
+      "name": "textbee",
+      "slug": "textbee-sms-gateway",
+      "repo_url": "https://github.com/textbee/textbee",
+      "website": "https://textbee.dev",
+      "description": "Open-source SMS gateway that turns an Android phone into a REST/webhook/MCP SMS API. NestJS API + Next.js dashboard + Kotlin Android app in one repo, with official JS/Python SDKs. A drop-in Twilio alternative at the cost of a SIM plan instead of per-message billing.",
+      "category": [
+        "product building blocks",
+        "AI & agent infrastructure"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.3,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0: safe to run unmodified as an internal/backend service called over your own network; modifying and offering a modified version to third parties over a network would trigger source-disclosure obligations.",
+      "deployment": [
+        "Docker Compose (self-hosted)",
+        "hosted free plan at textbee.dev",
+        "companion Android APK (sideloaded, not Play Store)"
+      ],
+      "interfaces": [
+        "REST API",
+        "webhooks (HMAC-SHA256 signed)",
+        "official MCP server (textbee/textbee-mcp)",
+        "npm SDK (@textbee/sdk)",
+        "PyPI SDK (textbee)"
+      ],
+      "use_cases": [
+        "OTP/2FA and transactional alerts for a side project or early-stage product",
+        "Two-way SMS support flows (appointment confirmations, delivery notices)",
+        "n8n/Zapier/Make automation step for SMS",
+        "Low-cost SMS channel for MSSP/PTaaS client notifications",
+        "Bulk CSV-paced SMS broadcast for low-volume announcements"
+      ],
+      "product_opportunities": [
+        "SMS leg of a notifications micro-SaaS bundle without a Twilio bill",
+        "MCP server makes 'send/read SMS' directly callable by a coding agent for ops/alerting tools"
+      ],
+      "alternatives": [
+        "Twilio, Vonage, MessageBird, Plivo — the paid SMS APIs this targets directly",
+        "Other Android-SIM-as-gateway projects exist but lack textbee's multi-year, multi-SDK, MCP-integrated ecosystem"
+      ],
+      "why_it_matters": "Removes a recurring per-message SaaS bill and vendor-compliance overhead for OTP/alert/low-volume two-way SMS, using a NestJS stack that's already familiar, with an official MCP server and JS/Python SDKs ready to wire in directly.",
+      "why_not_build_it_myself": "A production-grade SMS gateway needs a reliable Android-SIM bridge app, delivery-status tracking, webhook signing, multi-device/multi-SIM routing, and SDKs — this ships all of it with 3+ years of iteration and a working MCP server already built.",
+      "risks": [
+        "Requires a dedicated Android phone online 24/7 as the physical SMS gateway",
+        "AGPL-3.0 — flagged above; relevant if ever embedding a modified fork in a redistributed product",
+        "Star:subscriber ratio (3,295:26 ≈ 127:1) is elevated but paired with 504 forks and a multi-year, multi-platform CI history — read as organic"
+      ],
+      "first_seen": "2026-11-08",
+      "last_reviewed": "2026-11-08",
+      "last_meaningful_update": "2026-11-08",
+      "current_version": "v2.9.0",
+      "latest_release_date": "2026-09-21",
+      "source_links": [
+        "https://github.com/textbee/textbee",
+        "https://textbee.dev",
+        "https://github.com/textbee/textbee-mcp"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: AGPL-3.0, 3,295 stars, 504 forks, 26 subscribers, 56 open issues, created 2022-03-18, pushed 2026-11-08 (today). README claims 40,000+ developers/businesses using it (self-reported, not independently verified).",
+      "acted_on": false
+    },
+    {
+      "name": "NextCRM",
+      "slug": "nextcrm-selfhosted-crm",
+      "repo_url": "https://github.com/pdovhomilja/nextcrm-app",
+      "website": "https://nextcrm.app",
+      "description": "Open-source CRM on Next.js 16, React 19, TypeScript, PostgreSQL (Prisma 7), and shadcn/ui, with a full invoicing module, per-entity audit logging, pgvector semantic search, an E2B-sandboxed AI research/enrichment agent, and a built-in MCP server for direct AI-agent access to CRM data.",
+      "category": [
+        "product building blocks",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.4,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "self-hosted (Next.js + PostgreSQL/pgvector)",
+        "Prisma migrations",
+        "hosted demo at demo.nextcrm.io"
+      ],
+      "interfaces": [
+        "web UI",
+        "built-in MCP server (streamable HTTP + SSE)",
+        "server actions / internal API",
+        "downloadable Claude Code Skill"
+      ],
+      "use_cases": [
+        "Internal sales/CRM tool self-hosted on existing Postgres infra",
+        "Forkable seed codebase for a vertical CRM product",
+        "Reference implementation for exposing a Next.js app's data over MCP",
+        "Lift-out reference for a multi-currency invoicing module (tax engine, PDF export, status lifecycle)"
+      ],
+      "product_opportunities": [
+        "Forkable base for a narrow vertical CRM instead of building CRUD/auth/audit-log scaffolding from zero",
+        "MCP server pattern (per-user hashed Bearer tokens, dual transport) reusable as a template for other Next.js apps"
+      ],
+      "alternatives": [
+        "Twenty, Odoo CRM, SuiteCRM — more established open-source CRMs, none on this exact Next.js/Prisma/shadcn stack with built-in MCP + E2B enrichment",
+        "Hosted CRMs (HubSpot, Pipedrive, Kommo) — the SaaS dependency this replaces for self-hosters",
+        "Already-catalogued DeskcommCRM — WhatsApp-sales-funnel focus vs. NextCRM's general-purpose CRM + invoicing scope"
+      ],
+      "why_it_matters": "Matches my own stack closely enough to read/extend rather than treat as a black box, and ships CRM + invoicing + audit-log + vector-search + an MCP server as one coherent, actively-developed codebase — a substantial chunk of what a B2B tool or vertical SaaS seed would otherwise need built from scratch.",
+      "why_not_build_it_myself": "CRM CRUD plus a multi-currency invoicing engine, a generic audit/diff system, pgvector semantic search, and a sandboxed AI enrichment agent together are months of work; this ships all of it with 3+ years of continuous iteration.",
+      "risks": [
+        "Star:subscriber ratio (739:8 ≈ 92:1) is high, though 287 forks and 3+ years of continuous history argue organic rather than inflated",
+        "AI-feature surface (E2B, Firecrawl, multiple LLM providers) adds real operational complexity/cost if enabled",
+        "No independent production case studies found beyond the project's own demo/changelog"
+      ],
+      "first_seen": "2026-11-08",
+      "last_reviewed": "2026-11-08",
+      "last_meaningful_update": "2026-11-08",
+      "current_version": "v0.37.20",
+      "latest_release_date": "2026-11-08",
+      "source_links": [
+        "https://github.com/pdovhomilja/nextcrm-app",
+        "https://nextcrm.app",
+        "https://docs.nextcrm.app"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 739 stars, 287 forks, 8 subscribers, 22 open issues, created 2023-07-06, pushed/released 2026-11-08 (today, v0.37.20).",
+      "acted_on": false
+    },
+    {
+      "name": "DeskcommCRM",
+      "slug": "deskcommcrm-whatsapp-ai-sales",
+      "repo_url": "https://github.com/melgarafael/DeskcommCRM",
+      "website": "https://deskcomm.com.br",
+      "description": "Self-hosted 'AI sales OS' for WhatsApp: a CRM/sales-funnel inbox (Next.js 16, TypeScript, Supabase) where AI agents qualify, answer, and sell over WhatsApp via WAHA (self-hosted WhatsApp HTTP API), positioned as an open alternative to Kommo, Octadesk, and Intercom.",
+      "category": [
+        "product building blocks",
+        "AI & agent infrastructure",
+        "self-hosted SaaS alternatives"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use, self-hosting, or white-labeling.",
+      "deployment": [
+        "one-command VPS installer (hostgator-setup-kit)",
+        "Docker",
+        "same-VPS or external Supabase"
+      ],
+      "interfaces": [
+        "web UI (inbox/funnel)",
+        "WhatsApp via WAHA",
+        "assistant install guides for Claude Code/Codex/Cursor/OpenCode/Antigravity"
+      ],
+      "use_cases": [
+        "Self-hosted WhatsApp sales funnel for a small business or agency client",
+        "AI-agent first-line qualification before human handoff on WhatsApp",
+        "Reference for integrating WAHA into a Next.js/Supabase app without Meta Business API approval overhead"
+      ],
+      "product_opportunities": [
+        "Template for a 'WhatsApp AI sales agent as a service' micro-SaaS, self-hosted per client or forked as a white-label base",
+        "WHEN/IF/THEN automation-rule engine plus per-client-niche agent mounting is a reusable pattern for WhatsApp-commerce verticals"
+      ],
+      "alternatives": [
+        "Kommo, Octadesk, Intercom — the paid SaaS this targets directly",
+        "Already-catalogued NextCRM — general-purpose CRM + invoicing, no WhatsApp/AI-sales-agent focus",
+        "WAHA — the separate open-source WhatsApp API this depends on"
+      ],
+      "why_it_matters": "Previously held out of the catalog on 2026-09-27 as a single-maintainer repo riding an affiliate-hosting partnership to fast star growth; six weeks later it has 170 recorded contributors, continued fast release cadence (v1.104.0 shipped the day before this review), and sustained fork/issue activity — the concern it was held for has materially decoupled.",
+      "why_not_build_it_myself": "A WhatsApp-native sales funnel with AI qualification, an automation-rule engine, and a one-command self-hosted installer (including WAHA provisioning) is substantial infrastructure; this ships all of it with real multi-contributor iteration behind it.",
+      "risks": [
+        "Star:subscriber ratio (5,268:30 ≈ 175:1) remains elevated, though 1,506 forks and real multi-contributor commits argue against inflation",
+        "README still leads with a HostGator affiliate partnership — disclosed, not disqualifying, but the '1-command install' is optimized for that host",
+        "Depends on WAHA's unofficial WhatsApp Web integration rather than Meta's official Business API",
+        "496 open issues on a 7-month-old repo — real usage, but also real rough edges"
+      ],
+      "first_seen": "2026-11-08",
+      "last_reviewed": "2026-11-08",
+      "last_meaningful_update": "2026-11-08",
+      "current_version": "v1.104.0",
+      "latest_release_date": "2026-11-07",
+      "source_links": [
+        "https://github.com/melgarafael/DeskcommCRM",
+        "https://deskcomm.com.br"
+      ],
+      "aliases": [],
+      "notes": "First observed 2026-09-27 (held as Worth Watching, not catalogued, pending decoupling from single-maintainer/affiliate-promotion concerns). GitHub API verified today: MIT, 5,268 stars, 1,506 forks, 30 subscribers, 496 open issues, created 2026-04-28, 170 all-contributors badge, v1.104.0 released 2026-11-07.",
+      "acted_on": false
+    },
+    {
+      "name": "Beancount.io",
+      "slug": "beancount-io-plaintext-accounting",
+      "repo_url": "https://github.com/bex-co/beancount-io",
+      "website": "https://beancount.io",
+      "description": "A polished product layer (native iOS/Android apps, a one-install CLI, web reports, and AI-agent 'skills') on top of plain-text double-entry accounting via Beancount + Fava. Self-hosted, hosted, or purely local-CLI; the ledger stays a Git-diffable .bean text file either way.",
+      "category": [
+        "small utilities",
+        "product building blocks"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.5,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions on commercial use or self-hosting.",
+      "deployment": [
+        "CLI (brew/uv install, no server)",
+        "Docker (deploy/docker, single server)",
+        "Docker (deploy/docker-mac, local)",
+        "hosted service at beancount.io"
+      ],
+      "interfaces": [
+        "CLI (bea)",
+        "web UI (Fava-based reports)",
+        "native iOS/Android apps",
+        "Python"
+      ],
+      "use_cases": [
+        "Personal or freelance double-entry bookkeeping synced across phone/terminal/web",
+        "Pointing a coding agent at the bundled skills to import/reconcile bank statements with confirm-gated writes",
+        "Scripting custom financial reports against the ledger from Python instead of exporting CSVs from a SaaS app"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Plain Beancount + Fava — the open-source foundation this builds on; web-only, no native mobile or one-install CLI",
+        "Spreadsheets or SaaS personal-finance apps — the lock-in/no-reporting alternative this avoids"
+      ],
+      "why_it_matters": "Keeps personal/freelance financial records as a Git-diffable plain-text file I actually own, while adding the UX (mobile apps, one-install CLI, confirm-gated agent skills) that plain Beancount + Fava never had.",
+      "why_not_build_it_myself": "Native mobile apps, a packaged CLI, and agent-safe write-confirmation skills on top of an existing ledger format are real engineering; this ships all of it already built on a proven accounting engine.",
+      "risks": [
+        "README framing leans toward the hosted product (sign-up is the first call to action); self-hosting is real but secondary in the pitch",
+        "Niche personal/freelance tool, not reusable infrastructure — value is direct-use only",
+        "Modest traction (328 stars, 5 subscribers) relative to the polish on display — confirm reliability before trusting it with primary financial records"
+      ],
+      "first_seen": "2026-11-08",
+      "last_reviewed": "2026-11-08",
+      "last_meaningful_update": "2026-11-08",
+      "current_version": "mobile-v1.20261002.50",
+      "latest_release_date": "2026-10-02",
+      "source_links": [
+        "https://github.com/bex-co/beancount-io",
+        "https://beancount.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 328 stars, 39 forks, 5 subscribers, 1 open issue, created 2020-10-02, pushed 2026-11-08 (today). Today's Small but High-Leverage Utility. Same org (bex-co) as the already-catalogued bex PaaS, different product.",
       "acted_on": false
     }
   ]

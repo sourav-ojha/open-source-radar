@@ -1,6 +1,6 @@
 # Catalog
 
-_298 projects tracked. Last updated 2026-11-07._
+_302 projects tracked. Last updated 2026-11-08._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -35,6 +35,7 @@ _298 projects tracked. Last updated 2026-11-07._
 | [Nerdlog](https://github.com/dimonomid/nerdlog) | USE NOW | 8.4/10 | developer productivity, observability, infrastructure, small high-leverage utilities | BSD-2-Clause | low | 2026-09-21 |
 | [Misata](https://github.com/rasinmuhammed/misata) | PROTOTYPE | 8.4/10 | small high-leverage utilities, product building blocks, AI & agent infrastructure, developer productivity | MIT | low | 2026-09-29 |
 | [Unified Knowledge Graph RAG on AWS](https://github.com/awslabs/unified-kg-rag-on-aws) | PROTOTYPE | 8.4/10 | AI & agent infrastructure, data / search / RAG, product building blocks | Apache-2.0 | medium | 2026-11-07 |
+| [NextCRM](https://github.com/pdovhomilja/nextcrm-app) | PROTOTYPE | 8.4/10 | product building blocks, AI & agent infrastructure | MIT | medium | 2026-11-08 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity, small utility, RAG infrastructure | MIT | low | 2026-08-29 |
 | [AdminForth](https://github.com/devforth/adminforth) | USE NOW | 8.3/10 | product infrastructure, admin panels, product building blocks | MIT | low | 2026-09-03 |
 | [haiku.rag](https://github.com/ggozad/haiku.rag) | PROTOTYPE | 8.3/10 | RAG infrastructure, AI agent infrastructure, developer productivity | MIT | medium | 2026-09-05 |
@@ -50,6 +51,7 @@ _298 projects tracked. Last updated 2026-11-07._
 | [LatticeDB](https://github.com/jeffhajewski/latticedb) | PROTOTYPE | 8.3/10 | product building blocks, AI & agent infrastructure, data infrastructure | MIT | low | 2026-10-10 |
 | [Hardcount (formerly Velox)](https://github.com/gethardcount/hardcount) | PROTOTYPE | 8.3/10 | product building blocks, billing / monetization, AI infrastructure | MIT | low | 2026-11-01 |
 | [Antfly](https://github.com/antflydb/antfly) | PROTOTYPE | 8.3/10 | data/search/documents/RAG, AI & agent infrastructure, product building blocks | Apache-2.0 | low | 2026-10-31 |
+| [textbee](https://github.com/textbee/textbee) | USE NOW | 8.3/10 | product building blocks, AI & agent infrastructure | AGPL-3.0 | medium | 2026-11-08 |
 | [LoongSuite Pilot](https://github.com/alibaba/loongsuite-pilot) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, developer productivity, observability | Apache-2.0 | low | 2026-08-31 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [OpenNotebookLM](https://github.com/tom1030507/OpenNotebookLM) | PROTOTYPE | 8.2/10 | RAG infrastructure, document processing, product building blocks, self-hosted SaaS alternative | MIT | low | 2026-09-05 |
@@ -200,6 +202,8 @@ _298 projects tracked. Last updated 2026-11-07._
 | [Atomic](https://github.com/kenforthewin/atomic) | PROTOTYPE | 7.5/10 | self-hosted SaaS alternatives, data/search/documents/RAG, AI & agent infrastructure | MIT | low | 2026-10-25 |
 | [GuardianWAF](https://github.com/GuardianWAF/GuardianWAF) | PROTOTYPE | 7.5/10 | security tooling, product infrastructure, self-hosted SaaS alternative | MIT | low | 2026-10-27 |
 | [ThinkWatch](https://github.com/ThinkWatchProject/ThinkWatch) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, product infrastructure, security, observability | BSL-1.1 | low | 2026-11-05 |
+| [DeskcommCRM](https://github.com/melgarafael/DeskcommCRM) | PROTOTYPE | 7.5/10 | product building blocks, AI & agent infrastructure, self-hosted SaaS alternatives | MIT | medium | 2026-11-08 |
+| [Beancount.io](https://github.com/bex-co/beancount-io) | USE NOW | 7.5/10 | small utilities, product building blocks | MIT | low | 2026-11-08 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |

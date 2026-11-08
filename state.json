@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-07",
-  "last_successful_run": "2026-11-07",
-  "run_count": 69,
-  "rotation_slot_last_used": 4,
+  "last_run": "2026-11-08",
+  "last_successful_run": "2026-11-08",
+  "run_count": 70,
+  "rotation_slot_last_used": 5,
   "recent_categories": [
     "self-hosted ETL/ELT",
     "single-binary CI/CD + deployment",
@@ -78,19 +78,10 @@
     "AI agents/MCP/coding productivity (slot 1) — a Certificate-Transparency-style tamper-evident audit trail for AI-agent tool calls with a published 480-trial proof section and PyPI package (Tracekit), a self-hosted trace-native CI/CD pipeline that turns an agent's production failures directly into CI regression tests with no hand-authored dataset but no tagged release yet (Tracely), and a self-hosted agent-to-phone voice-call escalation channel that rings a locked Android phone over VoIP with no Twilio dependency, today's Small but High-Leverage Utility (agentring). A hidden-gem outside the slot's immediate adoption path: earshot, a remarkably well-documented and self-critical toolkit giving coding agents the ability to \"hear\" (describe, match, critique and synthesize audio/sound design) via CLI/Python API/MCP server, filed as an architecture study given narrow applicability to a MERN/AWS stack. Rejected decionis/agent-safe-pipeline for a classic open-core trap (the OSS gateway \"decides nothing itself\" — real authorization requires the proprietary Decionis hosted control plane) and phone-harness/mcp for not actually being deployable open source (the repo is just setup docs for a hosted SaaS MCP connector). Flagged qybaihe/bla (2,108 stars in 10 days, GitHub-Trending self-promotion badge, anti-reverse-engineering obfuscation tooling) as trending/marketing-driven and excluded it. Reconfirmed a systemic pattern from recent runs: several of today's otherwise-substantive finds (Tracekit 136:1, earshot 423:1, Tracely 405:1 stars:subscribers) show the same elevated ratio previously used to reject thinner repos, but all three pair it with real fork counts and open-issue activity (unlike the 0-fork/0-issue cases rejected before), so they were catalogued on substance with the ratio flagged rather than treated as disqualifying on its own. Held Qsnh/skillsgist (no growth since 2026-10-21), ShuaiMXu/happyhands (alpha UI-review tool), Sheernox/cedr (1-day-old kitchen-sink agent-dev-tools bundle) and yoanbernabeu/skillcrew (thin team skill registry) to Worth Watching. Checked Paseo, MisakaNet, SkillSpector, SkillEvaluator, agentOS (framerslab), midplane, chunkhound, deja-vu, Pare, moai-adk, planning-with-files, aidlc-workflows, ai-coding-project-boilerplate and ZCode for meaningful updates — all incremental patch/bugfix releases, none cleared the bar on their own. 'Still Worth Trying' rotated to html-to-markdown (Kreuzberg), haiku.rag, and Headroom — none used in the fourteen immediately preceding rotations.",
     "product infrastructure / APIs / backend components (slot 2) — three independent projects pivoting existing infrastructure toward AI-agent gateway governance: a mature six-year-old self-hosted IAM/SSO server rebranded \"agent-first\" with a built-in MCP & agent gateway on its existing identity engine (Casdoor), an 18-month-old Kubernetes-native zero-trust access platform (VPN/ZTNA/ngrok-alternative/PaaS) that added an AI/MCP gateway on the same identity model (Octelium, AGPL-3.0 flagged), and a purpose-built AI API + MCP governance gateway with per-user budgets, PII/secrets redaction and prompt-injection filtering (ThinkWatch, BSL-1.1 flagged — confirmed by reading the LICENSE file directly after the GitHub API misreported NOASSERTION). A fourth, unrelated find — a 6-year-old MIT collaborative document editor with a distinctive per-heading-chatroom UX and an MCP integration (docs.plus) — was catalogued as a product-building-block. hookdeck/hookdeck-cli (free permanent webhook tunnel URLs plus an MCP server) was today's Small but High-Leverage Utility, held out of the main catalog because its resource-management features depend on Hookdeck's hosted backend. Held speakeasy-api/gram (thin differentiation, 0 subscribers despite real company backing), agentic-community/mcp-gateway-registry (reasonable traction but overlaps today's three catalogued gateways with no distinct angle yet), and CodingFeng101/CanvasAnvil (AI diagram-to-.drawio maker, too early) to Worth Watching. Rejected activeing123/mcptoon as a duplicate of the already-saturated MCP-context-compression niche (Headroom/Pare/squeeze) despite an elevated 210:1 star:subscriber ratio, deck9/input as another entrant in the previously-flagged saturated form-builder wave, and anousss007/laravel-vigilance as off-stack (PHP/Laravel). Confirmed generic sort=updated GitHub search queries without a stars filter are pure noise (same-minute pushes to unrelated personal projects) - stars:>N + pushed:>DATE filtered queries were the only useful signal today. 'Still Worth Trying' rotated to Xberg, Bernstein, and NestLens — none used in the seven immediately preceding rotations.",
     "developer utilities/debugging/testing (slot 3) — a MongoDB migration toolkit filling the real gaps in migrate-mongo (dry-run, granular rollback, tamper detection) directly relevant to the MERN stack (mongo-migrate-kit), a mature multi-source log TUI unifying journald+auditd+Docker+Podman+Compose+Kubernetes behind one filterable screen (lazyjournal), and a local-first AI-coding-agent cost tracker across 37+ tools with real cross-platform app distribution and a Claude/Codex open-source grant credit (codeburn, elevated stars:subscribers ratio flagged but paired with real fork/issue activity and judged organic). A single-binary Rust git-fleet TUI dashboard (yetidevworks/drydock) was today's Small but High-Leverage Utility — notable for an unrelated name collision with the already-catalogued Drydock (CodesWhat/drydock, container-image watcher); catalogued separately under drydock-git-fleet-tui with a disambiguation note in both project files. Rejected winebarrel/pistachio as a near-duplicate of the already-catalogued pgschema (Postgres declarative schema niche), noting its new Amazon Aurora DSQL support as the one AWS-relevant differentiator worth a second look later. Held zifter/clickhouse-migrations (out-of-stack, ClickHouse-specific) and keploy/keploy (19.5k stars, close to mainstream scale, unclear differentiation from Playwright+mocking) to Worth Watching. Confirmed generic in:readme keyword searches (visual regression, snapshot testing, contract testing, profiler CLI, release automation, code-doc generators) are low-signal right now — giant awesome-lists and AI-agent-hype repos with sprawling READMEs dominate regardless of search term; topic:-tag searches (topic:profiling, topic:log-viewer, topic:database-migration, topic:contract-testing, topic:terminal-ui, topic:repl, topic:api-testing) were far more precise and should be preferred for sub-niches with an established GitHub topic tag. 'Still Worth Trying' rotated to Monoscope, LibreDB Studio, and Destructive Command Guard — none used in the five immediately preceding rotations.",
-    "slot 4 (data, search, documents, RAG) — an AWS Labs framework unifying four published graph-RAG methods (GraphRAG, LightRAG, HippoRAG 2, RAPTOR) on one shared index with a local-or-AWS-native deployment and a built-in evaluation CLI (Unified Knowledge Graph RAG on AWS), a mature vectorless, reasoning-based RAG approach using a document-structure tree instead of embeddings (PageIndex, 40k+ stars, filed STUDY given its maturity and the architecture-not-novelty framing), a 6-year-old AWS-native open-source document management backend (FormKiQ Core, MIT confirmed despite a GitHub API NOASSERTION misreport), a Node.js/React text-to-SQL agent with a governed MCP gateway for shared agent database access (DB Agent), and a dbt-alternative SQL transformation engine with compile-time type checking and an explicit AI-agent-plan-approval policy (Rocky, 89 releases in 7 months). sghtmltopdf (a Rust HTML-to-PDF renderer replacing wkhtmltopdf/wicked_pdf without a headless-browser dependency) was today's Small but High-Leverage Utility. Checked schemagate, KiviDB, and DatI for meaningful updates: schemagate (v1.14.0->v1.16.0) fixed three real security advisories (hidden-query injection, FK-based restricted-table leak, unauthorized Studio access) and confirmed #1 on the live BIRD Mini-Dev leaderboard; KiviDB (v1.1.0->v1.2.0) shipped a security release plus a real write-durability correctness fix; DatI (v0.6.3->v0.10.1) added schema-scoped data access, a materially finer-grained MCP permission boundary. Held storytold/pdfcraft (a legitimate, viral 19.8k-star pure-Rust PDF reader/editor from the ArtCraft community) out of the catalog as a consumer desktop app outside the core relevance axes despite confirmed real traction. Held usemoss/moss (sub-10ms vector-free semantic search runtime) to Worth Watching given its SDKs are mid-transition from BSD-2-Clause to the PolyForm Shield License (restricts competing commercial offerings) and a cloud-account-first quickstart. Held geolens-io/geolens (self-hosted geospatial catalog) and buldezir/lemmary (paperless-ngx-compatible document library, thin traction) to Worth Watching as narrower fits. 'Still Worth Trying' rotated to pgschema, AgentSight, and agentOS (Rivet) — none used in the thirteen immediately preceding rotations."
+    "slot 4 (data, search, documents, RAG) — an AWS Labs framework unifying four published graph-RAG methods (GraphRAG, LightRAG, HippoRAG 2, RAPTOR) on one shared index with a local-or-AWS-native deployment and a built-in evaluation CLI (Unified Knowledge Graph RAG on AWS), a mature vectorless, reasoning-based RAG approach using a document-structure tree instead of embeddings (PageIndex, 40k+ stars, filed STUDY given its maturity and the architecture-not-novelty framing), a 6-year-old AWS-native open-source document management backend (FormKiQ Core, MIT confirmed despite a GitHub API NOASSERTION misreport), a Node.js/React text-to-SQL agent with a governed MCP gateway for shared agent database access (DB Agent), and a dbt-alternative SQL transformation engine with compile-time type checking and an explicit AI-agent-plan-approval policy (Rocky, 89 releases in 7 months). sghtmltopdf (a Rust HTML-to-PDF renderer replacing wkhtmltopdf/wicked_pdf without a headless-browser dependency) was today's Small but High-Leverage Utility. Checked schemagate, KiviDB, and DatI for meaningful updates: schemagate (v1.14.0->v1.16.0) fixed three real security advisories (hidden-query injection, FK-based restricted-table leak, unauthorized Studio access) and confirmed #1 on the live BIRD Mini-Dev leaderboard; KiviDB (v1.1.0->v1.2.0) shipped a security release plus a real write-durability correctness fix; DatI (v0.6.3->v0.10.1) added schema-scoped data access, a materially finer-grained MCP permission boundary. Held storytold/pdfcraft (a legitimate, viral 19.8k-star pure-Rust PDF reader/editor from the ArtCraft community) out of the catalog as a consumer desktop app outside the core relevance axes despite confirmed real traction. Held usemoss/moss (sub-10ms vector-free semantic search runtime) to Worth Watching given its SDKs are mid-transition from BSD-2-Clause to the PolyForm Shield License (restricts competing commercial offerings) and a cloud-account-first quickstart. Held geolens-io/geolens (self-hosted geospatial catalog) and buldezir/lemmary (paperless-ngx-compatible document library, thin traction) to Worth Watching as narrower fits. 'Still Worth Trying' rotated to pgschema, AgentSight, and agentOS (Rivet) — none used in the thirteen immediately preceding rotations.",
+    "self-hosted SaaS alternatives / productivity (slot 5) — a self-hosted Android-phone-as-SMS-gateway Twilio alternative with an official MCP server and a 3+ year multi-SDK track record (textbee), the strongest entrant in a same-day self-hosted-CRM wave on a Next.js/Prisma/shadcn stack with built-in invoicing/audit-log/vector-search/MCP (NextCRM), and a WhatsApp AI-sales-funnel CRM re-reviewed after being held out on 2026-09-27 over single-maintainer/affiliate-promotion concerns — now genuinely decoupled via a 170-contributor badge and a sustained release cadence (DeskcommCRM). Beancount.io (polished mobile/CLI/agent-skills layer on plain-text Beancount+Fava accounting) was today's Small but High-Leverage Utility. Held customermates (thinner open-core CRM entrant in the same wave, AGPL CE + commercial EE split, no tagged release since March) and AccountGo (.NET 10 stack mismatch despite a genuinely healthy 5.5:1 star:subscriber ratio) to Worth Watching. Rejected saeloun/miru-web (Ruby/Rails time-tracking duplicate of the catalogued DRYTRIX/TimeTracker) and openshiporg/openfront (Shopify-alternative duplicate of the catalogued Shopnex). Confirmed generic in:readme self-hosted-alternative keyword searches without a stars/topic filter remain low-signal, dominated by awesome-list/directory noise. 'Still Worth Trying' rotated to mcp-debugger, pg_textsearch, and Pad — none used in the fourteen immediately preceding rotations."
   ],
   "evaluated_repos": [
-    "HariSekhon/DevOps-Python-tools",
-    "DonkRonk17/DataConvert",
-    "relaticle/relaticle",
-    "Taskosaur/Taskosaur",
-    "melgarafael/DeskcommCRM",
-    "meteroid-oss/meteroid",
-    "aglyn/aglyn",
-    "MerlinStacks/overseek",
-    "ConvoBrains/zero-cost-crm",
-    "Yudhyy/Klaudia",
     "skidoodle/filebrowser",
     "cachethq/cachet",
     "documenso/documenso",
@@ -1580,7 +1571,17 @@
     "pdfluent/pdfluent-sdk",
     "DataSQRL/sqrl",
     "PSPDFKit/nutrient-document-engine-mcp-server",
-    "oomol-lab/pdf-craft"
+    "oomol-lab/pdf-craft",
+    "textbee/textbee",
+    "pdovhomilja/nextcrm-app",
+    "melgarafael/DeskcommCRM",
+    "bex-co/beancount-io",
+    "customermates/customermates",
+    "AccountGo/accountgo",
+    "saeloun/miru-web",
+    "openshiporg/openfront",
+    "lobbystack/lobbystack",
+    "evangauer/openvpm"
   ],
   "rejected": [
     {
@@ -3047,6 +3048,16 @@
       "repo_url": "https://github.com/PSPDFKit/nutrient-document-engine-mcp-server",
       "reason": "MCP wrapper around PSPDFKit/Nutrient's commercial, licensed Document Engine backend - not independently self-hostable as open source",
       "date": "2026-11-07"
+    },
+    {
+      "repo_url": "https://github.com/saeloun/miru-web",
+      "reason": "duplicate / inferior to catalogued alternative — Ruby on Rails + React time-tracking/invoicing, same niche as the already-catalogued DRYTRIX/TimeTracker, plus a Ruby backend stack mismatch",
+      "date": "2026-11-08"
+    },
+    {
+      "repo_url": "https://github.com/openshiporg/openfront",
+      "reason": "duplicate / inferior to catalogued alternative — Shopify alternative on Next.js/Keystone, weaker differentiation than the already-catalogued Shopnex in the same niche",
+      "date": "2026-11-08"
     }
   ],
   "known_releases": {
@@ -4099,20 +4110,20 @@
       "date": "2026-10-01"
     },
     "tabloy/keygate": {
-      "version": "v0.1.19",
-      "date": "2026-10-28"
+      "version": "v0.1.20",
+      "date": "2026-11-03"
     },
     "kenforthewin/atomic": {
       "version": "v1.45.0",
       "date": "2026-08-09"
     },
     "coollabsio/shoutrrr": {
-      "version": "v1.5.7",
-      "date": "2026-10-22"
+      "version": "v1.5.8",
+      "date": "2026-10-27"
     },
     "git-pkgs/brief": {
-      "version": "v0.14.2",
-      "date": "2026-10-15"
+      "version": "v0.15.0",
+      "date": "2026-11-05"
     },
     "platform-engineering-labs/formae": {
       "version": "0.90.5",
@@ -4211,8 +4222,8 @@
       "date": "2026-10-27"
     },
     "gethardcount/hardcount": {
-      "version": "v0.9.1",
-      "date": "2026-10-29"
+      "version": "v0.9.2",
+      "date": "2026-11-02"
     },
     "Honorboxx/honorbox": {
       "version": "v0.6.0",
@@ -4313,16 +4324,32 @@
     "waka/sghtmltopdf": {
       "version": "unreleased",
       "date": "2026-11-07"
+    },
+    "textbee/textbee": {
+      "version": "v2.9.0",
+      "date": "2026-09-21"
+    },
+    "pdovhomilja/nextcrm-app": {
+      "version": "v0.37.20",
+      "date": "2026-11-08"
+    },
+    "melgarafael/DeskcommCRM": {
+      "version": "v1.104.0",
+      "date": "2026-11-07"
+    },
+    "bex-co/beancount-io": {
+      "version": "mobile-v1.20261002.50",
+      "date": "2026-10-02"
     }
   },
   "source_health": {
     "WebSearch": {
-      "last_ok": "2026-11-07",
-      "note": "used to confirm storytold/pdfcraft's real-world legitimacy (ArtCraft community, Brandon Thomas, name change from PrintCraft) and PageIndex's third-party coverage/maturity (widely blogged since May 2026) - both searches returned useful, converging corroboration."
+      "last_ok": "2026-11-08",
+      "note": "queries for November 2026 self-hosted-alternative launches and Show HN posts returned only stale/general roundup pages, no new dated launches found — consistent with recent runs' finding that generic WebSearch in this space trails GitHub API search for freshness."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-07",
-      "note": "fetched READMEs and LICENSE files directly for PageIndex, moss, formkiq-core, rocky, db-agent, pdfcraft, lemmary, geolens, sghtmltopdf, unified-kg-rag-on-aws; caught one GitHub-API license misreport (formkiq-core: API said NOASSERTION, LICENSE file is MIT)."
+      "last_ok": "2026-11-08",
+      "note": "fetched READMEs directly for textbee, nextcrm-app, DeskcommCRM, customermates, beancount-io; confirmed self-hosting docs (Docker paths) for beancount-io beyond its hosted-product-first README framing."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4337,8 +4364,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-07",
-      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, 8,350/hr limit, well under 50 calls used. topic:-tag and stars:>N+pushed:>DATE filtered search/repositories queries carried essentially all of today's discovery; generic in:readme keyword queries without a stars filter remained noisy."
+      "last_ok": "2026-11-08",
+      "note": "direct from GitHub Actions runner, GITHUB_TOKEN used, well under 50 calls of the 8,350/hr limit. stars:>N + pushed:>DATE + topic: filtered queries remained the reliable discovery lever; generic in:readme self-hosted-alternative keyword search without those filters was dominated by awesome-list/directory noise."
     },
     "hn.algolia.com": {
       "last_ok": "2026-10-31",
@@ -4435,8 +4462,12 @@
     "FormKiQ Core (formkiq/formkiq-core) — 2026-11-07, PROTOTYPE, 7.8",
     "DB Agent (db-agent/db-agent) — 2026-11-07, PROTOTYPE, 7.3",
     "Rocky (rocky-data/rocky) — 2026-11-07, PROTOTYPE, 7.9",
-    "sghtmltopdf (waka/sghtmltopdf) — 2026-11-07, USE NOW, 7.4"
+    "sghtmltopdf (waka/sghtmltopdf) — 2026-11-07, USE NOW, 7.4",
+    "textbee (textbee/textbee) — 2026-11-08, USE NOW, 8.3",
+    "NextCRM (pdovhomilja/nextcrm-app) — 2026-11-08, PROTOTYPE, 8.4",
+    "DeskcommCRM (melgarafael/DeskcommCRM) — 2026-11-08, PROTOTYPE, 7.5",
+    "Beancount.io (bex-co/beancount-io) — 2026-11-08, USE NOW, 7.5"
   ],
-  "notes": "2026-11-07: Slot 4 (data, search, documents, RAG) per day_of_year 311 % 7 + 1 = 4. Catalogued 5 new discoveries plus 1 utility: Unified Knowledge Graph RAG on AWS (awslabs, Apache-2.0, 8.4, PROTOTYPE) — unifies GraphRAG/LightRAG/HippoRAG 2/RAPTOR on one index with local-or-AWS deployment and a real evaluation CLI. PageIndex (VectifyAI, MIT, 7.6, STUDY) — mature (40k+ stars) vectorless, reasoning-based RAG; filed STUDY since the value is architectural, not novelty. FormKiQ Core (MIT confirmed despite GitHub API NOASSERTION, 7.8, PROTOTYPE) — 6-year-old AWS-native document management backend. DB Agent (Apache-2.0, 7.3, PROTOTYPE) — Node/React text-to-SQL agent with a governed MCP gateway. Rocky (Apache-2.0, 7.9, PROTOTYPE) — dbt-alternative SQL engine with compile-time type checking, 89 releases in 7 months, AI-agent plan-approval policy. sghtmltopdf (MIT, 7.4, USE NOW) — today's Small but High-Leverage Utility, a Rust HTML-to-PDF renderer replacing wkhtmltopdf/wicked_pdf without a headless-browser dependency. Meaningful updates: schemagate (v1.14.0->v1.16.0, three security advisories fixed plus a Pydantic AI capability), KiviDB (v1.1.0->v1.2.0, a security release plus a write-durability correctness fix), DatI (v0.6.3->v0.10.1, schema-scoped data access). Noted CocoIndex (v1.0.26) excluding litellm 1.107.0 from its dependency range after that version was published to PyPI with a credential-stealing backdoor — a supply-chain security note worth keeping in mind generally, not a CocoIndex-specific issue. Held storytold/pdfcraft (legitimate, viral 19.8k-star pure-Rust PDF app) out of the catalog as a consumer desktop app outside the core relevance axes. Held usemoss/moss to Worth Watching for its BSD-to-PolyForm-Shield SDK license transition and cloud-account-first quickstart. Held geolens-io/geolens and buldezir/lemmary to Worth Watching as narrower fits. Rejected PSPDFKit/nutrient-document-engine-mcp-server as an MCP wrapper around a proprietary hosted backend. 'Still Worth Trying' rotated to pgschema, AgentSight, and agentOS (Rivet) — none used in the thirteen immediately preceding rotations. Updated: 2026-11-07.",
-  "updated": "2026-11-07"
+  "notes": "2026-11-08: Slot 5 (self-hosted SaaS alternatives, productivity) per day_of_year 312 % 7 + 1 = 5. Catalogued 3 new discoveries plus 1 utility: textbee (AGPL-3.0, 8.3, USE NOW) — Android-phone-as-SMS-gateway Twilio alternative with an official MCP server and a 3+ year multi-SDK track record. NextCRM (MIT, 8.4, PROTOTYPE) — strongest entrant in today's self-hosted-CRM wave on a Next.js/Prisma/shadcn stack with built-in invoicing, audit log, pgvector search, and an MCP server. DeskcommCRM (MIT, 7.5, PROTOTYPE) — WhatsApp AI-sales-funnel CRM first observed 2026-09-27 and held out over single-maintainer/affiliate-promotion concerns; now has a 170-contributor badge and a sustained release cadence, so the concern has genuinely decoupled and it was catalogued today. Beancount.io (MIT, 7.5, USE NOW) — today's Small but High-Leverage Utility, a polished mobile/CLI/agent-skills layer over plain-text Beancount+Fava accounting. Held customermates (thinner open-core CRM entrant, AGPL CE + commercial EE split) and AccountGo (.NET 10 stack mismatch despite a healthy 5.5:1 star:subscriber ratio) to Worth Watching. Rejected saeloun/miru-web (duplicate of the catalogued DRYTRIX/TimeTracker) and openshiporg/openfront (duplicate of the catalogued Shopnex). Checked known-release trackers for Keygate, Hardcount, Honorbox, Open Payment Host, RefearnApp, Atomic, Shoutrrr, and brief for meaningful updates — all were patch-level bumps only. 'Still Worth Trying' rotated to mcp-debugger, pg_textsearch, and Pad — none used in the fourteen immediately preceding rotations. Updated: 2026-11-08.",
+  "updated": "2026-11-08"
 }
