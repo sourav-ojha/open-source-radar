@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-08",
+  "updated": "2026-11-09",
   "projects": [
     {
       "name": "Xberg",
@@ -8316,7 +8316,7 @@
         "developer productivity"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.9,
+      "relevance_score": 8.0,
       "maturity": "emerging",
       "integration_effort": "low",
       "license": "MIT",
@@ -8357,15 +8357,15 @@
         "Chinese-origin project with bilingual docs; English README is present and complete but community/support channels may skew Chinese-language"
       ],
       "first_seen": "2026-09-07",
-      "last_reviewed": "2026-10-26",
-      "last_meaningful_update": "2026-10-26",
-      "current_version": "v1.9.5",
-      "latest_release_date": "2026-10-25",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "v2.1.3",
+      "latest_release_date": "2026-11-06",
       "source_links": [
         "https://github.com/huangchengsir/pipewright"
       ],
       "aliases": [],
-      "notes": "Update 2026-10-26: grew 34->131 stars since first review; v1.9.0-v1.9.5 added an embedded MCP server (agent-triggerable pipelines plus approval-gated config changes) and a 'release safeguarding' post-deploy health-verification feature with optional evidence-cited AI root-cause hints — both score as meaningful updates (new MCP integration, new capability) per the catalog's update criteria. Still only 2 contributors, so bus-factor risk is unchanged.",
+      "notes": "Update 2026-10-26: grew 34->131 stars since first review; v1.9.0-v1.9.5 added an embedded MCP server (agent-triggerable pipelines plus approval-gated config changes) and a 'release safeguarding' post-deploy health-verification feature with optional evidence-cited AI root-cause hints — both score as meaningful updates (new MCP integration, new capability) per the catalog's update criteria. Still only 2 contributors, so bus-factor risk is unchanged. 2026-11-09: v2.0.0-v2.1.3 added native Kubernetes deployment nodes (publish a pipeline-built image to an existing Deployment's container and wait for readiness), five-platform OAuth admin login, and run-context/Git variables auto-injected into scripts. Grew from 131 to 149 stars. Score raised 7.9 -> 8.0 given direct EKS relevance.",
       "acted_on": false,
       "agent_opportunities": [
         "v1.9.0 added an MCP server embedded directly in the Pipewright binary (no separate deployment): query projects/pipelines, trigger authorized pipelines, and read run/deployment history. Project-scoped MCP tokens default to read-only with explicit, expiring trigger permission. v1.9.2 extended this to MCP-driven pipeline/project *configuration* changes, gated behind a web-based manual-approval step before anything is applied."
@@ -18828,6 +18828,340 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: MIT, 328 stars, 39 forks, 5 subscribers, 1 open issue, created 2020-10-02, pushed 2026-11-08 (today). Today's Small but High-Leverage Utility. Same org (bex-co) as the already-catalogued bex PaaS, different product.",
+      "acted_on": false
+    },
+    {
+      "name": "Radar (Skyhook)",
+      "slug": "skyhook-radar-k8s-ui-mcp",
+      "repo_url": "https://github.com/skyhook-io/radar",
+      "website": "https://radarhq.io",
+      "description": "Open-source Kubernetes UI distributed as a single Go binary, kubectl plugin, or desktop app, with an MCP server on by default (read-only and write modes) exposing cluster topology, ranked issues, event/change timeline with diffs, Helm, GitOps (Argo CD/Flux) state, live service-to-service traffic (via Hubble/Istio/Caretta/Beyla), and 44 best-practice audit checks to any MCP-aware coding agent on the machine. No in-cluster install, CRDs, or agents required for local use; an optional Helm-deployed in-cluster mode adds OIDC auth and per-user RBAC for shared team access.",
+      "category": [
+        "AI & agent infrastructure",
+        "infrastructure/observability",
+        "developer productivity",
+        "Kubernetes tooling"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.6,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 confirmed via GitHub API, no restrictions on commercial or internal use. Skyhook (the YC W23 company behind it) sells a separate hosted 'Radar Cloud' product for multi-cluster fleet views and alerting; the self-hosted core is presented as fully featured, not a crippled free tier.",
+      "deployment": [
+        "single binary",
+        "kubectl plugin",
+        "desktop app",
+        "helm chart (optional, in-cluster)"
+      ],
+      "interfaces": [
+        "CLI",
+        "kubectl plugin",
+        "Web UI",
+        "MCP server (read-only and read-write modes)"
+      ],
+      "use_cases": [
+        "Point it at an EKS kubeconfig locally and get a ranked, investigate-able issue queue instead of manually correlating kubectl describe/get events/logs output",
+        "Hand an AI coding agent (Claude Code, Codex, Cursor) the read-only MCP endpoint so it can diagnose a broken deployment itself instead of being fed copy-pasted kubectl output",
+        "Diff Helm release values/manifests across revisions before a rollback decision",
+        "Visualize live service-to-service traffic on an EKS cluster already running Istio/Hubble without standing up a separate dashboard",
+        "Run the 44-check security/reliability/efficiency audit against a cluster before a client-facing MSSP review"
+      ],
+      "product_opportunities": [
+        "Could be the Kubernetes-visibility layer bundled into an internal platform/ops product for EKS-based clients, with the write-mode MCP tools gated behind an approval step"
+      ],
+      "agent_opportunities": [
+        "MCP server is on by default on the UI's port — no separate deployment or API key needed; read-only tools cover topology/health/events/diffs/logs/Helm/audit/RBAC/cost/Prometheus",
+        "Write-mode MCP tools (restart, scale, apply, rollback, GitOps sync, node drain) are explicitly marked destructive so an MCP client can gate them behind confirmation",
+        "Secret values are withheld and known secret patterns in env vars/Helm values/logs are scrubbed before being handed to an agent (README notes this can't catch everything)"
+      ],
+      "alternatives": [
+        "Lens, K9s, Octant, Headlamp (visual Kubernetes UIs, no built-in MCP/agent surface)",
+        "Raw kubectl + a coding agent's shell access (works, but the agent has to rebuild cluster context from scratch every session instead of querying a maintained topology/timeline)",
+        "Radar Cloud (Skyhook's own hosted multi-cluster tier — not evaluated here, out of scope for a single-cluster/local use case)"
+      ],
+      "why_it_matters": "Sourav runs EKS; this removes the usual 'paste kubectl output into the agent chat' loop by giving both a human and an AI agent the same maintained, live view of cluster state, with zero in-cluster footprint for local/laptop use.",
+      "why_not_build_it_myself": "Correctly correlating topology, events, Helm diffs, GitOps state, and live traffic into one ranked issue queue — plus building and maintaining an MCP surface with secret-scrubbing and destructive-action gating — is a multi-month project Skyhook has already shipped and iterates on daily.",
+      "risks": [
+        "Young company/project (created January 2026, ~10 months old) despite rapid star growth (4,071) and frequent releases (v1.20.2 as of today) — the vendor's own SREGym benchmark claims are directional, not independently verified",
+        "Star:subscriber ratio (4,071:13 ≈ 313:1) is elevated versus the healthiest repos seen in this radar, though 269 real forks and 103 open issues argue against pure inflation",
+        "Open-core model: Radar Cloud (hosted multi-cluster) is a separate paid product — fine for single-cluster self-hosted use, worth watching for future feature gating",
+        "In-cluster shared-team mode (Helm + OIDC + RBAC) is less battle-tested than the single-user local mode based on README depth"
+      ],
+      "first_seen": "2026-11-09",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "v1.20.2",
+      "latest_release_date": "2026-11-09",
+      "source_links": [
+        "https://github.com/skyhook-io/radar",
+        "https://radarhq.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 4,071 stars, 269 forks, 13 subscribers, 103 open issues, created 2026-01-20, pushed 2026-11-09, not archived. README (raw.githubusercontent.com) confirms single-binary/kubectl-plugin/desktop-app distribution, zero in-cluster footprint for local mode, MCP server on by default on the same port as the UI, and a separate optional Helm-deployed in-cluster mode with OIDC/RBAC for shared team access. Name collision risk: unrelated to this radar's own project name ('Open Source Radar') and to any other 'radar' repo encountered in prior runs — this is specifically skyhook-io/radar, a Kubernetes UI.",
+      "acted_on": false
+    },
+    {
+      "name": "Kumoss",
+      "slug": "kumoss-ai-iac-governance",
+      "repo_url": "https://github.com/InditexTech/kumoss",
+      "website": "https://inditextech.github.io/kumoss",
+      "description": "An AI-agent-driven Infrastructure-as-Code platform from Inditex (Zara's parent company): a user describes an infra change in plain language, Kumoss gathers the live deployed state, the existing IaC repo, and the org's compliance standards, generates Terraform/OpenTofu code, runs and retries a plan until it passes, corrects drift against live state in the same pull request, runs a compliance-agent review that flags high-impact or non-compliant changes for administrator approval, and opens the final pull request with an estimated cost and impact summary. Multicloud (AWS, Azure, GCP, OCI, Kubernetes, VMware vSphere); bring-your-own LLM via LiteLLM, bring-your-own OIDC identity provider, bring-your-own IaC execution runtime.",
+      "category": [
+        "AI & agent infrastructure",
+        "infrastructure / infrastructure-as-code",
+        "product infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "high",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, SPDX header confirms copyright INDITEX S.A. (2026). No restrictions on commercial, internal, or embedded use.",
+      "deployment": [
+        "docker compose (local/full stack)",
+        "production deployment guide referenced but not detailed in README"
+      ],
+      "interfaces": [
+        "Web UI (React)",
+        "REST API (FastAPI, OpenAPI contracts)",
+        "Slack webhook notifications"
+      ],
+      "use_cases": [
+        "Day-2 infra changes (resize, add a resource, adjust an IAM policy) requested in plain language instead of hand-writing a Terraform diff",
+        "Fixing drift between the deployed AWS account and the IaC repo automatically, with the fix folded into the same pull request as the requested change",
+        "Importing console-created resources into existing Terraform state without a manual `terraform import` session",
+        "Giving a non-infra teammate a gated, reviewable way to request an infra change without direct Terraform/cloud console access",
+        "Studying the architecture (compliance-agent review step, policy-locked sessions for high-impact changes) as a pattern for building AI-agent write access to any sensitive system with human approval gates"
+      ],
+      "product_opportunities": [
+        "The policy-gate / compliance-agent-review pattern (lock the session, require admin approval for anything flagged high-impact or non-compliant) is directly reusable for any product giving an AI agent write access to production infrastructure or data — relevant to both his own AWS infra and the MSSP/PTaaS side"
+      ],
+      "agent_opportunities": [
+        "This is itself an agent product: an LLM-driven pipeline (request -> plan -> drift-fix -> compliance review -> PR) rather than a tool an external agent calls",
+        "MCP/A2A support is explicitly listed as planned but not yet implemented — not currently usable as a tool inside an existing agent stack",
+        "Bring-your-own LLM via LiteLLM means a self-hosted model can drive it, avoiding a hosted API key dependency"
+      ],
+      "alternatives": [
+        "Manual Terraform/OpenTofu workflows with a human-authored PR (the status quo this replaces)",
+        "Atlantis, Terraform Cloud, Spacelift, env0, the already-catalogued Terraducktel (self-hosted Terraform Cloud alternative) — all gate plan/apply on human-authored code, none generate the code itself from a natural-language request",
+        "generic 'AI writes Terraform' coding-agent prompting (no drift correction, no compliance-agent review, no cost/impact summary, no audit trail)"
+      ],
+      "why_it_matters": "This is the first project found in this radar that treats natural-language-to-infra-change as a governed pipeline — plan validation, drift correction, and a compliance gate — rather than just pointing a coding agent at a Terraform repo and hoping for a clean diff, and it comes from a real company running it internally at scale, not a demo.",
+      "why_not_build_it_myself": "The hard part isn't the LLM call, it's the surrounding governance: retrying a plan until it's clean, treating live infra as the source of truth for drift, and gating risky changes behind a compliance-agent review with an audit trail — Kumoss has already built and open-sourced that scaffolding.",
+      "risks": [
+        "Significant self-hosting footprint: FastAPI API, React frontend, PostgreSQL, Redis, RustFS, SearXNG, nginx, OpenTelemetry, and Arize Phoenix for tracing — this is not a single-binary tool",
+        "Authorization must be implemented by the adopter against Kumoss's contract; nothing is provided out of the box",
+        "Scheduled drift detection and the Helm chart are both listed as still in progress; the README explicitly states the roadmap 'reflects intent, not commitment'",
+        "Only 1 subscriber against 145 stars and 8 forks (an elevated ratio), though 57 open issues suggest real usage rather than inflated stars — weigh against it being a 6-month-old project from a single corporate sponsor"
+      ],
+      "first_seen": "2026-11-09",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "v1.0.8",
+      "latest_release_date": "2026-11-05",
+      "source_links": [
+        "https://github.com/InditexTech/kumoss",
+        "https://inditextech.github.io/kumoss"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 145 stars, 8 forks, 1 subscriber, 57 open issues, created 2026-05-06, pushed 2026-11-09, not archived. README (raw.githubusercontent.com) confirms the 9-step request-to-PR flow, the bundled-vs-bring-your-own component table (model/identity/authorization are all BYO), the compliance-agent policy-gate behavior, and that drift correction treats deployed cloud state as source of truth. OpenSSF Scorecard badge and a security disclosure program are both present, which is a stronger-than-typical signal for a 6-month-old repo.",
+      "acted_on": false
+    },
+    {
+      "name": "CloudBurn",
+      "slug": "cloudburn-aws-cost-governance",
+      "repo_url": "https://github.com/towardsthecloud/cloudburn",
+      "website": "https://cloudburn.io",
+      "description": "An open-source policy engine of 82 deterministic cost-waste rules for AWS, runnable in two modes: `scan` statically checks Terraform/CloudFormation files (for CI/PR gating), and `discover` runs the same rules against a live AWS account via read-only API access plus Resource Explorer. Distributed as a CLI (Homebrew/npm, Node 24+), a GitHub Action that annotates and comments on pull requests and can fail a job on severity threshold, a VS Code extension (preview) that flags waste on save, an MCP plugin exposing the rules as read-only agent tools, and an embeddable SDK.",
+      "category": [
+        "infrastructure",
+        "AWS-adjacent tooling",
+        "CI/CD",
+        "security / cost governance"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.1,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions. README presents only the open-source CLI/Action/extension/SDK — no hosted or paid tier is mentioned.",
+      "deployment": [
+        "CLI (Homebrew, npm)",
+        "GitHub Action",
+        "VS Code extension (preview)",
+        "embeddable SDK",
+        "MCP plugin"
+      ],
+      "interfaces": [
+        "CLI",
+        "GitHub Action (PR comments/annotations)",
+        "VS Code extension",
+        "MCP server (read-only)",
+        "SDK"
+      ],
+      "use_cases": [
+        "Add the GitHub Action to fail a PR when a Terraform change introduces a known AWS cost-waste pattern, before it ever applies",
+        "Run `discover` against an existing AWS account (EC2/EB/ALB/CloudFront/S3/Lambda/EKS) to get a one-time inventory of current waste patterns",
+        "On-save VS Code flagging while writing Terraform, instead of finding out about an oversized instance or an idle NAT gateway after the fact",
+        "Give an AI coding agent the MCP plugin so it checks its own generated Terraform against the same 82 rules before proposing it",
+        "Embed the SDK inside an internal platform tool that reviews infra-change PRs automatically"
+      ],
+      "product_opportunities": [
+        "The rule-engine-plus-CI-gate pattern (deterministic rules, not an LLM estimate) is a credible building block for a FinOps feature inside an internal platform or client-facing MSSP cost-review offering"
+      ],
+      "agent_opportunities": [
+        "MCP plugin exposes the rule set as read-only tools an agent can call while drafting or reviewing Terraform",
+        "SDK allows embedding the same rule evaluation inside a custom agent tool rather than shelling out to the CLI"
+      ],
+      "alternatives": [
+        "Infracost (cost estimation, not waste-pattern detection — complementary rather than overlapping)",
+        "cloud-custodian (broader cloud governance DSL, steeper setup), OpenCost/krr (Kubernetes-workload cost, different layer)",
+        "AWS Trusted Advisor / Compute Optimizer (built-in but less transparent rule logic, AWS-account-coupled, no CI-gate workflow)"
+      ],
+      "why_it_matters": "Sourav's stack is AWS-heavy (EC2, Lambda, EKS, ALB, CloudFront, S3) — this is a direct, zero-infrastructure way to catch cost-waste patterns in Terraform before they ship, rather than discovering them on a monthly AWS bill.",
+      "why_not_build_it_myself": "82 maintained, AWS-API-verified cost-waste rules (with Resource Explorer integration for live-account discovery) is a large, continuously-updated ruleset that would take real ongoing effort to track and encode by hand.",
+      "risks": [
+        "The README's own tagline — 'blocks bad AWS spending patterns before they ship and remediates what's already burning' — overstates the tool's actual capability: `discover` only reports what needs fixing, the README does not describe any automated remediation/auto-fix action. Treat 'remediates' as marketing language, not a documented feature, until verified hands-on.",
+        "`discover init` requests `resource-explorer-2:UpdateView` write permission (beyond pure read-only) to enable tag visibility for one opt-in rule — worth reviewing the IAM policy before granting",
+        "VS Code extension is explicitly a preview; the project gives no single overall version/stability statement despite being a 5-year-old repo"
+      ],
+      "first_seen": "2026-11-09",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "vscode-ext v0.1.4 (core CLI version unclear from latest-release endpoint — npm/Homebrew track separately)",
+      "latest_release_date": "2026-11-08",
+      "source_links": [
+        "https://github.com/towardsthecloud/cloudburn",
+        "https://cloudburn.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1,802 stars, 370 forks, 43 subscribers, 57 open issues, created 2021-03-13 (5+ years old), pushed 2026-11-08, not archived. Maintained by towardsthecloud, a known AWS-focused consultancy/newsletter. README (raw.githubusercontent.com) confirms scan-vs-discover modes, CI/PR integration details, AWS read-only permission requirements (plus the one write permission caveat for tag visibility), and that the 'remediates' claim in the tagline is not backed up by any described auto-fix feature in the body text.",
+      "acted_on": false
+    },
+    {
+      "name": "CertMate",
+      "slug": "certmate-cert-control-plane",
+      "repo_url": "https://github.com/fabriziosalmi/certmate",
+      "website": "",
+      "description": "A self-hosted TLS certificate control plane: issues and renews from Let's Encrypt, ZeroSSL, Google Trust Services, Actalis, DigiCert, Sectigo, SSL.com, or its own built-in private CA; discovers existing certificates via network probes and Certificate Transparency logs; tracks renewal dates (including ACME Renewal Information) and deployment targets; and pushes renewed certificates out via deploy hooks/webhooks with a verification probe. Its own internal ACME server (defaulting to 45-day certificates) can issue for internal/private names and IPv4 addresses that public CAs can't cover, interoperable with certbot/lego/acme.sh/cert-manager over HTTP-01, DNS-01 (29 providers), or TLS-ALPN-01. Ships a Web UI, REST API, CLI, and an MCP server.",
+      "category": [
+        "infrastructure",
+        "security / certificate management",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.7,
+      "maturity": "mature",
+      "integration_effort": "medium",
+      "license": "MIT (core); a separate multi-tenant edition, CertMate-ng, is source-available under BSL 1.1 — not evaluated here, flagged for anyone considering that edition specifically",
+      "commercial_use_notes": "Core MIT, no restrictions. Commercial support is separately offered per the README. Confirm which edition (core vs CertMate-ng) before any production decision involving multi-tenancy.",
+      "deployment": [
+        "docker compose",
+        "Linux installer script (systemd)",
+        "Helm chart (single-replica only)",
+        "install from source"
+      ],
+      "interfaces": [
+        "Web UI",
+        "REST API",
+        "CLI (certmate-cli)",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Centralize renewal of every cert across EC2/EB/ALB/CloudFront-fronted services behind one control plane with deployment-verification probes instead of per-service certbot cron jobs",
+        "Run its internal ACME server to issue short-lived certs for internal service names/IPs (e.g. internal ALB listeners, service-to-service mTLS) that Let's Encrypt itself won't cover for private names",
+        "Get ahead of the CA/Browser Forum's SC-081 ballot shortening public cert lifetimes to 200 days (Mar 2026), 100 days (Mar 2027), and 47 days (Mar 2029) by moving to automated issue/renew/verify now rather than when it becomes mandatory",
+        "Use Certificate Transparency-log discovery to find certificates issued outside the normal process before they expire unnoticed",
+        "Point cert-manager (Kubernetes/EKS) at it as an ACME endpoint for internal names via its private CA"
+      ],
+      "product_opportunities": [
+        "Directly relevant to the MSSP side: a client-facing cert-inventory/expiration dashboard built on CertMate's discovery feature would be a concrete, demonstrable deliverable"
+      ],
+      "agent_opportunities": [
+        "Ships an MCP server — an agent can query cert inventory/expiry or trigger issuance/renewal directly",
+        "REST API and CLI are both scriptable for automation outside the MCP path"
+      ],
+      "alternatives": [
+        "certimate-go/certimate (9,426 stars, 919 forks — the larger, more established tool in this exact niche: visual multi-cloud ACME automation across major cloud vendors). CertMate differentiates with its own internal private CA for internal names/IPs, multi-CA support beyond Let's Encrypt, CSR-only issuance (key never leaves the device), explicit ARI/47-day-era readiness, and an MCP server — but certimate-go is the safer default if the need is purely 'automate Let's Encrypt across public domains, visually'",
+        "cert-manager (Kubernetes-native, the mainstream choice inside a cluster, but doesn't cover non-cluster endpoints or run its own private CA for arbitrary internal names)",
+        "mkcertWeb, oriolrius/pki-manager-web (narrower self-hosted PKI UIs, less deployment/discovery automation)"
+      ],
+      "why_it_matters": "Certificate renewal is the kind of recurring, low-visibility operational task that causes real outages when forgotten, and the industry-wide shift to much shorter cert lifetimes (down to 47 days by 2029) turns 'remember to renew' into 'must be fully automated' — CertMate is a mature, actively-developed answer that also covers the internal/private-name gap public CAs can't fill.",
+      "why_not_build_it_myself": "Multi-CA abstraction (7 public CAs plus a built-in private CA), 29 DNS-01 provider integrations, Certificate Transparency-log discovery, and ARI-aware renewal scheduling are each small projects on their own; this has 1.5 years of iteration and frequent releases behind it already.",
+      "risks": [
+        "Runs as a single instance because its renewal scheduler lives inside the web process — the docs suggest active/standby on shared storage for availability rather than offering native HA",
+        "Star:subscriber ratio (1,487:8 ≈ 186:1) is elevated, though 121 real forks and active frequent releases argue against pure inflation",
+        "CertMate-ng (the multi-tenant edition) is BSL-1.1, not OSI-approved — don't assume that edition inherits the core's MIT terms",
+        "Running your own private CA is itself a security-sensitive responsibility (root key custody, revocation) that trades one operational burden for another"
+      ],
+      "first_seen": "2026-11-09",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "v2.55.2",
+      "latest_release_date": "2026-11-06",
+      "source_links": [
+        "https://github.com/fabriziosalmi/certmate"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 1,487 stars, 121 forks, 8 subscribers, 10 open issues, created 2025-06-24, pushed 2026-11-07, not archived. README (raw.githubusercontent.com) confirms the SC-081 cert-lifetime-shortening timeline, that it runs its own internal CA rather than proxying ACME for private names, the 7-plus-private-CA issuance list, 29 DNS-01 providers, and the single-instance-with-active/standby HA caveat. Compared directly against certimate-go/certimate (9,426 stars), the larger and more mainstream project in this niche — catalogued CertMate anyway for its internal-CA and MCP-server differentiation, but flagging certimate-go as the safer default for simpler public-domain-only needs.",
+      "acted_on": false
+    },
+    {
+      "name": "Upright",
+      "slug": "upright-synthetic-monitoring",
+      "repo_url": "https://github.com/basecamp/upright",
+      "website": "",
+      "description": "A self-hosted synthetic monitoring engine from Basecamp (37signals): runs HTTP-status, SMTP-EHLO, MCP sign-in discovery, traceroute, and Playwright-scripted browser-flow probes from one or more sites, and exposes the results as Prometheus metrics (`upright_probe_up`, `upright_probe_duration_seconds`) for AlertManager to alert on — deliberately leaving notification/alerting logic to Prometheus's ecosystem rather than building its own. Built as a Rails engine on SQLite, Solid Queue, and Kamal; deployed to one or more VPS sites via Kamal.",
+      "category": [
+        "infrastructure/observability",
+        "developer productivity",
+        "architecture study"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.2,
+      "maturity": "emerging",
+      "integration_effort": "high",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, no restrictions.",
+      "deployment": [
+        "Rails app deployed via Kamal to a VPS (DigitalOcean/Hetzner-style)"
+      ],
+      "interfaces": [
+        "Prometheus metrics endpoint (Puma plugin, port 9394)",
+        "Admin web UI"
+      ],
+      "use_cases": [
+        "Studying the decoupled-alerting pattern (probe engine emits metrics only; AlertManager owns notification routing) as a design to copy into any internal monitoring tool, rather than bolting notification channels onto the probe engine itself",
+        "Reference for running Playwright browser-flow checks as a first-class probe type alongside simpler HTTP/SMTP checks",
+        "If already running Kamal for deploys and Prometheus/AlertManager for alerting, this slots in with no new alerting stack to learn"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Its 'MCP sign-in discovery' probe type checks that an MCP server's auth flow is healthy — a narrow but concrete example of treating MCP endpoints as something to synthetically monitor like any other service"
+      ],
+      "alternatives": [
+        "Checkly (the hosted equivalent this directly substitutes for — the tradeoff is operational ownership/data control vs managed convenience)",
+        "Grafana Synthetic Monitoring, cloudprober, prodzilla (narrower or more infra-heavy alternatives not deep-reviewed this run)"
+      ],
+      "why_it_matters": "A credible, well-known engineering team (Basecamp/37signals) choosing to decouple probe execution from alerting — emit metrics, let Prometheus/AlertManager own notification policy — is a cleaner architecture than most self-rolled monitoring scripts, even though the Rails/Kamal packaging doesn't fit Sourav's Node-first stack directly.",
+      "why_not_build_it_myself": "Scripting reliable Playwright probes with artifact capture (video/trace) plus a Prometheus exporter and a deploy-time secrets/boot-time-check hardening layer is a real build; studying this is cheaper than building it from scratch even if the Rails runtime itself isn't adopted as-is.",
+      "risks": [
+        "Rails/Kamal/Solid Queue stack is a full foreign ecosystem to operate, not just a binary or container to run — against the stated bias toward JS/TS-first, Docker-deployable tools",
+        "No version number, release history, or community/adoption signals in the README — hard to judge long-term maintenance commitment from the repo alone",
+        "Requires port 25 open for SMTP probes and 2-4GB RAM per site — real infra, not a lightweight add-on",
+        "Credible team (Basecamp/37signals) but a very new repo (created January 2026) with only 5 subscribers against 843 stars"
+      ],
+      "first_seen": "2026-11-09",
+      "last_reviewed": "2026-11-09",
+      "last_meaningful_update": "2026-11-09",
+      "current_version": "v0.4.0",
+      "latest_release_date": "2026-09-07",
+      "source_links": [
+        "https://github.com/basecamp/upright"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MIT, 843 stars, 33 forks, 5 subscribers, 12 open issues, created 2026-01-14, pushed 2026-11-07, not archived, maintained under the basecamp GitHub org (37signals/Basecamp, credible team). README (raw.githubusercontent.com) confirms the probe types, the Prometheus-metrics-only architecture (no built-in notification channel), the Kamal-based per-site VPS deployment model, and minimum-spec/port-25 requirements. Filed STUDY rather than PROTOTYPE specifically because of the Rails/Kamal ecosystem mismatch against the stated JS/TS-first bias, despite the architecture itself being worth learning from.",
       "acted_on": false
     }
   ]
