@@ -1,6 +1,6 @@
 # Catalog
 
-_307 projects tracked. Last updated 2026-11-09._
+_312 projects tracked. Last updated 2026-11-10._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -63,6 +63,7 @@ _307 projects tracked. Last updated 2026-11-09._
 | [CocoIndex](https://github.com/cocoindex-io/cocoindex) | PROTOTYPE | 8.2/10 | RAG infrastructure, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-09-26 |
 | [TanStack AI](https://github.com/TanStack/ai) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-09-29 |
 | [difit](https://github.com/yoshiko-pg/difit) | USE NOW | 8.2/10 | developer productivity, small high-leverage utilities, AI & agent infrastructure | MIT | low | 2026-10-02 |
+| [schemagate](https://github.com/ashishsinha1602/schemagate) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, security | Apache-2.0 | low | 2026-11-10 |
 | [sage-wiki](https://github.com/xoai/sage-wiki) | PROTOTYPE | 8.2/10 | data/search/documents/RAG, AI & agent infrastructure, product building blocks | MIT | low | 2026-10-24 |
 | [formae](https://github.com/platform-engineering-labs/formae) | PROTOTYPE | 8.2/10 | infrastructure, infrastructure as code, AI & agent infrastructure | FSL-1.1-ALv2 (Functional Source License) | medium | 2026-10-26 |
 | [Debug Anything](https://github.com/shreyassaw5394/debuganything) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, developer productivity, debugging | MIT | low | 2026-10-30 |
@@ -75,10 +76,12 @@ _307 projects tracked. Last updated 2026-11-09._
 | [Calnode](https://github.com/Calnode/calnode) | PROTOTYPE | 8.1/10 | product infrastructure, self-hosted SaaS alternatives, AI & agent infrastructure, scheduling | Apache-2.0 | low | 2026-09-27 |
 | [mockd](https://github.com/getmockd/mockd) | PROTOTYPE | 8.1/10 | developer productivity, product infrastructure, AI & agent infrastructure | Apache-2.0 | low | 2026-09-28 |
 | [unpdf / undoc](https://github.com/iyulab/unpdf) | PROTOTYPE | 8.1/10 | product building blocks, document processing, small high-leverage utilities | MIT | low | 2026-10-03 |
+| [Pipewright](https://github.com/huangchengsir/pipewright) | PROTOTYPE | 8.1/10 | deployment, CI/CD, infrastructure, developer productivity | MIT | low | 2026-11-10 |
 | [outloud](https://github.com/visionably/outloud) | USE NOW | 8.1/10 | document processing, small high-leverage utilities, developer productivity, CI/CD | Apache-2.0 | low | 2026-10-13 |
 | [Hexclave](https://github.com/hexclave/hexclave) | PROTOTYPE | 8.1/10 | product building blocks, auth/identity, billing, AI agent infrastructure | Split: MIT (client/SDK packages) / AGPLv3 (server packages); enterprise license available | medium | 2026-10-15 |
 | [Keygate](https://github.com/tabloy/keygate) | PROTOTYPE | 8.1/10 | product building blocks, micro-SaaS opportunity | AGPL-3.0 | low | 2026-11-01 |
 | [CloudBurn](https://github.com/towardsthecloud/cloudburn) | USE NOW | 8.1/10 | infrastructure, AWS-adjacent tooling, CI/CD, security / cost governance | Apache-2.0 | low | 2026-11-09 |
+| [zvec-grep (zg)](https://github.com/zvec-ai/zvec-grep) | USE NOW | 8.1/10 | AI & agent infrastructure, developer productivity, code search, RAG infrastructure | Apache-2.0 | low | 2026-11-10 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
 | [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
@@ -94,8 +97,6 @@ _307 projects tracked. Last updated 2026-11-09._
 | [OpenFGA](https://github.com/openfga/openfga) | PROTOTYPE | 8.0/10 | product building blocks, authorization, identity, backend components | Apache-2.0 | medium | 2026-10-01 |
 | [MiniStack](https://github.com/ministackorg/ministack) | PROTOTYPE | 8.0/10 | infrastructure, developer productivity, AWS-adjacent tooling | MIT | medium | 2026-10-05 |
 | [Plumber](https://github.com/getplumber/plumber) | PROTOTYPE | 8.0/10 | developer productivity, CI/CD, security | MPL-2.0 | low | 2026-10-09 |
-| [schemagate](https://github.com/ashishsinha1602/schemagate) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, product building blocks, security | Apache-2.0 | low | 2026-11-07 |
-| [Pipewright](https://github.com/huangchengsir/pipewright) | PROTOTYPE | 8.0/10 | deployment, CI/CD, infrastructure, developer productivity | MIT | low | 2026-11-09 |
 | [deja-vu](https://github.com/vshulcz/deja-vu) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-14 |
 | [Supercov](https://github.com/supercorp-ai/supercov) | PROTOTYPE | 8.0/10 | developer productivity, testing, AI & agent infrastructure | MIT (core CLI). The optional quality/security scoring feature calls a separate paid API ("TypeSafe AI"/Jev, ~$0.01/MB, cached by content) — not required for core coverage reporting. | low | 2026-10-16 |
 | [AI-DLC Workflows](https://github.com/awslabs/aidlc-workflows) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity, agent orchestration | MIT-0 | low | 2026-10-21 |
@@ -147,6 +148,7 @@ _307 projects tracked. Last updated 2026-11-09._
 | [lazyjournal](https://github.com/Lifailon/lazyjournal) | USE NOW | 7.8/10 | developer productivity, infrastructure, observability | MIT | low | 2026-11-06 |
 | [FormKiQ Core](https://github.com/formkiq/formkiq-core) | PROTOTYPE | 7.8/10 | product building blocks, document processing | MIT | medium | 2026-11-07 |
 | [Kumoss](https://github.com/InditexTech/kumoss) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, infrastructure / infrastructure-as-code, product infrastructure | Apache-2.0 | high | 2026-11-09 |
+| [Runno](https://github.com/taybenlor/runno) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | medium | 2026-11-10 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Reticle](https://github.com/reticlehq/reticle) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, developer productivity, testing | Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use. | medium | 2026-09-11 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
@@ -208,6 +210,7 @@ _307 projects tracked. Last updated 2026-11-09._
 | [ThinkWatch](https://github.com/ThinkWatchProject/ThinkWatch) | PROTOTYPE | 7.5/10 | AI & agent infrastructure, product infrastructure, security, observability | BSL-1.1 | low | 2026-11-05 |
 | [DeskcommCRM](https://github.com/melgarafael/DeskcommCRM) | PROTOTYPE | 7.5/10 | product building blocks, AI & agent infrastructure, self-hosted SaaS alternatives | MIT | medium | 2026-11-08 |
 | [Beancount.io](https://github.com/bex-co/beancount-io) | USE NOW | 7.5/10 | small utilities, product building blocks | MIT | low | 2026-11-08 |
+| [Chronos](https://github.com/sx4im/chronos) | PROTOTYPE | 7.5/10 | developer productivity, testing, architecture study | MIT | medium | 2026-11-10 |
 | [Proval](https://github.com/seoes/proval) | PROTOTYPE | 7.4/10 | developer productivity, AI agent infrastructure, coding agents, CI/CD | AGPL-3.0 | low | 2026-08-30 |
 | [SSH Ache](https://github.com/SSH-Ache/ssh-ache) | PROTOTYPE | 7.4/10 | developer productivity, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Shelve](https://github.com/HugoRCD/shelve) | PROTOTYPE | 7.4/10 | product building blocks, secrets management, developer productivity | Apache-2.0 | low | 2026-09-07 |
@@ -241,6 +244,7 @@ _307 projects tracked. Last updated 2026-11-09._
 | [Pare](https://github.com/Dave-London/Pare) | PROTOTYPE | 7.3/10 | AI & agent infrastructure, MCP servers, developer productivity | MIT | low | 2026-10-28 |
 | [Assay (assay-evals)](https://github.com/tap222/assay-evals) | PROTOTYPE | 7.3/10 | AI & agent infrastructure, developer productivity, testing | MIT | low | 2026-10-30 |
 | [DB Agent](https://github.com/db-agent/db-agent) | PROTOTYPE | 7.3/10 | AI & agent infrastructure, data / search / RAG, product building blocks | Apache-2.0 | low | 2026-11-07 |
+| [sandbox-mcp](https://github.com/shanselman/sandbox-mcp) | PROTOTYPE | 7.3/10 | developer productivity, infrastructure/observability, security tooling | MIT | high | 2026-11-10 |
 | [Laminar](https://github.com/lmnr-ai/lmnr) | PROTOTYPE | 7.2/10 | AI agent infrastructure, LLM observability, agent evaluation | Apache-2.0 | medium | 2026-08-29 |
 | [Edda](https://github.com/fagemx/edda) | PROTOTYPE | 7.2/10 | AI agent infrastructure, agent memory / coordination, developer productivity | MIT OR Apache-2.0 | low | 2026-09-09 |
 | [Meteroid](https://github.com/meteroid-oss/meteroid) | STUDY | 7.2/10 | product infrastructure | AGPL-3.0 | medium | 2026-09-13 |
@@ -264,6 +268,7 @@ _307 projects tracked. Last updated 2026-11-09._
 | [vibecheck](https://github.com/bhurghundii/vibecheck.dev) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, CI/CD | MIT | medium | 2026-10-13 |
 | [RefearnApp](https://github.com/ZAK123DSFDF/refearnapp) | PROTOTYPE | 7.1/10 | self-hosted SaaS alternatives, micro-SaaS opportunity, product building blocks | AGPL-3.0 | medium | 2026-11-01 |
 | [Tracely](https://github.com/jwuthri-cloud/Tracely-ai) | PROTOTYPE | 7.1/10 | AI & agent infrastructure, developer productivity, testing | MIT | medium | 2026-11-04 |
+| [Address](https://github.com/daimon3332/address) | PROTOTYPE | 7.1/10 | developer productivity, testing, small utility | MIT | low | 2026-11-10 |
 | [Chunky](https://github.com/GiovanniPasq/chunky) | PROTOTYPE | 7.0/10 | RAG infrastructure, document processing, small utility | MIT | low | 2026-08-29 |
 | [Client St0r](https://github.com/agit8or1/clientst0r) | PROTOTYPE | 7.0/10 | self-hosted SaaS alternative, MSSP/MSP tooling, product infrastructure | MIT | medium | 2026-09-03 |
 | [Liteque](https://github.com/karakeep-app/liteque) | PROTOTYPE | 7.0/10 | product infrastructure, job queues, small utility, backend components | MIT | low | 2026-09-03 |
