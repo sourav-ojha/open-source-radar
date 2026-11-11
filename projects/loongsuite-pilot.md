@@ -75,3 +75,12 @@ visibility is worth keeping around before wiring it into any shared infrastructu
 Initial discovery and review. GitHub API confirmed Apache-2.0, 157 stars, created
 2026-06-04, pushed_at 2026-08-31, not archived. README verified via
 raw.githubusercontent.com.
+
+### 2026-11-11
+Meaningful update: v1.6.0 -> v1.16.0 (157 -> 250 stars). Most notable addition is a local
+Agent Interceptor (v1.11.0) that redacts API keys, cloud AccessKeys, private keys, and
+database URLs from agent tool-call input/output, fail-open with a rotating access log —
+directly relevant to the MSSP/PTaaS client-data context. Also added GitHub Copilot CLI
+(v1.15.1), Doubao Workspace (v1.15.2), and a Qoder AgentLoop plugin (v1.16.0) as new agent
+integrations, plus safe hook injection for Claude Agent SDK custom session directories
+(v1.10.0). Score raised 8.2 -> 8.4.

@@ -100,3 +100,12 @@ claim.
 ### 2026-11-04
 Discovered via GitHub search (`mcp observability`, `mcp gateway` keyword sweeps). First
 catalog entry.
+
+### 2026-11-11
+Meaningful update: v1.5.3 -> v1.6.0. New hooks for Kilo Code and Qwen Code
+(Windows/PowerShell), plus experimental Devin CLI/Desktop support, widen agent coverage.
+New policy TK-A055 blocks destructive database drop/reset commands, and TK-F009/F015 flag
+PowerShell-profile writes as harness-setting changes — real new policy enforcement, not
+just bug fixes. Added "model receipts" verifying weights files written during a call. Go
+verifier now reaches the same mutation-testing parity as the Python/TypeScript verifiers.
+Score raised 8.0 -> 8.2.
