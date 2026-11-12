@@ -44,3 +44,6 @@ STUDY. Not something to deploy, but a well-documented, concretely engineered exa
 ## Change History
 ### 2026-10-29
 Initial discovery and review. Slot 2 run (product infrastructure, APIs, backend components). Found via GitHub Search API `topic:object-storage created:>2026-06-01`.
+
+### 2026-11-12
+Meaningful update: v0.3.0 → v0.4.0. The ledger tier now scales out horizontally (previously only compute scaled; tested to 300,000 active repositories and 20,000 pushes/sec across a cluster) with zone-aware replica placement for surviving a zone loss. Added production-grade S3/Google Cloud Storage/Azure Blob Storage support (closing the main maturity gap noted at first review), SHA-256 repository support, remote mirroring/fetch, end-to-end OpenTelemetry tracing, and a DNS-rebinding fix for remote-fetch addresses. Upgrading from 0.3.0 requires a storage-format migration tool, not a drop-in swap. Still filed STUDY — the broader CI/CD/code-review vision remains unshipped — but the production object-store support and horizontal ledger scaling are real steps toward the architecture being usable beyond a lab demo. Score 6.2 → 6.6.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "projects": [
     {
       "name": "Xberg",
@@ -16107,7 +16107,7 @@
         "developer productivity"
       ],
       "status": "STUDY",
-      "relevance_score": 6.2,
+      "relevance_score": 6.6,
       "maturity": "experimental",
       "integration_effort": "medium",
       "license": "Apache-2.0",
@@ -16138,20 +16138,20 @@
       "why_it_matters": "A concretely engineered example of separating durable metadata (Raft-replicated ledger) from cheap bulk storage (object store, LSM-style layer merging) applied to a problem — Git hosting — that almost nothing else in the space has rethought this way.",
       "why_not_build_it_myself": "Not applicable; this is a study entry, not something to build a version of.",
       "risks": [
-        "two months old at review (created 2026-08-24), no independent production track record",
-        "scope currently limited to Git storage/transport; the broader CI/CD/code-review vision is stated future work, not shipped"
+        "scope currently limited to Git storage/transport; the broader CI/CD/code-review vision is stated future work, not shipped",
+        "still under a year old (created 2026-08-24); 0.4.0 changes the on-disk storage format and requires a migration tool, so upgrades are not drop-in"
       ],
       "first_seen": "2026-10-29",
-      "last_reviewed": "2026-10-29",
-      "last_meaningful_update": "2026-10-29",
-      "current_version": "v0.3.0",
-      "latest_release_date": "2026-10-14",
+      "last_reviewed": "2026-11-12",
+      "last_meaningful_update": "2026-11-12",
+      "current_version": "v0.4.0",
+      "latest_release_date": "2026-11-08",
       "source_links": [
         "https://github.com/enroute-sh/enroute",
         "https://enroute.sh"
       ],
       "aliases": [],
-      "notes": "Claimed throughput: 7,500+ pushes/second to a single repository, durable on ledger disks before acknowledgment. Not independently re-benchmarked by this review.",
+      "notes": "Claimed throughput: 7,500+ pushes/second to a single repository, durable on ledger disks before acknowledgment. Not independently re-benchmarked by this review. 2026-11-12: v0.4.0 added horizontal scaling for the ledger tier (tested to 300,000 active repositories / 20,000 pushes-sec across a cluster, up from single-node-ledger in 0.3.0), zone-aware replica placement, production S3/GCS/Azure Blob object-store support, SHA-256 repository support, remote mirroring/fetch, end-to-end OpenTelemetry tracing, and a DNS-rebinding fix for remote-fetch addresses — closes much of the 'no production object-store support yet' gap noted at first review.",
       "acted_on": false
     },
     {
@@ -19663,6 +19663,254 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 1116 stars/160 forks/11 subscribers, created 2025-09-24, pushed 2026-11-06, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "PgQue",
+      "slug": "pgque-postgres-event-queue",
+      "repo_url": "https://github.com/NikolayS/PgQue",
+      "website": "https://pgque.dev",
+      "description": "A pure PL/pgSQL revival of Skype-era PgQ: a durable, fan-out event log inside Postgres (snapshot-based batching, TRUNCATE-based table rotation) that runs on any managed Postgres 14+ (RDS, Aurora, Cloud SQL, Supabase, Neon) with zero C extensions and no external daemon — just pg_cron or any scheduler calling a tick function.",
+      "category": [
+        "product building blocks",
+        "data/queues",
+        "infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted. Pure SQL install — no extension approval needed from a managed Postgres provider, which is the actual blocker most in-database queues hit on RDS/Aurora.",
+      "deployment": [
+        "SQL file installed directly into an existing Postgres 14+ database",
+        "no extra process required if pg_cron is available (one scheduled tick)",
+        "works unmodified on RDS, Aurora, Cloud SQL, AlloyDB, Supabase, Neon"
+      ],
+      "interfaces": [
+        "plain SQL functions (language-agnostic)",
+        "client libraries: TypeScript, Python, Go"
+      ],
+      "use_cases": [
+        "durable fan-out event log for a MERN/Node app already on Postgres, instead of standing up Kafka/SQS/Redis-Streams purely for internal event distribution",
+        "multiple independent consumers each replaying the same event stream from their own cursor (closer to Kafka topics than a job queue)",
+        "outbox-pattern style event distribution directly inside an existing RDS/Aurora instance",
+        "audit/event trail that benefits from full Postgres transactional guarantees (ACID enqueue, WAL, backups, replication) with no added infra"
+      ],
+      "product_opportunities": [
+        "backbone for a lightweight webhook/event-fan-out feature in an admin-portal SaaS without adding a message broker to the stack"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "PGMQ (visibility-timeout based, no native fan-out)",
+        "River, Que, pg-boss, Oban, graphile-worker (job-queue frameworks, not fan-out event logs, and most require a language-specific worker binary)",
+        "Kafka / Redis Streams / SQS (external infra, different ops burden)"
+      ],
+      "why_it_matters": "Most existing in-Postgres queues (PGMQ, pg-boss, River) are SKIP LOCKED-based job queues that UPDATE+DELETE rows and accumulate dead tuples under sustained load — a documented failure mode (Heroku's 2015 60k backlog, PlanetScale's 2026 death-spiral post, a real River GitHub issue on autovacuum starvation). PgQue sidesteps that entirely with snapshot-based batching and table rotation instead of per-row deletion, and it is the only option in the comparison table that is both zero-bloat and requires no C extension — meaning it actually runs on managed RDS/Aurora rather than just self-managed Postgres.",
+      "why_not_build_it_myself": "The snapshot/diff visibility mechanism and zero-dead-tuple rotation trick took the original PgQ team at Skype years to get right in production at scale; re-deriving the same guarantees in PL/pgSQL from scratch would be a multi-week project with a real risk of reintroducing the exact bloat failure mode this exists to avoid.",
+      "risks": [
+        "created April 2026 — 7 months old at review, 102 open issues against 45 forks suggests real but still-settling usage",
+        "end-to-end delivery latency is tick-bound (~52ms median at default 100ms tick) — wrong tool if sub-5ms dispatch is required; author states this explicitly",
+        "single-author project (293 of ~345 commits from NikolayS) with some AI-assisted commits (claude, samo-agent) — normal for 2026 but worth knowing before treating it as a team-maintained dependency"
+      ],
+      "first_seen": "2026-11-12",
+      "last_reviewed": "2026-11-12",
+      "last_meaningful_update": "2026-11-12",
+      "current_version": "v0.2.2",
+      "latest_release_date": "2026-10-04",
+      "source_links": [
+        "https://github.com/NikolayS/PgQue",
+        "https://pgque.dev",
+        "https://thebuild.com/blog/2026/05/03/pgque-two-snapshots-and-a-diff/",
+        "https://news.ycombinator.com/item?id=47817349"
+      ],
+      "aliases": [],
+      "notes": "Author (Nikolay Samokhvalov) is the founder of Postgres.ai and a known figure in the Postgres performance/tooling community, which lends credibility beyond the repo's own claims; external review of the snapshot/diff mechanism exists from Christophe Pettus (a well-known independent Postgres consultant). Benchmarks are self-hosted in the repo's own CI (benchmark/tick-rate/), not independently re-run by this review.",
+      "acted_on": false
+    },
+    {
+      "name": "Ruvio",
+      "slug": "ruvio-kv-server",
+      "repo_url": "https://github.com/salihcantekin/ruvio",
+      "website": "https://ruviodb.com/",
+      "description": "A single-process, RESP-compatible (redis-cli-compatible) key-value server written in Rust that folds a cache, a distributed lock service, conditional/compare-and-set writes, a change feed, and a delay queue into one binary — each as a plain Redis-protocol command (LEASE, SEMAPHORE, SETV, CHANGES, XADD DELAY, ZMOVEDUE) rather than a separate system bolted on top of Redis.",
+      "category": [
+        "infrastructure",
+        "product building blocks",
+        "data/queues"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "AGPL-3.0 (server) / MIT (client libraries)",
+      "commercial_use_notes": "Server is AGPL-3.0 — flagged loudly. Running it as an internal, non-redistributed backing store for a SaaS is fine under AGPL (no obligation triggers unless Ruvio's own server code is modified and exposed over a network to third parties); embedding a modified server inside a distributed/resold product would trigger AGPL's network-use clause. Client libraries (used from app code) are separately MIT-licensed, so the Node/TS client itself carries no copyleft obligation.",
+      "deployment": [
+        "single Docker image (amd64/arm64)",
+        "prebuilt binaries for Linux/macOS/Windows",
+        "AUR package for Arch Linux",
+        "drop-in replacement wire protocol — existing redis-cli and RESP clients connect unmodified"
+      ],
+      "interfaces": [
+        "RESP2/RESP3 (Redis wire protocol)",
+        "first-party typed clients: Rust, C#, Go, Java, Python, Node.js",
+        "browser-based Operator UI for inspecting data/Pub/Sub/ACLs"
+      ],
+      "use_cases": [
+        "replacing Redis + a separate lock service (e.g. Redlock) + a separate delay-queue library with one process for a small-to-mid Node/Postgres service",
+        "fencing-token based distributed locks (LEASE/RENEW) for a cron job or worker that must not double-run across instances",
+        "a due-job delay queue (ZPOPBYSCORE/ZMOVEDUE) without pulling in BullMQ or a scheduler library",
+        "a lightweight in-memory change feed (CHANGES) for cache-invalidation fan-out without standing up Postgres logical replication"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Redis/Valkey + Redlock + a job-queue library (BullMQ/pg-boss) + custom CDC — the multi-system stack this replaces",
+        "KeyDB, DragonflyDB (faster Redis-protocol servers, but without the lock/queue/CDC primitives as native commands)"
+      ],
+      "why_it_matters": "The pitch is specific and verifiable: an owner-per-shard engine where the hot path never takes a lock or hops threads, with a documented memory cost per feature (20k leases ≈ 3.6MB). For a small EC2/ECS-deployed service that currently runs Redis for caching, a separate lock mechanism, and a crude delay-queue table, this collapses three operational concerns into one binary with one wire protocol everything already speaks.",
+      "why_not_build_it_myself": "Building a correct distributed-locking primitive with fencing tokens on top of raw Redis (the classic Redlock controversy) is a well-known footgun; Ruvio bakes the fencing-token semantics into the LEASE command itself rather than leaving correctness to the caller.",
+      "risks": [
+        "created mid-October 2026 — about one month old at review, 219 stars, 5 subscribers; no independent production track record yet",
+        "Raft-based failover and cluster routing are claimed but not independently verified by this review",
+        "AGPL-3.0 on the server binary needs a real legal read before any redistribution or managed-hosting scenario, even though plain self-hosted internal use is unaffected"
+      ],
+      "first_seen": "2026-11-12",
+      "last_reviewed": "2026-11-12",
+      "last_meaningful_update": "2026-11-12",
+      "current_version": "ruvio-0.4.0",
+      "latest_release_date": "2026-10-29",
+      "source_links": [
+        "https://github.com/salihcantekin/ruvio",
+        "https://ruviodb.com/",
+        "https://ruviodb.com/benchmarks/",
+        "https://www.npmjs.com/package/ruvio-client"
+      ],
+      "aliases": [],
+      "notes": "Already has six first-party typed client libraries (including npm/Node.js) and published packages on crates.io, NuGet, npm, PyPI and AUR at one month old — unusually complete packaging for this stage, suggesting either a well-resourced solo author or prior unreleased development.",
+      "acted_on": false
+    },
+    {
+      "name": "Keeper.sh",
+      "slug": "keeper-sh-calendar-sync",
+      "repo_url": "https://github.com/ridafkih/keeper.sh",
+      "website": "https://www.keeper.sh",
+      "description": "A self-hosted calendar-syncing engine that pulls events from Google Calendar, Outlook, iCloud, Fastmail, CalDAV, or read-only iCal/ICS feeds and pushes aggregated events to one or more destination calendars so time slots stay aligned across all of them, with a REST API and a global MCP server for agent-driven calendar management.",
+      "category": [
+        "product building blocks",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "AGPL-3.0",
+      "commercial_use_notes": "AGPL-3.0 — flagged. Self-hosting for personal/internal use carries no obligation; redistributing a modified version as a hosted service to third parties would trigger AGPL's network-use clause. The author's own cloud-hosted tier exists specifically to monetize the AGPL original rather than fork it closed.",
+      "deployment": [
+        "Docker Compose (seven images: a convenience `keeper-standalone` plus five granular services — API, web, MCP, cron, worker — behind Postgres/Redis/Caddy)",
+        "self-hosted path gets every Pro feature with no trial limitation",
+        "hosted SaaS at keeper.sh as an alternative to running it yourself"
+      ],
+      "interfaces": [
+        "REST API under /api/v1, token-authenticated",
+        "MCP server for AI-agent calendar access (trigger_sync, pause_sync, etc.)",
+        "combined iCal feed subscribable from any calendar app"
+      ],
+      "use_cases": [
+        "keeping a business calendar, a work calendar, and a personal calendar free of double-booking without manually copying events",
+        "giving a coding agent or personal-assistant agent a single MCP surface to read/manage calendar state across providers instead of per-provider OAuth plumbing",
+        "privacy-filtered calendar sharing (strip event titles/descriptions, replace with a template) when publishing availability externally"
+      ],
+      "product_opportunities": [
+        "directly studyable as a solo-founder micro-SaaS case: AGPL self-hosted-is-the-real-product model, with the hosted tier priced purely on convenience (faster refresh, no infra upkeep) rather than gated features — a monetization pattern worth copying for Sourav's own micro-SaaS ideas"
+      ],
+      "agent_opportunities": [
+        "the MCP server itself is a ready-made 'give an agent calendar authority' building block — usable as-is rather than writing custom Google/Outlook OAuth and polling logic for an agent project"
+      ],
+      "alternatives": [
+        "native provider sync (does not solve cross-provider double-booking)",
+        "Zapier/Make calendar automations (no self-host path, no MCP)",
+        "hand-rolled provider-sync-token polling scripts (the exact thing this replaces)"
+      ],
+      "why_it_matters": "The two concrete design choices called out by the author — deletions tracked via an outliving mapping row so a remote copy is reliably cleaned up later, and a cleanup sweep that only ever touches events Keeper.sh itself created — are the two things that are easy to get subtly wrong in any calendar-sync tool and silently destructive when they are (deleting a user's own event). Making the engine AGPL specifically so that claim is checkable, as the README states outright, is a good sign for a tool that is given write access to a calendar.",
+      "why_not_build_it_myself": "Correct incremental sync against Google/Outlook's own sync-token and delta-link APIs, plus provider-specific auth and the destination-tracking logic needed to avoid duplicate or orphaned events, is a multi-week build to get right across five providers — this already handles it with a tested track record (168 open issues against a 1,465-star, nearly year-old repo indicates real usage surfacing real edge cases).",
+      "risks": [
+        "subscriber count (2) is unusually low relative to stars/forks/open-issue volume for this review's usual fraud heuristics, though the commit history (real named contributors beyond the solo founder, consistent single-maintainer-plus-bots pattern typical of an indie SaaS) does not otherwise show the inflated-engagement signature flagged elsewhere in this catalog",
+        "AGPL-3.0 requires care before any redistribution scenario",
+        "single primary maintainer (1,098 of the repo's commits) running both the open-source project and its monetized hosted tier"
+      ],
+      "first_seen": "2026-11-12",
+      "last_reviewed": "2026-11-12",
+      "last_meaningful_update": "2026-11-12",
+      "current_version": "v2.31.0",
+      "latest_release_date": "2026-11-11",
+      "source_links": [
+        "https://github.com/ridafkih/keeper.sh",
+        "https://www.keeper.sh"
+      ],
+      "aliases": [],
+      "notes": "Built by the founder of Sedna (an AI governance platform) to solve his own triple-calendar scheduling conflicts — a genuine dogfooding origin story rather than a speculative product.",
+      "acted_on": false
+    },
+    {
+      "name": "OpenRun",
+      "slug": "openrun-gitops-deploy",
+      "repo_url": "https://github.com/openrundev/openrun",
+      "website": "https://openrun.dev",
+      "description": "A self-hosted, declarative GitOps deployment platform for web apps and internal tools: apps are defined as a few lines of config in Git, and OpenRun syncs, builds, and runs them on a single Docker/Podman node or a Kubernetes cluster with the same config, with OAuth/OIDC/SAML auth, RBAC, audit logs, per-app isolated database service bindings, and scale-to-zero.",
+      "category": [
+        "infrastructure",
+        "developer productivity",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.6,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, unrestricted for self-hosting or embedding.",
+      "deployment": [
+        "single binary on one server with Docker/Podman",
+        "same declarative config deploys to a Kubernetes cluster",
+        "no external web server dependency (OpenRun is its own web server, enabling scale-to-zero and built-in TLS)"
+      ],
+      "interfaces": [
+        "CLI (openrun app create/update, openrun sync schedule)",
+        "browser-based management console",
+        "GitOps: all app/service state as config files in a Git repo"
+      ],
+      "use_cases": [
+        "deploying internal admin dashboards and tools with OIDC/SAML + RBAC without hand-rolling auth middleware for each one",
+        "giving each deployed app its own provisioned, isolated Postgres/MySQL/SQLite/Redis account automatically via service bindings instead of a shared credential everyone touches",
+        "running managed SQLite with continuous Litestream replication to S3 for small internal tools that don't need a full Postgres instance",
+        "moving an app's deployment definition from a single EC2 box to an EKS cluster without rewriting the app spec"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Coolify, Dokku, CapRover (imperative CLI/UI-first, not declarative-by-default, no direct Kubernetes path)",
+        "Retool / internal-tool builders (hosted SaaS, not self-hosted deploy infra)",
+        "raw Kubernetes + Helm + an identity proxy (far more setup for the same OIDC/RBAC/audit outcome)"
+      ],
+      "why_it_matters": "Most self-hosted PaaS tools in this niche (already saturated per recent runs: miabi, hakopod, cubeship, ninedeploy, compartment) are imperative-first, single-node-only clones of Heroku. OpenRun's actual differentiators are structural, not cosmetic: it is declarative by default (every change is a Git diff, not a UI click that nothing else sees), it targets both a single Docker node and Kubernetes from the same app spec, and it auto-provisions isolated per-app database accounts rather than leaving multi-tenant DB access as the operator's problem. It is also CNCF-landscape-listed and carries an OpenSSF Best Practices badge, which is a real (if modest) third-party corroboration signal most entrants in this niche lack.",
+      "why_not_build_it_myself": "The combination of declarative GitOps sync, dual single-node/Kubernetes deploy targets, OIDC/SAML/RBAC, and automatic per-app database provisioning is a sizeable, security-sensitive surface (auth, secrets, audit logging) that is not worth re-implementing for an internal-tools deployment need when a 3-year-old Apache-2.0 project already does it.",
+      "risks": [
+        "modest adoption for its age (997 stars after 3+ years, single primary maintainer with 1,982 of the repo's commits)",
+        "0 open issues on a 3-year-old, actively pushed repo is unusual — either very tight issue triage or low external bug-report volume; could not be independently distinguished by this review",
+        "AppSpecs (zero-config deploy templates) only cover specific frameworks (Streamlit/Gradio/FastHTML/NiceGUI/Shiny/Reflex); anything else needs a Dockerfile, so a Node/Next.js app isn't zero-config out of the box"
+      ],
+      "first_seen": "2026-11-12",
+      "last_reviewed": "2026-11-12",
+      "last_meaningful_update": "2026-11-12",
+      "current_version": "v0.20.15",
+      "latest_release_date": "2026-11-05",
+      "source_links": [
+        "https://github.com/openrundev/openrun",
+        "https://openrun.dev",
+        "https://landscape.cncf.io/?item=app-definition-and-development--application-definition-image-build--openrun"
+      ],
+      "aliases": [],
+      "notes": "Formerly/also known by the package name 'Clace' in some CI artifacts (codecov project slug references clace.io) — noted here in case a future run surfaces it under that name.",
       "acted_on": false
     }
   ]
