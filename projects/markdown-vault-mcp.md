@@ -13,6 +13,7 @@ Hybrid BM25+semantic search with reciprocal rank fusion and 34 well-scoped MCP t
 - Turn an existing personal notes vault into a Claude-queryable knowledge base without standing up a vector DB
 - Give a coding agent write access to a scratch/notes vault for research capture during a task
 - Embeddings are optional — degrades gracefully to keyword-only search if no embedding provider is configured
+- Search, read, and explore a vault remotely over MCP via the v6.1.0 terminal client, with a bearer token and no local copy of the vault or its index
 
 ## Product Opportunities
 None identified beyond direct use.
@@ -39,12 +40,19 @@ MIT. MIT, no restrictions.
 - zcag/tela (team-oriented, requires standing up a full Docker stack, vs. this being a single-user local tool)
 
 ## Risks / Limitations
-- 32 stars — small maintainer base for a tool that would hold write access to a personal knowledge base
+- 39 stars — small maintainer base for a tool that would hold write access to a personal knowledge base
 - Only useful if Sourav maintains a markdown notes vault worth indexing — no such vault currently referenced in the catalog's prior context
 
 ## Recommendation
-**PROTOTYPE** (score 7.1/10) — see Why I Should Care above.
+**PROTOTYPE** (score 7.3/10) — see Why I Should Care above.
 
 ## Change History
 ### 2026-09-02
 First discovered and reviewed. Verified via GitHub API: license MIT, current version v4.1.0 (2026-08-30).
+
+### 2026-11-14
+Meaningful update: v6.0.0 (2026-11-01) moved embeddings into an incrementally-written
+SQLite database instead of in-memory numpy files, keeping semantic search usable as a
+vault grows. v6.1.0 (2026-11-02) added a terminal client that searches/reads/explores a
+server-published vault over MCP with a bearer token and no local vault copy. Score raised
+7.1 → 7.3.

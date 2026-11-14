@@ -40,11 +40,18 @@ Apache-2.0. Verified via license badge and GitHub API. No restrictions on commer
 
 ## Risks / Limitations
 - Full platform (connectors, indexing, permission engine, UI) rather than a single library — meaningfully more to deploy and operate than a narrow tool
-- Pre-1.0 (v0.8.0), young for a permission-sensitive system — audit the ACL-inheritance logic directly before trusting it with real access boundaries
+- v1.0 (2026-10-27) removed SAML and generic OAuth sign-in as a breaking change — review auth-provider compatibility before upgrading an existing deployment or committing to it for a new one
+- Now past pre-1.0, but still young for a permission-sensitive system — audit the ACL-inheritance logic directly before trusting it with real access boundaries
 
 ## Recommendation
-**PROTOTYPE** (score 7.8/10) — worth a small real trial before committing; audit the permission-inheritance logic directly.
+**PROTOTYPE** (score 8.0/10) — worth a small real trial before committing; audit the permission-inheritance logic directly.
 
 ## Change History
 ### 2026-09-19
 First discovered and reviewed. Verified via GitHub API: Apache-2.0, current version v0.8.0 (2026-09-14).
+
+### 2026-11-14
+v1.0.0 (2026-10-27) adds code graphs, more capable retrieval and agent tools, and
+stronger permission enforcement — a real maturity jump past the pre-1.0 caveat the prior
+review flagged, with a breaking change (SAML/generic OAuth sign-in removed). Score raised
+7.8 → 8.0.

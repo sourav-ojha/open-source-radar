@@ -39,12 +39,17 @@ read-only enforcement (a read-only transaction/open/login check, not a SQL-text 
 per-user 30-day bearer tokens, and response paging capped at 500 rows / 32 KiB. This is a
 direct, well-scoped way to let a coding agent query staging/prod data safely without
 handing over raw credentials — upgrades this from a human-facing tool to an agent-facing
-one too.
+one too. v1.3.0 (2026-11-10) extended this: MCP/the read-only agent now reaches most
+connected engines (not just a handful), each MCP token gets its own tool list, and Studio
+records per-engine what the agent can write, so "read-only" means the same thing in the
+form, the seed file, and the agent.
 
 ## Integration
 Docker image and a Helm chart for Kubernetes are both available (`libredb/libredb-studio`
-on Docker Hub, chart on Artifact Hub). Low effort: `docker run` or `docker compose up` to
-get a working instance pointed at existing databases.
+on Docker Hub, chart on Artifact Hub), plus a Kubernetes Operator on OperatorHub and a
+console plugin for Red Hat OpenShift and Rancher as of v1.2.0 (2026-10-31). Low effort:
+`docker run` or `docker compose up` to get a working instance pointed at existing
+databases.
 
 ## Architecture Notes
 Next.js 16 + React 19 frontend, deployed as a single container that connects out to
@@ -54,9 +59,10 @@ Redis, ClickHouse, MariaDB and Apache Druid's own docs/GUI-tool lists — verifi
 against those pages, not just the README's claim.
 
 ## Maturity
-Emerging but credible. Created 2025-12-23 (~9 months old), 21 contributors, active commits
-daily, current release 0.17.0 (2026-09-26), SonarCloud quality gate and Codecov badges in
-the README.
+Emerging but credible. Created 2025-12-23 (~11 months old), 21+ contributors, active
+commits daily, current release 1.3.0 (2026-11-10, up from 0.17.0 through four
+minor/major releases in under two weeks — 1.0 through 1.3), SonarCloud quality gate and
+Codecov badges in the README.
 
 ## License
 MIT. No restrictions on commercial or SaaS use, redistribution, or embedding, and the
@@ -67,8 +73,9 @@ TablePlus (paid, desktop-only); DBeaver (desktop, no ER diagrams/AI queries, clu
 Adminer (thin, single-engine, no charting); pgAdmin (Postgres-only).
 
 ## Risks / Limitations
-- Only 409 stars / ~9 months old — verify upgrade stability before trusting it with
-  production credentials
+- 1,328 stars / ~11 months old — moved through four minor/major releases (1.0-1.3) in
+  under two weeks; verify upgrade stability before trusting it with production
+  credentials
 - SSO/audit-trail depth is only verified via README/docs claims, not hands-on testing in
   this review
 
@@ -88,3 +95,9 @@ Meaningful update: v0.17.0 added a native, read-only, role-scoped MCP server
 (`/api/mcp`). Confirmed via GitHub release notes. Moves this from a human-only tool to
 one with a direct agent-facing surface — recommendation unchanged (USE NOW) but the
 agent-opportunity case is now concrete rather than speculative.
+
+### 2026-11-14
+Meaningful update: 1.2.0 (2026-10-31) added OpenShift/Rancher support (operator, console
+plugin, cluster-account sign-in); 1.3.0 (2026-11-10) opened MCP/the read-only agent to most
+connected engines, gave each MCP token its own tool list, and added per-engine
+write-permission recording. Recommendation unchanged (USE NOW); score raised 8.6 → 8.7.
