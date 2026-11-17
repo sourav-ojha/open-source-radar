@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-14",
+  "updated": "2026-11-17",
   "projects": [
     {
       "name": "Xberg",
@@ -6476,7 +6476,7 @@
         "testing"
       ],
       "status": "PROTOTYPE",
-      "relevance_score": 7.7,
+      "relevance_score": 7.9,
       "maturity": "emerging",
       "integration_effort": "medium",
       "license": "Split per package, flagged loudly. Apache-2.0 for the embeddable SDK (@reticlehq/core, browser, react, next, vite-plugin, babel-plugin, eslint-plugin — safe to ship inside your own app). Functional Source License 1.1, Apache-2.0-future (FSL-1.1-ALv2) for @reticlehq/server and @reticlehq/test — free for internal/dev/eval use, the one restriction is offering Reticle itself as a competing product; each release converts to Apache-2.0 two years later. The Reticle Enterprise License (source-available) gates enterprise features behind a paid subscription key for production use.",
@@ -6513,16 +6513,16 @@
         "dev-only/localhost-only by design — provides no production runtime value"
       ],
       "first_seen": "2026-09-11",
-      "last_reviewed": "2026-09-11",
-      "last_meaningful_update": "2026-09-11",
-      "current_version": "v2.13.1",
-      "latest_release_date": "2026-09-02",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v3.10.7",
+      "latest_release_date": "2026-11-17",
       "source_links": [
         "https://github.com/reticlehq/reticle",
         "https://docs.reticle.sh"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: license field NOASSERTION (multi-package license, correctly unparseable by GitHub), 465 stars, archived:false, pushed_at 2026-09-11, created 2026-06-11, 100 open issues. Full LICENSE file read directly via raw.githubusercontent.com to get the actual per-package breakdown.",
+      "notes": "GitHub API verified: license field NOASSERTION (multi-package license, correctly unparseable by GitHub), 465 stars, archived:false, pushed_at 2026-09-11, created 2026-06-11, 100 open issues. Full LICENSE file read directly via raw.githubusercontent.com to get the actual per-package breakdown. 2026-11-17: meaningful update, v2.13.1->v3.10.7 (self-writing/self-strengthening replay tests, 17->9 agent-facing tools). GitHub API: 1,287 stars, 254 forks, 276 open issues (up from 465/100).",
       "acted_on": false
     },
     {
@@ -10168,7 +10168,7 @@
         "product infrastructure"
       ],
       "status": "STUDY",
-      "relevance_score": 7.2,
+      "relevance_score": 7.4,
       "maturity": "emerging",
       "integration_effort": "medium",
       "license": "AGPL-3.0",
@@ -10202,17 +10202,17 @@
         "Smaller community/maturity than Lago, the closest direct alternative"
       ],
       "first_seen": "2026-09-13",
-      "last_reviewed": "2026-09-13",
-      "last_meaningful_update": "2026-09-13",
-      "current_version": "v1.0.0-rc7",
-      "latest_release_date": "2026-08-24",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v2.2.3",
+      "latest_release_date": "2026-11-13",
       "source_links": [
         "https://github.com/meteroid-oss/meteroid",
         "https://www.meteroid.com",
         "https://docs.meteroid.com"
       ],
       "aliases": [],
-      "notes": "Project's own README badge reads 'status: experimental' despite 3 years of active development — an unusually honest self-assessment worth trusting over the star/age signal.",
+      "notes": "Project's own README badge reads 'status: experimental' despite 3 years of active development — an unusually honest self-assessment worth trusting over the star/age signal. 2026-11-17: meaningful update, v1.0.0-rc7->v2.2.3 (RC->GA, billing-determinism + billing-safety-net correctness features). GitHub API: 1,362 stars, 87 forks (up from 1,231/unspecified).",
       "acted_on": false
     },
     {
@@ -20649,6 +20649,246 @@
       ],
       "aliases": [],
       "notes": "GitHub API reported NOASSERTION; confirmed dual Apache-2.0/MIT by reading LICENSE, LICENSE-APACHE and LICENSE-MIT directly. 64 stars, 14 forks, 2 subscribers, created 2023-11-08, pushed_at 2026-11-14, not archived.",
+      "acted_on": false
+    },
+    {
+      "name": "Coral",
+      "slug": "coral-agent-execution-rails",
+      "repo_url": "https://github.com/withcoral/coral",
+      "website": "https://withcoral.com",
+      "description": "Self-hosted gateway between AI agents and the systems they work on: agents call tools by writing short TypeScript programs against a provider catalog, Coral checks every underlying call against a per-tool Allow/Ask/Block policy before injecting credentials and forwarding it, and a working program can be saved as a reusable, policy-gated custom tool.",
+      "category": [
+        "AI & agent infrastructure",
+        "product infrastructure",
+        "security"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.2,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0 (confirmed via LICENSE file)",
+      "commercial_use_notes": "Apache-2.0, no restrictions observed on commercial or hosted use of the open gateway itself; a hosted Coral Cloud offering exists alongside it but doesn't gate the self-hosted path.",
+      "deployment": [
+        "desktop app (macOS/Windows/Linux)",
+        "docker compose",
+        "kubernetes",
+        "self-hosted"
+      ],
+      "interfaces": [
+        "MCP server",
+        "REST API",
+        "web UI"
+      ],
+      "use_cases": [
+        "Gate an agent's access to GitHub/Slack/Linear (or any OpenAPI/MCP provider) behind per-tool Allow/Ask/Block policy",
+        "Let an agent compose a one-off integration as code, then promote it to a shared, policy-checked tool for the team",
+        "Bring an internal system's OpenAPI spec as a provider to get the same audit/policy layer for free",
+        "Reduce repeated agent token spend by reusing saved tools instead of re-deriving the same API choreography each run"
+      ],
+      "product_opportunities": [
+        "The save-a-working-interaction-as-a-policy-gated-tool pattern is a reusable building block for internal agent-ops tooling, particularly for constrained third-party-system access in the MSSP/PTaaS context"
+      ],
+      "alternatives": [
+        "ThinkWatch (AI API + MCP governance gateway, BSL-1.1)",
+        "Midplane (Postgres statement-level agent gateway)",
+        "Octelium (ZTNA platform with an added MCP gateway)",
+        "DatI (database-scoped MCP gateway)"
+      ],
+      "why_it_matters": "Most MCP gateways gate which tools an agent can see, all-or-nothing; Coral's unit of control is a custom tool (code), enabling rules finer than any single provider's native permission model allows.",
+      "why_not_build_it_myself": "A code-execution environment against a tool catalog, with policy checks on every underlying call plus a credential-injection layer and a saved-tool registry, is a substantial amount of infrastructure to build and keep secure from scratch.",
+      "risks": [
+        "450+-companies and efficiency claims are self-reported in the README, not independently verified here",
+        "Team deployment (OIDC + Postgres + reverse proxy) is a real infra project, not a one-command install",
+        "Elevated stars:subscribers ratio (~357:1), though paired with real fork and issue activity"
+      ],
+      "first_seen": "2026-11-17",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v1.8.0",
+      "latest_release_date": "2026-11-13",
+      "source_links": [
+        "https://github.com/withcoral/coral",
+        "https://withcoral.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 5,003 stars, 224 forks, 14 subscribers, 143 open issues, created 2026-04-03, pushed 2026-11-17. LICENSE file read directly via raw.githubusercontent.com to confirm Apache-2.0 at the top level (no split-license monorepo structure found).",
+      "acted_on": false
+    },
+    {
+      "name": "Tego",
+      "slug": "tego-agent-kernel-sandbox",
+      "repo_url": "https://github.com/Attention-Span-AI/Tego",
+      "website": "",
+      "description": "Runs any AI agent that is a Linux process under a written YAML contract of allowed files, programs and network hosts, enforced outside the agent by Tego's supervisor and (at higher tiers) the Linux kernel itself, with held-action approval and a hash-chained, tamper-evident record of every run.",
+      "category": [
+        "AI & agent infrastructure",
+        "security",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.0,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions observed.",
+      "deployment": [
+        "single Go binary",
+        "self-hosted",
+        "local dashboard (single-user)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP relay (per-tool rules)",
+        "local web dashboard"
+      ],
+      "use_cases": [
+        "Wrap a coding agent (Claude Code, Codex, a custom agent process) in a contract limited to a repo directory and named hosts before granting write access",
+        "Black-box record any agent command with `tego watch` to get a tamper-evident run log with no contract written first",
+        "Gate individual MCP server tools (allow/hold/deny per tool) live via the MCP relay",
+        "Set hard run limits (tokens, cost, time, stall, repeats) so a runaway agent session stops instead of running up an open-ended bill"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Coral (catalogued this run — enforces at the agent-to-provider call boundary, not the OS process boundary; complementary rather than a substitute)",
+        "Destructive Command Guard (blocks specific dangerous shell commands rather than a full file/network contract)",
+        "Generic container/VM/microVM agent sandboxes (isolate the whole process rather than expressing an auditable per-run contract)"
+      ],
+      "why_it_matters": "Policy enforced inside the agent only holds while the agent follows it; Tego moves enforcement to the kernel, outside the agent's control, which is the only place a prompt-injected or mistaken agent genuinely cannot talk its way past.",
+      "why_not_build_it_myself": "A three-tier (supervisor to kernel) enforcement model with held-action approval, run limits, and a verifiable hash-chained audit log is a substantial, security-sensitive build, not a weekend project.",
+      "risks": [
+        "2 weeks old at review, v0.1.3, single-digit subscriber count, no long production track record",
+        "The project's own docs/GAPS.md explicitly lists known limits — read before relying on it as a complete safety net",
+        "Linux-only; `exec.ask` (holding a program launch) is explicitly reserved/refusing, not implemented, as of this version",
+        "Kernel-level tiers require root, a real decision on a shared machine"
+      ],
+      "first_seen": "2026-11-17",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v0.1.3",
+      "latest_release_date": "2026-11-13",
+      "source_links": [
+        "https://github.com/Attention-Span-AI/Tego"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 25 stars, 2 forks, 1 subscriber, created 2026-11-02, pushed 2026-11-17 (same day as review, active development).",
+      "acted_on": false
+    },
+    {
+      "name": "db-branch",
+      "slug": "db-branch-zfs-database-branching",
+      "repo_url": "https://github.com/db-branch/db-branch",
+      "website": "https://db-branch.com",
+      "description": "Instant, copy-on-write database branches for self-hosted MySQL and PostgreSQL, built on ZFS clones (sub-second for Postgres, ~3s for MySQL, zero bytes copied at creation), with one API surface (CLI, REST, web console, MCP server) over a single node or a Raft-replicated cluster with optional ProxySQL routing.",
+      "category": [
+        "product infrastructure",
+        "developer productivity",
+        "database tooling",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.3,
+      "maturity": "experimental",
+      "integration_effort": "medium",
+      "license": "Apache-2.0 for the core project; separate closed-source paid modules (auth/SSO, audit, history, diff, FSx storage) gated by a license key",
+      "commercial_use_notes": "Core branching functionality (CLI/REST/console/MCP, single-node or cluster) is fully open under Apache-2.0 and usable without any license key. No hosted/cloud version exists (self-hosted only, by the vendor's own statement), removing one lock-in vector. Audit and point-in-time history — the features most relevant to a compliance-sensitive workflow — sit in the paid tier.",
+      "deployment": [
+        "self-hosted (Linux + ZFS)",
+        "Raft cluster",
+        "Multipass VM (Mac/Windows eval path)"
+      ],
+      "interfaces": [
+        "CLI",
+        "REST API",
+        "web console",
+        "MCP server"
+      ],
+      "use_cases": [
+        "Give every CI run or pull request its own full-size database copy, auto-expired via --ttl",
+        "Let a coding agent create a branch over MCP, run a risky migration or query, inspect it, then delete the branch without touching production",
+        "Test a MySQL or Postgres major-version upgrade against one branch with --check-only before touching the base",
+        "Take an instant checkpoint before a risky manual change and restore to it if needed"
+      ],
+      "product_opportunities": [
+        "The disposable, policy-scoped copy-of-a-real-backing-store pattern generalizes beyond databases to any product offering agents scoped, revertible access to data copies"
+      ],
+      "alternatives": [
+        "Neon, PlanetScale (managed, proprietary — the model this clones in self-hosted form)"
+      ],
+      "why_it_matters": "Brings the Neon/PlanetScale instant-branching workflow to a self-hosted Postgres/MySQL setup on EC2/EKS rather than requiring a managed branching database vendor.",
+      "why_not_build_it_myself": "Copy-on-write branching via ZFS clones, plus a Raft-replicated cluster mode, ProxySQL routing, and a unified CLI/REST/console/MCP interface, is substantially more than a snapshot/restore script.",
+      "risks": [
+        "4 days of public history at review — no production-scale track record yet",
+        "ZFS-on-Linux is a real infrastructure prerequisite, not a drop-in addition to an existing non-ZFS host",
+        "Self-labeled Beta with an explicit pre-1.0 API-stability warning",
+        "Audit/history features most relevant to compliance-sensitive use are in the paid tier, not the open core"
+      ],
+      "first_seen": "2026-11-17",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v0.2.5",
+      "latest_release_date": "2026-11-15",
+      "source_links": [
+        "https://github.com/db-branch/db-branch",
+        "https://db-branch.com",
+        "https://demo.db-branch.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0 (per-README; GitHub API license field not independently cross-checked beyond README claim), 61 stars, 1 fork, 1 subscriber, created 2026-11-13, pushed 2026-11-15. Documentation depth (bilingual docs, OpenAPI spec, live console demo, cluster benchmarks) is unusually high for a 4-day-old public repo, suggesting pre-existing private development.",
+      "acted_on": false
+    },
+    {
+      "name": "speedrunner",
+      "slug": "speedrunner-cli-daemon",
+      "repo_url": "https://github.com/anthonyGosme/speedrunner",
+      "website": "",
+      "description": "Speeds up everyday CLI tools written in Python, Ruby, PHP or Node (aws, az, gcloud, ansible, eslint, rubocop, composer, artisan, and hundreds more) by loading each one once in a background daemon and forking a ready process for every subsequent call, with automatic fallback to a native run whenever a call can't be served faithfully.",
+      "category": [
+        "developer productivity",
+        "small high-leverage utilities",
+        "CLI tools"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 7.6,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions observed.",
+      "deployment": [
+        "single binary (Linux x86_64/aarch64, macOS 11+ Intel/Apple Silicon)",
+        "installed locally"
+      ],
+      "interfaces": [
+        "CLI",
+        "shell integration (zsh/bash init hook)"
+      ],
+      "use_cases": [
+        "Warm daemons passively via a shell init hook so everyday CLI calls (aws, eslint, etc.) run several times faster with no workflow change",
+        "Preload every tool a CI or build script calls with `speedrunner exec ./script.sh`",
+        "Speed up a pre-commit hook running black/isort/flake8/mypy or equivalent JS tooling",
+        "Cut wall-clock time in a coding agent's tool-calling loop when the agent shells out to CLI tools repeatedly"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "Tool-specific daemons (eslint_d, dmypy) — per speedrunner's own published benchmarks, slower than its generic fork approach for the tools measured"
+      ],
+      "why_it_matters": "Removes a real, measured, repeated time cost (hundreds of ms to multiple seconds per invocation) from CLIs already in daily use, with published, reproducible benchmarks rather than unverified claims.",
+      "why_not_build_it_myself": "A generic daemon-and-fork mechanism working correctly across unrelated language ecosystems (Python/Ruby/PHP/Node), with a documented fidelity model for what a fork can and can't replicate, is nontrivial systems work.",
+      "risks": [
+        "18 stars, under 3 weeks old at review — no long-run track record across the full breadth of claimed-compatible CLIs",
+        "A forked process cannot replicate everything a tool's interpreter would reload per-invocation — documented in its own known-limits section",
+        "Single maintainer as of this review"
+      ],
+      "first_seen": "2026-11-17",
+      "last_reviewed": "2026-11-17",
+      "last_meaningful_update": "2026-11-17",
+      "current_version": "v1.1.0",
+      "latest_release_date": "2026-11-16",
+      "source_links": [
+        "https://github.com/anthonyGosme/speedrunner",
+        "https://anthonygosme.github.io/fork-fidelity/"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 18 stars, 1 fork, 1 subscriber, created 2026-10-29, pushed 2026-11-16. Benchmark suite (96 commands, VPS/Docker reproducible results) checked into the repo under bench/ rather than only asserted in prose.",
       "acted_on": false
     }
   ]

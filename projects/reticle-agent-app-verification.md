@@ -53,9 +53,10 @@ non-Apache package. That split is worth studying as a pattern for anyone buildin
 a similar "embeddable client, monetizable server" open-core project.
 
 ## Maturity
-Emerging — created 2026-06-11, 465 stars, actively developed (pushed same day),
-latest tag v2.13.1 (2026-09-02). 100 open issues against 465 stars is a
-noticeably high ratio, consistent with a fast-moving, still-rough early project
+Emerging — created 2026-06-11, now 1,287 stars / 254 forks (up from 465 stars at
+last review), actively developed (pushed same day), latest tag v3.10.7
+(2026-11-17, up from v2.13.1). 276 open issues against 1,287 stars remains a
+noticeably high ratio, consistent with a fast-moving, still-rough project
 rather than a stable one.
 
 ## License
@@ -96,3 +97,16 @@ terms directly if ever considering anything beyond personal/internal use.
 ## Change History
 ### 2026-09-11
 Initial discovery and review. Slot 3 (developer utilities, debugging, testing) run.
+
+### 2026-11-17
+Meaningful update. v2.13.1 → v3.10.7 — a real architecture shift, not just patch
+fixes: every agent "drive" of the app is now kept automatically as a replayable
+test with no AI in the loop and no token cost on reruns, and a saved recording
+only becomes a real assertion once the original observation stops reproducing
+(so a replay can't trivially pass by checking a recording against itself). Also
+collapsed the agent-facing tool surface from seventeen tools to nine
+(`reticle_look` with four settings replacing four separate tools) to reduce
+per-turn context cost. Stars 465→1,287, forks →254, open issues 100→276.
+Recommendation unchanged — still PROTOTYPE, same FSL caveat on the server
+package — but the self-writing-test mechanism is a stronger reason to actually
+trial it. Slot 7 run.

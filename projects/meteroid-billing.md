@@ -49,10 +49,11 @@ pre-aggregated usage data — the architectural bet that differentiates it from
 simpler usage-billing tools that need usage pre-summed before ingestion.
 
 ## Maturity
-The project itself displays a self-declared "status: experimental" badge despite being
-created 2023-07-13 (~3 years old) with 1,231 stars and a v1.0.0-rc7 tag (2026-08-24) —
-take that self-assessment at face value rather than reading years-old-and-active as
-"mature." Contributor base has real depth (gaspb: 268, azhur: 222 commits, several more).
+Graduated from release-candidate to a GA v2.x line since the last review: v1.0.0-rc7
+(2026-08-24) → v2.2.3 (2026-11-13), now with 1,362 stars and 87 forks. The project itself
+still displays a self-declared "status: experimental" badge — take that self-assessment
+at face value rather than reading the version jump alone as "mature." Contributor base
+has real depth (gaspb: 268, azhur: 222 commits, several more).
 
 ## License
 AGPL-3.0. **Flagged per policy, loudly**: billing infrastructure is exactly the kind of
@@ -85,3 +86,12 @@ Initial discovery and review. GitHub API confirmed AGPL-3.0, 1,231 stars, create
 2023-07-13, pushed 2026-09-09, not archived, latest release v1.0.0-rc7 (2026-08-24).
 README verified via raw.githubusercontent.com, including the self-declared "experimental"
 status badge.
+
+### 2026-11-17
+Meaningful update. v1.0.0-rc7 → v2.2.3 — out of release-candidate status into a GA v2.x
+line, plus two real correctness/architecture features: "billing determinism" (a movable
+clock, charge-keyed line IDs, one totals function) and a "billing safety net"
+(billing-core, rule registry, invariants, a document corpus, an invoice model). Stars
+1,231→1,362, forks →87. Does not change the recommendation — still STUDY, Lago remains
+the safer immediate adopt — but the correctness-engineering direction is a positive
+signal for the architecture-study case specifically. Slot 7 run.
