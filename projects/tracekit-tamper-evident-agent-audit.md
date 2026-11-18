@@ -109,3 +109,13 @@ PowerShell-profile writes as harness-setting changes — real new policy enforce
 just bug fixes. Added "model receipts" verifying weights files written during a call. Go
 verifier now reaches the same mutation-testing parity as the Python/TypeScript verifiers.
 Score raised 8.0 -> 8.2.
+
+### 2026-11-18
+Meaningful update: v1.6.0 -> v1.7.2. Autotrace now records model calls made through AWS
+Bedrock Runtime (boto3) — directly relevant given the AWS-heavy stack this radar is scoped
+to, since it extends audit coverage beyond direct-to-provider API calls to Bedrock-routed
+ones. Also added reading Codex CLI's own session files for token counts and OpenAI list
+prices (improving cost-accounting accuracy without an extra API round-trip), and a fix so
+the viewer reports when a blocked or unanswered tool call ran anyway rather than silently
+showing it as handled. Score unchanged (8.2) pending a closer look at the Bedrock
+integration specifically; recommendation unchanged (PROTOTYPE).

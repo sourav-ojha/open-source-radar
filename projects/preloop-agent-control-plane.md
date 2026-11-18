@@ -92,3 +92,6 @@ through it.
 ## Change History
 ### 2026-09-09
 Initial discovery and review. Slot 1 (AI agents, MCP, coding productivity) run.
+
+### 2026-11-18
+Meaningful update: v0.15.0 -> v1.0.2 — a 0.x-to-1.0 graduation, the clearest maturity signal available for this kind of project. The release now ships signed Sigstore build provenance and attestation for every asset, CycloneDX 1.6 SBOMs per component (backend/frontend/CLI, registry-attached and digest-bound), Windows binaries with SignPath code signing, and a Helm chart for Kubernetes install. None of this changes the core "AI agent control plane / software factory" positioning, but it meaningfully reduces the supply-chain-trust risk of adopting it, which was an implicit gap at v0.15.0. Recommendation unchanged (PROTOTYPE) pending a hands-on test, but the graduation to 1.0 with provenance tooling in place is reason to move it up the trial queue.

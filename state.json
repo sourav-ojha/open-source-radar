@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-17",
-  "last_successful_run": "2026-11-17",
-  "run_count": 77,
-  "rotation_slot_last_used": 7,
+  "last_run": "2026-11-18",
+  "last_successful_run": "2026-11-18",
+  "run_count": 78,
+  "rotation_slot_last_used": 1,
   "recent_categories": [
     "experimental/hidden gems (slot 7) — an in-process Deterministic Simulation Testing framework for Go built on testing/synctest and stateless model checking, from a credible prolific Go OSS author (k1LoW/detest, 0 stars, catalogued on architecture merit not traction), an embeddable Go engine combining a vector DB (HNSW/IVF/Vamana) and a sub-microsecond KV store behind one interface with an MCP server for agent memory (rostamlabs/rostam, Apache-2.0, beta, self-reported benchmarks explicitly caveated by its own authors), a zero-dependency single-binary Go WAF with tokenizer-based cumulative threat scoring and a 44-tool MCP server, directly relevant to the MSSP/PTaaS secondary context (GuardianWAF, MIT core with planned future commercial cluster tier), and a Node/Postgres self-hosted Shopify alternative with a Shopify-aligned Storefront API and an out-of-process app-marketplace SDK (shopnex-ai/shopnex, MIT). vertti/preflight (single-binary container/CI validation toolkit: command/env/file/HTTP/TCP/checksum checks) was today's Small but High-Leverage Utility. A same-day GitHub 'self-hosted alternative' keyword search surfaced a wave of near-identical repos (openma-ai/open-managed-agents 338★/1 subscriber, SourceWeft 329★/2 subscribers, Kabanya/Pomodoist 454★/3 subscribers, plus several 'local-first AI workspace' repos — LodyAI/Lody 1572★/5 subs, zhitongblog/solomd 1393★/6 subs, glanderness/BeefTV 1887★/12 subs, ai4s-research/open-science 2046★/6 subs, ling-stack-org/ling-stack 996★/0 subs) all showing star:subscriber ratios from ~150:1 to effectively infinite — reconfirmed the inflated-engagement pattern flagged in prior runs and excluded all of them. 'Still Worth Trying' rotated to nono, ctx, and SnapOtter — none used in the eight immediately preceding rotations.",
     "AI agents/MCP/coding productivity (slot 1) — a crowdsourced, evidence-graded corpus of coding-agent failure/fix lessons served over MCP (MisakaNet, 543 stars, Apache-2.0), a 28-package/240-tool MCP wrapper suite replacing raw CLI output with structured JSON to cut agent context spend (Pare), and a statement-level policy/masking/audit gateway for AI-agent access to Postgres (Midplane, very early but directly relevant to the MSSP/PTaaS context). Paseo (v0.12.0->v0.14.0-beta.1, cross-machine agent delegation via `host add` over SSH/relay) and schemagate (v1.10.0->v1.14.0, LlamaIndex integration plus a new deep_answer MCP tool) both had meaningful updates. Rejected a confirmed template-spam wave of near-identical 'genpark-*' agent-governance skill repos duplicated across two GitHub orgs (alphaparkinc/Alpha-Park), each sitting at exactly 7 stars with marketing-heavy, substance-light READMEs; reconfirmed the ongoing oversaturation of generic 'coding agent orchestration'/'agent sandbox' GitHub search results (git-worktree-per-agent managers, desktop multi-agent cockpits) with no new standout. Held Qsnh/skillsgist (self-hosted Agent Skills registry), david-engelmann/maidan (agent-swarm task queue with results delivered to GitHub/Slack/Linear), and kitepon/aiterm-mcp (tmux-backed MCP terminal that launches other coding agents) to Worth Watching as too thin for a full catalog entry. 'Still Worth Trying' rotated to Xberg, Bernstein, and Beads — none used in the five immediately preceding rotations.",
@@ -23,22 +23,10 @@
     "product infrastructure / APIs / backend components (slot 2) — a pure-PL/pgSQL revival of Skype-era PgQ giving any managed Postgres (RDS/Aurora/Supabase/Neon) a zero-bloat, snapshot-batched fan-out event log with no C extension and no external daemon, credibly backed by Postgres.ai founder Nikolay Samokhvalov and externally reviewed by Postgres consultant Christophe Pettus (PgQue); a one-month-old single-process Rust RESP-compatible key-value server that folds a distributed lock service, conditional writes, a change feed and a delay queue into native Redis-protocol commands with six first-party clients including Node.js (Ruvio, AGPL-3.0 server flagged); a solo-founder calendar-sync engine with a global MCP server and an AGPL-self-hosted-is-the-real-product monetization model worth studying independent of the tool itself (Keeper.sh); and a 3-year-old CNCF-landscape-listed declarative GitOps deployment platform differentiated from the saturated self-hosted-PaaS niche by targeting single-node Docker and Kubernetes from the same app spec plus auto-provisioned per-app database service bindings (OpenRun). Enroute's v0.3.0->v0.4.0 release (horizontal ledger scaling tested to 300k repos/20k pushes-sec, production S3/GCS/Azure object-store support, SHA-256 repos, OpenTelemetry tracing) was a meaningful update, score 6.2->6.6. Held youpi-pg/YouPI-PG (self-hosted UPI payment gateway, 0% fees, WhatsApp OTP) to Worth Watching over its fragile SMS/Gmail-parsing payment-verification architecture, explicit 'research project, not production-ready' self-disclaimer, and a suspicious 2-month-old star/fork/subscriber ratio despite a genuinely interesting India-market angle. Rejected forwardemail/forwardemail.net as an established 6-year-old product whose BUSL-1.1/MPL-2.0 dual license caps the commercial-embedding use case this radar optimizes for, without enough fresh differentiation from the already-catalogued Hyvor Relay to justify the review budget. Generic GitHub keyword searches across change-data-capture, GraphQL federation, lightweight secrets management, and multi-tenant billing-starter terms were almost entirely awesome-list and AI-agent-hype noise today — the real finds all surfaced as tangential hits inside searches aimed at a different niche (webauthn/passkeys, workflow-engine, rate-limiting), reinforcing the prior pattern that narrow topic: filters outperform broad in:readme keyword sweeps in this category. 'Still Worth Trying' rotated to Issuerd, nono, and NestLens — none used in the five immediately preceding rotations.",
     "developer utilities/debugging/testing (slot 3) — a multi-forge code review TUI with persistent line/file/review comments and push-back to GitHub/GitLab/Gitea/Bitbucket/Azure DevOps/Gerrit (tuicr), a local-first agent-plan/diff annotation surface wired into eight-plus coding-agent harnesses with an open-core local-app/hosted-Workspaces split, distinct from the already-catalogued Planning with Files (which persists agent task state rather than reviewing agent output) (Plannotator), a self-hosted Playwright results dashboard with failure clustering, flaky scoring, and locator healing under a split MIT-SDK/FSL-dashboard license (Piwi), a mature pnpm+Turborepo monorepo CLI filling the workspace-health/release gap Turborepo itself leaves open (repoctl), and a content-aware per-file-type diff engine (code/images/fonts/archives/PDFs) with published per-type accuracy figures, AGPL-3.0 core plus a commercial license, filed STUDY (OmniDiff). Dicklesworthstone/doodlestein_self_releaser (local GitHub-Actions-throttle fallback release tool reusing the existing workflow YAML via nektos/act, MIT with an unusual OpenAI/Anthropic-restricting rider flagged in the writeup) was today's Small but High-Leverage Utility. Held argos-ci/argos (open source MIT visual-testing platform pitched at teams and AI agents) out of the main catalog — self-hosting is explicitly not officially supported per its own docs, matching the 'open-source but functionally SaaS-only' quality-filter pattern in AGENT.md §16; also held Erkinbek/bigtext and MR-TABATA/MrEditor (two same-week, near-identical huge-file log/text editor pitches, both 0 subscribers / 0 open issues) and PixelPaw-Labs/codex-trace (OpenAI-Codex-CLI-only session log viewer, narrow single-agent scope) to Worth Watching. Rejected knope-dev/knope as no clearer differentiation from the already-mainstream semantic-release/changesets/release-please release-automation niche, and reconfirmed the saturated terminal-database-client wave (lazydb/datarig/sqlmux and prior entrants) with no new standout. Generic topic: searches (debugging, profiling, code-analysis, testing-tools, api-testing) surfaced almost entirely already-mainstream household names (Playwright, Hoppscotch, Bruno, Mocha, PHPUnit, Vitest, mitmproxy) excluded by policy; narrower niche topic: searches (flaky-tests, test-coverage, snapshot-testing, database-migration, schema-diff, log-viewer, visual-regression-testing, mutation-testing, release-automation) produced the real signal today. 'Still Worth Trying' rotated to CATS, Beads, and Artifact Keeper — none used in the eight-plus immediately preceding rotations.",
     "data, search, documents, RAG (slot 4) — a mature Postgres extension adding BM25 full-text + vector search + facets inside Postgres itself, AGPL-flagged (ParadeDB), a security-conscious agentic-PDF-RAG MCP server that flags hidden/injected PDF text instead of silently ingesting it (pdf-mcp), a cross-language (Rust/Python/Go/C#/Node native+WASM) Office-document text-extraction library (Office Oxide), a fast local-only PDF parser from the official LlamaIndex org with an honest cloud-escalation path (LiteParse), and a pluggable single-binary data-replication engine positioned between hand-rolled sync scripts and Debezium's Kafka weight (Filament). A 3-year-old dual Apache-2.0/MIT bank-statement parser (eight formats plus scanned-PDF/LLM fallback, treasury analytics, two-way reconciliation) was today's Small but High-Leverage Utility (bankstatementparser), with its GitHub-API-reported NOASSERTION license corrected by reading LICENSE-APACHE/LICENSE-MIT directly. Checked 64 slot-4-category catalog entries' release tags via the GitHub API and found four real meaningful updates: RushDB's v3.0 (2026-10-28) replaced its Neo4j-backed core with a native Rust engine (LMPG) adding Postgres-wire/Bolt/gRPC protocol support and simplified its split Elastic License 2.0/Apache-2.0 licensing to plain Apache-2.0, resolving both limitations the original review flagged; PipesHub AI hit v1.0.0 (code graphs, stronger permission enforcement, breaking SAML/OAuth removal); LibreDB Studio went 0.17.0→1.3.0 (OpenShift/Rancher operator, per-engine granular MCP permission scoping); and Markdown Vault MCP went v4.1.0→v6.1.1 (SQLite-backed incremental embeddings, a remote terminal MCP client). Rejected Zleap-AI/SAG and SAG-Wiki (2,969 and 1,180 stars against 4 and 3 subscribers respectively — ~740:1 and ~390:1 ratios, a systemic pattern across the whole org) despite a real arXiv paper backing the retrieval architecture, and held zentity-io/zentity (Elasticsearch-only entity resolution) out as inferior to the already-catalogued, stack-agnostic GoldenMatch. Noted a recurring saturated-niche wave of tiny new embedded vector+graph+document databases (YoKONCy/TriviumDB, cyberlife-coder/VelesDB — the latter also NOASSERTION-licensed) against the already-catalogued LatticeDB/rostam/antfly/seekdb/RushDB, with no standout clearing the bar. 'Still Worth Trying' rotated to LoongSuite Pilot, SIMURG, and OpenNotebookLM — none used in the prior thirty rotations.",
-    "experimental projects and hidden gems (slot 7) — three independent, complementary takes on constraining what an AI agent with real credentials can actually do: a well-funded, well-trafficked self-hosted gateway where agents write short TypeScript programs against a provider catalog and every underlying call is checked against a per-tool Allow/Ask/Block policy, with working programs savable as shared custom tools (withcoral/coral, Apache-2.0, 5,003 stars/224 forks, v1.8.0), a 2-week-old Go tool that enforces a per-agent file/program/network contract outside the agent at the Linux kernel level with a hash-chained audit log and candidly self-documented known limits (Attention-Span-AI/Tego, Apache-2.0), and a 4-day-old open-core ZFS-clone-based self-hosted instant database-branching tool for MySQL/Postgres with a built-in MCP server pitched explicitly at AI-agent sandboxes (db-branch/db-branch, Apache-2.0 core + paid closed-source audit/history modules). anthonyGosme/speedrunner (an interpreter-preloading daemon-and-fork speedup for everyday Python/Ruby/PHP/Node CLIs like the AWS CLI and eslint, with a real reproducible benchmark suite despite only 18 stars) was today's Small but High-Leverage Utility. Checked Reticle and Meteroid for meaningful updates: Reticle (v2.13.1->v3.10.7) now auto-records every agent app-verification drive as a replayable, self-strengthening test with no AI/token cost on replay, and cut its agent-facing tool surface from 17 to 9 — a real update, score 7.7->7.9; Meteroid (v1.0.0-rc7->v2.2.3) graduated out of release-candidate status with real billing-determinism and billing-safety-net correctness features — score 7.2->7.4. Rejected jjyr/canban as a duplicate of the already-catalogued Kanzo agent-kanban niche, and held yocontra/pulsar (agent-to-agent MCP messaging, created the same day as review) out as too new to evaluate. Reconfirmed the saturated 'agent sandbox'/'agents never see your credentials' GitHub search wave (boxery, agent-microvm, skybreaker, nullkey, second-shift, airlock) with no new standout beyond Tego's distinct kernel-enforcement angle. Held modem-dev/boxery (crowded agent-VM-sandbox niche despite 115 stars), 0nelight/sutra-os (Clojure ontology platform, NOASSERTION license, off-stack), and matheuzgomes/gawain (Python type-hint enforcer, too new/narrow) to Worth Watching. HN Algolia's show_hn and self-hosted-keyword search_by_date endpoints supplied useful discovery seeds today (Coral, db-branch, speedrunner, canban, HolyArrs, OpenTodo, Rbit, Sutra-OS all surfaced there) without needing WebSearch/WebFetch. 'Still Worth Trying' rotated to OpenDataLoader PDF, Graphify, and agent-device — none used in recent rotations per the available history."
+    "experimental projects and hidden gems (slot 7) — three independent, complementary takes on constraining what an AI agent with real credentials can actually do: a well-funded, well-trafficked self-hosted gateway where agents write short TypeScript programs against a provider catalog and every underlying call is checked against a per-tool Allow/Ask/Block policy, with working programs savable as shared custom tools (withcoral/coral, Apache-2.0, 5,003 stars/224 forks, v1.8.0), a 2-week-old Go tool that enforces a per-agent file/program/network contract outside the agent at the Linux kernel level with a hash-chained audit log and candidly self-documented known limits (Attention-Span-AI/Tego, Apache-2.0), and a 4-day-old open-core ZFS-clone-based self-hosted instant database-branching tool for MySQL/Postgres with a built-in MCP server pitched explicitly at AI-agent sandboxes (db-branch/db-branch, Apache-2.0 core + paid closed-source audit/history modules). anthonyGosme/speedrunner (an interpreter-preloading daemon-and-fork speedup for everyday Python/Ruby/PHP/Node CLIs like the AWS CLI and eslint, with a real reproducible benchmark suite despite only 18 stars) was today's Small but High-Leverage Utility. Checked Reticle and Meteroid for meaningful updates: Reticle (v2.13.1->v3.10.7) now auto-records every agent app-verification drive as a replayable, self-strengthening test with no AI/token cost on replay, and cut its agent-facing tool surface from 17 to 9 — a real update, score 7.7->7.9; Meteroid (v1.0.0-rc7->v2.2.3) graduated out of release-candidate status with real billing-determinism and billing-safety-net correctness features — score 7.2->7.4. Rejected jjyr/canban as a duplicate of the already-catalogued Kanzo agent-kanban niche, and held yocontra/pulsar (agent-to-agent MCP messaging, created the same day as review) out as too new to evaluate. Reconfirmed the saturated 'agent sandbox'/'agents never see your credentials' GitHub search wave (boxery, agent-microvm, skybreaker, nullkey, second-shift, airlock) with no new standout beyond Tego's distinct kernel-enforcement angle. Held modem-dev/boxery (crowded agent-VM-sandbox niche despite 115 stars), 0nelight/sutra-os (Clojure ontology platform, NOASSERTION license, off-stack), and matheuzgomes/gawain (Python type-hint enforcer, too new/narrow) to Worth Watching. HN Algolia's show_hn and self-hosted-keyword search_by_date endpoints supplied useful discovery seeds today (Coral, db-branch, speedrunner, canban, HolyArrs, OpenTodo, Rbit, Sutra-OS all surfaced there) without needing WebSearch/WebFetch. 'Still Worth Trying' rotated to OpenDataLoader PDF, Graphify, and agent-device — none used in recent rotations per the available history.",
+    "AI agents/MCP/coding productivity (slot 1) — a self-hosted agent-memory, document-search and code-intelligence layer from ClickHouse Inc. built on ClickHouse itself, with memory linked to the code it describes and published, honestly-caveated benchmarks (ClickHouse/loom), a self-hosted harness-abstraction layer implementing an open Unified Harness Protocol across 31+ coding-agent harness bases behind one OpenAI-Responses-compatible API (HarnessRouter Community Edition, Apache-2.0), and a unified runtime \"antivirus\" for AI agents consolidating command-blocking, supply-chain scanning, skill/MCP review and prompt-injection screening into one approval/audit flow across 16 harnesses (hashgraph-online/hol-guard, Apache-2.0, flagged for a 555:1 stars:subscribers ratio paired with real fork activity, and noted as overlapping the already-catalogued Destructive Command Guard/SkillSpector/cisco-mcp-scanner on individual surfaces). NVIDIA/SkillEvaluator was promoted off Worth Watching (held since 2026-09-30) after v1.0.1 shipped a standalone HarnessCheck compatibility checker needing no model key or NVIDIA pipeline, resolving the original hold reason. Five meaningful updates: Preloop (v0.15.0->v1.0.2, graduated to 1.0 with signed Sigstore provenance/SBOMs/Helm chart), redhat-et/ripwire (v0.5.0->v0.6.10, measured 35-67% CPU and ~48% peak-memory reduction on warm large-tree queries), Paseo (v0.15.0->v0.16.1, built-in plugin gallery), LoongSuite Pilot (v1.16.0->v1.18.0, per-task agent-call audit logging for OpenClaw/Hermes), and Tracekit (v1.6.0->v1.7.2, new AWS Bedrock Runtime autotrace coverage, directly AWS-relevant). Katta041/asitis-agent-tools (a read-only linter showing exactly what a coding agent loads from CLAUDE.md/AGENTS.md/SKILL.md, with token-budget estimates) was today's Small but High-Leverage Utility. Checked MisakaNet, ZCode, Pare, midplane, OpenJudge, dao-code, moai-adk and planning-with-files for meaningful updates - all routine content/patch releases not clearing the bar. Rejected Siddhant-K-code/agent-trace (duplicate of the saturated OrcaReplay time-travel-debugging niche) and reconfirmed MCPJam/inspector's prior 2026-09-11 rejection (overlaps mcpsnoop). Held mobile-next/mobile-mcp (off-stack mobile), awdr74100/figwright (Figma MCP, tangential, 362:1 star ratio), SonarSource/sonarqube-mcp-server (thin official wrapper around an already-mainstream tool), mozilla-ai/otari (saturated LLM-gateway niche despite Mozilla backing) and conorbronsdon/agent-memory-kit (2 stars, too early) to Worth Watching/rejected. Broad GitHub sort=updated keyword sweeps on mcp-server/agent-skills/coding-agent/llm-gateway topics were almost entirely noise today, including one repo reporting 467,084 stars with no corresponding engagement - reconfirming the star-inflation pattern flagged in prior runs; narrower topic:/stars-filtered queries plus direct GitHub releases/commits checks on already-tracked repos supplied the real signal. 'Still Worth Trying' rotated to Destructive Command Guard, mcpsnoop, and netbridge - none used in any of the prior twenty rotations."
   ],
   "evaluated_repos": [
-    "XAIHT/Tlamatini",
-    "moira-mcp/moira",
-    "Capsize-Games/airunner",
-    "z8run/z8run",
-    "Miosa-osa/OptimalEngine",
-    "openmeterio/openmeter",
-    "flexprice/flexprice",
-    "getlago/lago-api",
-    "getlago/lago-front",
-    "liamkillingback/aurora-meter",
-    "snapotter-hq/SnapOtter",
-    "awslabs/project-lakechain",
-    "marieai/marie-ai",
     "CogStack/CogStack-NiFi",
     "Rajsuthan/meridian",
     "ModelsLab/modelq",
@@ -1525,7 +1513,20 @@
     "Spielewoy/autoprompt-skill",
     "lmnr-ai/lmnr",
     "cyanheads/mcp-ts-core",
-    "sqliteai/sqlite-sync"
+    "sqliteai/sqlite-sync",
+    "ClickHouse/loom",
+    "SonarSource/sonarqube-mcp-server",
+    "HarnessRouter/harnessrouter",
+    "mozilla-ai/otari",
+    "Siddhant-K-code/agent-trace",
+    "mobile-next/mobile-mcp",
+    "conorbronsdon/agent-memory-kit",
+    "api7/aisix",
+    "Jwuthri/Tracely-ai",
+    "awdr74100/figwright",
+    "Katta041/asitis-agent-tools",
+    "MCPJam/inspector",
+    "preloop/preloop"
   ],
   "rejected": [
     {
@@ -3147,6 +3148,36 @@
       "repo_url": "https://github.com/HolyArrs/HolyArrs",
       "reason": "off-mission - self-hosted Netflix/Spotify-style personal media server, 1,398 stars in 8 days (elevated star velocity vs. 5 subscribers). Consumer media app, not a product-building-block or dev-productivity tool; not evaluated further.",
       "date": "2026-11-17"
+    },
+    {
+      "repo_url": "https://github.com/Siddhant-K-code/agent-trace",
+      "reason": "duplicate - 'local evidence and replay for coding agents' overlaps the already-saturated time-travel-debugging-for-agents niche (OrcaReplay and five-plus near-identical prior entrants already rejected).",
+      "date": "2026-11-18"
+    },
+    {
+      "repo_url": "https://github.com/mobile-next/mobile-mcp",
+      "reason": "off-stack - MCP server for driving iOS/Android apps; no mobile-dev axis in this profile (MERN/AWS backend focus).",
+      "date": "2026-11-18"
+    },
+    {
+      "repo_url": "https://github.com/awdr74100/figwright",
+      "reason": "held to Worth Watching - two-way Figma MCP server, legitimate but tangential to backend/product-building axes; 362:1 stars:subscribers ratio flagged.",
+      "date": "2026-11-18"
+    },
+    {
+      "repo_url": "https://github.com/SonarSource/sonarqube-mcp-server",
+      "reason": "held to Worth Watching - official vendor MCP server, but a thin wrapper around an already-mainstream tool (SonarQube) with no substantial new capability beyond token-based API bridging.",
+      "date": "2026-11-18"
+    },
+    {
+      "repo_url": "https://github.com/mozilla-ai/otari",
+      "reason": "held to Worth Watching - Mozilla-backed self-hosted AI gateway, but the LLM-gateway niche is already saturated and repeatedly rejected (LiteLLM, Bifrost, etc.); Mozilla backing alone isn't yet a clear differentiator.",
+      "date": "2026-11-18"
+    },
+    {
+      "repo_url": "https://github.com/conorbronsdon/agent-memory-kit",
+      "reason": "held to Worth Watching - thin file-based agent-memory-hygiene loop, 2 stars/0 forks at 5 months old, too early to assess.",
+      "date": "2026-11-18"
     }
   ],
   "known_releases": {
@@ -3239,8 +3270,8 @@
       "date": "2026-08-30"
     },
     "alibaba/loongsuite-pilot": {
-      "version": "v1.16.0",
-      "date": "2026-11-06"
+      "version": "v1.18.0",
+      "date": "2026-11-17"
     },
     "HelpCode-ai/anythingmcp": {
       "version": "v0.4.4",
@@ -3419,8 +3450,8 @@
       "date": "2026-08-30 (npm) / 2026-09-08 (nightly tag)"
     },
     "preloop/preloop": {
-      "version": "v0.15.0",
-      "date": "2026-08-20"
+      "version": "v1.0.2",
+      "date": "2026-11-12"
     },
     "edgehero/pi-dispatch": {
       "version": "admin-v1.10.2",
@@ -3431,8 +3462,8 @@
       "date": "2026-09-09"
     },
     "redhat-et/ripwire": {
-      "version": "v0.5.0",
-      "date": "2026-09-08"
+      "version": "v0.6.10",
+      "date": "2026-11-08"
     },
     "craigmccaskill/posthorn": {
       "version": "v1.2.0",
@@ -3731,8 +3762,8 @@
       "date": "2026-09-22"
     },
     "getpaseo/paseo": {
-      "version": "v0.15.4",
-      "date": "2026-11-10"
+      "version": "v0.16.1",
+      "date": "2026-11-17"
     },
     "PrismorSec/prismor": {
       "version": "v1.59.0",
@@ -3883,12 +3914,12 @@
       "date": "Unclear based on available documentation (no tagged GitHub release)"
     },
     "NVIDIA/SkillEvaluator": {
-      "version": "v0.8.0",
-      "date": "2026-11-06"
+      "version": "v1.0.1",
+      "date": "2026-11-18"
     },
     "zai-org/ZCode": {
-      "version": "v3.17.2",
-      "date": "2026-11-04"
+      "version": "v3.18.2",
+      "date": "2026-11-16"
     },
     "openfga/openfga": {
       "version": "v1.21.0",
@@ -4087,8 +4118,8 @@
       "date": "2026-10-12"
     },
     "NVIDIA/SkillSpector": {
-      "version": "v2.13.4",
-      "date": "2026-11-04"
+      "version": "v2.13.6",
+      "date": "2026-11-16"
     },
     "vshulcz/deja-vu": {
       "version": "v0.24.1",
@@ -4243,16 +4274,16 @@
       "date": "2026-10-24"
     },
     "Ikalus1988/MisakaNet": {
-      "version": "v3.10.1",
-      "date": "2026-11-11"
+      "version": "v3.19.0",
+      "date": "2026-11-17"
     },
     "Dave-London/Pare": {
-      "version": "@paretools/test@0.23.3",
-      "date": "2026-10-19"
+      "version": "@paretools/test@0.24.0",
+      "date": "2026-11-17"
     },
     "midplaneai/midplane": {
-      "version": "v0.26.1",
-      "date": "2026-10-29"
+      "version": "v0.26.3",
+      "date": "2026-11-18"
     },
     "issuerd/issuerd": {
       "version": "v0.1.24",
@@ -4343,8 +4374,8 @@
       "date": "2026-09-17"
     },
     "Cygnux-Labs/Tracekit": {
-      "version": "v1.6.0",
-      "date": "2026-11-09"
+      "version": "v1.7.2",
+      "date": "2026-11-18"
     },
     "jwuthri-cloud/Tracely-ai": {
       "version": "unclear-no-tagged-release (PyPI tracelyai-sdk 0.0.1)",
@@ -4553,16 +4584,36 @@
     "anthonyGosme/speedrunner": {
       "version": "v1.1.0",
       "date": "2026-11-16"
+    },
+    "SonarSource/sonarqube-mcp-server": {
+      "version": "1.32.0.5118",
+      "date": "2026-11-10"
+    },
+    "hashgraph-online/hol-guard": {
+      "version": "v3.59.0",
+      "date": "2026-11-04"
+    },
+    "ClickHouse/loom": {
+      "version": "v1.2.0",
+      "date": "2026-11-12"
+    },
+    "HarnessRouter/harnessrouter": {
+      "version": "v0.41.21",
+      "date": "2026-11-17"
+    },
+    "mozilla-ai/otari": {
+      "version": "v0.51.0",
+      "date": "2026-11-18"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-11-10",
-      "note": "Show HN / openalternative.co queries returned mostly undated or stale snapshot results again today - consistent with the pattern noted on 2026-11-07. GitHub's search API remained the reliable discovery lever."
+      "note": "Not used this run - GitHub's search/releases APIs supplied sufficient signal for slot 1 (AI agents/MCP/coding productivity)."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-14",
-      "note": "Fetched READMEs and LICENSE files directly for paradedb, liteparse, pdf-mcp, office_oxide, SAG-Wiki, filament, bankstatementparser — confirmed bankstatementparser's actual dual Apache-2.0/MIT license (via LICENSE-APACHE and LICENSE-MIT) after the GitHub API reported NOASSERTION."
+      "last_ok": "2026-11-18",
+      "note": "Fetched READMEs for ClickHouse/loom, SonarSource/sonarqube-mcp-server, hashgraph-online/hol-guard, HarnessRouter/harnessrouter, and Katta041/asitis-agent-tools to verify claims and licensing before cataloguing."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4577,8 +4628,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-17",
-      "note": "Direct from GitHub Actions runner, GITHUB_TOKEN used, ~60 calls, well under the 8,450/hr limit. No rate pressure."
+      "last_ok": "2026-11-18",
+      "note": "Direct from GitHub Actions runner, GITHUB_TOKEN used, ~90 calls across topic/keyword search, releases and commits endpoints, well under the 8,450/hr limit. No rate pressure."
     },
     "hn.algolia.com": {
       "last_ok": "2026-11-17",
@@ -4707,8 +4758,12 @@
     "Coral - withcoral/coral - PROTOTYPE - 2026-11-17",
     "db-branch - db-branch/db-branch - PROTOTYPE - 2026-11-17",
     "Tego - Attention-Span-AI/Tego - PROTOTYPE - 2026-11-17",
-    "speedrunner - anthonyGosme/speedrunner - USE NOW - 2026-11-17"
+    "speedrunner - anthonyGosme/speedrunner - USE NOW - 2026-11-17",
+    "ClickHouse Loom - ClickHouse/loom - PROTOTYPE - 2026-11-18",
+    "HarnessRouter (Community Edition) - HarnessRouter/harnessrouter - PROTOTYPE - 2026-11-18",
+    "HOL Guard - hashgraph-online/hol-guard - PROTOTYPE - 2026-11-18",
+    "NVIDIA SkillEvaluator - NVIDIA/SkillEvaluator - PROTOTYPE - 2026-11-18"
   ],
-  "notes": "2026-11-17: slot 7 run. Published Coral, db-branch, and Tego as new discoveries (all three address agent-credential/execution risk at a different layer); speedrunner as Small but High-Leverage Utility. Two meaningful updates: Reticle v3 (self-writing/self-strengthening replay tests, 17->9 agent tools, score 7.7->7.9) and Meteroid (RC->GA plus billing-correctness features, score 7.2->7.4). Rejected canban as a Kanzo duplicate; held boxery/sutra-os/gawain to Worth Watching; held pulsar out as too new (created same day). 'Still Worth Trying' rotated to OpenDataLoader PDF, Graphify, and agent-device to diversify away from the frequently-recurring Xberg/Bernstein/CATS top scorers.",
+  "notes": "2026-11-18: slot 1 run. Published ClickHouse Loom, HarnessRouter (Community Edition), and HOL Guard as new discoveries, plus promoted NVIDIA SkillEvaluator off Worth Watching after v1.0.1's standalone HarnessCheck resolved the 2026-09-30 hold reason. asitis-agent-tools (CLAUDE.md/AGENTS.md loading linter) was Small but High-Leverage Utility. Five meaningful updates: Preloop (0.x->1.0 graduation), ripwire (measured perf gains), Paseo (plugin gallery), LoongSuite Pilot (per-task audit logging), Tracekit (AWS Bedrock autotrace coverage). Rejected agent-trace (OrcaReplay duplicate) and mobile-mcp (off-stack); held figwright/sonarqube-mcp-server/otari/agent-memory-kit to Worth Watching. 'Still Worth Trying' rotated to Destructive Command Guard, mcpsnoop, and netbridge to diversify away from the frequently-recurring Xberg/Bernstein/Sidequest top scorers.",
   "updated": "2026-11-17"
 }

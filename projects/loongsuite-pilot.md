@@ -84,3 +84,13 @@ directly relevant to the MSSP/PTaaS client-data context. Also added GitHub Copil
 (v1.15.1), Doubao Workspace (v1.15.2), and a Qoder AgentLoop plugin (v1.16.0) as new agent
 integrations, plus safe hook injection for Claude Agent SDK custom session directories
 (v1.10.0). Score raised 8.2 -> 8.4.
+
+### 2026-11-18
+Meaningful update: v1.16.0 -> v1.18.0. Added per-task agent-call audit logging for
+OpenClaw and Hermes with a stable call identifier linking parent task, sub-task, and
+actual result — a real addition to the audit-trail story, not just a bug fix. Linux
+installs gained system-level hook auto-routing (`install --scope system`) alongside the
+existing user-directory install. Also fixed a real correctness bug where OpenClaw/Hermes
+lost model-request context (history, system instructions, tool metadata) on session
+resume, multi-step tool calls, or large requests. Score unchanged (8.4); recommendation
+unchanged (PROTOTYPE).

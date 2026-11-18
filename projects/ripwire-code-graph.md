@@ -87,3 +87,6 @@ self-checks at face value.
 ## Change History
 ### 2026-09-09
 Initial discovery and review. Slot 1 (AI agents, MCP, coding productivity) run.
+
+### 2026-11-18
+Meaningful update: v0.5.0 -> v0.6.10 (71 merged PRs). Real, specifically-measured performance work rather than vague "faster" claims: warm `--deps`/`--for` on large trees use 35-67% less CPU (vscode `--deps` -67%, cockroach `--for` -57%, envoy `--deps` -35%), peak memory on macOS roughly halved (-47% to -49% across envoy/cockroach/vscode), and the include closure of a large tree now held in an eighth of the memory (vscode: 32.5MB -> 3.74MB, -88%). Answer-completeness on the project's own fixed in-sample question set also improved (everyday 129->132/163, multi-file 12->19/39, large-repo 23->30/56). Per the project's own methodology notes, these are in-sample progress figures on one machine, not held-out benchmarks — still a meaningful maturity/performance improvement per this radar's criteria given the specificity and the project's consistent practice of publishing its own measurement caveats. Score unchanged (7.9) pending a hands-on re-test; recommendation unchanged (PROTOTYPE).
