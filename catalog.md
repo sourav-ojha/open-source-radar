@@ -1,6 +1,6 @@
 # Catalog
 
-_339 projects tracked. Last updated 2026-11-18._
+_343 projects tracked. Last updated 2026-11-19._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -22,6 +22,7 @@ _339 projects tracked. Last updated 2026-11-18._
 | [WhoDB](https://github.com/clidey/whodb) | USE NOW | 8.6/10 | developer productivity, database tooling, AI & agent infrastructure, product building blocks | Apache-2.0 | low | 2026-10-03 |
 | [nono](https://github.com/nolabs-ai/nono) | USE NOW | 8.6/10 | AI & agent infrastructure, coding agents, security, developer productivity | Apache-2.0 | low | 2026-10-13 |
 | [Radar (Skyhook)](https://github.com/skyhook-io/radar) | USE NOW | 8.6/10 | AI & agent infrastructure, infrastructure/observability, developer productivity, Kubernetes tooling | Apache-2.0 | low | 2026-11-09 |
+| [Outpost (Hookdeck)](https://github.com/hookdeck/outpost) | PROTOTYPE | 8.6/10 | product infrastructure, backend components, webhooks, AI & agent infrastructure | Apache-2.0 | medium | 2026-11-19 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | medium | 2026-08-29 |
 | [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-28 |
 | [Graphify](https://github.com/Graphify-Labs/graphify) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, RAG infrastructure, developer productivity, coding agents | Apache-2.0 | low | 2026-09-16 |
@@ -56,6 +57,7 @@ _339 projects tracked. Last updated 2026-11-18._
 | [Antfly](https://github.com/antflydb/antfly) | PROTOTYPE | 8.3/10 | data/search/documents/RAG, AI & agent infrastructure, product building blocks | Apache-2.0 | low | 2026-10-31 |
 | [textbee](https://github.com/textbee/textbee) | USE NOW | 8.3/10 | product building blocks, AI & agent infrastructure | AGPL-3.0 | medium | 2026-11-08 |
 | [ClickHouse Loom](https://github.com/ClickHouse/loom) | PROTOTYPE | 8.3/10 | AI & agent infrastructure, agent memory, RAG infrastructure, code intelligence | Apache-2.0 | low | 2026-11-18 |
+| [AccessFlow](https://github.com/bablsoft/accessflow) | PROTOTYPE | 8.3/10 | product infrastructure, security, access governance, database tooling, MSSP/compliance | Apache-2.0 | high | 2026-11-19 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [OpenNotebookLM](https://github.com/tom1030507/OpenNotebookLM) | PROTOTYPE | 8.2/10 | RAG infrastructure, document processing, product building blocks, self-hosted SaaS alternative | MIT | low | 2026-09-05 |
 | [mcpsnoop](https://github.com/kerlenton/mcpsnoop) | USE NOW | 8.2/10 | AI & agent infrastructure, developer productivity, AI agent debugging/tracing, MCP tooling | MIT | low | 2026-09-08 |
@@ -89,6 +91,7 @@ _339 projects tracked. Last updated 2026-11-18._
 | [CloudBurn](https://github.com/towardsthecloud/cloudburn) | USE NOW | 8.1/10 | infrastructure, AWS-adjacent tooling, CI/CD, security / cost governance | Apache-2.0 | low | 2026-11-09 |
 | [zvec-grep (zg)](https://github.com/zvec-ai/zvec-grep) | USE NOW | 8.1/10 | AI & agent infrastructure, developer productivity, code search, RAG infrastructure | Apache-2.0 | low | 2026-11-10 |
 | [tuicr](https://github.com/agavra/tuicr) | USE NOW | 8.1/10 | developer productivity, code review, small high-leverage utilities | MIT | low | 2026-11-13 |
+| [goncordia](https://github.com/kirimatt/goncordia) | PROTOTYPE | 8.1/10 | product infrastructure, job queues, backend components, developer productivity | MIT | low | 2026-11-19 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
 | [mcp-compressor](https://github.com/atlassian-labs/mcp-compressor) | USE NOW | 8.0/10 | AI & agent infrastructure, MCP tooling, developer productivity, context engineering | Apache-2.0 | low | 2026-09-08 |
@@ -129,6 +132,7 @@ _339 projects tracked. Last updated 2026-11-18._
 | [Rocky](https://github.com/rocky-data/rocky) | PROTOTYPE | 7.9/10 | product building blocks, data / search / RAG, developer productivity | Apache-2.0 | medium | 2026-11-07 |
 | [LiteParse](https://github.com/run-llama/liteparse) | PROTOTYPE | 7.9/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | low | 2026-11-14 |
 | [NVIDIA SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) | PROTOTYPE | 7.9/10 | AI & agent infrastructure, agent skills, developer productivity, AI testing | Apache-2.0 | low | 2026-11-18 |
+| [AntelopeJS DMS](https://github.com/AntelopeJS/dms) | PROTOTYPE | 7.9/10 | product infrastructure, admin panels, AI & agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-11-19 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
