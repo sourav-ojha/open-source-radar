@@ -83,3 +83,10 @@ instead of GitHub's web UI; low risk, no infrastructure to stand up.
 ### 2026-11-13
 Initial discovery and review. Rotation slot 3 (developer utilities,
 debugging, testing).
+
+### 2026-11-20
+v0.28.0 → v0.29.0: added self-hosted Azure DevOps Server/TFS support (previously
+Azure DevOps cloud only), plus Bitbucket SSH-remote recognition and GitLab
+merge-request-picker pagination fixes. The self-hosted Azure DevOps path is a genuine
+new capability given the self-hosting bias this radar weights; recommendation
+unchanged (USE NOW, 8.1/10). Catalog updated: index.jsonl version bumped to v0.29.0.

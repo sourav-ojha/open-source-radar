@@ -1,9 +1,10 @@
 # Catalog
 
-_343 projects tracked. Last updated 2026-11-19._
+_347 projects tracked. Last updated 2026-11-20._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
+| [herdr](https://github.com/herdrdev/herdr) | USE NOW | 9.0/10 | AI & agent infrastructure, coding agents, developer productivity, terminal utilities | Apache-2.0 | low | 2026-11-20 |
 | [Xberg](https://github.com/xberg-io/xberg) | USE NOW | 8.8/10 | document processing, RAG infrastructure, product building blocks, AI & agent infrastructure | MIT | low | 2026-09-19 |
 | [CATS](https://github.com/Endava/cats) | USE NOW | 8.8/10 | developer productivity, API development, testing | Apache-2.0 | low | 2026-10-30 |
 | [Bernstein](https://github.com/sipyourdrink-ltd/bernstein) | PROTOTYPE | 8.7/10 | AI agent infrastructure, coding agents, agent orchestration, developer productivity | Apache-2.0 | low | 2026-10-09 |
@@ -40,6 +41,7 @@ _343 projects tracked. Last updated 2026-11-19._
 | [Unified Knowledge Graph RAG on AWS](https://github.com/awslabs/unified-kg-rag-on-aws) | PROTOTYPE | 8.4/10 | AI & agent infrastructure, data / search / RAG, product building blocks | Apache-2.0 | medium | 2026-11-07 |
 | [NextCRM](https://github.com/pdovhomilja/nextcrm-app) | PROTOTYPE | 8.4/10 | product building blocks, AI & agent infrastructure | MIT | medium | 2026-11-08 |
 | [ParadeDB](https://github.com/paradedb/paradedb) | PROTOTYPE | 8.4/10 | RAG infrastructure, search infrastructure, database tooling, product building blocks | AGPL-3.0 | medium | 2026-11-14 |
+| [nestjs-doctor](https://github.com/RoloBits/nestjs-doctor) | USE NOW | 8.4/10 | developer productivity, static analysis, testing, AI & agent infrastructure | MIT | low | 2026-11-20 |
 | [html-to-markdown (Kreuzberg)](https://github.com/xberg-io/html-to-markdown) | USE NOW | 8.3/10 | document processing, developer productivity, small utility, RAG infrastructure | MIT | low | 2026-08-29 |
 | [AdminForth](https://github.com/devforth/adminforth) | USE NOW | 8.3/10 | product infrastructure, admin panels, product building blocks | MIT | low | 2026-09-03 |
 | [haiku.rag](https://github.com/ggozad/haiku.rag) | PROTOTYPE | 8.3/10 | RAG infrastructure, AI agent infrastructure, developer productivity | MIT | medium | 2026-09-05 |
@@ -90,7 +92,7 @@ _343 projects tracked. Last updated 2026-11-19._
 | [Keygate](https://github.com/tabloy/keygate) | PROTOTYPE | 8.1/10 | product building blocks, micro-SaaS opportunity | AGPL-3.0 | low | 2026-11-01 |
 | [CloudBurn](https://github.com/towardsthecloud/cloudburn) | USE NOW | 8.1/10 | infrastructure, AWS-adjacent tooling, CI/CD, security / cost governance | Apache-2.0 | low | 2026-11-09 |
 | [zvec-grep (zg)](https://github.com/zvec-ai/zvec-grep) | USE NOW | 8.1/10 | AI & agent infrastructure, developer productivity, code search, RAG infrastructure | Apache-2.0 | low | 2026-11-10 |
-| [tuicr](https://github.com/agavra/tuicr) | USE NOW | 8.1/10 | developer productivity, code review, small high-leverage utilities | MIT | low | 2026-11-13 |
+| [tuicr](https://github.com/agavra/tuicr) | USE NOW | 8.1/10 | developer productivity, code review, small high-leverage utilities | MIT | low | 2026-11-20 |
 | [goncordia](https://github.com/kirimatt/goncordia) | PROTOTYPE | 8.1/10 | product infrastructure, job queues, backend components, developer productivity | MIT | low | 2026-11-19 |
 | [Gortex](https://github.com/zzet/gortex) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, developer productivity | Apache-2.0 | low | 2026-08-31 |
 | [fx (Vercel Labs)](https://github.com/vercel-labs/fx) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity | Apache-2.0 | low | 2026-09-02 |
@@ -168,6 +170,7 @@ _343 projects tracked. Last updated 2026-11-19._
 | [MCP Scanner (Cisco AI Defense)](https://github.com/cisco-ai-defense/mcp-scanner) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, security, developer productivity | Apache-2.0 | medium | 2026-11-11 |
 | [PgQue](https://github.com/NikolayS/PgQue) | PROTOTYPE | 7.8/10 | product building blocks, data/queues, infrastructure | Apache-2.0 | low | 2026-11-12 |
 | [HOL Guard](https://github.com/hashgraph-online/hol-guard) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, security, safety tooling | Apache-2.0 | medium | 2026-11-18 |
+| [DocKit](https://github.com/geek-fun/dockit) | PROTOTYPE | 7.8/10 | product building blocks, database tooling, developer productivity | Apache-2.0 | low | 2026-11-20 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
 | [Open Mercato](https://github.com/open-mercato/open-mercato) | PROTOTYPE | 7.7/10 | product infrastructure, AI & agent infrastructure, developer productivity | MIT | high | 2026-09-24 |
@@ -334,6 +337,7 @@ _343 projects tracked. Last updated 2026-11-19._
 | [PurRDF](https://github.com/Blackcat-Informatics/purrdf) | STUDY | 6.8/10 | data/search/documents/RAG, infrastructure/architecture | MIT OR Apache-2.0 OR MulanPSL-2.0 | medium | 2026-10-31 |
 | [gcx (Grafana CLI)](https://github.com/grafana/gcx) | PROTOTYPE | 6.8/10 | AI & agent infrastructure, developer productivity, observability | Apache-2.0 | low | 2026-11-02 |
 | [docs.plus](https://github.com/docs-plus/docs.plus) | PROTOTYPE | 6.8/10 | product building blocks, collaboration, AI & agent infrastructure | MIT | medium | 2026-11-05 |
+| [mq](https://github.com/harehare/mq) | USE NOW | 6.8/10 | small high-leverage utilities, developer productivity, document processing | MIT | low | 2026-11-20 |
 | [Quackback](https://github.com/QuackbackIO/quackback) | PROTOTYPE | 6.7/10 | product building blocks, self-hosted SaaS alternative, customer feedback / support | AGPL-3.0 | medium | 2026-09-08 |
 | [Pentest Harness](https://github.com/S1N6H/pentest-harness) | PROTOTYPE | 6.6/10 | AI agent infrastructure, security tooling, developer productivity | MIT | low | 2026-09-15 |
 | [MuninnDB](https://github.com/scrypster/muninndb) | WATCH | 6.6/10 | AI & agent infrastructure, agent memory | Business Source License 1.1 (BSL) — converts to Apache-2.0 on 2030-02-26 | low | 2026-10-10 |

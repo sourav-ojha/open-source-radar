@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "projects": [
     {
       "name": "Xberg",
@@ -19967,16 +19967,16 @@
         "Rust CLI; no Node/JS integration points beyond invoking the binary"
       ],
       "first_seen": "2026-11-13",
-      "last_reviewed": "2026-11-13",
-      "last_meaningful_update": "2026-11-13",
-      "current_version": "v0.28.0",
+      "last_reviewed": "2026-11-20",
+      "last_meaningful_update": "2026-11-20",
+      "current_version": "v0.29.0",
       "latest_release_date": "2026-10-26",
       "source_links": [
         "https://github.com/agavra/tuicr",
         "https://tuicr.dev"
       ],
       "aliases": [],
-      "notes": "",
+      "notes": " 2026-11-20: v0.29.0 added self-hosted Azure DevOps Server/TFS support.",
       "acted_on": false
     },
     {
@@ -21400,6 +21400,256 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 27 stars, 2 subscribers, created 2026-09-16. Contributors: Upd4ting (696), github-actions[bot] (173), mwesto (35), alessaloisio (31), plus several smaller - a small real team, not solo.",
+      "acted_on": false
+    },
+    {
+      "name": "herdr",
+      "slug": "herdr-agent-terminal-runtime",
+      "repo_url": "https://github.com/herdrdev/herdr",
+      "website": "https://herdr.dev",
+      "description": "Single-binary Rust terminal runtime built specifically for coding agents: keeps agent sessions alive in a background server across client detach, SSH drops, and (with opt-in agent-recovery) server restarts; unifies local and saved SSH machines in one window; marks every pane working/blocked/idle; exposes a CLI/socket API so agents can spawn panes and prompt each other; and ships a growing third-party plugin marketplace.",
+      "category": [
+        "AI & agent infrastructure",
+        "coding agents",
+        "developer productivity",
+        "terminal utilities"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 9.0,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 per GitHub API license field, no restrictions on commercial use, self-hosting, or embedding.",
+      "deployment": [
+        "single binary (curl install script, Homebrew, mise, Windows installer/beta)",
+        "self-hosted background daemon on your own machine(s)",
+        "no external server dependency"
+      ],
+      "interfaces": [
+        "CLI",
+        "TUI (keyboard + mouse)",
+        "socket API for agent-to-agent control",
+        "plugin marketplace"
+      ],
+      "use_cases": [
+        "Keep a long Claude Code/Codex/Cursor/OpenCode session running across a closed laptop lid or dropped SSH connection",
+        "Drive agents on several machines (local + saved SSH hosts) from one combined window instead of separate terminal tabs",
+        "See at a glance which agent pane is blocked waiting on a prompt across a fleet of parallel agent runs",
+        "Let one agent spawn and prompt another agent's pane programmatically via the socket API",
+        "Extend the base runtime with marketplace plugins (PR review pane, file viewer, VS Code-style sidebar, Neovim integration) instead of building custom tooling"
+      ],
+      "product_opportunities": [
+        "Could underpin an internal multi-agent ops dashboard; the socket API is a ready building block for a custom agent-orchestration layer"
+      ],
+      "alternatives": [
+        "manaflow-ai/cmux (28.8k stars) - comparable ambition but Ghostty-based and macOS-only, a platform mismatch for a cross-platform workflow",
+        "tmux/screen - persistent sessions but no agent-awareness (no working/blocked/idle state, no socket API for agents)",
+        "Smaller 2026 entrants in the same niche (Dicklesworthstone/frankenterm, wmux, cornercase-terminal, orchbee, ThinkTerm, horizon) - all far smaller and newer, none with a comparable plugin ecosystem"
+      ],
+      "why_it_matters": "This radar itself runs inside a long unattended coding-agent session - the exact workload herdr is built for. It directly removes the recurring pain of a dropped SSH connection or closed laptop killing an in-progress agent run, and the agent-native socket API is a real building block for orchestrating more than one agent at once.",
+      "why_not_build_it_myself": "A correct cross-platform terminal-session daemon with crash-safe state persistence and a real socket API is weeks of systems-level work in Rust; here it is a single binary with 8 months of hardening and a plugin ecosystem already using it.",
+      "risks": [
+        "Pre-1.0 (latest tagged release v0.9.5); breaking changes are possible before 1.0",
+        "Runs a background daemon with a socket API that agents can drive - worth scoping what it's allowed to do before pointing it at anything sensitive",
+        "Third-party marketplace plugins vary in maturity; vet before installing",
+        "Windows support is explicitly beta"
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20",
+      "last_meaningful_update": "2026-11-20",
+      "current_version": "v0.9.5",
+      "latest_release_date": "2026-10-14",
+      "source_links": [
+        "https://github.com/herdrdev/herdr",
+        "https://herdr.dev",
+        "https://herdr.dev/docs/"
+      ],
+      "aliases": [],
+      "notes": "Discovered via topic:terminal-multiplexer GitHub search during slot 3 (developer utilities) discovery; the same search surfaced a broader 2026 wave of 'terminal for AI agents' projects, with herdr and cmux far ahead of the rest by stars/forks/ecosystem. A real third-party plugin ecosystem has formed around it (herdr-reviewr, herdr-core, herdr-sidebar, herdr-nvim, herdr-file-viewer, herdrm, herdr-remote, herdr-mirror), several with four-digit star counts of their own - treated as competitive/ecosystem context, not catalogued individually. herdr-reviewr in particular overlaps the already-catalogued Plannotator/tuicr niche (reviewing an agent's diff and sending comments back).",
+      "acted_on": false
+    },
+    {
+      "name": "nestjs-doctor",
+      "slug": "nestjs-doctor",
+      "repo_url": "https://github.com/RoloBits/nestjs-doctor",
+      "website": "https://www.nestjs.doctor",
+      "description": "Deterministic (non-LLM) static analysis tool for NestJS that reads every @Module(), provider, HTTP endpoint, and ORM entity from source and scores the project 0-100 across security, correctness, architecture, performance, and schema rules - explicitly positioned to catch mistakes introduced by AI coding agents, since scans are reproducible rather than model-dependent.",
+      "category": [
+        "developer productivity",
+        "static analysis",
+        "testing",
+        "AI & agent infrastructure"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT per repo LICENSE badge, no restrictions on commercial use.",
+      "deployment": [
+        "npx CLI (no install)",
+        "pre-commit hook",
+        "GitHub Action/CI",
+        "VS Code extension",
+        "coding-agent skill (Claude Code, Cursor, Codex, OpenCode, Windsurf, Gemini CLI)"
+      ],
+      "interfaces": [
+        "CLI",
+        "HTML report (module graph, endpoint traces, ORM ER diagram, boot timings)",
+        "GitHub Action with sticky PR comment + inline review comments",
+        "VS Code extension",
+        "agent skill"
+      ],
+      "use_cases": [
+        "Install the agent skill so a scan re-runs automatically every time Claude Code/Cursor/Codex writes NestJS code",
+        "Gate CI on only the findings a PR introduces, not the existing backlog, via the GitHub Action",
+        "Generate the HTML report's module graph and Prisma/TypeORM/Drizzle/MikroORM ER diagram when onboarding onto an unfamiliar NestJS service",
+        "Catch the specific AI-agent failure modes called out in its own rule set: TypeORM synchronize:true left on, endpoints with no guard, fire-and-forget promises, business logic leaking into controllers",
+        "Author project-specific rules via the included nestjs-doctor-create-rule skill"
+      ],
+      "product_opportunities": [
+        "Directly applicable to any NestJS service in his stack or the MSSP admin-portal SaaS as a cheap CI gate with no LLM cost at scan time"
+      ],
+      "alternatives": [
+        "NestLens (already catalogued) - runtime request/query/exception monitoring, a different layer entirely (observe running behavior, not scan source)",
+        "Hand-rolled ESLint rules - would require building all ~52 NestJS-specific checks from scratch",
+        "SonarQube - much heavier, not NestJS-aware out of the box"
+      ],
+      "why_it_matters": "NestJS is explicitly part of his core stack, and he runs an AI-agent-heavy workflow (this radar is itself agent-produced). This is a deterministic backstop specifically for the failure mode that creates - a coding agent silently introducing a missing guard or a synchronize:true - checked the same way on a laptop and in CI, with zero LLM cost per scan.",
+      "why_not_build_it_myself": "52 NestJS-specific static-analysis rules spanning security/correctness/architecture/performance/schema, plus a module-graph/ER-diagram report and a CI action, is a multi-week internal-tooling project; this ships it as an npx command.",
+      "risks": [
+        "Small project (185 stars, 4 subscribers, 7 forks) with what looks like a single/small maintainer team - real but thin community signal",
+        "Rules could false-positive on unconventional NestJS patterns not anticipated by the rule authors",
+        "Primary docs live on an external website (nestjs.doctor) rather than solely in the repo"
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20",
+      "last_meaningful_update": "2026-11-20",
+      "current_version": "Unclear based on available documentation - npm shows an active published package but no GitHub Releases/tags were checked beyond repo metadata",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/RoloBits/nestjs-doctor",
+        "https://www.nestjs.doctor/docs"
+      ],
+      "aliases": [],
+      "notes": "Discovered via a direct 'nestjs+devtools' GitHub search during slot 3 discovery, alongside the already-catalogued NestLens and a thinner Symfony-inspired competitor (eleven-labs/nest-profiler, 18 stars, held out as too new).",
+      "acted_on": false
+    },
+    {
+      "name": "DocKit",
+      "slug": "dockit-nosql-desktop-client",
+      "repo_url": "https://github.com/geek-fun/dockit",
+      "website": "https://www.geekfun.club/products/dockit/",
+      "description": "Open-source native desktop GUI (Tauri/Rust) for Elasticsearch, OpenSearch, DynamoDB, MongoDB, and EasySearch in one app, with a Monaco-powered query editor and optional bring-your-own-key natural-language-to-query assistance (OpenAI/Anthropic/DeepSeek). Positioned explicitly as a replacement for browser consoles like Kibana and the AWS Console.",
+      "category": [
+        "product building blocks",
+        "database tooling",
+        "developer productivity"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0 per repo LICENSE badge, no restrictions on commercial use or embedding.",
+      "deployment": [
+        "desktop app install (macOS/Windows/Linux)",
+        "no server component required"
+      ],
+      "interfaces": [
+        "desktop GUI",
+        "Monaco query editor",
+        "companion MCP server (geek-fun/data-studio, listed on MCP Toplist)"
+      ],
+      "use_cases": [
+        "Browse and query MongoDB collections without switching to a separate Compass/NoSQLBooster window",
+        "Inspect Elasticsearch/OpenSearch indices with natural-language-to-query generation instead of hand-writing Query DSL",
+        "Browse DynamoDB tables without opening the AWS Console",
+        "One tool across MongoDB + Elasticsearch/OpenSearch for projects that use both, instead of two separate GUIs"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "MongoDB Compass - Mongo-only",
+        "Kibana/OpenSearch Dashboards - require the full stack running, not a lightweight desktop client",
+        "AWS NoSQL Workbench - DynamoDB-only, AWS-account-tied",
+        "mqlens/mqlens-mongodb - newer, thinner (61 stars/2 subscribers), MongoDB-only desktop alternative seen the same day; held to Worth Watching rather than catalogued given its narrower scope and higher open-issue-to-star ratio"
+      ],
+      "why_it_matters": "Covers the two NoSQL stores he actually touches (MongoDB in his core stack, Elasticsearch/OpenSearch as AWS-adjacent infra) in one native app, plus DynamoDB if that ever enters the stack - a real reduction in context-switching for ad hoc database debugging.",
+      "why_not_build_it_myself": "A cross-platform native multi-protocol database GUI with a Monaco editor and an LLM-assist layer is not a build-it-yourself proposition; this is a 3-year-old, actively maintained project with healthy fork/subscriber engagement (122 forks, 72 subscribers on 1,145 stars).",
+      "risks": [
+        "Desktop-app-only - no headless/server mode for shared team use",
+        "AI query assistance requires bringing your own API key (an ongoing cost, not a blocker)",
+        "Built by a product studio (Geek Fun) that sells other tools - worth watching for any future shift of DocKit itself toward an open-core model, though there is no sign of that yet"
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20",
+      "last_meaningful_update": "2026-11-20",
+      "current_version": "Unclear based on available documentation - GitHub Releases not checked individually; repo shows active weekly pushes",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/geek-fun/dockit",
+        "https://www.geekfun.club/docs/dockit/"
+      ],
+      "aliases": [],
+      "notes": "Found via topic:database-gui search alongside its sibling geek-fun/sqlkit (SQL-side equivalent, 308 stars/4 subscribers, held out as thinner and redundant given dockit covers the NoSQL side he actually needs) and a crowded wave of other new lightweight native DB clients (GoNavi, TablePro, tabletist, dbine, data-peek) not catalogued given no clear differentiation over this or the already-catalogued WhoDB/LibreDB Studio.",
+      "acted_on": false
+    },
+    {
+      "name": "mq",
+      "slug": "mq-markdown-query-language",
+      "repo_url": "https://github.com/harehare/mq",
+      "website": "https://mqlang.org",
+      "description": "A jq-like query language and CLI for slicing, filtering, mapping, and transforming Markdown, written in Rust. Ships a REPL, an experimental step debugger, an LSP/VS Code extension for custom function development, and a Docker image.",
+      "category": [
+        "small high-leverage utilities",
+        "developer productivity",
+        "document processing"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 6.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT per repo LICENSE badge, no restrictions.",
+      "deployment": [
+        "single binary (install script, Homebrew, MacPorts, Scoop, Cargo, Docker)",
+        "CLI"
+      ],
+      "interfaces": [
+        "CLI",
+        "REPL",
+        "LSP/VS Code extension",
+        "Docker image"
+      ],
+      "use_cases": [
+        "Extract or reshape sections of Markdown docs in a CI script or pre-commit hook instead of a hand-rolled regex/sed pass",
+        "Generate structured Markdown input for an LLM prompt, or post-process an LLM's Markdown output, from a shell pipeline",
+        "Batch-transform a directory of documentation files consistently",
+        "Quickly pull a specific section/pattern out of a long Markdown doc at the command line"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "sed/awk/grep on raw text (no Markdown structure awareness)",
+        "pandoc (format conversion, not a query language)",
+        "hand-written Node/Python scripts using a Markdown AST library"
+      ],
+      "why_it_matters": "A narrow but genuinely time-saving utility for the recurring task of scripting against Markdown (docs, agent prompts/outputs, READMEs) instead of fragile text munging.",
+      "why_not_build_it_myself": "A full query-language parser/evaluator for Markdown with a REPL and LSP is far more than the ad hoc script this would otherwise replace.",
+      "risks": [
+        "Marked 'under active development' by its own README - syntax may still shift",
+        "Small maintainer base (effectively one author), 2 subscribers on 1,083 stars"
+      ],
+      "first_seen": "2026-11-20",
+      "last_reviewed": "2026-11-20",
+      "last_meaningful_update": "2026-11-20",
+      "current_version": "v0.10.1",
+      "latest_release_date": "Unclear based on available documentation",
+      "source_links": [
+        "https://github.com/harehare/mq",
+        "https://mqlang.org"
+      ],
+      "aliases": [],
+      "notes": "Today's Small but High-Leverage Utility, surfaced via topic:repl search during slot 3 discovery.",
       "acted_on": false
     }
   ]
