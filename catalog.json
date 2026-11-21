@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "projects": [
     {
       "name": "Xberg",
@@ -21650,6 +21650,307 @@
       ],
       "aliases": [],
       "notes": "Today's Small but High-Leverage Utility, surfaced via topic:repl search during slot 3 discovery.",
+      "acted_on": false
+    },
+    {
+      "name": "claude-self-reflect",
+      "slug": "claude-self-reflect",
+      "repo_url": "https://github.com/ramakay/claude-self-reflect",
+      "website": "https://ramakay.github.io/claude-self-reflect/docs/",
+      "description": "A persistent memory layer for Claude Code: one embedded Rust binary (~138MB, bundled SQLite, no external DB/containers/Python/API keys) that stores session history and exposes it back to Claude via MCP tools \u2014 a start-of-session recap, 'receipts' for completed work, periodic re-checks of old conclusions against git history ('dreams'), and compacted evidence carried across context resets.",
+      "category": [
+        "AI & agent infrastructure",
+        "coding agents",
+        "agent memory"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API license field and npm badge. No restrictions on commercial or internal use.",
+      "deployment": [
+        "npm package",
+        "local binary (no server)"
+      ],
+      "interfaces": [
+        "CLI",
+        "MCP server",
+        "npm package"
+      ],
+      "use_cases": [
+        "Resume a multi-day Claude Code project with a one-paragraph recap instead of re-reading scrollback",
+        "Have Claude periodically re-check old conclusions against the actual git history and surface contradictions",
+        "Carry 'receipts' (what got done, what was settled, what's open) across a context compaction instead of losing state",
+        "Audit what Claude decided and why on a past session without reconstructing it from memory"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "Purpose-built MCP tool surface for Claude Code specifically, not a generic vector-memory layer retrofitted onto agents",
+        "The 'dreams' mechanic (periodic re-verification of stored conclusions against current repo state) is a pattern worth copying for any long-running agent with persisted state, including this radar's own daily run"
+      ],
+      "alternatives": [
+        "Planning with Files (already catalogued) \u2014 file-based plan/task persistence rather than a dedicated memory binary with reflection/verification built in",
+        "Generic vector-DB memory layers (e.g. mem0, Zep) \u2014 heavier, not Claude-Code-specific, require a server/API key"
+      ],
+      "why_it_matters": "Directly targets the actual failure mode in long unattended or multi-day Claude Code sessions \u2014 including this radar's own daily run \u2014 where useful context is lost to compaction or a new session start, forcing Claude to re-derive state it already worked out.",
+      "why_not_build_it_myself": "A reflection/verification loop that checks old conclusions against live git history, plus a compact recap format tuned specifically to Claude Code's session lifecycle, is nontrivial to get right versus a naive 'dump the transcript into a vector store' approach.",
+      "risks": [
+        "Thin external validation so far (231 stars, 29 forks, 3 subscribers) relative to how central it would become to a daily workflow",
+        "Single-maintainer project; the 138MB bundled binary and Rust engine (csr-engine) are new enough (v10.1.0 as of 2026-11-21) that breaking changes across versions are plausible"
+      ],
+      "first_seen": "2026-11-21",
+      "last_reviewed": "2026-11-21",
+      "last_meaningful_update": "2026-11-21",
+      "current_version": "v10.1.0",
+      "latest_release_date": "2026-11-21",
+      "source_links": [
+        "https://github.com/ramakay/claude-self-reflect",
+        "https://www.npmjs.com/package/claude-self-reflect"
+      ],
+      "aliases": [],
+      "notes": "Verified via GitHub API (stars=231, subs=3, forks=29, license MIT) and latest release tag/date. Not yet independently run against a real multi-day session.",
+      "acted_on": false
+    },
+    {
+      "name": "Code-Graph-RAG",
+      "slug": "code-graph-rag",
+      "repo_url": "https://github.com/vitali87/code-graph-rag",
+      "website": "https://code-graph-rag.com",
+      "description": "Parses a multi-language codebase with Tree-sitter (plus an ast-grep tier and compiler-grade frontends where available) into a code knowledge graph, stored in an embedded SQLite file by default \u2014 no database server required \u2014 with Memgraph/Neo4j and Qdrant available as opt-in backends for scale. Published to PyPI as `cgr`; supports natural-language querying and structured editing of the graph.",
+      "category": [
+        "AI & agent infrastructure",
+        "RAG infrastructure",
+        "developer productivity",
+        "coding agents"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.1,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API. No restrictions; an 'Enterprise Support & Services' offering exists alongside the open-source core but does not gate functionality.",
+      "deployment": [
+        "pip/pipx/uv tool install",
+        "library",
+        "opt-in Memgraph/Neo4j + Qdrant stack for scale"
+      ],
+      "interfaces": [
+        "CLI (`cgr`)",
+        "library (Python)",
+        "PyPI package"
+      ],
+      "use_cases": [
+        "Ask structural questions about an unfamiliar multi-language repo (Python/TS/JS/Rust/Go/Java/C/C++/C#/PHP/Lua/Dart/Julia fully supported) without many manual file reads",
+        "Query and edit a codebase's knowledge graph directly rather than re-deriving structure from grep/read loops in an agent session",
+        "Scale from a zero-dependency embedded-SQLite graph on a single repo up to Memgraph+Qdrant for a large monorepo, without changing the query interface"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [
+        "A coding-agent-facing structural-query layer that complements raw grep/file-read tool use with graph queries and data-flow edges",
+        "Zero-server default install makes it droppable into a CI job or agent sandbox without provisioning a database"
+      ],
+      "alternatives": [
+        "Graphify (already catalogued, PROTOTYPE 8.5) \u2014 broader input scope (docs/PDFs/screenshots via Claude vision, not just code) and ships as a Claude Code skill; Code-Graph-RAG is code-only but has a more conventional embeddable-library/CLI shape, explicit data-flow edges, and real CI/quality tooling (Codecov, SonarCloud, OpenSSF Scorecard/Best Practices)",
+        "ripwire (already catalogued) \u2014 change-impact/blast-radius focused rather than general structural RAG"
+      ],
+      "why_it_matters": "A second, differently-shaped entrant in the codebase-knowledge-graph niche: library/CLI rather than Claude-Code-skill-only, with a published language-support matrix and data-flow edge modeling that Graphify does not claim.",
+      "why_not_build_it_myself": "Multi-language Tree-sitter grammar wiring, an ast-grep fallback tier for languages without full grammars, and a pluggable graph-backend abstraction (embedded SQLite vs. Memgraph/Neo4j) represent significant up-front engineering.",
+      "risks": [
+        "Native extension (`cgr-graph-rs`) requires CPython 3.12+ on specific platforms (Linux x86_64/aarch64, macOS, Windows x64) \u2014 not installable on older system interpreters without pinning",
+        "Overlaps enough with the already-catalogued Graphify that running both would be redundant for most use cases; pick based on whether the corpus is code-only (this) or mixed-media (Graphify)"
+      ],
+      "first_seen": "2026-11-21",
+      "last_reviewed": "2026-11-21",
+      "last_meaningful_update": "2026-11-21",
+      "current_version": "v0.7.1",
+      "latest_release_date": "2026-11-17",
+      "source_links": [
+        "https://github.com/vitali87/code-graph-rag",
+        "https://code-graph-rag.com",
+        "https://pypi.org/project/code-graph-rag/"
+      ],
+      "aliases": [
+        "cgr (PyPI/CLI name)"
+      ],
+      "notes": "Verified via GitHub API (stars=5393, subs=35, forks=726, license MIT) and README architecture docs confirming zero-server default (embedded SQLite) with opt-in Memgraph/Neo4j+Qdrant.",
+      "acted_on": false
+    },
+    {
+      "name": "SeekStorm",
+      "slug": "seekstorm",
+      "repo_url": "https://github.com/SeekStorm/SeekStorm",
+      "website": "https://seekstorm.com",
+      "description": "Sub-millisecond lexical, vector, and hybrid search engine in Rust. Embeddable as an in-process library, runnable as a multi-tenant server, and exposable to agents via MCP. Real community traction (245-point Hacker News thread, Discord, crates.io/docs.rs distribution, Docker images).",
+      "category": [
+        "product building blocks",
+        "RAG infrastructure",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, confirmed via GitHub API. No restrictions on commercial use, SaaS deployment, or embedding.",
+      "deployment": [
+        "library (Rust crate)",
+        "self-hosted server",
+        "Docker"
+      ],
+      "interfaces": [
+        "library (Rust)",
+        "REST API",
+        "MCP server",
+        "multi-tenant server"
+      ],
+      "use_cases": [
+        "Self-hosted hybrid full-text + vector search behind a product feature, without standing up Elasticsearch/OpenSearch for a workload that doesn't need that much infrastructure",
+        "Embed search directly into a Rust service as an in-process library rather than calling out to a separate search server",
+        "Give an agent fast hybrid search over a document/code corpus via the MCP interface",
+        "Multi-tenant deployment for a SaaS product that needs per-customer search indices"
+      ],
+      "product_opportunities": [
+        "A lighter self-hosted search building block for a micro-SaaS than Elasticsearch/OpenSearch, with less operational overhead"
+      ],
+      "agent_opportunities": [
+        "Native MCP support for giving coding/research agents hybrid search over a corpus"
+      ],
+      "alternatives": [
+        "Meilisearch/Typesense \u2014 more mainstream, broader out-of-the-box feature set, but heavier runtimes than an embeddable Rust library",
+        "Elasticsearch/OpenSearch \u2014 far more mature but substantially more operational overhead for a workload that doesn't need distributed scale"
+      ],
+      "why_it_matters": "A credible, independently-vetted (HN front page, active Discord) alternative for the 'need search, don't want to run Elasticsearch' problem that recurs across product-building projects.",
+      "why_not_build_it_myself": "A sub-millisecond hybrid BM25+vector index with multi-tenancy and both library and server modes is a multi-month systems-engineering effort, not a glue script.",
+      "risks": [
+        "Smaller community than Meilisearch/Typesense (1,938 stars, 9 subscribers) \u2014 longevity and support responsiveness unverified beyond the GitHub activity itself",
+        "Rust-only embedding path; non-Rust consumers are limited to the REST API or MCP server rather than a native binding"
+      ],
+      "first_seen": "2026-11-21",
+      "last_reviewed": "2026-11-21",
+      "last_meaningful_update": "2026-11-21",
+      "current_version": "v5.1.0",
+      "latest_release_date": "2026-11-15",
+      "source_links": [
+        "https://github.com/SeekStorm/SeekStorm",
+        "https://seekstorm.com",
+        "https://news.ycombinator.com/item?id=42295792"
+      ],
+      "aliases": [],
+      "notes": "Verified via GitHub API (stars=1938, subs=9, forks=75, license Apache-2.0). HN points/Discord/crates.io links taken from the repo's own README badges, not independently re-verified beyond the HN item ID resolving.",
+      "acted_on": false
+    },
+    {
+      "name": "TypeGraph",
+      "slug": "typegraph-embedded-knowledge-graph",
+      "repo_url": "https://github.com/nicia-ai/typegraph",
+      "website": "https://typegraph.dev",
+      "description": "TypeScript-first embedded knowledge-graph library on top of an existing SQLite or PostgreSQL database. Nodes/edges defined with Zod schemas, queried via a fluent type-safe API, with hybrid vector+fulltext search (pgvector, sqlite-vec, libSQL/Turso native vectors), runtime schema evolution from agent-proposed JSON, and bitemporal (valid-time + recorded-time) reads.",
+      "category": [
+        "product building blocks",
+        "RAG infrastructure",
+        "AI & agent infrastructure"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.7,
+      "maturity": "experimental",
+      "integration_effort": "low",
+      "license": "MIT",
+      "commercial_use_notes": "MIT, confirmed via GitHub API. No restrictions.",
+      "deployment": [
+        "npm package",
+        "embedded in existing SQLite or PostgreSQL database"
+      ],
+      "interfaces": [
+        "library (TypeScript/Node.js)",
+        "npm package"
+      ],
+      "use_cases": [
+        "Model a knowledge graph or RAG context store directly inside an existing Node/Postgres or SQLite app without adding a separate graph database service",
+        "Build auditable agent memory with decision replay via bitemporal reads (what did the agent believe at time T, and what do we now know)",
+        "Model relationship-heavy domains (identity/permissions, ontologies) with compile-time-checked traversal queries instead of hand-rolled recursive SQL",
+        "Let an agent evolve the graph schema at runtime from proposed JSON instead of requiring a redeploy"
+      ],
+      "product_opportunities": [
+        "A reusable agent-memory/RAG-context building block for a Node/TS product that avoids standing up a dedicated graph database"
+      ],
+      "agent_opportunities": [
+        "Runtime schema evolution from agent-proposed JSON is explicitly designed for agent-driven data modeling rather than human migrations"
+      ],
+      "alternatives": [
+        "Neo4j/Dgraph/NebulaGraph \u2014 dedicated graph databases, more capable at scale but a separate service to run and operate",
+        "Hand-rolled adjacency tables in Postgres \u2014 what this replaces for a TypeScript team, at the cost of writing and maintaining the traversal/ontology logic by hand"
+      ],
+      "why_it_matters": "The only entrant found today that brings graph semantics (ontology relations, bitemporal history, typed traversal) natively into a TypeScript/SQL stack rather than requiring a separate graph database \u2014 a direct fit for the MERN/Postgres profile.",
+      "why_not_build_it_myself": "Bitemporal history, ontology relations (subClassOf/implies/inverseOf/disjointWith), and a type-safe traversal query builder across both SQLite and PostgreSQL backends is substantial infrastructure to hand-roll for a side feature.",
+      "risks": [
+        "Very early and thin community (93 stars, 1 subscriber, 3 forks) \u2014 a solo/small-team project with an actively evolving API (v0.76.0 as of 2026-11-21, released same day)",
+        "No independent production-usage evidence beyond the project's own docs and benchmarks"
+      ],
+      "first_seen": "2026-11-21",
+      "last_reviewed": "2026-11-21",
+      "last_meaningful_update": "2026-11-21",
+      "current_version": "@nicia-ai/typegraph@0.76.0",
+      "latest_release_date": "2026-11-21",
+      "source_links": [
+        "https://github.com/nicia-ai/typegraph",
+        "https://typegraph.dev",
+        "https://www.npmjs.com/package/@nicia-ai/typegraph"
+      ],
+      "aliases": [],
+      "notes": "Verified via GitHub API (stars=93, subs=1, forks=3, license MIT) and latest npm-tagged GitHub release.",
+      "acted_on": false
+    },
+    {
+      "name": "Paperless-NGX Dedupe",
+      "slug": "paperless-ngx-dedupe",
+      "repo_url": "https://github.com/rknightion/paperless-ngx-dedupe",
+      "website": "https://m7kni.io/paperless-ngx-dedupe/",
+      "description": "A companion service for the self-hosted document manager paperless-ngx: syncs documents, finds near-duplicates via MinHash/LSH fuzzy matching (catches boilerplate-only false positives via a discriminative penalty), and optionally extracts metadata (correspondents, document types, tags) with an LLM, with confidence scores and evidence snippets for review before applying. Single-container Docker deployment with embedded SQLite and OpenTelemetry observability built in.",
+      "category": [
+        "small utilities",
+        "developer productivity",
+        "product building blocks"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 6.9,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "GPL-3.0",
+      "commercial_use_notes": "GPL-3.0 \u2014 copyleft; fine for internal/self-hosted use, but redistributing a modified version requires releasing source. No restriction on running it internally or against a commercial deployment of paperless-ngx.",
+      "deployment": [
+        "Docker (single container)"
+      ],
+      "interfaces": [
+        "web UI",
+        "REST API"
+      ],
+      "use_cases": [
+        "Run against an existing paperless-ngx instance to find and clear out duplicate scans accumulated over time",
+        "Use the AI metadata suggestions to backfill correspondents/tags on a large existing document library instead of tagging manually",
+        "Scrape duplicate-detection reports (CSV export) for a one-time library cleanup"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Manual review inside paperless-ngx itself \u2014 what this replaces for any library past a few hundred documents"
+      ],
+      "why_it_matters": "A narrow, single-purpose add-on that removes a specific recurring chore (manually finding and merging duplicate scans) for anyone already running paperless-ngx as self-hosted document infrastructure.",
+      "why_not_build_it_myself": "MinHash/LSH candidate generation plus a discriminative penalty tuned to avoid false positives on boilerplate-heavy documents is a non-trivial amount of tuning for a one-off script.",
+      "risks": [
+        "GPL-3.0 copyleft on redistribution",
+        "Only useful if/when paperless-ngx is actually adopted \u2014 not standalone infrastructure"
+      ],
+      "first_seen": "2026-11-21",
+      "last_reviewed": "2026-11-21",
+      "last_meaningful_update": "2026-11-21",
+      "current_version": "v0.18.1",
+      "latest_release_date": "2026-08-11",
+      "source_links": [
+        "https://github.com/rknightion/paperless-ngx-dedupe"
+      ],
+      "aliases": [],
+      "notes": "Verified via GitHub API (stars=28, subs=0, forks=2, license GPL-3.0). Companion tool, not standalone; relevance depends on paperless-ngx adoption.",
       "acted_on": false
     }
   ]
