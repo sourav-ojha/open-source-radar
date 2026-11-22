@@ -1,6 +1,6 @@
 # Catalog
 
-_352 projects tracked. Last updated 2026-11-21._
+_357 projects tracked. Last updated 2026-11-22._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -356,3 +356,8 @@ _352 projects tracked. Last updated 2026-11-21._
 | [Bookshelf](https://github.com/murerkinn/bookshelf) | WATCH | 6.0/10 | small utility, self-hosted | MIT | low | 2026-09-15 |
 | [Dialog DB](https://github.com/dialog-db/dialog-db) | STUDY | 6.0/10 | infrastructure, architecture, emerging tech, product building blocks | MPL-2.0 | high | 2026-10-06 |
 | [LightMem](https://github.com/zjunlp/LightMem) | WATCH | 5.5/10 | agent memory, AI agent infrastructure | MIT | high | 2026-08-29 |
+| [Usertour](https://github.com/usertour/usertour) | PROTOTYPE | 8.2/10 | product building blocks, micro-SaaS component, AI agent infrastructure | MIT (core) + enterprise dirs | low | 2026-11-22 |
+| [Open Walnut](https://github.com/EvanZhang008/open-walnut) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity, self-hosted SaaS alternative | MIT | low | 2026-11-22 |
+| [IncidentRelay](https://github.com/roxy-wi/IncidentRelay) | PROTOTYPE | 7.8/10 | infrastructure, observability, deployment, self-hosted SaaS alternative | Elastic License 2.0 | medium | 2026-11-22 |
+| [Doop](https://github.com/kgoedecke/doop) | STUDY | 7.6/10 | product building blocks, AI agent infrastructure, collaboration/CRDTs | AGPL-3.0 | low | 2026-11-22 |
+| [Universal Parcel Scraper](https://github.com/plhery/universal-parcel-scraper) | USE NOW | 6.9/10 | small high-leverage utility, product building blocks | Apache-2.0 | low | 2026-11-22 |
