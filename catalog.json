@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "projects": [
     {
       "name": "Xberg",
@@ -17895,7 +17895,8 @@
         "Single governed entry point for every Claude Code/Cursor/CI-pipeline call to OpenAI/Anthropic/Gemini/Bedrock, with per-user budgets and cost-center chargeback reports",
         "MCP tool calls proxied through per-user OAuth so each agent action to GitHub/Notion/Linear/Slack shows up in that upstream's own audit log under the real user, not a shared service account",
         "PII/secrets redaction guard on prompts and responses before they leave the network - directly relevant when running agents against MSSP/PTaaS client data",
-        "Prompt-injection and dangerous-tool-call content filtering as a safety net in front of agents with write access"
+        "Prompt-injection and dangerous-tool-call content filtering as a safety net in front of agents with write access",
+        "Hosted web search, page reading, and find-in-page for selected API keys (v3.12.0), with domain allow-lists — lets a governed agent browse the web through the same audited gateway instead of a separate ungoverned browsing tool"
       ],
       "product_opportunities": [],
       "agent_opportunities": [
@@ -17915,17 +17916,17 @@
         "License field reported NOASSERTION by the GitHub API; confirmed BSL-1.1 only by reading the LICENSE file directly"
       ],
       "first_seen": "2026-11-05",
-      "last_reviewed": "2026-11-05",
-      "last_meaningful_update": "2026-11-05",
-      "current_version": "v3.11.0",
-      "latest_release_date": "2026-11-03",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v3.12.0",
+      "latest_release_date": "2026-11-18",
       "source_links": [
         "https://github.com/ThinkWatchProject/ThinkWatch",
         "https://thinkwat.ch/thinkwatch",
         "https://raw.githubusercontent.com/ThinkWatchProject/ThinkWatch/main/LICENSE"
       ],
       "aliases": [],
-      "notes": "GitHub API reported license as NOASSERTION; fetched LICENSE directly from raw.githubusercontent.com and confirmed Business Source License 1.1 with the specific usage-grant terms quoted above. 814 stars, 23 forks, 4 subscribers, created 2026-04-02, pushed_at 2026-11-04. Companion repos ThinkWatch-Core and ThinkWatch-Lite (both MIT) not independently reviewed this run.",
+      "notes": "GitHub API reported license as NOASSERTION; fetched LICENSE directly from raw.githubusercontent.com and confirmed Business Source License 1.1 with the specific usage-grant terms quoted above. 814 stars, 23 forks, 4 subscribers, created 2026-04-02, pushed_at 2026-11-04. Companion repos ThinkWatch-Core and ThinkWatch-Lite (both MIT) not independently reviewed this run. 2026-11-23: v3.11.0->v3.12.0 added hosted web search/page-reading/find-in-page tools for selected API keys (with domain rules and a test/diagnostics flow) and a Codex connection guide with native model-catalog discovery — a real new capability, counted as a meaningful update.",
       "acted_on": false
     },
     {
@@ -18962,19 +18963,20 @@
         "Significant self-hosting footprint: FastAPI API, React frontend, PostgreSQL, Redis, RustFS, SearXNG, nginx, OpenTelemetry, and Arize Phoenix for tracing — this is not a single-binary tool",
         "Authorization must be implemented by the adopter against Kumoss's contract; nothing is provided out of the box",
         "Scheduled drift detection and the Helm chart are both listed as still in progress; the README explicitly states the roadmap 'reflects intent, not commitment'",
-        "Only 1 subscriber against 145 stars and 8 forks (an elevated ratio), though 57 open issues suggest real usage rather than inflated stars — weigh against it being a 6-month-old project from a single corporate sponsor"
+        "Only 1 subscriber against 145 stars and 8 forks (an elevated ratio), though 57 open issues suggest real usage rather than inflated stars — weigh against it being a 6-month-old project from a single corporate sponsor",
+        "v1.0.9 (2026-11-19) is a security patch fixing a critical nginx HTTP/2 RCE (CVE-2026-123007) affecting nginx 1.9.5-1.31.8 in the bundled web image, plus a dnspython advisory (GHSA-vvf4-9x63-8xvv) — anyone already self-hosting an earlier Kumoss version should upgrade."
       ],
       "first_seen": "2026-11-09",
-      "last_reviewed": "2026-11-09",
-      "last_meaningful_update": "2026-11-09",
-      "current_version": "v1.0.8",
-      "latest_release_date": "2026-11-05",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v1.0.9",
+      "latest_release_date": "2026-11-19",
       "source_links": [
         "https://github.com/InditexTech/kumoss",
         "https://inditextech.github.io/kumoss"
       ],
       "aliases": [],
-      "notes": "GitHub API verified: Apache-2.0, 145 stars, 8 forks, 1 subscriber, 57 open issues, created 2026-05-06, pushed 2026-11-09, not archived. README (raw.githubusercontent.com) confirms the 9-step request-to-PR flow, the bundled-vs-bring-your-own component table (model/identity/authorization are all BYO), the compliance-agent policy-gate behavior, and that drift correction treats deployed cloud state as source of truth. OpenSSF Scorecard badge and a security disclosure program are both present, which is a stronger-than-typical signal for a 6-month-old repo.",
+      "notes": "GitHub API verified: Apache-2.0, 145 stars, 8 forks, 1 subscriber, 57 open issues, created 2026-05-06, pushed 2026-11-09, not archived. README (raw.githubusercontent.com) confirms the 9-step request-to-PR flow, the bundled-vs-bring-your-own component table (model/identity/authorization are all BYO), the compliance-agent policy-gate behavior, and that drift correction treats deployed cloud state as source of truth. OpenSSF Scorecard badge and a security disclosure program are both present, which is a stronger-than-typical signal for a 6-month-old repo. 2026-11-23: checked for meaningful update — v1.0.9 is a security-only patch release (critical nginx RCE fix), not a capability change, but flagged per AGENT.md §10's 'major security development' criterion.",
       "acted_on": false
     },
     {
@@ -22267,6 +22269,304 @@
       ],
       "aliases": [],
       "notes": "GitHub API verified: Apache-2.0, 16 stars, 7 forks, 0 subscribers, created 2026-10-01, pushed_at 2026-11-22. Companion end-user app is github.com/plhery/peek-delivery-tracker (peektracker.com); this project is the tracking engine behind it, usable standalone.",
+      "acted_on": false
+    },
+    {
+      "name": "Databasus",
+      "slug": "databasus-multi-db-backup",
+      "repo_url": "https://github.com/databasus/databasus",
+      "website": "https://databasus.com",
+      "description": "Self-hosted database backup platform covering PostgreSQL (physical, incremental, WAL-streaming PITR, HA timeline-following for Patroni/CloudNativePG), MySQL, MariaDB and MongoDB (logical), plus managed Neon/Supabase Postgres. Performs a real restore after each backup to verify it is actually usable, not just checksum-valid, with a per-table row-count report. Multi-destination storage (S3/Azure Blob/R2/FTP/SFTP/NAS), GFS retention, AES-256-GCM encryption, multi-channel notifications, and workspace-based team access control with audit logs.",
+      "category": [
+        "infrastructure",
+        "database tooling",
+        "self-hosted SaaS alternative"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 8.4,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or internal use.",
+      "deployment": [
+        "Docker (automated install script)",
+        "docker compose",
+        "Kubernetes (Helm)"
+      ],
+      "interfaces": [
+        "Web UI",
+        "SSH tunnel for secure DB connections",
+        "webhooks/OpenTelemetry log export"
+      ],
+      "use_cases": [
+        "One tool backing up both the Postgres and MongoDB sides of a MERN/Postgres stack instead of separate pg_dump cron jobs and a mongodump script",
+        "Point-in-time recovery for Postgres with HA timeline-following, so a Patroni/CNPG primary failover doesn't break the backup chain",
+        "Real restore verification after every backup — catches a corrupt or incomplete backup before it's needed in an actual incident, not after",
+        "Backing up a managed Neon or Supabase Postgres instance without hand-rolling a pg_dump + S3-upload script",
+        "Team workspaces with RBAC and audit logs if backup responsibility is shared across a small team or an MSSP client engagement"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "pgBackRest, WAL-G, Barman — mature, Postgres-only, no web UI, no MongoDB/MySQL in the same tool",
+        "pgbackweb — similar self-hosted web-UI backup tool but Postgres-only, no PITR/HA timeline-following, no restore verification, no MongoDB support",
+        "Hand-rolled cron + pg_dump/mongodump + aws s3 cp — the status quo this replaces, with no restore verification and no retention/GFS logic built in"
+      ],
+      "why_it_matters": "Covers the two databases actually in Sourav's stack (PostgreSQL and MongoDB) under one self-hosted tool with real restore verification, which is the single most commonly-skipped step in a hand-rolled backup setup.",
+      "why_not_build_it_myself": "Correct WAL-streaming PITR with HA timeline-following, a real-restore verification pipeline, GFS retention, and multi-destination storage is weeks of edge-case work most teams defer indefinitely and then regret during an actual incident.",
+      "risks": [
+        "Elevated stars:subscribers ratio (9,320 stars vs 37 subscribers, ~252:1) for an 18-month-old project; tempered by 619 real forks and an active 11-open-issue tracker rather than a dead repo",
+        "MySQL/MariaDB/MongoDB backups are logical-only (no physical/incremental/PITR for those engines, only for PostgreSQL)",
+        "Running the restore-verification step spins up a throwaway database container per backup — budget the extra compute/IO on the host running Databasus"
+      ],
+      "first_seen": "2026-11-23",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v3.72.0",
+      "latest_release_date": "2026-11-22",
+      "source_links": [
+        "https://github.com/databasus/databasus",
+        "https://databasus.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 9,320 stars, 619 forks, 37 subscribers, 11 open issues, created 2025-06-05, pushed 2026-11-22, not archived. README (raw.githubusercontent.com) confirms PostgreSQL 14-18 physical+logical with PITR/HA, MySQL 5.7-26 logical, MariaDB 5.5-13 logical, MongoDB 4.2-9 logical, Neon/Supabase managed-Postgres support, real-restore verification with per-table row counts, GFS retention, AES-256-GCM encryption, and workspace/RBAC/audit-log team features.",
+      "acted_on": false
+    },
+    {
+      "name": "Greenmask",
+      "slug": "greenmask-db-anonymization",
+      "repo_url": "https://github.com/GreenmaskIO/greenmask",
+      "website": "https://www.greenmask.io",
+      "description": "Single-binary CLI for PostgreSQL (MySQL in beta) logical dumping, anonymization, synthetic data generation and restoration — a stateless drop-in replacement for pg_dump/pg_restore that adds deterministic (hash-based, reproducible) data masking, referentially-intact database subsetting (including cyclic/polymorphic references), dynamic/conditional transformation rules, and custom transformers in any language via a CMD extension point.",
+      "category": [
+        "developer productivity",
+        "product building blocks",
+        "security / compliance"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.5,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions on commercial or internal use.",
+      "deployment": [
+        "single binary",
+        "Docker / docker-compose"
+      ],
+      "interfaces": [
+        "CLI",
+        "pg_dump/pg_restore-compatible dump format",
+        "custom transformer plugins (any language via CMD)"
+      ],
+      "use_cases": [
+        "Spin up a referentially-intact, right-sized subset of a production Postgres database for local development instead of restoring the full dataset",
+        "Mask PII in a production dump before handing it to a staging environment, a contractor, or an MSSP/PTaaS engagement that needs realistic-but-safe data",
+        "Generate synthetic data to populate an empty environment for demos or load testing",
+        "Drop-in replacement for pg_dump/pg_restore in an existing backup pipeline, adding anonymization as a transparent extra step"
+      ],
+      "product_opportunities": [
+        "The anonymization + subsetting pipeline is a reusable building block for any \"give engineers a safe copy of prod data\" internal tool or client-data-handling workflow in the MSSP/PTaaS context"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "pg_dump/pg_restore (no anonymization or subsetting)",
+        "Custom scripts using Faker-style libraries (reinvents deterministic masking, referential integrity, and partition/FK inheritance by hand)",
+        "Commercial data-masking platforms (Delphix, Tonic.ai) — broader multi-database support but not self-hostable/free for this scale of use"
+      ],
+      "why_it_matters": "Database subsetting and PII masking for dev/staging environments is exactly the kind of recurring, error-prone task worth automating once rather than re-solving per project, and it directly overlaps the data-handling care the MSSP/PTaaS side already requires.",
+      "why_not_build_it_myself": "Correctly handling cyclic and polymorphic foreign-key references while subsetting, plus deterministic-but-irreversible hash-based masking that still satisfies constraints like created_at < updated_at, is non-trivial to get right by hand.",
+      "risks": [
+        "MySQL support is explicitly beta; PostgreSQL is the only production-ready engine",
+        "No native MongoDB support, so it only covers the Postgres half of a MERN stack",
+        "Stateless dump/restore model means it is not a live-database masking proxy — it operates on a dump, not an in-place transform"
+      ],
+      "first_seen": "2026-11-23",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v0.2.27",
+      "latest_release_date": "2026-11-12",
+      "source_links": [
+        "https://github.com/GreenmaskIO/greenmask",
+        "https://www.greenmask.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 1,810 stars, 85 forks, 5 subscribers, 63 open issues, created 2023-12-01, pushed 2026-11-22, not archived. JetBrains-sponsored. README confirms Postgres production-ready / MySQL beta status, database subsetting, deterministic hash-engine transformation, dynamic parameters, transformation inheritance for partitions/FKs, and CMD-based custom transformers.",
+      "acted_on": false
+    },
+    {
+      "name": "OpenMeter",
+      "slug": "openmeter-usage-metering-billing",
+      "repo_url": "https://github.com/openmeterio/openmeter",
+      "website": "https://openmeter.io",
+      "description": "API-first, composable usage-metering and billing infrastructure: ingests CloudEvents-format usage events, aggregates them in real time into meters, drives access-limit enforcement from those meters, and carries the result through pricing, subscriptions, prepaid credits and invoicing — designed to be adopted end-to-end or only for the pieces (e.g. just metering, or just access enforcement) a stack is missing, working alongside existing payment/tax providers.",
+      "category": [
+        "product infrastructure",
+        "micro-SaaS component",
+        "billing / payments"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.4,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no restrictions. A hosted OpenMeter Cloud exists but the self-hosted OSS core is the full metering/billing engine, not a crippled version.",
+      "deployment": [
+        "Docker / docker-compose (self-hosted)",
+        "Kubernetes",
+        "OpenMeter Cloud (hosted alternative)"
+      ],
+      "interfaces": [
+        "REST/gRPC API",
+        "CloudEvents ingestion",
+        "webhooks"
+      ],
+      "use_cases": [
+        "Usage-based or hybrid pricing for a product feature (API calls, AI tokens, storage) without hand-building an event-aggregation pipeline",
+        "Real-time usage-limit enforcement (hard caps, soft warnings) fed by the same meters used for billing, instead of two separate systems that can drift apart",
+        "Prepaid credits and grandfathered pricing for an existing micro-SaaS product's billing model",
+        "Metering-only adoption: feed it usage events and query aggregated consumption via API, leaving invoicing to Stripe or another existing payment provider"
+      ],
+      "product_opportunities": [
+        "Directly matches the micro-SaaS 'billing' building block called out in this radar's own operator profile — a credible metering/enforcement layer to drop into a usage-priced product instead of building one from scratch"
+      ],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Lago (10.9k stars) — more complete end-to-end billing/invoicing platform, better known, likely already on the radar for a billing-first use case",
+        "Meteroid (catalogued, STUDY) — subscription/invoicing-first; OpenMeter is metering/enforcement-first and more composable with an existing payment stack",
+        "Hand-rolled event counters in Postgres/Redis — works until usage-limit enforcement and billing need to agree on the same numbers"
+      ],
+      "why_it_matters": "Usage metering feeding both billing and access enforcement is a common micro-SaaS requirement that's easy to under-build (two systems that silently disagree) and OpenMeter's core metering engine has reportedly run in production for years before this OSS core existed.",
+      "why_not_build_it_myself": "Real-time, accurate event aggregation at volume plus keeping access-enforcement limits and billing numbers consistent is the kind of infrastructure that's deceptively fiddly to get right and easy to defer until it silently breaks a customer's bill.",
+      "risks": [
+        "Releases are explicitly beta (v1.0.0-beta.238) with possible breaking changes — read migration guides before upgrading in production",
+        "Not a bundled operator UI, payment processor, or tax engine by its own admission — still need a UI and a payment/tax provider around it",
+        "Crowded usage-based-billing niche (Lago, Lotus, Meteroid) — evaluate against those before committing, OpenMeter's distinction is the metering/enforcement-first, composable angle"
+      ],
+      "first_seen": "2026-11-23",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v1.0.0-beta.238",
+      "latest_release_date": "2026-11-20",
+      "source_links": [
+        "https://github.com/openmeterio/openmeter",
+        "https://openmeter.io"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: Apache-2.0, 2,462 stars, 246 forks, 12 subscribers, 92 open issues, created 2023-06-06, pushed 2026-11-23, not archived. README confirms API-first/composable positioning, CloudEvents ingestion, access-enforcement-from-meters, and an explicit 'what it is not' table (no bundled UI/payment/tax engine).",
+      "acted_on": false
+    },
+    {
+      "name": "Stategraph",
+      "slug": "stategraph-terraform-pr-automation",
+      "repo_url": "https://github.com/stategraph/stategraph",
+      "website": "https://stategraph.com",
+      "description": "Self-hosted Terraform/OpenTofu (plus Terragrunt, CDKTF, Pulumi) pull-request automation: listens for GitHub/GitLab PR events, runs plan for each changed directory as a job on your own CI runner (GitHub Actions/GitLab CI) with your own cloud credentials, comments the plan/cost-estimate back on the PR, and applies on a comment or on merge. Adds directory locks across concurrent PRs, OPA/Conftest policy checks, Checkov security scans, dependency-ordered applies, and scheduled drift detection.",
+      "category": [
+        "infrastructure",
+        "CI/CD",
+        "deployment automation"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.1,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "MPL-2.0",
+      "commercial_use_notes": "Mozilla Public License 2.0 — file-level weak copyleft; modifications to MPL-covered source files must be shared if distributed, but using/embedding it internally or commercially as-is carries no restriction. A separate paid Stategraph Cloud exists; the self-hosted server is the same open-source engine.",
+      "deployment": [
+        "Docker compose (self-hosted server)",
+        "runs plan/apply as jobs on existing GitHub Actions/GitLab CI runners"
+      ],
+      "interfaces": [
+        "GitHub/GitLab webhook integration",
+        "PR comments",
+        "config file (.stategraph/config.yml)"
+      ],
+      "use_cases": [
+        "Terraform/OpenTofu plan-on-PR, apply-on-merge or apply-via-comment workflow for AWS infra changes without hand-wiring a CI pipeline for it",
+        "Directory locks to stop two concurrent PRs from racing to apply conflicting Terraform changes in the same monorepo directory",
+        "OPA/Conftest policy checks and Checkov security scans gating a Terraform PR before it can be applied",
+        "Scheduled nightly drift detection against directories that haven't changed, catching manual console changes early"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "Atlantis (mainstream, excluded by policy) — the long-standing open-source baseline for this exact workflow; Stategraph adds directory locks, built-in cost estimates, and multi-engine (Terragrunt/CDKTF/Pulumi) support on top",
+        "Kumoss (catalogued) — generates Terraform from natural language with AI-driven drift correction and compliance review; Stategraph is the more traditional human-authored-PR plan/apply bot, lower-risk to adopt first",
+        "Terraform Cloud / Spacelift / env0 — hosted SaaS equivalents, not self-hosted"
+      ],
+      "why_it_matters": "A plan/apply-on-PR workflow for Terraform is something Sourav would likely assemble by hand in GitHub Actions eventually; Stategraph packages that plus the operational edges (locking, drift, policy gates) that a hand-rolled version usually skips.",
+      "why_not_build_it_myself": "Directory-level locking across concurrent PRs, dependency-ordered multi-directory applies, and policy/security-scan integration are all solvable individually but add up to real plumbing a from-scratch GitHub Action wouldn't include on day one.",
+      "risks": [
+        "Low subscriber count (3) relative to 1,327 stars and 83 forks, though 115 open issues indicate real usage rather than inflated stars",
+        "Implemented in OCaml — unusual for contributing patches, though irrelevant for pure self-hosted consumption via Docker",
+        "Requires wiring GitHub/GitLab webhooks and a CI runner with cloud credentials — more setup than a single-binary tool"
+      ],
+      "first_seen": "2026-11-23",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "3.2.40",
+      "latest_release_date": "2026-11-20",
+      "source_links": [
+        "https://github.com/stategraph/stategraph",
+        "https://stategraph.com"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: MPL-2.0, 1,327 stars, 83 forks, 3 subscribers, 115 open issues, created 2024-10-03, pushed 2026-11-23, not archived. README confirms parallel multi-directory plans, directory locks, OPA/Conftest + Checkov integration, cost estimates in PR comments, scheduled drift detection, and support for Terraform/OpenTofu/Terragrunt/CDKTF/Pulumi on GitHub and GitLab.",
+      "acted_on": false
+    },
+    {
+      "name": "kwatch",
+      "slug": "kwatch-k8s-root-cause-alerts",
+      "repo_url": "https://github.com/abahmed/kwatch",
+      "website": "https://kwatch.dev",
+      "description": "Lightweight, rule-based (no LLM) Kubernetes failure monitor: runs inside the cluster, watches pod/container events and crashes, traces a failure back to what actually started it, and sends a single consolidated alert — what broke, why, what changed, and what to do — to Slack, Discord, email or 50+ other channels via a Helm-installable chart.",
+      "category": [
+        "infrastructure",
+        "observability",
+        "small high-leverage utility"
+      ],
+      "status": "USE NOW",
+      "relevance_score": 6.8,
+      "maturity": "mature",
+      "integration_effort": "low",
+      "license": "Elastic License 2.0 (ELv2, source-available)",
+      "commercial_use_notes": "Elastic License 2.0 — source-available, not OSI-approved. Free to use, modify and self-host internally; the license's own limitation blocks offering kwatch itself to third parties as a hosted or managed service. Fine for internal EKS monitoring; would matter if packaging it inside an MSSP-offered managed service.",
+      "deployment": [
+        "Helm chart (in-cluster)",
+        "Docker image"
+      ],
+      "interfaces": [
+        "Slack/Discord/email/Teams/Telegram/webhook and 50+ other notification channels"
+      ],
+      "use_cases": [
+        "One consolidated Slack message instead of fifty noisy pod-restart alerts when something breaks on an EKS cluster",
+        "Fast first-pass triage (what broke, why, what to do) before reaching for a heavier LLM-based alert-triage tool like the already-catalogued SherlockOps",
+        "Low-overhead addition to an existing cluster — no LLM, no external API dependency, just in-cluster event correlation"
+      ],
+      "product_opportunities": [],
+      "agent_opportunities": [],
+      "alternatives": [
+        "SherlockOps (catalogued) — LLM-driven alert investigation across multiple monitoring backends, heavier setup, deeper analysis",
+        "k8sgpt, HolmesGPT — LLM-based Kubernetes diagnosis, more mainstream/established in this exact niche",
+        "Hand-rolled kubectl events + Slack webhook script — the status quo this replaces"
+      ],
+      "why_it_matters": "A single, consolidated, no-LLM failure alert for an EKS cluster is the kind of near-zero-maintenance utility that saves recurring triage time without adding an LLM-cost or API-dependency to basic cluster monitoring.",
+      "why_not_build_it_myself": "Correctly correlating a cascade of pod/container events back to the one root change, across 50+ notification integrations, is a small but fiddly problem already solved and maintained since 2021.",
+      "risks": [
+        "Elastic License 2.0 is source-available, not a true OSI open-source license — fine for internal use, flagged per AGENT.md §14 for any resale/managed-service context",
+        "Rule-based root-causing is shallower than an LLM-driven tool like SherlockOps or HolmesGPT on genuinely novel failure modes"
+      ],
+      "first_seen": "2026-11-23",
+      "last_reviewed": "2026-11-23",
+      "last_meaningful_update": "2026-11-23",
+      "current_version": "v1.2.0",
+      "latest_release_date": "2026-11-12",
+      "source_links": [
+        "https://github.com/abahmed/kwatch",
+        "https://kwatch.dev"
+      ],
+      "aliases": [],
+      "notes": "GitHub API verified: license NOASSERTION per API, confirmed Elastic License 2.0 by reading LICENSE directly. 1,026 stars, 86 forks, 9 subscribers, 3 open issues, created 2021-11-20, pushed 2026-11-22, not archived. Today's Small but High-Leverage Utility pick.",
       "acted_on": false
     }
   ]

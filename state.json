@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-22",
-  "last_successful_run": "2026-11-22",
-  "run_count": 82,
-  "rotation_slot_last_used": 5,
+  "last_run": "2026-11-23",
+  "last_successful_run": "2026-11-23",
+  "run_count": 83,
+  "rotation_slot_last_used": 6,
   "recent_categories": [
     "self-hosted SaaS alternatives / productivity (slot 5) — a zero-server, zero-database Gumroad alternative using GitHub Pages + Stripe Payment Links + a GitHub Action for fulfillment via repo-collaborator invites (HonorBox), a four-year-old self-hosted multi-gateway (Stripe/PayPal/Razorpay/Square) Gumroad/Ko-fi alternative with per-country payment routing (Open Payment Host), and the first self-hostable Next.js/Cloudflare-native affiliate/referral tracker found in this niche (RefearnApp). Velox renamed itself to Hardcount at v0.9.0 and shipped ten releases fixing a real correctness gap in its LiteLLM integration plus production-hardening (idempotency keys, multi-replica rollout support) — a meaningful update; Keygate (v0.1.16->v0.1.19, 135->188 stars) added per-seat licensing and fixed a Stripe-webhook-retry correctness bug, also a meaningful update. Held slimTDS (izzipizzy/slimtds, PHP/FrankenPHP affiliate traffic-distribution-system rewrite) out of the catalog on dual-use grounds — its schema types include classic cloaking patterns overlapping ad-fraud/detection-evasion tooling, and the PHP stack doesn't fit the MERN bias. Held letsrevel/revel (self-hosted event/ticketing/membership platform for clubs and venues, MIT, 118 stars) to Worth Watching as tangential to the core product-building-block focus. DocsMint held again for a second cycle with no new differentiation from the already-catalogued sage-wiki. 'Still Worth Trying' rotated to skills (Vercel Labs), Benjamin-Plus Skill, and Nerdlog — none used in the twelve immediately preceding rotations.",
     "infrastructure/observability/deployment (slot 6) — an agent-native self-hosted PaaS built on Cluster API, where the MCP deploy tool and the human dashboard drive the same operator with no agent-only or human-only actions (bex, first surfaced 2026-09-21 and deep-reviewed today after 2+ years of sustained activity), a self-hosted alert-triage agent that investigates Alertmanager/Grafana/Datadog/Zabbix/ELK/Loki alerts with an LLM-with-tool-calls loop across AWS/GCP/Azure/Postgres/MongoDB and supports self-hosted Ollama/vLLM (SherlockOps), and Grafana Labs' own official, GA agentic CLI that turns alert investigation and dashboard-as-code into shell commands and agent skills (gcx). MongoRescue (v0.18.0->v0.28.0) and Breeze (v0.121.0->v0.125.0) both had meaningful updates: MongoRescue added active-passive HA and a nightly chaos/fault-injection test suite, a real maturity jump; Breeze added Huntress/SentinelOne EDR deployment-from-policy, deepening its MSSP-context relevance. Reconfirmed the prior drift-detection hype-wave rejection (drifthoundhq/drifthound) and rejected a stale AI-API gateway entrant (poixeai/proxify) as inferior to the already-saturated LLM-gateway niche. Searches across certificate management, database backup/DR, chaos engineering, log aggregation, edge functions, service mesh, bare-metal provisioning, zero-trust network access, database proxies, and new Kubernetes operators surfaced only already-mainstream tools (Coolify, Terramate, cloud-custodian, OptScale) or thin noise, with no new standout. Held WozzHQ/wozz (shift-left Kubernetes cost-change linter, 10 months stale) and kaskol10/karpenter-optimizer (narrow Karpenter-NodePool cost tool, NOASSERTION license) to Worth Watching. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and Sidequest — none used in the six immediately preceding rotations.",
@@ -23,24 +23,10 @@
     "product infrastructure/APIs/backend components (slot 2) — a self-hosted outbound-webhooks and event-destinations gateway backed by a real company with a managed-service incentive to keep the open-source path working (hookdeck/outpost, Apache-2.0, 1,086 stars), a single-maintainer but surprisingly deep Apache-2.0 database/API/deployment access-governance platform directly relevant to the MSSP/PTaaS secondary context (bablsoft/accessflow), a Go background-job queue implementing the transactional-outbox pattern with native MongoDB support and a specific, checkable comparison against River/Asynq/Machinery (kirimatt/goncordia, MIT), and an early coding-agent-driven admin-panel generator that constrains the agent to 41 typed building blocks rather than freehand UI generation, with Mongo and Postgres as first-class backends (AntelopeJS/dms, Apache-2.0). melosso/beacon (lightweight, self-hostable email consent/opt-out management service, EUPL-1.2) was today's Small but High-Leverage Utility. Today's GitHub topic searches (feature-flags, secrets-management, notification-service) again surfaced a heavily saturated 'secrets/credential proxy for AI agents' cluster (aquaman, phantom-secrets, gatehouse, nokey, avhn/secret, varlatch, secret-map) with no clear differentiation between entrants — none catalogued. keyorixhq/keyorix (on-prem secrets management, AGPL-3.0, EU/NIS2/DORA compliance angle) and IlyaSemenov/kern-jobs (early-stage Postgres-backed TypeScript job queue) and ryanlewis/hubbub (single-binary notification fan-out hub, pre-release) were held to Worth Watching. 'Still Worth Trying' rotated to CATS, pgschema, and NestLens — avoiding Xberg/Bernstein/Sidequest and the prior two runs' picks (nono/ctx/SnapOtter, Destructive Command Guard/mcpsnoop/netbridge).",
     "developer utilities/debugging/testing (slot 3) — herdr (herdrdev/herdr), a single-binary Rust terminal runtime purpose-built for coding agents (persistent detach/reconnect, multi-machine agent window, agent-native socket API), discovered via topic:terminal-multiplexer search at 51,963 stars/8 months old with zero prior catalog entry — the same search surfaced a crowded 2026 wave of competitors (manaflow-ai/cmux at 28,840 stars but Ghostty/macOS-only, plus far smaller wmux/cornercase-terminal/orchbee/phux/frankenterm/ThinkTerm/horizon entrants) and a real third-party plugin marketplace already built on herdr itself (herdr-reviewr, herdr-core, herdr-sidebar, herdr-nvim, herdrm, herdr-remote, herdr-file-viewer, herdr-mirror). RoloBits/nestjs-doctor, a deterministic (non-LLM) NestJS static analyzer explicitly built to catch AI-agent-introduced mistakes across security/correctness/architecture/performance/schema with CI/VS-Code/agent-skill integration, is a direct stack match distinct from the already-catalogued NestLens (runtime monitoring vs. static analysis). geek-fun/dockit, a 3-year-old native multi-protocol desktop DB client (Elasticsearch/OpenSearch/DynamoDB/MongoDB/EasySearch) replacing Kibana and the AWS Console in one app, was catalogued over a same-day crowded wave of new lightweight native DB clients (GoNavi, TablePro, mqlens-mongodb, geek-fun/sqlkit) with no clearer differentiation. harehare/mq (a jq-like Markdown query language/CLI with a REPL, LSP, and debugger) was today's Small but High-Leverage Utility. tuicr's v0.28.0→v0.29.0 release (self-hosted Azure DevOps Server/TFS support) was a meaningful update given the self-hosting bias. Rejected microscope-dev/microscope (1,054 stars but a README with no real content beyond a license notice — unclear purpose), cronwatchdev/cronwatch (0 subscribers/forks/issues, C# stack mismatch, niche already served by excluded mainstream healthchecks.io), and geek-fun/sqlkit (thinner SQL-side sibling of the catalogued dockit). Held persiyanov/herdr-reviewr (overlaps the already-catalogued Plannotator/tuicr review-pane niche), cribelo/cribelo (PR reading-map tool, 9 days old, 37 stars/3 subscribers/2 forks), antoniorodr/cronboard (1,481-star terminal cron dashboard, Python/stack mismatch), and avens19/pocketops (mobile SigNoz client, 2 days old, 13 stars/0 subscribers) to Worth Watching. 'Still Worth Trying' rotated to Xberg, Bernstein, and Planning with Files — none used in the prior six-plus immediately preceding rotations.",
     "slot 4 (data, search, documents, RAG) — a persistent, Claude-Code-specific memory/reflection MCP layer shipped as a single embedded Rust binary with no server or API key (ramakay/claude-self-reflect, MIT, v10.1.0), a Tree-sitter-based multi-language code knowledge graph with a zero-server embedded-SQLite default and real CI/quality tooling behind it (vitali87/code-graph-rag, MIT, 5,393 stars), a sub-millisecond hybrid lexical+vector search engine with independently-verified Hacker News/Discord traction (SeekStorm, Apache-2.0), and a TypeScript-native embedded knowledge-graph library with bitemporal reads that avoids a separate graph database (nicia-ai/typegraph, MIT, very early). rknightion/paperless-ngx-dedupe (MinHash/LSH duplicate detection plus optional LLM metadata extraction for paperless-ngx, GPL-3.0) was today's Small but High-Leverage Utility. GitHub's topic: searches (document-processing, pdf-extraction, rag, semantic-search, vector-database, knowledge-graph, data-pipeline, full-text-search, etl) surfaced mostly already-excluded household names (Milvus, Qdrant, LlamaIndex, Meilisearch, Airbyte, Airflow, Weaviate) and a fresh wave of star-inflated 'codebase-to-knowledge-graph-for-agents' repos (Egonex-AI/Understand-Anything 93,484★/293 subs, 666ghj/MiroFish 86,081★/495 subs, DeusData/codebase-memory-mcp 48,962★/168 subs, tirth8205/code-review-graph 32,895★/91 subs, trailhq/Trail-Code 11,384★/34 subs) all overlapping the already-catalogued Graphify with star:subscriber ratios of 290:1-490:1, consistent with the inflated-engagement pattern flagged in prior runs — excluded all five pending independent verification. Checking fork and issue authorship directly (rather than trusting star/fork counts) surfaced a distinct fake-engagement signature on pyrite-wiki/pyrite: 17 stars but 93 forks and 223 open issues, with forks from dozens of freshly-created-looking accounts that immediately file issues in the same terse commit-style phrasing as the repo's own commits — rejected as an apparent simulated-community pattern rather than evaluated on technical merit. rocketride-org/rocketride-server (20,005★/10 subs, ~2,000:1) and the already-once-rejected SourceWeft/SourceWeft both resurfaced and were excluded again on the same inflated-engagement grounds. Held evb0110/evb-viewer (scanned-document/OCR workbench with a local MCP server, one Rust+WASM codebase across four targets, 5 stars) and Artexis10/exomem (self-hosted MCP vault-memory server, AGPL-3.0, 9 stars, 128 open issues nearly all self-filed by the sole maintainer in an oddly uniform style suggesting an AI-agent-driven solo workflow rather than external engagement) to Worth Watching. Graphify's v0.9.62→v0.9.114 release (performance/extractor fixes, byte-identical graph output for the perf changes) did not meet the meaningful-update bar. 'Still Worth Trying' rotated to LibreDB Studio, SkillSpector, and Monoscope — none used in the twelve immediately preceding rotations.",
-    "slot 5 (self-hosted SaaS alternatives, productivity): catalogued Usertour (self-hosted onboarding/tours/checklists platform, MCP-native authoring, usertour/usertour), Open Walnut (self-hosted multi-agent Claude Code org/workspace with durable remote sessions, EvanZhang008/open-walnut), IncidentRelay (self-hosted PagerDuty-style on-call/incident platform, Elastic License 2.0, roxy-wi/IncidentRelay), and Doop (multiplayer AI-agent design canvas, AGPL-3.0, kgoedecke/doop, STUDY). Universal Parcel Scraper (plhery/universal-parcel-scraper, 4,500+ carrier tracking, no API key) was the utility pick. Rejected GitPerennial (claims to be a GitHub repo but ships no source, installer-only, paid license backend) and the just-every 'run-*' org (~45 near-identical templated 'open source alternative to X' seeds, almost all 0-4 stars/0 subscribers) as a mass-produced batch."
+    "slot 5 (self-hosted SaaS alternatives, productivity): catalogued Usertour (self-hosted onboarding/tours/checklists platform, MCP-native authoring, usertour/usertour), Open Walnut (self-hosted multi-agent Claude Code org/workspace with durable remote sessions, EvanZhang008/open-walnut), IncidentRelay (self-hosted PagerDuty-style on-call/incident platform, Elastic License 2.0, roxy-wi/IncidentRelay), and Doop (multiplayer AI-agent design canvas, AGPL-3.0, kgoedecke/doop, STUDY). Universal Parcel Scraper (plhery/universal-parcel-scraper, 4,500+ carrier tracking, no API key) was the utility pick. Rejected GitPerennial (claims to be a GitHub repo but ships no source, installer-only, paid license backend) and the just-every 'run-*' org (~45 near-identical templated 'open source alternative to X' seeds, almost all 0-4 stars/0 subscribers) as a mass-produced batch.",
+    "infrastructure/observability/deployment (slot 6) — a self-hosted multi-database backup platform covering both PostgreSQL (physical/incremental/WAL-streaming PITR with HA timeline-following for Patroni/CNPG) and MongoDB (logical), with a real restore-verification step most comparable tools skip (Databasus, directly covers both databases in the MERN+Postgres stack), a mature PostgreSQL/MySQL anonymization-and-subsetting CLI relevant to both dev/staging provisioning and the MSSP/PTaaS client-data context (Greenmask), a composable usage-metering/billing-enforcement infra matching the radar's own micro-SaaS 'billing' building-block callout (OpenMeter, beta, crowded niche vs. Lago/Meteroid flagged), and a feature-rich OCaml-built Terraform/OpenTofu PR-automation bot (directory locks, OPA/Conftest, Checkov, cost estimates, drift detection) distinguished from the already-catalogued Kumoss by being a traditional human-authored-PR plan/apply bot rather than an AI-generates-the-Terraform pipeline (Stategraph). kwatch (lightweight, no-LLM Kubernetes failure-to-root-cause Slack/Discord alerter, Elastic License 2.0 flagged) was today's Small but High-Leverage Utility. Two meaningful updates: Kumoss v1.0.8->v1.0.9 shipped a security-only patch fixing a critical nginx HTTP/2 RCE (CVE-2026-123007) in its bundled web image — flagged per §10's security-development criterion despite no capability change; ThinkWatch v3.11.0->v3.12.0 added hosted web search/page-reading tools for selected API keys plus Codex model-catalog discovery, a real new capability. Held valqore (infrastructure-governance scanner claiming 1,431 rules across 19 compliance packs including oddly futuristic ones, but 0 open issues on an actively-pushed repo and a NOASSERTION license — a marketing-heavy/suspicious-engagement pattern, not catalogued) and eduardolat/pgbackweb (a thinner, Postgres-only alternative to Databasus with no PITR/HA/restore-verification, AGPL-3.0) out. Noted but did not individually vet a recurring 'agentic SRE/ops platform' wave overlapping the already-catalogued SherlockOps (nudgebee, Arvo-AI/aurora, OpsiMate) and treated HolmesGPT (Robusta, CNCF Sandbox) as an already-known mainstream SRE agent with no fresh material development surfaced this run. zerobyte (restic-based self-hosted backup UI, AGPL-3.0, still 0.x) held to Worth Watching as promising but early and thinner than Databasus for the actual stack. 'Still Worth Trying' rotated to AgentSight, agentOS (Rivet), and WhoDB — none used in the immediately preceding rotations. GitHub's search/repositories API with topic:/stars:/pushed: filters, api.github.com /repos and /releases lookups, and raw.githubusercontent.com README/LICENSE fetches supplied all of today's signal; WebSearch/WebFetch/HN Algolia were not needed."
   ],
   "evaluated_repos": [
-    "super-productivity/super-productivity",
-    "rootprint/rootprint",
-    "dimonomid/nerdlog",
-    "kimdre/doco-cd",
-    "bytebase/bytebase",
-    "hamidi-dev/opentab",
-    "Rodiun/frugon",
-    "akuity/kargo",
-    "logtide-dev/logtide",
-    "bex-co/bex",
-    "y-scope/clp",
-    "link-society/flowg",
-    "tanrikuluozlem/burn",
-    "iopsystems/rezolus",
-    "litmuschaos/litmus",
     "chaosblade-io/chaosblade",
     "mock-server/mockserver-monorepo",
     "quickwit-oss/quickwit",
@@ -1525,7 +1511,22 @@
     "just-every/run-nectar",
     "just-every/run-penny",
     "just-every/run-nook",
-    "awaseem/foqos"
+    "awaseem/foqos",
+    "databasus/databasus",
+    "nicotsx/zerobyte",
+    "stategraph/stategraph",
+    "valqore/valqore",
+    "openmeterio/openmeter",
+    "OpsiMate/OpsiMate",
+    "abahmed/kwatch",
+    "Tracer-Cloud/opensre",
+    "HolmesGPT/holmesgpt",
+    "AltimateAI/altimate-code",
+    "nudgebee/nudgebee",
+    "Arvo-AI/aurora",
+    "GreenmaskIO/greenmask",
+    "eduardolat/pgbackweb",
+    "platform-engineering-labs/formae"
   ],
   "rejected": [
     {
@@ -3267,6 +3268,26 @@
       "repo_url": "https://github.com/ModernOps888/infinity-Security-stack",
       "reason": "held off, not rejected outright - ambitious Rust self-hosted Auth0/Datadog/Snowflake/Kafka replacement suite with a detailed security posture writeup, but only 5 stars and 0 subscribers; too thin externally to catalogue yet. See Worth Watching.",
       "date": "2026-11-22"
+    },
+    {
+      "repo_url": "https://github.com/valqore/valqore",
+      "reason": "suspicious-engagement / marketing-heavy — claims 1,431 rules across 19 compliance packs (including oddly futuristic ones like 'PQC Migration / CNSA 2.0') with a polished 'one scan, one score, one verdict' tagline, yet 0 open issues on a repo pushed the same day as review; NOASSERTION license unresolved. Held off rather than catalogued.",
+      "date": "2026-11-23"
+    },
+    {
+      "repo_url": "https://github.com/eduardolat/pgbackweb",
+      "reason": "inferior to catalogued alternative — self-hosted Postgres-backup web UI, but Postgres-only with no PITR/HA timeline-following, no restore verification, and no MongoDB support, unlike the catalogued Databasus. AGPL-3.0.",
+      "date": "2026-11-23"
+    },
+    {
+      "repo_url": "https://github.com/HolmesGPT/holmesgpt",
+      "reason": "assumed-known mainstream — Robusta's CNCF Sandbox SRE agent is already well-established in the AI/SRE observability space; no fresh material development surfaced this run to justify a new entry.",
+      "date": "2026-11-23"
+    },
+    {
+      "repo_url": "https://github.com/nudgebee/nudgebee, https://github.com/Arvo-AI/aurora, https://github.com/OpsiMate/OpsiMate",
+      "reason": "duplicate/saturated niche — three more entrants in the agentic-SRE/alert-investigation wave already covered by the catalogued SherlockOps; not individually vetted given time budget.",
+      "date": "2026-11-23"
     }
   ],
   "known_releases": {
@@ -4455,8 +4476,8 @@
       "date": "2026-11-04"
     },
     "grafana/gcx": {
-      "version": "v1.7.1",
-      "date": "2026-10-21"
+      "version": "v1.8.0",
+      "date": "2026-11-17"
     },
     "Duops/SherlockOps": {
       "version": "v1.2.8",
@@ -4487,8 +4508,8 @@
       "date": "2026-11-01"
     },
     "ThinkWatchProject/ThinkWatch": {
-      "version": "v3.11.0",
-      "date": "2026-11-03"
+      "version": "v3.12.0",
+      "date": "2026-11-18"
     },
     "docs-plus/docs.plus": {
       "version": "v2.2.0",
@@ -4555,12 +4576,12 @@
       "date": "2026-11-09"
     },
     "InditexTech/kumoss": {
-      "version": "v1.0.8",
-      "date": "2026-11-05"
+      "version": "v1.0.9",
+      "date": "2026-11-19"
     },
     "towardsthecloud/cloudburn": {
-      "version": "vscode-ext v0.1.4",
-      "date": "2026-11-08"
+      "version": "cloudburn/mcp@0.1.11",
+      "date": "2026-11-18"
     },
     "fabriziosalmi/certmate": {
       "version": "v2.55.2",
@@ -4765,16 +4786,36 @@
     "kgoedecke/doop": {
       "version": "desktop-v0.14.0",
       "date": "2026-11-16"
+    },
+    "databasus/databasus": {
+      "version": "v3.72.0",
+      "date": "2026-11-22"
+    },
+    "GreenmaskIO/greenmask": {
+      "version": "v0.2.27",
+      "date": "2026-11-12"
+    },
+    "openmeterio/openmeter": {
+      "version": "v1.0.0-beta.238",
+      "date": "2026-11-20"
+    },
+    "stategraph/stategraph": {
+      "version": "3.2.40",
+      "date": "2026-11-20"
+    },
+    "abahmed/kwatch": {
+      "version": "v1.2.0",
+      "date": "2026-11-12"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-11-10",
-      "note": "Not used this run — GitHub's search/repositories API supplied sufficient signal for slot 4 (data, search, documents, RAG)."
+      "note": "Not used this run — GitHub's search/repositories API with topic:/stars:/pushed: filters supplied sufficient signal for slot 6."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-22",
-      "note": "Fetched READMEs/LICENSE files for usertour, open-walnut, IncidentRelay, doop, universal-parcel-scraper, GitPerennial, and infinity-Security-stack before cataloguing/rejecting."
+      "last_ok": "2026-11-23",
+      "note": "Fetched READMEs/LICENSE files for databasus, zerobyte, stategraph, kwatch, greenmask, valqore, openmeter, pgbackweb before cataloguing/rejecting — confirmed kwatch's NOASSERTION-reported license is actually Elastic License 2.0 by reading LICENSE directly."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4789,8 +4830,8 @@
       "note": "UNUSABLE — returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-22",
-      "note": "Direct from the GitHub Actions runner, GITHUB_TOKEN used, ~45 calls across topic/keyword search, repo metadata, releases, and org listing. No rate pressure (8,500+/8,550 remaining)."
+      "last_ok": "2026-11-23",
+      "note": "Direct from the GitHub Actions runner, GITHUB_TOKEN used, ~65 calls across topic/keyword search, repo metadata, releases. No rate pressure (8,500+/8,550 remaining at start)."
     },
     "hn.algolia.com": {
       "last_ok": "2026-11-20",
@@ -4940,8 +4981,13 @@
     "Open Walnut - EvanZhang008/open-walnut - PROTOTYPE - 2026-11-22",
     "IncidentRelay - roxy-wi/IncidentRelay - PROTOTYPE - 2026-11-22",
     "Doop - kgoedecke/doop - STUDY - 2026-11-22",
-    "Universal Parcel Scraper - plhery/universal-parcel-scraper - USE NOW - 2026-11-22"
+    "Universal Parcel Scraper - plhery/universal-parcel-scraper - USE NOW - 2026-11-22",
+    "Databasus - databasus/databasus - USE NOW - 2026-11-23",
+    "Greenmask - GreenmaskIO/greenmask - PROTOTYPE - 2026-11-23",
+    "OpenMeter - openmeterio/openmeter - PROTOTYPE - 2026-11-23",
+    "Stategraph - stategraph/stategraph - PROTOTYPE - 2026-11-23",
+    "kwatch - abahmed/kwatch - USE NOW - 2026-11-23"
   ],
-  "notes": "2026-11-22: slot 5 run (self-hosted SaaS alternatives, productivity). Published Usertour (self-hosted onboarding/tours platform with native MCP authoring, PROTOTYPE 8.2), Open Walnut (self-hosted multi-agent Claude Code workspace with durable remote sessions, PROTOTYPE 8.0, noting an unverified 'used by Amazon/DoorDash engineers' README claim), IncidentRelay (self-hosted PagerDuty-style on-call/incident platform, PROTOTYPE 7.8, Elastic License 2.0 flagged), and Doop (multiplayer AI-agent design canvas, STUDY 7.6, AGPL-3.0 flagged) as new discoveries. Universal Parcel Scraper (4,500+ carrier self-hosted tracking, no API key, USE NOW 6.9) was Small but High-Leverage Utility. Checked gotempsh/temps (already catalogued 2026-09-09, PROTOTYPE 8.1) for a meaningful update - still in active nightly development with a new 'beta' release track, but no capability change meeting the AGENT.md section 10 bar, so left as-is. Held infinity-Security-stack and ASO-Copilot to Worth Watching (both too thin externally: 5 and 8 stars). Rejected GitPerennial (claims to be an open-source GitHub repo but ships no source, installer-only, paid licence backend - misleading) and the just-every 'run-*' org (~45 near-identical templated 'open source alternative to X' seeds, almost all 0-4 stars/0 subscribers) as a mass-produced batch, not evaluated individually. 'Still Worth Trying' rotated to Issuerd, Sidequest, and Beads.",
-  "updated": "2026-11-17"
+  "notes": "2026-11-23: slot 6 run (infrastructure, observability, deployment). Published Databasus (self-hosted Postgres+MongoDB backup with PITR/HA and real restore verification, USE NOW 8.4), Greenmask (Postgres/MySQL anonymization+subsetting CLI, PROTOTYPE 7.5), OpenMeter (composable usage-metering/billing-enforcement infra, PROTOTYPE 7.4, beta status and crowded-niche flagged), and Stategraph (feature-rich Terraform/OpenTofu PR-automation bot, PROTOTYPE 7.1) as new discoveries. kwatch (no-LLM Kubernetes failure alerter, Elastic License 2.0 flagged, USE NOW 6.8) was Small but High-Leverage Utility. Meaningful updates: Kumoss v1.0.8->v1.0.9 (security-only patch, critical nginx RCE fix) and ThinkWatch v3.11.0->v3.12.0 (hosted web-search/page-reading tools + Codex model-catalog discovery). Held valqore (suspicious-engagement/marketing-heavy infra-governance scanner) and pgbackweb (thinner Databasus alternative) off the catalog. Checked gcx (v1.7.1->v1.8.0, breaking-change/bugfix only, not meaningful) and CloudBurn (dependency-bump patch only) — neither qualified as a meaningful update. Noted but did not individually vet a recurring agentic-SRE/ops wave (nudgebee, Arvo-AI/aurora, OpsiMate) overlapping the already-catalogued SherlockOps, and treated HolmesGPT as already-known mainstream. 'Still Worth Trying' rotated to AgentSight, agentOS (Rivet), and WhoDB.",
+  "updated": "2026-11-23"
 }

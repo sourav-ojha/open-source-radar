@@ -52,3 +52,6 @@ PROTOTYPE — the governance pattern (plan retry, drift-as-source-of-truth corre
 ## Change History
 ### 2026-11-09
 First reviewed and catalogued. Slot 6 (infrastructure, observability, deployment) run. Confirmed via GitHub API (Apache-2.0, 145 stars, pushed 2026-11-09, v1.0.8) and README inspection (raw.githubusercontent.com) covering the request-to-PR flow, bundled-vs-BYO component table, and policy-gate behavior.
+
+### 2026-11-23
+Meaningful update (security): v1.0.8 -> v1.0.9. Security-only patch release fixing a critical nginx HTTP/2 remote-code-execution flaw (CVE-2026-123007, affecting nginx 1.9.5-1.31.8) in the bundled web image, plus a dnspython advisory (GHSA-vvf4-9x63-8xvv). No capability change, but anyone already self-hosting an earlier version should upgrade. Recommendation unchanged (PROTOTYPE).

@@ -52,3 +52,6 @@ Business Source License 1.1 — GitHub API reports NOASSERTION; confirmed BSL-1.
 ## Change History
 ### 2026-11-05
 First catalogued. Discovered via GitHub search while reviewing slot 2 (product infrastructure / APIs / backend components). Reviewed alongside Casdoor and Octelium as three independent entrants pivoting IAM/network/AI infrastructure toward AI-agent gateway capability.
+
+### 2026-11-23
+Meaningful update: v3.11.0 -> v3.12.0. Added hosted web search, page reading, and find-in-page tools for selected API keys (with domain allow-lists and a test/diagnostics flow), plus a Codex connection guide with native model-catalog discovery. A real new capability — lets a governed agent browse the web through the same audited gateway instead of a separate, ungoverned browsing tool. Recommendation unchanged (PROTOTYPE).
