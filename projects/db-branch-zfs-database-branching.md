@@ -109,3 +109,11 @@ a battle-tested one yet.
 ### 2026-11-17
 Initial discovery and review. Slot 7 (experimental projects and hidden gems)
 run.
+
+### 2026-11-24
+Meaningful update: v0.2.5 -> v0.3.1. Added database-name validation to
+prevent DSN-parameter injection across the query API, MCP `query` tool, and
+Web SQL runner; fixed a `sqlquery` panic on empty/comment-only input; and
+sped up `branch merge` by skipping row-by-row comparison for unchanged
+tables. A real correctness/security hardening pass rather than a routine
+patch bump. Recommendation unchanged (PROTOTYPE).

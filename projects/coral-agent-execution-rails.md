@@ -107,3 +107,12 @@ reduces repeated agent work, before considering the team server rollout.
 ### 2026-11-17
 Initial discovery and review. Slot 7 (experimental projects and hidden gems)
 run.
+
+### 2026-11-24
+Meaningful update: v1.8.0 -> v1.10.0. Coral now reports the Edition and each
+Enterprise Feature's state, and trusts a production license-signing key —
+the clearest sign yet of an open-core split forming around a paid Enterprise
+edition. The self-hosted gateway evaluated here remains Apache-2.0 with no
+capability regression observed, but this is worth re-checking over time as
+more features may move behind the paid tier. Recommendation unchanged
+(PROTOTYPE).
