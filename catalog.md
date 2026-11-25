@@ -1,13 +1,13 @@
 # Catalog
 
-_367 projects tracked. Last updated 2026-11-24._
+_372 projects tracked. Last updated 2026-11-25._
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
 | [herdr](https://github.com/herdrdev/herdr) | USE NOW | 9.0/10 | AI & agent infrastructure, coding agents, developer productivity, terminal utilities | Apache-2.0 | low | 2026-11-20 |
 | [Xberg](https://github.com/xberg-io/xberg) | USE NOW | 8.8/10 | document processing, RAG infrastructure, product building blocks, AI & agent infrastructure | MIT | low | 2026-09-19 |
 | [CATS](https://github.com/Endava/cats) | USE NOW | 8.8/10 | developer productivity, API development, testing | Apache-2.0 | low | 2026-10-30 |
-| [Bernstein](https://github.com/sipyourdrink-ltd/bernstein) | PROTOTYPE | 8.7/10 | AI agent infrastructure, coding agents, agent orchestration, developer productivity | Apache-2.0 | low | 2026-10-09 |
+| [Bernstein](https://github.com/sipyourdrink-ltd/bernstein) | PROTOTYPE | 8.7/10 | AI agent infrastructure, coding agents, agent orchestration, developer productivity | Apache-2.0 | low | 2026-11-25 |
 | [Planning with Files](https://github.com/OthmanAdi/planning-with-files) | USE NOW | 8.7/10 | AI & agent infrastructure, developer productivity | MIT | low | 2026-10-07 |
 | [pgschema](https://github.com/pgplex/pgschema) | PROTOTYPE | 8.7/10 | product infrastructure, database tooling, developer productivity, CI/CD | Apache-2.0 | low | 2026-10-09 |
 | [LibreDB Studio](https://github.com/libredb/libredb-studio) | USE NOW | 8.7/10 | product building blocks, developer productivity, database tooling | MIT | low | 2026-11-14 |
@@ -25,6 +25,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [Radar (Skyhook)](https://github.com/skyhook-io/radar) | USE NOW | 8.6/10 | AI & agent infrastructure, infrastructure/observability, developer productivity, Kubernetes tooling | Apache-2.0 | low | 2026-11-09 |
 | [Outpost (Hookdeck)](https://github.com/hookdeck/outpost) | PROTOTYPE | 8.6/10 | product infrastructure, backend components, webhooks, AI & agent infrastructure | Apache-2.0 | medium | 2026-11-19 |
 | [pgbot](https://github.com/pgrundev/pgbot) | USE NOW | 8.6/10 | database tooling, developer productivity, infrastructure/observability, AI & agent infrastructure | Apache-2.0 (confirmed via LICENSE file; GitHub API misreported NOASSERTION) | low | 2026-11-24 |
+| [TokenEconomizer](https://github.com/microsoft/TokenEconomizer) | USE NOW | 8.6/10 | AI & agent infrastructure, coding agents, developer productivity, cost optimization | MIT | low | 2026-11-25 |
 | [OpenDataLoader PDF](https://github.com/opendataloader-project/opendataloader-pdf) | USE NOW | 8.5/10 | document processing, RAG infrastructure, developer productivity | Apache-2.0 | medium | 2026-08-29 |
 | [Dagu](https://github.com/dagucloud/dagu) | USE NOW | 8.5/10 | infrastructure, deployment, developer productivity, product infrastructure | GPL-3.0 | low | 2026-09-28 |
 | [Graphify](https://github.com/Graphify-Labs/graphify) | PROTOTYPE | 8.5/10 | AI & agent infrastructure, RAG infrastructure, developer productivity, coding agents | Apache-2.0 | low | 2026-09-16 |
@@ -34,7 +35,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [skills (Vercel Labs)](https://github.com/vercel-labs/skills) | PROTOTYPE | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | MIT | low | 2026-08-29 |
 | [Kingfisher](https://github.com/mongodb/kingfisher) | USE NOW | 8.4/10 | developer productivity, secrets management, security tooling, CI/CD | Apache-2.0 | low | 2026-09-28 |
 | [Benjamin-Plus Skill](https://github.com/JetBrains/benjamin-plus-skill) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
-| [ctx](https://github.com/ctxrs/ctx) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source | low | 2026-09-04 |
+| [ctx](https://github.com/ctxrs/ctx) | USE NOW | 8.4/10 | AI agent infrastructure, developer productivity, coding agents | Apache-2.0 (core CLI); ctx pro is a separate proprietary paid companion, not open source | low | 2026-11-25 |
 | [SnapOtter](https://github.com/snapotter-hq/SnapOtter) | USE NOW | 8.4/10 | product building blocks, small high-leverage utilities, developer productivity | AGPL-3.0 | low | 2026-09-17 |
 | [Nerdlog](https://github.com/dimonomid/nerdlog) | USE NOW | 8.4/10 | developer productivity, observability, infrastructure, small high-leverage utilities | BSD-2-Clause | low | 2026-09-21 |
 | [Misata](https://github.com/rasinmuhammed/misata) | PROTOTYPE | 8.4/10 | small high-leverage utilities, product building blocks, AI & agent infrastructure, developer productivity | MIT | low | 2026-09-29 |
@@ -143,6 +144,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [AntelopeJS DMS](https://github.com/AntelopeJS/dms) | PROTOTYPE | 7.9/10 | product infrastructure, admin panels, AI & agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-11-19 |
 | [SeekStorm](https://github.com/SeekStorm/SeekStorm) | PROTOTYPE | 7.9/10 | product building blocks, RAG infrastructure, AI & agent infrastructure | Apache-2.0 | low | 2026-11-21 |
 | [Bombadil](https://github.com/antithesishq/bombadil) | PROTOTYPE | 7.9/10 | developer productivity, testing, AI & agent infrastructure | MIT | medium | 2026-11-24 |
+| [phonedriver](https://github.com/hridaya423/phonedriver) | PROTOTYPE | 7.9/10 | AI & agent infrastructure, developer productivity, testing, mobile automation | AGPL-3.0 | low | 2026-11-25 |
 | [OpenDocuments](https://github.com/joungminsung/OpenDocuments) | PROTOTYPE | 7.8/10 | RAG infrastructure, search, product building blocks | MIT | low | 2026-08-29 |
 | [Agent Vault](https://github.com/Infisical/agent-vault) | PROTOTYPE | 7.8/10 | AI agent infrastructure, secrets management, security tooling | MIT (core); an ee/ enterprise directory, if present, follows Infisical's standard separate enterprise license — verify before relying on any ee/-scoped feature | medium | 2026-08-30 |
 | [Drydock](https://github.com/CodesWhat/drydock) | USE NOW | 7.8/10 | infrastructure, self-hosted SaaS alternative, developer productivity | AGPL-3.0 | low | 2026-08-30 |
@@ -191,6 +193,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [CertMate](https://github.com/fabriziosalmi/certmate) | PROTOTYPE | 7.7/10 | infrastructure, security / certificate management, developer productivity | MIT (core); a separate multi-tenant edition, CertMate-ng, is source-available under BSL 1.1 — not evaluated here, flagged for anyone considering that edition specifically | medium | 2026-11-09 |
 | [Filament](https://github.com/galaxy-io/filament) | PROTOTYPE | 7.7/10 | data infrastructure, infrastructure, product building blocks | Apache-2.0 | medium | 2026-11-14 |
 | [TypeGraph](https://github.com/nicia-ai/typegraph) | PROTOTYPE | 7.7/10 | product building blocks, RAG infrastructure, AI & agent infrastructure | MIT | low | 2026-11-21 |
+| [browse (Anomaly)](https://github.com/anomalyco/browse) | PROTOTYPE | 7.7/10 | AI & agent infrastructure, browser automation, developer productivity | MIT | medium | 2026-11-25 |
 | [notifkit](https://github.com/devkitshq/notifkit) | PROTOTYPE | 7.6/10 | product infrastructure, notifications, backend components | MIT | medium | 2026-08-30 |
 | [Verb Authority](https://github.com/yairsabag/verb-authority) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, agent security | Apache-2.0 | low | 2026-09-01 |
 | [Autoprompt Skill](https://github.com/Spielewoy/autoprompt-skill) | PROTOTYPE | 7.6/10 | AI agent infrastructure, developer productivity | MIT | low | 2026-09-02 |
@@ -228,6 +231,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [speedrunner](https://github.com/anthonyGosme/speedrunner) | USE NOW | 7.6/10 | developer productivity, small high-leverage utilities, CLI tools | Apache-2.0 | low | 2026-11-17 |
 | [Doop](https://github.com/kgoedecke/doop) | STUDY | 7.6/10 | product building blocks, AI agent infrastructure, collaboration/CRDTs | AGPL-3.0 | low | 2026-11-22 |
 | [Fizzbee](https://github.com/fizzbee-io/fizzbee) | STUDY | 7.6/10 | infrastructure/architecture, developer productivity | Apache-2.0 | medium | 2026-11-24 |
+| [Auto Ontology MCP](https://github.com/gogoymh/auto-ontology-mcp) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, product building blocks, database tooling, RAG infrastructure | Apache-2.0 | low | 2026-11-25 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
@@ -273,6 +277,7 @@ _367 projects tracked. Last updated 2026-11-24._
 | [Keeper.sh](https://github.com/ridafkih/keeper.sh) | PROTOTYPE | 7.4/10 | product building blocks, AI & agent infrastructure | AGPL-3.0 | medium | 2026-11-12 |
 | [repoctl](https://github.com/icelib/repoctl) | PROTOTYPE | 7.4/10 | developer productivity, CI/CD, small high-leverage utilities | MIT | low | 2026-11-13 |
 | [OpenMeter](https://github.com/openmeterio/openmeter) | PROTOTYPE | 7.4/10 | product infrastructure, micro-SaaS component, billing / payments | Apache-2.0 | medium | 2026-11-23 |
+| [InferSSD](https://github.com/wici-ai/inferssd) | PROTOTYPE | 7.4/10 | AI & agent infrastructure, local inference, developer productivity | Apache-2.0 | medium | 2026-11-25 |
 | [Nona](https://github.com/Ryware/nona-config) | PROTOTYPE | 7.3/10 | product infrastructure, feature flags, self-hosted SaaS alternative | Apache-2.0 | low | 2026-08-30 |
 | [Tela](https://github.com/zcag/tela) | STUDY | 7.3/10 | product infrastructure, self-hosted SaaS alternative, AI agent infrastructure | AGPL-3.0 | medium | 2026-10-24 |
 | [ObjectStack](https://github.com/objectstack-ai/objectstack) | STUDY | 7.3/10 | AI & agent infrastructure, product building blocks, code generation | Apache-2.0 | high | 2026-09-06 |

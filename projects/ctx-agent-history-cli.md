@@ -1,7 +1,7 @@
 # ctx
 
 ## Summary
-A local-first CLI that indexes past coding-agent session transcripts (Claude Code, Codex, and others) from files already on disk (`~/.claude`, `~/.codex`) so agents can search prior decisions, failed approaches, and tool calls instead of repeating investigation from scratch. A separate paid "ctx pro" companion adds "git blame, but for agent sessions": trace any line, file, commit, or PR back to the exact agent session that produced it.
+A local-first CLI that indexes past coding-agent session transcripts (Claude Code, Codex, and others) from files already on disk (`~/.claude`, `~/.codex`) so agents can search prior decisions, failed approaches, and tool calls instead of repeating investigation from scratch. Since v2.0.0, it also ships `ctx graph` (a local SQLite codebase symbol/dependency/impact graph) and `ctx sift` (local tool-output compaction) unified into the same executable. A separate paid "ctx pro" companion adds "git blame, but for agent sessions": trace any line, file, commit, or PR back to the exact agent session that produced it.
 
 ## Why I Should Care
 Coding-agent history (this very kind of session) piles up in verbose JSONL logs that are effectively unusable for an agent to search directly — the project's own benchmark claims raw transcript search costs ~50x the tokens of `ctx search` for the same recall. Given heavy daily coding-agent use, this directly cuts repeated investigation and token spend across sessions.
@@ -49,3 +49,6 @@ USE NOW — the free core CLI is a trivial, zero-risk install (fully local, no a
 ## Change History
 ### 2026-09-04
 Discovered and reviewed. GitHub API verified: Apache-2.0, 1,062 stars, pushed_at 2026-09-04 (same day), created 2026-02-23, 19 contributors. README documents the open-core split explicitly in `docs/managed-companion.md`.
+
+### 2026-11-25
+Meaningful update: v1.4.2 → v2.5.0. v2.0.0 (2026-09-24) is a real architecture change: it unifies the original transcript-history search with a new `ctx graph` (indexes a chosen codebase and answers symbol/dependency/impact questions from a local SQLite graph, positioned explicitly by the project against Graphify, already catalogued separately) and a new `ctx sift` (local tool-output compaction with optional agent-hook installation) into one executable — search and blame remain free by default, graph indexing and sift hooks are opt-in. Versions through v2.5.0 (2026-11-21) added `ctx sessions` (a recent-activity session list) and ATIF v1.8 trajectory import/export. Status and score held at USE NOW/8.4 pending a closer look at whether `ctx graph`'s output quality matches or lags Graphify's.
