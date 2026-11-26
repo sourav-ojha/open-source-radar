@@ -82,3 +82,10 @@ existing AWS account before building the equivalent S3/Lambda plumbing by hand.
 ## Change History
 ### 2026-11-07
 Discovered via GitHub search (slot 4: data, search, documents, RAG). First catalog entry.
+
+### 2026-11-26
+Checked release history v1.19.1 → v1.19.2 (2026-11-13). Added multi-attribute DynamoDB search
+without requiring composite keys (with pagination and bounded search processing), fine-grained
+API permissions, custom API key claims, content-only deletion, and optional S3 Transfer
+Acceleration. Real new capability but an incremental patch version coming only 6 days after the
+prior review — noted, not treated as a re-scoring event. Recommendation unchanged (PROTOTYPE).

@@ -67,3 +67,12 @@ replacing an established deploy script, given it touches live deploy infrastruct
 ## Change History
 ### 2026-09-21
 Initial discovery and cataloguing. Slot 6 (infrastructure, observability, deployment) run.
+
+### 2026-11-26
+Meaningful update, checked release history v0.119.0 → v0.138.0. v0.130.0 made Git credentials
+host-scoped (security advisory GHSA-gg..., required a one-time user action), and v0.134.0 added
+role- and permission-based API keys as a breaking change, deprecating the old single-secret
+`API_SECRET` model. Also: Prometheus gauges for Swarm service state (v0.131.0) and a fix for
+OpenBao `pki-role` certificate issuance firing on every reconcile instead of only on deploy
+(v0.132.0). Recommendation unchanged (PROTOTYPE) — these are hardening/capability improvements
+to an already-sound tool, not a reason to raise or lower confidence.

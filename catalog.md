@@ -1,6 +1,7 @@
 # Catalog
 
-_372 projects tracked. Last updated 2026-11-25._
+_376 projects tracked. Last updated 2026-11-26._
+
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
 |---|---|---|---|---|---|---|
@@ -64,12 +65,13 @@ _372 projects tracked. Last updated 2026-11-25._
 | [textbee](https://github.com/textbee/textbee) | USE NOW | 8.3/10 | product building blocks, AI & agent infrastructure | AGPL-3.0 | medium | 2026-11-08 |
 | [ClickHouse Loom](https://github.com/ClickHouse/loom) | PROTOTYPE | 8.3/10 | AI & agent infrastructure, agent memory, RAG infrastructure, code intelligence | Apache-2.0 | low | 2026-11-18 |
 | [AccessFlow](https://github.com/bablsoft/accessflow) | PROTOTYPE | 8.3/10 | product infrastructure, security, access governance, database tooling, MSSP/compliance | Apache-2.0 | high | 2026-11-19 |
+| [formancy.ai](https://github.com/sharkysan/formancy.ai) | PROTOTYPE | 8.3/10 | product building blocks, form engines, developer productivity | Apache-2.0 | low | 2026-11-26 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [OpenNotebookLM](https://github.com/tom1030507/OpenNotebookLM) | PROTOTYPE | 8.2/10 | RAG infrastructure, document processing, product building blocks, self-hosted SaaS alternative | MIT | low | 2026-09-05 |
 | [mcpsnoop](https://github.com/kerlenton/mcpsnoop) | USE NOW | 8.2/10 | AI & agent infrastructure, developer productivity, AI agent debugging/tracing, MCP tooling | MIT | low | 2026-09-08 |
 | [Posthorn](https://github.com/craigmccaskill/posthorn) | PROTOTYPE | 8.2/10 | product building blocks, notifications / email, backend components | Apache-2.0 | low | 2026-09-10 |
 | [netbridge](https://github.com/muhammedogz/netbridge) | USE NOW | 8.2/10 | developer productivity, debugging, Node.js / Next.js tooling | MIT | low | 2026-09-11 |
-| [doco-cd](https://github.com/kimdre/doco-cd) | PROTOTYPE | 8.2/10 | infrastructure, deployment, developer productivity, product infrastructure | Apache-2.0 | low | 2026-09-21 |
+| [doco-cd](https://github.com/kimdre/doco-cd) | PROTOTYPE | 8.2/10 | infrastructure, deployment, developer productivity, product infrastructure | Apache-2.0 | low | 2026-11-26 |
 | [CocoIndex](https://github.com/cocoindex-io/cocoindex) | PROTOTYPE | 8.2/10 | RAG infrastructure, product building blocks, AI & agent infrastructure | Apache-2.0 | medium | 2026-09-26 |
 | [TanStack AI](https://github.com/TanStack/ai) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | low | 2026-09-29 |
 | [difit](https://github.com/yoshiko-pg/difit) | USE NOW | 8.2/10 | developer productivity, small high-leverage utilities, AI & agent infrastructure | MIT | low | 2026-10-02 |
@@ -125,6 +127,7 @@ _372 projects tracked. Last updated 2026-11-25._
 | [Office Oxide](https://github.com/yfedoseev/office_oxide) | PROTOTYPE | 8.0/10 | document processing, product building blocks, developer productivity | MIT OR Apache-2.0 (dual) | low | 2026-11-14 |
 | [HarnessRouter (Community Edition)](https://github.com/HarnessRouter/harnessrouter) | PROTOTYPE | 8.0/10 | AI & agent infrastructure, agent orchestration, product building blocks | Apache-2.0 | low | 2026-11-18 |
 | [Open Walnut](https://github.com/EvanZhang008/open-walnut) | PROTOTYPE | 8.0/10 | AI agent infrastructure, developer productivity, self-hosted SaaS alternative | MIT | low | 2026-11-22 |
+| [S3 Encryption Gateway](https://github.com/cloud37/s3-encryption-gateway) | PROTOTYPE | 8.0/10 | infrastructure, security, product infrastructure, object storage | MIT | low | 2026-11-26 |
 | [VT Code](https://github.com/vinhnx/VTCode) | PROTOTYPE | 7.9/10 | AI agent infrastructure, developer productivity | Apache-2.0 | medium | 2026-09-02 |
 | [DvalinCode](https://github.com/arthurpanhku/dvalincode) | PROTOTYPE | 7.9/10 | developer productivity, security tooling, AI agent infrastructure, CI/CD | MIT | low | 2026-09-22 |
 | [LodeDB](https://github.com/Egoist-Machines/LodeDB) | PROTOTYPE | 7.9/10 | data infrastructure, AI agent infrastructure, RAG infrastructure | Apache-2.0 (core) | low | 2026-09-05 |
@@ -174,7 +177,7 @@ _372 projects tracked. Last updated 2026-11-25._
 | [Kanzo](https://github.com/emanuele-em/kanzo) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, coding agents, developer productivity, micro-SaaS building block | AGPL-3.0 | low | 2026-11-24 |
 | [Kensaku](https://github.com/yjid/kensaku) | PROTOTYPE | 7.8/10 | developer productivity, small utility, AI & agent infrastructure | MIT | low | 2026-11-24 |
 | [lazyjournal](https://github.com/Lifailon/lazyjournal) | USE NOW | 7.8/10 | developer productivity, infrastructure, observability | MIT | low | 2026-11-06 |
-| [FormKiQ Core](https://github.com/formkiq/formkiq-core) | PROTOTYPE | 7.8/10 | product building blocks, document processing | MIT | medium | 2026-11-07 |
+| [FormKiQ Core](https://github.com/formkiq/formkiq-core) | PROTOTYPE | 7.8/10 | product building blocks, document processing | MIT | medium | 2026-11-26 |
 | [Kumoss](https://github.com/InditexTech/kumoss) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, infrastructure / infrastructure-as-code, product infrastructure | Apache-2.0 | high | 2026-11-23 |
 | [Runno](https://github.com/taybenlor/runno) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, product building blocks, developer productivity | MIT | medium | 2026-11-10 |
 | [MCP Scanner (Cisco AI Defense)](https://github.com/cisco-ai-defense/mcp-scanner) | PROTOTYPE | 7.8/10 | AI & agent infrastructure, security, developer productivity | Apache-2.0 | medium | 2026-11-11 |
@@ -183,6 +186,7 @@ _372 projects tracked. Last updated 2026-11-25._
 | [DocKit](https://github.com/geek-fun/dockit) | PROTOTYPE | 7.8/10 | product building blocks, database tooling, developer productivity | Apache-2.0 | low | 2026-11-20 |
 | [IncidentRelay](https://github.com/roxy-wi/IncidentRelay) | PROTOTYPE | 7.8/10 | infrastructure, observability, deployment, self-hosted SaaS alternative | Elastic License 2.0 | medium | 2026-11-22 |
 | [Dev Proxy](https://github.com/dotnet/dev-proxy) | PROTOTYPE | 7.8/10 | developer productivity, testing, product building blocks | MIT | low | 2026-11-24 |
+| [baerly-storage](https://github.com/Gusto/baerly-storage) | PROTOTYPE | 7.8/10 | product building blocks, databases, AWS-adjacent infra | Apache-2.0 | low | 2026-11-26 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
 | [Open Mercato](https://github.com/open-mercato/open-mercato) | PROTOTYPE | 7.7/10 | product infrastructure, AI & agent infrastructure, developer productivity | MIT | high | 2026-09-24 |
@@ -232,6 +236,7 @@ _372 projects tracked. Last updated 2026-11-25._
 | [Doop](https://github.com/kgoedecke/doop) | STUDY | 7.6/10 | product building blocks, AI agent infrastructure, collaboration/CRDTs | AGPL-3.0 | low | 2026-11-22 |
 | [Fizzbee](https://github.com/fizzbee-io/fizzbee) | STUDY | 7.6/10 | infrastructure/architecture, developer productivity | Apache-2.0 | medium | 2026-11-24 |
 | [Auto Ontology MCP](https://github.com/gogoymh/auto-ontology-mcp) | PROTOTYPE | 7.6/10 | AI & agent infrastructure, product building blocks, database tooling, RAG infrastructure | Apache-2.0 | low | 2026-11-25 |
+| [RunWisp](https://github.com/runwisp/runwisp) | PROTOTYPE | 7.6/10 | infrastructure, developer productivity, deployment | GPL-3.0-or-later (daemon/web UI); Apache-2.0 (shared libraries, config JSON Schema, OpenAPI spec) | low | 2026-11-26 |
 | [LightAgent](https://github.com/wanxingai/LightAgent) | PROTOTYPE | 7.5/10 | AI agent infrastructure, agent orchestration, agent memory | Apache-2.0 | medium | 2026-08-29 |
 | [Cerberus (ClickHouse observability gateway)](https://github.com/tsouza/cerberus) | STUDY | 7.5/10 | infrastructure, observability | Apache-2.0 | low | 2026-08-31 |
 | [Quickdraw](https://github.com/quickdrawjs/quickdraw) | PROTOTYPE | 7.5/10 | product building blocks, UI components | MIT | low | 2026-09-06 |
