@@ -1,6 +1,6 @@
 # Catalog
 
-_376 projects tracked. Last updated 2026-11-26._
+_379 projects tracked. Last updated 2026-11-28._
 
 
 | Project | Status | Score | Category | License | Integration | Last reviewed |
@@ -66,6 +66,7 @@ _376 projects tracked. Last updated 2026-11-26._
 | [ClickHouse Loom](https://github.com/ClickHouse/loom) | PROTOTYPE | 8.3/10 | AI & agent infrastructure, agent memory, RAG infrastructure, code intelligence | Apache-2.0 | low | 2026-11-18 |
 | [AccessFlow](https://github.com/bablsoft/accessflow) | PROTOTYPE | 8.3/10 | product infrastructure, security, access governance, database tooling, MSSP/compliance | Apache-2.0 | high | 2026-11-19 |
 | [formancy.ai](https://github.com/sharkysan/formancy.ai) | PROTOTYPE | 8.3/10 | product building blocks, form engines, developer productivity | Apache-2.0 | low | 2026-11-26 |
+| [DBTrail](https://github.com/dbtrail/dbtrail) | PROTOTYPE | 8.3/10 | data infrastructure, AWS-adjacent infra, product building blocks | Apache-2.0 | medium | 2026-11-28 |
 | [SIMURG](https://github.com/doofzoff/SIMURG) | PROTOTYPE | 8.2/10 | AI & agent infrastructure, LLM observability | Apache-2.0 | medium | 2026-09-01 |
 | [OpenNotebookLM](https://github.com/tom1030507/OpenNotebookLM) | PROTOTYPE | 8.2/10 | RAG infrastructure, document processing, product building blocks, self-hosted SaaS alternative | MIT | low | 2026-09-05 |
 | [mcpsnoop](https://github.com/kerlenton/mcpsnoop) | USE NOW | 8.2/10 | AI & agent infrastructure, developer productivity, AI agent debugging/tracing, MCP tooling | MIT | low | 2026-09-08 |
@@ -187,6 +188,7 @@ _376 projects tracked. Last updated 2026-11-26._
 | [IncidentRelay](https://github.com/roxy-wi/IncidentRelay) | PROTOTYPE | 7.8/10 | infrastructure, observability, deployment, self-hosted SaaS alternative | Elastic License 2.0 | medium | 2026-11-22 |
 | [Dev Proxy](https://github.com/dotnet/dev-proxy) | PROTOTYPE | 7.8/10 | developer productivity, testing, product building blocks | MIT | low | 2026-11-24 |
 | [baerly-storage](https://github.com/Gusto/baerly-storage) | PROTOTYPE | 7.8/10 | product building blocks, databases, AWS-adjacent infra | Apache-2.0 | low | 2026-11-26 |
+| [patent](https://github.com/r14dd/patent) | PROTOTYPE | 7.8/10 | developer productivity, small utilities | MIT OR Apache-2.0 | low | 2026-11-28 |
 | [Rebase](https://github.com/rebasepro/rebase) | PROTOTYPE | 7.7/10 | product infrastructure, backend-as-a-service, product building blocks, AI agent infrastructure | MIT | medium | 2026-09-03 |
 | [Flexprice](https://github.com/flexprice/flexprice) | PROTOTYPE | 7.7/10 | product building blocks, micro-SaaS building blocks | AGPL-3.0 | high | 2026-09-17 |
 | [Open Mercato](https://github.com/open-mercato/open-mercato) | PROTOTYPE | 7.7/10 | product infrastructure, AI & agent infrastructure, developer productivity | MIT | high | 2026-09-24 |
@@ -317,6 +319,7 @@ _376 projects tracked. Last updated 2026-11-26._
 | [Upright](https://github.com/basecamp/upright) | STUDY | 7.2/10 | infrastructure/observability, developer productivity, architecture study | MIT | high | 2026-11-09 |
 | [OmniDiff](https://github.com/ivankovic/omnidiff) | STUDY | 7.2/10 | developer productivity, code review, small high-leverage utilities | AGPL-3.0-only, dual-licensed with a separate commercial license (LICENSE-COMMERCIAL) | medium | 2026-11-13 |
 | [Bank Statement Parser](https://github.com/sebastienrousseau/bankstatementparser) | PROTOTYPE | 7.2/10 | document processing, small high-leverage utilities, data / analytics | Apache-2.0 OR MIT (dual) | low | 2026-11-14 |
+| [Kronotop](https://github.com/kronotop/kronotop) | STUDY | 7.2/10 | data infrastructure, product building blocks | Apache-2.0 | high | 2026-11-28 |
 | [proxy-monster](https://github.com/ridi-oss/proxy-monster) | STUDY | 7.1/10 | security tooling, secrets/access management, audit | Apache-2.0 | high | 2026-08-30 |
 | [SQLite Sync](https://github.com/sqliteai/sqlite-sync) | STUDY | 7.1/10 | data infrastructure, AI agent infrastructure, offline-first sync | Elastic License 2.0 (modified) | low | 2026-09-10 |
 | [PNLCS (Panelica)](https://github.com/Panelica/pnlcs) | PROTOTYPE | 7.1/10 | product infrastructure, self-hosted SaaS alternatives, billing | MIT | medium | 2026-09-27 |

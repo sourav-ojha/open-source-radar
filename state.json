@@ -1,8 +1,8 @@
 {
-  "last_run": "2026-11-26",
-  "last_successful_run": "2026-11-26",
-  "run_count": 86,
-  "rotation_slot_last_used": 2,
+  "last_run": "2026-11-28",
+  "last_successful_run": "2026-11-28",
+  "run_count": 87,
+  "rotation_slot_last_used": 4,
   "recent_categories": [
     "experimental projects and hidden gems (slot 7) \u2014 a TypeScript-native Deterministic Simulation Testing framework (Chronos, sx4im) joining a same-week wave of Go/Zig-only DST entrants (k1LoW/detest, sb2bg/marionette, hmdsefi/faultline+lockstep) with no prior TS-native option, a mature WASI-based sandboxed code-execution runtime shipping browser/Node/MCP packages since 2021 (Runno), a Rust CLI unifying ripgrep+BM25+vector search for humans and coding agents on Alibaba's zvec engine with published cross-domain agent benchmarks (zvec-grep), and Scott Hanselman's disposable-Windows-11-VM automation CLI+MCP adapter (sandbox-mcp) \u2014 directly useful for safely detonating untrusted files in the PTaaS/MSSP context despite a Windows-only platform mismatch with the primary stack. Pipewright (v2.1.3->v2.2.0) added a full Kubernetes release-management suite (Helm 4, batched releases, RBAC, independent-approval rollback) on top of its prior basic K8s deploy node \u2014 a meaningful update, score 8.0->8.1. schemagate (v1.16.0->v1.18.0) added a schema-as-property-graph export plus query-log-mined join inference, and an independently-benchmarked rank-fusion rewrite that lifted LiveSQLBench-Large recall@10 from 48.2->64.9 (hashed embedder) and 51.9->73.9 (all-MiniLM-L6-v2) \u2014 score 8.0->8.2. A self-hosted Node/Postgres synthetic real-address generator for 27 countries (daimon3332/address) was today's Small but High-Leverage Utility. Held anyproto/any-store (Anytype-backed pure-Go embedded document DB, overlaps already-catalogued embedded-DB niches, no direct Node fit) and Itz-Agasta/OpenDiagram (AI diagram generator, AGPL-3.0, 0 subscribers, 58 open issues vs 13 forks, too early) to Worth Watching. Rejected kavachlabs/kavach (1 star, marketing-precise but unverifiable benchmarks, no real engagement) and afterburner-sh/afterburner (NOASSERTION license, thin traction). Re-confirmed the prior capsulerun/runtime (Capsule WASM agent-task sandbox) hold \u2014 still thin, no growth since 2026-10-12. Noted a broad same-day GitHub 'local-first'/'AI workspace' keyword wave (openbot, wigolo, skykeep, holon, memry, etc.) as low-signal generic noise, not a DST- or search-specific pattern. Web search for Show HN / openalternative.co leads was undated/unreliable again today; GitHub's search API with stars/pushed filters remained the dominant discovery lever. 'Still Worth Trying' rotated to Planning with Files, SkillSpector, and WhoDB \u2014 none used in the prior six immediately preceding rotations.",
     "AI agents/MCP/coding productivity (slot 1) \u2014 a multi-engine MCP-server security scanner from Cisco AI Defense (YARA + LLM-based analysis + CVE/pip-audit + VirusTotal binary hashes + sandboxed PyPI scanning, cisco-mcp-scanner) that clears the bar over an already-saturated MCP/skill-scanner wave; Alibaba AgentScope's validated agent-evaluation grader library with public benchmarks and a Skill-security grader family (OpenJudge); and a TypeScript terminal coding agent that engineers byte-stable prompt-cache discipline directly into the agent loop rather than a gateway layer, targeting DeepSeek V4's cache pricing (Dao Code, filed STUDY for the architecture pattern rather than the China-market framing). Tracekit (v1.5.3->v1.6.0: new TK-A055 destructive-DB-command policy, Kilo Code/Qwen Code/Devin hooks, model receipts) and LoongSuite Pilot (v1.6.0->v1.16.0: a local secret-redaction Agent Interceptor plus GitHub Copilot CLI/Doubao/Qoder integrations) both had meaningful updates. Rejected Snyk's own MCP/agent scanner (snyk/agent-scan) as an open-core funnel with an explicitly unstable free CLI output contract; held jgravelle/jcodemunch-mcp out despite a genuinely useful 96%-token-reduction claim because its commercial-use terms require a paid one-time license; rejected rohitg00/agentmemory (30.3k stars) as no clearer differentiation than the already-saturated agent-memory wave; and flagged wink-run/tokenbank's \"earn by sharing idle provider quota on a P2P network\" framing as a ToS/abuse-risk pattern rather than a feature. Held chunxiaoxx/nautilus-compass to Worth Watching for a marketing-heavy README and a custom hosted-service-cap license (Term A2, >100 paying users requires a commercial license) despite real LongMemEval-S benchmark evidence; also held repoprompt/repoprompt-ce (RepoPrompt's newly open-sourced macOS Community Edition, Apache-2.0) for its macOS-26+-only platform constraint, and danieltamas/cloak (a small .env-secret vault that shows agents fakes) for being too new/thin (28 stars, 9 days old). modelplan (cost/effort-tradeoff recommender for coding-agent model choice, data-backed, MIT) was today's Small but High-Leverage Utility. 'Still Worth Trying' rotated to Xberg, Bernstein, and Sidequest \u2014 none used in the five immediately preceding rotations. No WebSearch/WebFetch needed this run; GitHub's search/repositories API with stars:/pushed:/created: filters supplied enough signal alone.",
@@ -18,23 +18,10 @@
     "infrastructure/observability/deployment (slot 6) \u2014 a self-hosted multi-database backup platform covering both PostgreSQL (physical/incremental/WAL-streaming PITR with HA timeline-following for Patroni/CNPG) and MongoDB (logical), with a real restore-verification step most comparable tools skip (Databasus, directly covers both databases in the MERN+Postgres stack), a mature PostgreSQL/MySQL anonymization-and-subsetting CLI relevant to both dev/staging provisioning and the MSSP/PTaaS client-data context (Greenmask), a composable usage-metering/billing-enforcement infra matching the radar's own micro-SaaS 'billing' building-block callout (OpenMeter, beta, crowded niche vs. Lago/Meteroid flagged), and a feature-rich OCaml-built Terraform/OpenTofu PR-automation bot (directory locks, OPA/Conftest, Checkov, cost estimates, drift detection) distinguished from the already-catalogued Kumoss by being a traditional human-authored-PR plan/apply bot rather than an AI-generates-the-Terraform pipeline (Stategraph). kwatch (lightweight, no-LLM Kubernetes failure-to-root-cause Slack/Discord alerter, Elastic License 2.0 flagged) was today's Small but High-Leverage Utility. Two meaningful updates: Kumoss v1.0.8->v1.0.9 shipped a security-only patch fixing a critical nginx HTTP/2 RCE (CVE-2026-123007) in its bundled web image \u2014 flagged per \u00a710's security-development criterion despite no capability change; ThinkWatch v3.11.0->v3.12.0 added hosted web search/page-reading tools for selected API keys plus Codex model-catalog discovery, a real new capability. Held valqore (infrastructure-governance scanner claiming 1,431 rules across 19 compliance packs including oddly futuristic ones, but 0 open issues on an actively-pushed repo and a NOASSERTION license \u2014 a marketing-heavy/suspicious-engagement pattern, not catalogued) and eduardolat/pgbackweb (a thinner, Postgres-only alternative to Databasus with no PITR/HA/restore-verification, AGPL-3.0) out. Noted but did not individually vet a recurring 'agentic SRE/ops platform' wave overlapping the already-catalogued SherlockOps (nudgebee, Arvo-AI/aurora, OpsiMate) and treated HolmesGPT (Robusta, CNCF Sandbox) as an already-known mainstream SRE agent with no fresh material development surfaced this run. zerobyte (restic-based self-hosted backup UI, AGPL-3.0, still 0.x) held to Worth Watching as promising but early and thinner than Databasus for the actual stack. 'Still Worth Trying' rotated to AgentSight, agentOS (Rivet), and WhoDB \u2014 none used in the immediately preceding rotations. GitHub's search/repositories API with topic:/stars:/pushed: filters, api.github.com /repos and /releases lookups, and raw.githubusercontent.com README/LICENSE fetches supplied all of today's signal; WebSearch/WebFetch/HN Algolia were not needed.",
     "experimental projects and hidden gems (slot 7) \u2014 a read-only, safe-by-construction Postgres health CLI with CI/MCP/optional-AI-explain modes from a tiny but disciplined team (pgbot, Apache-2.0 confirmed despite a GitHub API NOASSERTION misreport), a standalone (no-account-required) property-based UI testing tool from Antithesis that autonomously explores web/terminal UIs to break TypeScript-defined invariants (Bombadil), Microsoft's mature zero-code-change API failure/throttle simulator (Dev Proxy), and a formal-methods DSL explicitly aimed at making TLA+-style distributed-systems verification approachable (Fizzbee, filed STUDY). dif.sh (feature flags/A-B tests as Markdown files compiling to a typed zero-dep TS client, no server required for flag evaluation, optional hosted Cloud only for experiment analytics) was today's Small but High-Leverage Utility despite 0 forks/subscribers. Two already-catalogued projects had real releases: Coral v1.8.0->v1.10.0 now reports Edition/Enterprise-feature state and trusts a production license-signing key \u2014 an open-core split visibly forming; db-branch v0.2.5->v0.3.1 added DSN-parameter-injection-preventing database-name validation plus a sqlquery panic fix and a branch-merge speedup \u2014 a real correctness/security hardening pass. Checked kanzo (v0.3.0->v0.4.2), kensaku (v1.0.12->v1.0.19) and zvec-grep (v0.3.0->v0.3.1) for meaningful updates \u2014 all bugfix/installer/patch releases only, not meaningful; Pikopod had no new release. Held Sidd27/infrawise (AWS MCP server covering DynamoDB/Lambda/SQS/SNS/S3/API Gateway/Postgres/MySQL/MongoDB/Kafka/IaC drift \u2014 an unusually precise stack match, but 22 stars/0 subscribers/solo project) and modulestf (Terraform-module-authoring agent skills under the long-running modules.tf community project, applicability depends on whether module authoring vs. consumption is actually in the workflow) to Worth Watching. Reconfirmed the 2026-10-27 hold on Dicklesworthstone/frankengraphdb (still 0 subscribers, no tagged release) and the prior rejection of rocketride-org/rocketride-server (resurfaced at an even more inflated ~2,000:1 stars:subscribers ratio). Rejected sfeSantos/mockiapi as a thinner duplicate of the already-catalogued mockd. The day's dominant GitHub search signal was a saturated wave of 'local-first AI teammate workspace' / 'universal coding-agent CLI harness' repos (openbot, zeron, Octop, SoduWork, Dodaios, etc.) with no individually-vetted standout. 'Still Worth Trying' rotated to Dagu, Artifact Keeper, and Floci \u2014 none used in the seven immediately preceding rotations. GitHub's search/repositories API with topic:/stars:/pushed: filters plus raw.githubusercontent.com README/LICENSE fetches supplied all of today's signal; WebSearch/HN Algolia were not needed.",
     "AI agents/MCP/coding productivity (slot 1) \u2014 a plugin from Microsoft Research + UC Berkeley that makes Claude Code/Codex/Copilot CLI/Pi cheaper to run in repeated repositories via micro-skills, tool pruning and a failure-loop guard, backed by a published arXiv paper and measured SWE-Bench savings (18.4\u201330.9% lower mean cost, cheaper in all 30 repository\u00d7combination cells) (TokenEconomizer), a polished mobile-device-control MCP server claiming 6.9x fewer tokens than mobile-mcp via text-based accessibility-tree screen reads instead of screenshots, with a pay-action approval guard (AGPL-3.0 flagged) (phonedriver), a real-browser (not an isolated automation profile) MCP server plus Chromium extension from Anomaly/OpenCode that hands control back to the human for logins/2FA/payment (browse), a local SSD-streamed MoE inference runtime built on llama.cpp for running 700B+-parameter open-weight models on commodity hardware (InferSSD), and a third-party MCP-server implementation of NVIDIA's published Auto Ontology research giving validated text-to-SQL (join-path/fan-out/value-mismatch checks before execution) plus a personal knowledge base with Obsidian export, with no separate model endpoint or API key needed (Auto Ontology MCP, clearly flagged as third-party, not an official NVIDIA release). Two already-catalogued projects had real meaningful updates found by checking release tags against known_releases: Bernstein v3.21.0\u2192v4.0.0 (a real breaking-change major release \u2014 previously-ignored quality-gate settings now apply, delegation verify now fails closed on a missing final seal, failed workflow nodes now skip later independent branches, MCP SDK bumped to 2.3.x) and ctx v1.4.2\u2192v2.5.0 (v2.0.0 unified the original transcript-history search with a new local-SQLite code-graph indexer and a tool-output compactor into one executable, explicitly positioned against the already-catalogued Graphify). Rejected ccarter01011/traxagent-claude-plugin (174 stars but 0 forks and 0 open issues \u2014 a zero-real-engagement pattern distinct from, and more extreme than, the star-inflation ratios flagged in prior runs) despite a genuinely relevant AI-budget-tracking pitch. Held aileron-tech/wingbox (local codebase-map MCP for coding agents, 26 stars/0 subscribers/1 fork, too thin), Tthanh2k6/turbo-browser-mcp (token-efficient Playwright MCP, 152 stars/0 subscribers/0 issues, overlaps the already-saturated browser-automation-for-agents niche with no clear edge), and RunanywhereAI/trnrt (AWS Trainium-specific open LLM inference engine, Apache-2.0, OpenSSF Scorecard \u2014 genuinely AWS-relevant but narrower than Sourav's current AWS usage, which does not include Trainium) to Worth Watching. Noted a broad, very noisy same-day GitHub wave of inflated-star mobile-agent-control/voice-agent/local-inference repos (mdiri-ai/SoduWork at 7,938\u2605 created one month ago, ccch1mneyyy/dsh-Go at 31,633\u2605 created one month ago, and similar) consistent with the star-inflation pattern flagged repeatedly in prior runs \u2014 none individually vetted beyond a sanity check given the clear inflation signature. 'Still Worth Trying' rotated to Radar (Skyhook), Kingfisher, and skills (Vercel Labs) \u2014 none used in the thirteen immediately preceding rotations.",
-    "slot 2 (product infrastructure, APIs, backend components) \u2014 a fully open-source (Apache-2.0) dual Angular/React visual form builder sharing one validation/condition/calculation engine across browser and server, with MCP tools for agent-driven form authoring and unusually deep arc42/ADR/regulatory documentation for a 56-star repo (sharkysan/formancy.ai), a production-born MIT-licensed transparent S3 client-side encryption proxy built by a cloud-platform operator after finding their own CNPG Postgres backups were written to S3 unencrypted (cloud37/s3-encryption-gateway), a genuinely novel serverless document database from Gusto's engineering org that runs entirely as library code inside the request handler with state living directly in an S3/R2 bucket via conditional-write commits, explicitly positioned as a cheap-to-try step before graduating to Postgres (Gusto/baerly-storage), and a polished single-Go-binary cron+process-supervisor replacement for crond/supervisord with a web dashboard, TUI and REST API, GPL-3.0 on the daemon flagged (runwisp/runwisp). Two meaningful updates found by checking release history: doco-cd (v0.119.0->v0.138.0: host-scoped Git credentials fixing a security advisory plus role/permission-based API keys as a breaking change) and FormKiQ Core (v1.19.1->v1.19.2: multi-attribute DynamoDB search, fine-grained API permissions, custom API key claims, content-only deletion). Elijas/token-throttle (precise multi-resource reserve-and-refund token-bucket rate limiting for LLM APIs across workers, Apache-2.0) was today's Small but High-Leverage Utility despite being Python-only. Held r-uben/socr (a genuinely sophisticated cost-aware cascading-OCR pipeline with crash-safe resumable page-major processing, but 291 self-filed GitHub issues against 6 stars and 0 subscribers \u2014 the same solo-AI-agent-driven-development signature flagged in prior runs for Artexis10/exomem) and KoninMikhail/workhold-durable-work-queue (a solid durable Postgres-backed work-queue design with fenced leases, but Python-only clients and 11 stars/1 subscriber against the already-catalogued Node-native Sidequest) to Worth Watching. Rejected winebarrel/pistachio as inferior/duplicate to the already-catalogued, far more established pgschema (1,094 stars) for the same declarative-Postgres-schema-migration niche, and reconfirmed the prior 2026-09-09 mass-wave rejection pattern on ChronoAIProject/NyxID (part of the same 24-hour 'MCP/AI gateway with budgets' wave as the already-rejected smg/sbproxy/llmkit cluster). Noted but did not individually vet a recurring 'self-hosted Firebase-alternative in one binary' wave (rebasepro/rebase, arumadev/aruma, aptlogica/sereni-base, Agent-Field/BackAI, ayeshrodz/slonbase) with no standout differentiation between entrants. GitHub's search/repositories API with topic:/stars:/pushed: filters plus raw.githubusercontent.com README fetches supplied all of today's signal; WebSearch/WebFetch/HN Algolia were not needed. 'Still Worth Trying' rotated to Issuerd, Sidequest, and Beads \u2014 none used in the eleven-plus immediately preceding rotations."
+    "slot 2 (product infrastructure, APIs, backend components) \u2014 a fully open-source (Apache-2.0) dual Angular/React visual form builder sharing one validation/condition/calculation engine across browser and server, with MCP tools for agent-driven form authoring and unusually deep arc42/ADR/regulatory documentation for a 56-star repo (sharkysan/formancy.ai), a production-born MIT-licensed transparent S3 client-side encryption proxy built by a cloud-platform operator after finding their own CNPG Postgres backups were written to S3 unencrypted (cloud37/s3-encryption-gateway), a genuinely novel serverless document database from Gusto's engineering org that runs entirely as library code inside the request handler with state living directly in an S3/R2 bucket via conditional-write commits, explicitly positioned as a cheap-to-try step before graduating to Postgres (Gusto/baerly-storage), and a polished single-Go-binary cron+process-supervisor replacement for crond/supervisord with a web dashboard, TUI and REST API, GPL-3.0 on the daemon flagged (runwisp/runwisp). Two meaningful updates found by checking release history: doco-cd (v0.119.0->v0.138.0: host-scoped Git credentials fixing a security advisory plus role/permission-based API keys as a breaking change) and FormKiQ Core (v1.19.1->v1.19.2: multi-attribute DynamoDB search, fine-grained API permissions, custom API key claims, content-only deletion). Elijas/token-throttle (precise multi-resource reserve-and-refund token-bucket rate limiting for LLM APIs across workers, Apache-2.0) was today's Small but High-Leverage Utility despite being Python-only. Held r-uben/socr (a genuinely sophisticated cost-aware cascading-OCR pipeline with crash-safe resumable page-major processing, but 291 self-filed GitHub issues against 6 stars and 0 subscribers \u2014 the same solo-AI-agent-driven-development signature flagged in prior runs for Artexis10/exomem) and KoninMikhail/workhold-durable-work-queue (a solid durable Postgres-backed work-queue design with fenced leases, but Python-only clients and 11 stars/1 subscriber against the already-catalogued Node-native Sidequest) to Worth Watching. Rejected winebarrel/pistachio as inferior/duplicate to the already-catalogued, far more established pgschema (1,094 stars) for the same declarative-Postgres-schema-migration niche, and reconfirmed the prior 2026-09-09 mass-wave rejection pattern on ChronoAIProject/NyxID (part of the same 24-hour 'MCP/AI gateway with budgets' wave as the already-rejected smg/sbproxy/llmkit cluster). Noted but did not individually vet a recurring 'self-hosted Firebase-alternative in one binary' wave (rebasepro/rebase, arumadev/aruma, aptlogica/sereni-base, Agent-Field/BackAI, ayeshrodz/slonbase) with no standout differentiation between entrants. GitHub's search/repositories API with topic:/stars:/pushed: filters plus raw.githubusercontent.com README fetches supplied all of today's signal; WebSearch/WebFetch/HN Algolia were not needed. 'Still Worth Trying' rotated to Issuerd, Sidequest, and Beads \u2014 none used in the eleven-plus immediately preceding rotations.",
+    "slot 4 (data, search, documents, RAG) \u2014 a self-hosted MySQL/MariaDB/PostgreSQL HTAP layer that follows the binlog/WAL into a Parquet+DuckDB copy, routes transactional reads straight through over the same MySQL-protocol connection, and ships a read-only MCP server plus AS-OF time travel and auto-generated undo SQL, with verified Amazon RDS/Aurora support (dbtrail/dbtrail, Apache-2.0, built by a former Percona MySQL Technical Lead); a Rust CLI/TUI that fans a plain-English dev-tool idea out across 19 package registries plus GitHub/HN and ranks matches by local semantic similarity to call out Open/Crowded/Saturated before any code gets written \u2014 directly mirrors this radar's own due-diligence mission (r14dd/patent, dual MIT/Apache-2.0); and a FoundationDB-backed transactional document database giving near-zero-cost per-tenant namespaces with cross-namespace ACID transactions over a RESP2/RESP3-compatible protocol, filed STUDY given its own 'developer preview' status (kronotop/kronotop, Apache-2.0). Checked meaningful-update candidates across the slot-4 catalog: unpdf/undoc (v0.23.0/v0.13.1 -> v0.55.1/v0.29.0) and PurRDF (rust-v3.0.1 -> rust-v5.0.1) both shipped dozens of releases since last review, but on inspection these are continuous correctness/spec-fidelity churn (many internal breaking changes) rather than a single new-capability event \u2014 not flagged as meaningful per \u00a710. pg_textsearch (v1.5.1->v1.6.0), kividb (v1.2.0->v1.2.2), ParadeDB (v0.26.6->v0.27.1), SeekStorm (v5.1.0->v5.2.1), Chunky (v0.7.0->v0.8.0) and Graphify (v0.9.62->v0.9.122, already checked this cycle) were all routine patch releases. Held Longado/ontopoc (ontology confirmation-gate MCP server, AGPL-3.0, Alpha, Chinese-first docs, author states no users yet beyond themselves) to Worth Watching as too early. ArcadeData/arcadedb (established 2021 multi-model DB: SQL/Cypher/Gremlin/Mongo/Redis protocol compatibility plus vectors) was noted but not individually vetted this run \u2014 483 open issues against 1,267 stars/14 subscribers is a high ratio worth checking before a future pass. Reconfirmed the prior 2026-09-26 rejection of codelibs/fess (thin differentiation vs. configuring OpenSearch directly). Noted a same-day inflated-engagement signature consistent with prior runs' pattern: DeusData/codebase-memory-mcp reported 49,269 stars against a GitHub search API hit, alongside several similarly-inflated 'codebase-to-knowledge-graph' repos in the same search batch \u2014 none individually vetted beyond the sanity check. 'Still Worth Trying' rotated to nono, OpenDataLoader PDF, and Graphify \u2014 none used in the ten-plus immediately preceding rotations. GitHub's search/repositories API with topic:/stars:/pushed: filters plus raw.githubusercontent.com README/CHANGELOG fetches supplied all of today's signal; WebSearch/WebFetch/HN Algolia were not needed."
   ],
   "evaluated_repos": [
-    "Kaelio/ktx",
-    "open-mercato/open-mercato",
-    "zenstackhq/zenstack",
-    "9d8dev/router",
-    "kavinsood/yaos",
-    "betterleaks/betterleaks",
-    "duncatzat/vigils",
-    "getnao/nao",
-    "mogretici/nestlens",
-    "bartolli/codanna",
-    "unkn0wn-root/resterm",
-    "sourcebot-dev/sourcebot",
-    "assaio/assaio",
-    "kunkka19xx/lgtm",
     "truecourse-ai/truecourse",
     "Divkix/Logwell",
     "Cranot/roam-code",
@@ -1520,7 +1507,21 @@
     "guided-traffic/s3-encryption-proxy",
     "Intrinsec/s3proxy",
     "bikesched/bikesched",
-    "dblift/dblift"
+    "dblift/dblift",
+    "onyx-dot-app/onyx",
+    "tusKANNy/kannolo",
+    "vespa-engine/vespa",
+    "superlinked/sie",
+    "seaweedfs/seaweedfs",
+    "ArcadeData/arcadedb",
+    "r14dd/patent",
+    "dbtrail/dbtrail",
+    "jf-tech/omniparser",
+    "Longado/ontopoc",
+    "RoboFinSystems/robosystems",
+    "timescale/pg_textsearch",
+    "paradedb/paradedb",
+    "dbtrail/dbtrail-contrib-check"
   ],
   "rejected": [
     {
@@ -3339,8 +3340,8 @@
       "date": "2026-03-26"
     },
     "opendataloader-project/opendataloader-pdf": {
-      "version": "v2.5.22",
-      "date": "2026-11-12"
+      "version": "v2.5.24",
+      "date": "2026-11-23"
     },
     "vercel-labs/skills": {
       "version": "v1.7.1",
@@ -3731,8 +3732,8 @@
       "date": "2026-11-04"
     },
     "Graphify-Labs/graphify": {
-      "version": "v0.9.114",
-      "date": "2026-11-20"
+      "version": "v0.9.122",
+      "date": "2026-11-28"
     },
     "ryo-ebata/cc-audit": {
       "version": "v3.22.25",
@@ -3787,8 +3788,8 @@
       "date": "2026-11-25"
     },
     "timescale/pg_textsearch": {
-      "version": "v1.5.1",
-      "date": "2026-10-02"
+      "version": "v1.6.0",
+      "date": "2026-11-23"
     },
     "pipeshub-ai/pipeshub-ai": {
       "version": "v1.0.0",
@@ -4095,12 +4096,12 @@
       "date": "2026-09-21"
     },
     "iyulab/unpdf": {
-      "version": "v0.23.0",
-      "date": "2026-10-01"
+      "version": "v0.55.1",
+      "date": "2026-11-28"
     },
     "iyulab/undoc": {
-      "version": "v0.13.1",
-      "date": "2026-10-01"
+      "version": "v0.29.0",
+      "date": "2026-11-26"
     },
     "Trendyol/go-pq-cdc": {
       "version": "v1.11.14",
@@ -4311,8 +4312,8 @@
       "date": "2026-10-15"
     },
     "kividbio/kividb": {
-      "version": "v1.2.0",
-      "date": "2026-11-03"
+      "version": "v1.2.2",
+      "date": "2026-11-12"
     },
     "mcpspan/mcpspan": {
       "version": "v0.7.0",
@@ -4463,8 +4464,8 @@
       "date": "2026-10-26"
     },
     "Blackcat-Informatics/purrdf": {
-      "version": "rust-v3.0.1",
-      "date": "2026-10-03"
+      "version": "rust-v5.0.1",
+      "date": "2026-11-24"
     },
     "pii-shield/pii-shield": {
       "version": "v2.3.1",
@@ -4679,8 +4680,8 @@
       "date": "2026-10-03"
     },
     "paradedb/paradedb": {
-      "version": "v0.26.6",
-      "date": "2026-11-08"
+      "version": "v0.27.1",
+      "date": "2026-11-24"
     },
     "jztan/pdf-mcp": {
       "version": "v3.8.0",
@@ -4779,8 +4780,8 @@
       "date": "2026-11-17"
     },
     "SeekStorm/SeekStorm": {
-      "version": "v5.1.0",
-      "date": "2026-11-15"
+      "version": "v5.2.1",
+      "date": "2026-11-23"
     },
     "nicia-ai/typegraph": {
       "version": "@nicia-ai/typegraph@0.76.0",
@@ -4889,16 +4890,28 @@
     "runwisp/runwisp": {
       "version": "v1.11.0",
       "date": "2026-11-25"
+    },
+    "dbtrail/dbtrail": {
+      "version": "v0.151.0",
+      "date": "2026-11-28"
+    },
+    "r14dd/patent": {
+      "version": "v0.14.3",
+      "date": "2026-11-03"
+    },
+    "kronotop/kronotop": {
+      "version": "v2026.11-3",
+      "date": "2026-11-26"
     }
   },
   "source_health": {
     "WebSearch": {
       "last_ok": "2026-11-10",
-      "note": "Not used this run \u2014 GitHub's search/repositories API with topic:/stars:/pushed: filters supplied sufficient signal for slot 2."
+      "note": "Not used this run \u2014 GitHub search/repositories API with topic:/stars:/pushed: filters supplied sufficient signal for slot 4."
     },
     "raw.githubusercontent.com": {
-      "last_ok": "2026-11-26",
-      "note": "Fetched READMEs for s3-encryption-gateway, token-throttle, socr, runwisp, formancy.ai, baerly-storage, workhold."
+      "last_ok": "2026-11-28",
+      "note": "Fetched READMEs and CHANGELOGs for patent, dbtrail, ontopoc, kronotop, unpdf, undoc, purrdf."
     },
     "api.github.com (Mac shell)": {
       "last_ok": "2026-08-29",
@@ -4913,8 +4926,8 @@
       "note": "UNUSABLE \u2014 returns years-stale cached content, confirmed 2026-08-29. Do not use as a source."
     },
     "api.github.com": {
-      "last_ok": "2026-11-26",
-      "note": "Direct from the GitHub Actions runner, GITHUB_TOKEN used, ~60 calls across search, repo metadata, and release checks. No rate pressure (8,599/8,600 remaining at start)."
+      "last_ok": "2026-11-28",
+      "note": "Direct from the GitHub Actions runner, GITHUB_TOKEN used, ~60 calls across search, repo metadata, and release checks. No rate pressure."
     },
     "hn.algolia.com": {
       "last_ok": "2026-11-20",
@@ -5078,8 +5091,11 @@
     "formancy.ai",
     "S3 Encryption Gateway",
     "baerly-storage",
-    "RunWisp"
+    "RunWisp",
+    "DBTrail",
+    "patent",
+    "Kronotop"
   ],
-  "notes": "2026-11-26: slot 2 run (product infrastructure, APIs, backend components). Published formancy.ai (open-source Angular/React form engine + MCP authoring tools, PROTOTYPE 8.3), S3 Encryption Gateway (transparent client-side S3 encryption proxy, PROTOTYPE 8.0, MIT), baerly-storage (serverless S3/R2-backed document DB from Gusto engineering, PROTOTYPE 7.8), and RunWisp (single-binary cron+process-supervisor replacement, PROTOTYPE 7.6, GPL-3.0 flagged) as new discoveries. Meaningful updates: doco-cd (v0.119.0->v0.138.0, host-scoped Git credentials security fix + breaking-change RBAC API keys) and FormKiQ Core (v1.19.1->v1.19.2, multi-attribute search + fine-grained API permissions). Elijas/token-throttle (LLM API token-bucket rate limiter, Python) was the Small Utility pick. Held r-uben/socr and KoninMikhail/workhold-durable-work-queue to Worth Watching. Rejected winebarrel/pistachio (duplicate of catalogued pgschema) and ChronoAIProject/NyxID (reconfirmed prior mass-wave rejection). 'Still Worth Trying' rotated to Issuerd, Sidequest, and Beads.",
+  "notes": "2026-11-28: slot 4 run (data, search, documents, RAG). No run occurred on 2026-11-27. Published DBTrail (self-hosted MySQL/PostgreSQL HTAP layer with verified RDS/Aurora support, PROTOTYPE 8.3, Apache-2.0), patent (prior-art-search CLI for dev-tool ideas, PROTOTYPE 7.8, MIT/Apache-2.0), and Kronotop (FoundationDB-backed transactional document DB, STUDY 7.2, Apache-2.0) as new discoveries. No meaningful updates cleared the bar this run after checking unpdf/undoc, PurRDF, pg_textsearch, kividb, ParadeDB, SeekStorm, and Chunky release histories. Held Longado/ontopoc (too early) to Worth Watching. Reconfirmed prior fess rejection. 'Still Worth Trying' rotated to nono, OpenDataLoader PDF, and Graphify.",
   "updated": "2026-11-25"
 }

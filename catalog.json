@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-26",
+  "updated": "2026-11-28",
   "projects": [
     {
       "name": "Xberg",
@@ -23444,6 +23444,183 @@
       ],
       "aliases": [],
       "notes": "Mentioned in Awesome Go. Codecov and SonarCloud security-rating badges present and green. Explicit migration guides from cron, supervisord, docker compose, node-cron, and PHP frameworks (Laravel/Symfony/CodeIgniter).",
+      "acted_on": false
+    },
+    {
+      "name": "DBTrail",
+      "slug": "dbtrail-mysql-postgres-htap",
+      "repo_url": "https://github.com/dbtrail/dbtrail",
+      "website": "https://dbtrail.com",
+      "description": "Self-hosted HTAP layer for MySQL/MariaDB and PostgreSQL: follows the binlog/WAL into a columnar Parquet copy queried via embedded DuckDB, routes transactional/by-key reads straight through to the source database over the same MySQL-protocol connection, with point-in-time AS OF queries, auto-generated undo SQL, and a read-only MCP server. Nothing installs on the source database; verified support for Amazon RDS for MySQL and Aurora MySQL.",
+      "category": [
+        "data infrastructure",
+        "AWS-adjacent infra",
+        "product building blocks"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 8.3,
+      "maturity": "emerging",
+      "integration_effort": "medium",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, confirmed via repo LICENSE file. Free for commercial and production use, including embedding. A paid managed-service tier exists (dbtrail.com) for operating the index server, but the open-source binary is unrestricted.",
+      "deployment": [
+        "docker compose",
+        "self-hosted",
+        "Linux packages",
+        "Amazon ECS"
+      ],
+      "interfaces": [
+        "MySQL wire protocol",
+        "REST API",
+        "MCP server",
+        "web dashboard"
+      ],
+      "use_cases": [
+        "Point Metabase/Grafana at DBTrail instead of the primary for heavy reporting queries",
+        "Keep one application connection string while routing heavy reads to the Parquet copy and writes/lookups to MySQL",
+        "Ask Claude via the MCP server what changed in a table and get a read-only, cited answer plus undo SQL",
+        "Restore a table to a past point in time with AS OF from a normal mysql client",
+        "Export the Parquet copy to Iceberg for a downstream lakehouse"
+      ],
+      "product_opportunities": [
+        "Open-core 'ship vs operate' split (self-host vs managed index server) worth studying for a client-data reporting feature in the MSSP/PTaaS context"
+      ],
+      "alternatives": [
+        "Readyset (query-result caching, different mechanism)",
+        "Debezium + warehouse",
+        "a dedicated reporting read replica",
+        "Materialize"
+      ],
+      "why_it_matters": "Removes the usual choice between a second read replica sized for reporting and a bolt-on CDC/warehouse pipeline, for a problem (slow analytical queries against RDS/Aurora) that recurs in real AWS deployments, without changing application SQL.",
+      "why_not_build_it_myself": "A correct binlog-following HTAP layer with routing, point-in-time queries, and undo-SQL generation is a multi-week project with easy correctness pitfalls; this one is already verified against RDS/Aurora.",
+      "risks": [
+        "Solo-founder-led project (bus-factor risk) despite a credible ex-Percona pedigree",
+        "Not high-availability; the MySQL-compatible port going down breaks anything routed only through it",
+        "Row history retention is 48 hours without an S3 bucket",
+        "Requires binlog_format=ROW with full row images and a primary key on every InnoDB table"
+      ],
+      "first_seen": "2026-11-28",
+      "last_reviewed": "2026-11-28",
+      "last_meaningful_update": "2026-11-28",
+      "current_version": "v0.151.0",
+      "latest_release_date": "2026-11-28",
+      "source_links": [
+        "https://github.com/dbtrail/dbtrail",
+        "https://www.dbtrail.com/docs/"
+      ],
+      "aliases": [],
+      "notes": "Built by Daniel Guzman-Burgos, former MySQL Technical Lead at Percona. Benchmarks in README: 14 production-style reports averaged 6.5x faster, heaviest went 225s->7.9s.",
+      "acted_on": false
+    },
+    {
+      "name": "patent",
+      "slug": "patent-prior-art-cli",
+      "repo_url": "https://github.com/r14dd/patent",
+      "website": "https://crates.io/crates/patent",
+      "description": "Rust CLI/TUI that takes a plain-English dev-tool idea and searches 19 sources (npm, crates.io, PyPI, Homebrew, Packagist, Hex, GitHub, Hacker News, and more), ranks matches by local semantic similarity via fastembed (no API key needed), and summarizes the landscape as Open/Crowded/Saturated. An optional local Ollama model or OpenAI-compatible endpoint turns the data into a short verdict.",
+      "category": [
+        "developer productivity",
+        "small utilities"
+      ],
+      "status": "PROTOTYPE",
+      "relevance_score": 7.8,
+      "maturity": "emerging",
+      "integration_effort": "low",
+      "license": "MIT OR Apache-2.0",
+      "commercial_use_notes": "Dual MIT/Apache-2.0, fully permissive, no commercial restrictions.",
+      "deployment": [
+        "single binary (curl installer, Homebrew, cargo install)",
+        "local CLI"
+      ],
+      "interfaces": [
+        "CLI",
+        "TUI",
+        "library (Rust crate)"
+      ],
+      "use_cases": [
+        "Run before starting a new micro-SaaS or internal tool idea to get an honest Crowded/Saturated verdict",
+        "Pipe --json output into a script to gate a project-idea backlog",
+        "Embed the published library crate inside a custom idea-triage tool",
+        "Point --api-base at an existing LLM gateway instead of installing Ollama"
+      ],
+      "product_opportunities": [],
+      "alternatives": [
+        "manually checking package registries one at a time",
+        "a general web-search LLM prompt (no true cross-registry semantic ranking or staleness flagging)"
+      ],
+      "why_it_matters": "Automates exactly the due-diligence step this radar itself performs for new tool/product ideas, before any code is written, with an explicitly honest scoping of what it did and didn't check.",
+      "why_not_build_it_myself": "Fanning out across 19 registries plus GitHub/HN with local semantic ranking and staleness detection is a non-trivial amount of integration work for a pre-flight check that's easy to skip under time pressure.",
+      "risks": [
+        "Coverage across 19 sources is not exhaustive and the tool says so explicitly",
+        "570 stars but 0 GitHub watchers is an unusual ratio, though multiple real human contributors and a clean single-issue backlog argue against fabricated engagement"
+      ],
+      "first_seen": "2026-11-28",
+      "last_reviewed": "2026-11-28",
+      "last_meaningful_update": "2026-11-28",
+      "current_version": "v0.14.3",
+      "latest_release_date": "2026-11-03",
+      "source_links": [
+        "https://github.com/r14dd/patent",
+        "https://docs.rs/patent"
+      ],
+      "aliases": [],
+      "notes": "Multiple real contributors beyond the primary author (dependabot plus at least five humans with meaningful commit counts); 1 open issue on a 6-month-old, 570-star repo.",
+      "acted_on": false
+    },
+    {
+      "name": "Kronotop",
+      "slug": "kronotop-foundationdb-document-db",
+      "repo_url": "https://github.com/kronotop/kronotop",
+      "website": "https://kronotop.com",
+      "description": "Distributed, transactional document database built on Apple's FoundationDB, speaking RESP2/RESP3 (existing Redis/Valkey clients work without a new driver). Each tenant or app gets its own namespace (a FoundationDB key prefix, near-zero cost to create); one transaction can commit across any number of namespaces. Buckets support a Mongo-style query language (BQL) plus an optional per-field vector index.",
+      "category": [
+        "data infrastructure",
+        "product building blocks"
+      ],
+      "status": "STUDY",
+      "relevance_score": 7.2,
+      "maturity": "experimental",
+      "integration_effort": "high",
+      "license": "Apache-2.0",
+      "commercial_use_notes": "Apache-2.0, no commercial-use restrictions.",
+      "deployment": [
+        "docker (ghcr.io/kronotop/kronotop)",
+        "self-hosted on a FoundationDB cluster"
+      ],
+      "interfaces": [
+        "RESP2/RESP3 protocol (Redis/Valkey-compatible clients)"
+      ],
+      "use_cases": [
+        "Prototype a multi-tenant SaaS data layer with one namespace per customer plus occasional cross-tenant atomic operations",
+        "Store per-agent memory (namespace per agent) with vector search over the agent's own documents",
+        "Combine document writes and simple counters in one atomic transaction"
+      ],
+      "product_opportunities": [
+        "Storage-layer per-client isolation is a concrete selling point for the MSSP admin-portal SaaS, if the architecture matures"
+      ],
+      "alternatives": [
+        "MongoDB with per-tenant collections/databases",
+        "Postgres row-level security or schema-per-tenant",
+        "FerretDB",
+        "EdgeDB"
+      ],
+      "why_it_matters": "Pushes multi-tenant isolation into the keyspace itself rather than the application layer, while keeping FoundationDB's strict transaction guarantees across tenants \u2014 a different tradeoff than sharded Mongo or Postgres RLS.",
+      "why_not_build_it_myself": "Replicating FoundationDB's transaction guarantees at the application level is not realistic; adopting it means trusting Apple's proven transaction engine instead.",
+      "risks": [
+        "Explicitly a 'developer preview': APIs and operational behavior may still change before a stable release",
+        "Running FoundationDB underneath is a real operational commitment, independent of Kronotop itself",
+        "Small community (6 subscribers, 313 stars) means slower third-party tooling"
+      ],
+      "first_seen": "2026-11-28",
+      "last_reviewed": "2026-11-28",
+      "last_meaningful_update": "2026-11-28",
+      "current_version": "v2026.11-3",
+      "latest_release_date": "2026-11-26",
+      "source_links": [
+        "https://github.com/kronotop/kronotop"
+      ],
+      "aliases": [],
+      "notes": "README demonstrates creating 1,000,001 namespaces in a single cluster as proof of near-zero per-tenant provisioning cost.",
       "acted_on": false
     }
   ]
